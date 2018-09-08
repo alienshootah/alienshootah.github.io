@@ -1,0 +1,108 @@
+//----------------------------------------------------//
+// Mixins & Includes                                  //
+//----------------------------------------------------//
+.rlist {
+	font-size: 0;
+	line-height: 0;
+}
+.ulist {
+	font-size: $main_size;
+	line-height: $main_height;
+}
+@mixin grad {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8678b+0,ff6a8f+100 */
+	background: rgb(248,103,139); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(248,103,139,1) 0%, rgba(255,106,143,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(248,103,139,1) 0%,rgba(255,106,143,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(248,103,139,1) 0%,rgba(255,106,143,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8678b', endColorstr='#ff6a8f',GradientType=0 ); /* IE6-9 */
+}
+
+.text-overflow {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+// Clear select without default button
+@mixin clearSelect {
+	-webkit-appearance: none;
+	-moz-appearance:    none;
+	appearance:         none;   
+	-webkit-border-radius: 0; 
+	-moz-border-radius: 0; 
+	border-radius: 0;
+}
+
+/* retina-sprite */
+@mixin mysprite($sprite){
+	@include sprite-image($sprite);
+	@include sprite-position($sprite);
+	@include sprite-width($sprite);
+	@include sprite-height($sprite); 
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: $min_retina_2x) {
+		background-image:url("../img/sprite@2x.png");
+		background-size:$icons_sprite_1x_size; // size of 1x sprite
+	}
+	@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx),only screen and (min-resolution: 350dpi) {
+		background-image:url("../img/sprite@3x.png");
+		background-size:$icons_sprite_1x_size; // size of 1x sprite 
+	}
+}
+
+// PLACEHOLDER MIXIN
+@mixin placeholderColor($input-text-color) {
+	&::-webkit-input-placeholder {color: $input-text-color}
+	&:-moz-placeholder {color: $input-text-color;}
+	&::-moz-placeholder {color: $input-text-color;}
+	&:-ms-input-placeholder {color: $input-text-color;}
+	&.placeholder {color: $input-text-color;}
+	&:focus:-moz-placeholder {color:transparent;}
+	&:focus::-moz-placeholder {color:transparent;}
+	&:focus::-webkit-input-placeholder {color:transparent;}
+	&:focus:-ms-input-placeholder {color:transparent;}
+	&:focus::placeholder {color:transparent;}
+}
+
+.clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+// breakpoints
+@mixin b($point) {
+	@if $point == desktop {
+		@media (min-width: 1367px) { @content ; }
+	}
+	@else if $point == desktop_sm {
+		@media (max-width: 1199px) { @content ; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 1024px) { @content ; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 37.5em)  { @content ; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 767px)  { @content ; }
+	}
+	@else if $point == mobile3x {
+		@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx), only screen and (min-resolution: 350dpi) { 
+			@content ;
+		}
+	}
+	@else {
+		@media (max-width: $point + px)  { @content ; }
+	}
+}
+
+@mixin before-img($width, $height) {
+	content: '';
+	display: block;
+	position: absolute;
+	width: $width;
+	height: $height;
+}
