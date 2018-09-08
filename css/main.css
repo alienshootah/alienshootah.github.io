@@ -12679,13 +12679,11 @@ div.multiselect-default.select--popup-registration2-form ul label {
 }
 .phone-show:hover {text-decoration: none; border-bottom: 1px dotted transparent;}
 .what-we_can {
-	display: inline-block;
-
+	display: flex;
 } 
 .what-we_can .announcement__features-list-item {
-	width: 38%;
+	min-width: 150px;
 	font-size: 14px;
-
 }
 .what-we_can .announcement__features-list-item img {
 	vertical-align: middle;
@@ -12708,6 +12706,24 @@ div.multiselect-default.select--popup-registration2-form ul label {
 	margin-top: -5px;
 	font-size: 15px;
 }
+
+/* Показать/скрыть телефон */
+.phone-contain {outline: none;}
+.phone-contain:not(:focus)>.hideable {
+  display:none;
+  border: 0;
+}
+.phone-contain_label {padding-right: 2px;}
+.phone-contain:focus .phone-contain_number {display:none; }
+.phone-contain_number {
+	color: hsl(238, 42%, 54%);
+	text-decoration: none;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+}
+.phone-contain_number:hover {text-decoration: underline;}
+
 @media(max-width: 1280px){
 	.phone-container {display: block; padding-bottom: 15px;}
 }
