@@ -1,0 +1,131 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+<!-- wrapper -->
+<div class="wrapper-main">
+	<div class="wrapper">
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content" role="main">
+			<!-- contacts -->
+			<div class="contacts">
+				<div class="container">
+					<!-- contacts-info -->
+					<div class="contacts-info">
+						<h1 class="contacts-info__title">Контактная информация</h1>
+						<ul class="contacts-info__list">
+							<li class="contacts-info__list-item">
+								<div class="contacts-info-item">
+									<div class="contacts-info-item__holder">
+										<span class="icon-phone-white-large"></span>
+									</div>
+									<div class="contacts-info-item__info">
+										<h3 class="contacts-info-item__head">Позвоните нам</h3>
+										<div class="contacts-info-item__text">+7 860 006 90 90<br> +7 860 700 00 00</div>
+									</div>
+								</div>
+								<span class="contacts-info__list-item-marker"></span>
+							</li>
+							<li class="contacts-info__list-item">
+								<div class="contacts-info-item">
+									<div class="contacts-info-item__holder">
+										<span class="icon-mail-white-large"></span>
+									</div>
+									<div class="contacts-info-item__info">
+										<h3 class="contacts-info-item__head">Напишите нам</h3>
+										<div class="contacts-info-item__text">
+											<a href="#">info@babysitters.com</a><br>
+											или воспользуйтесь формой</div>
+									</div>
+								</div>
+								<span class="contacts-info__list-item-marker"></span>
+							</li>
+							<li class="contacts-info__list-item">
+								<div class="contacts-info-item">
+									<div class="contacts-info-item__holder">
+										<span class="icon-time-white-large"></span>
+									</div>
+									<div class="contacts-info-item__info">
+										<h3 class="contacts-info-item__head">Время работы</h3>
+										<div class="contacts-info-item__text">Мы работаем с понедельника по<br>
+										пятницу с 09:00 до 20:00</div>
+									</div>
+								</div>
+								<span class="contacts-info__list-item-marker"></span>
+							</li>
+							<li class="contacts-info__list-item">
+								<div class="contacts-info-item">
+									<div class="contacts-info-item__holder">
+										<span class="icon-place-white-large"></span>
+									</div>
+									<div class="contacts-info-item__info">
+										<h3 class="contacts-info-item__head">Приходите</h3>
+										<div class="contacts-info-item__text">Астана, ул. Наимбекова 680<br>
+										строение 6. Офис.600</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- contacts-info end -->
+
+					<!-- feedback -->
+					<div class="feedback">
+						<h2 class="feedback__title">Форма обратной связи</h2>
+						<form action="#" class="js-feedback-form">
+							<div class="row">
+								<div class="col-sm-33">
+									<div class="form-row">
+										<input type="text" class="input" placeholder="Как Вас зовут?" name="feedback_name">
+									</div>
+								</div>
+								<div class="col-sm-33">
+									<div class="form-row">
+										<input type="tel" class="input" placeholder="Номер телефона" name="feedback_phone">
+									</div>
+								</div>
+								<div class="col-sm-33">
+									<div class="form-row">
+										<input type="email" class="input" placeholder="Электронная почта" name="feedback_email">
+									</div>
+								</div>
+								<div class="col-sm-100">
+									<div class="form-row">
+										<textarea name="feedback__message" class="input input--textarea" placeholder="Введите сообщение"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="feedback__buttons">
+								<button class="btn btn-pink feedback__buttons-btn" type="submit">Отправить сообщение</button>
+							</div>
+						</form>
+					</div>
+					<!-- feedback end -->
+				</div>
+			</div>
+			<!-- contacts end -->
+
+			<!-- contacts-map -->
+			<div class="contacts-map">
+				<div class="container">
+					<h2 class="contacts-map__title">Наш офис на карте</h2>
+				</div>
+				<div class="map" id="contacts-map"></div>
+			</div>
+			<!-- contacts-map end -->
+		</div>
+		<!-- content end -->
+		
+		<div class="footer-spacer"></div>
+	</div>
+
+
+@@include('template/layout/footer.html')
+@@include('template/layout/footer-head.html')
+</div>
+<!-- wrapper end -->
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+</body>
+</html> 

@@ -1,0 +1,390 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content lk" role="main">
+			<!-- lk aside -->
+			@@include('template/blocks/lk-aside.html', {
+				"profile": "true"
+			})
+			<!-- lk aside end -->
+
+			<!-- lk content -->
+			<div class="lk-content">
+				<div class="lk-content__position">
+					<div class="lk-content__item js-section" id="lk-my-info">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Основная информация</h2>
+						</div>
+						<form class="lk-main-info js-lk-info-form" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-input1" class="lk-main-info__label label">Имя:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<input name="lk_info_name" type="text" class="lk-main-info__input input" id="lk-input1" value="Владимир">
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-input2" class="lk-main-info__label label">Фамилия:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<input name="lk_info_last_name" type="text" class="lk-main-info__input input" id="lk-input2" value="Петров">
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select1" class="lk-main-info__label label">Пол:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__line">
+												<div class="col-sm-50">
+													<select class="select select--small js-select" id="lk-select1">
+														<option value="1" selected>Женский</option>
+														<option value="2">Другой</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label class="lk-main-info__label label">Дата рождения:
+												<span class="icon-lock-black-small lk-main-info__lock"></span>
+											</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__line">
+												<div class="col-sm-30">
+													<select class="select select--small js-select">
+														<option value="1" selected>1980</option>
+														<option value="2">1981</option>
+														<option value="3">1982</option>
+														<option value="4">1983</option>
+														<option value="5">1984</option>
+														<option value="6">1985</option>
+														<option value="7">1986</option>
+														<option value="8">1987</option>
+													</select>
+												</div>
+												<div class="col-sm-40">
+													<select class="select select--small js-select">
+														<option value="1" selected>1980</option>
+														<option value="2">1981</option>
+														<option value="3">1982</option>
+														<option value="4">1983</option>
+														<option value="5">1984</option>
+														<option value="6">1985</option>
+														<option value="7">1986</option>
+														<option value="8">1987</option>
+													</select>
+												</div>
+												<div class="col-sm-30">
+													<select class="select select--small js-select">
+														<option value="1" selected>1980</option>
+														<option value="2">1981</option>
+														<option value="3">1982</option>
+														<option value="4">1983</option>
+														<option value="5">1984</option>
+														<option value="6">1985</option>
+														<option value="7">1986</option>
+														<option value="8">1987</option>
+													</select>
+												</div>
+											</div>
+											<span class="lk-main-info__desc">Мы не раскрываем Вашу дату рождения никому</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="lk-main-info-status__ico icon-notdoing"></span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Не подтверждено</span>     
+											<a href="#" class="lk-main-info-status__link">Подтвердить мой профиль</a>
+										</div>
+										<p class="lk-main-info-status__text">Пользователи с подтвержденным профилем вызывают больше доверия и интереса со стороны других участников. Подтвержденный профиль позволяет найти больше и лучше  клиентов/работников. </p>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-input6" class="lk-main-info__label label">Электронная почта:
+												<span class="icon-lock-black-small lk-main-info__lock"></span>
+											</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<input type="email" class="lk-main-info__input input" id="lk-input6" value="pochta@mail.ru" name="lk_info_email">
+											<span class="lk-main-info__desc">Мы не раскрываем Ваш email никому</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="lk-main-info-status__ico icon-doing"></span>
+									<div class="lk-main-info-status__box">
+										<span class="lk-main-info-status__title">Подтверждено</span> 
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box js-multi-parent">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-input7" class="lk-main-info__label label">Номер телефона:
+												<span class="icon-lock-black-small lk-main-info__lock"></span>
+											</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__multi js-multi-clone" style="display: none">
+												<input type="tel" class="lk-main-info__input input js-mask-tel" id="lk-input100" placeholder="+7 ( ___ ) ___-__-__">
+												<span class="lk-main-info__multi-remove js-multi-remove">
+													<span class="icon-close-red"></span>								
+												</span>
+											</div>
+											<div class="lk-main-info__multi js-multi">
+												<input name="lk_info_phone2" type="tel" class="lk-main-info__input input js-mask-tel" id="lk-input7" placeholder="+7 ( ___ ) ___-__-__">
+											</div>
+											<a href="#" class="lk-main-info__add js-multi-add">
+												<span class="lk-main-info__add-text">Добавить еще номер</span>
+											</a>
+											<span class="lk-main-info__desc">Номер телефона становится доступным только после подтверждения бронирования</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Необходимо подтверждение</span>     
+											<a href="#" class="lk-main-info-status__link">Получить код подтверждения</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select10" class="lk-main-info__label label">Ваш город:
+												<span class="icon-lock-black-small lk-main-info__lock"></span>
+											</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<select class="select select--small js-select" id="lk-select10">
+												<option value="1" selected>Тольятти</option>
+												<option value="2">Другой</option>
+											</select>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<button type="submit" class="btn btn-pink btn-pink--middle lk-main-info__submit">Сохранить</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__description">
+								<span class="icon-lock-black-small lk-main-info__description-ico"></span>
+								<span class="lk-main-info__description-text">Конфиденциальные данные. Мы оберегаем Вашу личную информацию.</span>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-my-photo">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Фото профиля</h2>
+						</div>
+						<div class="lk-profile-photo js-file-photo-parent">
+							<div class="lk-profile-photo__block">
+								<div class="lk-profile-photo__image">
+									<img class="lk-profile-photo__img js-file-photo-img" src="pic/lk/photo/photo-01.jpg" alt="">
+								</div>
+								<div class="lk-profile-photo__box">
+									<span class="lk-profile-photo__desc">Качественные фотографи очень важны, чтобы няни и родители могли увидеть друг друга и больше доверять.</span>  
+									<span class="lk-profile-photo__text">Пожалуйста, загрузите фотографию на которой хорошо видно Ваше лицо. </span>
+									
+									<div class="js-avatar-view">
+										<a href="#" data-href="#lk-popup-crop" class="btn btn-pink btn-pink--middle js-popup-link">Загрузить фото</a>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info-status lk-profile-photo__status">
+								<span class="tooltip lk-main-info-status__ico">
+									<span class="icon-tooltip-gray tooltip__head"></span>
+									<span class="tooltip__content">Пользователи нашего</span>
+								</span>
+								<div class="lk-main-info-status__box">
+									<div class="lk-main-info-status__top">
+										<span class="lk-main-info-status__title">Необходимо подтверждение</span>     
+										<a href="#" class="lk-main-info-status__link">Подтвердить фотографию</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="lk-content__item js-section" id="lk-verification">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Подтвердите свой профиль и анкетные данные</h2>
+						</div>
+						<p class="lk-content__text">Подтверждение своих данных — самый простой способ поддерживать доверительные отношения между 
+						пользователями нашего сайта. Няни с подтвержденными данными пользуются значительно большим спросом и зарабатывают больше, а родители с подтвержденными данными привлекают самых лучших и востребованных нянь. 
+						Мы сверим указанную Вами в профиле и анкете информацию с данными в официальных документах, после чего, в случае совпадения, Вы получите статус «Данные подтверждены», который будет отображаться в Вашей анкете.</p>
+						<p class="lk-content__text">Мы очень серьезно относимся к личным данным. Предоставленная в ходе этого процесса информация шифруется, 
+							ее защищает наша <a href="#">Политика конфиденциальности</a>. Мы не разглашаем Ваши паспортные данные и личную информацию.
+						</p>	
+						<div class="lk-verification">
+							<div class="lk-verification__row">
+								<div class="lk-verification__cell lk-verification__cell--desc">
+									<span class="lk-verification__desc">Личные данные (имя, фамилия, пол, дата рождения)</span>
+								</div>
+								<div class="lk-verification__cell lk-verification__cell--link">
+									<a href="#" class="lk-verification__link btn btn-pink btn-pink--middle">Подтвердить личность</a>
+								</div>
+							</div>
+							<div class="lk-verification__row">
+								<div class="lk-verification__cell lk-verification__cell--desc">
+									<span class="lk-verification__desc">Гражданство и прописка</span>
+								</div>
+								<div class="lk-verification__cell lk-verification__cell--link">
+									<a href="#" class="lk-verification__link btn btn-pink btn-pink--middle">Подтвердить</a>
+								</div>
+							</div>
+							<div class="lk-verification__row">
+								<div class="lk-verification__cell lk-verification__cell--desc">
+									<span class="lk-verification__desc">Образование</span>
+								</div>
+								<div class="lk-verification__cell lk-verification__cell--link">
+									<a href="#" class="lk-verification__link btn btn-pink btn-pink--middle">Подтвердить образование</a>
+								</div>
+							</div>
+							<div class="lk-verification__row">
+								<div class="lk-verification__cell lk-verification__cell--desc">
+									<span class="lk-verification__desc">Фотографии</span>
+								</div>
+								<div class="lk-verification__cell lk-verification__cell--link">
+									<a href="#" class="lk-verification__link btn btn-pink btn-pink--middle">Подтвердить внешность</a>
+								</div>
+							</div>
+							<div class="lk-verification__row">
+								<div class="lk-verification__cell lk-verification__cell--desc">
+									<span class="lk-verification__desc">Электронная почта</span>
+								</div>
+								<div class="lk-verification__cell lk-verification__cell--link">
+									<span class="lk-verification__link lk-verification__link--accept btn btn-pink--middle">
+										<span class="lk-verification__link-ico icon-doing"></span>
+										Подтверждено – vasya_123@mail.ru 
+									</span>
+								</div>
+							</div>
+							<div class="lk-verification__row">
+								<div class="lk-verification__cell lk-verification__cell--desc">
+									<span class="lk-verification__desc">Номер телефона</span>
+								</div>
+								<div class="lk-verification__cell lk-verification__cell--link">
+									<a href="#" class="lk-verification__link btn btn-pink btn-pink--middle">Получить код подтверждения</a>
+								</div>
+							</div>
+						</div>
+						<p class="lk-content__text">При изменении в профиле данных, требующих подтверждения, статус «Подтверждено» пропадает, и новые
+						измененные данные необходимо подтвердить снова.</p>
+					</div>
+					<div class="lk-content__item js-section" id="lk-security">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Смена пароля</h2>
+						</div>
+						<form class="lk-change-pass js-lk-change-pass-form" action="#">
+							<div class="lk-change-pass__block">
+								<div class="lk-change-pass__box">
+									<div class="lk-change-pass__row">
+										<div class="lk-change-pass__cell lk-change-pass__cell--label">
+											<label for="lk-input20" class="lk-change-pass__label label">Старый пароль:</label>
+										</div>
+										<div class="lk-change-pass__cell lk-change-pass__cell--input">
+											<input name="lk_old_pass" type="text" class="lk-change-pass__input input" id="lk-input20">
+										</div>
+									</div>
+									<div class="lk-change-pass__row">
+										<div class="lk-change-pass__cell lk-change-pass__cell--label">
+											<label for="lk-input21" class="lk-change-pass__label label">Новый пароль:</label>
+										</div>
+										<div class="lk-change-pass__cell lk-change-pass__cell--input">
+											<input name="lk_new_pass" type="text" class="lk-change-pass__input input" id="lk-input21">
+										</div>
+									</div>
+									<div class="lk-change-pass__row">
+										<div class="lk-change-pass__cell lk-change-pass__cell--label">
+											<label for="lk-input22" class="lk-change-pass__label label">Подтвердить пароль:</label>
+										</div>
+										<div class="lk-change-pass__cell lk-change-pass__cell--input">
+											<input name="lk_new_new_pass" type="text" class="lk-change-pass__input input" id="lk-input22">
+										</div>
+									</div>
+									<div class="lk-change-pass__row">
+										<div class="lk-change-pass__cell lk-change-pass__cell--label">
+											
+										</div>
+										<div class="lk-change-pass__cell lk-change-pass__cell--input">
+											<button type="submit" class="btn btn-pink btn-pink--middle lk-change-pass__submit">Обновить пароль</button>
+										</div>
+									</div>
+								</div>
+								<div class="lk-change-pass-desc">
+									<ul class="lk-list">
+										<li class="lk-list__item">Убедитесь, что установлена английская раскладка</li>
+										<li class="lk-list__item">Убедитесь, что не включена клавиша Caps Lock</li>
+										<li class="lk-list__item">Пароль должен содержать не менее 6 символов</li>
+										<li class="lk-list__item">Пароль чувствителен к регистру<br> (”knopka” и “KnopkA” - разные пароли)</li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-delete-profile">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Удалить профиль</h2>		
+						</div>
+						<p class="lk-content__text">Вы можете удалить свой профиль и всю информацию с сайта. При этом все данные будут потеряны безвозвратно.<br> Если Вам необходимо лишь убрать свою анкету из отображения на сайте, то воспользуйтесь функцией "Приостановить публикацию анкеты" в разделе "Моя анкета"</p>
+						<div class="lk-delete-profile">
+							<a href="#"  data-href="#lk-popup-delete-prof" class="btn btn-pink btn-pink--middle lk-delete-profile__link js-popup-link">Удалиться с сайта</a>
+							<span class="lk-delete-profile__text">Нам будет Вас не хватать</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- lk content end -->
+		</div>
+		<!-- content end -->
+
+
+<!-- popup-wrap -->
+<div class="popup-wrap">
+	<div class="popup-wrap__table">
+		<div class="popup-wrap__table-cell">
+			@@include('template/blocks/lk-popup-crop.html')
+			@@include('template/blocks/lk-popup-delete-prof.html')
+			<div class="popup-wrap__overlay js-popup-close"></div>
+		</div>
+	</div>
+</div>
+<!-- popup-wrap end -->
+
+@@include('template/layout/lk-footer-head.html')
+
+</body>
+</html> 
+ 

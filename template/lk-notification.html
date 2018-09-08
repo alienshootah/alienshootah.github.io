@@ -1,0 +1,436 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content lk" role="main">
+			<!-- lk aside -->
+			@@include('template/blocks/lk-aside.html', {
+				"notification": "true"
+			})
+			<!-- lk aside end -->
+
+			<!-- lk content -->
+			<div class="lk-content">
+				<div class="lk-content__position">
+					<div class="lk-content__item">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Оповещения</h2>
+						</div>
+						<p class="lk-content__text">Любые оповещения автоматически уведомляет Вас о том, что мы нашли новую информацию, которая может быть Вам интересна. Вы можете получать новости на определенную тему (например, об интересующей Вас работе), знакомиться с новыми заказчиками и многое другое. Постарайтесь настроить оповещения как можно более точно. Чем точнее настройки, тем полезнее будут оповещения.</p>
+					</div>
+					<div class="lk-content__item js-section" id="lk-notification-site">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Оповещения на сайте</h2>
+						</div>
+						<div class="lk-notification">
+							<ul class="lk-notification__list">
+								<li class="lk-notification__list-item">
+									<p class="lk-notification__list-text"><a href="#" class="lk-notification__list-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, ullam eaque tenetur rerum inventore, culpa nulla fugit magnam odit quas. <span class="lk-notification__list-arrow"></span> </a></p>
+									<span class="lk-notification__list-remove"></span>
+								</li>
+								<li class="lk-notification__list-item">
+									<p class="lk-notification__list-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus vitae perspiciatis, alias molestiae in quas magni, numquam neque labore excepturi dolores maiores quos eaque, obcaecati dolorem, placeat animi omnis. Similique!</p>
+									<span class="lk-notification__list-remove"></span>
+								</li>
+								<li class="lk-notification__list-item">
+									<p class="lk-notification__list-text"><a href="#" class="lk-notification__list-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, quae. <span class="lk-notification__list-arrow"></span> </a></p>
+									<span class="lk-notification__list-remove"></span>
+								</li>
+								<li class="lk-notification__list-item">
+									<p class="lk-notification__list-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed eius accusantium expedita, odit rerum molestiae. Quasi placeat eos non consectetur, possimus, modi fuga quis ab consequatur. Animi consequatur, nihil <a href="#" class="lk-notification__list-link">consequuntur facilis</a> eius deleniti odio deserunt dolores quia nemo aut magni dolor! <a href="#" class="lk-notification__list-link">Nam quas vero illo nulla.</a> Saepe, error illo eaque!</p>
+								</li>
+								<li class="lk-notification__list-item">
+									<p class="lk-notification__list-text"><a href="#" class="lk-notification__list-link">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, quae. <span class="lk-notification__list-arrow"></span> </a></p>
+									<span class="lk-notification__list-remove"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-notification-email">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Оповещения по Email</h2>
+						</div>
+						<p class="lk-content__text">Выберите категории оповещений которые хотите получать от нас</p>
+						<form class="lk-main-info lk-main-info--notification" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Поступление нового заказа (бронирования)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio70" checked disabled>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio70" disabled>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Изменение статуса заказа (бронирования)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio71" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio71">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Принятие Вашего отклика на вакансию (заявку) </span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio72" checked disabled>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio72" disabled>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Изменение статуса отклика на вакансию (заявку)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio73" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio73">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Поступление нового сообщения</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio74" checked disabled>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio74" disabled>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Поступление нового отзыва</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio75" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio75">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Поступление новой рекомендации</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio76" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio76">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Статьи, советы, новости сайта (полезная информация)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio77" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio77">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Информация о платежах</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio79" checked disabled>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio79" disabled>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Привлечение Вами нового пользователя (в рамках системы бонусов)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio120" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio120">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Появление новых вакансий (заявок) от родителей в вашем городе / районе</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio121" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio121">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-notification-sms">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Оповещения по SMS</h2>
+						</div>
+						<p class="lk-content__text">Выберите категории оповещений которые хотите получать от нас</p>
+						<form class="lk-main-info lk-main-info--notification" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Поступление нового заказа (бронирования)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio80" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio80">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Принятие Вашего отклика на вакансию (заявку)</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio81" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio81">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Поступление нового сообщения</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio82" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio82">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label lk-main-info__cell--notification">
+											<span class="lk-main-info__label label">Информация о платежах</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio83" checked>
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio83">
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- lk content end -->
+		</div>
+		<!-- content end -->
+
+                    
+
+
+@@include('template/layout/lk-footer-head.html')
+
+</body>
+</html> 
+
+

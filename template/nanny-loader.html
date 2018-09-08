@@ -1,0 +1,998 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+<!-- wrapper -->
+<div class="wrapper-main">
+	<div class="wrapper">
+		@@include('template/layout/header-with-search.html') 
+
+		<!-- content -->
+		<div class="content" role="main">
+			<!-- profile -->
+			<div class="profile profile--large profile--nanny">
+				<div class="container">
+					<!-- profile__left -->
+					<div class="profile__left">
+						<!-- profile__images -->
+						<div class="profile__images">
+							<div class="profile__images-left">
+								<div class="profile-images-slider js-profile-images-slider">
+									<div class="profile-images-slider__item">
+										<img src="pic/profile-images-slider/profile-images-slider-01.jpg" alt="" class="profile-images-slider__item-img">
+									</div>
+									<div class="profile-images-slider__item">
+										<img src="pic/profile-images-slider/profile-images-slider-01.jpg" alt="" class="profile-images-slider__item-img">
+									</div>
+									
+								</div>
+							</div>
+							<div class="profile__images-right">
+								<div class="profile-images-pager">
+									<ul class="profile-images-pager-list">
+										<li class="profile-images-pager-list__item current">
+											<div class="profile-images-pager__link js-profile-images-slider-pager-link">
+												<img src="pic/profile-images-pager/profile-images-pager-01.jpg" alt="" class="profile-images-pager__link-img">
+											</div>
+										</li>
+										<li class="profile-images-pager-list__item">
+											<div class="profile-images-pager__link js-profile-images-slider-pager-link">
+												<img src="pic/profile-images-pager/profile-images-pager-02.jpg" alt="" class="profile-images-pager__link-img">
+											</div>
+										</li>
+										<!-- заглушки должны стоять снизу -->
+										<li class="profile-images-pager-list__item">
+											<div class="profile-images-pager__link js-profile-images-slider-pager-link js-profile-images-slider-pager-link-disable">
+												<img src="pic/agency/agency-01.jpg" alt="" class="profile-images-pager__link-img">
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- profile__images end -->
+
+						<!-- profile__videoreference -->
+						<a href="#" data-href="#popup-video" class="btn btn-videoreference btn--icon-play-left profile__videoreference js-popup-link">
+							<span class="icon-play btn__icon"></span>
+							<span class="btn__text btn__text--middle">Видеообрашение</span>
+						</a>
+						<!-- profile__videoreference end -->
+
+						<div class="loader">
+							<!-- profile-filters -->
+							<div class="profile-filters">
+								<form action="back/ajax-form.php" class="js-profile-filters-form">
+									<div class="profile-filters__head">
+										<div class="profile-filters__head-left">
+											<div class="profile-filters__price">200<span class="rub">o</span></div>
+										</div>
+										<div class="profile-filters__head-right">
+											<div class="profile-filters__time">в час</div>
+										</div>
+									</div>
+									<fieldset class="profile-filters__fieldset js-duble-date-parent">
+										<div class="profile-filters__fieldset-time">
+											<div class="profile-filters__fieldset-time-left">
+												<div class="row row--divider-full-50">
+													<div class="col-sm-50">
+														<div class="form-row form-row--mobile">
+															<div class="label label--profile-filters">
+																<label for="profile_filters_date_from">Начало:</label>
+															</div>
+															<div class="drop drop--date-single js-drop-parent">
+																<div class="drop__head">
+																	<input type="text" class="input input--small input--center js-drop-link js-datepickers-text" placeholder="ДД.ММ.ГГГГ" data-placeholder="ДД.ММ.ГГГГ" id="profile_filters_date_from" name="profile_filters_date_from" readonly="true">
+																</div>
+																<div class="drop__content js-drop-content">
+																	<div class="single-date">
+																		<div class="single-date__datepicker">
+																			<div class="js-datepicker" data-number="start"></div>		
+																		</div>
+																		<div class="single-date__content">
+																			<div class="single-date__content-left">
+																				<a href="#" class="single-date__remove-dates-link js-dates-remove">Сбросить даты</a>
+																			</div>
+																			<div class="single-date__content-right">
+																				<div class="single-date__min-dates">Минимум 2 дня</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-sm-50">
+														<div class="form-row form-row--mobile">
+															<div class="label label--profile-filters">
+																<label for="profile_filters_date_to">Конец:</label>
+															</div>
+															<div class="drop drop--date-single js-drop-parent">
+																<div class="drop__head">
+																	<input type="text" class="input input--small input--center js-drop-link js-datepickers-text" placeholder="ДД.ММ.ГГГГ" data-placeholder="ДД.ММ.ГГГГ" id="profile_filters_date_to" name="profile_filters_date_to" readonly="true">
+																</div>
+																<div class="drop__content js-drop-content">
+																	<div class="single-date">
+																		<div class="single-date__datepicker">
+																			<div class="js-datepicker" data-number="finish"></div>		
+																		</div>
+																		<div class="single-date__content">
+																			<div class="single-date__content-left">
+																				<a href="#" class="single-date__remove-dates-link js-dates-remove">Сбросить даты</a>
+																			</div>
+																			<div class="single-date__content-right">
+																				<div class="single-date__min-dates">Минимум 2 дня</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="profile-filters__fieldset-time-right">
+												<div class="row row--indent-small row--divider-full-50">
+													<div class="col-sm-50">
+														<div class="form-row form-row--mobile">
+															<div class="label label--profile-filters">
+																<label for="profile_filters_time_from">С:</label>
+															</div>
+															<!-- <input type="text" class="input input--small input--center input--profile-dates" value="09:00" id="profile_filters_time_from" name="profile_filters_time_from"> -->
+															<select class="select select--small select--height-small js-select select-hour" id="profile_filters_time_from" name="profile_filters_time_from">
+																<option value="" selected data-placeholder="ЧЧ:ММ">ЧЧ:ММ</option>
+																<option value="2" disabled>07:00 </option>
+																<option value="3">08:00 </option>
+																<option value="4">06:00</option>
+																<option value="5" disabled>07:00 </option>
+																<option value="6">08:00 </option>
+															</select>
+														</div>
+													</div>
+													<div class="col-sm-50">
+														<div class="form-row form-row--mobile">
+															<div class="label label--profile-filters">
+																<label for="profile_filters_time_to">По:</label>
+															</div>
+															<!-- <input type="text" class="input input--small input--center input--profile-dates" value="18:00" id="profile_filters_time_to" name="profile_filters_time_to"> -->
+															<select class="select select--small select--height-small js-select select-hour" id="profile_filters_time_to" name="profile_filters_time_to">
+																<option value="" selected data-placeholder="ЧЧ:ММ">ЧЧ:ММ</option>
+																<option value="2" disabled>13:00 </option>
+																<option value="3">14:00 </option>
+																<option value="4">15:00</option>
+																<option value="5" disabled>17:00 </option>
+																<option value="6">18:00 </option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<ul class="radioboxes-inline-list">
+											<li class="radioboxes-inline-list__item">
+												<label class="radiobox">
+													<input type="radio" 
+													class="radiobox__check" name="profile_filters_days">
+													<span class="radiobox__icon">
+														<span class="radiobox__icon-image"></span>
+													</span>
+													<span class="radiobox__inner">
+														<span class="radiobox__text">Будни и выходные</span>
+													</span>
+												</label>
+											</li>
+											<li class="radioboxes-inline-list__item">
+												<label class="radiobox">
+													<input type="radio" 
+													class="radiobox__check" name="profile_filters_days" checked>
+													<span class="radiobox__icon">
+														<span class="radiobox__icon-image"></span>
+													</span>
+													<span class="radiobox__inner">
+														<span class="radiobox__text">Будни</span>
+													</span>
+												</label>
+											</li>
+											<li class="radioboxes-inline-list__item">
+												<label class="radiobox">
+													<input type="radio" 
+													class="radiobox__check" name="profile_filters_days">
+													<span class="radiobox__icon">
+														<span class="radiobox__icon-image"></span>
+													</span>
+													<span class="radiobox__inner">
+														<span class="radiobox__text">Выходные</span>
+													</span>
+												</label>
+											</li>
+										</ul>
+									</fieldset>
+									<fieldset class="profile-filters__fieldset">
+										<div class="row">
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<div class="label label--profile-filters">Дети:</div>
+													<select class="select select--small select--height-small js-select">
+														<option value="1" selected>2</option>
+														<option value="2">3</option>
+														<option value="3">4</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<div class="label label--profile-filters">Возраст:</div>
+													<select class="select select--small select--height-small js-select">
+														<option value="1" selected>3-6 лет</option>
+														<option value="2">6-9 лет</option>
+														<option value="3">10-13 лет</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<div class="label label--profile-filters">Пребывание:</div>
+													<select class="select select--small select--height-small js-select">
+														<option value="1" selected>У Вас</option>
+														<option value="2">У Нас</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</fieldset>
+									<div class="profile-filters__head">
+										<div class="profile-filters__head-left">
+											<span class="profile-filters__price profile-filters__price--medium">200 <span class="rub">o</span></span>
+											<span class="profile-filters__time profile-filters__time--medium">х <span class="change-variable">560 часов</span></span>
+											<div class="profile-filters__days">В течени <span class="change-variable">64 дней</span></div>
+										</div>
+										<div class="profile-filters__head-right">
+											<div class="profile-filters__price profile-filters__price--indent-top profile-filters__price--old"><span class="profile-filters__price-old"><span class="change-variable">117 000</span></span> <span class="rub">o</span></div>
+											<div class="profile-filters__price profile-filters__price--medium"><span class="change-variable">96 000</span><span class="rub">o</span></div>
+										</div>
+									</div>
+									<div class="profile-filters__bottom">
+										<div class="profile-filters__isValide">
+											<div class="profile-filters__bottom-text">
+												<p>Закажите няню прямо сейчас и спокойно занимайтесь своими делами.</p>
+												<p>Поторопитесь, свободное время няни могут занять другие родители.</p>
+											</div>
+											<button data-href="#popup-nanny" class="btn btn-pink profile-filters__bottom-btn">Забронировать няню без<br> предоплат и комиссий</button>
+										</div>
+										<div class="profile-filters__bottom-info">Бронирование няни не обязывает Вас её нанимать или платить какой-либо штраф в случае отказа</div>
+									</div>
+								</form>
+							</div>
+							<!-- profile-filters end -->
+							
+							<a href="#" class="btn btn-border-gray2 btn--icon-heart-left profile__addtofav js-change-data-text" data-disable="Добавить в избранные" data-active="Удалить из избранных">
+								<span class="icon-heart-gray-medium btn__icon"></span>
+								<span class="btn__text btn__text--middle">Добавить в избранное</span>
+							</a>
+							<div class="share share--justify">
+								<ul class="share__list">
+									<li class="share__list-item">
+										<a href="#" class="icon-vk-gray share__list-item-link"></a>
+									</li>
+									<li class="share__list-item">
+										<div class="share-item">
+											<a href="#" class="icon-ok-gray share__list-item-link"></a>
+										</div>
+									</li>
+									<li class="share__list-item">
+										<div class="share-item">
+											<a href="#" class="icon-fb-gray share__list-item-link"></a>
+										</div>
+									</li>
+									<li class="share__list-item">
+										<div class="share-item">
+											<a href="#" class="icon-twitter-gray share__list-item-link"></a>
+										</div>
+									</li>
+									<li class="share__list-item">
+										<div class="share-item">
+											<a href="#" class="icon-google-gray share__list-item-link"></a>
+										</div>
+									</li>
+									<li class="share__list-item">
+										<div class="share-item">
+											<a href="#" class="icon-gmail-gray share__list-item-link"></a>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- profile__left end -->
+
+					<!-- profile__right -->
+					<div class="profile__right">
+						<!-- profile__head -->
+						<div class="profile__head">
+							<h1 class="profile__title">Виктория Ивановна</h1>
+							<div class="profile__sticker">няня</div>
+							<div class="profile__date">30.06.2016</div>
+						</div>
+						<!-- profile__head end -->
+
+						<!-- profile__meta -->
+						<div class="profile__meta">
+							<div class="profile__rating">
+								<div class="stars profile__meta-stars">
+									<div class="stars__inner" style="width:100%;"></div>
+								</div>
+								<span class="profile__rating-title profile__rating-title--scroll js-profile-rating-scroll">6 отзывов 3 рекомендации</span>
+							</div>
+						</div>
+						<!-- profile__meta end -->
+
+						<!-- profile__place -->
+						<div class="profile__place">
+							<ul class="profile__place-list">
+								<li class="profile__place-list-item">
+									<div class="profile__place-item">Москва, Центральный, Сокольники <div class="round-item profile__place-item-round" style="background:#F8678B;">1</div></div>
+								</li>
+								<li class="profile__place-list-item">
+									<a href="#" class="profile__place-item-link js-profile-place-scroll">Посмотреть на карте</a>
+								</li>
+							</ul>
+						</div>
+						<!-- profile__place end -->
+
+						<!-- <div class="profile__updated">Последнее обновление: 30.06.2016</div> -->
+
+						<!-- features -->
+						<div class="features">
+							<ul class="features-list features-list--vertical">
+								<li class="features-list__item">
+									<div class="feature feature--age">Возраст<br> <strong class="pink">25 лет</strong></div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--expirience"><strong class="pink">3 года</strong><br> опыта</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--kids"><strong class="pink">2 своих</strong><br> детей</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--education">Высшее<br> <strong class="pink">психологическое</strong><br> образование</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--reviews"><strong class="pink">Есть</strong><br> отзывы</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--verified">Данные<br> <strong class="pink">проверены</strong></div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--success">Проверка<br> психолога<br> <strong class="pink">пройдена</strong></div>
+								</li>
+							</ul>
+						</div>
+						<!-- features end-->
+
+						<!-- profile__desc -->
+						<div class="profile__desc">
+							<div class="profile__desc-text">
+								<h2>О няне:</h2>
+								<p>Ищу работу приходящей няни, можно с проживанием. О себе: меня зовут Адрагул, мне 28 лет. Основное образование: учусь на гранте в ЖПУ, физкультурный факультет.  В основном разговариваю на казахском, русский язык разговорный. Веду здоровый образ жизни - бегаю, плаваю, катаюсь на лыжах. Опыт работы в семьях нет, сама воспитала двоих детей. Готова выполнять полный уход за ребенком, прогулка, сон, развивающие игры. </p>
+							</div>
+							<div class="profile__desc-buttons">
+								<a href="#" data-href="#popup-nanny" class="btn btn-border-pink btn-border-pink--color-gray profile__desc-buttons-btn js-popup-link">Свяжитесь с няней</a>
+							</div>
+						</div>
+						<!-- profile__desc end -->
+
+						<!-- characteristics -->
+						<div class="characteristics">
+							<h2 class="characteristics__title">Основные характеристики</h2>
+							<ul class="characteristics-list characteristics-list--inline">
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--education">
+										<span class="characteristic__text">Образование:</span>
+										<span class="characteristic__text pink">Высше психологическое</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--languages">
+										<span class="characteristic__text">Знание языков:</span>
+										<span class="characteristic__text pink">Русский, Английский</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--nation">
+										<span class="characteristic__text">Национальность:</span>
+										<span class="characteristic__text pink">Казашка</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--religion">
+										<span class="characteristic__text">Религия:</span>
+										<span class="characteristic__text pink">Атеизм</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--location">
+										<span class="characteristic__text">Гражданство:</span>
+										<span class="characteristic__text pink">Казахстан</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- characteristics end -->
+
+						<!-- additional-characteristics -->
+						<div class="additional-characteristics">
+							<h2 class="additional-characteristics__title">Дополнительные характеристики</h2>
+							<ul class="additional-characteristics-list">
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Курение</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не выполняю</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Свое авто</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">English Profile</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Рекомендаци</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не выполняю</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Права на авто</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Загранпаспорт</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Местная прописка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Видео-интервтью</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<h2 class="additional-characteristics__title">Основные обязанности</h2>
+							<ul class="additional-characteristics-list">
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Готовка</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не выполняю</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Обучение</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Прогулка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Развлечение</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Кормление</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Мытье посуды</span>
+										<span class="tooltip tooltip--formoney additional-characteristic__tooltip">
+											<span class="icon-formoney tooltip__head"></span>
+											<span class="tooltip__content">За дополнительную плату</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Контроль</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не выполняю</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Уборка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Купание</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Стирка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Глажка</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не выполняю</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<h2 class="additional-characteristics__title">Дополнительные обязаности</h2>
+							<ul class="additional-characteristics-list">
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Уборка дома</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не выполняю</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Разовые поручения</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Покупка продуктов</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item"></li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Готовка на семью</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Мытье посуды семьи</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Включено в стоимость</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- additional-characteristics end -->
+
+						<!-- recommendations -->
+						<div class="recommendations">
+							<h2 class="recommendations__title">Дипломы, сертификаты и рекомендательные письма</h2>
+							<ul class="recommendations-list js-recommendations-slider">
+								<li class="recommendations-list__item">
+									<div class="recommendation">
+										<div class="recommendation__inner">
+											<a href="pic/profile-vacancy/profile-vacancy-01.jpg" class="recommendation__image js-fancy-gallery" rel="gallery1">
+												<img src="pic/users/users-01.png" alt="" class="recommendation__image-img">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="recommendations-list__item">
+									<div class="recommendation">
+										<div class="recommendation__inner">
+											<a href="pic/users/users-02.png" class="recommendation__image js-fancy-gallery" rel="gallery1">
+												<img src="pic/users/users-02.png" alt="" class="recommendation__image-img">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="recommendations-list__item">
+									<div class="recommendation">
+										<div class="recommendation__inner">
+											<a href="pic/users/users-03.png" class="recommendation__image js-fancy-gallery" rel="gallery1">
+												<img src="pic/users/users-03.png" alt="" class="recommendation__image-img">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="recommendations-list__item">
+									<div class="recommendation">
+										<div class="recommendation__inner">
+											<div class="recommendation__empty">Нет<br> рекомендации</div>
+										</div>
+									</div>
+								</li>
+								<li class="recommendations-list__item">
+									<div class="recommendation">
+										<div class="recommendation__inner">
+											<div class="recommendation__empty">Дипломы, сертификаты и рекомендательные письма</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- recommendations end -->
+
+						<!-- ratings -->
+						<div class="ratings">
+							<div class="ratings-head">
+								<ul class="ratings-head-list">
+									<li class="ratings-head-list__item">620 настоящих отзывов</li>
+									<li class="ratings-head-list__item">5 рекомендаций</li>
+								</ul>
+							</div>
+							<div class="ratings-content">
+								<div class="ratings-content__main">
+									<div class="rating-item rating-item--indent-bottom">
+										<div class="rating-item__title rating-item__title--pink">Общая оценка:</div>
+										<div class="stars rating-item__stars">
+											<div class="stars__inner" style="width:100%;"></div>
+										</div>
+									</div>
+								</div>
+								<ul class="ratings-list">
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Соответствие описанию:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:72%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Восприятие ребенком:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:30%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Общение:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:80%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Профессионализм:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:80%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Порядочность:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:60%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Пунктуальность:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:60%;"></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- ratings end -->
+
+						<!-- comments -->
+						<div class="comments">
+							<ul class="comments-list">
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#"><img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img"></a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#"><img src="pic/comment/comment-02.jpg" alt="" class="comment__image-img"></a>
+											</div>
+											<div class="comment__author"><a href="#">Дарья</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="comment__type">Рекомендация</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<div class="comment-message">Сервис позволяет просматривать множество анкет зарегистрированных соискателей, среди которых Вы сможете выбрать квалифицированную няню для ребенка. Благодаря сайту у Вас есть возможность самостоятельно выйти на связь с понравившимся Вам кандидатом.</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#"><img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img"></a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#"><img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img"></a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#"><img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img"></a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- comments end -->
+
+						<!-- pagination -->
+						<div class="pagination">
+							<div class="pagination__title">Показано <span>1</span> - <span>5</span> объявлений из <span>5</span></div>
+							<ul class="pagination-list">
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--active">1</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">2</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">3</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--right"></a>
+								</li>
+							</ul>
+						</div>
+						<!-- pagination end -->
+					</div>
+					<!-- profile__right end -->
+				</div>
+			</div>
+			<!-- profile end -->
+			
+			<!-- contacts-map -->
+			<div class="contacts-map">
+				<div class="map" id="contacts-map"></div>
+			</div>
+			<!-- contacts-map end -->
+		</div>
+		<!-- content end -->
+		
+		<div class="footer-spacer"></div>
+	</div>
+
+
+<!-- popup-wrap -->
+<div class="popup-wrap">
+	<div class="popup-wrap__table">
+		<div class="popup-wrap__table-cell">
+			@@include('template/blocks/popup-login.html')
+			@@include('template/blocks/popup-registration.html')
+			@@include('template/blocks/popup-registration2.html')
+			@@include('template/blocks/popup-restore-password.html')
+			@@include('template/blocks/popup-restore-password-success.html')
+
+			@@include('template/blocks/popup-nanny.html')
+			@@include('template/blocks/popup-message-sended.html')
+
+			@@include('template/blocks/popup-video.html')
+
+			<div class="popup-wrap__overlay js-popup-close"></div>
+		</div>
+	</div>
+</div>
+<!-- popup-wrap end -->
+
+@@include('template/layout/footer.html')
+@@include('template/layout/footer-head.html')
+</div>
+<!-- wrapper end -->
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+</body>
+</html> 
+ 

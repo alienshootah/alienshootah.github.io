@@ -1,0 +1,515 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content lk" role="main">
+			<!-- lk aside -->
+			@@include('template/blocks/lk-aside.html', {
+				"booking": "true"
+			})
+			<!-- lk aside end -->
+
+			<!-- lk content -->
+			<div class="lk-content">
+				<div class="lk-content__position">
+					<div class="lk-content__item js-section" id="lk-booking">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Управление бронированиями</h2>
+						</div>
+						<p class="lk-content__text lk-content__text--medium"><b> В данном разделе Вы можете отслеживать поступающие бронирования (заказы) и обмениваться сообщениями с клиентами. </b></p>
+						<p class="lk-content__text lk-content__text--medium">Если предложение клиента устраивает и Вы успешно договорились, то примите бронирование (заказ), нажав кнопку “Принять”.</p> 
+						<p class="lk-content__text lk-content__text--medium">Если клиент или его условия Вас не устраивают, то отклоните бронирование (заказ), нажав кнопку "Отклонить".</p>
+						<p class="lk-content__text lk-content__text--medium">Настоятельно рекомендуем отвечать на бронирования (заказы) и сообщения клиентов своевременно. Чем оперативнее Вы это сделаете тем меньше риск потерять хорошего клиента. Со своей стороны мы Вам поможем e-mail и sms уведовлениями, чтобы Вы ничего не пропустили (настройка уведоплений в разделе “Оповещения”)</p>
+						<div class="lk-booking">
+							<div class="lk-booking-filter">
+								<div class="lk-booking-filter__item">
+									<span class="lk-booking-filter__title label">Показать бронирования:</span>
+									<div class="checkboxes-group checkboxes-group--lk lk-booking-filter__group">
+										<ul class="checkboxes-group__list">
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12" checked>
+													<div class="checkboxes-group-item__decor">Все</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12">
+													<div class="checkboxes-group-item__decor">Ожидают</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12">
+													<div class="checkboxes-group-item__decor">Отменены клиентом</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12">
+													<div class="checkboxes-group-item__decor"> Отклонены мною</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12">
+													<div class="checkboxes-group-item__decor">Приняты</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12">
+													<div class="checkboxes-group-item__decor">В работе</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio12">
+													<div class="checkboxes-group-item__decor">Завершены</div>
+												</label>
+											</li>
+										</ul>                  
+									</div>
+								</div>
+								<div class="lk-booking-filter__item">
+									<span class="lk-booking-filter__title label">За период:</span>
+									<div class="checkboxes-group checkboxes-group--lk lk-booking-filter__group">
+										<ul class="checkboxes-group__list">
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio13" checked>
+													<div class="checkboxes-group-item__decor">Все</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio13">
+													<div class="checkboxes-group-item__decor">Текущий месяц</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio13">
+													<div class="checkboxes-group-item__decor">Прошлый месяц</div>
+												</label>
+											</li>
+											<li class="checkboxes-group__list-item">
+												<label class="checkboxes-group-item">
+													<input type="radio" class="checkboxes-group-item__check" name="radio13">
+													<div class="checkboxes-group-item__decor">С начала года</div>
+												</label>
+											</li>
+										</ul>                  
+									</div>
+								</div>
+							</div>                             
+							<ul class="announcements-list lk-booking__announcements">
+								<li class="announcements-list__item js-lk-chat-parent">
+									<div class="announcement">
+										<div class="announcement__left">
+											<div class="announcement__left-inner">
+												<div class="announcement-images-slider">
+													<img src="pic/announcement/announcement-01.jpg" alt="" class="announcement-images-slider__item-img">
+												</div>
+												<div class="announcement__updated">Заказ: 00123456 от 31.03.2016</div>
+											</div>
+										</div>
+										<div class="announcement__right">
+											<div class="announcement__right-top">
+												<div class="announcement__right-head">
+													<div class="announcement__right-head-left">
+														<h3 class="announcement__title"><a href="#">Александра</a></h3>
+													</div>
+													<div class="announcement__right-head-right">
+														<div class="announcement__reviews-count">
+															<div class="stars announcement__reviews-count-stars">
+																<div class="stars__inner" style="width:80%;"></div>
+															</div>
+															<a href="#" class="announcement__reviews-count-text">6 отзывов</a>
+														</div>
+													</div>
+												</div>
+												<div class="announcement__place">Москва, Центральный р-н, Сокольники <span class="round-item announcement__place-round" style="background:#F8678B;">1</span></div>
+												<div class="announcement__features">
+													<ul class="announcement__features-list">
+														<li class="announcement__features-list-item">Телефон: <span>+78605006030</span></li>
+													</ul>
+												</div>
+											</div>
+											<div class="announcement__right-bottom">
+												<div class="announcement__place">С пребыванием у родителей:</div>
+												<ol class="lk-numb-list">
+													<li class="lk-numb-list__item">Мальчик 1-3 года (малыши)</li>
+													<li class="lk-numb-list__item">Мальчик 1-3 года (малыши)</li>
+													<li class="lk-numb-list__item">Мальчик: 4-6 лет (дошколята)</li>
+													<li class="lk-numb-list__item">Девочка: 7-9 лет (младшая школа)</li>
+												</ol>
+											</div>
+										</div>
+										<div class="announcement-description">
+											<div class="announcement-description__head">
+												<span class="announcement-description__head-price">
+													<span class="change-variable">9600</span>
+													<span class="rub">o</span>
+												</span>
+												<span class="announcement-description__head-info">200 <span class="rub">o</span> х 531 час  
+												</span>
+											</div>
+											<div class="announcement-description__body">
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Начало</span>
+													<span class="announcement-description__body-day">01</span>
+													<span class="announcement-description__body-month">Февраля 2016</span>
+													<span class="announcement-description__body-week">Четверг</span>
+												</div>
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Конец</span>
+													<span class="announcement-description__body-day">31</span>
+													<span class="announcement-description__body-month">Марта 2016</span>
+													<span class="announcement-description__body-week">Вторник</span>
+												</div>
+											</div>
+											<div class="announcement-description__foot">
+												<span class="announcement-description__foot-time">09:00 - 18:00</span>
+												<span class="announcement-description__foot-text">Только выходные</span>			
+											</div>
+										</div>
+									</div>
+									<div class="announcement-status">
+										<div class="announcement-status__left">
+											<span class="announcement-status__title">Ожидает Вашего решения</span>
+										</div>
+										<div class="announcement-status__center">
+											<a href="#" class="announcement-status__show js-lk-chat-link">Раскрыть диалог</a>
+											<span class="announcement-status__message announcement-status__message--active">
+												<span class="announcement-status__message-ico icon-mail-pink-medium"></span>
+												<span class="announcement-status__message-text">Новое сообщение</span>
+											</span>
+										</div>
+										<div class="announcement-status__right">
+											<a href="#" class="btn btn-pink btn-pink--middle announcement-status__btn">Отклонить заказ</a>
+											<a href="#" class="btn btn-violet2 btn-violet2--middle announcement-status__btn">Принять заказ</a>
+										</div>
+									</div>
+									<div class="js-lk-chat-cont"></div>
+								</li>
+								<li class="announcements-list__item js-lk-chat-parent">
+									<div class="announcement">
+										<div class="announcement__left">
+											<div class="announcement__left-inner">
+												<div class="announcement-images-slider">
+													<img src="pic/announcement/announcement-01.jpg" alt="" class="announcement-images-slider__item-img">
+												</div>
+												<div class="announcement__updated">Заказ: 00123456 от 31.03.2016</div>
+											</div>
+										</div>
+										<div class="announcement__right">
+											<div class="announcement__right-top">
+												<div class="announcement__right-head">
+													<div class="announcement__right-head-left">
+														<h3 class="announcement__title"><a href="#">Александра</a></h3>
+													</div>
+													<div class="announcement__right-head-right">
+														<div class="announcement__reviews-count">
+															<div class="stars announcement__reviews-count-stars">
+																<div class="stars__inner" style="width:80%;"></div>
+															</div>
+															<a href="#" class="announcement__reviews-count-text">6 отзывов</a>
+														</div>
+													</div>
+												</div>
+												<div class="announcement__place">Москва, Центральный р-н, Сокольники <span class="round-item announcement__place-round" style="background:#F8678B;">1</span></div>
+												<div class="announcement__features">
+													<ul class="announcement__features-list">
+														<li class="announcement__features-list-item">Телефон: <span>Не указан</span></li>
+													</ul>
+												</div>
+											</div>
+											<div class="announcement__right-bottom">
+												<div class="announcement__place">С пребыванием у родителей:</div>
+												<ol class="lk-numb-list">
+													<li class="lk-numb-list__item">Мальчик: 4-6 лет (дошколята)</li>
+													<li class="lk-numb-list__item">Девочка: 7-9 лет (младшая школа)</li>
+												</ol>
+											</div>
+										</div>
+										<div class="announcement-description">
+											<div class="announcement-description__head">
+												<span class="announcement-description__head-price">
+													<span class="change-variable">9600</span>
+													<span class="rub">o</span>
+												</span>
+												<span class="announcement-description__head-info">200 <span class="rub">o</span> х 531 час  
+													<span class="announcement-description__head-price announcement-description__head-price--old">107000 <span class="rub">o</span></span>
+												</span>
+											</div>
+											<div class="announcement-description__body">
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Начало</span>
+													<span class="announcement-description__body-day">20</span>
+													<span class="announcement-description__body-month">Марта 2016</span>
+													<span class="announcement-description__body-week">Четверг</span>
+												</div>
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Конец</span>
+													<span class="announcement-description__body-day">30</span>
+													<span class="announcement-description__body-month">Май 2016</span>
+													<span class="announcement-description__body-week">Вторник</span>
+												</div>
+											</div>
+											<div class="announcement-description__foot">
+												<span class="announcement-description__foot-time">09:00 - 18:00</span>
+												<span class="announcement-description__foot-text">Только выходные</span>			
+											</div>
+										</div>
+									</div>
+									<div class="announcement-status">
+										<div class="announcement-status__left">
+											<span class="announcement-status__title">Принято бронирование</span>
+										</div>
+										<div class="announcement-status__center">
+											<a href="#" class="announcement-status__show js-lk-chat-link">Раскрыть диалог</a>
+											<span class="announcement-status__message">
+												<span class="announcement-status__message-ico icon-mail-pink-medium"></span>
+												<span class="announcement-status__message-text">Нет новых сообщений</span>
+											</span>
+										</div>
+										<div class="announcement-status__right">
+											<a href="#" class="btn btn-pink btn-pink--middle announcement-status__btn">Отказано в работе</a>
+											<a href="#" class="btn btn-violet2 btn-violet2--middle announcement-status__btn">Приступила к работе</a>
+										</div>
+									</div>
+									<div class="js-lk-chat-cont"></div>
+								</li>
+								<li class="announcements-list__item js-lk-chat-parent">
+									<div class="announcement">
+										<div class="announcement__left">
+											<div class="announcement__left-inner">
+												<div class="announcement-images-slider">
+													<img src="pic/announcement/announcement-01.jpg" alt="" class="announcement-images-slider__item-img">
+												</div>
+												<div class="announcement__updated">Заказ: 00123456 от 31.03.2016</div>
+											</div>
+										</div>
+										<div class="announcement__right">
+											<div class="announcement__right-top">
+												<div class="announcement__right-head">
+													<div class="announcement__right-head-left">
+														<h3 class="announcement__title"><a href="#">Александра</a></h3>
+													</div>
+													<div class="announcement__right-head-right">
+														<div class="announcement__reviews-count">
+															<div class="stars announcement__reviews-count-stars">
+																<div class="stars__inner" style="width:80%;"></div>
+															</div>
+															<a href="#" class="announcement__reviews-count-text">6 отзывов</a>
+														</div>
+													</div>
+												</div>
+												<div class="announcement__place">Москва, Центральный р-н, Сокольники <span class="round-item announcement__place-round" style="background:#F8678B;">1</span></div>
+												<div class="announcement__features">
+													<ul class="announcement__features-list">
+														<li class="announcement__features-list-item">Телефон: <span>Не указан</span></li>
+													</ul>
+												</div>
+											</div>
+											<div class="announcement__right-bottom">
+												<div class="announcement__place">С пребыванием у родителей:</div>
+												<ol class="lk-numb-list">
+													<li class="lk-numb-list__item">Мальчик: 4-6 лет (дошколята)</li>
+													<li class="lk-numb-list__item">Девочка: 7-9 лет (младшая школа)</li>
+												</ol>
+											</div>
+										</div>
+										<div class="announcement-description">
+											<div class="announcement-description__head">
+												<span class="announcement-description__head-price">
+													<span class="change-variable">9600</span>
+													<span class="rub">o</span>
+												</span>
+												<span class="announcement-description__head-info">200 <span class="rub">o</span> х 531 час  
+													<span class="announcement-description__head-price announcement-description__head-price--old">107000 <span class="rub">o</span></span>
+												</span>
+											</div>
+											<div class="announcement-description__body">
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Начало</span>
+													<span class="announcement-description__body-day">20</span>
+													<span class="announcement-description__body-month">Марта 2016</span>
+													<span class="announcement-description__body-week">Четверг</span>
+												</div>
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Конец</span>
+													<span class="announcement-description__body-day">30</span>
+													<span class="announcement-description__body-month">Май 2016</span>
+													<span class="announcement-description__body-week">Вторник</span>
+												</div>
+											</div>
+											<div class="announcement-description__foot">
+												<span class="announcement-description__foot-time">09:00 - 18:00</span>
+												<span class="announcement-description__foot-text">Только выходные</span>			
+											</div>
+										</div>
+									</div>
+									<div class="announcement-status">
+										<div class="announcement-status__left">
+											<span class="announcement-status__title">Выполнение работы</span>
+										</div>
+										<div class="announcement-status__center">
+											<a href="#" class="announcement-status__show js-lk-chat-link">Раскрыть диалог</a>
+											<span class="announcement-status__message">
+												<span class="announcement-status__message-ico icon-mail-pink-medium"></span>
+												<span class="announcement-status__message-text">Нет новых сообщений</span>
+											</span>
+										</div>
+										<div class="announcement-status__right js-modal-comment-form-parent">
+											<a href="#" class="btn btn-violet2 btn-violet2--middle announcement-status__btn js-modal-comment-form-open">Работа завершена</a>
+											<div class="js-modal-comment-form-cont lk-reviews__list-drop"></div>
+										</div>
+									</div>
+									<div class="js-lk-chat-cont"></div>
+								</li>
+								<li class="announcements-list__item js-lk-chat-parent">
+									<div class="announcement">
+										<div class="announcement__left">
+											<div class="announcement__left-inner">
+												<div class="announcement-images-slider">
+													<img src="pic/announcement/announcement-01.jpg" alt="" class="announcement-images-slider__item-img">
+												</div>
+												<div class="announcement__updated">Заказ: 00123456 от 31.03.2016</div>
+											</div>
+										</div>
+										<div class="announcement__right">
+											<div class="announcement__right-top">
+												<div class="announcement__right-head">
+													<div class="announcement__right-head-left">
+														<h3 class="announcement__title"><a href="#">Александра</a></h3>
+													</div>
+													<div class="announcement__right-head-right">
+														<div class="announcement__reviews-count">
+															<div class="stars announcement__reviews-count-stars">
+																<div class="stars__inner" style="width:80%;"></div>
+															</div>
+															<a href="#" class="announcement__reviews-count-text">6 отзывов</a>
+														</div>
+													</div>
+												</div>
+												<div class="announcement__place">Москва, Центральный р-н, Сокольники <span class="round-item announcement__place-round" style="background:#F8678B;">1</span></div>
+												<div class="announcement__features">
+													<ul class="announcement__features-list">
+														<li class="announcement__features-list-item">Телефон: <span>Не указан</span></li>
+													</ul>
+												</div>
+											</div>
+											<div class="announcement__right-bottom">
+												<div class="announcement__place">С пребыванием у родителей:</div>
+												<ol class="lk-numb-list">
+													<li class="lk-numb-list__item">Мальчик: 4-6 лет (дошколята)</li>
+													<li class="lk-numb-list__item">Девочка: 7-9 лет (младшая школа)</li>
+												</ol>
+											</div>
+										</div>
+										<div class="announcement-description">
+											<div class="announcement-description__head">
+												<span class="announcement-description__head-price">
+													<span class="change-variable">9600</span>
+													<span class="rub">o</span>
+												</span>
+												<span class="announcement-description__head-info">200 <span class="rub">o</span> х 531 час  
+													<span class="announcement-description__head-price announcement-description__head-price--old">107000 <span class="rub">o</span></span>
+												</span>
+											</div>
+											<div class="announcement-description__body">
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Начало</span>
+													<span class="announcement-description__body-day">20</span>
+													<span class="announcement-description__body-month">Марта 2016</span>
+													<span class="announcement-description__body-week">Четверг</span>
+												</div>
+												<div class="announcement-description__body-item">
+													<span class="announcement-description__body-text">Конец</span>
+													<span class="announcement-description__body-day">30</span>
+													<span class="announcement-description__body-month">Май 2016</span>
+													<span class="announcement-description__body-week">Вторник</span>
+												</div>
+											</div>
+											<div class="announcement-description__foot">
+												<span class="announcement-description__foot-time">09:00 - 18:00</span>
+												<span class="announcement-description__foot-text">Только выходные</span>			
+											</div>
+										</div>
+									</div>
+									<div class="announcement-status">
+										<div class="announcement-status__left">
+											<span class="announcement-status__title">Завершена работа</span>
+										</div>
+										<div class="announcement-status__center">
+											<a href="#" class="announcement-status__show js-lk-chat-link">Раскрыть диалог</a>
+											<span class="announcement-status__message">
+												<span class="announcement-status__message-ico icon-mail-pink-medium"></span>
+												<span class="announcement-status__message-text">Нет новых сообщений</span>
+											</span>
+										</div>
+										<div class="announcement-status__right js-modal-comment-form-parent">
+											<a href="#" class="btn btn-violet2 btn-violet2--middle announcement-status__btn js-modal-comment-form-open">Оставить отзыв</a>
+											<div class="js-modal-comment-form-cont lk-reviews__list-drop"></div>
+										</div>
+									</div>
+									<div class="js-lk-chat-cont"></div>
+								</li>
+							</ul>
+							<div class="pagination">
+								<div class="pagination__title">Показано 1 - 20 заказов из 50</div>
+								<ul class="pagination-list">
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link pagination__link--left"></a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link">1</a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link pagination__link--active">2</a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link">3</a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link">4</a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link pagination__link--all">...</a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link">80</a>
+									</li>
+									<li class="pagination-list__item">
+										<a href="#" class="pagination__link pagination__link--right"></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						 
+					</div>
+				</div>
+			</div>
+			<!-- lk content end -->
+		</div>
+		<!-- content end -->
+
+                    
+
+<!-- lk drop -->
+@@include('template/blocks/lk-popup-comment.html')
+@@include('template/blocks/lk-chat-drop.html')
+<!-- lk drop end -->
+
+@@include('template/layout/lk-footer-head.html')
+
+</body>
+</html> 
+
+

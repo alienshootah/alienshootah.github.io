@@ -1,0 +1,140 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+<!-- wrapper -->
+<div class="wrapper-main">
+	<div class="wrapper">
+		@@include('template/layout/header-with-search.html') 
+
+		<!-- content -->
+		<div class="content" role="main">
+			<!-- registration-agency -->
+			<div class="registration-agency">
+				<!-- registration-agency__top -->
+				<div class="registration-agency__top">
+					<div class="container">
+						<div class="registration-agency__top-left">
+							<h1 class="registration-agency__title">Регистрация агентства</h1>
+							<strong class="registration-agency__desc">Вы можете хорошо зарабатывать на нашем сайте, предлагая услуги своих нянь</strong>
+							<div class="registration-agency-form">
+								<form action="#" class="js-registration-agency-form">
+									<div class="row">
+										<div class="col-sm-33">
+											<div class="form-row">
+												<div class="label">
+													<label for="registration_agency_name">Наименование агентства:</label>
+												</div>
+												<input type="text" class="input" name="registration_agency_name" id="registration_agency_name">
+											</div>
+										</div>
+										<div class="col-sm-33">
+											<div class="form-row">
+												<div class="label">Ваш город:</div>
+												<select class="select select--place js-select">
+													<option value="Москва" selected>Москва</option>
+													<option value="Санкт-Петербург">Санкт-Петербург</option>
+													<option value="Сочи">Сочи</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-sm-33">
+											<div class="form-row">
+												<div class="label">Год основания агентства:</div>
+												<select class="select js-select">
+													<option value="2000" selected>2000</option>
+													<option value="2001">2001</option>
+													<option value="2002">2002</option>
+													<option value="2003">2003</option>
+													<option value="2004">2004</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="registration-agency-form__buttons">
+										<button class="btn btn-border-violet registration-agency-form__buttons-btn" type="submit">Продолжить</button>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="registration-agency__top-right">
+							<div class="registration-agency-total">
+								<div class="registration-agency-total__title">Объем сделок по найму нянь и сиделок за апрель в Москве составил </div>
+								<div class="registration-agency-total__sum">6 200 000 <span class="rub">o</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- registration-agency__top end -->
+
+				<!-- registration-agency__bottom -->
+				<div class="registration-agency__bottom">
+					<div class="container">
+						<ul class="work-list">
+							<li class="work-list__item">
+								<div class="work-item work-item--small">
+									<div class="work-item__image">
+										<div class="work-item__image-cell">
+											<img src="pic/work/work-04.png" alt="" class="work-item__image-img">
+										</div>	
+									</div>
+									<h3 class="work-item__title">Безопасность</h3>
+									<p class="work-item__text">Наши инструменты защиты и проверки дают возможность принимать бронирования от родителей, только если Вы уверены в них на 100%. Причем, Вы можете принять или отклонить предложение после личной встречи с клиентами</p>
+								</div>
+							</li>
+							<li class="work-list__item">
+								<div class="work-item work-item--small">
+									<div class="work-item__image">
+										<div class="work-item__image-cell">
+											<img src="pic/work/work-05.png" alt="" class="work-item__image-img">
+										</div>	
+									</div>
+									<h3 class="work-item__title">Высокая доходность</h3>
+									<p class="work-item__text">На нашем сайте высокий спрос на нянь, к тому же Вы можете оптимально распределить рабочее время, получая доход с каждого своего часа</p>
+								</div>
+							</li>
+							<li class="work-list__item">
+								<div class="work-item work-item--small">
+									<div class="work-item__image">
+										<div class="work-item__image-cell">
+											<img src="pic/work/work-06.png" alt="" class="work-item__image-img">
+										</div>	
+									</div>
+									<h3 class="work-item__title">Удобство и выгода</h3>
+									<p class="work-item__text">Регистрация и использование нашего сайта абсолютно бесплатны, а функционал сделан простым и полезным. Взимается лишь 9% от стоимости реальных состоявшихся сделок.</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- registration-agency__bottom end -->
+			</div>
+			<!-- registration-agency end -->
+		</div>
+		<!-- content end -->
+		
+		<div class="footer-spacer"></div>
+	</div>
+
+
+<!-- popup-wrap -->
+<div class="popup-wrap">
+	<div class="popup-wrap__table">
+		<div class="popup-wrap__table-cell">
+			@@include('template/blocks/popup-login.html')
+			@@include('template/blocks/popup-registration.html')
+			@@include('template/blocks/popup-registration2.html')
+			@@include('template/blocks/popup-restore-password.html')
+			@@include('template/blocks/popup-restore-password-success.html')
+
+			<div class="popup-wrap__overlay js-popup-close"></div>
+		</div>
+	</div>
+</div>
+<!-- popup-wrap end -->
+</div>
+<!-- wrapper end -->
+@@include('template/layout/footer.html')
+@@include('template/layout/footer-head.html')
+</body>
+</html> 

@@ -1,0 +1,1740 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content lk" role="main">
+			<!-- lk aside -->
+			@@include('template/blocks/lk-aside.html', {
+				"worksheet": "true"
+			})
+			<!-- lk aside end -->
+
+			<!-- lk content -->
+			<div class="lk-content">
+				<div class="lk-content__position">
+					<div class="lk-content__desc">
+						<p class="lk-content__desc-text">Внимательно, подробно и ответственно заполните свою анкету.<br> 
+						Чем лучше Вы заполните информацию о себе, тем больше получите клиентов и более высокие доходы.</p>		
+						<a href="#" class="lk-content__desc-link">Посмотреть пример хорошо заполненной анкеты</a>
+					</div>
+					<div class="lk-content__item js-section" id="lk-my-info">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Личная информация <span class="lk-content__title-text">Редактируется в “Моем профиле”</span></h2>
+						</div>
+						<form class="lk-main-info" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-input1" class="lk-main-info__label label">Имя:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<input name="lk_info_name" type="text" class="lk-main-info__input input" id="lk-input1" value="Владимир" readonly>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-input2" class="lk-main-info__label label">Фамилия:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<input name="lk_info_last_name" type="text" class="lk-main-info__input input" id="lk-input2" value="Петров" readonly>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select1" class="lk-main-info__label label">Пол:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__line">
+												<div class="col-sm-50">
+													<input name="lk_info_last_name" type="text" class="lk-main-info__input input" id="lk-select1" value="Женский" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label class="lk-main-info__label label">Дата рождения:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__line">
+												<div class="col-sm-33">
+													<input name="lk_info_last_name" type="text" class="lk-main-info__input input" value="30 лет" readonly>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="lk-main-info-status__ico icon-doing"></span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Подтверждено</span>     
+										</div>
+										<p class="lk-main-info-status__text">Работники с подтвержденными данными более<br> востребованы и в среднем зарабатывают больше.</p>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-experience">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Опыт</h2>
+						</div>
+						<form class="lk-main-info lk-main-info--large" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box js-multi-parent">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Стаж работы:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__line">
+												<div class="col-sm-50">
+													<select class="select select--small js-select" id="lk-select6">
+														<option value="1" selected>6 лет</option>
+														<option value="2">4 лет</option>
+														<option value="2">4 лет</option>
+														<option value="2">4 лет</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Количество своих детей:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__line">
+												<div class="col-sm-50">
+													<select class="select select--small js-select" id="lk-select7">
+														<option value="1" selected>2 ребенка</option>
+														<option value="2">4 лет</option>
+														<option value="2">4 лет</option>
+														<option value="2">4 лет</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row js-multi-clone js-multi-clone--single" style="display: none">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">About me:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--full">
+											<textarea name="" class="input input--textarea" placeholder="Напишите здесь о себе и условиях Вашей работы"></textarea>
+											<span class="lk-main-info__multi-remove js-multi-remove">
+												<span class="icon-close-red"></span>								
+											</span>
+										</div>
+									</div>
+									<div class="lk-main-info__row js-multi">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Обо мне:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--full">
+											<textarea name="" class="input input--textarea" placeholder="Напишите здесь о себе и условиях Вашей работы"></textarea>
+											<a href="#" class="lk-main-info__add js-multi-add">
+												<span class="lk-main-info__add-text">Добавить описание на английском языке</span>
+											</a>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--full">
+											<h3 class="lk-title-h3">Помогите родителям лучше узнать Вас</h3>
+											<h4 class="lk-title-h4">Расскажите о себе и своих сильных сторонах:</h4>
+											<ul class="lk-list">
+												<li class="lk-list__item">Профессиональные и человеческие качества;</li>
+												<li class="lk-list__item">Ключевые знания и навыки;</li>
+												<li class="lk-list__item">Что Вы любите и чем увлекаетесь? </li>
+												<li class="lk-list__item">Условия Вашей работы;</li>
+											</ul>
+											<h4 class="lk-title-h4">Расскажите о своем опыте работы с детьми:</h4>
+											<ul class="lk-list">
+												<li class="lk-list__item">С каким количеством детей Вы работали;</li>
+												<li class="lk-list__item">К каким возрастным группам они относились;</li>
+												<li class="lk-list__item">Что Вы любите и чем увлекаетесь? </li>
+												<li class="lk-list__item">Что Вам приходилось делать работая няней.</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-education">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Образование</h2>
+						</div>
+						<form class="lk-main-info" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select9" class="lk-main-info__label label">Уровень образования: </label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<select class="select select--small js-select" id="lk-select9">
+												<option value="1" selected>Законченное высшее</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+											</select>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select10" class="lk-main-info__label label">Специализация:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<select class="select select--small js-select" id="lk-select10">
+												<option value="1" selected>Психологическое</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Необходимо подтверждение</span>
+											<a href="#" class="lk-main-info-status__link">Подтвердить образование</a>
+										</div>
+										<p class="lk-main-info-status__text">Работники с подтвержденными данными более<br>востребованы и в среднем зарабатывают больше. </p>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-characteristic">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Основные характеристики</h2>
+						</div>
+						<form class="lk-main-info" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select11" class="lk-main-info__label label">Национальность:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<select class="select select--small js-select" id="lk-select11">
+												<option value="1" selected>Русская</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select12" class="lk-main-info__label label">Гражданство:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<select class="select select--small js-select" id="lk-select12">
+												<option value="1" selected>Казахстан</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Необходимо подтверждение</span>
+											<a href="#" class="lk-main-info-status__link">Подтвердить гражданство</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box js-multi-parent">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select13" class="lk-main-info__label label">Знание языков:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="lk-main-info__multi js-multi-clone" style="display: none">
+												<select class="select select--small" id="lk-select14">
+													<option value="1" selected>Казахский</option>
+													<option value="2">4 лет</option>
+													<option value="2">2 лет</option>
+													<option value="2">4 лет</option>
+												</select>
+												<span class="lk-main-info__multi-remove js-multi-remove">
+													<span class="icon-close-red"></span>								
+												</span>
+											</div>
+											<div class="lk-main-info__multi js-multi">
+												<select class="select select--small js-select" id="lk-select13">
+													<option value="1" selected>Русский</option>
+													<option value="2">4 лет</option>
+													<option value="2">4 лет</option>
+													<option value="2">4 лет</option>
+												</select>
+											</div>
+											<a href="#" class="lk-main-info__add js-multi-add">
+												<span class="lk-main-info__add-text">Добавить еще язык</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<label for="lk-select15" class="lk-main-info__label label">Религиозные взгляды:</label>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<select class="select select--small js-select" id="lk-select15">
+												<option value="1" selected>Атеизм</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+												<option value="2">4 лет</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Дополнительные характеристики</h2>
+						</div>
+						<div class="lk-more-characteristic">
+							<div class="lk-more-characteristic__row">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__check">
+									<span class="checkbox__icon">
+										<span class="checkbox__icon-image"></span>
+									</span>
+									<span class="checkbox__inner">
+										<span class="checkbox__text">Курю</span>
+									</span>
+								</label>
+							</div>
+							<div class="lk-more-characteristic__row">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__check">
+									<span class="checkbox__icon">
+										<span class="checkbox__icon-image"></span>
+									</span>
+									<span class="checkbox__inner">
+										<span class="checkbox__text">Загранпаспорт</span>
+									</span>
+								</label>
+							</div>
+							<div class="lk-more-characteristic__row">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__check">
+									<span class="checkbox__icon">
+										<span class="checkbox__icon-image"></span>
+									</span>
+									<span class="checkbox__inner">
+										<span class="checkbox__text">Местная прописка</span>
+										<span class="lk-main-info-status checkbox__status">
+											<span class="tooltip lk-main-info-status__ico">
+												<span class="icon-tooltip-gray tooltip__head"></span>
+												<span class="tooltip__content">Пользователи нашего</span>
+											</span>
+											<span class="lk-main-info-status__box">
+												<div class="lk-main-info-status__top">
+													<span class="lk-main-info-status__title">Необходимо подтверждение</span>
+													<a href="#" class="lk-main-info-status__link">Подтвердить гражданство</a>
+												</div>
+											</span>
+										</span>
+									</span>
+								</label>
+							</div>
+							<div class="lk-more-characteristic__row">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__check">
+									<span class="checkbox__icon">
+										<span class="checkbox__icon-image"></span>
+									</span>
+									<span class="checkbox__inner">
+										<span class="checkbox__text">Водительское удостоверение</span>
+									</span>
+								</label>
+							</div>
+							<div class="lk-more-characteristic__row">
+								<label class="checkbox">
+									<input type="checkbox" class="checkbox__check">
+									<span class="checkbox__icon">
+										<span class="checkbox__icon-image"></span>
+									</span>
+									<span class="checkbox__inner">
+										<span class="checkbox__text">Свой автомобиль</span>
+									</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-responsibility">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Основные обязанности, которые Вы выполняете</h2>
+						</div>
+						<form class="lk-main-info lk-main-info--large" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Приготовление еды:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio1">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio1" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio1">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Кормление ребенка:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio2">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio2" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio2">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Купание ребенка:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio13">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio13" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio13">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Обучение ребенка</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio11">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio11" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio11">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Мытье посуды ребенка:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio4">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio4" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio4">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Стирка детских вещей:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio5">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio5" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio5">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Прогулка с ребенком:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio6">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio6" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio6">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Присмотр:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio7">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio7" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio7">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Глажка детской одежды:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio8">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio8" checked> 
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio8">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Приготовление еды:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio9">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio9" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check"name="radio9">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Развлечения и игры:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio10">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio10" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio10">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Дополнительные обязанности, которые Вы выполняете</h2>
+						</div>
+						<form class="lk-main-info lk-main-info--large" action="#">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Приготовление еды:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio12">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio12" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio12">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Кормление ребенка:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio13">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio13" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio13">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Купание ребенка:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio14">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio14" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio14">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Обучение ребенка</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio15">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio15" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio15">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Мытье посуды ребенка:</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio16">
+															<div class="checkboxes-group-item__decor">Да</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio16" checked>
+															<div class="checkboxes-group-item__decor">Нет</div>
+														</label>
+													</li>
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="radio" class="checkboxes-group-item__check" name="radio16">
+															<div class="checkboxes-group-item__decor">За дополнительную плату</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-location">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Расположение</h2>
+						</div>
+						<p class="lk-content__text">С помощью этих данных, родители ищут нянь рядом с собой</p>
+						<div class="lk-location">
+							<div class="lk-location__box">
+								<div class="lk-location__row">
+									<div class="col-md-25 lk-location__cell">
+										<select class="select select--small js-select">
+											<option value="1" selected>Страна</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+										</select>
+									</div>
+									<div class="col-md-25 lk-location__cell">
+										<select class="select select--small js-select">
+											<option value="1" selected>Город</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+										</select>
+									</div>
+									<div class="col-md-25 lk-location__cell">
+										<select class="select select--small js-select">
+											<option value="1" selected>Район</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+										</select>
+									</div>
+									<div class="col-md-25 lk-location__cell">
+										<select class="select select--small js-select">
+											<option value="1" selected>Станция метро</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+											<option value="2">4 лет</option>
+										</select>
+									</div>
+								</div>
+								<div class="lk-location__row">
+									<div class="col-md-75 lk-location__cell">
+										<label for="lk-location-street" class="label lk-location__label">Улица / Микрорайон:</label>
+										<input type="text" class="input lk-location__input" id="lk-location-street">
+									</div>
+									<div class="col-md-25 lk-location__cell lk-location__cell--house">
+										<label for="lk-location-house" class="label lk-location__label">Дом:</label>
+										<input type="text" class="input lk-location__input" id="lk-location-house">
+									</div>
+								</div>
+							</div>
+							<div class="lk-location-map">
+								<div class="lk-location-map__left">
+									<div class="lk-location-map__map" id="lk-location-map"></div>
+									<textarea name="" class="input input--textarea" placeholder="Расскажите кратко как к Вам добраться на транспорте"></textarea>
+								</div>
+								<div class="lk-location-map__right">
+									<span class="lk-location-map__title">Ваше<br> местоположение<br> конфиденциально</span>
+									<span class="lk-location-map__ico icon-map-ico"></span>
+									<span class="lk-location-map__text">Только подтвержденные<br> клиенты увидят Ваш<br> точный адрес</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-interview">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Видеоинтервью</h2>
+						</div>
+						<p class="lk-content__text">Няни с видеоинтервью пользуются большей популярностью, востребованностью и доверием.<br> Рекомендуем записать свое видеоинтервью. Это легко можно сделать ниже.</p>
+						<div class="lk-interview">
+							<div class="lk-interview__left">
+								<div class="lk-interview__image">
+									<img class="lk-interview__img" src="pic/lk/dummies/dummies-video.jpg" alt="">
+								</div>
+							</div>
+							<div class="lk-interview__right">
+								<span class="lk-interview__title">Инструкция по созданию видео</span>
+								<ol class="lk-numb-list lk-interview__numb-list">
+									<li class="lk-numb-list__item">Советуем Вам сесть на растоянии вытянутой руки от экрана.</li>
+									<li class="lk-numb-list__item">У Вас только 60 секунд, постарайтесь уложиться</li>
+									<li class="lk-numb-list__item">Старайтесь, чтобы источник света был перед Вами, а не позади</li>
+									<li class="lk-numb-list__item">Смотрите в камеру, чтобы установить связь со зрителем</li>
+									<li class="lk-numb-list__item">Расскажите о своем образовании, опыте работы с детьми, о своих знаниях, навыках, профессиональных, челоческских качествах и прочее.</li>
+									<li class="lk-numb-list__item">Заинтересуйте зрителей и покажите почему родители должны  захотеть нанять именно Вас.</li>
+								</ol>
+								<div class="lk-interview__buttons">
+									<a href="#" class="btn btn-pink btn-pink--middle lk-interview__btn">Записать новое видео</a>
+									<a href="#" class="btn btn-border-violet btn-border-violet--middle lk-interview__btn">Загрузить видео</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-my-photo">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Фотографии</h2>
+						</div>
+						<p class="lk-content__text">Приложите свои фотографии в разных ракурсах, чтобы вызвать<br> доверие и интерес к себе со стороны родителей.</p>
+						<div class="lk-photography">
+							<div class="lk-photography__left">
+								<div class="dropzone-multiple js-multiple-dropzone-container">
+									<div class="lk-photography__image">
+										<img class="lk-photography__img" src="pic/lk/photo/photo-01.jpg" alt="" data-default="pic/lk/photo/photo-01.jpg">
+										<!-- <span class="lk-photography__image-remove">
+											<span class="icon-close-white"></span>
+										</span> -->
+									</div>
+									<div class="lk-photography__preview">
+										<div class="dropzone-multiple__block" id="js-multiple-dropzone"></div>
+							      <div class="dropzone-multiple__preview js-dropzone-previews">
+							        <div id="dropzone-template" class="dropzone-multiple__preview-item lk-photography__preview-item dropzone-multiple__preview-item--wide">
+							          <div class="input-file input-file--large">
+							            <div class="input-file__img">
+							                <span class="input-file__img-inner"><img data-dz-thumbnail /></span>
+							            </div>
+							            <span class="input-file__content">
+							              <img class="lk-photography__preview-img" src="pic/lk/dummies/dummies-photo-2.jpg" alt="">
+							            </span>
+							            <span data-dz-remove class="lk-photography__image-remove delete">
+							              <span class="icon-close-white"></span>
+							            </span>
+							          </div>
+							        </div>
+							      </div>
+							      <div class="dropzone-multiple__preview dropzone-multiple__preview--caps js-more-photos-holder">
+							        <div class="dropzone-multiple__preview-item dropzone-multiple__preview-item--wide lk-photography__preview-item">
+							          <div class="input-file input-file--large">
+							            <div class="input-file__img">
+							                <span class="input-file__img-inner"><img data-dz-thumbnail /></span>
+							            </div>
+							            <span class="input-file__content">
+							              <img class="lk-photography__preview-img" src="pic/lk/dummies/dummies-photo-2.jpg" alt="">
+							            </span>
+							          </div>
+							        </div>
+							        <div class="dropzone-multiple__preview-item dropzone-multiple__preview-item--wide lk-photography__preview-item">
+							          <div class="input-file input-file--large">
+							            <div class="input-file__img">
+							                <span class="input-file__img-inner"><img data-dz-thumbnail /></span>
+							            </div>
+							            <span class="input-file__content">
+							              <img class="lk-photography__preview-img" src="pic/lk/dummies/dummies-photo-3.jpg" alt="">
+							            </span>
+							          </div>
+							        </div>
+							        <div class="dropzone-multiple__preview-item dropzone-multiple__preview-item--wide lk-photography__preview-item">
+							          <div class="input-file input-file--large">
+							            <div class="input-file__img">
+							                <span class="input-file__img-inner"><img data-dz-thumbnail /></span>
+							            </div>
+							            <span class="input-file__content">
+							              <img class="lk-photography__preview-img" src="pic/lk/dummies/dummies-photo-4.jpg" alt="">
+							            </span>
+							          </div>
+							        </div>
+							      </div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-photography__right">
+								<span class="lk-photography__title">Рекомендуем использовать качественные<br> вертикальные фото снимки</span>
+								<span class="lk-photography__text">И загрузить максимально их количество (3 шт.)</span>
+								<a href="#" class="btn btn-pink btn-pink--middle lk-photography__load js-dropzone-trigger">
+									<svg class="btn__icon photo-load-ico">
+										<use xlink:href="#photo-load"></use>
+									</svg>
+									<span class="btn__text">Добавить фотографии</span>
+								</a>
+								<div class="lk-main-info-status lk-tooltip lk-photography__status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего сайта хотят быть уверены, что в анкете няни либо родителя присутствует только правдивая проверенная информация и отдают предпочтение именно таким людям. Рекомендуем пройти несложное подтверждение указанных Вами данных. Это Вам же выгодно.</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Необходимо подтверждение</span>
+											<a href="#" class="lk-main-info-status__link">Подтвердить фотографии</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-recommendation">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Дипломы, сертификаты и рекомендательные письма</h2>
+						</div>
+						<p class="lk-content__text">Няни с рекомендациями от предыдущих работодателей и сертификатами<br> зарабатывают больше и более востребованы</p>
+						<div class="lk-recommendation">
+							<ul class="lk-recommendation__list js-lk-recommendations-slider">
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/profile-vacancy/profile-vacancy-01.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-01.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/lk/recommendation/recommendation-02.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-02.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/profile-vacancy/profile-vacancy-01.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-01.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/lk/recommendation/recommendation-02.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-02.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/lk/recommendation/recommendation-02.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-02.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/profile-vacancy/profile-vacancy-01.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-01.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/lk/recommendation/recommendation-02.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-02.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="pic/profile-vacancy/profile-vacancy-01.jpg" class="lk-recommendation__list-link js-fancy-gallery" rel="gallery2">
+												<img class="lk-recommendation__list-img" src="pic/lk/recommendation/recommendation-01.jpg" alt="">
+											</a>
+										</div>
+									</div>
+								</li>
+								<li class="lk-recommendation__list-item">
+									<div class="lk-recommendation__list-box">
+										<div class="lk-recommendation__list-block">
+											<a href="#" class="lk-recommendation__list-link lk-recommendation__list-link--add">
+												<svg class="lk-recommendation__list-ico plus-ico">
+													<use xlink:href="#plus"></use>
+												</svg>
+												<span class="lk-recommendation__list-text">Добавить<br> рекомендацию<br> или сертификат</span>
+											</a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-psychologist">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Проверка психолога</h2>
+						</div>
+						<p class="lk-content__text"><b>Мы рекомендуем пройти заочную проверку психолога, заполнив нашу социальную анкету.</b><br>
+						Няни успешно прошедшие психологическую проверку пользуются большим спросом и доверием. </p>
+						<div class="lk-psychologist">
+							<a href="#" class="btn btn-pink btn-pink--middle lk-psychologist__link">Пройти психологический тест</a>
+							<span class="lk-psychologist__text">Внимание: время теста ограничено, пересдать тест нельзя</span>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-prices">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Работа и расценки</h2>
+						</div>
+						<h3 class="lk-title-h3 lk-title-h3--indent">Установите часовую цену на услуги.</h3>
+						<p class="lk-content__text">Вы можете установить цену которая отражает уровень и объем Ваших услуг, квалификацию и опыт, а мы постараемся Вам помочь не ошибаться</p>
+						<h3 class="lk-title-h3 lk-title-h3--indent">Базовые цены</h3>
+						<p class="lk-content__text">Укажите возрастные группы детей, с которыми Вы готовы работать и цену одного часа Ваших услуг для каждой из выбранных групп.</p>
+						<div class="lk-main-info lk-main-info--large lk-main-info--price lk-main-info--indent">
+							<div class="lk-main-info__block ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked>
+															<div class="checkboxes-group-item__decor">Груднички (до 1 года)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input ">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100">
+												<span class="work-input__desc"><span class="rub">o</span>/час</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked>
+															<div class="checkboxes-group-item__decor">Малыши (1-3 года)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input ">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="200">
+												<span class="work-input__desc"><span class="rub">o</span>/час</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block  ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked>
+															<div class="checkboxes-group-item__decor">Дошколята (4-6 лет)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input ">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="200">
+												<span class="work-input__desc"><span class="rub">o</span>/час</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 250 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check">
+															<div class="checkboxes-group-item__decor">Младшая школа (7-9 лет)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" readonly>
+												<span class="work-input__desc"><span class="rub">o</span>/час</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check">
+															<div class="checkboxes-group-item__decor">Школьники (10+ лет)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" readonly>
+												<span class="work-input__desc"><span class="rub">o</span>/час</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="lk-title-h3 lk-title-h3--indent">Количество детей для работы</h3>
+						<p class="lk-content__text">Укажите количество детей, с которыми вы готовы работать одновременно и цену одного часа Ваших услуг в процентах</p>
+						<div class="lk-main-info lk-main-info--large lk-main-info--price lk-main-info--price-min lk-main-info--indent">
+							<div class="lk-main-info__block ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked disabled="disabled">
+															<div class="checkboxes-group-item__decor">1</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input  work-input--gray">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100" readonly>
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked>
+															<div class="checkboxes-group-item__decor">2</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input ">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100">
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block  ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked>
+															<div class="checkboxes-group-item__decor">3</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input ">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100">
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check">
+															<div class="checkboxes-group-item__decor">4</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" readonly>
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check">
+															<div class="checkboxes-group-item__decor">5</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" readonly>
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="lk-title-h3 lk-title-h3--indent">Пребывания</h3>
+						<p class="lk-content__text">Выберите варианты нахождения детей. Готовы ли Вы работать в доме клиентов или брать детей к себе</p>
+						<div class="lk-main-info lk-main-info--large lk-main-info--price lk-main-info--indent">
+							<div class="lk-main-info__block ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check" checked>
+															<div class="checkboxes-group-item__decor">У Вас (няни)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input ">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100">
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+								</div>
+							</div>
+							<div class="lk-main-info__block ">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<div class="checkboxes-group checkboxes-group--lk">
+												<ul class="checkboxes-group__list">
+													<li class="checkboxes-group__list-item">
+														<label class="checkboxes-group-item">
+															<input type="checkbox" class="checkboxes-group-item__check disabled" checked readonly>
+															<div class="checkboxes-group-item__decor">У них (родителей)</div>
+														</label>
+													</li>
+												</ul>                  
+											</div>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input work-input--gray work-input--visible">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100" readonly>
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150 <span class="rub">o</span>/час</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="lk-title-h3 lk-title-h3--indent">Скидки за долгосрочные услуги</h3>
+						<p class="lk-content__text">Предлагайте скидку, поощряйте гостей на более долгие бронирования и соответственно услуги.</p>
+						<div class="lk-main-info lk-main-info--large lk-main-info--indent">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Скидка за неделю:
+											</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus js-range-input" value="100" min="0" max="100">
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Скидка за месяц: 
+											</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus js-range-input" value="100" min="0" max="100">
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									<div class="lk-main-info-status__box">
+										<div class="lk-main-info-status__top">
+											<span class="lk-main-info-status__title">Совет: 150%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="lk-title-h3 lk-title-h3--indent">Дополнительные возможности расценок</h3>
+						<div class="lk-main-info lk-main-info--large">
+							<div class="lk-main-info__block">
+								<div class="lk-main-info__box">
+									<div class="lk-main-info__row">
+										<div class="lk-main-info__cell lk-main-info__cell--label">
+											<span class="lk-main-info__label label">Цена на выходные: 
+											</span>
+										</div>
+										<div class="lk-main-info__cell lk-main-info__cell--input">
+											<span class="work-input">
+												<input type="number" class="js-input-number work-input__input js-input-work-focus" value="100">
+												<span class="work-input__desc">%</span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="lk-main-info-status">
+									<span class="tooltip lk-main-info-status__ico">
+										<span class="icon-tooltip-gray tooltip__head"></span>
+										<span class="tooltip__content">Пользователи нашего</span>
+									</span>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-watch">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Просмотр анкеты</h2>
+						</div>
+						<p class="lk-content__text">Для проверки корректности и полноты заполнения данных анкеты Вы можете узнать, как видят Вашу анкету другие пользователи на сайте</p>
+						<div class="lk-block">
+							<a href="#" class="btn btn-pink btn-pink--middle lk-psychologist__link">Просмотреть анкету на сайте</a>
+						</div>
+					</div>
+					<div class="lk-content__item js-section" id="lk-publication">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Публикация анкеты на сайте</h2>
+						</div>
+						<p class="lk-content__text">Вы можете приостановить публикацию своей анкеты на сайте, в этом случае она не будет отображаться пользователям при поиске. Восстановить публикацию Вы сможете в любой момент, когда захотите. </p>
+						<div class="checkboxes-group checkboxes-group--lk">
+							<ul class="checkboxes-group__list">
+								<li class="checkboxes-group__list-item">
+									<label class="checkboxes-group-item">
+										<input type="radio" class="checkboxes-group-item__check" name="radio50" checked>
+										<div class="checkboxes-group-item__decor">Опубликовать анкету</div>
+									</label>
+								</li>
+								<li class="checkboxes-group__list-item">
+									<label class="checkboxes-group-item">
+										<input type="radio" class="checkboxes-group-item__check" name="radio50">
+										<div class="checkboxes-group-item__decor">Приостановить публикацию</div>
+									</label>
+								</li>
+							</ul>                  
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- lk content end -->
+		</div>
+		<!-- content end -->
+
+
+    <script src="//api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script src="js/location-tool.js" type="text/javascript"></script>
+    <script src="js/cross-control.js" type="text/javascript"></script>
+    <script src="js/geolocation-button.js" type="text/javascript"></script>
+
+@@include('template/layout/lk-footer-head.html')
+
+
+</body>
+</html> 
+ 

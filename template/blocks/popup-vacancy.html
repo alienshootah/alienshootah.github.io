@@ -1,0 +1,138 @@
+<!-- popup-registration -->
+<div class="popup popup-nanny" id="popup-vacancy">
+	<div class="popup-nanny__left">
+		<div class="popup-nanny__image">
+			<img src="pic/popup-nanny/popup-nanny-01.jpg" alt="" class="popup-nanny__image-img">
+		</div>
+		<div class="popup-nanny__advice">
+			<div class="popup-nanny__advice-title">Отправьте Веронике сообщение</div>
+			<div class="popup-nanny__advice-info">Убедитесь, что Вы рассказали следующее:</div>
+			<ul class="popup-nanny__advice-list">
+				<li class="popup-nanny__advice-list-item">Расскажите Веронике о себе и своем опыте</li>
+				<li class="popup-nanny__advice-list-item">Почему должны выбрать именно Вас</li>
+				<li class="popup-nanny__advice-list-item">Чем Вас привлекла данная вакансия</li>
+			</ul>
+			<div class="popup-nanny__advice-footer-title">Напишите!</div>
+		</div>
+	</div>
+	<div class="popup-nanny__right-box">
+		<div class="popup-nanny__right">
+			<div class="popup-nanny-form">
+				<form action="back/ajax-form.php" class="js-popup-vacancy-form">
+					<div class="popup-nanny-form__row">
+						<div class="popup-nanny-form__row-title">Когда Вам нужна няня?</div>
+						<div class="form-row">
+							<div class="row">
+								<div class="col-sm-30">
+									<input type="text" class="input input--small" value="Немедленно" id="profile_filters_date_from" name="profile_filters_date_from" readonly>
+								</div>
+								<div class="col-sm-30">
+									<input type="text" class="input input--small" value="90 дней" id="profile_filters_date_to" name="profile_filters_date_to" readonly>
+								</div>
+								<div class="col-sm-20">
+									<input type="text" class="input input--small input--center input--profile-dates" value="09:00" id="profile_filters_time_from" name="profile_filters_time_from" readonly>
+								</div>
+								<div class="col-sm-20">
+									<input type="text" class="input input--small input--center input--profile-dates" value="18:00" id="profile_filters_time_to" name="profile_filters_time_to" readonly>
+								</div>
+							</div>
+						</div>
+						<ul class="radioboxes-inline-list">
+							<li class="radioboxes-inline-list__item">
+								<label class="radiobox cursor-default">
+									<input type="radio" 
+									class="radiobox__check" name="popup_nanny_days" checked disabled>
+									<span class="radiobox__icon">
+										<span class="radiobox__icon-image"></span>
+									</span>
+									<span class="radiobox__inner">
+										<span class="radiobox__text">Только будни</span>
+									</span>
+								</label>
+							</li>
+							<li class="radioboxes-inline-list__item">
+								<label class="radiobox cursor-default">
+									<input type="radio" 
+									class="radiobox__check" name="popup_nanny_days" disabled>
+									<span class="radiobox__icon">
+										<span class="radiobox__icon-image"></span>
+									</span>
+									<span class="radiobox__inner">
+										<span class="radiobox__text">Только выходные</span>
+									</span>
+								</label>
+							</li>
+							<li class="radioboxes-inline-list__item">
+								<label class="radiobox cursor-default">
+									<input type="radio" 
+									class="radiobox__check" name="popup_nanny_days" disabled>
+									<span class="radiobox__icon">
+										<span class="radiobox__icon-image"></span>
+									</span>
+									<span class="radiobox__inner">
+										<span class="radiobox__text">Будни и выходные</span>
+									</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="popup-nanny-form__row">
+						<div class="popup-nanny-form__row-title">Где?</div>
+						<div class="row">
+							<div class="col-sm-33">
+								<input type="text" class="input input--small" value="Москва" name="profile_filters_place1" readonly>
+							</div>
+							<div class="col-sm-33">
+								<input type="text" class="input input--small" value="Центральный" name="profile_filters_place2" readonly>
+							</div>
+							<div class="col-sm-33">
+								<input type="text" class="input input--small input-disabled-gray" value="" name="profile_filters_place3" readonly>
+							</div>
+						</div>
+					</div>
+					<div class="popup-nanny-form__row">
+						<div class="popup-nanny-form__row-title">Для кого?</div>
+						<div class="popup-nanny-form__objects">
+							<div class="popup-nanny-form__objects-rows">
+								<div class="popup-nanny-form__objects-rows-row">
+									<div class="row">
+										<div class="col-sm-33">
+											<input type="text" class="input input--small" value="3 ребенка" name="profile_filters_objects_count" readonly>
+										</div>
+										<div class="col-sm-26">
+											<input type="text" class="input input--small" value="3-6 лет" name="profile_filters_objects_age" readonly>
+										</div>
+										<div class="col-sm-41">
+											<input type="text" class="input input--small" value="Перебывание у няни" name="profile_filters_objects_age2" readonly>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup-nanny-form__input-texts">
+							<div class="form-row">
+								<input type="text" class="input input--small" name="popup_nanny_tel" placeholder="Чтобы Вам перезвонили, можете ввести сюда номер телефона">
+							</div>
+							<div class="form-row">
+								<textarea name="popup_nanny_message" class="input input--small input--textarea" placeholder="Напишите сообщение..."></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="popup-nanny-form__bottom">
+						<div class="popup-nanny-form__bottom-left">
+							<div class="popup-nanny-form__buttons-image">
+								<img src="pic/popup-nanny/popup-nanny-bottom-01.jpg" alt="" class="popup-nanny-form__buttons-image-img">
+							</div>
+						</div>
+						<div class="popup-nanny-form__bottom-right">
+							<!-- <button data-href="#popup-message-sended2" class="btn btn-pink btn-pink--medium popup-nanny-form__bottom-right-btn popup-nanny-form__bottom-right-btn--large js-popup-link">Отправить отклик </button> -->
+							<button data-href="#popup-message-sended2" class="btn btn-pink btn-pink--medium popup-nanny-form__bottom-right-btn popup-nanny-form__bottom-right-btn--large">Отправить отклик </button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="popup__close js-popup-close"></div>
+</div>
+<!-- popup-registration end -->

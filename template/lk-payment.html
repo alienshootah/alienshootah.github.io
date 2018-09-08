@@ -1,0 +1,268 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content lk" role="main">
+			<!-- lk aside -->
+			@@include('template/blocks/lk-aside.html', {
+				"payment": "true"
+			})
+			<!-- lk aside end -->
+
+			<!-- lk content -->
+			<div class="lk-content lk-payment-content">
+				<div class="lk-content__position">
+					<div class="lk-content__item js-section lk-payment-content__item" id="lk-payment">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Платежи</h2>
+						</div>
+						<p class="lk-content__text">Комиссия, которая взымается сайтом с выполненных успешных проектов. С каждого бронирования, которое завершилось приобритением Ваших услуг (наймом на работу) мы просим перечислить нам лишь 9% от суммы заказа. Эти средства идет на поддержание нашей Выручалкм и ее совершенствувание, чтобы родители и няни могли находить друг друга и успешно сотрудничать с максимальным комфортом и безопасностью.</p>
+						<p class="lk-content__text">Мы уверены в Вас и надеемся, что Вы не забудите по завершении каждого месяца перевести нам платежи за состоявшиеся заказы, если таковые были, чтобы мы и далее могли помогать Вам и родителям выгодно сотрудничать.</p>
+						<form class="lk-payment" action="#">
+							<h3 class="lk-title-h3 lk-title-h3--indent">История платежей и текущая сумма к выплате представлены ниже</h3>
+							<div class="lk-payment__select">
+								<select class="select select--small js-select">
+									<option value="1" selected="">2016 год</option>
+									<option value="2">2015 год</option>
+									<option value="2">2014 год</option>
+									<option value="2">2013 год</option>
+								</select>
+							</div>
+							<div class="lk-payment-table">
+								<div class="lk-payment-table__head">
+									<div class="lk-payment-table__row">
+										<div class="lk-payment-table__cell lk-payment-table__cell--head">Заказ</div>
+										<div class="lk-payment-table__cell lk-payment-table__cell--head">Период бронирования</div>
+										<div class="lk-payment-table__cell lk-payment-table__cell--head">Сумма</div>
+										<div class="lk-payment-table__cell lk-payment-table__cell--head">Комиссия</div>
+										<div class="lk-payment-table__cell lk-payment-table__cell--head"></div>
+									</div>
+								</div>
+								<div class="lk-payment-table__body">
+									<div class="lk-payment-table__item js-accordion-parent">
+										<a href="#" class="lk-payment-table__link js-accordion-link">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__arrow"></span>
+													<span class="lk-payment-table__month">Январь</span>
+												</div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__price lk-payment-table__price--green">6300 <span class="rub">o</span></span>
+												</div>
+												<div class="lk-payment-table__cell">
+													<svg class="lk-payment-table__ico smile-happy-ico">
+														<use xlink:href="#smile-happy"></use>
+													</svg>
+													<span class="lk-payment-table__status">Оплачено</span>
+												</div>
+											</div>
+										</a>
+										<div class="lk-payment-table__drop js-accordion-drop">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-payment-table__item js-accordion-parent">
+										<a href="#" class="lk-payment-table__link js-accordion-link">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__arrow"></span>
+													<span class="lk-payment-table__month">Февраль</span>
+												</div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__price lk-payment-table__price--green">7800 <span class="rub">o</span></span>
+												</div>
+												<div class="lk-payment-table__cell">
+													<svg class="lk-payment-table__ico smile-happy-ico">
+														<use xlink:href="#smile-happy"></use>
+													</svg>
+													<span class="lk-payment-table__status">Оплачено</span>
+												</div>
+											</div>
+										</a>
+										<div class="lk-payment-table__drop js-accordion-drop">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-payment-table__item js-accordion-parent">
+										<a href="#" class="lk-payment-table__link js-accordion-link">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__arrow"></span>
+													<span class="lk-payment-table__month">Март</span>
+												</div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__price lk-payment-table__price--red">12 300 <span class="rub">o</span></span>
+												</div>
+												<div class="lk-payment-table__cell">
+													<svg class="lk-payment-table__ico smile-sad-ico">
+														<use xlink:href="#smile-sad"></use>
+													</svg>
+													<span class="lk-payment-table__status">Не оплачено</span>
+												</div>
+											</div>
+										</a>
+										<div class="lk-payment-table__drop js-accordion-drop">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+										</div>
+									</div>
+									<div class="lk-payment-table__item js-accordion-parent">
+										<a href="#" class="lk-payment-table__link js-accordion-link">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__arrow"></span>
+													<span class="lk-payment-table__month">Апрель</span>
+												</div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell"></div>
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__price lk-payment-table__price--red">12 300 <span class="rub">o</span></span>
+												</div>
+												<div class="lk-payment-table__cell">
+													<svg class="lk-payment-table__ico smile-sad-ico">
+														<use xlink:href="#smile-sad"></use>
+													</svg>
+													<span class="lk-payment-table__status">Не оплачено</span>
+												</div>
+											</div>
+										</a>
+										<div class="lk-payment-table__drop js-accordion-drop">
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+											<div class="lk-payment-table__row">
+												<div class="lk-payment-table__cell">
+													<span class="lk-payment-table__val">10.12.2015</span>
+													<span class="lk-payment-table__val lk-payment-table__val--gray">0687000</span>
+												</div>
+												<div class="lk-payment-table__cell">25.01.2015  — 30.03.2016</div>
+												<div class="lk-payment-table__cell">60 000 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell">5400 <span class="rub">o</span></div>
+												<div class="lk-payment-table__cell"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p class="lk-payment__text">Комиссия за подтвержденный заказ (бронирование) формируется на следующий месяц после начала работ по заказу либо в тот же месяц, если начало и завершение заказа находится в одном месяце</p>
+							<span class="lk-payment__summ lk-payment__summ--normal">Общая сумма комиссии сайту на данный момент: <span class="lk-payment__summ-val ">21120 <span class="rub">o</span></span></span>
+							<span class="lk-payment__summ lk-payment__summ--normal">Общая сумма моих бонусов на данный момент: <span class="lk-payment__summ-val--green">8000 <span class="rub">o</span></span></span>
+							<span class="lk-payment__summ">Общая сумма к оплате на данный момент: <span class="lk-payment__summ-val">13120 <span class="rub">o</span></span></span>
+						</form>
+					</div>
+					<div class="lk-content__item lk-payment-content__item">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Быстро и просто оплатить</h2>
+						</div>
+						<ul class="lk-payment-method">
+							<li class="lk-payment-method__item">
+								<a href="#" class="lk-payment-method__link">
+									<span class="lk-payment-method__ico icon-pay-qiwi"></span>
+								</a>
+							</li>
+							<li class="lk-payment-method__item">
+								<a href="#" class="lk-payment-method__link">
+									<span class="lk-payment-method__ico icon-pay-yandex"></span>
+								</a>
+							</li>
+							<li class="lk-payment-method__item">
+								<a href="#" class="lk-payment-method__link">
+									<span class="lk-payment-method__ico icon-pay-visa"></span>
+								</a>
+							</li>
+							<li class="lk-payment-method__item">
+								<a href="#" class="lk-payment-method__link">
+									<span class="lk-payment-method__ico icon-pay-bank"></span>
+								</a>
+							</li>
+						</ul>
+						<p class="lk-content__text">Просим не затягивать с оплатой, поскольку при задолженности более 2 месяцев Ваша анкета будет заморожена и снята с сайта до полного погашения задолженности</p>
+					</div>
+				</div>
+			</div>
+			<!-- lk content end -->
+		</div>
+		<!-- content end -->
+
+                    
+
+
+@@include('template/layout/lk-footer-head.html')
+
+</body>
+</html> 
+
+

@@ -1,0 +1,844 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+<!-- wrapper -->
+<div class="wrapper-main">
+	<div class="wrapper">
+		@@include('template/layout/header-with-search.html') 
+
+		<!-- content -->
+		<div class="content" role="main">
+			<!-- profile -->
+			<div class="profile profile--large profile--nanny profile--vacancy js-fix-cont-pro">
+				<div class="container">
+					<!-- profile__left -->
+					<div class="profile__left">
+						<!-- profile__vacancy-image -->
+						<div class="profile__vacancy-image js-max-top-block-pro">
+							<img src="pic/profile-vacancy/profile-vacancy-01.jpg" alt="" class="profile__vacancy-image-img">
+						</div>
+						<!-- profile__vacancy-image end -->
+
+						<!-- profile-filters -->
+						<div class="profile-filters js-fix-block-pro">
+							<form action="#">
+								<div class="profile-filters__head">
+									<div class="profile-filters__head-left">
+										<div class="profile-filters__price">200<span class="rub">p</span></div>
+									</div>
+									<div class="profile-filters__head-right">
+										<div class="profile-filters__time">в час</div>
+									</div>
+								</div>
+								<fieldset class="profile-filters__fieldset">
+									<div class="profile-filters__fieldset-time">
+										<div class="profile-filters__fieldset-time-left">
+											<div class="row">
+												<div class="col-sm-50">
+													<div class="form-row form-row--mobile">
+														<div class="label label--profile-filters">
+															<label for="profile_filters_date_from">Начало:</label>
+														</div>
+														<input type="text" class="input input--small" value="Немедленно" id="profile_filters_date_from" name="profile_filters_date_from" readonly>
+													</div>
+												</div>
+												<div class="col-sm-50">
+													<div class="form-row form-row--mobile">
+														<div class="label label--profile-filters">
+															<label for="profile_filters_date_to">Конец:</label>
+														</div>
+														<input type="text" class="input input--small" value="90 дней" id="profile_filters_date_to" name="profile_filters_date_to" readonly>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="profile-filters__fieldset-time-right">
+											<div class="row row--indent-small row--divider-full-50">
+												<div class="col-sm-50">
+													<div class="form-row form-row--mobile">
+														<div class="label label--profile-filters">
+															<label for="profile_filters_time_from">С:</label>
+														</div>
+														<input type="text" class="input input--small input--center input--profile-dates" value="09:00" id="profile_filters_time_from" name="profile_filters_time_from" readonly>
+													</div>
+												</div>
+												<div class="col-sm-50">
+													<div class="form-row form-row--mobile">
+														<div class="label label--profile-filters">
+															<label for="profile_filters_time_to">По:</label>
+														</div>
+														<input type="text" class="input input--small input--center input--profile-dates" value="18:00" id="profile_filters_time_to" name="profile_filters_time_to" readonly>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<ul class="radioboxes-inline-list">
+										<li class="radioboxes-inline-list__item">
+											<label class="radiobox cursor-default">
+												<input type="radio" 
+												class="radiobox__check" name="profile_filters_days" disabled>
+												<span class="radiobox__icon">
+													<span class="radiobox__icon-image"></span>
+												</span>
+												<span class="radiobox__inner">
+													<span class="radiobox__text">Будни и выходные</span>
+												</span>
+											</label>
+										</li>
+										<li class="radioboxes-inline-list__item">
+											<label class="radiobox cursor-default">
+												<input type="radio" 
+												class="radiobox__check" name="profile_filters_days" checked disabled>
+												<span class="radiobox__icon">
+													<span class="radiobox__icon-image"></span>
+												</span>
+												<span class="radiobox__inner">
+													<span class="radiobox__text">Будни</span>
+												</span>
+											</label>
+										</li>
+										<li class="radioboxes-inline-list__item">
+											<label class="radiobox cursor-default">
+												<input type="radio" 
+												class="radiobox__check" name="profile_filters_days" disabled>
+												<span class="radiobox__icon">
+													<span class="radiobox__icon-image"></span>
+												</span>
+												<span class="radiobox__inner">
+													<span class="radiobox__text">Выходные</span>
+												</span>
+											</label>
+										</li>
+									</ul>
+								</fieldset>
+								<fieldset class="profile-filters__fieldset">
+									<div class="form-row form-row--profile-filters">
+										<div class="row">
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<div class="label label--profile-filters">Дети:</div>
+													<input type="text" class="input input--small" readonly value="Девочка">
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<div class="label label--profile-filters">Возраст:</div>
+													<input type="text" class="input input--small" readonly value="3 года">
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<div class="label label--profile-filters">Пребывание:</div>
+													<input type="text" class="input input--small" readonly value="У Родителей">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-row form-row--profile-filters">
+										<div class="row">
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<input type="text" class="input input--small" readonly value="Девочка">
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<input type="text" class="input input--small" readonly value="6 лет">
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<input type="text" class="input input--small" readonly value="У Родителей">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-row form-row--profile-filters">
+										<div class="row">
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<input type="text" class="input input--small" readonly value="Девочка">
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<input type="text" class="input input--small" readonly value="8 лет">
+												</div>
+											</div>
+											<div class="col-sm-33">
+												<div class="form-row form-row--mobile">
+													<input type="text" class="input input--small" readonly value="У Родителей">
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div class="profile-filters__head">
+									<div class="profile-filters__head-left">
+										<span class="profile-filters__price profile-filters__price--medium">200 <span class="rub">p</span></span>
+										<span class="profile-filters__time profile-filters__time--medium">х 560 часов</span>
+										<div class="profile-filters__days">В течение 64 дней</div>
+									</div>
+									<div class="profile-filters__head-right">
+										<div class="profile-filters__price profile-filters__price--medium">96 000<span class="rub">p</span></div>
+									</div>
+								</div>
+								<div class="profile-filters__bottom">
+									<div class="profile-filters__bottom-text">
+										<p>Откликнитесь на вакансию, если соответствуете требованиям и условия Вас устраивают.</p>
+										<p>Поторопитесь, этот заказ могут занять другие няни.</p>
+									</div>
+									<button data-href="#popup-vacancy" class="btn btn-pink profile-filters__bottom-btn js-popup-link">Отправить отклик</button>
+								</div>
+							</form>
+						</div>
+						<!-- profile-filters end -->
+					</div>
+					<!-- profile__left end -->
+
+					<!-- profile__right -->
+					<div class="profile__right">
+						<!-- profile__head -->
+						<div class="profile__head">
+							<h1 class="profile__title">Виктория Ивановна</h1>
+							<div class="profile__sticker">Ищу няню</div>
+							<div class="profile__date">30.06.2016</div>
+						</div>
+						<!-- profile__head end -->
+
+						<!-- profile__meta -->
+						<div class="profile__meta">
+							<div class="profile__rating">
+								<div class="stars profile__meta-stars">
+									<div class="stars__inner" style="width:100%;"></div>
+								</div>
+								<span class="profile__rating-title profile__rating-title--scroll js-profile-rating-scroll">6 отзывов 3 рекомендации</span>
+							</div>
+						</div>
+						<!-- profile__meta end -->
+
+						<!-- profile__place -->
+						<div class="profile__place">
+							<ul class="profile__place-list">
+								<li class="profile__place-list-item">
+									<div class="profile__place-item">Москва, Центральный р-н, Сокольники <div class="round-item profile__place-item-round" style="background:#F8678B;">1</div></div>
+								</li>
+								<li class="profile__place-list-item">
+									<a href="#" class="profile__place-item-link js-profile-place-scroll">Посмотреть на карте</a>
+								</li>
+							</ul>
+						</div>
+						<!-- profile__place end -->
+
+						<div class="profile__object">Три ребенка, <strong>2, 5, 8 лет</strong>, с пребыванием у <strong>родителей</strong></div>
+
+						<!-- features -->
+						<div class="features">
+							<div class="features__title">Основные требования к няням</div>
+							<ul class="features-list features-list--vertical">
+								<li class="features-list__item">
+									<div class="feature feature--age">Возраст<br> 25-40 лет</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--expirience">от 3 лет<br> опыта</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--kids">Наличие<br> своих<br> детей</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--education">Психологическое /<br> 
+									педагогическое /<br> 
+									медицинское<br> 
+									образование</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--reviews">Наличие<br> отзывов</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--verified">Провереные<br> данные</div>
+								</li>
+								<li class="features-list__item">
+									<div class="feature feature--success">Проверена<br> психологом</div>
+								</li>
+							</ul>
+						</div>
+						<!-- features end-->
+
+						<!-- profile__desc -->
+						<div class="profile__desc">
+							<div class="profile__desc-text">
+								<p>Требуется гувернантка к двум девочкам 11-ти и 13-ти лет. Сопровождение на занятия. Контроль над уроками. Уход за гардеробом. Организация культурного досуга. Умение найти общий язык с детьми. Владение английским + французский или испанский. Правильная грамотная речь. Европейская внешность. Без лишнего веса. Наличие загранпаспорта обязательно. Работа вахтовым методом 30\30. Оплата от 5000 рублей в сутки. Гражданство РФ, Украина, Белоруссия.</p>
+							</div>
+						</div>
+						<!-- profile__desc end -->
+
+						<!-- characteristics -->
+						<div class="characteristics">
+							<h2 class="characteristics__title">Основные характеристики</h2>
+							<ul class="characteristics-list characteristics-list--inline characteristics-list--columns">
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--education">
+										<span class="characteristic__text">Образование:</span>
+										<span class="characteristic__text pink">Психологическое /<br> Медицинское / Педагогическое</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--languages">
+										<span class="characteristic__text">Знание языков:</span>
+										<span class="characteristic__text pink">Русский, Английский</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--nation">
+										<span class="characteristic__text">Национальность:</span>
+										<span class="characteristic__text pink">Казашка / Украинка / Белоруска</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--religion">
+										<span class="characteristic__text">Религия:</span>
+										<span class="characteristic__text pink">Любая</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--citizenship">
+										<span class="characteristic__text">Гражданство:</span>
+										<span class="characteristic__text pink">Казахстан / Россия / Беларусь</span>
+									</div>
+								</li>
+								<li class="characteristics-list__item">
+									<div class="characteristic characteristic--location">
+										<span class="characteristic__text">Местоположение:</span>
+										<span class="characteristic__text pink">
+											Сокольники <span class="round-item round-item--medium characteristic__text-round" style="background:#FF7994;">1</span> /
+										    Красносельская <span class="round-item round-item--medium characteristic__text-round" style="background:#3EC260;">6</span> /
+										    Ивановская <span class="round-item round-item--medium characteristic__text-round" style="background:#5663DE;">9</span></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- characteristics end -->
+
+						<!-- additional-characteristics -->
+						<div class="additional-characteristics">
+							<h2 class="additional-characteristics__title">Дополнительные характеристики</h2>
+							<ul class="additional-characteristics-list">
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Курение</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не требуется (не желательно)</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Свое авто</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">English Profile</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Рекомендаци</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не требуется (не желательно)</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Права на авто</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Загранпаспорт</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Местная прописка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Видео-интервтью</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<h2 class="additional-characteristics__title">Основные обязанности</h2>
+							<ul class="additional-characteristics-list">
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Готовка</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не требуется (не желательно)</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Обучение</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Прогулка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Развлечение</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Кормление</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Мытье посуды</span>
+										<span class="tooltip tooltip--formoney additional-characteristic__tooltip">
+											<span class="icon-formoney tooltip__head"></span>
+											<span class="tooltip__content">Желательно, готовы доплатить</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Контроль</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не требуется (не желательно)</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Уборка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Купание</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Стирка</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Глажка</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не требуется (не желательно)</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<h2 class="additional-characteristics__title">Дополнительные обязаности</h2>
+							<ul class="additional-characteristics-list">
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Уборка дома</span>
+										<span class="tooltip tooltip--notdoing additional-characteristic__tooltip">
+											<span class="icon-notdoing tooltip__head"></span>
+											<span class="tooltip__content">Не требуется (не желательно)</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Разовые поручения</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Покупка продуктов</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item"></li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Готовка на семью</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+								<li class="additional-characteristics-list__item">
+									<div class="additional-characteristic">
+										<span class="additional-characteristic__text">Мытье посуды семьи</span>
+										<span class="tooltip tooltip--doing additional-characteristic__tooltip">
+											<span class="icon-doing tooltip__head"></span>
+											<span class="tooltip__content">Необходимо и включено в сумму оплаты</span>
+										</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- additional-characteristics end -->
+
+						<!-- ratings -->
+						<div class="ratings">
+							<div class="ratings-head">
+								<ul class="ratings-head-list">
+									<li class="ratings-head-list__item">6 настоящих отзывов</li>
+									<li class="ratings-head-list__item">5 рекомендаций</li>
+									<li class="ratings-head-list__item">о заказчике</li>
+								</ul>
+							</div>
+							<div class="ratings-content">
+								<div class="ratings-content__main">
+									<div class="rating-item rating-item--indent-bottom">
+										<div class="rating-item__title rating-item__title--pink">Общая оценка:</div>
+										<div class="stars rating-item__stars">
+											<div class="stars__inner" style="width:100%;"></div>
+										</div>
+									</div>
+								</div>
+								<ul class="ratings-list">
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Общение:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:60%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Исполнение финансовых<br> обязательств:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:60%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Порядочность:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:60%;"></div>
+											</div>
+										</div>
+									</li>
+									<li class="ratings-list__item">
+										<div class="rating-item">
+											<div class="rating-item__title">Характер ребенка:</div>
+											<div class="stars rating-item__stars">
+												<div class="stars__inner" style="width:60%;"></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- ratings end -->
+
+						<!-- comments -->
+						<div class="comments">
+							<ul class="comments-list">
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#">
+													<img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img">
+												</a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#">
+													<img src="pic/comment/comment-02.jpg" alt="" class="comment__image-img">
+												</a>
+											</div>
+											<div class="comment__author"><a href="#">Дарья</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="comment__type">Рекомендация</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<div class="comment-message">Сервис позволяет просматривать множество анкет зарегистрированных соискателей, среди которых Вы сможете выбрать квалифицированную няню для ребенка. Благодаря сайту у Вас есть возможность самостоятельно выйти на связь с понравившимся Вам кандидатом.</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#">
+													<img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img">
+												</a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#">
+													<img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img">
+												</a>
+											</div>
+											<div class="comment__author">Анастасия</div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="comments-list__item">
+									<div class="comment">
+										<div class="comment__left">
+											<div class="comment__image">
+												<a href="#">
+													<img src="pic/comment/comment-01.jpg" alt="" class="comment__image-img">
+												</a>
+											</div>
+											<div class="comment__author"><a href="#">Анастасия</a></div>
+										</div>
+										<div class="comment__right">
+											<div class="comment__right-top">
+												<div class="comment__right-top-left">
+													<div class="stars comment__right-top-left-stars">
+														<div class="stars__inner" style="width:80%;"></div>
+													</div>
+												</div>
+												<div class="comment__right-top-right">
+													<div class="comment__date">06 января 2016</div>
+												</div>
+											</div>
+											<div class="comment__right-bottom">
+												<ul class="comment-messages-list">
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--plus">Появляясь на свет, наш ребенок становится гражданином пространства, обыкновенного, привычного нам трехмерного пространства.</div>
+													</li>
+													<li class="comment-messages-list__item">
+														<div class="comment-message comment-message--minus">Не обнаружено!</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- comments end -->
+
+						<!-- pagination -->
+						<div class="pagination">
+							<div class="pagination__title">Показано 1 - 20 объявлений из 50</div>
+							<ul class="pagination-list">
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--active">1</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">2</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">3</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--right"></a>
+								</li>
+							</ul>
+						</div>
+						<!-- pagination end -->
+					</div>
+					<!-- profile__right end -->
+				</div>
+			</div>
+			<!-- profile end -->
+			
+			<!-- contacts-map -->
+			<div class="contacts-map">
+				<div class="map" id="contacts-map"></div>
+			</div>
+			<!-- contacts-map end -->
+		</div>
+		<!-- content end -->
+		
+		<div class="footer-spacer"></div>
+	</div>
+
+
+<!-- popup-wrap -->
+<div class="popup-wrap">
+	<div class="popup-wrap__table">
+		<div class="popup-wrap__table-cell">
+			@@include('template/blocks/popup-login.html')
+			@@include('template/blocks/popup-registration.html')
+			@@include('template/blocks/popup-registration2.html')
+			@@include('template/blocks/popup-restore-password.html')
+			@@include('template/blocks/popup-restore-password-success.html')
+			
+			@@include('template/blocks/popup-vacancy.html')
+			@@include('template/blocks/popup-message-sended2.html')
+
+			<div class="popup-wrap__overlay js-popup-close"></div>
+		</div>
+	</div>
+</div>
+<!-- popup-wrap end -->
+
+@@include('template/layout/footer.html')
+@@include('template/layout/footer-head.html')
+</div>
+<!-- wrapper end -->
+<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+</body>
+</html> 
+ 

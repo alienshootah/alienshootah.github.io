@@ -1,0 +1,214 @@
+<!-- popup-registration -->
+<div class="popup popup-nanny" id="popup-nanny">
+	<div class="popup-nanny__left">
+		<div class="popup-nanny__image">
+			<img src="pic/popup-nanny/popup-nanny-01.jpg" alt="" class="popup-nanny__image-img">
+		</div>
+		<div class="popup-nanny__advice">
+			<div class="popup-nanny__advice-title">Отправьте Веронике сообщение</div>
+			<div class="popup-nanny__advice-info">Убедитесь, что Вы рассказали следующее:</div>
+			<ul class="popup-nanny__advice-list">
+				<li class="popup-nanny__advice-list-item">Расскажите Веронике о себе</li>
+				<li class="popup-nanny__advice-list-item">Расскажите о своем ребенке и требованиях к няне</li>
+				<li class="popup-nanny__advice-list-item">Чем Вам понравилась няня</li>
+			</ul>
+			<div class="popup-nanny__advice-footer-title">Напишите!</div>
+		</div>
+	</div>
+	<div class="popup-nanny__right-box">
+		<div class="popup-nanny__right">
+			<div class="popup-nanny-form">
+				<form action="back/ajax-form.php" class="js-popup-nanny-form">
+					<div class="popup-nanny-form__row">
+						<div class="popup-nanny-form__row-title">Когда Вам нужна няня?</div>
+						<div class="form-row js-duble-date-parent">
+							<div class="row">
+								<div class="col-sm-30">
+									<!-- <select class="select select--small select--height-small js-select">
+										<option value="1" selected>17.03.2016</option>
+										<option value="2">18.03.2016</option>
+										<option value="3">19.03.2016</option>
+									</select> -->
+									<div class="drop drop--date-single js-drop-parent">
+										<div class="drop__head">
+											<input type="text" class="input input--small input--center js-drop-link js-datepickers-text" placeholder="ДД.ММ.ГГГГ" data-placeholder="Начало" name="profile_filters_date_from" readonly="true" data-valid="all">
+										</div>
+										<div class="drop__content js-drop-content">
+											<div class="single-date">
+												<div class="single-date__datepicker">
+													<div class="js-datepicker" data-number="start"></div>		
+												</div>
+												<div class="single-date__content">
+													<div class="single-date__content-left">
+														<a href="#" class="single-date__remove-dates-link js-dates-remove">Сбросить даты</a>
+													</div>
+													<div class="single-date__content-right">
+														<div class="single-date__min-dates">Минимум 2 дня</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-30">
+									<div class="drop drop--date-single js-drop-parent">
+										<div class="drop__head">
+											<input type="text" class="input input--small input--center js-drop-link js-datepickers-text" placeholder="ДД.ММ.ГГГГ" data-placeholder="Конец" name="profile_filters_date_to" readonly="true" data-valid="all">
+										</div>
+										<div class="drop__content js-drop-content">
+											<div class="single-date">
+												<div class="single-date__datepicker">
+													<div class="js-datepicker" data-number="finish"></div>		
+												</div>
+												<div class="single-date__content">
+													<div class="single-date__content-left">
+														<a href="#" class="single-date__remove-dates-link js-dates-remove">Сбросить даты</a>
+													</div>
+													<div class="single-date__content-right">
+														<div class="single-date__min-dates">Минимум 2 дня</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-20">
+									<select class="select select--small select--height-small js-select" name="profile_filters_time_from" data-valid="date" data-time="first">
+										<option value="" selected data-placeholder="С…">С…</option>
+										<option value="2">10:00</option>
+										<option value="3">11:00</option>
+									</select>
+								</div>
+								<div class="col-sm-20">
+									<select class="select select--small select--height-small js-select" name="profile_filters_time_to" data-valid="date" data-time="second">
+										<option value="" selected data-placeholder="По…">По…</option>
+										<option value="2">10:00</option>
+										<option value="3">11:00</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<ul class="radioboxes-inline-list">
+							<li class="radioboxes-inline-list__item">
+								<label class="radiobox">
+									<input type="radio" 
+									class="radiobox__check" name="popup_nanny_days" checked>
+									<span class="radiobox__icon">
+										<span class="radiobox__icon-image"></span>
+									</span>
+									<span class="radiobox__inner">
+										<span class="radiobox__text">Только будни</span>
+									</span>
+								</label>
+							</li>
+							<li class="radioboxes-inline-list__item">
+								<label class="radiobox">
+									<input type="radio" 
+									class="radiobox__check" name="popup_nanny_days">
+									<span class="radiobox__icon">
+										<span class="radiobox__icon-image"></span>
+									</span>
+									<span class="radiobox__inner">
+										<span class="radiobox__text">Только выходные</span>
+									</span>
+								</label>
+							</li>
+							<li class="radioboxes-inline-list__item">
+								<label class="radiobox">
+									<input type="radio" 
+									class="radiobox__check" name="popup_nanny_days">
+									<span class="radiobox__icon">
+										<span class="radiobox__icon-image"></span>
+									</span>
+									<span class="radiobox__inner">
+										<span class="radiobox__text">Будни и выходные</span>
+									</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="popup-nanny-form__row">
+						<div class="popup-nanny-form__row-title">Где?</div>
+						<div class="row">
+							<div class="col-sm-33">
+								<select class="select select--small select--height-small js-select js-popup-nanny-change-select" name="popup_nanny_select_name1" data-valid="all">
+									<option value="1" selected>Пребывание у Вас</option>
+									<option value="2">Пребывание у Нас</option>
+								</select>
+							</div>
+							<div class="col-sm-33">
+								<select class="select select--small select--height-small js-select" data-selected="Центральный" name="popup_nanny_select_name2" data-valid="all">
+									<option value="" selected>Район</option>
+									<option value="2">Центральный</option>
+									<option value="3">19.03.2016</option>
+									<option value="2">Центральный2</option>
+									<option value="3">19.03.2016</option>
+								</select>
+							</div>
+							<div class="col-sm-33">
+								<select class="select select--small select--height-small js-select" data-selected="Сокольники" name="popup_nanny_select_name3" data-valid="all">
+									<option value="" selected>Метро</option>
+									<option value="2">10:00</option>
+									<option value="3">Сокольники</option>
+									<option value="2">10:00</option>
+									<option value="3">Сокольники2</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="popup-nanny-form__row">
+						<div class="popup-nanny-form__row-title">Для кого?</div>
+						<div class="popup-nanny-form__objects">
+							<div class="popup-nanny-form__objects-rows">
+								<div class="popup-nanny-form__objects-rows-row">
+									<div class="row">
+										<div class="col-sm-33">
+											<select class="select select--small select--height-small js-select" name="popup_nanny_select_name4" data-valid="all">
+												<option value="1" selected>Мальчик</option>
+												<option value="2">Девочка</option>
+											</select>
+										</div>
+										<div class="col-sm-67">
+											<select class="select select--small select--height-small js-select" name="popup_nanny_select_name5" data-valid="all">
+												<option value="" selected>Возраст</option>
+												<option value="2">3-6 лет</option>
+												<option value="3">3-6 лет</option>
+											</select>
+										</div>
+									</div>
+									<div class="popup-nanny-form__objects-rows-row-close js-popup-nanny-row-close"></div>
+								</div>
+								
+							</div>
+							<div class="popup-nanny-form__objects-buttons">
+								<a href="#" class="popup-nanny-form__objects-buttons-add js-popup-nanny-row-add">Добавить еще ребенка</a>
+							</div>
+						</div>
+						<div class="popup-nanny-form__input-texts">
+							<div class="form-row">
+								<input type="text" class="input input--small" name="popup_nanny_tel" placeholder="Чтобы Вам перезвонили, можете ввести сюда номер телефона">
+							</div>
+							<div class="form-row">
+								<textarea name="popup_nanny_message" class="input input--small input--textarea" placeholder="Напишите сообщение..." data-valid="all"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="popup-nanny-form__bottom">
+						<div class="popup-nanny-form__bottom-left">
+							<div class="popup-nanny-form__buttons-image">
+								<img src="pic/popup-nanny/popup-nanny-bottom-01.jpg" alt="" class="popup-nanny-form__buttons-image-img">
+							</div>
+						</div>
+						<div class="popup-nanny-form__bottom-right">
+							<button data-href="#popup-message-sended" class="btn btn-pink btn-pink--medium popup-nanny-form__bottom-right-btn">Отправить сообщение и предварительно<br> забронировать няню</button>
+							<div class="popup-nanny-form__bottom-info">За бронирование/заказ няни никакие сборы, комиссии и предоплаты не взимаются</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="popup__close js-popup-close"></div>
+</div>
+<!-- popup-registration end -->

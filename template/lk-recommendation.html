@@ -1,0 +1,259 @@
+@@include('template/layout/head.html')
+<body ontouchstart>
+@@include('template/layout/oldbrowser.html')
+
+
+		@@include('template/layout/header-loginned.html')
+
+		<!-- content -->
+		<div class="content lk" role="main">
+			<!-- lk aside -->
+			@@include('template/blocks/lk-aside.html', {
+				"recommendation": "true"
+			})
+			<!-- lk aside end -->
+
+			<!-- lk content -->
+			<div class="lk-content">
+				<div class="lk-content__position">
+					<div class="lk-content__item js-section" id="lk-give-recommendation">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Запросить рекомендации</h2>
+						</div>
+						<p class="lk-content__text">Сообщество пользователей нашего сайта основано на доверии и репутации. Чем больше у пользователя положительных отзывов и рекомендаций, тем больше доверия он вызывает и, соответственно, больше получает клиентов либо привлекает лучших нянь.</p>
+						<p class="lk-content__text">Вы можете попросить своих знакомых написать Вам рекомендации, особенно это полезно, когда у Вас нет еще отзывов после сотрудничества с родителями / нянями. Рекомендации будут показаны в вашем профиле на сайте и позволят другим участникам лучше Вас узнать.</p>
+						<p class="lk-content__text">Рекомендации нужно просить только у людей, которые хорошо Вас знают.</p>
+					</div>
+					<div class="lk-content__item">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Отправьте письмо своим друзьям и прежним работодателям</h2>
+						</div>
+						<p class="lk-content__text">Друзья и прежние работодатели, которым Вы напишите, смогут зарегистрироваться на сайте и написать Вам рекомендацию. Прежде чем она появится в вашей анкете, Вы можете ее прочитать, а потом по желанию принять или отклонить</p>
+						<form class="lk-recommendation-contact js-lk-recommendation-form">
+							<div class="lk-recommendation-contact__row">
+								<input type="text" class="lk-recommendation-contact__input input" placeholder="Введите электронные адреса друзей и прежних работодателей через пробел либо запятую..." name="emails_values">
+							</div>
+							<div class="lk-recommendation-contact__row">
+								<div class="lk-recommendation-contact__cell">
+									<button type="submit" class="btn btn-pink btn-pink--middle lk-recommendation-contact__link">Отправить письма с запросом<br> на рекомендацию</button>
+									<p class="lk-recommendation-contact__desc">Не волнуйтесь, вся информация конфиденциальна. Мы отправим лишь одно письмо каждому адресату с просьбой оставить о Вас отзыв на нашем сайте и более ничего</p>
+								</div>
+								<div class="lk-recommendation-contact__cell">
+									<a href="#" data-href="#lk-popup-contacts" class="btn btn-violet2 btn-violet2--middle lk-recommendation-contact__link js-popup-link">Быстрая загрузка<br> контактов</a>
+									<p class="lk-recommendation-contact__desc">Быстрая и простая загрузка контактов из адресной книги Вашей электронной почты. Всё конфиденциально и безопасно." </p>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="lk-content__item js-section" id="lk-my-recommendation">
+						<div class="lk-content__top">
+							<h2 class="lk-content__title">Ваши рекомендации</h2>
+						</div>
+						<p class="lk-content__text">Все рекомендации оставленные Вам отображаются в данном разделе. Вы можете принять или отклонить любые рекомендации оставленные пользователями. Все принятые рекомендации будут отображены в вашей анкете на сайте.</p>
+						<ul class="lk-recommendation-list">
+							<li class="lk-recommendation-list__item">
+								<div class="lk-recommendation-list__top">
+									<div class="lk-recommendation-list__top-name">
+										<span class="lk-recommendation-list__name"><b>Виктория</b>, 25 ноября 2016</span>
+									</div>
+									<div class="lk-recommendation-list__top-status">
+										
+									</div>
+									<div class="lk-recommendation-list__top-info">
+										<span class="lk-recommendation-list__info">На рассмотрении</span>
+									</div>
+									<div class="lk-recommendation-list__top-right">
+										<a href="#" class="lk-recommendation-list__link lk-recommendation-list__link--doing">
+											<span class="lk-recommendation-list__link-ico icon-doing-blue"></span>
+											<span class="lk-recommendation-list__link-text">Принять</span>
+										</a>
+										<a href="#" class="lk-recommendation-list__link">
+											<span class="lk-recommendation-list__link-ico icon-notdoing-blue"></span>
+											<span class="lk-recommendation-list__link-text">Отклонить</span>
+										</a>
+									</div>
+								</div>
+								<p class="lk-recommendation-list__text">Если Вам требуется няня-воспитатель, гувернантка, няня для грудничка, няня с проживанием или на неполный рабочий день - скорее регистрируйтесь на данный сайт, не упустите шанс найти квалифицированную помощницу прямо сейчас.</p>
+							</li>
+							<li class="lk-recommendation-list__item">
+								<div class="lk-recommendation-list__top">
+									<div class="lk-recommendation-list__top-name">
+										<span class="lk-recommendation-list__name"><b>Виктория</b>, 25 ноября 2016</span>
+									</div>
+									<div class="lk-recommendation-list__top-status">
+										<span class="lk-recommendation-list__status">
+											<span class="lk-recommendation-list__status-ico icon-doing"></span>
+											<span class="lk-recommendation-list__status-text">Принята</span>
+										</span>
+									</div>
+									<div class="lk-recommendation-list__top-info">
+										<span class="lk-recommendation-list__info">Опубликована</span>
+									</div>
+									<div class="lk-recommendation-list__top-right">
+										<a href="#" class="lk-recommendation-list__link">
+											<span class="lk-recommendation-list__link-ico icon-notdoing-blue"></span>
+											<span class="lk-recommendation-list__link-text">Отклонить</span>
+										</a>
+									</div>
+								</div>
+								<p class="lk-recommendation-list__text">Если Вам требуется няня-воспитатель, гувернантка, няня для грудничка, няня с проживанием или на неполный рабочий день - скорее регистрируйтесь на данный сайт, не упустите шанс найти квалифицированную помощницу прямо сейчас.</p>
+							</li>
+							<li class="lk-recommendation-list__item">
+								<div class="lk-recommendation-list__top">
+									<div class="lk-recommendation-list__top-name">
+										<span class="lk-recommendation-list__name"><b>Виктория</b>, 25 ноября 2016</span>
+									</div>
+									<div class="lk-recommendation-list__top-status">
+										<span class="lk-recommendation-list__status">
+											<span class="lk-recommendation-list__status-ico icon-notdoing"></span>
+											<span class="lk-recommendation-list__status-text">Отклонена</span>
+										</span>
+									</div>
+									<div class="lk-recommendation-list__top-info">
+										<span class="lk-recommendation-list__info">Не опубликована</span>
+									</div>
+									<div class="lk-recommendation-list__top-right">
+										<a href="#" class="lk-recommendation-list__link lk-recommendation-list__link--doing">
+											<span class="lk-recommendation-list__link-ico icon-doing-blue"></span>
+											<span class="lk-recommendation-list__link-text">Принять</span>
+										</a>
+									</div>
+								</div>
+								<p class="lk-recommendation-list__text">Если Вам требуется няня-воспитатель, гувернантка, няня для грудничка, няня с проживанием или на неполный рабочий день - скорее регистрируйтесь на данный сайт, не упустите шанс найти квалифицированную помощницу прямо сейчас.</p>
+							</li>
+						</ul>
+						<div class="pagination">
+							<div class="pagination__title">Показано 1 - 20 заказов из 50</div>
+							<ul class="pagination-list">
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--left"></a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">1</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--active">2</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">3</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">4</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--all">...</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link">80</a>
+								</li>
+								<li class="pagination-list__item">
+									<a href="#" class="pagination__link pagination__link--right"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="lk-content__item js-section lk-bonus" id="lk-bonus">
+						<div class="lk-bonus__box">
+							<span class="lk-bonus__title">Помогите друзьям найти няню или 
+							работу няней и <span class="lk-bonus__title-pink">получите до 5000 <span class="rub">o</span></span> за каждого приглашенного</span>	
+							<span class="lk-bonus__text lk-content__text">Отправьте подруге бонус на заказ няни в размере 1000 Р. Вы получите 1000 Р, когда она наймёт няню, и еще 4000 Р, если она сама начнет помогать с детьми другим родителям   <a href="#">Узнать больше</a></span>
+							<span class="lk-bonus__text lk-content__text">Пригласите людей из адресной книги вашей почты</span>
+							<div class="lk-bonus__email">
+								<div class="lk-bonus__email-item">
+									<a href="#" class="lk-bonus__email-link">
+										<img class="lk-bonus__email-img" src="pic/lk/email/google.png" alt="">
+									</a>
+								</div>
+								<div class="lk-bonus__email-item">
+									<a href="#" class="lk-bonus__email-link">
+										<img class="lk-bonus__email-img" src="pic/lk/email/mail.png" alt="">
+									</a>
+								</div>
+								<div class="lk-bonus__email-item">
+									<a href="#" class="lk-bonus__email-link">
+										<img class="lk-bonus__email-img" src="pic/lk/email/yandex.png" alt="">
+									</a>
+								</div>
+							</div>
+							<form action="#" class="lk-bonus__form js-bonus-form1">
+								<div class="lk-bonus__form-row">
+									<div class="lk-bonus__form-cell">
+										<input name="name" type="text" class="input" placeholder="Введите e-mail друзей через запятую">
+									</div>
+									<div class="lk-bonus__form-cell">
+										<button type="submit" class="btn btn-pink btn-pink--middle lk-bonus__form-btn">Отправить</button>
+									</div>
+								</div>
+								<div class="lk-bonus__form-row ">
+									<label class="checkbox">
+										<input type="checkbox" class="checkbox__check">
+										<span class="checkbox__icon">
+											<span class="checkbox__icon-image"></span>
+										</span>
+										<span class="checkbox__inner">
+											<span class="checkbox__text">Пригласить людей анонимно </span>
+										</span>
+									</label>
+								</div>
+							</form>
+							<span class="lk-bonus__or">
+								<span class="lk-bonus__or-text">или</span>
+							</span>
+							<div class="lk-bonus__form">
+								<div class="lk-bonus__form-row">
+									<div class="lk-bonus__form-cell lk-bonus__form-cell--bottom">
+										<span class="lk-bonus__form-label">Поделитесь ссылкой</span>
+										<input name="name" type="text" class="input js-select-text" value="www.viruchalka.ru" readonly>
+									</div>
+									<div class="lk-bonus__form-cell lk-bonus__form-cell--bottom">
+										<a class="btn btn-violet3 btn-violet3--middle lk-bonus__form-btn">
+											<svg class="btn__icon vk-ico">
+												<use xlink:href="#vk"></use>
+											</svg>
+											<span class="btn__text">Вконтакте</span>
+										</a>
+									</div>
+								</div>
+								<div class="lk-bonus__form-row">
+									<div class="lk-bonus-share">
+										<span class="lk-bonus-share__text">А также в:</span>
+										<ul class="lk-bonus-share__list">
+											<li class="lk-bonus-share__list-item">
+												<a href="#" class="lk-bonus-share__list-link icon-soc-odn-small"></a>
+											</li>
+											<li class="lk-bonus-share__list-item">
+												<a href="#" class="lk-bonus-share__list-link icon-soc-fb-small"></a>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- lk content end -->
+		</div>
+		<!-- content end -->
+
+                    
+<!-- popup-wrap -->
+<div class="popup-wrap">
+	<div class="popup-wrap__table">
+		<div class="popup-wrap__table-cell">
+			@@include('template/blocks/lk-popup-contacts.html')
+			<div class="popup-wrap__overlay js-popup-close"></div>
+		</div>
+	</div>
+</div>
+<!-- popup-wrap end -->
+
+
+
+@@include('template/layout/lk-footer-head.html')
+
+</body>
+</html> 
+
+
