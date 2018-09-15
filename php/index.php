@@ -7,7 +7,7 @@
 		h2:hover {
 			transform: rotate(-999deg);
 			transition: 120s;
-		}
+		} 
 	</style>
 </head>
 <body>
