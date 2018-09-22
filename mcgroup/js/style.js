@@ -49,7 +49,7 @@ $('.responsive').slick({
     {
       breakpoint: 540,
       settings: {
-		dots: false,
+		dots: false, 
 		arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1
