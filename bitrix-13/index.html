@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Bitrix</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="bitrix/templates/default/css/main.css">
+    <link rel="stylesheet" href="bitrix/templates/default/css/media.css">
+	<script src="bitrix/templates/default/js/vendor.js"></script>
+	<link rel="stylesheet" href="im/style.css">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+	          <div class="wrapper wrapper--inner wrapper--grey">
+    <div class="fixed-panel">
+        <div class="top-panel hidden-sm">
+      <div class="container">
+        <div class="top-panel-wrapp flex">
+          <div>
+            <div class="location middle">
+              <i class="fa fa-map-marker midde" aria-hidden="true"></i>
+                                            <div class="middle">
+                <div class="middle">Ваш регион доставки:</div>  
+                <div class="middle dropdown">
+                  <a href="#" class="header-link" id="drop-city" data-toggle="dropdown">Киев</a>
+                  <ul class="dropdown-modal" aria-labelledby="drop-city">
+					<li><a href="javascript:void(0)" onclick="SetCity('Москва')">Москва</a></li><li><a href="javascript:void(0)" onclick="SetCity('Санкт Петербург')">Санкт Петербург</a></li><li><a href="javascript:void(0)" onclick="SetCity('Смоленск')">Смоленск</a></li><li><a href="javascript:void(0)" onclick="SetCity('Краснодар')">Краснодар</a></li><li><a href="javascript:void(0)" onclick="SetCity('Воронеж')">Воронеж</a></li><li><a href="javascript:void(0)" onclick="SetCity('Орел')">Орел</a></li>                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="telephone middle">
+              <i class="fa fa-phone middle" aria-hidden="true"></i>
+<div class="middle">7 (495) 374-56-06</div>            </div>
+          </div>
+          <div class="delivery-info"></div>
+          <div class="dropdown">
+            <a href="#" class="language" id="language-drop" data-toggle="dropdown">
+                            <span class="middle">Русский</span>
+                            <i class="fa fa-angle-down middle" aria-hidden="true"></i>
+            </a>
+            <ul class="dropdown-modal" aria-labelledby="language-drop">
+              <li><a href="/en/">английский</a></li>
+              <li><a href="/">русский</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header-wrapp flex">
+          <div class="logo">
+            <div class="burger visible-sm">
+              <span class="icon-bar"></span>
+            </div>
+            <a href="/" class="logo__item">
+	<img src="bitrix/templates/default/img/red-logo.png" class="logo-white" alt="">
+	<img src="bitrix/templates/default/img/red-logo.png" class="logo-black" alt="">
+</a>          </div>
+          <ul class="menu menu--desktop flex hidden-sm">
+                            <li>
+                <a href="/catalog/kanken/">
+                  <div class="menu__icon">
+                    <img src="upload/7672e64500b881dd2dcd18d6abd7c4d4.svg" class="menu__icon__white" alt="">
+                    <img src="upload/89d9bf4f9f006273e4e3ea170f23f946.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Kanken</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/kanken-2/">
+                  <div class="menu__icon">
+                    <img src="upload/a54a7cea0b70a9679df6b7bcf1cdacca.svg" class="menu__icon__white" alt="">
+                    <img src="upload/1efad3f0784856a7666166d4346395c2.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Kanken №2</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/re-kanken/">
+                  <div class="menu__icon">
+                    <img src="upload/99e9ca2bccf089f2210d8e20d38a1295.svg" class="menu__icon__white" alt="">
+                    <img src="upload/29ad3aef960fa8a3163eb39aa2379cb6.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Re-Kanken</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/laptop/">
+                  <div class="menu__icon">
+                    <img src="upload/37ceb026658900acc840e2033b6b05b4.svg" class="menu__icon__white" alt="">
+                    <img src="upload/8d1e050b559684621165f8fa5eaa8b87.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Laptop +</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/big/">
+                  <div class="menu__icon">
+                    <img src="upload/2351fa6b2b52a60b458141cc48cf4576.svg" class="menu__icon__white" alt="">
+                    <img src="upload/825719f343dfd061bb467675a0842f6f.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Big</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/mini/">
+                  <div class="menu__icon">
+                    <img src="upload/8adc0a3b548eea027dec4e815a81dc4f.svg" class="menu__icon__white" alt="">
+                    <img src="upload/d1af77b4df2a6de035c5ffac6d093f9c.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Mini</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/Re-Kanken-Mini/">
+                  <div class="menu__icon">
+                    <img src="upload/bdbbc8721b2f4936ec722c1770cec49f.svg" class="menu__icon__white" alt="">
+                    <img src="upload/95a748adccc9c9e2005d1e41e71ee34a.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Re-Kanken Mini</div>
+                </a>
+                                                  </li>
+                            <li>
+                <a href="/catalog/aksessuary/">
+                  <div class="menu__icon">
+                    <img src="upload/b03ab2472000b2e7b723d5d4778c098e.svg" class="menu__icon__white" alt="">
+                    <img src="upload/7203a85bd0b691e79394fc25ba480881.svg" class="menu__icon__black" alt="">
+                  </div>
+                  <div class="menu__name">Аксессуары</div>
+                </a>
+                                                  </li>
+                        </ul>
+          <div class="profile hidden-xs">
+            <div class="search-form">
+	<form action="/search/index.php" class="search-form__item">
+		<input type="text" class="search-form__field" name="q">
+		<button type="button" class="search-form__btn">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</button>
+	</form>
+</div>
+
+
+			            <div class="table-block">
+              <div class="block-vertical">
+                <a href="#" class="profile__btn profile__btn--search middle">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </a>
+					<a id="bx_basketFKauiI" href="/personal/cart/" class="profile__btn middle">
+<script>
+var bx_basketFKauiI = new BitrixSmallCart;
+</script>
+<!--'start_frame_cache_bx_basketFKauiI'-->
+  <span class="profile__btn__count">0</span>
+  <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+
+<!--'end_frame_cache_bx_basketFKauiI'--><script type="text/javascript">
+	bx_basketFKauiI.siteId       = 's1';
+	bx_basketFKauiI.cartId       = 'bx_basketFKauiI';
+	bx_basketFKauiI.ajaxPath     = '/bitrix/components/bitrix/sale.basket.basket.line/ajax.php';
+	bx_basketFKauiI.templateName = 'template1';
+	bx_basketFKauiI.arParams     =  {'HIDE_ON_BASKET_PAGES':'N','PATH_TO_AUTHORIZE':'/login/','PATH_TO_BASKET':'/personal/cart/','PATH_TO_ORDER':'/personal/order/make/','PATH_TO_PERSONAL':'/personal/','PATH_TO_PROFILE':'/personal/','PATH_TO_REGISTER':'/login/','POSITION_FIXED':'N','SHOW_AUTHOR':'N','SHOW_EMPTY_VALUES':'Y','SHOW_NUM_PRODUCTS':'Y','SHOW_PERSONAL_LINK':'N','SHOW_PRODUCTS':'N','SHOW_TOTAL_PRICE':'N','CACHE_TYPE':'A','SHOW_DELAY':'Y','SHOW_NOTAVAIL':'Y','SHOW_SUBSCRIBE':'Y','SHOW_IMAGE':'Y','SHOW_PRICE':'Y','SHOW_SUMMARY':'Y','POSITION_VERTICAL':'top','POSITION_HORIZONTAL':'right','AJAX':'N','~HIDE_ON_BASKET_PAGES':'N','~PATH_TO_AUTHORIZE':'/login/','~PATH_TO_BASKET':'/personal/cart/','~PATH_TO_ORDER':'/personal/order/make/','~PATH_TO_PERSONAL':'/personal/','~PATH_TO_PROFILE':'/personal/','~PATH_TO_REGISTER':'/login/','~POSITION_FIXED':'N','~SHOW_AUTHOR':'N','~SHOW_EMPTY_VALUES':'Y','~SHOW_NUM_PRODUCTS':'Y','~SHOW_PERSONAL_LINK':'N','~SHOW_PRODUCTS':'N','~SHOW_TOTAL_PRICE':'N','~CACHE_TYPE':'A','~SHOW_DELAY':'Y','~SHOW_NOTAVAIL':'Y','~SHOW_SUBSCRIBE':'Y','~SHOW_IMAGE':'Y','~SHOW_PRICE':'Y','~SHOW_SUMMARY':'Y','~POSITION_VERTICAL':'top','~POSITION_HORIZONTAL':'right','~AJAX':'N','cartId':'bx_basketFKauiI'}; // TODO \Bitrix\Main\Web\Json::encode
+	bx_basketFKauiI.closeMessage = 'Скрыть';
+	bx_basketFKauiI.openMessage  = 'Раскрыть';
+	bx_basketFKauiI.activate();
+</script>
+</a>                <a href="/personal/favorite/" class="profile__btn middle">
+                  <span class="profile__btn__count" id="total_fav_link_count">0</span>
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </a>
+				                <div class="login middle">
+                  <a href="/auth/" class="profile__btn login-btn middle">
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                  </a>
+				  
+<div class="login-dropdown">
+	<div class="login-dropdown__header clearfix">
+	  <div class="col-sm-6">
+		<div class="row login-dropdown__left">
+		  <div class="login-dropdown__title">
+			Войти		  </div>
+		</div>
+	  </div>
+	  <!--social-->
+	  				
+<script type="text/javascript">
+function BxSocServPopup(id)
+{
+	var content = BX("bx_socserv_form_"+id);
+	if(content)
+	{
+		var popup = BX.PopupWindowManager.create("socServPopup"+id, BX("bx_socserv_icon_"+id), {
+			autoHide: true,
+			closeByEsc: true,
+			angle: {offset: 24},
+			content: content,
+			offsetTop: 3
+		});
+
+		popup.show();
+
+		var input = BX.findChild(content, {'tag':'input', 'attribute':{'type':'text'}}, true);
+		if(input)
+		{
+			input.focus();
+		}
+
+		var button = BX.findChild(content, {'tag':'input', 'attribute':{'type':'submit'}}, true);
+		if(button)
+		{
+			button.className = 'btn btn-primary';
+		}
+	}
+}
+</script>
+
+<div class="col-sm-6">
+	<div class="row login-dropdown__right">
+		<div class="login-dropdown__social">
+			<a href="javascript::void(0)" onclick="BX.util.popup('https://www.facebook.com/dialog/oauth?client_id=121615268566745&redirect_uri=https%3A%2F%2Fkanken.ru%2Fsafe-shopping%2F%3Fauth_service_id%3DFacebook%26check_key%3De7f6c46d66be29995a3ab4defce1bc3f%26backurl%3D%252Fsafe-shopping%252F&scope=email,publish_actions,user_friends&display=popup', 680, 600)" class="middle">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+			</a>
+			<a href="javascript::void(0)" onclick="BX.util.popup('https://oauth.vk.com/authorize?client_id=6176806&redirect_uri=https%3A%2F%2Fkanken.ru%2Fsafe-shopping%2F%3Fauth_service_id%3DVKontakte&scope=friends,offline,email&response_type=code&state=site_id%3Ds1%26backurl%3D%252Fsafe-shopping%252F%253Fcheck_key%253De7f6c46d66be29995a3ab4defce1bc3f%26redirect_url%3D%252Fsafe-shopping%252F', 660, 425)" class="middle">
+				<i class="fa fa-vk" aria-hidden="true"></i>
+			</a>
+		</div>
+	</div>
+</div>				 <!-- <div class="col-sm-6">
+		<div class="row login-dropdown__right">
+			
+		  <div class="login-dropdown__social">
+			<a href="#" class="middle">
+			  <i class="fa fa-facebook" aria-hidden="true"></i>
+			</a>
+			<a href="#" class="middle">
+			  <i class="fa fa-vk" aria-hidden="true"></i>
+			</a>
+		  </div>
+		</div>
+	  </div>-->
+	  <!--/social-->
+	</div>
+	<div class="login-dropdown__form">
+
+
+
+<form name="system_auth_form6zOYVN" method="post" target="_top" action="/safe-shopping/?login=yes">
+	<input type="hidden" name="backurl" value="/safe-shopping/" />
+	<input type="hidden" name="AUTH_FORM" value="Y" />
+	<input type="hidden" name="TYPE" value="AUTH" />
+	<div class="form-group form-group--login">
+	  <input type="text" name="USER_LOGIN" class="form-control form-control--small" placeholder="Логин / E-mail">
+	  <script>
+		BX.ready(function() {
+			var loginCookie = BX.getCookie("BITRIX_SM_LOGIN");
+			if (loginCookie)
+			{
+				var form = document.forms["system_auth_form6zOYVN"];
+				var loginInput = form.elements["USER_LOGIN"];
+				loginInput.value = loginCookie;
+			}
+		});
+	</script>
+	</div>
+	<div class="form-group form-group--login">
+	  <input type="password" name="USER_PASSWORD" class="form-control form-control--small" placeholder="Пароль">
+	</div>
+</form>
+</div>
+	<div class="login-dropdown__footer clearfix">
+	  <div class="col-md-7">
+		<div class="row login-dropdown__left">
+		  <div class="login-dropdown__title">
+			<a href="/auth/?forgot_password=yes&amp;backurl=%2Fsafe-shopping%2F">напомнить пароль</a>
+		  </div>
+		  <div class="login-dropdown__title">
+			<a href="/auth/?register=yes&amp;backurl=%2Fsafe-shopping%2F">Регистрация</a>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col-md-5">
+		<div class="row login-dropdown__right">
+		  <a href="javascript::void(0)" class="btn btn-black btn-small" onclick="startAuth('6zOYVN')">
+			<span class="middle">Войти</span>
+			<i class="fa fa-angle-right"></i>
+		  </a>
+		</div>
+	  </div>
+	</div>
+</div>
+                                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="profile flex visible-xs">
+<div class="search-form">
+	<form action="/search/index.php" class="search-form__item">
+		<input type="text" class="search-form__field" name="q">
+		<button type="button" class="search-form__btn">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</button>
+	</form>
+</div>
+
+
+      <a href="#" class="profile__btn profile__btn--search middle">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </a>
+      <a href="/personal/cart/" class="profile__btn middle">
+        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="profile__btn middle">
+        <i class="fa fa-heart-o" aria-hidden="true"></i>
+      </a>
+            <a href="/auth/" class="profile__btn middle">
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+      </a>
+          </div>
+    <ul class="menu clearfix">
+            <li>
+        <a href="/catalog/kanken/">
+          <div class="menu__icon">
+            <img src="upload/7672e64500b881dd2dcd18d6abd7c4d4.svg" class="menu__icon__white" alt="">
+            <img src="upload/89d9bf4f9f006273e4e3ea170f23f946.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Kanken</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/kanken-2/">
+          <div class="menu__icon">
+            <img src="upload/a54a7cea0b70a9679df6b7bcf1cdacca.svg" class="menu__icon__white" alt="">
+            <img src="upload/1efad3f0784856a7666166d4346395c2.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Kanken №2</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/re-kanken/">
+          <div class="menu__icon">
+            <img src="upload/99e9ca2bccf089f2210d8e20d38a1295.svg" class="menu__icon__white" alt="">
+            <img src="upload/29ad3aef960fa8a3163eb39aa2379cb6.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Re-Kanken</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/laptop/">
+          <div class="menu__icon">
+            <img src="upload/37ceb026658900acc840e2033b6b05b4.svg" class="menu__icon__white" alt="">
+            <img src="upload/8d1e050b559684621165f8fa5eaa8b87.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Laptop +</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/big/">
+          <div class="menu__icon">
+            <img src="upload/2351fa6b2b52a60b458141cc48cf4576.svg" class="menu__icon__white" alt="">
+            <img src="upload/825719f343dfd061bb467675a0842f6f.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Big</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/mini/">
+          <div class="menu__icon">
+            <img src="upload/8adc0a3b548eea027dec4e815a81dc4f.svg" class="menu__icon__white" alt="">
+            <img src="upload/d1af77b4df2a6de035c5ffac6d093f9c.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Mini</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/Re-Kanken-Mini/">
+          <div class="menu__icon">
+            <img src="upload/bdbbc8721b2f4936ec722c1770cec49f.svg" class="menu__icon__white" alt="">
+            <img src="upload/95a748adccc9c9e2005d1e41e71ee34a.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Re-Kanken Mini</div>
+        </a>
+      </li>
+            <li>
+        <a href="/catalog/aksessuary/">
+          <div class="menu__icon">
+            <img src="upload/b03ab2472000b2e7b723d5d4778c098e.svg" class="menu__icon__white" alt="">
+            <img src="upload/7203a85bd0b691e79394fc25ba480881.svg" class="menu__icon__black" alt="">
+          </div>
+          <div class="menu__name">Аксессуары</div>
+        </a>
+      </li>
+          </ul>
+  </div>
+  
+  <div class="content">
+      <div class="container">
+	  <div class="product">
+		<div class="product__info"></div>
+		<div class="new-wrap">
+			<div class="new-wrap_title">
+				<div class="new-title_main">Товар</div>
+				<div class="new-title_dop">Размер</div>
+				<div class="new-title_how">Количество</div>
+				<div class="new-title_price">Цена</div>
+				<div class="new-title_title"><div class="new-wrap_price">&nbsp;</div></div>
+			</div>
+			<div class="new-wrap_body">
+				<div class="new-wrap_wrap">
+					<div class="new-wrap_contain">
+						<div><a href="#"><img src="picture/backpage-1.jpg"></a></div>
+						<div class="backpage-text">
+							<h3>Fjallraven</h3>
+							<p>Рюкзак Fjallraven Kanken №2 (Green)</p>
+							<p class="backpage-red">Осталось в наличии: 1 шт</p>
+						</div>
+					</div>
+				</div>
+				<div class="new-wrap_dop">40.5</div>
+				<div class="new-wrap_how">Последние</div>
+				<div class="new-wrap_price">5 990 р.</div>
+				<div class="new-wrap_close"><a href="#"><img src="picture/x-close.png"></a></div>
+			</div>
+			<div class="new-wrap_body">
+				<div class="new-wrap_wrap">
+					<div class="new-wrap_contain">
+						<div><a href="#"><img src="picture/backpage-2.jpg"></a></div>
+						<div class="backpage-text">
+							<h3>Fjallraven</h3>
+							<p>Рюкзак Fjallraven Kanken №2 (Green)</p>
+							<p class="backpage-red">Осталось в наличии: 5 шт</p>
+						</div>
+					</div>
+				</div>
+				<div class="new-wrap_dop">40.5</div>
+				<div class="new-wrap_how">
+					<div class="price-myscope">
+						<a href="#"><img src="im/minus.png"></a> 
+						<div class="sumarry">1</div>
+						<a href="#"><img src="im/plus.png"></a>
+					</div>
+				</div>
+				<div class="new-wrap_price">5 990 р.</div>
+				<div class="new-wrap_close"><a href="#"><img src="picture/x-close.png"></a></div>
+			</div>
+		</div><!--Конец списка товаров -->
+			
+			<div class="promokod">
+				<div class="promokod-bodyi">
+					<div class="promokod-body_forma">
+						<div class="promokod-body_title">Промокод</div>
+						<div class="promokod-body">
+						<input type="text" name="sub-email" class="promokod-body_text">
+						  <button type="submit" class="promokod-body_btn">
+							Применить
+						  </button>
+						</div>
+					</div>
+					<div class="promokod-body_forma2">
+						<div class="promokod-body_title">Дисконтная карта</div>
+						<div class="promokod-body">
+						<input type="text" name="sub-email" class="promokod-body_text">
+						  <button type="submit" class="promokod-body_btn">
+							Применить
+						  </button>
+						</div>
+					</div>
+					<div class="promokod-body_empty">
+						&nbsp;
+					</div>
+					<div class="promokod-body_change">
+						<div class="promokod-body_title">Скидка</div>
+						1 198 р
+					</div>
+					<div class="promokod-body_price">
+						<div class="promokod-body_title">Итоговая цена</div>
+						10 780 р
+					</div>
+				</div>
+			</div><!-- Конец промокода -->
+			
+			<div class="zakaz">
+			<h2>Оформление заказа (<a href="#">представьтесь</a> или <a href="#">войдите</a>)</h2>
+				<div class="zakaz-body">
+					<div class="zakaz-body_left">
+						<div class="zakaz-wrap">
+							<div class="left-leb">Имя</div>
+							<input type="text" class="zakaz-wrap_form">
+							<div class="zakaz-wrap_end">Как к вам обращаться?</div>
+						</div>
+						<div class="zakaz-wrap">
+							<div class="left-leb">Телефон</div>
+							<input type="text" class="zakaz-wrap_form">
+							<div class="zakaz-wrap_end">Для подтвеждения заказа</div>
+						</div>
+						<div class="zakaz-wrap">
+							<div class="left-leb">Email</div>
+							<input type="text" class="zakaz-wrap_form">
+							<div class="zakaz-wrap_end">Для отслеживания заказа</div>
+						</div>
+					</div>
+					<div class="zakaz-body_right">
+						<div class="zakaz-right_item">
+							<div class="zakaz-right_photo"><img src="im/zakaz-right_item1.png"></div>
+							<div class="zakaz-right_text">
+								<h3>Безопасная оплата</h3>
+								<p>Оплата наличными при получении. Безопасная оплата картами по протоколу 3D Secure.</p>
+							</div>
+						</div>
+						
+						<div class="zakaz-right_item">
+							<div class="zakaz-right_photo"><img src="im/zakaz-right_item2.png"></div>
+							<div class="zakaz-right_text">
+								<h3>Бесплатная доставка</h3>
+								<p>У вас есть возможность получить бесплатную доставку товаров. </p>
+							</div>
+						</div>
+						<div class="zakaz-right_item">
+							<div class="zakaz-right_photo"><img src="im/zakaz-right_item3.png"></div>
+							<div class="zakaz-right_text">
+								<h3>Возврат и обмен</h3>
+								<p>Вы всегда сможете вернуть или обменять товар в течение 14 дней с момента получения.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="zakaz-button">
+					<a href="#">Выбрать способ доставки</a>
+				</div>
+			</div>
+			
+			<div class="dostavka">
+				<div class="dostavka-body">
+					<div class="dostavka-left">
+						<h2 class="dostavka-left_position">Оформление заказа (<a href="#">доставка</a> и <a href="#">оплата</a>)</h2>
+						<div class="dostavka-body_left">
+							<div class="zakaz-wrap">
+								<div class="left-leb">Индекс</div>
+								<input type="text" class="zakaz-wrap_form" placeholder="Укажите, если знаете">
+								<div class="zakaz-wrap_end">&nbsp;</div>
+							</div>
+							<div class="zakaz-wrap">
+								<div class="left-leb">Город</div>
+								<input type="text" class="zakaz-wrap_form">
+								<div class="zakaz-wrap_end">&nbsp;</div>
+							</div>
+							<div class="zakaz-wrap">
+								<div class="left-leb">Адрес</div>
+								<input type="text" class="zakaz-wrap_form">
+								<div class="zakaz-wrap_end">&nbsp;</div>
+							</div>
+							<div class="zakaz-wrap_comment">
+								<div class="zakaz-wrap">
+									<div class="left-leb">Комментарий</div>
+									<input type="text" class="zakaz-wrap_form">
+									<div class="zakaz-wrap_end">&nbsp;</div>
+								</div>
+							</div>
+							<div class="zakaz-wrap_soglasen">
+								<div class="zakaz-cheki">
+									<div><input type="checkbox" class="bigger-and_better" name="one" value="one" checked></div>
+									<div>Я согласен с <a href="#">правилами магазина</a> и обработкой персональных данных</div>
+								</div>
+								<div class="zakaz-cheki">
+									<div><input type="checkbox" class="bigger-and_better" name="two" value="two"> </div>
+									<div>Подписаться на новости и скидки</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="dostavka-right">
+						<div class="dostavka-body_gray">Способ доставки</div>
+							<div class="dostavka-body_right">
+							<div class="dostavka-body_wrap">
+								<a href="#"><div class="dostavka-right_item">
+									<div class="zakaz-right_photo"><img src="im/zakaz-right_item1.png"></div>
+									<div class="zakaz-right_text">
+										<h3>Курьерская - бесплатно</h3>
+										<p>Бесплатно. Доставка день в день при заказе до 13:00, 
+										либо на следующий в удобное для вас время</p>
+									</div>
+								</div></a>
+								<a href="#"><div class="dostavka-right_item">
+									<div class="zakaz-right_photo"><img src="im/zakaz-right_item2.png"></div>
+									<div class="zakaz-right_text">
+										<h3>Экспресс - 500 Р</h3>
+										<p>Доставка осуществляется в день заказа, поступившего до 19:00</p>
+									</div>
+								</div>
+								<a href="#"><div class="dostavka-right_item">
+									<div class="zakaz-right_photo"><img src="im/zakaz-right_item3.png"></div>
+									<div class="zakaz-right_text">
+										<h3>За МКАД - 500 р</h3>
+										<p>Доставка осуществляется в течении 1 дня в удобное для вас время</p>
+									</div>
+								</div>
+								<a href="#"><div class="dostavka-right_item">
+									<div class="zakaz-right_photo"><img src="im/zakaz-right_item4.png"></div>
+									<div class="zakaz-right_text">
+										<h3>Самовывоз - бесплатно</h3>
+										<p>Самовывоз осуществляется из нашего магазина. Заказ резервируется на 2 дня.</p>
+									</div>
+								</div></a>
+							</div>
+							<p class="dostavka-body_title">Способ оплаты</p>
+							<div class="dostavka-right_sposoby">
+								<div>
+								<a href="#"><img src="im/zakaz-sposob_item1.png">
+								<p>Наличными</p></a>
+								</div>
+								<a href="#"><div><img src="im/zakaz-sposob_item2.png"></a>
+								<p>PayPal</p></a>
+								</div>
+								<a href="#"><div><img src="im/zakaz-sposob_item3.png">
+								<p>Банковской картой</p></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dostavka-end">
+					<div class="dostavka-end_container">
+						<p>Стоимость доставки</p>
+						<strong>Бесплатно</strong>
+						<div class="dostavka-end_body">
+							<div>
+								<p>Скидка</p>
+								<strong class="dostavka-end_price">1 198 р</strong>
+							</div>
+							<div>
+								<p>Итоговая цена</p>
+								<strong class="dostavka-end_price">288 888 Р</strong>
+							</div>
+						</div>
+						<div class="zakaz-button zakaz-confirm">
+							<a href="#">Подтвердить заказ</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="zakaz">
+			<h2>Оформление заказа (<a href="#">представьтесь</a> или <a href="#">войдите</a>)</h2>
+				<div class="zakaz-body">
+					<div class="zakaz-body_left">
+						<div class="zakaz-wrap">
+							<div class="left-leb">Email</div>
+							<input type="text" class="zakaz-wrap_form">
+							<div class="zakaz-wrap_end">Для отслеживания заказа</div>
+						</div>
+						<div class="zakaz-wrap">
+							<div class="left-leb">Пароль</div>
+							<input type="text" class="zakaz-wrap_form">
+							<div class="zakaz-wrap_end">Введите пароль, ранее высланный на ваш email </div>
+						</div>
+						<div class="zakaz-wrap_social">Войти через <a href="#">Facebook</a> или <a href="#">Вконтакте</a></div>
+					</div>
+					<div class="zakaz-body_right">
+						<div class="zakaz-right_item">
+							<div class="zakaz-right_photo"><img src="im/zakaz-right_item1.png"></div>
+							<div class="zakaz-right_text">
+								<h3>Безопасная оплата</h3>
+								<p>Оплата наличными при получении. Безопасная оплата картами по протоколу 3D Secure.</p>
+							</div>
+						</div>
+						
+						<div class="zakaz-right_item">
+							<div class="zakaz-right_photo"><img src="im/zakaz-right_item2.png"></div>
+							<div class="zakaz-right_text">
+								<h3>Бесплатная доставка</h3>
+								<p>У вас есть возможность получить бесплатную доставку товаров. </p>
+							</div>
+						</div>
+						<div class="zakaz-right_item">
+							<div class="zakaz-right_photo"><img src="im/zakaz-right_item3.png"></div>
+							<div class="zakaz-right_text">
+								<h3>Возврат и обмен</h3>
+								<p>Вы всегда сможете вернуть или обменять товар в течение 14 дней с момента получения.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="zakaz-button">
+					<a href="#">Выбрать способ доставки</a>
+				</div>
+			</div>
+			</div>
+            </div><!-- Конец контента -->
+        </div>
+    </div>
+
+  
+   <footer class="footer section">
+        <div class="advantages">
+          <div class="container">
+            <div class="advantages__wrapp clearfix">
+			<div class="col-sm-3 col-xs-6 advantages__item" id="bx_3218110189_320">
+				<a href="/official-retailer/">
+					<div class="table-block">
+				<div class="block-vertical">
+					<div class="advantages__icon table-cell">
+						<img src="upload/iblock/724102a09a5c611f7d2f7c8036bd7ce5.svg" class="advantages__icon__white" alt="">
+						<img src="upload/iblock/b044cf91a3c3602ec2c36557311f0468.svg" class="advantages__icon__black" alt="">
+					</div>
+					<div class="advantages__text table-cell">
+						Официальный ритейлер					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+			<div class="col-sm-3 col-xs-6 advantages__item" id="bx_3218110189_319">
+				<a href="http://kanken.ru/payment/">
+					<div class="table-block">
+				<div class="block-vertical">
+					<div class="advantages__icon table-cell">
+						<img src="upload/iblock/8f001549c9c964a6f55f0467b1b16c0b.svg" class="advantages__icon__white" alt="">
+						<img src="upload/iblock/b371fa10e4ed16834a2a7fb0ac259189.svg" class="advantages__icon__black" alt="">
+					</div>
+					<div class="advantages__text table-cell">
+						Международная доставка					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+			<div class="col-sm-3 col-xs-6 advantages__item" id="bx_3218110189_318">
+				<a href="/safe-shopping/">
+					<div class="table-block">
+				<div class="block-vertical">
+					<div class="advantages__icon table-cell">
+						<img src="upload/iblock/977bb2aec4d3adef705fabb0fee89528.svg" class="advantages__icon__white" alt="">
+						<img src="upload/iblock/7af75e4fada1b49840ef12c8150ec1d2.svg" class="advantages__icon__black" alt="">
+					</div>
+					<div class="advantages__text table-cell">
+						Безопасная покупка					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+			<div class="col-sm-3 col-xs-6 advantages__item" id="bx_3218110189_317">
+				<a href="/possibility-of-return/">
+					<div class="table-block">
+				<div class="block-vertical">
+					<div class="advantages__icon table-cell">
+						<img src="upload/iblock/1647748b532eb59ac1d654d285c21e9e.svg" class="advantages__icon__white" alt="">
+						<img src="upload/iblock/7cda8dbf907d09b46c3075afa531adcc.svg" class="advantages__icon__black" alt="">
+					</div>
+					<div class="advantages__text table-cell">
+						Возможность возврата					</div>
+				</div>
+			</div>
+				</a>
+			</div>
+</div>          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="footer__wrapp flex">
+              <div class="footer__search">
+                <form action="" method="post" id="form-sub">
+                  <div id="content_sub" style="display:block; text-align: center;"></div>
+                  <input type="text" name="sub-email" class="footer__search__input" placeholder="Сообщать мне о новостях по e-mail">
+                  <button type="submit" class="footer__search__btn">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              
+
+
+<div class="footer__menu clearfix">
+	<ul>
+						<li><a href="/contacts/">Контакты</a></li>
+										<li><a href="/contacts/#helpurl">Помощь</a></li>
+											</ul>
+				<ul>
+			<li><a href="/payment/">Доставка и оплата</a></li>
+										<li><a href="/return/">Обмен и возврат</a></li>
+						</ul>
+</div>
+              <div class="footer__diler">
+                <img src="bitrix/templates/default/img/raven.png" class="raven-black" alt="">
+<img src="bitrix/templates/default/img/raven-white.png" class="raven-white" alt="">                <div>Официальный ритейл</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+  <!-- Modal -->
+  <div class="modal fade" id="basket" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4 class="modal-title">Товар добавлен в корзину</h4>
+          <p class="modal-text">
+            На указанный в форме e-mail придет запрос на подтверждение регистрации.
+          </p>
+          <div class="modal-footer">
+            <a href="#" onclick="$('#basket').modal('hide');" class="modal-back" style="margin-right: 10px;">
+				<i class="fa fa-angle-left"></i>
+              <span class="middle">Вернуться к покупкам</span>
+              
+            </a>
+			<a href="#" onclick="location.href='/personal/cart/'" class="modal-back" style="margin-left: 10px;">
+              <span class="middle">Перейти в корзину</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+  </div>
+      </div>
+	<script src="bitrix/templates/default/js/main.js"></script>
+	<script src="bitrix/templates/default/js/script_ru.js"></script>
+	<script src="bitrix/templates/default/js/mask.js"></script>
+	<script>
+		jQuery(function($){
+		   $("[name=ORDER_PROP_3],[name=PERS_PHONE],[name=PERSONAL_PHONE]").mask("+7(222) 222-2222");
+		});
+	</script>
+</body>
+</html>
