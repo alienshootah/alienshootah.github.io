@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Круизы</title>
+	<link rel="stylesheet" href="full-fontawesome/css/all.css" >
+	<link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="content row">
+                <div class="col-2 header-logo">
+                    <a href="#"><img src="img/logo.png" alt="Логотип"></a>
+                </div>
+                <div class="col-6 header-phones">
+                    <ul class="header-list">
+                        <li class="header-list_item header-list_item-big"><img src="img/header-phone.png" alt=""> <a  class="header-list_link" href="tel:+380443378401">+38 044 337 84 01</a></li>
+                        <li class="header-list_item"><a class="header-list_link" href="tel:+380936530553">+38 <b>093</b> 653 05 53</a></li>
+                        <li class="header-list_item"><a class="header-list_link" href="tel:+380666530553">+38 <b>066</b> 653 05 53</a></li>
+                        <li class="header-list_item"><a class="header-list_link" href="tel:+380976530553">+38 <b>097</b> 653 05 53</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 text-right header-login">
+                    <div class="header-login_right"><div class="dropdown">
+                        <a href="#" class="dropdown-toggle header-login_link" data-toggle="dropdown">Вход или Регистрация</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-body">
+                                <div class="dropdown-body_item">
+                                    <h5 class="dropdown-item_title">Авторизация</h5>
+                                    <div class="dropdown-field">
+                                        <label for="num-phone">Номер телефона</label>
+                                        <input type="number" id="num-phone" class="header-form_item" placeholder="+38 (__) __-__-__">
+                                    </div>
+                                    <div class="dropdown-field">
+                                        <label for="pass">Пароль</label>
+                                        <input type="password" id="pass" class="header-form_item" placeholder="Введите пароль">
+                                    </div>
+                                    <div class="dropdown-confirm dropdown-confirm_flex">
+                                        <a href="#" class="dropdown-confirm_link">Восстановить пароль</a>
+                                        <button class="subscribe-button" type="submit">Войти</button>
+                                    </div>
+                                </div>
+                                <div class="dropdown-body_item">
+                                    <h5 class="dropdown-item_title">Регистрация</h5>
+                                    <div class="dropdown-field">
+                                        <label for="num-phone2">Номер телефона</label>
+                                        <input type="text" id="num-phone2" class="header-form_item" placeholder="+38 (__) __-__-__">
+                                    </div>
+                                    <div class="dropdown-field">
+                                        <label for="pass2">Пароль</label>
+                                        <input type="password" id="pass2" class="header-form_item" placeholder="Введите пароль">
+                                    </div>
+                                    <div class="dropdown-field">
+                                            <label for="pass3">Пароль еще раз</label>
+                                            <input type="password" id="pass3" class="header-form_item" placeholder="Введите повторно пароль">
+                                        </div>
+                                    <div class="text-right dropdown-confirm">
+                                       <button class="subscribe-button" type="submit">Регистрация</button>
+                                    </div>
+                                </div>
+                                <div class="dropdown-rights">
+                                    <p class="dropdown-rights_text">Регистрируясь, вы соглашаетесь с 
+                                        <a href="#" class="dropdown-confirm_link">правилами пользования сайтом</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><!-- Конец header -->
+        <nav class="navbar-expand-lg">
+            <div class="content">
+                <div class="nav-back">
+                    <a onclick="javascript:history.back();return false;">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="collapse navbar-collapse navbar nav" id="collapsibleNavbar">
+                    <li class="navbar-item"><a href="#" class="navbar-link">Акции и скидки</a></li>
+                    <li class="navbar-item"><a href="#" class="dropdown-toggle navbar-link" data-toggle="dropdown">Круизные лайнеры</a>
+                        <div class="dropdown-menu navbar-dropdown">
+                                <div class="navbar-dropdown_body">
+                                    <div class="navbar-dropdown_item">
+                                        <h5 class="navbar-dropdown_title">Класс стандарт</h5>
+                                        <ul class="dropdown_list">
+                                            <li class="dropdown_list_str"><a href="#">Norwegian Cruise Line</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Royal Carribean Int.</a></li>
+                                            <li class="dropdown_list_str"><a href="#">MSC Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Costa Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Carnival Cruise Line</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Disney Cruise Line</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Celestayl Cruises</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="navbar-dropdown_item">
+                                        <h5 class="navbar-dropdown_title">Класс премиум</h5>
+                                        <ul class="dropdown_list">
+                                            <li class="dropdown_list_str"><a href="#">Ocean Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Holland America Line</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Celebrity Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Princess Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Viking Cruise Line</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="navbar-dropdown_item">
+                                        <h5 class="navbar-dropdown_title">Класс Люкс</h5>
+                                        <ul class="dropdown_list">
+                                            <li class="dropdown_list_str"><a href="#">Azamara Club Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Cunard Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Crystal Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Regent Seven Seas Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Silversea Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Hapag-Lloyd</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="navbar-dropdown_item">
+                                        <h5 class="navbar-dropdown_title">Класс мега-яхты</h5>
+                                        <ul class="dropdown_list">
+                                            <li class="dropdown_list_str"><a href="#">Seabourn Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Variety Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Ponant Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Sea Dream Cruises</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="navbar-dropdown_item">
+                                        <h5 class="navbar-dropdown_title">Класс парусники</h5>
+                                        <ul class="dropdown_list">
+                                            <li class="dropdown_list_str"><a href="#">Star Clippers</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Windstar Cruises</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Sea Cloud</a></li>
+                                            <li class="dropdown_list_str"><a href="#">Costa Cruises</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">Полезная информация</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">MSC Voyager Club</a></li>
+                    <li class="navbar-item"><a href="#" class="navbar-link">О компании</a></li>
+                </ul>
+            </div>
+        </nav><!-- Конец nav -->
+        <div class="destination">
+            <div class="content row">
+                <div class="col-8">
+                <div class="destination-body">
+                    <div class="destination-destination"><span class="destination-all">75 направлений - 158 маршрутов</span></div>
+                    <div><input type="checkbox" class="destination-box"></div>
+                    <div><span class="destination-show">Показать только доступные круизы</span></div>
+                </div>
+                </div>
+                <div class="col-4 text-right">
+                    <span class="destination-sort">Сортировать по</span> 
+                    <select class="destination-list">
+                        <option>Дате отправления</option>
+                        <option>Дате отправления</option>
+                        <option>Дате отправления</option>
+                        <option>Дате отправления</option>
+                    </select>
+                </div>
+            </div>
+        </div><!-- Конец destination -->
+        <main>
+            <div class="content row">
+
+                <div class="col-8 main-results">
+                    <div class="main-content">
+                        <div class="main-title">
+                            <div><h2 class="main-title_h">Средиземноморье</h2></div>
+                            <button class="main-title_button">
+                                <img src="img/calendar-btn.png" alt=""> 
+                                <span>Маршрут и расписание</span>
+                            </button>
+                        </div>
+
+                        <div class="one-time main-slider">
+                            <div class="main-slider_item" style="background: url(img/slider.jpg) no-repeat">
+                                <div class="main-slider_body">
+                                    <p class="main-slider_name">Departure Date</p>
+                                    <div class="main-slider_date">9.13.2018</div>
+                                    <p class="main-slider_name">Embarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Disembarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Ship</p>
+                                    <p class="main-slider_desc">MSC Orchestra</p>
+                                    <p class="main-slider_name">Itinerary</p>
+                                    <p class="main-slider_desc">Spain, Italy, France</p>
+                                    <p class="main-slider_name">Duration</p>
+                                    <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                </div>
+                            </div>
+                            <div class="main-slider_item" style="background: url(img/slider-item1.jpg) no-repeat">
+                                <div class="main-slider_body">
+                                    <p class="main-slider_name">Departure Date</p>
+                                    <div class="main-slider_date">9.13.2018</div>
+                                    <p class="main-slider_name">Embarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Disembarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Ship</p>
+                                    <p class="main-slider_desc">MSC Orchestra</p>
+                                    <p class="main-slider_name">Itinerary</p>
+                                    <p class="main-slider_desc">Spain, Italy, France</p>
+                                    <p class="main-slider_name">Duration</p>
+                                    <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                </div>
+                            </div>
+                            <div class="main-slider_item" style="background: url(img/slider-item2.jpg) no-repeat">
+                                <div class="main-slider_body">
+                                    <p class="main-slider_name">Departure Date</p>
+                                    <div class="main-slider_date">9.13.2018</div>
+                                    <p class="main-slider_name">Embarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Disembarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Ship</p>
+                                    <p class="main-slider_desc">MSC Orchestra</p>
+                                    <p class="main-slider_name">Itinerary</p>
+                                    <p class="main-slider_desc">Spain, Italy, France</p>
+                                    <p class="main-slider_name">Duration</p>
+                                    <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                </div>
+                            </div>
+                            <div class="main-slider_item" style="background: url(img/slider-item3.jpg) no-repeat">
+                                <div class="main-slider_body">
+                                    <p class="main-slider_name">Departure Date</p>
+                                    <div class="main-slider_date">9.13.2018</div>
+                                    <p class="main-slider_name">Embarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Disembarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                </div>
+                            </div>
+                            <div class="main-slider_item" style="background: url(img/slider-item4.jpg) no-repeat">
+                                <div class="main-slider_body">
+                                    <p class="main-slider_name">Departure Date</p>
+                                    <div class="main-slider_date">9.13.2018</div>
+                                    <p class="main-slider_name">Embarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Disembarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Ship</p>
+                                    <p class="main-slider_desc">MSC Orchestra</p>
+                                    <p class="main-slider_name">Itinerary</p>
+                                    <p class="main-slider_desc">Spain, Italy, France</p>
+                                    <p class="main-slider_name">Duration</p>
+                                    <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                    <p class="main-slider_name">Disembarcation Port</p>
+                                    <p class="main-slider_desc">Barselona, Spain</p>
+                                    <p class="main-slider_name">Ship</p>
+                                    <p class="main-slider_desc">MSC Orchestra</p>
+                                    <p class="main-slider_name">Itinerary</p>
+                                    <p class="main-slider_desc">Spain, Italy, France</p>
+                                    <p class="main-slider_name">Duration</p>
+                                    <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                </div>
+                            </div>
+                        </div><!-- Конец слайдера -->
+                        
+                        <div class="main-info">
+                            <div class="main-info_what">
+                                <div class="main-what_item"><img src="img/main-info_date.jpg" alt="Выбранная дата"> Выбранная дата</div>
+                                <div class="main-what_item"><img src="img/main-info_price.jpg" alt="Низкая цена"> Низкая цена</div>
+                            </div>
+                            <div class="text-center main-info_price">
+                                <div class="main-info_price-dollar">$1,678.00</div>
+                            </div>
+                            <div class="main-info_current">
+                                <div class="main-info_current-from">Цена<br> от</div>
+                                <div class="main-current-body">
+                                    <div class="current-price">$839*</div>
+                                    <div class="current-what">Взрослый<br> за чел</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right main-info_category">
+                            <p class="main-category-name">Категория каюты: Balcony</p>
+                            <div class="main-category-descr">*Goverment fees & taxes are an additional: ($29.00)</div>
+                        </div>
+                        <div class="main-table-bd">
+                            <table class="main-table_wrap table-responsive">
+                                <thead class="main-table_head">
+                                    <th class="main-table_empty"></th>
+                                    <th>14 сентября</th>
+                                    <th>23 сентября</th>
+                                    <th>30 сентября</th>
+                                    <th>5 октября</th>
+                                    <th>14 октября</th>
+                                    <th>21 октября</th>
+                                </thead>
+                                <tbody class="main-table_body">
+                                    <tr>
+                                        <td class="main-table_paraplaw"><img src="img/paraplan.png" alt="Корабль"></td>
+                                        <td>Распродано</td>
+                                        <td>Распродано</td>
+                                        <td>Распродано</td>
+                                        <td>Распродано</td>
+                                        <td class="main-dates_date">$878</td>
+                                        <td class="main-dates_price">$898</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-right main-details">
+                            <div class="main-details_first">
+                                <div class="main-details_text">The departure you selected includes: </div> 
+                                <a href="#"><div class="main-details_bell"></div></a>
+                                <a href="#"><div class="main-details_star"></div></a>
+                            </div>
+                            <div class="main-details_second">
+                                <button class="main-details_btng">Посмотреть детали</button>
+                                <button class="main-details_btng main-details_btng-active">Выбрать</button>
+                            </div>
+                        </div>
+                        <div class="dropdown main-deside">
+                                <button type="button" id="where" class="dropdown-toggle main-control main-deside_btn text-left" data-toggle="dropdown">
+                                        Сравнение цен по месяцам
+                                </button>
+                                <div class="dropdown-menu sidebar-dropdown main-dropdown">
+                                    <h5>Выберите месяц</h5>
+                                    <div class="main-dropdown_body">
+                                        <a href="#"><div class="main-dropdown_body-item main-dropdown_chop">
+                                            <div class="main-dropdown_body-month">Сентябрь</div>
+                                            <div class="main-dropdown_body-year">2018</div>
+                                            <div class="main-dropdown_body-price">
+                                                Цена от
+                                                <div><strong>$928</strong></div>
+                                            </div>
+                                        </div></a>
+                                        <a href="#"><div class="main-dropdown_body-item">
+                                            <div class="main-dropdown_body-month">Октябрь</div>
+                                            <div class="main-dropdown_body-year">2018</div>
+                                            <div class="main-dropdown_body-price">
+                                                Цена от
+                                                <div><strong>$1028</strong></div>
+                                            </div>
+                                        </div></a>
+                                        <a href="#"><div class="main-dropdown_body-item">
+                                            <div class="main-dropdown_body-month">Ноябрь</div>
+                                            <div class="main-dropdown_body-year">2018</div>
+                                            <div class="main-dropdown_body-price">
+                                                Цена от
+                                                <div><strong>$1032</strong></div>
+                                            </div>
+                                        </div></a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="main-content">
+                            <div class="main-title">
+                                <div><h2 class="main-title_h">Средиземноморье</h2></div>
+                                <button class="main-title_button">
+                                    <img src="img/calendar-btn.png" alt=""> 
+                                    <span>Маршрут и расписание</span>
+                                </button>
+                            </div>
+    
+                            <div class="one-time main-slider">
+                                <div class="main-slider_item" style="background: url(img/slider.jpg) no-repeat">
+                                    <div class="main-slider_body">
+                                        <p class="main-slider_name">Departure Date</p>
+                                        <div class="main-slider_date">9.13.2018</div>
+                                        <p class="main-slider_name">Embarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Disembarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Ship</p>
+                                        <p class="main-slider_desc">MSC Orchestra</p>
+                                        <p class="main-slider_name">Itinerary</p>
+                                        <p class="main-slider_desc">Spain, Italy, France</p>
+                                        <p class="main-slider_name">Duration</p>
+                                        <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                    </div>
+                                </div>
+                                <div class="main-slider_item" style="background: url(img/slider-item1.jpg) no-repeat">
+                                    <div class="main-slider_body">
+                                        <p class="main-slider_name">Departure Date</p>
+                                        <div class="main-slider_date">9.13.2018</div>
+                                        <p class="main-slider_name">Embarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Disembarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Ship</p>
+                                        <p class="main-slider_desc">MSC Orchestra</p>
+                                        <p class="main-slider_name">Itinerary</p>
+                                        <p class="main-slider_desc">Spain, Italy, France</p>
+                                        <p class="main-slider_name">Duration</p>
+                                        <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                    </div>
+                                </div>
+                                <div class="main-slider_item" style="background: url(img/slider-item2.jpg) no-repeat">
+                                    <div class="main-slider_body">
+                                        <p class="main-slider_name">Departure Date</p>
+                                        <div class="main-slider_date">9.13.2018</div>
+                                        <p class="main-slider_name">Embarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Disembarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Ship</p>
+                                        <p class="main-slider_desc">MSC Orchestra</p>
+                                        <p class="main-slider_name">Itinerary</p>
+                                        <p class="main-slider_desc">Spain, Italy, France</p>
+                                        <p class="main-slider_name">Duration</p>
+                                        <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                    </div>
+                                </div>
+                                <div class="main-slider_item" style="background: url(img/slider-item3.jpg) no-repeat">
+                                    <div class="main-slider_body">
+                                        <p class="main-slider_name">Departure Date</p>
+                                        <div class="main-slider_date">9.13.2018</div>
+                                        <p class="main-slider_name">Embarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Disembarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                    </div>
+                                </div>
+                                <div class="main-slider_item" style="background: url(img/slider-item4.jpg) no-repeat">
+                                    <div class="main-slider_body">
+                                        <p class="main-slider_name">Departure Date</p>
+                                        <div class="main-slider_date">9.13.2018</div>
+                                        <p class="main-slider_name">Embarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Disembarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Ship</p>
+                                        <p class="main-slider_desc">MSC Orchestra</p>
+                                        <p class="main-slider_name">Itinerary</p>
+                                        <p class="main-slider_desc">Spain, Italy, France</p>
+                                        <p class="main-slider_name">Duration</p>
+                                        <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                        <p class="main-slider_name">Disembarcation Port</p>
+                                        <p class="main-slider_desc">Barselona, Spain</p>
+                                        <p class="main-slider_name">Ship</p>
+                                        <p class="main-slider_desc">MSC Orchestra</p>
+                                        <p class="main-slider_name">Itinerary</p>
+                                        <p class="main-slider_desc">Spain, Italy, France</p>
+                                        <p class="main-slider_name">Duration</p>
+                                        <p class="main-slider_desc">4 Days, 3 Nights</p>
+                                    </div>
+                                </div>
+                            </div><!-- Конец слайдера -->
+                            
+                            <div class="main-info">
+                                <div class="main-info_what">
+                                    <div class="main-what_item"><img src="img/main-info_date.jpg" alt="Выбранная дата"> Выбранная дата</div>
+                                    <div class="main-what_item"><img src="img/main-info_price.jpg" alt="Низкая цена"> Низкая цена</div>
+                                </div>
+                                <div class="text-center main-info_price">
+                                    <div class="main-info_price-dollar">$1,678.00</div>
+                                </div>
+                                <div class="main-info_current">
+                                    <div class="main-info_current-from">Цена<br> от</div>
+                                    <div class="main-current-body">
+                                        <div class="current-price">РАСПРОДАНО</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="main-table-bd">
+                                <table class="main-table_wrap table-responsive">
+                                    <thead class="main-table_head">
+                                        <th class="main-table_empty"></th>
+                                        <th>14 сентября</th>
+                                        <th>23 сентября</th>
+                                        <th>30 сентября</th>
+                                        <th>5 октября</th>
+                                        <th>14 октября</th>
+                                        <th>21 октября</th>
+                                    </thead>
+                                    <tbody class="main-table_body">
+                                        <tr>
+                                            <td class="main-table_paraplaw"><img src="img/paraplan.png" alt="Корабль"></td>
+                                            <td>Распродано</td>
+                                            <td>Распродано</td>
+                                            <td>Распродано</td>
+                                            <td>Распродано</td>
+                                            <td>Распродано</td>
+                                            <td>Распродано</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+    
+                            <div class="text-right main-details">
+                                <div class="main-details_second">
+                                    <button class="main-details_btng">Посмотреть детали</button>
+                                    <button class="main-details_btng main-details_btng-nonactive">Выбрать</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="text-center main-pagination">
+                        <ul class="pagination-list">
+                            <li class="pagination-item pagination-item_arrows">
+                                <a href="#" class="pagination-link pagination-arrows">
+                                    <img src="img/pagination-left_full.png" class="pagination-hide" alt="">
+                                </a>
+                            </li>
+                            <li class="pagination-item"><a href="#" class="pagination-link pagination-link_active">1</a></li>
+                            <li class="pagination-item"><a href="#" class="pagination-link">2</a></li>
+                            <li class="pagination-item"><a href="#" class="pagination-link">3</a></li>
+                            <li class="pagination-item"><a href="#" class="pagination-link">...</a></li>
+                            <li class="pagination-item"><a href="#" class="pagination-link">13</a></li>
+                            <li class="pagination-item pagination-item_arrows">
+                                <a href="#" class="pagination-link pagination-arrows">
+                                    <img src="img/pagination-right_full.png" class="pagination-hide" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4 sidebar">
+                        <div class="main-sidebar">
+                            <h4 class="main-sidebar_title">Изменить параметры поиска</h4>
+                            <div class="main-body">
+                                <label for="pass" class="sidebar-lbl">Пассажиры</label>
+                                <div class="dropdown">
+                                    <button type="button" id="pass" class="dropdown-toggle main-control text-left" data-toggle="dropdown">
+                                            1 взрослый, 1 ребенок
+                                    </button>
+                                    <div class="dropdown-menu sidebar-dropdown">
+                                        <div class="sidebar-passagers">
+                                            <div class="sidebar-passagers_item">
+                                                <div><strong>Взрослые (18+)*</strong></div>
+                                                <div class="sidebar-passagers_people">
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-minus">-</a></div>
+                                                    <div><strong class="sidebar-passagers_number">2</strong></div>
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-plus">+</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-passagers_item">
+                                                <div><strong>Подростки (12-17)*</strong></div>
+                                                <div class="sidebar-passagers_people">
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-minus">-</a></div>
+                                                    <div><strong class="sidebar-passagers_number">0</strong></div>
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-plus">+</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-passagers_item">
+                                                <div><strong>Дети (2-11)*</strong></div>
+                                                <div class="sidebar-passagers_people">
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-minus">-</a></div>
+                                                    <div><strong class="sidebar-passagers_number">0</strong></div>
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-plus">+</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-passagers_item">
+                                                <div><strong>Младенцы (0-1)*</strong></div>
+                                                <div class="sidebar-passagers_people">
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-minus">-</a></div>
+                                                    <div><strong class="sidebar-passagers_number">0</strong></div>
+                                                    <div><a href="#" class="sidebar-passagers_link passagers_link-plus">+</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="sidebar-passagers_small">*Возраст пассажиров на момент путешествия</div>
+                                            <div class="sidebar-passagers_ready"><a class="passagers-ready_link" href="#">Применить</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="accordion">
+                            
+                            <div class="accordeon-title"> 
+                                <a data-toggle="collapse" href="#collapseOne">Детали круиза</a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="main-body">
+                                    <label for="where" class="sidebar-lbl">Направление</label>
+                                    <div class="dropdown">
+                                        <button type="button" id="where" class="dropdown-toggle main-control main-control_large text-left" data-toggle="dropdown">
+                                                Средиземноморье
+                                        </button>
+                                        <div class="dropdown-menu sidebar-dropdown sidebar-dropdown_where">
+                                            <div class="sidebar-dropdown_destination">
+                                                <div><input type="checkbox"></div>
+                                                <div>Карибы, Куба и Антильские О-Ва</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div><input type="checkbox"></div>
+                                                <div>Средиземноморье</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div><input type="checkbox"></div>
+                                                <div>Северная Европа</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div><input type="checkbox"></div>
+                                                <div>Дубаи, Абу-Даби и Индия</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div><input type="checkbox"></div>
+                                                <div>MSG Grand Voyager</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div><input type="checkbox"></div>
+                                                <div>Северная америка</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div class="main-dates">
+                                    <div class="main-dates_item">
+                                        <label for="date1" class="sidebar-lbl">Дата от*</label>
+                                        <input type="number" id="date1" class="main-control" placeholder="05.09.2018">
+                                    </div>
+                                    <div class="main-dates_item">
+                                        <label for="date2" class="sidebar-lbl">Дата по</label>
+                                        <input type="number" id="date2" class="main-control" placeholder="05.09.2018">
+                                    </div>
+                                </div>
+                                <div class="main-dates_check">
+                                    <input type="checkbox" id="searcs-dates" class="main-dates_inp"> 
+                                    <span class="main-dates_extend">Extend search dates</span>
+                                </div>
+                                <div class="sidebar-nights">
+                                    <div class="dropdown">
+                                        <label for="from" class="sidebar-lbl">Порт отправления</label>
+                                        <button type="button" id="from" class="dropdown-toggle main-control text-left" data-toggle="dropdown">
+                                                Любой порт отправления
+                                        </button>
+                                        <div class="dropdown-menu sidebar-dropdown sidebar-dropdown_port">
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>Барселона, Испания</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>Чевитавекья, Италия</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>Генуя, Италия</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>Марсель, Франция</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>Сальвадор, Бразилия</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>Шанхай, Китай</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <label for="from" class="sidebar-lbl">Кол-во ночей</label>
+                                        <button type="button" id="from" class="dropdown-toggle main-control text-left" data-toggle="dropdown">
+                                                6-7 ночей
+                                        </button>
+                                        <div class="dropdown-menu sidebar-dropdown sidebar-dropdown_port">
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>2-3 ночи</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>4-5 ночей</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>6-7 ночей</div>
+                                            </div>
+                                            <div class="sidebar-dropdown_destination">
+                                                <div>8-9 ночей</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="accordeon-title">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">Круизный лайнер</a>
+                            </div>
+                            <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                            <div class="main-body">
+                                <div class="main-checkboxs">
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC ARMONIA</span></div>
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Opera</span></div>
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC ARMONIA</span></div>
+                                    <div class="main-checkboxs_item main-checkboxs_active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Orchestra</span></div>
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC ARMONIA</span></div>
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Opera</span></div>
+                                    <div class="main-checkboxs_item main-checkboxs_active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Magnifica</span></div>
+                                    <div class="main-checkboxs_item main-checkboxs_active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Orchestra</span></div>
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Meravilgia</span></div>
+                                    <div class="main-checkboxs_item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Seaview</span></div>
+                                    <div class="main-checkboxs_item main-checkboxs_active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Magnifica</span></div>
+                                    <div class="main-checkboxs_item main-checkboxs_active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Splendida</span></div>
+                                    <div class="main-checkboxs_item main-checkboxs_active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>MSC Musica</span></div>
+                                </div>
+                                <div class="dropdown">
+                                        <label for="category" class="sidebar-lbl">Категория каюты</label>
+                                    <button type="button" id="category" class="dropdown-toggle main-control text-left" data-toggle="dropdown">
+                                            Любая
+                                    </button>
+                                    <div class="dropdown-menu sidebar-dropdown sidebar-dropdown_port">
+                                        <div class="sidebar-dropdown_destination">
+                                            <div>Любая</div>
+                                        </div>
+                                        <div class="sidebar-dropdown_destination">
+                                            <div>Другая</div>
+                                        </div>
+                                        <div class="sidebar-dropdown_destination">
+                                            <div>Разная</div>
+                                        </div>
+                                        <div class="sidebar-dropdown_destination">
+                                            <div>Всякая</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="accordeon-title">
+                                <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">Акции и промо</a>
+                            </div>
+                            <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                            <div class="main-body">
+                                <div class="main-body_special"><strong>Special Deals & Promotions</strong></div>
+                                <div class="checkbox_list">
+                                    <div class="checkbox_list-item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>2 for 1 Carribean</span>
+                                    </div>
+                                    <div class="checkbox_list-item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>Countdown to MSC Seaside</span>
+                                    </div>
+                                    <div class="checkbox_list-item">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>2 for 1 Europe</span>
+                                    </div>
+                                    <div class="checkbox_list-item checkbox_list-active">
+                                        <input type="checkbox" class="main-checkboxs-inp"> <span>Kids Sail Free</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div><!-- Конец аккордеона -->
+                            <div class="main-filters">
+                                <div class="main-filters_status"><a href="#"><img src="img/status.jpg" alt=""></a></div>
+                                <div class="main-filters_drop">
+                                    <button class="btn main-control main-filters_btn" type="reset">
+                                        <img src="img/reset-button.png" alt=""> Сбросить фильтры
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </main>
+        <div class="subscribe">
+            <div class="content">
+                <form>
+                <div class="subscribe-body">
+                    <div class="subscribe-body_item">
+                        <div class="subscribe-body_title">Получайте спецпредложения на почту</div>
+                    </div>
+                    <div class="subscribe-body_item">
+                       <div><input type="email" class="subscribe-body_input" placeholder="Укажите ваш email"></div>
+                    </div>
+                    <div class="subscribe-body_item subscribe-check">
+                        <div class="subscribe-body_check"><input class="subscribe-check_in" type="checkbox">Подписка для туристов</div>
+                        <div class="subscribe-body_check"><input class="subscribe-check_in" type="checkbox">Подписка для турагенств</div>
+                    </div>
+                    <div class="subscribe-body_item">
+                        <button class="subscribe-button" type="submit">Подписаться</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div><!-- Конец subscribe -->
+        <footer>
+            <div class="content row">
+                <div class="col-3 footer-links">
+                    <ul class="footer-list">
+                        <li class="footer-list_item"><a href="#">Акции и скидки</a></li>
+                        <li class="footer-list_item"><a href="#">Круизные лайнеры</a></li>
+                        <li class="footer-list_item"><a href="#">Полезная информация</a></li>
+                        <li class="footer-list_item"><a href="#">MSC Voyager Club</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 footer-links">
+                    <ul class="footer-list">
+                        <li class="footer-list_item"><a href="#">О компании</a></li>
+                        <li class="footer-list_item"><a href="#">Контакты</a></li>
+                        <li class="footer-list_item"><a href="#">Новости</a></li>
+                        <li class="footer-list_item"><a href="#">Правила пользования</a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <ul class="footer-social">
+                        <li class="footer-social_link"><a href="#"><img src="img/footer-facebook.png" alt=""></a></li>
+                        <li class="footer-social_link"><a href="#"><img src="img/footer-youtube.png" alt=""></a></li>
+                        <li class="footer-social_link"><a href="#"><img src="img/footer-instargam.png" alt=""></a></li>
+                        <li class="footer-social_link"><a href="#"><img src="img/footer-telegram.png" alt=""></a></li>
+                        <li class="footer-social_link"><a href="#"><img src="img/footer-viber.png" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <div class="footer-course">
+                        <div><strong>Внутренний курс валют на 11.07.2018</strong></div>
+                        <div><strong>USD - <span>26.80</span>, Евро - <span>31.50</span></strong></div>
+                    </div>
+                    <div class="footer-adress">
+                        <div class="footer-adress_item">Украина, г.Киев</div>
+                        <div>04074, ул. Вышгородская, 4</div>
+                        <div>04071, ул. Нижний Вал, 19-21</div>
+                    </div>
+                    <div class="footer-mail">
+                        <a class="footer-mail_link" href="mailto:info@4gates.com.ua">info@4gates.com.ua</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div><!-- Конец container-fluid -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap4/js/bootstrap.min.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script src="js/sliders.js"></script>
+</body>
+</html>
