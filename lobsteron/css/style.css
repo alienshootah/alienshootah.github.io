@@ -58,6 +58,42 @@ header {
     padding-bottom: 50px;
 }
 
+/* Иконка навигации */
+.nav-back {
+    display: none;
+}
+.arrow-back {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+.menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 /* Меню */
 .navbar {
     text-transform: uppercase;
@@ -85,13 +121,13 @@ header {
 }
 .header-weeks {
     margin-top: -10px;
+    padding-right: 160px;
 }
 .header-weeks_big {
     font-size: 40px;
     text-transform: uppercase;
     color: #ffffff;
     font-family: 'GothamPro-Bold', Helvetica, sans-serif;
-    padding-right: 160px;
     line-height: 1.2;
 }
 .header-weeks_small {
@@ -100,7 +136,6 @@ header {
     font-size: 40px;
     color: #ffffff;
     font-family: 'StudioScriptCTT', 'Times New Roman', Times, serif;
-    padding-right: 160px;
 }
 
 /* Попап */
@@ -194,9 +229,9 @@ header {
     height: 700px;
     border-radius: 100%;
     background-color: #ffffff;
-    padding: 10px;
     margin-top: -60px;
     margin-bottom: 80px;
+    border: 10px solid #ffffff;
 }
 .hundred-list-second {
     padding: 0 160px 0 120px;
