@@ -18,6 +18,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'GothamPro-Black';
+    src: url(../fonts/GothamPro-Black.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'StudioScriptCTT';
     src: url(../fonts/StudioScriptCTT.ttf);
     font-weight: normal;
@@ -35,11 +41,13 @@ body {
     padding: 0 20px;
     margin: 0 auto;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'GothamPro-Black', Helvetica, sans-serif;
+}
 h2 {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 36px;
-    font-family: 'GothamPro-Bold', Helvetica, sans-serif;
 }
 
 /* Шапка */
@@ -93,7 +101,32 @@ header {
     padding-right: 160px;
 }
 
-/* Секции */
-.hundred {
-    margin-top: -150px;
+/* Попап */
+.info {
+    display: flex;
+    justify-content: flex-end;
+  
 }
+
+.info-text {
+    position: relative;
+    z-index: 500;
+    margin-top: 250px;
+    margin-right: -100px;
+    font-family: 'GothamPro-Black', Helvetica, sans-serif;
+    padding-left: 0;
+    padding-top: 70px;
+    text-align: center;
+    font-size: 32px;
+    background-image: url(../img/info-text.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 620px;
+    height: 280px;
+}
+.info-text div {
+    margin-left: -60px;
+}
+  
+/* Секции */
