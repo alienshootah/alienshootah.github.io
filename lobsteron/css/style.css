@@ -35,6 +35,7 @@
 body {
     background-color: orange;
     font-family: 'GothamPro', Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 .content {
     max-width: 1920px;
@@ -135,6 +136,43 @@ header {
     z-index: 400;
 }
   
+/* Декорации */
+.hundred-decor  {
+    opacity: 0.5;
+    background: radial-gradient(circle closest-side,
+        transparent 20%, transparent 50%, 
+        #daa015 50%,  #daa015 88%, 
+        transparent 88%, 
+        transparent 100% 
+    );
+    width: 1300px;
+    height: 1300px;
+    position: absolute;
+    z-index: -100;
+    top: -540px;
+    right: -620px;
+}
+.hundred-decor1 {
+   background-image: url(../img/hundred-decor1.png);
+   position: absolute;
+   right: -40px;
+   top: 800px;
+   width: 300px;
+   height: 300px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+.hundred-decor2 {
+   background-image: url(../img/hundred-decor2.png);
+   position: absolute;
+   right: -30px;
+   top: 1300px;
+   width: 250px;
+   height: 250px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
 /* Секции */
 .hundred .content {
     position: relative;
@@ -165,7 +203,7 @@ header {
   .button {
       margin-top: 60px;
       margin-bottom: 60px;
-      margin-left: -80px;
+      margin-left: -160px;
   }
   .button-link {
     font-size: 24px;
