@@ -29,9 +29,8 @@
         top: 200px;
         right: 50px;
     }
-    .hundred-body {
-        margin-top: 0;
-    }
+    .hundred-body,
+    .recipes,
     .eightball {
         margin-top: 0;
     }
@@ -41,6 +40,36 @@
         top: -30px;
         z-index: -10;
     }
+    .recipes-body .col-5 {
+        -ms-flex: 0 0 50%;
+		flex: 0 0 50%; 
+        max-width: 50%; 
+    }
+    .recipes-body .col-7 {
+        -ms-flex: 0 0 50%;
+		flex: 0 0 50%; 
+        max-width: 50%; 
+    }
+    .recipes-body .col-4 {
+        -ms-flex: 0 0 40%;
+		flex: 0 0 40%; 
+        max-width: 40%; 
+    }
+    .recipes-body .col-8 {
+        -ms-flex: 0 0 60%;
+		flex: 0 0 60%; 
+        max-width: 60%; 
+    }
+    .recipes-body {
+        width: 100%;
+    }
+    .recipes-body .col-4,
+    .recipes-body .col-5 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+
 }
 @media (max-width: 1420px) {
     .hundred-decor, 
@@ -81,8 +110,18 @@
     .catalog-item {
         width: 47%;
     }
+    .recipes-img-up {order: -1;}
+    .recipes-body .col-5,
+    .recipes-body .col-7,
+    .recipes-body .col-4,
+    .recipes-body .col-8 {
+        -ms-flex: 0 0 100%;
+		flex: 0 0 100%; 
+        max-width: 100%;
+    }
 }
 @media (max-width: 1199px) {
+    .info {display: none;}
     .nav-back {
         display: block;
     }
@@ -104,9 +143,6 @@
 		flex: 0 0 100%;
         max-width: 100%;
         padding: 0 20px;
-    }
-    .hundred-body .col-5 {
-        margin-top: 400px;
     }
     .info {
         top: -60px;
@@ -180,6 +216,9 @@
     }
 }
 @media (max-width: 768px) {
+    section {
+        font-size: 18px;
+    }
     .ball {
         display: block;
         position: relative;
@@ -216,6 +255,12 @@
     .hello-button {
         top: 20px;
     }
+    .recipes-image-large {
+        width: 420px;
+        height: 420px;
+        margin-bottom: 50px;
+    }
+ 
 }
 @media (max-width: 660px) {
     .content {
@@ -269,6 +314,12 @@
     .eightball-left {
         display: none;
     }
+    .recipes-image,
+    .recipes-image-large {
+        width: 340px;
+        height: 340px;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 430px) {
@@ -291,6 +342,12 @@
     }
     .hello-text {
         padding: 20px;
+    }
+    .recipes-image,
+    .recipes-image-large {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 20px;
     }
 }
 
