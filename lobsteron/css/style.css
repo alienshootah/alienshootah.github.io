@@ -38,6 +38,9 @@ body {
     font-family: 'GothamPro', Helvetica, sans-serif;
     overflow-x: hidden;
 }
+.page1 {
+    background-color: #e9b700;
+}
 .container-fluid {
     width: 100%;
     padding-right: 0;
@@ -61,6 +64,14 @@ h2 {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 36px;
+}
+.hidden {
+    visibility: none;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
 }
 
 /* Шапка */
@@ -199,6 +210,21 @@ header {
     top: -340px;
     right: -220px;
 }
+.hundred-decorr  {
+    opacity: 0.8;
+    background: radial-gradient(circle closest-side,
+        transparent 20%, transparent 50%, 
+        #e0a30f 50%,  #e0a30f 88%, 
+        transparent 88%, 
+        transparent 100% 
+    );
+    width: 1300px;
+    height: 1300px;
+    position: absolute;
+    z-index: -100;
+    top: -340px;
+    right: -340px;
+}
 .hundred-decor1 {
    background-image: url(../img/hundred-decor1.png);
    position: absolute;
@@ -219,8 +245,151 @@ header {
    background-repeat: no-repeat;
    background-position: center;
 }
+.catalog-decor1 {
+    background-image: url(../img/in-smile2.png);
+    position: absolute;
+    right: -20px;
+    top: 400px;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .catalog-decor2 {
+    background-image: url(../img/in-smile3.png);
+    position: absolute;
+    right: 50px;
+    top: 1000px;
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+ .catalog-decor {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    position: absolute;
+    right: 250px;
+}
+.catalog-decor_text {
+    background-image: url(../img/in-smile4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 410px;
+    height: 330px;
+    padding-top: 0;
+    font-weight: bold;
+    padding-top: 3px;
+    margin-top: -250px;
+    margin-right: -60px;
+}
+.catalog-decor_close {
+    margin-right: 10px;
+    margin-top: 0;
+    text-align: right;
+}
+.decor-link {
+    font-weight: normal;
+    font-size: 48px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 0.833;
+    text-align: center;
+    background-image: linear-gradient(180deg, #f3e9a2, #d28a21);
+    padding: 6px 15px;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 12px 1px #bd7f03;
+    transition: all 0.5s;
+}
+.decor-link:hover,
+.decor-link:focus {
+    color: #ffffff;
+    text-decoration: none;
+    box-shadow: inset 0px 0px 12px 4px #896924;
+}
 
 /* Секции */
+.catalog {
+    padding-bottom: 40px;
+}
+.catalog .content {
+    position: relative;
+}
+.catalog-body {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 24px;
+}
+.catalog-item {
+    width: 33%;
+    margin: 80px 10px;
+    position: relative;
+}
+.catalog-title {
+    letter-spacing: 2px;
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    left: -10px;
+}
+.catalog-title1 {left: -80px;}
+.catalog-title2 {left: -70px;}
+.catalog-title3 {left: -40px;}
+.catalog-title5 {left: -80px;}
+.catalog-title7 {left: -30px;}
+
+.catalog-title span {
+    height: 300px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -35px;
+    transform-origin: bottom center;
+}
+
+.catalog-image {
+    opacity: 0.36;
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    border: 10px solid #ffffff;
+    background-color: #d7ba45;
+    transition: all 0.5s;
+}
+.catalog-item:hover .catalog-image,
+.catalog-item:focus .catalog-image {
+    opacity: 1;
+}
+.catalog-button {
+    margin-top: -50px;
+    position: relative;
+    z-index: 400;
+}
+.catalog-link {
+    font-size: 24px;
+    font-family: 'GothamPro-Medium', Helvetica, sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 0.833;
+    text-align: center;
+    background-image: linear-gradient(180deg, #f3e9a2, #d28a21);
+    padding: 20px 60px;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 12px 1px #bd7f03;
+    transition: all 0.5s;
+  }
+  .catalog-link:hover,
+  .catalog-link:focus {
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: inset 0px 0px 12px 4px #896924;
+  }
+
 .hundred .content {
     position: relative;
 }
@@ -271,6 +440,6 @@ header {
       text-decoration: none;
       box-shadow: inset 0px 0px 12px 4px #896924;
   }
-  
+
   
   
