@@ -886,6 +886,101 @@ section {
     z-index: 10;
     top: 50px;
 }
+
+/* тёплые заставки */
+.wallpapers-decor {
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    z-index: -10;
+}
+.wallpapers-body {
+    display: flex;
+    margin-top: -140px;
+}
+.wallpapers-image {
+    position: relative;
+    left: -90px;
+    z-index: -1;
+}
+.wallpapers-text {
+    background-image: url(../img/wallpapers-text.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1460px;
+    height: 160px;
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 25px;
+}
+
+.wallpapers-items{
+    margin: -20px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wallpapers-item {
+    width: 490px;
+    margin: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+.wallpapers-wrap {
+    position: relative;
+    background-color: orange;
+    border-radius: 60px;
+    border: 8px solid #ffffff;
+}
+.wallpapers-item_title {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 40px;
+    text-align: left;
+}
+.wallpapers-item_image {
+    border-radius: 50px;
+    width: 100%;
+    opacity: 1;
+    margin: -1px 0;
+    transition: all 0.4s;
+}
+.wallpapers-item:hover .wallpapers-item_image,
+.wallpapers-item:focus .wallpapers-item_image {
+    opacity: 0.4;
+}
+.wallpapers-item:hover .wallpapers-icons,
+.wallpapers-item:focus .wallpapers-icons {
+    visibility: visible;
+}
+.wallpapers-icons {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    text-align: center;
+    z-index: 100px;
+}
+.wallpapers-icons img {
+    width: 80px;
+    height: 80px;
+}
+.wallpapers-icons a {
+    padding: 0 35px;
+    opacity: 0.7;
+}
+.wallpapers-icons a:hover,
+.wallpapers-icons a:focus {
+    opacity: 1;
+}
+.wallpapers-buttons {
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+}
+
 /* Модальные окна */
 .hello-modal {
     background-color: rgba(230, 157, 39, 0.9); 
