@@ -32,21 +32,24 @@
 
 
 /* Основные стили */
-html{overflow-x: hidden;}
+html{
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+}
 body {
     background-color: orange;
     font-family: 'GothamPro', Helvetica, sans-serif;
-    overflow-x: hidden;
+
 }
 .page1 {
     background-color: #e9b700;
 }
+.page2 {background-color: #b62f28;}
 .container-fluid {
-    width: 100%;
     padding-right: 0;
     padding-left: 0;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
 }
 .row {
     padding: 0;
@@ -56,6 +59,7 @@ body {
     max-width: 1920px;
     padding: 0 20px;
     margin: 0 auto;
+    position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'GothamPro-Black', Helvetica, sans-serif;
@@ -126,6 +130,7 @@ header {
     justify-content: space-between;
     align-items: flex-end;
     margin: 0 -15px;
+    list-style: none!important;
 }
 .navbar-item {
     border-bottom: 3px solid transparent;
@@ -226,6 +231,14 @@ header {
     z-index: -100;
     top: -340px;
     right: -340px;
+}
+.hundred-decorr-red {
+    background: radial-gradient(circle closest-side,
+    transparent 20%, transparent 50%, 
+    #ab271d 50%,  #ab271d 88%, 
+    transparent 88%, 
+    transparent 100% 
+);
 }
 .hundred-decor1 {
    background-image: url(../img/hundred-decor1.png);
@@ -551,6 +564,185 @@ section {
     width: 570px;
     height: 570px;
     margin-bottom: 50px;
+}
+
+/* Таймер */
+.timer-decor {
+    position: absolute;
+    right: 30px;
+    top: 220px;
+    z-index: -10;
+}
+.timer-body {
+    display: flex;
+    width: 600px;
+    margin-top: -150px;
+}
+.timer-text {
+    background-image: url(../img/timer-text.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-size: 23px;
+    width: 620px;
+    height: 810px;
+    color: #444444;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.timer-title {
+    font-size: 32px;
+}
+.timer-descr {
+    margin: 10px 0;
+}
+.timer-list {
+    padding: 0;
+    margin: 0;
+}
+.timer-image {
+    position: relative;
+    top: -150px;
+    left: 120px;
+    z-index: -10;
+}
+
+/* Таймер: Форма */
+.timer-form label {
+    font-size: 32px;
+    font-family: 'GothamPro-Medium', Helvetica, sans-serif;
+}
+.timer-field {
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 100%;
+    border: 4px solid #f39200;
+    margin-bottom: 10px;
+}
+.timer-field-big {
+    padding: 20px 15px;
+}
+.timer-field-small {
+    width: auto;
+    padding: 5px 10px;
+    max-width: 200px;
+}
+
+/* Таймер: Форма селект */
+.timer-control {
+    background-image: none;
+    background-color: #ffffff;
+}
+.timer-dropdown {
+    width: 100%;
+    margin-top: -65px;
+    top: -50px;
+    font-size: 24px;
+    border: 4px solid #f39200;
+    border-radius: 10px;
+    color: #4c4948;
+}
+.timer-dropdown_item {
+    padding: 5px 20px;
+}
+.timer-dropdown_item:hover,
+.timer-dropdown_item:focus {
+    background-color: #e7cb87;
+    cursor: pointer;
+}
+
+/* Таймер: Радиобатоны */
+.radio-wrap {
+    display: flex;
+    align-items: flex-start;
+}
+
+.radiolabe {
+    display: block;
+    position: relative;
+    padding-right: 40px;
+    margin-right: 60px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radiolabe input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 8px;
+    right: -35px;
+    height: 30px;
+    width: 30px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 2px solid #f39200;
+}
+
+/* On mouse-over, add a grey background color */
+.radiolabe:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.radiolabe input:checked ~ .checkmark {
+    background-color: #ffffff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radiolabe input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radiolabe .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f39200;
+}
+.radiolabe {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.timer-radio {
+    margin-left: 20px;
+    margin-right: 60px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Таймер: Форма футер */
+.form-footer {
+    display: flex;
+    align-items: center;
+}
+.form-footer_item {
+    margin-right: 40px;
+}
+.form-footer-button {
+    margin-top: 20px;
 }
 
 /* Модальные окна */
