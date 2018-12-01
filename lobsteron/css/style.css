@@ -1027,6 +1027,23 @@ section {
     align-items: flex-start;
   }
 
+/* Теплые фотографии */
+.warm-body {
+    justify-content: flex-end;
+    margin-top: -280px;
+}
+.epost-close {
+    position: relative;
+    top: -40px;
+    right: -60px;
+}
+.warm-items {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.warm-link {
+    padding: 20px 30px;
+}
 
 /* Модальные окна */
 .hello-modal {
@@ -1144,4 +1161,87 @@ section {
     text-decoration: none;
     color: #444444;
     border-bottom: 1px solid transparent;
+}
+
+/* в модальном окне слайдер */
+.warm-modal_text {
+    min-width: 1200px;
+    font-size: 23px;
+    background-image: none;
+    width: 100%;
+    height: auto;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    background-color: #ffffff;
+    border: 8px solid #f39200;
+    border-radius: 50px;
+}
+.warm-prev,
+.warm-next {
+    position: absolute;
+    cursor: pointer;
+    top: 40%;
+    opacity: 0.7;
+}
+.warm-prev {
+    left: -150px;
+}
+.warm-next {
+    right: -150px;
+}
+.warm-prev:hover,
+.warm-prev:focus,
+.warm-next:hover,
+.warm-next:focus {
+    opacity: 1;
+}
+.warm-button {
+    margin: 20px 0 30px 0;
+}
+.warm-modal-info {
+    color: #444444;
+    font-size: 18px;
+}
+.warm-modal-info:hover,
+.warm-modal-info:focus {
+    color: #444444;
+    text-decoration: underline;
+}
+.warm-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.warm-buttons_item {
+    margin: 20px;
+}
+#gallery {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#gallery .photos {
+    position: relative;
+    height: 500px;
+}
+
+#gallery .photos img {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 40px;
+    border: 8px solid #f39200;
+    height: 450px;
+}
+
+#gallery .photos img.showed {
+    opacity: 1;
+}
+
+.buttons {
+    text-align: center;
 }
