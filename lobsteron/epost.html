@@ -34,7 +34,7 @@
                             </div>
                         </button>
                         <ul class="collapse navbar-collapse navbar nav" id="collapsibleNavbar">
-                            <li class="navbar-item active"><a href="index.html" class="navbar-link">Главная</a></li>
+                            <li class="navbar-item"><a href="index.html" class="navbar-link">Главная</a></li>
                             <li class="navbar-item"><a href="warm-timer.html" class="navbar-link">тЁплый таймер</a></li>
                             <li class="navbar-item"><a href="recipes-of-warm.html" class="navbar-link">рецепты теплоты</a></li>
                             <li class="navbar-item"><a href="warm-photos.html" class="navbar-link">тёплые фотографии</a></li>
@@ -42,7 +42,7 @@
                             <li class="navbar-item"><a href="desktop_wallpapers.html" class="navbar-link">тёплые заставки</a></li>
                             <li class="navbar-item"><a href="100.html" class="navbar-link">100 способов сказать «спасибо»</a></li>
                             <li class="navbar-item"><a href="video-thanks.html" class="navbar-link">видео-благодарности</a></li>
-                            <li class="navbar-item"><a href="epost.html" class="navbar-link">Электронная открытка</a></li>
+                            <li class="navbar-item active"><a href="epost.html" class="navbar-link">Электронная открытка</a></li>
                             <li class="navbar-item"><a href="online-ball.html" class="navbar-link">online-предсказания</a></li>
                         </ul>
                     </nav>
@@ -54,32 +54,11 @@
                </div>
            </div>
        </header>
-       <style>
-           .epost-body {
-               display: flex;
-           }
-           .epost-image {
-                position: relative;
-                right: 120px;
-                top: 180px;
-                z-index: -100;
-           }
-           .epost-text {
-                font-size: 23px;
-                background-image: url(../img/epost-text.png);
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                width: 1400px;
-                height: 470px;
-                padding-top: 40px;
-                padding-left: 40px;
-                padding-right: 340px;
-           }
-       </style>
-       
-       <section class="epos">
+       <section class="epost">
         <div class="content">
+            <div class="epost-decor">
+                <img src="img/epost-decor.png" alt="">
+            </div>
                 <h2 class="hidden">Электронная почта Takeda</h2>
                 <div class="epost-body">
                     <div class="epost-text">
@@ -97,23 +76,23 @@
                         <img src="img/epost-image.png" alt="Электронная почта Takeda">
                     </div>
                 </div>
-                <div class="epos-items">
-                    <div class="epos-item">
-                        <img src="img/epost-item1.jpg" alt="" class="epost-image">
+                <div class="epost-items">
+                    <div class="epost-item">
+                        <img src="img/epost-item1.jpg" alt="" class="epost-img">
                         <div class="epost-button">
-                            <a href="#" class="catalog-link">Выбрать</a>
+                            <a href="#" class="catalog-link" data-toggle="modal" data-target="#thoose">Выбрать</a>
                         </div>
                     </div>
-                    <div class="epos-item">
-                        <img src="img/epost-item2.jpg" alt="" class="epost-image">
+                    <div class="epost-item">
+                        <img src="img/epost-item2.jpg" alt="" class="epost-img">
                         <div class="epost-button">
-                            <a href="#" class="catalog-link">Выбрать</a>
+                            <a href="#" class="catalog-link" data-toggle="modal" data-target="#thoose">Выбрать</a>
                         </div>
                     </div>
-                    <div class="epos-item">
-                        <img src="img/epost-item3.jpg" alt="" class="epost-image">
+                    <div class="epost-item">
+                        <img src="img/epost-item3.jpg" alt="" class="epost-img">
                         <div class="epost-button">
-                            <a href="#" class="catalog-link">Выбрать</a>
+                            <a href="#" class="catalog-link" data-toggle="modal" data-target="#thoose">Выбрать</a>
                         </div>
                     </div>
                 </div>
@@ -121,8 +100,35 @@
        </section>
     </div>
 
-    <!-- Раздел закрыт -->
-    <div id="nothingelsematters" class="modal fade hello-modal" role="dialog">
+    <!-- Выбор -->
+    <div id="thoose" class="modal fade hello-modal " role="dialog">
+            <div class="modal-dialog"> 
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="hello epost-hello">
+                            <div class="epost-modal_image">
+                                <img src="img/hello-image.png" alt="">
+                            </div>
+                            <div class="hello-wrap epost-modal_wrap">
+                                <div class="hello-text epost-modal_text">
+                                    <label for="text-left writetext">Введите текст</label>
+                                    <textarea id="writetext" cols="20" rows="4" class="timer-field"></textarea>
+                                    <label for="mailofman">Введите e-mail Коллеги</label>
+                                    <input type="mail" class="timer-field" id="mailofman">
+                                </div>
+                                <div class="hello-button epost-modal_button">
+                                    <a href="#" class="catalog-link epost-modal-link"  data-dismiss="modal" data-toggle="modal" data-target="#tsnku">Отправить открытку</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Спасибо! -->
+    <div id="tsnku" class="modal fade hello-modal" role="dialog">
         <div class="modal-dialog"> 
             <!-- Modal content-->
             <div class="modal-content">
@@ -133,10 +139,12 @@
                         </div>
                         <div class="hello-wrap">
                             <div class="hello-text">
-                                <p>Раздел будет доступен позднее</p>
+                                <p><b>Спасибо!<br>
+                                Ваша открытка отправлена<br>
+                                Коллеге на почту!</b></p>
                             </div>
                             <div class="hello-button">
-                                <a href="#" class="catalog-link"  data-dismiss="modal">Назад</a>
+                                <a href="#" class="catalog-link"  data-dismiss="modal">Хорошо</a>
                             </div>
                         </div>
                     </div>
