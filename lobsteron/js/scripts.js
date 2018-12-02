@@ -61,3 +61,7 @@ $( document ).ready(function() {
  
  images[i].className = 'showed';
  }
+
+ function close_window() {
+      close();
+  }
