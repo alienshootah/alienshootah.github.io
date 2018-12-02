@@ -1,3 +1,18 @@
+$(".video-container").each(function () {
+    var video = $(this).find("video");
+    var plainVideo = video.get(0);/*DOM video object, unwrapped from jQuery*/
+    var playBtn = $(this).find("div");
+
+    playBtn.click(function () {
+        video.get(0).addEventListener('ended',myHandler,false);
+        plainVideo.play();
+        playBtn.css("visibility", "hidden");
+
+        function myHandler(e) {
+            playBtn.css("visibility", "visible");
+        }
+    });
+});
 
 // Скрипт крестика в меню (был)
 function myFunction(x) {
@@ -65,3 +80,4 @@ $( document ).ready(function() {
  function close_window() {
       close();
   }
+
