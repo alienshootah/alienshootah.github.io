@@ -15,7 +15,7 @@ $(".video-container").each(function () {
 });
 
 // Скрипт крестика в меню (был)
-function myFunction(x) {
+function myFun(x) {
     x.classList.toggle("change");
 }
 
