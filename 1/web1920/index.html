@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Магазин</title>
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/multirange.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -12,12 +15,17 @@
             <div class="content">
                 <div class="row header-body">
                     <div class="col-3 header-logo">
-                        <div><a href="#"><img src="img/logo.png" alt=""></a></div>
-                        <div><i></i> <a href="#">Калининград</a></div>
+                        <div><a href="#"><img src="img/logo.png" class="logo-image" alt=""></a></div>
+                        <div class="drop-body">
+                            <div><img src="img/city-icon.png" class="city-icon" alt=""></div>  
+                            <div><a href="#" class="header-logo_link">Калининград</a></div> 
+                        </div>
                     </div>
-                    <div class="col-3 header-search">
+                    <div class="col-9 header-search">
                         <input type="text" class="header-field" placeholder="Поиск">
-                        <div class="search-link"><a href="#" class=""><i class="search-icon"></i></a></div> 
+                        <div class="search-link"><a href="#" class="">
+                            <img src="img/search-icon.png" class="search-icon"></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,21 +33,33 @@
         <section class="titles">
             <div class="content">
                 <div class="row titles-body">
-                    <div class="col-6 titles-pagination">
+                    <div class="col-8 titles-pagination">
                         <ul class="read-list">
                             <li class="bread-item"><a href="#" class="bred-link">Главная</a></li>
                             <li class="bread-item"><a href="#" class="bred-link">Каталог</a></li>
-                            <li class="bread-item"><a href="#" class="bred-link">Женская одежда и аксессуарыы</a></li>
+                            <li class="bread-item"><a href="#" class="bred-link active">Женская одежда и аксессуары</a></li>
                             <li class="bread-item"><a href="#" class="bred-link">Топы</a></li>
                             <li class="bread-item"><a href="#" class="bred-link">Блузки и рубашки</a></li>
                         </ul>
                         <h2 class="titles-what">Товары для красоты и здоровья</h2>
                     </div>
-                    <div class="col-6 titles-checks">
+                    <div class="col-4 titles-checks">
                         <div class="checks-body">
-                            <div class="checks-price">Цена</div>
-                            <div class="checks-input">
-                                <input type="text"> Маркеры
+                            <div class="chesks-info"><label for="productivity" class="checks-price">Цена:</label></div>
+                            <div class="chesks-special">
+                                <form>
+                                    <input type="range" multiple value="10,80" id="productivity" class="range-fields">
+                                </form>
+                                <div class="catalog-result">
+                                    <div class="catalog-result_item">
+                                            <label for="num" class="num-lab">от</label>
+                                        <input type="number" id="num" class="results-field">
+                                    </div>
+                                    <div class="catalog-result_item">
+                                        <label for="num1" class="num-lab">от</label>
+                                        <input type="number" id="num1" class="results-field">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -50,38 +70,43 @@
             <div class="content">
                 <div class="main-body">
                     <div class="main-item main-navigation">
-                        <div class="main-nav_title"><i></i> Электроника и вторая строка</div>
+                        <div class="main-nav_title">
+                            <a href="#" class="main-title_link">
+                                <img src="img/arrow.png" class="main-title_arrow" alt="">
+                                Электроника и вторая строка
+                            </a>
+                        </div>
                         <ul class="main-nav">
-                            <li class="main-item"><a href="#" class="main-link">Лепка</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Вязание</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Рисование и гравюра</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Мыловарение</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Шытье и вышивание</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Декупаж</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Скрапбукинг</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Аппликация и декорирование</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Валяние</a></li>
-                            <li class="main-item"><a href="#" class="main-link">Цветная бумага и картон</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Лепка</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Вязание</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Рисование и гравюра</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Мыловарение</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Шытье и вышивание</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Декупаж</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Скрапбукинг</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Аппликация и декорирование</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Валяние</a></li>
+                            <li class="main-nav_item"><a href="#" class="main-link">Цветная бумага и картон</a></li>
                         </ul>
                     </div>
                     <div class="main-item main-item-big">
                         <div class="item-top">Топ продаж</div>
                         <div class="item-body">
                             <div class="item-left">
-                                <img src="img/item-image1.jpg" alt="" class="item-image">
+                                <img src="img/sony.jpg" alt="" class="item-image">
                                 <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
                                 <div class="item-price">
                                     <div class="item-stars">
-                                        <img src="img/stars.jpg" alt="">
+                                        <img src="img/stars.jpg" class="stars" alt="">
                                         <a href="#" class="stars-link">303</a>
                                     </div>
                                     <div class="item-value">312 р.</div>
                                 </div>
                             </div>
                             <div class="item-right">
-                                <div class="right-all">Всего 1029 отзывов <img src="img/stars.jpg" alt=""></div>
+                                <div class="right-all">Всего 1029 отзывов <img src="img/stars.jpg" class="stars" alt=""></div>
                                 <div class="right-where">
-                                    <i class="where-icon"></i> Доступно в <a href="#" class="where-link">Севастополь</a>
+                                    <img src="img/where-icon.png" class="where-icon"> Доступно в <a href="#" class="where-link">Севастополь</a>
                                 </div>
                                 <p>По цене и качеству это отличная сделка, доволен все круто...</p>
                                 <p>Камерой можно пользоваться и без телефона, для этого на самой камере можно 
@@ -90,10 +115,6 @@
                                     разработаны несколько версий модифицированного приложения Gear 360 Manager,
                                     одну из версий можно установить на любую модель телефона с Android 5.0 скачать её можно...
                                 </p>
-                                <p></p>
-                                <p></p>
-                                <p></p>
-                                <p></p>
                                 <button class="where-button">Подробнее</button>
                             </div>
                         </div>
@@ -101,57 +122,41 @@
                     <div class="main-item">
                         <div class="item-body">
                             <div class="item-left">
-                                <img src="img/item-image1.jpg" alt="" class="item-image">
+                                <img src="img/sony.jpg" alt="" class="item-image">
                                 <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
                                 <div class="item-price">
                                     <div class="item-stars">
-                                        <img src="img/stars.jpg" alt="">
+                                        <img src="img/stars.jpg" class="stars" alt="">
                                         <a href="#" class="stars-link">303</a>
                                     </div>
                                     <div class="item-value">312 р.</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="main-item">
-                        <div class="item-top-new">Новинка</div>
-                        <div class="item-body">
-                            <div class="item-left">
-                                <img src="img/item-image1.jpg" alt="" class="item-image">
-                                <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
-                                <div class="item-price">
-                                    <div class="item-stars">
-                                        <img src="img/stars.jpg" alt="">
-                                        <a href="#" class="stars-link">303</a>
-                                    </div>
-                                    <div class="item-value">312 р.</div>
+                            <div class="item-right">
+                                <div class="right-all">Всего 1029 отзывов <img src="img/stars.jpg" class="stars" alt=""></div>
+                                <div class="right-where">
+                                    <img src="img/where-icon.png" class="where-icon"> Доступно в <a href="#" class="where-link">Севастополь</a>
                                 </div>
+                                <p>По цене и качеству это отличная сделка, доволен все круто...</p>
+                                <p>Камерой можно пользоваться и без телефона, для этого на самой камере можно 
+                                    включить таймер самоспуска затвора на 2, 5 или 10 секунд, чтобы Ваши руки 
+                                    не закрывали пол сферы при нажатии кнопки затвора. Фанатами этой камеры были 
+                                    разработаны несколько версий модифицированного приложения Gear 360 Manager,
+                                    одну из версий можно установить на любую модель телефона с Android 5.0 скачать её можно...
+                                </p>
+                                <button class="where-button">Подробнее</button>
                             </div>
                         </div>
                     </div>
                     <div class="main-item">
+                        <div class="item-top item-top-new">Новинка</div>
                         <div class="item-body">
                             <div class="item-left">
-                                <img src="img/item-image1.jpg" alt="" class="item-image">
+                                <img src="img/sony.jpg" alt="" class="item-image">
                                 <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
                                 <div class="item-price">
                                     <div class="item-stars">
-                                        <img src="img/stars.jpg" alt="">
-                                        <a href="#" class="stars-link">303</a>
-                                    </div>
-                                    <div class="item-value">312 р.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="main-item">
-                        <div class="item-body">
-                            <div class="item-left">
-                                <img src="img/item-image1.jpg" alt="" class="item-image">
-                                <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
-                                <div class="item-price">
-                                    <div class="item-stars">
-                                        <img src="img/stars.jpg" alt="">
+                                        <img src="img/stars.jpg" class="stars" alt="">
                                         <a href="#" class="stars-link">303</a>
                                     </div>
                                     <div class="item-value">312 р.</div>
@@ -162,11 +167,41 @@
                     <div class="main-item">
                         <div class="item-body">
                             <div class="item-left">
-                                <img src="img/item-image1.jpg" alt="" class="item-image">
+                                <img src="img/sony.jpg" alt="" class="item-image">
                                 <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
                                 <div class="item-price">
                                     <div class="item-stars">
-                                        <img src="img/stars.jpg" alt="">
+                                        <img src="img/stars.jpg" class="stars" alt="">
+                                        <a href="#" class="stars-link">303</a>
+                                    </div>
+                                    <div class="item-value">312 р.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-item">
+                        <div class="item-body">
+                            <div class="item-left">
+                                <img src="img/sony.jpg" alt="" class="item-image">
+                                <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
+                                <div class="item-price">
+                                    <div class="item-stars">
+                                        <img src="img/stars.jpg" class="stars" alt="">
+                                        <a href="#" class="stars-link">303</a>
+                                    </div>
+                                    <div class="item-value">312 р.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-item">
+                        <div class="item-body">
+                            <div class="item-left">
+                                <img src="img/sony.jpg" alt="" class="item-image">
+                                <h3 class="item-title"><a href="#" class="item-link">Экшн-камера Samsung Gear 360 SM-C200</a></h3>
+                                <div class="item-price">
+                                    <div class="item-stars">
+                                        <img src="img/stars.jpg" class="stars" alt="">
                                         <a href="#" class="stars-link">303</a>
                                     </div>
                                     <div class="item-value">312 р.</div>
@@ -180,33 +215,46 @@
         <footer>
             <div class="content">
                 <div class="row footer-body">
-                    <div class="col-4 footer-copy">
+                    <div class="col-3 footer-copy">
                         <div>2018 &copy; diamail.ru</div>
                         <div class="footer-yaks">Источник данных: <a href="#">Яндекс.Маркет</a></div>
                     </div>
                     <div class="col-4 text-center">
-                        <div class="footer-mob">
-                            <i class="mob-icon"></i> <a href="#" class="mob-link">Мобльная версия</a>
-                        </div>
+                        <a href="#" class="footer-mob">
+                            <img src="img/mob-icon.png" class="mob-icon"> 
+                            Мобильная версия
+                        </a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-5 pagin-scroll">
                         <ul class="pagin">
-                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon"><i></i></a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon"><i></i></a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link">463</a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link">464</a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link">465</a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link">466</a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon">
+                                <img src="img/back-all.jpg" alt="">
+                            </a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon">
+                                <img src="img/back.jpg" alt="">
+                            </a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link">2</a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link">1</a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link">4653</a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link active">466</a></li>
                             <li class="pagin-item"><a href="#" class="pagin-link">467</a></li>
                             <li class="pagin-item"><a href="#" class="pagin-link">468</a></li>
                             <li class="pagin-item"><a href="#" class="pagin-link">469</a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon"><i></i></a></li>
-                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon"><i></i></a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon">
+                                <img src="img/next.jpg" alt="">
+                            </a></li>
+                            <li class="pagin-item"><a href="#" class="pagin-link pagin-link-icon">
+                                <img src="img/next-all.jpg" alt="">
+                            </a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/multirange.js"></script>
+	<script src="bootstrap4/js/bootstrap.min.js"></script>
 </body>
 </html> 
