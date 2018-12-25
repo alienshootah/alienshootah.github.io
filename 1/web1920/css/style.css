@@ -23,6 +23,13 @@ h2 {
 }
 
 /* Шапка */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
 .header-body {
     padding: 20px 0;
     align-items: center;
@@ -66,8 +73,8 @@ h2 {
     border-radius: 30px;
     font-size: 18px;
     line-height: 1;
-}
-.header-field {
+    background-color: #f5f5f5;
+    outline: none;
     position: relative;
 }
 .search-link {
@@ -80,7 +87,128 @@ h2 {
     height: 30px;
 }
 
+/* Выпадающие списки */
+.town-dropdown {
+    width: 600px;
+    padding: 80px 40px 40px 40px;
+    border-radius: 30px;
+    border: 0;
+    box-shadow: 0px 10px 20px 5px #ececec;
+}
+.dropdown-title {
+    color: #3d3d3d;
+}
+.dropdown-all {
+    color: #949494;
+}
+.town-search {
+    position: relative;
+    margin: 60px 0 40px 0;
+    border-bottom: 1px solid #e9e9e9;
+    padding-bottom: 60px;
+}
+.town-field {
+    width: 100%;
+    border-radius: 30px;
+    border: 2px solid #f3f3f3;
+    padding: 10px 20px;
+    outline: none;
+    box-shadow: 0px 5px 20px 1px #ececec;
+}
+.town-button {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: #6a78aa;
+    color: #ffffff;
+    padding: 9px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 2px solid #6a78aa;
+    opacity: 0.7;
+}
+.town-button:hover,
+.town-button:focus {
+    opacity: 1;
+}
+.town-close {
+    position: absolute;
+    right: 95px;
+    top: 8px;
+    color: #afafaf;
+    opacity: 0.7;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.town-close:hover,
+.town-close:focus {
+    opacity: 1;
+    text-decoration: none;
+    color: #4e4e4e;
+}
+.town-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -5px;
+    font-size: 16px;
+}
+.town-item {
+    width: 29%;
+    margin: 5px;
+}
+.town-item:hover,
+.town-item:focus {
+    color: #e98e27;
+    cursor: pointer;
+}
+
+/* Подсказки в поиске */
+.head-hidden {
+    display: none;
+}
+.header-body:hover .head-hidden {
+    display: block;
+}
+.head-body {
+    padding: 20px 40px;
+    font-size: 20px;
+}
+.head-site {
+    padding: 20px 0;
+    display: flex;
+    margin: -10px 0;
+}
+.head-title {
+    width: 30%;
+    color: #949494;
+    text-align: right;
+    padding: 10px;
+}
+.head-text {
+    width: 70%;
+    padding-left: 10px;
+}
+.head-link {
+    color: #2e2e2e;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.head-link:hover,
+.head-link:focus,
+.head-link.active {
+    background-color: #e9e9e9;
+    text-decoration: none;
+    color: #2e2e2e;
+}
+
 /* Меню */
+.titles {
+    margin-top: 100px;
+}
 .titles-pagination {
     padding-left: 0;
 }
@@ -425,9 +553,6 @@ footer a:focus {
     width: 20px;
     height: 30px;
     margin-right: 5px;
-}
-.pagin-scroll {
-    overflow-x: scroll;
 }
 .pagin {
     display: flex;
