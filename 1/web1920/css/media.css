@@ -9,6 +9,9 @@
         flex: 0 0 60%;
         max-width: 60%;
     }
+    .main-item {
+        padding: 20px 0;
+    }
     .footer-copy {
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
@@ -48,13 +51,56 @@
         justify-content: center;
     }
     .main-item {
-        width: 32%;
+        font-size: 16px;
+        width: 24%;
+        padding: 20px 0;
     }
     .main-item-big {
-        width: 100%!important;
+        width: 49%;
     }
-    .main-navigation {
-        width: 100%!important;
+    .main-title_link {
+        color: rgb(106, 120, 170);
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        width: 100%;
+        line-height: 1.2;
+    }
+    .main-nav {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+    .main-nav_title {
+        padding: 15px 0;
+    }
+    .main-nav_left {
+        margin: 0 20px;
+    }
+    .item-link {
+        font-size: 18px;
+    }
+    .where-button {
+        font-size: 16px;
+        padding: 10px;
+    }
+    .right-where {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .item-price {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .item-stars {
+        width: 100%;
+    }
+    .item-value {
+        margin-top: 10px;
+        font-size: 20px;
     }
 }
 @media (max-width: 1120px) {
@@ -73,7 +119,14 @@
         margin-top: 150px;
     }
     .main-item {
-        width: 48%;
+        padding: 20px 0 10px 0;
+        width: 23%;
+    }
+    .main-item-big {
+        width: 71%;
+    }
+    .main-item-big .item-left {
+        width: 40%;
     }
     .footer-copy {
         -ms-flex: 0 0 100%;
@@ -98,27 +151,51 @@
     }
 }
 @media (max-width: 992px) {
-    .main-item-big .item-body {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .main-item-big .item-left {
-        width: 100%;
-        padding-right: 0;
-        text-align: center;
-    }
-    .main-item-big .item-right {
-        width: 100%;
-        padding-left: 0;
-    }
     .main-item {
-        width: 100%;
+        width: 23%;
     }
-    .item-left {
-        text-align: center;
+    .main-navigation {
+        width: 96%;
+    }
+    .main-item-big {
+        width: 96%;
     }
 }
 @media (max-width: 768px) {
+    .nav-back {
+        display: block;
+        float: right;
+        margin-top: 14px;
+        margin-right: 10px;
+        cursor: pointer;
+        color: hsl(227, 27%, 54%);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    .nav-back:hover,
+    .nav-back:focus {
+        text-decoration: underline;
+    }
+    .menu-container {
+        display: inline-block;
+        cursor: pointer;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: hsl(227, 27%, 54%);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-8px, 7px);
+        transform: rotate(-45deg) translate(-8px, 7px);
+    }
+    .change .bar2 {opacity: 0;}
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
     .town-dropdown {
         width: 100%!important;
         padding: 20px;
@@ -158,18 +235,17 @@
         text-align: center;
         font-size: 24px;
     }
-    .main-title_link {
-        font-size: 20px;
-    }
-    .main-nav {
-        font-size: 18px;
-    }
     .main-item {
-        font-size: 18px;
-        padding: 30px 20px 20px 20px
+        width: 48%;
+    }
+    .main-navigation {
+        width: 100%;
+    }
+    .main-item-big {
+        width: 100%;
     }
     .right-where {
-        font-size: 18px;
+        font-size: 14px;
     }
     .where-button {
         padding: 15px 10px;
@@ -197,7 +273,7 @@
         width: 100%;
     }
 }
-@media (max-width: 560px) {
+@media (max-width: 590px) {
     .header-logo {
         flex-wrap: wrap;
         justify-content: center;
@@ -219,6 +295,25 @@
     .titles {
         margin-top: 200px;
     }
+    .main-item {
+        width: 100%;
+    }
+    .main-item-big .item-body {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-item-big .item-left {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+    .main-item-big .item-right {
+        width: 100%;
+        padding-left: 0;
+    }
+    .item-left {
+        text-align: center;
+    }
     .checks-body {
         flex-wrap: wrap;
     }
@@ -230,7 +325,7 @@
         width: 100%;
     }
     .item-link {
-        font-size: 20px;
+        font-size: 16px;
     }
     .footer-copy {
         flex-wrap: wrap;
