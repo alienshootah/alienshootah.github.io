@@ -411,6 +411,7 @@ header {
     width: 90%;
     position: relative;
     margin: 200px auto 0 auto;
+    padding: 0;
 }
 .town-field_big {
     box-shadow: none;
@@ -420,8 +421,8 @@ header {
     padding-right: 0;
 }
 .town-button-big {
-    padding: 11px 32px;
-    right: 15px;
+    padding: 12px 32px;
+    right: 0;
 }
 .head-hidden-big {
     background-color: hsl(0, 0%, 100%);
@@ -516,6 +517,57 @@ input[type=range] {
   input[type=range]:focus::-ms-fill-upper {
       background: #c9cee0;
   }
+
+/* Стили каталога с результатом поиска */
+.main-catalog {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px -10px;
+}
+.catalog-item {
+    width: 18%;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+.catalog-image {
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.cat-text {
+    padding: 30px;
+}
+.catalog-title {
+    margin-bottom: 20px;
+}
+.cat-item {
+    margin: 5px 0;
+}
+.cat-link {
+    color: #2e2e2e;
+}
+.cat-link:hover,
+.cat-link:focus,
+.cat-link.active {
+    color: #79a8fb;
+    text-decoration: none;
+}
+.catalog-show {
+    margin-top: 10px;
+}
+.catalog-more {
+    text-decoration: underline;
+    color: #3757c5;
+    font-weight: bold;
+}
+.catalog-more:hover,
+.catalog-more:focus {
+    color: #3757c5;
+    text-decoration: none;
+}
 
 /* Содержимое */
 .main-body {
@@ -708,6 +760,8 @@ footer a:focus {
 }
 .footer-body {
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .footer-copy {
     display: flex;
