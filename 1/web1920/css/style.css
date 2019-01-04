@@ -72,13 +72,17 @@ header {
 .header-field {
     width: 100%;
     padding: 10px 35px;
-    border: 3px solid #6a78aa;
+    border: 3px solid transparent;
     border-radius: 30px;
     font-size: 22px;
     line-height: 1;
     background-color: #f5f5f5;
     outline: none;
     position: relative;
+}
+.header-field:hover,
+.header-field:focus {
+    border: 3px solid #6a78aa;
 }
 .search-link {
     position: absolute;
@@ -96,7 +100,8 @@ header {
     padding: 100px 40px 40px 70px;
     border-radius: 30px;
     border: 0;
-    box-shadow: 0px 10px 20px 5px #ececec;
+    /* box-shadow: 0px 10px 20px 5px #ececec; */
+    box-shadow: 0 0 20px 2px #cccccc;
     left: -300px;
     position: absolute;
 }
@@ -339,6 +344,10 @@ header {
 .checks-body_catalog {
     margin: 10px 0;
 }
+.checks-body_catalog:hover,
+.checks-body_catalog:focus {
+    box-shadow: 0 0 20px 2px #cccccc;
+}
 .body_catalog {
     padding-left: 4px;
     padding-right: 0;
@@ -429,12 +438,20 @@ header {
     padding: 11px 32px;
     right: 0;
 }
+.head-hidden {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    box-shadow: 0 10px 10px 1px #cccccc;
+}
 .head-hidden-big {
     background-color: hsl(0, 0%, 100%);
     position: absolute;
     border-radius: 30px;
     left: 0;
-    top: 70px;
+    top: 70px!important;
     width: 100%;
     z-index: 9999;
 }
@@ -613,6 +630,10 @@ input[type=range] {
     font-size: 20px;
     width: 24%;
     padding: 30px 40px 20px 40px;
+}
+.main-item:hover,
+.main-item:focus {
+    box-shadow: 0 0 20px 2px #cccccc;
 }
 .main-navigation {
     padding: 0;
@@ -805,6 +826,10 @@ footer a:focus {
     border-radius: 30px;
     text-decoration: none;
     color: #757575;
+}
+.footer-mob:hover,
+.footer-mob:focus {
+    box-shadow: 0 0 20px 2px #cccccc;
 }
 .mob-icon {
     width: 40px;
