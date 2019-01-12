@@ -747,12 +747,13 @@ header {
     width: 100%;
     text-align: center;
 }
-
+.gallery-left {
+    width: 555px;
+}
 .gallery-title {
     border-bottom: 3px solid #e2e2e2;
     margin: 10px 0;
 }
-
 .gallerry-nav {
     margin-right: 2px;
     display: flex;
@@ -771,7 +772,11 @@ header {
     color: #2a2a2a;
     padding: 10px 0;
     width: 100%;
-    
+    border: 0;
+    background-color: transparent;
+    border-top: 3px solid transparent;
+    cursor: pointer;
+    outline: none;
 }
 .gall-nav_link:hover,
 .gall-nav_link:focus,
@@ -788,8 +793,11 @@ header {
 }
 .gallery-image {
     width: 100%;
-    max-width: 555px;
+    max-width: auto;
     height: 410px;
+}
+.gall-right_image {
+    width: 100%;
 }
 .gall-right_picture {
     position: relative;
@@ -833,6 +841,12 @@ header {
     bottom: 120px;
     left: 10px;
 }
+.icons-image {
+    margin: 10px auto;
+}
+.deals-stars {
+    margin: 0 auto;
+}
 .gallery-text {
     position: absolute;
     bottom: 40px;
@@ -864,6 +878,7 @@ header {
     padding: 20px;
     text-align: center;
 }
+
 
 .blog {
     padding: 40px 0;
@@ -952,6 +967,7 @@ header {
     width: 100px;
     height: 40px;
     padding-top: 25px;
+    margin: 0 auto;
 }
 
 .feedback {
@@ -1045,4 +1061,112 @@ footer {
 }
 .footer-item {
     margin: 10px;
+}
+
+/* Sliders */
+.slick-prev:before, .slick-next:before 
+{ font-family: "slick"; font-size: 60px; line-height: 1; color: #000; opacity: 1; 
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: url(../img/arrows-icons_left.png); }
+[dir="rtl"] .slick-prev:before { content: url(../img/arrows-icons_right.png); }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto;}
+.slick-next:before { content: url(../img/arrows-icons_right.png); }
+[dir="rtl"] .slick-next:before { content: url(../img/arrows-icons_left.png); }
+.slick-prev, .slick-next {
+    z-index: 9999;
+    top: auto;
+    bottom: -60px;
+    width: 50%;
+    background-color: #000000;
+    height: 45px;
+    text-align: center;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    background-color: #d58e32;
+}
+.slick-prev:before, .slick-next:before {
+    top: -27px;
+    position: relative;
+    text-align: center;
+}
+.slick-next {
+    right: 0;
+}
+.slick-prev {
+    left: 0;
+}
+
+/* Slider with navigation */
+.slider-nav .slick-prev, 
+.slider-nav .slick-next {
+    z-index: 9999;
+    top: auto;
+    bottom: -25px;
+    width: 35px;
+    background-color: #000000;
+    height: 70px;
+    text-align: center;
+}
+.slider-nav .slick-prev:before, 
+.slider-nav .slick-next:before {
+    top: -20px;
+    position: relative;
+    text-align: center;
+}
+.slider-nav_item {
+    outline: none;
+}
+.slider-nav_image {
+    width: 80px;
+    height: 70px;
+    margin: 10px auto;
+}
+
+/* Slider with brands */
+.brands-list {
+    padding: 0 40px;
+}
+.brands-item {
+    outline: none;
+}
+.brands-list .slick-prev, 
+.brands-list .slick-next {
+    z-index: 9999;
+    top: auto;
+    bottom: -65px;
+    width: 35px;
+    background-color: #000000;
+    height: 130px;
+    text-align: center;
+}
+.brands-list .slick-prev:before, 
+.brands-list .slick-next:before {
+    top: -20px;
+    position: relative;
+    text-align: center;
+}
+.feedback-item {
+    outline: none;
+}
+
+/* Tabs */
+.tab {
+    overflow: hidden;
+}
+.tabcontent {
+    display: none;
+    min-width: 555px;
+}
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
