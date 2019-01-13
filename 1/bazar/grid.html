@@ -7,10 +7,97 @@
     <title>Bazar</title>
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/multirange.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal modal-big">
+        <!-- Modal content -->
+        <div class="modal-content modal-content-big">
+            <span class="close">&times;</span>
+            <div class="row modal-wrap">
+                <div class="col-5 modal-left">
+                    <img src="img/featured-image3.jpg" alt="" class="modal-image">
+                </div>
+                <div class="col-7 modal-right">
+                    <h3 class="modals-title">Sunbaby Magic Bear Chair</h3>
+                    <div class="modals-rewiews">
+                        <div class="rewiews-item">
+                            <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                        </div>
+                        <div class="rewiews-item">(0 reviews)</div>
+                        <div class="rewiews-item"><a href="#" class="rewiews-link">Add Your Review</a></div>
+                    </div>
+                    <div class="modals-prices">
+                        <div class="btns-right">
+                            <div class="btns-price-old">$35</div>
+                            <div class="btns-price-new">$30</div>
+                        </div>
+                    </div>
+                    <div class="modals-buttons">
+                        <button class="add-button catalog-btn"><img src="img/add-button.png" class="add-icon" alt=""> Add to card</button>
+                        <ul class="btns-list">
+                            <li class="btns-item">
+                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                            </li>
+                            <li class="btns-item">
+                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                            </li>
+                            <li class="btns-item">
+                                <a href="#" class="btns-link"><img src="img/btns-icon5.png" alt="" class="btns-icon"></a>
+                            </li>
+                        </ul>
+                        <label for="quan">
+                            Quantity: 
+                            <ul class="quan-list">
+                                <li class="quan-item">
+                                    <input type="number" id="quan" class="quan-field"> 
+                                </li>
+                                <li class="quan-item"><a href="#" class="quan-link">-</a></li>
+                                <li class="quan-item"><a href="#" class="quan-link">+</a></li>
+                            </ul>
+                        </label>
+                    </div>
+                    <div class="modals-text">
+                        <h4 class="modals-text_title">Quick Overview</h4>  
+                        <p>Nam tristique porta ligula, vel viverra sem eleifend nec. 
+                            Nulla sed purus augue, eu euis mod tellus. Nam mattis 
+                        eros tis sagittis. Vestibulum suscipit cursus biben.</p>
+                    </div>
+
+                    <div class="modals-category">
+                        <p class="modals-category_item">
+                            <span>Availability:</span> In Stock
+                        </p>
+                        <p class="modals-category_item">
+                            <span>Category:</span> Furniture
+                        </p>
+                    </div>
+                    <ul class="modals-share">
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon1.png" alt="" class="share-image"> Share</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon2.png" alt="" class="share-image"> Google+</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon3.png" alt="" class="share-image"> Tweet</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon4.png" alt="" class="share-image"> Pinterest</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon5.png" alt="" class="share-image"> Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container-fluid">
         <nav>
             <div class="content">
@@ -111,7 +198,7 @@
                         <div class="fields-body">
                             <div class="fields-cat">
                                 <select class="sel-field">
-                                    <option><img src="img/select-icon.png" alt="" class="search-icon"> Select a category</option>
+                                    <option>Select a category</option>
                                     <option>Category 1</option>
                                     <option>Category 2</option>
                                     <option>Category 3</option>
@@ -184,553 +271,636 @@
                 </div>
             </div>
         </section>
+        <section class="furniture">
+            <div class="content">
+                <h2 class="hidden">Promo for sale of</h2>
+                <div class="furniture-title">bedroom <b>furniture</b></div>
+                <div class="furniture-descr">ALWAYS <b class="furniture-orange">25%</b> OFF OR MORE</div>
+            </div>
+        </section>
+        <section class="filters-bread">
+            <div class="content">
+                <h2 class="hidden">Section of catalog</h2>
+                <ul class="breadcrumbs">
+                    <li class="bread-item"><a href="#" class="bread-link">Home</a></li>
+                    <li class="bread-item">Furniture</li>
+                </ul>
+            </div>
+        </section>
         <section class="catalog">
             <div class="content">
-                <div class="catalog-title">
-                    <div class="catalog-dec">
-                        <h2 class="catalog-nw">New furniture</h2>
+                <div class="row catalog-wrapper">
+                    <div class="col-3 catalog-filters">
+                        <div class="filters-node">
+                            <h3 class="filters-title">Filter By categories</h3>
+                            <div class="filters-body">
+                                <ul class="filters-list filters-list-firts">
+                                    <li class="filters-item active">
+                                        <a href="#" class="filters-link">Furniture</a>
+                                        <div class="filters-round">3</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <a href="#" class="filters-link">Sofa</a>
+                                        <div class="filters-round">4</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <a href="#" class="filters-link">Chair</a>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <a href="#" class="filters-link">Table</a>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <a href="#" class="filters-link">Bedroom</a>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <a href="#" class="filters-link">Furniture</a>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filters-node">
+                            <h3 class="filters-title">Filter By Price</h3>
+                            <div class="filters-body">
+                                <form class="range-container">
+                                    <input type="range" multiple value="10,80" id="productivity" class="filters-range">
+                                </form>
+                                <div class="filters-rngw">
+                                    <div class="rngw-item">
+                                        <button class="filters-button">Filter</button>
+                                    </div>
+                                    <div class="rngw-item">
+                                        <input type="number" class="filters-result" value="12345">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters-node">
+                            <h3 class="filters-title">Filter By Color</h3>
+                            <div class="filters-body">
+                                <ul class="filters-list">
+                                    <li class="filters-item active">
+                                        <div class="filters-color filters-color-red"></div>
+                                        <a href="#" class="filters-link">Red</a>
+                                    </li>
+                                    <li class="filters-item">
+                                        <div class="filters-color filters-color-black"></div>
+                                        <a href="#" class="filters-link">Black</a>
+                                    </li>
+                                    <li class="filters-item">
+                                        <div class="filters-color filters-color-yellow"></div>
+                                        <a href="#" class="filters-link">Yellow</a>
+                                    </li>
+                                    <li class="filters-item">
+                                        <div class="filters-color filters-color-blue"></div>
+                                        <a href="#" class="filters-link">Blue</a>
+                                    </li>
+                                    <li class="filters-item">
+                                        <div class="filters-color filters-color-pink"></div>
+                                        <a href="#" class="filters-link">Pink</a>
+                                    </li>
+                                    <li class="filters-item">
+                                        <div class="filters-color filters-color-green"></div>
+                                        <a href="#" class="filters-link">Green</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filters-node">
+                            <h3 class="filters-title">Filter By Size</h3>
+                            <div class="filters-body">
+                                <ul class="filters-list">
+                                    <li class="filters-item active">
+                                        <label><input type="checkbox" class="filters-checks" checked>S</label>
+                                        <div class="filters-round">3</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <label><input type="checkbox" class="filters-checks">M</label>
+                                        <div class="filters-round">4</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <label><input type="checkbox" class="filters-checks">L</label>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <label><input type="checkbox" class="filters-checks">XL</label>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                    <li class="filters-item">
+                                        <label><input type="checkbox" class="filters-checks">XX</label>
+                                        <div class="filters-round">5</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filters-node">
+                            <h3 class="filters-title">Filter By Tags</h3>
+                            <div class="filters-body">
+                                <ul class="tags-list">
+                                    <li class="tags-item">
+                                        <a href="#" class="tags-link active"><img src="img/tags-icon.png" alt="" class="tags-icon"> Table</a>
+                                    </li>
+                                    <li class="tags-item">
+                                        <a href="#" class="tags-link"><img src="img/tags-icon.png" alt="" class="tags-icon"> Chair</a>
+                                    </li>
+                                    <li class="tags-item">
+                                        <a href="#" class="tags-link"><img src="img/tags-icon.png" alt="" class="tags-icon"> Hand Bag</a>
+                                    </li>
+                                    <li class="tags-item">
+                                        <a href="#" class="tags-link"><img src="img/tags-icon.png" alt="" class="tags-icon"> Women</a>
+                                    </li>
+                                    <li class="tags-item">
+                                        <a href="#" class="tags-link"><img src="img/tags-icon.png" alt="" class="tags-icon"> Fashion</a>
+                                    </li>
+                                    <li class="tags-item">
+                                        <a href="#" class="tags-link"><img src="img/tags-icon.png" alt="" class="tags-icon"> Clother</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="filters-node">
+                            <h3 class="filters-title-bg">Featured products</h3>
+                            <div class="filters-body">
+                                <ul class="featured-list">
+                                    <li class="featured-item">
+                                        <div class="fetured-picture">
+                                            <a href="#"><img src="img/featured-image1.jpg" alt="" class="featured-image"></a>
+                                        </div>
+                                        <div class="fetured-text">
+                                            <h4 class="featured-title"><a href="#" class="featured-link">Office Chair</a></h4>
+                                            <div class="featured-price">$35.00</div>
+                                            <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                                            <button class="filters-button featured-button">Add to cart</button>
+                                        </div>
+                                    </li>
+                                    <li class="featured-item">
+                                        <div class="fetured-picture">
+                                            <a href="#"><img src="img/featured-image2.jpg" alt="" class="featured-image"></a>
+                                        </div>
+                                        <div class="fetured-text">
+                                            <h4 class="featured-title"><a href="#" class="featured-link">Office Chair</a></h4>
+                                            <div class="featured-price">$35.00</div>
+                                            <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                                            <button class="filters-button featured-button">Add to cart</button>
+                                        </div>
+                                    </li>
+                                    <li class="featured-item">
+                                        <div class="fetured-picture">
+                                            <a href="#"><img src="img/featured-image3.jpg" alt="" class="featured-image"></a>
+                                        </div>
+                                        <div class="fetured-text">
+                                            <h4 class="featured-title"><a href="#" class="featured-link">Office Chair</a></h4>
+                                            <div class="featured-price">$35.00</div>
+                                            <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                                            <button class="filters-button featured-button">Add to cart</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="cat-menu">
-                        <ul class="tab cat-list">
-                            <li class="cat-item">
-                                <button class="cat-link tablinks2" onclick="openCit(event, 'bed')" id="defaultOpen2">Bed</button>
+                    <div class="col-9 catalog-cards">
+                        <div class="catalog-sort">
+                            <div class="sort-item sort-tltle">
+                                <h2 class="nw-sort">furniture</h2>
+                            </div>
+                            <div class="sort-item sort-by">
+                                <label for="price">
+                                    Sort By 
+                                    <select id="price" class="sort-field">
+                                        <option>Price: Lowes first</option>
+                                        <option>Other sort 1</option>
+                                        <option>Other sort 2</option>
+                                        <option>Other sort 3</option>
+                                        <option>Other sort 3</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="sort-item sort-show">
+                                <label for="show">
+                                    Show 
+                                    <select id="show" class="sort-field">
+                                        <option>8</option>
+                                        <option>10</option>
+                                        <option>12</option>
+                                        <option>14</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="sort-item sort-btns">
+                                <button class="sort-button"><img src="img/sort-button1.png" alt=""></button>
+                                <button class="sort-button"><img src="img/sort-button2.png" alt=""></button>
+                            </div>
+                        </div>
+                        <ul class="catalog-body">
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <img src="img/catalog-image1.jpg" alt="" class="catalog-image">
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="cat-item">
-                                <button class="cat-link tablinks2" onclick="openCit(event, 'chair')" id="defaultOpen2">Chair</button>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <img src="img/catalog-image1.jpg" alt="" class="catalog-image">
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="cat-item">
-                                <button class="cat-link tablinks2" onclick="openCit(event, 'sofa')" id="defaultOpen2">Sofa</button>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <img src="img/catalog-image1.jpg" alt="" class="catalog-image">
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="cat-item">
-                                <button class="cat-link tablinks2" onclick="openCit(event, 'table')" id="defaultOpen2">Table</button>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <div class="catalog-sale"><span>Sale</span></div>
+                                    <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
-                            <li class="cat-item">
-                                <button class="cat-link tablinks2" onclick="openCit(event, 'dining')" id="defaultOpen2">Dining</button>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <div class="catalog-sale"><span>Sale</span></div>
+                                    <a href="#"><img src="img/catalog-image4.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <a href="#"><img src="img/catalog-image5.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <div class="catalog-sale"><span>Sale</span></div>
+                                    <a href="#"><img src="img/catalog-image6.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <a href="#"><img src="img/catalog-image7.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <div class="catalog-sale"><span>Sale</span></div>
+                                    <a href="#"><img src="img/catalog-image8.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <div class="catalog-sale"><span>Sale</span></div>
+                                    <a href="#"><img src="img/catalog-image4.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="catalog-item">
+                                <div class="catalog-picture">
+                                    <div class="catalog-sale"><span>Sale</span></div>
+                                    <a href="#"><img src="img/catalog-image4.jpg" alt="" class="catalog-image"></a>
+                                    <div class="catalog-buttons">
+                                        <button class="add-button catalog-btn ">Quick view</button>
+                                        <button class="add-button catalog-btn">
+                                            <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="deals-container">
+                                    <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                                    <div class="stars-wrap">
+                                        <img src="img/stars.png" alt="" class="deals-stars">
+                                    </div>
+                                    <div class="deals-btns">
+                                        <div class="btns-left">
+                                            <ul class="btns-list">
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                                <li class="btns-item">
+                                                    <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btns-right">
+                                            <div class="btns-price-old">$35</div>
+                                            <div class="btns-price-new">$30</div>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="catalog-decor"></div>
                 </div>
-                <div id="bed" class="tabcontent2">
-                    <ul class="catalog-body">
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <img src="img/catalog-image1.jpg" alt="" class="catalog-image">
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <div class="catalog-sale"><span>Sale</span></div>
-                                <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <div class="catalog-sale"><span>Sale</span></div>
-                                <a href="#"><img src="img/catalog-image4.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <a href="#"><img src="img/catalog-image5.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <div class="catalog-sale"><span>Sale</span></div>
-                                <a href="#"><img src="img/catalog-image6.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <a href="#"><img src="img/catalog-image7.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="catalog-item">
-                            <div class="catalog-picture">
-                                <div class="catalog-sale"><span>Sale</span></div>
-                                <a href="#"><img src="img/catalog-image8.jpg" alt="" class="catalog-image"></a>
-                                <div class="catalog-buttons">
-                                    <button class="add-button catalog-btn ">Quick view</button>
-                                    <button class="add-button catalog-btn">
-                                        <img src="img/add-button.png" class="add-icon" alt=""> Add to card
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="deals-container">
-                                <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
-                                <div class="stars-wrap">
-                                    <img src="img/stars.png" alt="" class="deals-stars">
-                                </div>
-                                <div class="deals-btns">
-                                    <div class="btns-left">
-                                        <ul class="btns-list">
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                            <li class="btns-item">
-                                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="btns-right">
-                                        <div class="btns-price-old">$35</div>
-                                        <div class="btns-price-new">$30</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="chair" class="tabcontent2">
-                    Chair
-                </div>
-                <div id="sofa" class="tabcontent2">
-                    Sofa
-                </div>
-                <div id="table" class="tabcontent2">
-                    Table
-                </div>
-                <div id="dining" class="tabcontent2">
-                    Dining
-                </div>
-            </div>
-        </section>
-        <section class="gallery">
-            <div class="content">
-                <div class="gallery-title">
-                    <h2 class="catalog-nw">Furniture gallery</h2>
-                </div>
-                <div class="row gallery-body">
-                    <div class="col-6 gallery-left">
-                        <ul class="gallerry-nav">
-                            <li class="gall-nav_item">
-                                <button class="tablinks gall-nav_link" onclick="openCity(event, 'featured')" id="defaultOpen">featured</button>
-                            </li>
-                            <li class="gall-nav_item">
-                                <button class="tablinks gall-nav_link" onclick="openCity(event, 'seller')">top seller</button>
-                            </li>
-                            <li class="gall-nav_item">
-                                <button class="tablinks gall-nav_link" onclick="openCity(event, 'sale')">sale off</button>
-                            </li>
-                            <li class="gall-nav_item">
-                                <button class="tablinks gall-nav_link" onclick="openCity(event, 'rated')">top rated</button>
-                            </li>
-                        </ul>
-                        <div id="featured" class="tabcontent" >
-                            <ul class="slider-for gallery-slider">
-                                <li class="gallery-item">
-                                    <div class="gallery-picture">
-                                        <img src="img/gallery-image.jpg" alt="" class="gallery-image">
-                                        <ul class="gallery-icons">
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon1.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon4.png" alt="" class="icons-image"></a></li>
-                                        </ul>
-                                        <div class="gallery-text">
-                                            <div class="gallery-num">
-                                                <div class="gallery-num-new">$12.00</div>
-                                                <div class="gallery-num-old">$16.00</div>
-                                            </div>
-                                            <div class="gallery-aenean">
-                                                <h4 class="deals-bris">Aenean Ru Bristique</h4>
-                                                <img src="img/stars.png" alt="" class="deals-stars">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="gallery-item">
-                                    <div class="gallery-picture">
-                                        <img src="img/gallery-image.jpg" alt="" class="gallery-image">
-                                        <ul class="gallery-icons">
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon1.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon4.png" alt="" class="icons-image"></a></li>
-                                        </ul>
-                                        <div class="gallery-text">
-                                            <div class="gallery-num">
-                                                <div class="gallery-num-new">$12.00</div>
-                                                <div class="gallery-num-old">$16.00</div>
-                                            </div>
-                                            <div class="gallery-aenean">
-                                                <h4 class="deals-bris">Aenean Ru Bristique</h4>
-                                                <img src="img/stars.png" alt="" class="deals-stars">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="gallery-item">
-                                    <div class="gallery-picture">
-                                        <img src="img/gallery-image.jpg" alt="" class="gallery-image">
-                                        <ul class="gallery-icons">
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon1.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon4.png" alt="" class="icons-image"></a></li>
-                                        </ul>
-                                        <div class="gallery-text">
-                                            <div class="gallery-num">
-                                                <div class="gallery-num-new">$12.00</div>
-                                                <div class="gallery-num-old">$16.00</div>
-                                            </div>
-                                            <div class="gallery-aenean">
-                                                <h4 class="deals-bris">Aenean Ru Bristique</h4>
-                                                <img src="img/stars.png" alt="" class="deals-stars">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="gallery-item">
-                                    <div class="gallery-picture">
-                                        <img src="img/gallery-image.jpg" alt="" class="gallery-image">
-                                        <ul class="gallery-icons">
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon1.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon4.png" alt="" class="icons-image"></a></li>
-                                        </ul>
-                                        <div class="gallery-text">
-                                            <div class="gallery-num">
-                                                <div class="gallery-num-new">$12.00</div>
-                                                <div class="gallery-num-old">$16.00</div>
-                                            </div>
-                                            <div class="gallery-aenean">
-                                                <h4 class="deals-bris">Aenean Ru Bristique</h4>
-                                                <img src="img/stars.png" alt="" class="deals-stars">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="gallery-item">
-                                    <div class="gallery-picture">
-                                        <img src="img/gallery-image.jpg" alt="" class="gallery-image">
-                                        <ul class="gallery-icons">
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon1.png" alt="" class="icons-image"></a></li>
-                                            <li class="btns-item"><a href="#" class="btns-link"><img src="img/btns-icon4.png" alt="" class="icons-image"></a></li>
-                                        </ul>
-                                        <div class="gallery-text">
-                                            <div class="gallery-num">
-                                                <div class="gallery-num-new">$12.00</div>
-                                                <div class="gallery-num-old">$16.00</div>
-                                            </div>
-                                            <div class="gallery-aenean">
-                                                <h4 class="deals-bris">Aenean Ru Bristique</h4>
-                                                <img src="img/stars.png" alt="" class="deals-stars">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="slider-nav">
-                                <li class="slider-nav_item"><img src="img/gallery-image.jpg" alt="" class="slider-nav_image"></li>
-                                <li class="slider-nav_item"><img src="img/gallery-image.jpg" alt="" class="slider-nav_image"></li>
-                                <li class="slider-nav_item"><img src="img/gallery-image.jpg" alt="" class="slider-nav_image"></li>
-                                <li class="slider-nav_item"><img src="img/gallery-image.jpg" alt="" class="slider-nav_image"></li>
-                                <li class="slider-nav_item"><img src="img/gallery-image.jpg" alt="" class="slider-nav_image"></li>
-                            </ul>
-                        </div>
-                        <div id="seller" class="tabcontent">
-                            tab seller tab seller tab seller tab seller tab seller tab seller tab seller
-                            tab seller tab seller tab seller tab seller tab seller tab seller tab seller
-                            tab seller tab seller tab seller tab seller tab seller tab seller tab seller
-                            tab seller tab seller tab seller tab seller tab seller tab seller tab seller
-                            tab seller tab seller tab seller tab seller tab seller tab seller tab seller
-                            tab seller tab seller tab seller tab seller tab seller tab seller tab seller
-                        </div>
-                        <div id="sale" class="tabcontent">
-                            sale off
-                        </div>
-                        <div id="rated" class="tabcontent">
-                            top rated
-                        </div>
-                    </div>
-
-                    <div class="col-6 gallery-right">
-                        <div class="gall-right_picture">
-                            <img src="img/gall-right_image.jpg" alt="" class="gall-right_image">
-                            <div class="gall-right_text">
-                                <div class="gall-text_price">FROM <b>$50.80</b></div>
-                                <div class="gall-text_desc">Bedroom Bed</div>
-                                <div class="gall-text_btn"><a href="#" class="gall-text_link">Shop now</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="blog">
-            <div class="content">
-                <div class="gallery-title blog-title">
-                    <h2 class="catalog-nw">Latest blog</h2>
-                </div>
-                <ul class="blog-list">
-                    <li class="blog-item">
-                        <div class="blog-picture">
-                            <a href="#"><img src="img/blog-image1.jpg" alt="" class="blog-image"></a>
-                            <div class="blog-date">
-                                <div class="blog-dmy"><img src="img/dmy-icon.png" alt="" class="dmy-icon"> 15 JAN 2019</div>
-                                <div class="blog-comments"><img src="img/comments-icon.png" alt="" class="dmy-icon"> 4 Comments</div>
-                            </div>
-                        </div>
-                        <div class="blog-text">
-                            <h3 class="blog-ttl">Products That Fight Static</h3>
-                            <p class="blog-typ">
-                                Aliquam dictum pellentesque nibh sit amet dapibus. 
-                                Vivamus eget luctus nisi. Nullam euismod leo vehicula, rutrum magna in, 
-                                ornare enim vehicula, rutrum magna in, ornare enim.
-                            </p>
-                            <div class="blog-more">
-                                <a href="#" class="blog-more-link active">Read more</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="blog-item">
-                        <div class="blog-picture">
-                            <a href="#"><img src="img/blog-image3.jpg" alt="" class="blog-image"></a>
-                            <div class="blog-date">
-                                <div class="blog-dmy"><img src="img/dmy-icon.png" alt="" class="dmy-icon"> 15 JAN 2019</div>
-                                <div class="blog-comments"><img src="img/comments-icon.png" alt="" class="dmy-icon"> 4 Comments</div>
-                            </div>
-                        </div>
-                        <div class="blog-text">
-                            <h3 class="blog-ttl">Products That Fight Static</h3>
-                            <p class="blog-typ">
-                                Aliquam dictum pellentesque nibh sit amet dapibus. 
-                                Vivamus eget luctus nisi. Nullam euismod leo vehicula, rutrum magna in, 
-                                ornare enim vehicula, rutrum magna in, ornare enim.
-                            </p>
-                            <div class="blog-more">
-                                <a href="#" class="blog-more-link">Read more</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="blog-item">
-                        <div class="blog-picture">
-                            <a href="#"><img src="img/blog-image2.jpg" alt="" class="blog-image"></a>
-                            <div class="blog-date">
-                                <div class="blog-dmy"><img src="img/dmy-icon.png" alt="" class="dmy-icon"> 15 JAN 2019</div>
-                                <div class="blog-comments"><img src="img/comments-icon.png" alt="" class="dmy-icon"> 4 Comments</div>
-                            </div>
-                        </div>
-                        <div class="blog-text">
-                            <h3 class="blog-ttl">Products That Fight Static</h3>
-                            <p class="blog-typ">
-                                Aliquam dictum pellentesque nibh sit amet dapibus. 
-                                Vivamus eget luctus nisi. Nullam euismod leo vehicula, rutrum magna in, 
-                                ornare enim vehicula, rutrum magna in, ornare enim.
-                            </p>
-                            <div class="blog-more">
-                                <a href="#" class="blog-more-link">Read more</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
             </div>
         </section>
         <section class="brands">
@@ -750,69 +920,6 @@
                     <li class="brands-item"><a href="#"><img src="img/brands-image5.png" alt="" class="brands-image"></a></li>
                     <li class="brands-item"><a href="#"><img src="img/brands-image6.png" alt="" class="brands-image"></a></li>
                 </ul>
-            </div>
-        </section>
-        <section class="feedback">
-            <div class="content">
-                <div class="gallery-title feedback-title">
-                    <h2 class="catalog-nw">Clients feedback</h2>
-                </div>
-                <div class="single-item feedback-body">
-                    <div class="feedback-item">
-                        <p class="feedback-text">
-                            onsetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et 
-                            dolore magna aliquyam erat, sed diam voluptua. At vero 
-                            eos et accusam et justo duo dolores et ea rebum. Stet 
-                            clita kasd gubergren.
-                        </p>
-                        <div class="feedback-author">
-                            <div class="feedback-picture">
-                                <img src="img/feedback-image1.jpg" alt="" class="feedback-image">
-                            </div>
-                            <div class="feedback-info">
-                                <div class="feedback-nm"><b>John Smith</b></div>
-                                <div class="feedback-cat">Furniture client</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feedback-item">
-                        <p class="feedback-text">
-                            onsetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et 
-                            dolore magna aliquyam erat, sed diam voluptua. At vero 
-                            eos et accusam et justo duo dolores et ea rebum. Stet 
-                            clita kasd gubergren.
-                        </p>
-                        <div class="feedback-author">
-                            <div class="feedback-picture">
-                                <img src="img/feedback-image1.jpg" alt="" class="feedback-image">
-                            </div>
-                            <div class="feedback-info">
-                                <div class="feedback-nm"><b>John Smith</b></div>
-                                <div class="feedback-cat">Furniture client</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feedback-item">
-                        <p class="feedback-text">
-                            onsetetur sadipscing elitr, 
-                            sed diam nonumy eirmod tempor invidunt ut labore et 
-                            dolore magna aliquyam erat, sed diam voluptua. At vero 
-                            eos et accusam et justo duo dolores et ea rebum. Stet 
-                            clita kasd gubergren.
-                        </p>
-                        <div class="feedback-author">
-                            <div class="feedback-picture">
-                                <img src="img/feedback-image1.jpg" alt="" class="feedback-image">
-                            </div>
-                            <div class="feedback-info">
-                                <div class="feedback-nm"><b>John Smith</b></div>
-                                <div class="feedback-cat">Furniture client</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <section class="links">
@@ -891,21 +998,9 @@
             </div>
         </footer>
     </div>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-title">Newsletter</div>
-            <p>Subscribe to the Bachas mailing list to receive updates on <br>new arrivals, special offers and other discount information.</p>
-            <div><input type="email" class="modal-field" placeholder="Your Email Here" required></div>
-            <div><button class="modal-button">Subscribe</button></div>
-        </div>
-    </div>
-
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
+    <script src="js/multirange.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
