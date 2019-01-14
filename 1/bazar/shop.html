@@ -283,21 +283,24 @@
                     </div>
                 </div>
                 <div class="comments-body">
-                    <ul class="comments-list">
+                    <ul class="tab comments-list">
                         <li class="comments-item">
-                            <button class="comments-link">Description</button>
+                            <button class="comments-link tablinks3" onclick="openRev(event, 'description')">Description</button>
                         </li>
                         <li class="comments-item">
-                            <button class="comments-link active">Reviews(0)</button>
+                            <button class="comments-link tablinks3" onclick="openRev(event, 'reviews')" id="defaultOpen">Reviews(0)</button>
                         </li>
                         <li class="comments-item">
-                            <button class="comments-link">Specification</button>
+                            <button class="comments-link tablinks3" onclick="openRev(event, 'specification')">Specification</button>
                         </li>
                         <li class="comments-item">
-                            <button class="comments-link">Custom tab</button>
+                            <button class="comments-link tablinks3" onclick="openRev(event, 'custom-tab')">Custom tab</button>
                         </li>
                     </ul>
-                    <div class="comments-add">
+                    <div id="description" class="tabcontent3 comments-add">
+                        Description
+                    </div>
+                    <div id="reviews" class="comments-add tabcontent3">
                         <div class="comments-text">
                             <p>There are no reviews for this product.</p>
                         </div>
@@ -329,6 +332,12 @@
                                 <button class="comments-button">Continue</button>
                             </div>
                         </form>
+                    </div>
+                    <div id="specification" class="tabcontent3 comments-add">
+                        Specification
+                    </div>
+                    <div id="custom-tab" class="tabcontent3 comments-add">
+                        Custom tab
                     </div>
                 </div>
             </div>
