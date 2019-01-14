@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bazar</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/multirange.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <div class="content">
+                <div class="row nav-body">
+                    <div class="col-6 nav-left">
+                        <ul class="current-list">
+                            <li class="current-item">
+                                <div class="dropdown">
+                                    <a href="#" onclick="myDrop()" class="val-links dropbtn">USD</a>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <ul class="val-dropdown">
+                                            <li class="val-item"><a href="#" class="val-link">USD</a></li>
+                                            <li class="val-item"><a href="#" class="val-link">EUR</a></li>
+                                            <li class="val-item"><a href="#" class="val-link">RUB</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="current-item">
+                                <div class="dropdown">
+                                    <a href="#" onclick="myDrop2()" class="val-links dropbtn">English</a>
+                                    <div id="myDropdown2" class="dropdown-content">
+                                        <ul class="val-dropdown val-dropdown-language">
+                                            <li class="val-item"><a href="#" class="val-link">English</a></li>
+                                            <li class="val-item"><a href="#" class="val-link">Russian</a></li>
+                                            <li class="val-item"><a href="#" class="val-link">Japan</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="current-item">
+                                <div class="dropdown">
+                                    <a href="#" onclick="myDrop3()" class="val-links dropbtn">Help</a>
+                                    <div id="myDropdown3" class="dropdown-content">
+                                        <ul class="val-dropdown val-dropdown-language">
+                                            <li class="val-item"><a href="#" class="val-link val-link-last">Help</a></li>
+                                            <li class="val-item"><a href="#" class="val-link">Info</a></li>
+                                            <li class="val-item"><a href="#" class="val-link">More</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6 text-right nav-right">
+                        <ul class="user-list">
+                            <li class="user-item">
+                                <img src="img/user-icon1.png" alt="" class="user-icon">
+                                <a href="#" class="user-link">Login</a>
+                            </li>
+                            <li class="user-item">
+                                <img src="img/user-icon2.png" alt="" class="user-icon">
+                                <a href="#" class="user-link">Register</a>
+                            </li>
+                            <li class="user-item user-item-more">
+                                <div class="topnav" id="myTopnav">
+                                    <a href="javascript:void(0);" class="user-link" onclick="userNav()"><img src="img/user-icon3.png" alt="" class="user-icon"></a>
+                                    <ul class="user-more" id="myCollapse">
+                                        <li class="more-item"><a href="#" class="more-link active">My Account</a></li>
+                                        <li class="more-item"><a href="#" class="more-link">Wish List</a></li>
+                                        <li class="more-item"><a href="#" class="more-link">Checkout</a></li>
+                                        <li class="more-item"><a href="#" class="more-link">Shopping Cart</a></li>
+                                        <li class="more-item"><a href="#" class="more-link">Log Out</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div class="content">
+                <div class="row header-body">
+                    <div class="col-4 header-phone">
+                        <div class="phone-body">
+                            <div class="phone-image"><img src="img/phone-icon.png" alt="" class="phone-icon"></div>
+                            <div class="phone-num"><a href="tel:+1234567890" class="phone-link">+123 456 78 90</a></div>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center header-log">
+                        <a href="#" id="myBtn"><img src="img/header-logo.png" alt="" class="header-logo"></a>
+                    </div>
+                    <div class="col-4 text-right">
+                        <div class="header-bucket">
+                            <a href="#" class="bucket-link"><img src="img/bucket-image.png" alt="" class="bucket-image"></a>
+                            <div class="bucket-round">2</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="search">
+            <div class="content">
+                <h2 class="hidden">Select a category</h2>
+                <div class="row search-body">
+                    <div class="col-6 search-fields">
+                        <div class="fields-body">
+                            <div class="fields-cat">
+                                <select class="sel-field">
+                                    <option>Select a category</option>
+                                    <option>Category 1</option>
+                                    <option>Category 2</option>
+                                    <option>Category 3</option>
+                                    <option>Category 4</option>
+                                    <option>Category 5</option>
+                                </select>
+                            </div>
+                            <div class="fields-search">
+                                <input type="text" class="search-field" placeholder="Search products...">
+                                <button class="search-button">
+                                    <img src="img/search-icon.png" alt="" class="search-icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 search-menu">
+                        <div class="nav-wrapper">
+                            <ul class="nav-list">
+                                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                                <li class="nav-item">
+                                    <div class="dropdown">
+                                        <a href="javascript:void(0);" onclick="myDrop4()" class="nav-link dropbtn">Furniture</a>
+                                        <div id="myDropdown4" class="dropdown-content">
+                                            <div class="nav-dropdown">
+                                                <div class="nav-drop_item">
+                                                    <h3 class="nav-drop_title">CAMCORDERS</h3>
+                                                    <ul class="drop-list">
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Apple</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">HTC</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Samsung</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">BlackBerry</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Nokia</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Motorola</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="nav-drop_item">
+                                                    <h3 class="nav-drop_title">CAMCORDERS</h3>
+                                                    <ul class="drop-list">
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Apple</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">HTC</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Samsung</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">BlackBerry</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Nokia</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Motorola</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="nav-drop_item">
+                                                    <h3 class="nav-drop_title">CAMCORDERS</h3>
+                                                    <ul class="drop-list">
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Apple</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">HTC</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Samsung</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">BlackBerry</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Nokia</a></li>
+                                                        <li class="drop-list_item"><a href="#" class="drop-link">Motorola</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link">Chair</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Table</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Sofa</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Bedroom</a></li>
+                                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="filters-bread filters-bread-big">
+            <div class="content">
+                <div class="bread-wrapper">
+                    <h2 class="catalog-nw catalog-nw-big">Furniture</h2>
+                    <ul class="breadcrumbs breadcrumbs-big">
+                        <li class="bread-item"><a href="#" class="bread-link bread-link-big">Home</a></li>
+                        <li class="bread-item"><a href="#" class="bread-link bread-link-big">Furniture</a></li>
+                        <li class="bread-item">Chair</li>
+                    </ul>
+                </div>
+            </div>
+        </section> 
+        <section class="shop">
+            <div class="content">
+                <div class="shop-body">
+                    <div class="row modal-wrap">
+                        <div class="col-5 modal-left">
+                            <img src="img/featured-image3.jpg" alt="" class="modal-image">
+                        </div>
+                        <div class="col-7 modal-right">
+                            <h3 class="modals-title">Sunbaby Magic Bear Chair</h3>
+                            <div class="modals-rewiews">
+                                <div class="rewiews-item">
+                                    <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                                </div>
+                                <div class="rewiews-item">(0 reviews)</div>
+                                <div class="rewiews-item"><a href="#" class="rewiews-link">Add Your Review</a></div>
+                            </div>
+                            <hr>
+                            <div class="modals-prices">
+                                <div class="btns-right">
+                                    <div class="btns-price-old modals-prices-old">$35</div>
+                                    <div class="btns-price-new modals-prices-new">$25</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="modals-buttons">
+                                <ul class="btns-list btns-list-modals">
+                                    <li class="modals-btns">
+                                        <button class="add-button"><img src="img/add-button.png" class="add-icon" alt=""> Add to card</button>
+                                    </li>
+                                    <li class="btns-item">
+                                        <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                    </li>
+                                    <li class="btns-item">
+                                        <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                    </li>
+                                    <li class="btns-item">
+                                        <a href="#" class="btns-link"><img src="img/btns-icon5.png" alt="" class="btns-icon"></a>
+                                    </li>
+                                </ul>
+                                <ul class="quan-list">
+                                    <li class="quan-item quan-item-lb">Quantity:</li>
+                                    <li class="quan-item">
+                                        <input type="number" id="quan" class="quan-field"> 
+                                    </li>
+                                    <li class="quan-item quan-item-btn"><a href="#" class="quan-link">-</a></li>
+                                    <li class="quan-item quan-item-btn"><a href="#" class="quan-link">+</a></li>
+                                </ul>
+                            </div>
+                            <hr>
+                            <div class="modals-text">
+                                <h4 class="modals-text_title">Quick Overview</h4>  
+                                <p>Nam tristique porta ligula, vel viverra sem eleifend nec. 
+                                    Nulla sed purus augue, eu euis mod tellus. Nam mattis 
+                                eros tis sagittis. Vestibulum suscipit cursus biben.</p>
+                            </div>
+                            <hr>
+                            <div class="modals-category">
+                                <p class="modals-category_item">
+                                    <b>Availability:</b> In Stock
+                                </p>
+                                <p class="modals-category_item">
+                                    <b>Category:</b> Furniture
+                                </p>
+                            </div>
+                            <hr>
+                            <ul class="modals-share">
+                                <li class="share-item">
+                                    <a href="#" class="share-link"><img src="img/share-icon1.png" alt="" class="share-image"> Share</a>
+                                </li>
+                                <li class="share-item">
+                                    <a href="#" class="share-link"><img src="img/share-icon2.png" alt="" class="share-image"> Google+</a>
+                                </li>
+                                <li class="share-item">
+                                    <a href="#" class="share-link"><img src="img/share-icon3.png" alt="" class="share-image"> Tweet</a>
+                                </li>
+                                <li class="share-item">
+                                    <a href="#" class="share-link"><img src="img/share-icon4.png" alt="" class="share-image"> Pinterest</a>
+                                </li>
+                                <li class="share-item">
+                                    <a href="#" class="share-link"><img src="img/share-icon5.png" alt="" class="share-image"> Linkedin</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="comments-body">
+                    <ul class="comments-list">
+                        <li class="comments-item">
+                            <button class="comments-link">Description</button>
+                        </li>
+                        <li class="comments-item">
+                            <button class="comments-link active">Reviews(0)</button>
+                        </li>
+                        <li class="comments-item">
+                            <button class="comments-link">Specification</button>
+                        </li>
+                        <li class="comments-item">
+                            <button class="comments-link">Custom tab</button>
+                        </li>
+                    </ul>
+                    <div class="comments-add">
+                        <div class="comments-text">
+                            <p>There are no reviews for this product.</p>
+                        </div>
+                        <h3 class="add-title">Add a review</h3>
+                        <p>Your Rating</p>
+                        <div class="add-rating">
+                            <div class="add-rating_item">
+                                Bad
+                            </div>
+                            <div class="add-rating_item">
+                                <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                            </div>
+                            <div class="add-rating_item">
+                                Good
+                            </div>
+                        </div>
+                        <form class="commentsf-body">
+                            <div class="commentsf-item commentsf-item-big">
+                                <label for="comment">Your Review</label><br>
+                                <textarea id="comment" class="comments-field comments-field-big"></textarea>
+                            </div>
+                            <div class="commentsf-item">
+                                <input type="text" class="comments-field" placeholder="Name*">
+                            </div>
+                            <div class="commentsf-item">
+                                <input type="email" class="comments-field" placeholder="Email*" required>
+                            </div>
+                            <div class="commentsf-item commentsf-item-btn">
+                                <button class="comments-button">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <section class="catalog">
+            <div class="content">
+                <div class="catalog-title">
+                    <div class="catalog-dec">
+                        <h2 class="catalog-nw">New furniture</h2>
+                    </div>
+                    <div class="catalog-decor"></div>
+                </div>
+                <ul class="catalog-body">
+                    <li class="catalog-item">
+                        <div class="catalog-picture">
+                            <img src="img/catalog-image1.jpg" alt="" class="catalog-image">
+                            <div class="catalog-buttons">
+                                <button class="add-button catalog-btn ">Quick view</button>
+                                <button class="add-button catalog-btn">
+                                    <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                </button>
+                            </div>
+                        </div>
+                        <div class="deals-container">
+                            <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                            <div class="stars-wrap">
+                                <img src="img/stars.png" alt="" class="deals-stars">
+                            </div>
+                            <div class="deals-btns">
+                                <div class="btns-left">
+                                    <ul class="btns-list">
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btns-right">
+                                    <div class="btns-price-old">$35</div>
+                                    <div class="btns-price-new">$30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-picture">
+                            <div class="catalog-sale"><span>Sale</span></div>
+                            <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
+                            <div class="catalog-buttons">
+                                <button class="add-button catalog-btn ">Quick view</button>
+                                <button class="add-button catalog-btn">
+                                    <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                </button>
+                            </div>
+                        </div>
+                        <div class="deals-container">
+                            <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                            <div class="stars-wrap">
+                                <img src="img/stars.png" alt="" class="deals-stars">
+                            </div>
+                            <div class="deals-btns">
+                                <div class="btns-left">
+                                    <ul class="btns-list">
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btns-right">
+                                    <div class="btns-price-old">$35</div>
+                                    <div class="btns-price-new">$30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-picture">
+                            <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
+                            <div class="catalog-buttons">
+                                <button class="add-button catalog-btn ">Quick view</button>
+                                <button class="add-button catalog-btn">
+                                    <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                </button>
+                            </div>
+                        </div>
+                        <div class="deals-container">
+                            <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                            <div class="stars-wrap">
+                                <img src="img/stars.png" alt="" class="deals-stars">
+                            </div>
+                            <div class="deals-btns">
+                                <div class="btns-left">
+                                    <ul class="btns-list">
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btns-right">
+                                    <div class="btns-price-old">$35</div>
+                                    <div class="btns-price-new">$30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-picture">
+                            <div class="catalog-sale"><span>Sale</span></div>
+                            <a href="#"><img src="img/catalog-image4.jpg" alt="" class="catalog-image"></a>
+                            <div class="catalog-buttons">
+                                <button class="add-button catalog-btn ">Quick view</button>
+                                <button class="add-button catalog-btn">
+                                    <img src="img/add-button.png" class="add-icon" alt=""> Add to card
+                                </button>
+                            </div>
+                        </div>
+                        <div class="deals-container">
+                            <h4 class="text-center deals-bris">Aenean Ru Bristique</h4>
+                            <div class="stars-wrap">
+                                <img src="img/stars.png" alt="" class="deals-stars">
+                            </div>
+                            <div class="deals-btns">
+                                <div class="btns-left">
+                                    <ul class="btns-list">
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                        <li class="btns-item">
+                                            <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="btns-right">
+                                    <div class="btns-price-old">$35</div>
+                                    <div class="btns-price-new">$30</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="content">
+                <div class="row newsletter-body">
+                    <div class="col-2 text-right newsletter-title">
+                        <h2 class="orange">Newsletter:</h2>
+                    </div>
+                    <div class="col-7 newsletter-frm">
+                        <form class="newsletter-wrapper">
+                            <div class="letter-item">
+                                <img src="img/newsletter-icon.png" alt="" class="newsletter-icon">
+                                <input type="email" class="newsletter-field" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="letter-item2">
+                                <button class="newsletter-button"><img src="img/newsletter-btn.png" alt="" class="newsletter-search"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="links">
+            <div class="content">
+                <h2 class="hidden">Useful links</h2>
+                <div class="row links-body">
+                    <div class="col-3">
+                        <h3 class="links-title">INFORMATION</h3>
+                        <ul class="links-list">
+                            <li class="links-item"><a href="#" class="links-link">About us</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Privacy</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Conditions</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Online support</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="links-title">MY ACCOUNT</h3>
+                        <ul class="links-list">
+                            <li class="links-item"><a href="#" class="links-link">Login</a></li>
+                            <li class="links-item"><a href="#" class="links-link">My Cart</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Wishlist</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Checkout</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="links-title">INFORMATION</h3>
+                        <ul class="links-list">
+                            <li class="links-item"><a href="#" class="links-link">Specials</a></li>
+                            <li class="links-item"><a href="#" class="links-link">New Products</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Best Sellers</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Our Stores</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <h3 class="links-title">ORDERS</h3>
+                        <ul class="links-list">
+                            <li class="links-item"><a href="#" class="links-link">Payment options</a></li>
+                            <li class="links-item"><a href="#" class="links-link">hipping and delivery</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Returns</a></li>
+                            <li class="links-item"><a href="#" class="links-link">Shipping</a></li>
+                        </ul>
+                        <ul class="visa-list">
+                            <li class="visa-item"><img src="img/visa-image1.png" alt="" class="visa-image"></li>
+                            <li class="visa-item"><img src="img/visa-image2.png" alt="" class="visa-image"></li>
+                            <li class="visa-item"><img src="img/visa-image3.png" alt="" class="visa-image"></li>
+                            <li class="visa-item"><img src="img/visa-image4.png" alt="" class="visa-image"></li>
+                            <li class="visa-item"><img src="img/visa-image5.png" alt="" class="visa-image"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="content footer-body">
+                <div class="text-center footer-copy">© Copyright 2019 <a href="#" class="footer-link">Bazar</a> | All Rights Reserved</div>
+                <ul class="footer-list">
+                    <li class="footer-item">
+                        <a href="#" class="footer-link"><img src="img/footer-icon1.png" alt="" class="footer-icon"></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link"><img src="img/footer-icon2.png" alt="" class="footer-icon"></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link"><img src="img/footer-icon3.png" alt="" class="footer-icon"></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link"><img src="img/footer-icon4.png" alt="" class="footer-icon"></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link"><img src="img/footer-icon5.png" alt="" class="footer-icon"></a>
+                    </li>
+                    <li class="footer-item">
+                        <a href="#" class="footer-link"><img src="img/footer-icon6.png" alt="" class="footer-icon"></a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal modal-big">
+        <!-- Modal content -->
+        <div class="modal-content modal-content-big">
+            <span class="close">&times;</span>
+            <div class="row modal-wrap">
+                <div class="col-5 modal-left">
+                    <img src="img/featured-image3.jpg" alt="" class="modal-image">
+                </div>
+                <div class="col-7 modal-right">
+                    <h3 class="modals-title">Sunbaby Magic Bear Chair</h3>
+                    <div class="modals-rewiews">
+                        <div class="rewiews-item">
+                            <img src="img/stars.png" alt="" class="deals-stars featured-stars">
+                        </div>
+                        <div class="rewiews-item">(0 reviews)</div>
+                        <div class="rewiews-item"><a href="#" class="rewiews-link">Add Your Review</a></div>
+                    </div>
+                    <hr>
+                    <div class="modals-prices">
+                        <div class="btns-right">
+                            <div class="btns-price-old modals-prices-old">$35</div>
+                            <div class="btns-price-new modals-prices-new">$25</div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="modals-buttons">
+                        <ul class="btns-list btns-list-modals">
+                            <li class="modals-btns">
+                                <button class="add-button"><img src="img/add-button.png" class="add-icon" alt=""> Add to card</button>
+                            </li>
+                            <li class="btns-item">
+                                <a href="#" class="btns-link"><img src="img/btns-icon2.png" alt="" class="btns-icon"></a>
+                            </li>
+                            <li class="btns-item">
+                                <a href="#" class="btns-link"><img src="img/btns-icon3.png" alt="" class="btns-icon"></a>
+                            </li>
+                            <li class="btns-item">
+                                <a href="#" class="btns-link"><img src="img/btns-icon5.png" alt="" class="btns-icon"></a>
+                            </li>
+                        </ul>
+                        <ul class="quan-list">
+                            <li class="quan-item quan-item-lb">Quantity:</li>
+                            <li class="quan-item">
+                                <input type="number" id="quan" class="quan-field"> 
+                            </li>
+                            <li class="quan-item quan-item-btn"><a href="#" class="quan-link">-</a></li>
+                            <li class="quan-item quan-item-btn"><a href="#" class="quan-link">+</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="modals-text">
+                        <h4 class="modals-text_title">Quick Overview</h4>  
+                        <p>Nam tristique porta ligula, vel viverra sem eleifend nec. 
+                            Nulla sed purus augue, eu euis mod tellus. Nam mattis 
+                        eros tis sagittis. Vestibulum suscipit cursus biben.</p>
+                    </div>
+                    <hr>
+                    <div class="modals-category">
+                        <p class="modals-category_item">
+                            <b>Availability:</b> In Stock
+                        </p>
+                        <p class="modals-category_item">
+                            <b>Category:</b> Furniture
+                        </p>
+                    </div>
+                    <hr>
+                    <ul class="modals-share">
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon1.png" alt="" class="share-image"> Share</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon2.png" alt="" class="share-image"> Google+</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon3.png" alt="" class="share-image"> Tweet</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon4.png" alt="" class="share-image"> Pinterest</a>
+                        </li>
+                        <li class="share-item">
+                            <a href="#" class="share-link"><img src="img/share-icon5.png" alt="" class="share-image"> Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/multirange.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
