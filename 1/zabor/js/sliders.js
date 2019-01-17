@@ -4,10 +4,10 @@ function myFun(x) {
 }
 
 // Слайдеры
-$('.multiple-items').slick({
+$('.one-time').slick({
     infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     speed: 300,
     adaptiveHeight: true,
     dots: false,
@@ -17,12 +17,12 @@ $('.multiple-items').slick({
         breakpoint: 1340,
         settings: {
         arrows: false,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         }
       },
       {
-        breakpoint: 770,
+        breakpoint: 610,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
