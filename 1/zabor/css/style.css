@@ -139,9 +139,30 @@ main {
 }
 .main-body {
     background-color: #f6e2c7;
-    padding: 20px 0;
+    padding: 0;
     border-left: 2px dotted #9d7947;
     border-right: 2px dotted #9d7947;
+}
+
+.main-left {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.main-center {
+    padding-top: 22px;
+    padding-bottom: 0;
+    background-color: #efcfa3;
+}
+.main-right {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.main-left-non {
+    padding-top: 0;
+}
+.main-marg-non {
+    padding-top: 0;
+    margin-top: -20px;
 }
 section {
     border-top-left-radius: 5px;
@@ -418,7 +439,7 @@ footer .content {
 
 /* Страница: Новости */
 .news-nav {
-    margin-bottom: 35px;
+    margin: 20px 0;
     font-size: 16px;
     margin-left: -10px;
     margin-right: -10px;
@@ -449,4 +470,285 @@ footer .content {
 }
 .newszp-date-un {
     min-width: 100px;
+}
+
+/* Страница: Афиша */
+
+.afisha-menu {
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-image: url(../img/afisha-menu-bg.png);
+    background-size: 100% 100%;
+}
+.afisha-list {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #441601;
+    margin: 10px -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.afisha-list-small {
+    font-size: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+.afisha-item {
+    border-right: 1px solid #441601;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.afisha-item:last-child {
+    border-right: 1px solid transparent;
+}
+.afisha-link {
+    color: #441601;
+    border-bottom: 1px solid #a18075;
+}
+.afisha-link:hover,
+.afisha-link:focus {
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+}
+.movie {
+    background-color: #f8f4eb;
+    background-image: none;
+    box-shadow: none;
+    margin: 10px 0;
+}
+.column-title {
+    font-size: 14px;
+    padding-left: 20px;
+    background-image: url(../img/column-title.png);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.afisha-suptitle {
+    padding: 15px 20px;
+}
+.movie-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.movie-title_text {
+    text-transform: inherit;
+    font-size: 24px;
+    color: #4a0d00;
+}
+.movie-title_date {
+    font-size: 16px;
+    color: #000000;
+}
+.movie-body {
+    margin-top :20px;
+    display: flex;
+}
+.movie-picture {
+    margin-right: 20px;
+}
+.movie-text {
+    font-size: 18px;
+    color: #000000;
+    padding-bottom: 15px;
+}
+.movie-brown {
+    height: 1px;
+    background-color: #d6be95;
+    border: 0;
+}
+.movie-table {
+    font-size: 18px;
+    color: #000000;
+    margin: 0 -17px;
+}
+.movie-table td {
+    padding: 0 17px;
+}
+.places-title {
+    color: #4a0d00;
+    font-weight: bold;
+}
+.places-icons {
+    margin-top: -3px;
+}
+
+/* Стили карточек афиши */
+.movie-cards {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.movie-column {
+    background-color: #f8f4eb;
+    margin: 10px 10px;
+    padding: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url(../img/movie-column-bg.png);
+    background-repeat: repeat-x;
+    background-size: 350px 250px;
+    background-position: top;
+    color: #000000;
+    width: 31%;
+    position: relative;
+}
+.column-image {
+    margin-top: 20px;
+    height: 80px;
+}
+.column-text {
+    padding: 15px 20px;
+}
+.column-titles {
+    font-size: 14px;
+    text-transform: inherit;
+    color: #4a0d00;
+}
+.column-list {
+    margin: 10px 0 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d6be95;
+    font-size: 12px;
+}
+.column-cinema {
+    font-size: 12px;
+}
+.column-wrap {
+    display: flex;
+    align-items: center;
+    margin: 0 -5px;
+}
+.column-time,
+.column-price {
+    margin: 0 5px;
+    min-width: 140px;
+}
+.places-icons {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.places-icons2 {
+    width: 18px;
+    height: 12px;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+.column-more {
+    font-size: 12px;
+    margin-top: -10px;
+    text-align: right;
+    font-weight: bold;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.column-more_link {
+    border-bottom: 1px solid #a18075;
+}
+.column-more_link:hover,
+.column-more_link:focus {
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
+}
+.column-more_icon {
+    margin-left: 3px;
+}
+
+/* Афиша сайдбар */
+.main-bounce {
+    padding-top: 22px;
+    padding-bottom: 0;
+    background-color: #efcfa3;
+}
+.main-side {
+    padding-top: 10px;
+}
+.calendar {
+    background-color: #ffffff;
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+}
+.calendar-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.calendar-table {
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: bold;
+    border-spacing: 3px;
+    border-collapse: separate;
+}
+.calendar-table th {
+    font-size: 16px;
+}
+.calendar-table td {
+    padding: 5px 10px;
+}
+.calendar-pink {
+    background-color: #ed7769;
+    color: #ffffff;
+}
+.calendar-red {
+    background-color: #ba0038;
+    color: #ffffff;
+}
+.afisha-recomends {
+    border-top: 1px solid #d6be95;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.recomends-title {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #4a0d00;
+}
+.recomends-small {
+    border-bottom: 1px solid #cbad95;
+    color: #4a0d00;
+    font-size: 12px;
+}
+.recomends-small:hover,
+.recomends-small:focus {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+.recomends-title-small {
+    font-size: 18px;
+}
+.recomends-list {
+    font-size: 14px;
+    font-weight: bold;
+}
+.recomends-item {
+    margin: 5px 0;
+}
+.contests-title {
+    text-align: center;
+    background-image: url(../img/contests-link-bg.png);
+    border-radius: 5px;
+    border-bottom: 2px solid #c5b59f;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.contests-link {
+    border-bottom: 1px solid #4a0d00;
+}
+.contests-link:hover,
+.contests-link:focus {
+    border-bottom: 1px solid transparent;
+    text-decoration: none;
 }
