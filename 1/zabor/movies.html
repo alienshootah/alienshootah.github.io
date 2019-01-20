@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Афиша</title>
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <div class="content">
+                <div class="row header-body">
+                    <div class="col-3 header-logo">
+                        <a href="#"><img src="img/header-image.png" alt="" class="header-image"></a>
+                        <a href="#"><img src="img/mobi-image.png" alt="" class="mobi-image"></a>
+                    </div>
+                    <div class="col-9 header-links">
+                        <div class="header-wrap">
+                            <nav  class="navbar-expand-sm">
+                                <ul class="responsive-list">
+                                    <li class="responsive-item">
+                                        <a href="#" class="resonsive-link" data-target="#collapsibleNavbar" data-toggle="collapse">
+                                            <img src="img/responsive-icon1.png" alt="" class="responsive-icon">
+                                        </a>
+                                    </li>
+                                    <li class="responsive-item">
+                                        <a href="#" data-toggle="collapse" data-target="#search-mob" class="resonsive-link"><img src="img/responsive-icon2.png" alt="" class="responsive-icon"></a>
+                                        <div id="search-mob" class="collapse collapse-body">
+                                            <form class="search search-mobi">
+                                                <input type="text" class="search-field" placeholder="Поиск по сайту">
+                                                <button class="search-button" data-toggle="collapse" data-target="#search-mob">
+                                                    <img src="img/search-close.png" alt="" class="search-icon search-close">
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </li>
+                                    <li class="responsive-item">
+                                        <a href="#" class="resonsive-link">
+                                            <img src="img/responsive-icon3.png" alt="" class="responsive-icon">
+                                        </a>
+                                    </li>
+                                    <li class="responsive-item">
+                                        <a href="#" class="resonsive-link"><img src="img/responsive-icon4.png" alt="" class="responsive-icon"></a>
+                                    </li>
+                                </ul>
+                                <ul class="collapse navbar-collapse navbar nav header-list" id="collapsibleNavbar">
+                                    <li class="header-item"><a href="#" class="header-link">Афиша</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Итоги дня</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Обзор прессы</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Фотособытие</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Такси</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Маршрутки</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Поезда</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Авиа</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Справка</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Гостиницы</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Больницы</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Вузы</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Культура</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Карта города</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Связь с нами</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">О зп</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">Места</a></li>
+                                    <li class="header-item"><a href="#" class="header-link">История</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1 class="hidden">Информационно-развлекательный сайт</h1>
+            <div class="content">
+                <div class="row main-body">
+                    <div class="col-9 main-bounce">
+                        <div class="afisha-menu">
+                            <ul class="afisha-list">
+                                <li class="afisha-item"><a href="#" class="afisha-link">Кино</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Театр</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Концерты</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Ночные клубы</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Выставки</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Дети</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Спорт</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Конкурсы</a></li>
+                            </ul>
+                            <ul class="afisha-list afisha-list-small">
+                                <li class="afisha-item"><a href="#" class="afisha-link">Городские праздники</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Цирк</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Фестивали</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Экскурсии</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Мастер классы</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Ярмарки</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Пресс-конференция</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Квесты</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Кастинги</a></li>
+                            </ul>
+                        </div>
+                        <section class="movie">
+                            <div class="afisha-suptitle">
+                                <div class="text-center movie-title-big">
+                                    Байда-Кино
+                                </div>
+                                <div class="movies-title">
+                                    <h3 class="movie-title_text">Боги египта <span class="movie-title-small">(Gods of Egypt)</span></h3>
+                                    <div class="movie-title_date">Сегодня, 4 февраля</div>
+                                </div>
+                                <div class="movies-body">
+                                    <div class="movies-picture">
+                                        <a href="#"><img src="img/movie-image.jpg" alt="" class="movie-image"></a>
+                                    </div>
+                                    <div class="movie-text">
+                                        <p class="movies-descr">Некогда мирное и процветающее египетское царство погружается в хаос: 
+                                            беспощадный бог тьмы Сет убивает своего брата Осириса и узурпирует трон. Вызов ему 
+                                            неожиданно бросает простой смертный, находчивый молодой вор. Чтобы вернуть к жизни 
+                                            свою прекрасную возлюбленную, ему приходится заручиться поддержкой могущественного и 
+                                            мстительного бога Гора. Лишь выдержав испытание на прочность и принеся в жертву все 
+                                            самое дорогое, им удастся противостоять Сету и его приспешникам в мире живых и мире 
+                                            мертвых.</p>
+                                        <hr class="movie-brown">
+                                        <div class="movie-resp">
+                                            <table class="movie-table movie-table-brown">
+                                                <tr>
+                                                    <td class="places-title places-title-brown">Продолжительности:</td>
+                                                    <td><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="places-title places-title-brown">Цена билета:</td>
+                                                    <td><img src="img/places-icon2.png" alt="" class="places-icons"> 20-30 грн</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="massive-tabs">
+                                    <div class="movie-tabs">
+                                        <ul class="nav tabs-menu">
+                                            <li class="tabs-menu_item"><a href="#video" data-toggle="tab" class="tabs-link active">Видео</a></li>
+                                            <li class="tabs-menu_item"><a href="#review" data-toggle="tab" class="tabs-link">Отзыв</a></li>
+                                            <li class="tabs-menu_item"><a href="#photo" data-toggle="tab" class="tabs-link">Фото</a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tab-content tabscontent">
+                                        <div class="tabs-text tab-pane active" id="video">
+                                            <h4 class="text-center tabs-title">Трейлер (дублированный)</h4>
+                                            <div class="tabs-trailer">
+                                                <div class="text-center">
+                                                    <video width="100%" class="videos-all" controls>
+                                                        <source src="videos/2_slider2.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>
+                                                <div class="trailer-info">
+                                                    <div class="trailer-time">
+                                                        <img src="img/trailer-time.png" alt="" class="trailer-icon trailer-icon-time"> 2:35
+                                                    </div>
+                                                    <div class="trailer-forward">
+                                                        <img src="img/trailer-forwar.png" alt="" class="trailer-icon trailer-icon-forward"> 
+                                                        <a href="#" class="trailer-link">другие трейлеры</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs-text tabs-text-comments tab-pane fade" id="review">
+                                            <ul class="comment-list">
+                                                <li class="comment-item">
+                                                    <div class="comment-picture">
+                                                        <img src="img/comment-image1.jpg" alt="" class="comment-image">
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <div class="comment-title">
+                                                            <div class="comment-author">galina-ribkina</div>
+                                                            <div class="comment-date">22 июнь 2015, 12:41</div>
+                                                        </div>
+                                                        <p class="comment-descr">
+                                                                Премьеру фильма «Бои Египта» я никак не могла пропустить, 
+                                                                и вот почему. Во-первых, эта картина станет на этой неделе 
+                                                                и на следующих лидером проката, что само по себе уже заманчиво. 
+                                                                Во-вторых, постоянно смотрела трейлеры к фильму, которые 
+                                                                транслировались по телевизору, а также в кинотеатрах (кстати, 
+                                                                именно там я и поняла, что этот фильм нельзя пропустить, так 
+                                                                как спецэффекты и все сцены были на высоте). Ну и, в-третьих, 
+                                                                я обожаю мифологию, древних богов, а уж тем более Египет, где 
+                                                                одна из богатейших мифологий после Древней Греции. Так что долго 
+                                                                я не думала и поспешила на премьерный показ «Богов Египта», чтобы 
+                                                                и самой посмотреть творение и поделиться в дальнейшем с вами 
+                                                                своими впечатлениями от просмотра, а также дать справедливую 
+                                                                оценку увиденному. Сразу хочу сказать, что фильм оказался во 
+                                                                всех отношениях положительным, и не важно, что говорят другие 
+                                                                критики киноманы – фильм получился крутым и динамичным.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="comment-item">
+                                                    <div class="comment-picture">
+                                                        <img src="img/comment-image2.jpg" alt="" class="comment-image">
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <div class="comment-title">
+                                                            <div class="comment-author">natalika87</div>
+                                                            <div class="comment-date">22 июнь 2015, 12:41</div>
+                                                        </div>
+                                                        <p class="comment-descr">Посмотрю</p>
+                                                    </div>
+                                                </li>
+                                                <li class="comment-item">
+                                                    <div class="comment-picture">
+                                                        <img src="img/comment-image3.jpg" alt="" class="comment-image">
+                                                    </div>
+                                                    <div class="comment-text">
+                                                        <div class="comment-title">
+                                                            <div class="comment-author">lexnadin</div>
+                                                            <div class="comment-date">22 июнь 2015, 12:41</div>
+                                                        </div>
+                                                        <p class="comment-descr">ждали с нетерпением этот фильм…)</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="comment-more">
+                                                <div class="comment-add"><a href="#" class="comment-add_link">Оставить отзыв</a></div>
+                                                <div class="comment-all"><a href="#" class="comment-add_link">Все отзывы</a></div>
+                                            </div>
+                                        </div>
+                                        <div class="tabs-text tab-pane fade" id="photo">
+                                            <ul class="photo-list">
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image1.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image2.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image3.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image4.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image1.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image1.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image2.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image3.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image4.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="photo-item">
+                                                    <a href="#"><img src="img/photo-image1.jpg" alt="" class="photo-image"></a>
+                                                    <div class="photo-info">
+                                                        <div class="photo-size">555×755</div>
+                                                        <div class="photo-kb">203 Кб</div>
+                                                        <div class="photo-full">
+                                                            <a href="#"><img src="img/photo-icon.png" alt="" class="photo-icon"></a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="movie-cards">
+
+                            <div class="movie-column">
+                                <div class="text-center">
+                                    <img src="img/cinema-image1.jpg" alt="" class="column-image">
+                                </div>
+                                <div class="column-text column-text-movies">
+                                    <h4 class="column-titles"><a href="#">Панда Кунг-фу</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 class="column-titles"><a href="#">Боги египта</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 class="column-titles"><a href="#">Дедпул</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="column-more">
+                                    <a href="#" class="column-more_link">
+                                        Все фильмы
+                                        <img src="img/column-more_icon.png" alt="" class="column-more_icon">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="movie-column">
+                                <div class="text-center">
+                                    <img src="img/cinema-image2.jpg" alt="" class="column-image">
+                                </div>
+                                <div class="column-text column-text-movies">
+                                    <h4 class="column-titles"><a href="#">Панда Кунг-фу</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 class="column-titles"><a href="#">Боги египта</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 class="column-titles"><a href="#">Дедпул</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="column-more">
+                                    <a href="#" class="column-more_link">
+                                        Все фильмы
+                                        <img src="img/column-more_icon.png" alt="" class="column-more_icon">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="movie-column">
+                                <div class="text-center">
+                                    <img src="img/cinema-image4.png" alt="" class="column-image">
+                                </div>
+                                <div class="column-text column-text-movies">
+                                    <h4 class="column-titles"><a href="#">Панда Кунг-фу</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 class="column-titles"><a href="#">Боги египта</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <h4 class="column-titles"><a href="#">Дедпул</a></h4>
+                                    <ul class="column-list">
+                                        <li class="column-list_item">
+                                            <div class="column-wrap">
+                                                <div class="column-time"><img src="img/places-icon1.png" alt="" class="places-icons"> 12:00, 13:00, 18:00</div>
+                                                <div class="column-price"><img src="img/places-icon2.png" alt="" class="places-icons2"> 20-30 грн</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="column-more">
+                                    <a href="#" class="column-more_link">
+                                        Все фильмы
+                                        <img src="img/column-more_icon.png" alt="" class="column-more_icon">
+                                    </a>
+                                </div>
+                            </div>
+                                
+                        </div>
+                        <div class="afisha-down-menu">
+                            <ul class="afisha-list">
+                                <li class="afisha-item"><a href="#" class="afisha-link">Кино</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Театр</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Концерты</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Ночные клубы</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Выставки</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Дети</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Спорт</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Конкурсы</a></li>
+                            </ul>
+                            <ul class="afisha-list afisha-list-small">
+                                <li class="afisha-item"><a href="#" class="afisha-link">Городские праздники</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Цирк</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Фестивали</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Экскурсии</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Мастер классы</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Ярмарки</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Пресс-конференция</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Квесты</a></li>
+                                <li class="afisha-item"><a href="#" class="afisha-link">Кастинги</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3 main-side">
+                        <div class="catalog-add">
+                            <a href="#" class="catalog-add_link">Добавить событие</a>
+                        </div>
+                        <div class="calendar">
+                            <div class="calendar-title">Февраль</div>
+                            <table class="calendar-table">
+                                <thead>
+                                    <tr>
+                                        <th>пн</th>
+                                        <th>вт</th>
+                                        <th>ср</th>
+                                        <th>чт</th>
+                                        <th>пт</th>
+                                        <th>сб</th>
+                                        <th>вс</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td class="calendar-pink">6</td>
+                                        <td class="calendar-pink">7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>9</td>
+                                        <td>10</td>
+                                        <td>11</td>
+                                        <td>12</td>
+                                        <td class="calendar-pink">13</td>
+                                        <td class="calendar-pink">14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td>16</td>
+                                        <td>17</td>
+                                        <td>18</td>
+                                        <td>19</td>
+                                        <td>20</td>
+                                        <td class="calendar-pink">21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-pink">22</td>
+                                        <td class="calendar-red">23</td>
+                                        <td>24</td>
+                                        <td>25</td>
+                                        <td>26</td>
+                                        <td class="calendar-pink">27</td>
+                                        <td class="calendar-pink">28</td>
+                                    </tr>
+                                    <tr>
+                                        <td>29</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center">
+                            <img src="img/afisha-fun.jpg" alt="" class="afisha-fun">
+                        </div>
+                        <div class="afisha-recomends">
+                            <div class="recomends-title">ZaБор рекомендует</div>
+                            <p class="text-center">
+                                <a href="#" class="recomends-small">Поиск по афише</a> | 
+                                <a href="#" class="recomends-small">Поиск по сайту</a>
+                            </p>
+                            <ul class="recomends-list">
+                                <li class="recomends-item"><a href="#" class="recomends-link">Кино</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Театр</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Концерты</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Ночные клубы</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Выставки</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Дети</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Спорт</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Городские праздники</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Цирк</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Фестивали</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Экскурсии</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Мастер-классы</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Ярмарки</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Пресс-конференции</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Квесты</a></li>
+                            </ul>
+                            <hr class="recomends-decor">
+                            <h3 class="recomends-title-small">Отдых в Запорожье</h3>
+                            <ul class="recomends-list">
+                                <li class="recomends-item"><a href="#" class="recomends-link">Кафе, рестораны</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Ночные клубы</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Бильярд</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Боулинг</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Экстрим отдых</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Кальянные</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Сауны</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Отели</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Туризм</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Спорт, фитнес</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">Шоппинг, магазины</a></li>
+                            </ul>
+                            <hr class="recomends-decor">
+                            <h3 class="recomends-title-small">Афиша на других сайтах</h3>
+                            <ul class="recomends-list">
+                                <li class="recomends-item"><a href="#" class="recomends-link">www.site1.ru</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">www.site2.ru</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">www.site3.ru</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">www.site4.ru</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">www.site5.ru</a></li>
+                                <li class="recomends-item"><a href="#" class="recomends-link">www.site6.ru</a></li>
+                            </ul>
+                        </div>
+                        <section class="newszp">
+                            <div class="spec-title">
+                                    <img src="img/spec-image2.png" alt="" class="spec-image">
+                                    <h2 class="spec-title_text">Новости Запорожья</h2>
+                                <ul class="newszp-list">
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В Запорожской области перевернулась грузовая истерна с топливом</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В госпитале скончался боец воевавший в зоне АТО</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">3 мая в Запорожье: жуткое ДТП, милиционер с георгиевской лентой и пикет против Опблока</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В Запорожской области перевернулась грузовая истерна с топливом</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В госпитале скончался боец воевавший в зоне АТО</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">3 мая в Запорожье: жуткое ДТП, милиционер с георгиевской лентой и пикет против Опблока</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В Запорожской области перевернулась грузовая истерна с топливом</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В госпитале скончался боец воевавший в зоне АТО</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">3 мая в Запорожье: жуткое ДТП, милиционер с георгиевской лентой и пикет против Опблока</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В Запорожской области перевернулась грузовая истерна с топливом</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">В госпитале скончался боец воевавший в зоне АТО</a></li>
+                                    <li class="newszp-item"><span class="newszp-date">23-06-19</span> <a href="#" class="newszp-link">3 мая в Запорожье: жуткое ДТП, милиционер с георгиевской лентой и пикет против Опблока</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <div class="contests-title"><a href="#" class="contests-link">Конкурсы</a></div>
+                        <div class="text-center" style="display: none;">
+                            <img src="img/contests-image1.jpg" alt="" class="contests-image"><br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="content">
+                <ul class="footer-list">
+                    <li class="footer-item"><a href="#" class="footer-link">Главная</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Новости</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Форум</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Фотогалерея</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Акции</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">Конкурсы</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link">WOMAN</a></li>
+                </ul>
+                <p class="text-center footer-copy">При копировании материалов с сайта, гиперссылка на "ZaБор" обязательна. Все права защищены!!!</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap4/js/bootstrap.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/sliders.js"></script>
+</body>
+</html>
