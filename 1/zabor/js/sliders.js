@@ -64,3 +64,47 @@ $('.multiple-items').slick({
     // instead of a settings object
   ]
 });
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$('.slider-nav').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: false,
+  centerMode: false,
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 1590,
+      settings: {
+      arrows: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 994,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: false,
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
