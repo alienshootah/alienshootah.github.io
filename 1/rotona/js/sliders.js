@@ -10,13 +10,12 @@ $('.one-time').slick({
     slidesToScroll: 1,
     speed: 300,
     adaptiveHeight: true,
-    dots: false,
-    arrows: true,
+    dots: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1340,
         settings: {
-        arrows: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         }
@@ -26,7 +25,6 @@ $('.one-time').slick({
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
         }
       }
       // You can unslick at a given breakpoint now by adding:
