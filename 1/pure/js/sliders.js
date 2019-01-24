@@ -29,4 +29,9 @@ $('.multiple-items').slick({
       // instead of a settings object
     ]
    
-  });
+});
+
+// Таймер на появление всплывающего окна
+var delay_popup = 5000;
+setTimeout("document.getElementById('bg_popup').style.display='block'", delay_popup);
+
