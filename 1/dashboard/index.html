@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <header>
+        <div class="row header-body">
+            <div class="col-3 header-logo">
+                <div class="header-image">
+                    <img src="img/header-image.png" alt="" class="header-image">
+                </div>
+                <div class="header-text">
+                    <a href="#" >Space</a>
+                </div>
+                <div class="responsive-icon">
+                    <div class="icon" onclick="myMenu()">
+                        <div class="cont" onclick="myIcon(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 header-links">
+                <div class="header-title">Dashboard</div>
+                <ul class="header-list">
+                    <li class="header-item">
+                        <div class="header-badge">3</div>
+                        <a href="#" class="header-link"><img src="img/header-icon1.png" alt="" class="header-icon"></a>
+                    </li>
+                    <li class="header-item">
+                        <div class="header-badge">4</div>
+                        <a href="#" class="header-link"><img src="img/header-icon2.png" alt="" class="header-icon"></a>
+                    </li>
+                    <li class="header-item"><a href="#" class="header-link"><img src="img/header-icon3.png" alt="" class="header-icon"></a></li>
+                    <li class="header-item">
+                        <div class="dropdown">
+                            <button onclick="myFunction()" class="header-link dropbtn dropbtn-top"></button>
+                            <div id="myDropdown" class="navigation dropdown-content">
+                                <ul class="navigation-list">
+                                    <li class="navigation-item">
+                                        <img src="img/navigation-icon1.png" alt="" class="navigation-icon">
+                                        <a href="#" class="navigation-link">My profile</a>
+                                    </li>
+                                    <li class="navigation-item">
+                                        <img src="img/navigation-icon2.png" alt="" class="navigation-icon">
+                                        <a href="#" class="navigation-link">Balance</a>
+                                    </li>
+                                    <li class="navigation-item">
+                                        <img src="img/navigation-icon3.png" alt="" class="navigation-icon">
+                                        <a href="#" class="navigation-link">Connections</a>
+                                        <div class="navigation-badge navigation-blue">29</div>
+                                    </li>
+                                    <li class="navigation-item">
+                                        <img src="img/navigation-icon4.png" alt="" class="navigation-icon">
+                                        <a href="#" class="navigation-link">Friends</a>
+                                    </li>
+                                </ul>
+                                <ul class="navigation-list navigation-list-set">
+                                    <li class="navigation-item">
+                                        <img src="img/navigation-icon5.png" alt="" class="navigation-icon">
+                                        <a href="#" class="navigation-link">Events</a>
+                                    </li>
+                                    <li class="navigation-item">
+                                        <img src="img/navigation-icon6.png" alt="" class="navigation-icon">
+                                        <a href="#" class="navigation-link">Account settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row main-body">
+            <div class="col-3 sidebar topnav" id="myTopnav">
+                <div class="author">
+                    <div class="author-picture">
+                        <img src="img/hqdefault.jpg" alt="" class="author-image">
+                    </div>
+                    <div class="author-fio">
+                        <b class="author-name">HUNGFT PHAM</b><br>
+                        <div class="dropdown">
+                            <button onclick="myFunction2()" class="dropbtn author-dropdown">UX designer</button>
+                            <div id="myDropdown2" class="dropdown-content dropdown-content-def">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-title">UI Kits</div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon1.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Dashboard</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon2.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Apps</a>
+                        <div class="sidebar-badge sidebar-badge-orange">3</div>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon3.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Components</a>
+                        <div class="sidebar-badge sidebar-badge-green">9</div>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon4.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Email</a>
+                        <div class="sidebar-badge sidebar-badge-blue">4</div>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon5.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Form</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon6.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Maps</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon7.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Pages</a>
+                        <div class="sidebar-badge sidebar-badge-yellow">8</div>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon8.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Menu</a>
+                    </li>
+                </ul>
+                <ul class="sidebar-list sidebar-list-valid">
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon9.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Settings</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon10.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">Document</a>
+                        <div class="sidebar-badge sidebar-badge-blue">2</div>
+                    </li>
+                    <li class="sidebar-item">
+                        <img src="img/sidebar-icon11.png" alt="" class="sidebar-icon"> 
+                        <a href="#" class="sidebar-link">HTML Version</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9 content">
+                <section class="welcome">
+                    <h2 class="hidden">Views and Leads</h2>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="wrap">
+                                <div class="unit-body">
+                                    <div class="unit-text">
+                                        <h3 class="unit-title">Welcome to <span class="blue">Space</span></h3>
+                                        <p class="unit-descr">Number Of Views</p>
+                                    </div>
+                                    <div class="unit-num">102</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="wrap">
+                                <div class="unit-body">
+                                    <div class="unit-text">
+                                        <h3 class="unit-title">Active</h3>
+                                        <p class="unit-descr">Leads/Contacts</p>
+                                    </div>
+                                    <div class="unit-num">325</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="total">
+                    <h2 class="hidden">Views and Leads</h2>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="wrap">
+                            <div class="total-picture">
+                                <div class="totat-text">
+                                    <div class="total-num total-num-blue">66,163k</div>
+                                    <div class="total-descr">Total Leads</div>
+                                </div>
+                                <div class="total-image">
+                                    <img src="img/total-image1.png" alt="" class="total-image">
+                                </div>
+                            </div>
+                                <div class="totat-per totat-per-blue">
+                                    <div class="totat-chance">% change</div>
+                                    <div class="totat-image"><img src="img/totat-icon.png" alt="" class="totat-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="wrap">
+                                <div class="total-picture">
+                                    <div class="totat-text">
+                                        <div class="total-num total-num-red">3,490K</div>
+                                        <div class="total-descr">Total Pending</div>
+                                    </div>
+                                    <div class="total-image">
+                                        <img src="img/total-image2.png" alt="" class="total-image">
+                                    </div>
+                                </div>
+                                <div class="totat-per totat-per-red">
+                                    <div class="totat-chance">% change</div>
+                                    <div class="totat-image"><img src="img/totat-icon.png" alt="" class="totat-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="wrap">
+                                <div class="total-picture">
+                                    <div class="totat-text">
+                                        <div class="total-num total-num-green">8,372K</div>
+                                        <div class="total-descr">Case Closed</div>
+                                    </div>
+                                    <div class="total-image">
+                                        <img src="img/total-image3.png" alt="" class="total-image">
+                                    </div>
+                                </div>
+                                <div class="totat-per totat-per-green">
+                                    <div class="totat-chance">% change</div>
+                                    <div class="totat-image"><img src="img/totat-icon.png" alt="" class="totat-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="wrap">
+                                <div class="total-picture">
+                                    <div class="totat-text">
+                                        <div class="total-num total-num-yellow">5,355K</div>
+                                        <div class="total-descr">Task Completed</div>
+                                    </div>
+                                    <div class="total-image">
+                                        <img src="img/total-image4.png" alt="" class="total-image">
+                                    </div>
+                                </div>
+                                <div class="totat-per totat-per-yellow">
+                                    <div class="totat-chance">% change</div>
+                                    <div class="totat-image"><img src="img/totat-icon.png" alt="" class="totat-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="graphics">
+                    <h2 class="hidden">Graphics and text</h2>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="wrap">
+                                <div class="graphics-body">
+                                    <div class="graphics-text">
+                                        <h3 class="graphics-title">Sales in 2019</h3>
+                                        <p class="graphics-descr">Collaboratively administrate empowered markets 
+                                            via plug-and-play networks. Dynamically procrastinate B2C users after 
+                                            installed base benefits. Dramatically visualize customer directed 
+                                            convergence without revolutionary ROI.
+                                        </p>
+                                    </div>
+                                    <div class="graphics-picture">
+                                        <img src="img/graphics-image.png" alt="" class="graphics-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="stat">
+                    <h2 class="hidden">Statistics</h2>
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="wrap">
+                                <div class="stat-title">
+                                    <h3 class="stat-title_text">ACTIVE LEADS</h3>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="stat-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Lead Name</th>
+                                                <th>Views</th>
+                                                <th>Favorites</th>
+                                                <th>Last Visit</th>
+                                                <th>Last Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="table-blue">Buyer</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon1.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-blue">Buyer</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon1.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-green">Landlord</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon2.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-blue">Buyer</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon2.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-red">Seller</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon1.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-blue">Buyer</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon1.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-blue">Buyer</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon2.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="table-blue">Buyer</td>
+                                                <td>Denise Ann</td>
+                                                <td>153</td>
+                                                <td>0</td>
+                                                <td>9:23 AM</td>
+                                                <td><img src="img/table-icon1.png" alt="" class="table-icon"> 8/27/2019</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="wrap">
+                                <div class="stat-title">
+                                    <h3 class="stat-title_text">TODO LIST</h3>
+                                    <button class="stat-button">Togglle All</button>
+                                </div>
+                                <form>
+                                    <ul class="stat-list">
+                                        <li class="stat-item">
+                                            <label for="check1">
+                                                <input type="checkbox" class="stat-checks" id="check1">
+                                                Collaboratively administrate
+                                            </label> 
+                                        </li>
+                                        <li class="stat-item">
+                                            <label for="check2">
+                                                <input type="checkbox" class="stat-checks" id="check2" checked>
+                                                <span>Another todo on the list. Add as many you want.</span> 
+                                            </label> 
+                                        </li>
+                                        <li class="stat-item">
+                                            <label for="check3">
+                                                <input type="checkbox" class="stat-checks" id="check3">
+                                                Dramatically maintain clicks-and-mortar
+                                            </label> 
+                                        </li>
+                                        <li class="stat-item">
+                                            <label for="check4">
+                                                <input type="checkbox" class="stat-checks" id="check4">
+                                                administrate empowered markets.
+                                            </label> 
+                                        </li>
+                                    </ul>
+                                    <input type="text" class="stat-field" placeholder="Write some todo task here">
+                                    <div class="stat-buttons">
+                                        <div class="stat-left">
+                                            <button class="stat-button stat-btn-green">All</button>
+                                            <button class="stat-button">Active</button>
+                                        </div>
+                                        <div class="stat-right">
+                                            <button class="stat-button">Clear Completed (1)</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="analitycs">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="analitycs-wrap">
+                                <div class="wrap wrap-nlts">
+                                    <div class="stat-title">
+                                        <h3 class="stat-title_text">ACTIVITIES</h3>
+                                    </div>
+                                    <div class="analitycs-item">
+                                        <div class="analitycs-picture">
+                                            <img src="img/analitycs-icon1.png" alt="" class="analitycs-icon">
+                                        </div>
+                                        <div class="analitycs-text">
+                                            <div class="analitycs-date">2 mins ago</div>
+                                            <div class="analitycs-descr">Template Builder Access (Video tutorial inside documentation)</div>
+                                        </div>
+                                    </div>
+                                    <div class="analitycs-item">
+                                        <div class="analitycs-picture">
+                                            <img src="img/analitycs-icon2.png" alt="" class="analitycs-icon">
+                                        </div>
+                                        <div class="analitycs-text">
+                                            <div class="analitycs-date">1 hour ago</div>
+                                            <div class="analitycs-descr">Designed the wordpress theme lily created her account.</div>
+                                        </div>
+                                    </div>
+                                    <div class="analitycs-item">
+                                        <div class="analitycs-picture">
+                                            <img src="img/analitycs-icon3.png" alt="" class="analitycs-icon">
+                                        </div>
+                                        <div class="analitycs-text">
+                                            <div class="analitycs-date">4:30 p.m</div>
+                                            <div class="analitycs-descr">Your domain will expired in 13 days.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="analitycs-wrap">
+                                <div class="wrap wrap-nlts">
+                                    <div class="stat-title">
+                                        <h3 class="stat-title_text">ACTIVITIES</h3>
+                                    </div>
+                                    <div class="analitycs-info">
+                                        <div class="info-picture">
+                                            <img src="img/info-image.jpg" alt="" class="info-image">
+                                        </div>
+                                        <div class="info-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna 
+                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                            ullamco laboris nisi ut.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="wrap wrap-nlts">
+                                <div class="stat-title">
+                                    <h3 class="stat-title_text">Analytics</h3>
+                                </div>
+                                <img src="img/analitycs-graphic.jpg" alt="" class="analitycs-graphic">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <div class="row">
+                        <div class="col-8">
+                            <ul class="footer-list">
+                                <li class="footer-item">Copyright 2019. All rights reserved</li>
+                                <li class="footer-item"><a href="#" class="footer-link">Careers</a></li>
+                                <li class="footer-item"><a href="#" class="footer-link">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="text-right footer-list footer-list-end">
+                                <li class="footer-item"><a href="http://themeforest.net/" class="footer-link">Feedback</a></li>
+                                <li class="footer-item"><a href="#" class="footer-link"><img src="img/footer-up.png" alt="" class="footer-up"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
