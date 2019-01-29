@@ -83,8 +83,9 @@ a:focus {
 /* Шапка */
 
 header {
-    position: relative;
-    z-index: 1000;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
     background-color: #d9d9d9;
     background-image: url(../img/header-bg.jpg);
     background-repeat: repeat;
@@ -135,7 +136,7 @@ main {
     background-color: #d9d9d9;
     background-image: url(../img/main-bg2.jpg);
     background-repeat: repeat;
-    padding: 0;
+    padding-top: 150px;
 }
 .main-body {
     background-color: #f6e2c7;
@@ -620,7 +621,6 @@ footer .content {
 }
 .places-icons {
     width: 15px;
-    height: 15px;
     margin-right: 5px;
 }
 .places-icons2 {
@@ -1130,6 +1130,24 @@ footer .content {
     border-bottom: 1px solid transparent;
     text-decoration: none;
 }
+.time,
+.tags {
+    margin-bottom: 10px;
+}
+
+/* Форма входа на сайт */
+.enter-buttons {
+    display: flex;
+    margin: 10px -5px;
+}
+.enter-item {
+    margin-bottom: 15px;
+}
+.enter-btn {
+    font-size: 14px;
+    cursor: pointer;
+    margin: 0 5px;
+}
 
 /* Слайдер */
 .slick-track {padding-top: 0;}
@@ -1146,8 +1164,8 @@ footer .content {
 .slick-prev, .slick-next {
     top: 35%;
 }
-.slick-prev {left: 50px; z-index: 9999;}
-.slick-next {right: 50px; z-index: 9999;}
+.slick-prev {left: 50px; z-index: 5000;}
+.slick-next {right: 50px; z-index: 5000;}
 
 .hotnews-slider .slick-prev {left: -45px;}
 .hotnews-slider .slick-next {right: -45px;}
@@ -1163,5 +1181,5 @@ footer .content {
     top: 37%;
     z-index: 9999;
 }
-.slider-nav .slick-prev {left: -20px; z-index: 9999;}
-.slider-nav .slick-next {right: 20px; z-index: 9999;}
+.slider-nav .slick-prev {left: -20px; z-index: 5000;}
+.slider-nav .slick-next {right: 20px; z-index: 5000;}
