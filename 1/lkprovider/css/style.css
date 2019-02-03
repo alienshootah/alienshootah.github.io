@@ -1,9 +1,21 @@
+/* Шрифт */
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    font-family: Roboto;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 /* Шапка */
+.titles {
+    margin: 10px 0;
+    padding: 0 20px;
+}
 h1 {
     font-size: 30px;
 }
@@ -13,6 +25,7 @@ h1 {
 }
 
 /* Навигация */
+
 .navi-list {
     list-style: none;
     padding: 0;
@@ -26,7 +39,7 @@ h1 {
     position: relative;
     display: flex;
     align-items: center;
-
+    padding: 0 15px;
 }
 .navi-item:first-child {
     border-top-left-radius: 4px;
@@ -41,9 +54,7 @@ h1 {
     color: #000000;
     display: block;
     width: 100%;
-
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 12px 10px;
 }
 .navi-item:hover,
 .navi-item:focus,
@@ -52,35 +63,89 @@ h1 {
     color: #ffffff;
     text-decoration: none;
 }
+.navi-item:hover .navi-link,
+.navi-item:focus .navi-link,
+.navi-item.active .navi-link {
+    color: #ffffff;
+}
+.navi-item:hover .navi-num,
+.navi-item:focus .navi-num,
+.navi-item.active .navi-num {
+    color: #ffffff;
+}
 .navi-link:hover,
-.navi-link:focus,
 .active .navi-link {
     background-color: #8BBE28;
     color: #ffffff;
     text-decoration: none;
 }
 .nav-icon {
-    /*
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    
-    */
-    width: 35px;
     display: inline-block;
     vertical-align: baseline;
     text-align: center;
+    margin-right: 5px;
+    width: 25px;
 }
-
 .navi-num {
     display: inline-block;
     vertical-align: baseline;
-   
-    /*
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    */
     color: rgba(136, 136, 136, 0.84);
     font-size: 13px;
+}
+.navi-small {
+    font-size: 13px;
+    display: block;
+}
+
+/* Содержимое */
+
+.info {
+    border-radius: 4px;
+    border: 1px solid #D0D0D0;
+}
+.info-title {
+    border-bottom: 1px solid #D0D0D0;
+    padding: 10px 20px;
+    font-size: 24px;
+    margin: 0;
+}
+.info-text {
+    padding: 0 20px;
+}
+.news-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.news-item {
+    display: flex;
+    margin: 10px 0;
+    border-bottom: 1px solid #D0D0D0;
+    padding: 10px 0 20px 0;
+}
+.news-item:last-child {
+    border-bottom: 0;
+}
+.news-picture {
+    margin-right: 20px;
+}
+.news-date {
+    color: #E4881B;
+    line-height: 18px;
+    font-size: 14px;
+}
+.date-icon {
+    margin-top: -3px;
+    margin-right: 2px;
+}
+.news-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    padding: 5px 0;
+}
+.news-prev {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 16px;
 }
