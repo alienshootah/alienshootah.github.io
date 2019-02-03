@@ -10,7 +10,11 @@
 body {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
-
+.wrap {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1320px;
+}
 /* Шапка */
 .titles {
     margin: 10px 0;
@@ -26,6 +30,13 @@ h1 {
 
 /* Навигация */
 
+.mobi-btn_left,
+.mobi-btn_right {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
 .navi-list {
     list-style: none;
     padding: 0;
@@ -79,12 +90,29 @@ h1 {
     color: #ffffff;
     text-decoration: none;
 }
+
+/* Смена иконок */
+.wnav-icon {
+    display: none!important;
+}
+.navi-item:hover .nav-icon,
+.navi-item:focus .nav-icon,
+.navi-item.active .nav-icon {
+    display: none!important;
+}
+.navi-item:hover .wnav-icon ,
+.navi-item:focus .wnav-icon ,
+.navi-item.active .wnav-icon {
+    display: inline-block!important;
+}
+
 .nav-icon {
     display: inline-block;
     vertical-align: baseline;
     text-align: center;
     margin-right: 5px;
     width: 25px;
+    position: relative;
 }
 .navi-num {
     display: inline-block;
@@ -95,6 +123,16 @@ h1 {
 .navi-small {
     font-size: 13px;
     display: block;
+}
+.nav-correct {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background: #FF0000;
+    position: absolute;
+    left: 34px;
+    top: 13px;
+    z-index: 1000;
 }
 
 /* Содержимое */
@@ -118,16 +156,21 @@ h1 {
     list-style: none;
 }
 .news-item {
-    display: flex;
     margin: 10px 0;
     border-bottom: 1px solid #D0D0D0;
     padding: 10px 0 20px 0;
+    overflow: hidden; 
 }
 .news-item:last-child {
     border-bottom: 0;
+    padding-bottom: 0;
 }
 .news-picture {
     margin-right: 20px;
+    float: left;
+}
+.news-image {
+    width: 320px;
 }
 .news-date {
     color: #E4881B;
