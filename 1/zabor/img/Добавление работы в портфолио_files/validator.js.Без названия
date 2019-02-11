@@ -1,0 +1,342 @@
+var pending;
+
+$.validator = function( options, form ) { };
+	$.extend($.validator, {	 
+		cache:{},	
+		rules: {},	
+		success_messages:{},
+		messages: {},
+		methods:{			
+			required: function(value, element, param)
+			{
+				//value = value.replace(/ +/,'');
+				value = $.trim(value);
+				return value.length > 0;
+			},
+			minlength: function(value, element, param)
+			{				
+				return element.val().length >= param;
+			},
+			maxlength: function(value, element, param)
+			{
+				return element.val().length <= param;
+			},
+			login: function(value, element, param)
+			{								
+				return /^[a-zA-Z0-9\_\-]{3,16}$/i.test(value);
+			},
+			remote: function(value, element, param)
+			{
+				if(element.attr('item_type'))
+				{
+					type=element.attr('item_type');
+				} else
+				{
+					type=element.attr('id');
+				}
+				field=element.attr('id');
+				var url=param+'&'+type+'='+ encodeURIComponent(value);	
+				if($.validator.cache[url]!==undefined)
+				{
+					if($.validator.cache[url]=='false') $.validator.show_error(field,'remote');
+					else if($.validator.cache[url]=='true' )$.validator.success_field(field,'remote');
+					else  $.validator.show_error_text(field, $.validator.cache[url]);
+					return;
+				}
+				pending = true;				
+				$.validator.show_processing(field);			
+				
+				$.get(url,
+						function(data)
+						{
+							pending = false;
+							$.validator.cache[url] = data;
+							if(data=='false') $.validator.show_error(field,'remote');
+							else if(data=='true') $.validator.success_field(field,'remote');				
+							else $.validator.show_error_text(field, data);
+						}
+				);
+				return true;
+			},
+			email: function(value, element, param)
+			{
+				return /^.+@([A-Za-z0-9\-\_]*[A-Za-z0-9]\.)+[A-Za-z]{2,8}$/i.test(value);
+			},
+			url: function(value, element, param)
+			{
+				if(value.length==0) return true;
+				return /^((http|https|ftp|ftps){1}:\/\/)?((?:[0-9а-я-\:\@\.]+\.рф)|(?:[0-9a-z-\:\@\.]+\.[a-z]{2,4}))(:[0-9]+)?([\w\-\.,@?^=%&amp;:\/\~\+\(\)#]*[\w\-\@?^=%&amp;\/\~\+\(\)#])?$/i.test(value);
+			},
+			date: function(value, element, param)
+			{								
+				var arr = value.split('-');
+				var date = new Date(arr[2],arr[1]-1,arr[0]);								
+				var result = (date!='Invalid Date');				
+				if(result)
+				{					
+					if(date.getFullYear() != arr[2] || date.getMonth() != arr[1]-1 || date.getDate() != arr[0])
+					{
+						result = false;
+					}
+				}				
+				return result;
+			},
+			username: function(value, element, param)
+			{
+				return /^[а-яё]{2,24}(\-[а-яё]{2,24})?$/i.test(value);
+			},
+			equalTo: function(value, element, param)
+			{
+				return value == $(param).val();
+			},
+			notEqualTo: function(value, element, param)
+			{
+				return value != $(param).val();
+			},			
+			less: function(value, element, param)
+			{				
+				return parseInt(value,10) <= parseInt($(param).val(),10);
+			},
+			more: function(value, element, param)
+			{
+				return  parseInt(value,10) >= parseInt($(param).val(),10);
+			},
+			lessThen: function(value, element, param)
+			{				
+				return parseInt(value,10) <= parseInt(param,10);
+			},
+			moreThen: function(value, element, param)
+			{				
+				return  parseInt(value,10) > parseInt(param,10);
+			},
+			dateWL: function(value, element, param)
+			{
+				date = new Date($('#birth_year').val(),$('#birth_month').val()-1,$('#birth_day').val());				
+				$('#birth_month, #birth_year, #birth_day').removeClass('error');
+				var result = (date!='Invalid Date');
+				if(result)
+				{
+					if(date.getFullYear() != $('#birth_year').val() || date.getMonth() != $('#birth_month').val()-1 || date.getDate() != $('#birth_day').val())
+					{
+						result = false;
+					}
+				}
+				if(!result) $('.birthday-select').parents('.form-group').addClass('has-error'); 
+				return result;
+			},
+			phone: function (value, element, param)
+			{				
+				return /^\+?[1-9][0-9\(\)\-\– ]+$/.test(value);
+			},
+			icq: function (value, element, param)
+			{
+				return /^[0-9]{5,9}$/.test(value);
+			},
+			skype: function (value, element, param)
+			{
+				return /^[0-9A-Za-z_\.\-\,\-:\+@]{5,32}$/.test(value);
+			},
+			webmoney_purse: function (value, element, param)
+			{
+				return /^(Z|R|U)[0-9]{12}$/.test(value);
+			}
+		},
+		optional: function(element) {
+			return !$.validator.methods.required.call(this, $.trim(element.value), element) && "dependency-mismatch";
+		},
+		validate: function(){
+			vali = this;
+			$.each(this.rules, function(key, value) {
+				vali.check(key, value);
+			});
+		},
+		check_field: function(field)
+		{
+			return this.check(field,this.rules[field]);
+		},
+		check: function(field,rules)
+		{									
+			this.clear_error(field);			
+			for (var method in rules ) 
+			{				
+				if(!this.check_rule(field,method)) return false;				
+			};
+			return true;
+		},
+		check_rule: function(field, method, dontshow)
+		{			
+			var element = $('#'+field);
+			element.removeClass('valid');
+			if(element.attr('validate')!='true') return true;			
+			
+			var value = $.trim(element.val().replace(/\r/g, ""));			
+			param = this.rules[field][method];
+			
+			var result = $.validator.methods[method].call(this,value, element, param);
+			if(method!='remote')
+			{
+				if(!result) 
+				{				
+					if(!dontshow) this.show_error(field,method);				
+					return false;
+				} else
+				{
+					element.addClass('valid');
+				}
+				if(!dontshow) this.clear_error(field);
+			}
+			return true;
+		},
+		show_error: function(field,method)
+		{									
+			if($.validator.messages[field] && $.validator.messages[field][method])
+			{
+				var error = $.validator.messages[field][method].replace(/\{0\}/,$.validator.rules[field][method]);
+			} else error = "Ошибка в поле";
+			this.show_error_text(field,error);
+		},
+		show_error_text: function(field,error,onlytext)
+		{
+			$('#error_' + field).html(error);
+			if(!onlytext) $('#error_' + field).parents('.form-group').addClass('has-danger');
+		},		
+		success_field: function(field,method)
+		{
+			this.clear_error(field); 
+			$('#'+field).addClass('valid');
+			if($.validator.success_messages[field] && $.validator.success_messages[field][method])
+			{			
+				this.show_error_text(field, '<span class="text-success">'+$.validator.success_messages[field][method]+'</span>',true);
+			}
+		},
+		clear_error: function (field)
+		{
+			$('#error_' + field).html('');
+			$('#error_' + field).parents('.form-group').removeClass('has-danger');
+		},
+		show_processing: function(field)
+		{
+			this.show_error_text(field, '<span class="text-success">Проверяется...</span>',true);
+		},
+		check_all: function(form)
+		{
+			if(pending) 
+			{
+				setTimeout($.validator.check_all,200);
+				return;
+			}
+			
+			var result = true;
+			for (var item in $.validator.rules ) 
+			{
+					if(!$('#'+item).hasClass("valid")) { result=false;}
+			};					
+			
+
+			if($("#private_only").attr("checked") == true)
+			{
+				if (!$(".user_select_item").length > 0)
+				{
+					$('#error_user_mask').html('Выберите исполнителя.').fadeIn(200); $('#user_mask').addClass('error');
+					result=false; return;
+				}
+			}
+
+			if(result) 
+			{
+				if(form)
+				{
+					form.submit();
+				} else
+				{
+					$('form').submit();
+				}
+			}
+		},
+		valid: function(form)
+		{
+			var errors = 0;
+			if($(form).find('.form-control-feedback').each(function(i,item){
+				if($(item).is(':visible') && $(item).html()!='' && !$(item).find('span').hasClass('text-success')) errors++;
+			}));		
+			return errors==0;	
+		}
+	});
+
+$(function()
+{		
+	$('input, select, textarea').on('focus', function()
+	{
+		if ($(this).attr('validate') == 'true')
+		{
+			var field_id = '#error_' + $(this).attr('id');
+			
+			$(field_id).html('');
+			$(field_id).parents('.form-group').removeClass('has-danger');
+
+			//$(this).removeClass('error');
+		}
+		else $(this).attr('validate', 'true');
+	});
+});
+
+function validate_username( value, element ) 
+{
+	$.validator.clear_error('first_name');
+	$.validator.clear_error('last_name');
+	
+	var fn = $.validator.check_rule('first_name', 'required',true);
+	var ln = $.validator.check_rule('last_name', 'required',true);
+	
+	if(!fn) { $.validator.show_error_text('first_name','Заполните имя'); }		
+	if(!ln) { $.validator.show_error_text('last_name','Заполните фамилию');	}
+	if(!fn && !ln) { 
+		$.validator.show_error_text('last_name','Заполните фамилию и имя'); 
+		$.validator.show_error_text('first_name','');
+		}
+	
+	if(fn && ln && $('#first_name').val().toLowerCase()==$('#last_name').val().toLowerCase())
+	{
+		$.validator.show_error_text('last_name','Имя и фамилия не могут совпадать'); 
+		$.validator.show_error_text('first_name','');		
+	}
+	
+	var fnv = $.validator.check_rule('first_name', 'username',true);
+	var lnv = $.validator.check_rule('last_name', 'username',true);
+	
+	if(fn && !fnv) { 
+		$.validator.show_error_text('first_name','Имя введено неверно'); 		
+		}
+	if(ln && !lnv) { 
+		$.validator.show_error_text('last_name','Фамилия введено неверно');
+	}
+	
+	if((fn && ln) && (!fnv && !lnv)) { 
+		$.validator.show_error_text('last_name','Имя и фамилия введены неверно'); 
+		$.validator.show_error_text('first_name','');			
+		}
+}
+
+function validate_location()
+{
+	$.validator.clear_error('city_id');
+	$.validator.clear_error('country_id');
+	
+	var city = $.validator.check_rule('city_id', 'required',true);
+	var country = $.validator.check_rule('country_id', 'required',true);
+	
+	if(!city) $.validator.show_error_text('city_id','Выберите город'); 
+	if(!country) $.validator.show_error_text('country_id','Выберите страну');
+	if(!city && !country) 
+	{
+		$.validator.show_error_text('country_id','Выберите страну и город');
+		$.validator.show_error_text('city_id','');
+	}
+}
+
+function validate_accept_terms()
+{
+	if ($('#accept_terms').is(':checked')) return true;
+
+    $.validator.show_error_text('accept_terms', 'Вы не приняли Пользовательское соглашение');
+}

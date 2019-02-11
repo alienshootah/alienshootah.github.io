@@ -1,0 +1,266 @@
+$(function(){
+		
+	portfolio.set_type(file_types[$('#category_id').val()]);
+	var wbbOpt = 
+	{
+		buttons: "bold,italic,underline,strike,|,bullist,numlist,|,link,|,h2,h3",
+		allButtons: {
+			bullist: {
+				transform: {
+					'<ul>{SELTEXT}</ul>':'[list]{SELTEXT}[/list]',
+					'<li>{SELTEXT}</li>':'[*]{SELTEXT[^\[\]\*]}',
+				}
+			},
+			h3:	{
+				title: 'Заголовок',
+				buttonText: 'Заголовок',
+				transform: {
+					'<h3>{SELTEXT}</h3>':'[h3]{SELTEXT}[/h3]'
+				}
+			}
+		},
+		resize_maxheight: 500
+	};
+	$('#description').wysibb(wbbOpt);	
+		
+	$('#set_type_img').click(function(){ portfolio.set_type('img'); return false;});
+	$('#set_type_text').click(function(){ portfolio.set_type('text'); return false;});
+	$('#set_type_video').click(function(){ portfolio.set_type('video'); return false;});
+	$('#set_type_sound').click(function(){ portfolio.set_type('sound'); return false;});		
+	$('#files_selected').click(function(){ portfolio.go_to_step(2); return false;});	
+	
+	file_manager_window = null;
+	
+	$('#parent_category_id').on('category_select',function(){
+		portfolio.check();
+	});
+	
+	$('#files_list').on('file.file_added file.file_deleted',function(){
+		portfolio.check();
+	});
+	
+	$('#category_id').on('change',function(){
+		var cid = parseInt($(this).val());
+		portfolio.set_type(file_types[cid]);
+		$('#sub_id').empty().addClass('hidden');
+		$('#category_id').attr('name','category_id');
+		$('#sub_id').attr('name','sub');
+		$('#sub_id').append('<option value='+$('#category_id').val()+'>Подкатегория</option>');
+		for(id in subs[cid])
+		{
+			var cat = subs[cid][id];						
+			$('#sub_id').append('<option value='+cat.id+'>'+cat.name+'</option>');
+			$('#sub_id').removeClass('hidden');
+			$('#category_id').attr('name','na');
+			$('#sub_id').attr('name','category_id');
+		}
+		
+		if(file_manager_window && !file_manager_window.closed)
+		{
+			//file_manager_window.close();
+			$('#open_file_manager').click();
+		}
+	});
+	
+	$('#preview_delete').click(function(){
+		var id = $('#fid').val();
+		var url = '/ajax/?section=files&action=delete_preview&id='+id;
+		files.current_file = id;
+		$.get(url,
+				function(data){
+				files.file_saved();
+		});
+		return false;
+	});		
+	
+	uploader.loaded_callback = portfolio.check;
+
+	//$('.file_container .delete').die('click');
+	
+	$('.work .delete').on('click',function(){
+		files.delete_file(this);
+		portfolio.check();
+		return false;
+	});
+	
+	//$('#category_id').change();
+	
+	
+	$.validator.rules = {
+			category_id: {
+				required: true							
+			},
+			name: {
+				required: true
+			},
+			visibility:{
+				required: true
+			}
+	};
+	
+	$.validator.messages = {
+			category_id: {
+				required: "Укажите категорию."
+			},
+			name:{
+				required: "Введите название работы."
+			},			
+			visibility:{
+				required: "Выберите вариант."
+			}
+	};
+	
+	$('button[type=submit]').on('click',function(){
+		$('input, select, textarea').attr('validate','true');
+		$('#description').wysibb().sync();
+		$.validator.clear_error('files_form');
+		$.validator.validate();
+		if(!$('.work').length)
+		{
+			$.validator.show_error_text('files_form','Загрузите файлы');
+		}
+		var errors = 0;
+		if($(this).parents('form').find('.form-control-feedback').each(function(i,item){
+			if($(item).is(':visible') && $(item).html()!='') errors++;
+		}));		
+		return errors==0;		
+	});		
+	
+	/*
+	$('#add_video_link').overlay(
+			{
+				top: 'center',
+				expose:
+				{
+					color: '#333',
+					loadSpeed: 150,
+					opacity: 0.5
+				},
+				closeOnClick: false
+		  }); */				
+	
+	portfolio.check_types();
+	
+	$('#visibility').on('change', function() {
+		if ($(this).val() == 'authorized') $('#visibility_notify').removeClass('hidden');
+		else $('#visibility_notify').addClass('hidden');
+	});
+	
+	files.set_actions('<a class="icon-cog edit_descr" href="" rel="#file_edit_descr_window" title="Редактировать"></a>');
+	
+});
+
+portfolio = {
+	step : 0,
+	type : '',
+	file_types : {
+			'image':[
+				'jpg',
+				'jpeg',
+				'gif',
+				'png',
+				'bmp'
+				],
+			'audio':[
+				'mp3',
+				'ogg'
+				],
+			'video':[
+				'mp4',
+				'avi'
+				],
+			'animation':[
+				'gif',
+				'flv',
+				'swf'
+				],
+			'text':[
+				'txt',
+				'doc',
+				'docx',
+				'rtf'
+				],
+			'archive':[
+			     'zip'
+			    ]
+	},
+	init: function(){
+	
+	
+	},
+	
+	set_type: function(type){
+		$('#add_video_link').addClass('hidden');
+		$('a.upload').addClass('disabled');
+		this.type = type;	
+		uploader.permitted_ext = [];
+		for(type_ in type)
+		{
+			var one_type = type[type_];
+			if( one_type == 'video') 
+			{
+				$('#add_video_link').removeClass('hidden');			
+			}else
+			{
+				$('a.upload').removeClass('disabled');
+			}
+			if(this.file_types[one_type])
+			uploader.permitted_ext = uploader.permitted_ext.concat(this.file_types[one_type],uploader.permitted_ext);
+		}
+		
+		
+	},
+	check: function()
+	{
+		portfolio.check_types();
+		portfolio.check_count();
+	},
+	check_types : function()
+	{
+		$('#category_id option').removeAttr('disabled').removeClass('text-muted');
+		$('#parent_category_id option').removeAttr('disabled').removeClass('text-muted');		
+		$('#error_files').html('');
+		for (var i in files.files) {			
+			var type = files.files[i].type;	
+			$('#parent_category_id option').attr('disabled','disabled').addClass('text-muted');;
+			for(cid in category_list)
+			{
+				var show = false;
+				var item_types = file_types[cid];
+				if(!item_types) show=true;
+				else
+				for(i=0;i<item_types.length;i++)
+				{
+					if(item_types[i]==type) show=true;
+				}
+				if(!show) 
+				{
+					$('#category_id option[value='+cid+']').attr('disabled','disabled').addClass('text-muted');
+				}
+				else
+				{
+					var parent_id = parseInt(category_list[cid]['parent_id']);
+					if(parent_id!=0)
+					$('#parent_category_id option[value='+parent_id+']').removeAttr('disabled').removeClass('text-muted');
+				}		
+			}			
+		}
+	},
+	go_to_step: function (step){
+		this.step = step;
+		$('#step_0, #step_1, #step_2').addClass('hidden');
+		$('#step_'+step).removeClass('hidden');
+		
+		if(step==2)
+		{
+			$('#files').append($('#files_list'));
+		}
+	},
+	check_count: function(){
+		$('#files_count').addClass('hidden');
+		if($('.work').length>=5)
+		{
+			$('#files_count').removeClass('hidden');
+		}
+	}
+};
