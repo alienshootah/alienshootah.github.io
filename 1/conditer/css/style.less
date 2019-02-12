@@ -289,17 +289,19 @@ header {
     cursor: pointer;
     text-align: left;
     padding: 0;
+    position: relative;
 
     &:hover,
     &:focus {
         text-decoration: underline;
     }
 }
-.header-dropdown:after {
+.header-dropdown::after {
     content: url(../img/header-dropdown.png);
     position: relative;
-    left: 15px;
+    margin-left: 10px;
     top: -2px;
+    
 }
 .header-bucket {
     display: flex;
@@ -423,6 +425,12 @@ header {
     text-decoration: none;
     display: block;
     padding: 20px 30px;
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
 
     &:hover,
     &:focus,
@@ -1138,7 +1146,13 @@ footer {
         text-decoration: none;
         color: #3b3a35;
         display: block;
-        padding: 10px 0;
+        padding: 5px 0;
+        background-color: transparent;
+        border: 0;
+        font-family: 'MuseoCyrl-500', Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        outline: none;
+        cursor: pointer;
 
         &:hover,
         &:focus,
@@ -1166,4 +1180,7 @@ footer {
     }
 }
 
-  
+/* Аккордеон */
+.panel {
+    display: none;
+}
