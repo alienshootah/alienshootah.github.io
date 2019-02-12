@@ -5,9 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Мир кондитера</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet/less" href="css/style.less">
 </head>
 <body>
+    <div>
+        <div class="text-center city">
+            <div class="city-body">
+                <p class="city-text">Ваш город<br>
+                (или ближайший к вам):</p>
+                <p class="city-name">Москва</p>
+                <button class="city-btn active">Да</button>
+                <button class="city-btn">Нет</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="simple">
+        <div class="simple-body">
+            <div class="simple-title">Ваш (или ближайший к вам) город:</div>
+            <input type="text" class="simple-field" placeholder="Введите название..." required>
+            <ul class="simple-list">
+                <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link active">Казань, Респ. Татарстан</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Казань, Респ. Татарстан</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Казань, Респ. Татарстан</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
+                <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
+            </ul>
+        </div>
+        <div class="simple-ps">
+            <p class="simple-ps_text">
+                Не нашли свой город? Можем 
+                <a href="#" class="simple-ps_link">доставить</a>
+                в любую точку России
+            </p>
+        </div>
+    </div>
+    
     <div class="container-fluid">
         <h1 class="hidden">Мир кондитера и товары для кондитера</h1>
         <section class="how">
@@ -187,14 +244,35 @@
                         </div>
                     </div>
                     <div class="col-9 main-right"> 
-                        <div class="right-decor">
-                            <img src="img/decor-image.png" alt="" class="decor-image">
+                        <div class="decor active">
+                            <div class="right-decor">
+                                <img src="img/decor-image.png" alt="" class="decor-image">
+                                <div class="right-decor-text">
+                                    <b class="right-alarm">Внимание:</b> 
+                                    мастер-класс с 12.01.2019 переносится на 19.01.19
+                                </div> 
+                                <img src="img/right-decor-info.png" alt="" class="right-decor-info">
+                            </div>
                         </div>
-                        <div class="text-center" style="display: none;">
-                            <img src="img/slider-arrow-left.png" alt="">
-                            <img src="img/slider-arrow-right.png" alt="">
-                        </div>
-                        <ul class="right-slider">
+                        <ul class="one-time right-slider">
+                            <li class="slider-item" style="background-image: url(img/slider-item.jpg);">
+                                <div class="slider-text">
+                                    <div class="slider-title">Скидки до 50%</div>
+                                    <div class="slider-descr">На всю кондитерскую упаковку</div>
+                                    <div class="slider-more">
+                                        <a href="#" class="slider-link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider-item" style="background-image: url(img/slider-item.jpg);">
+                                <div class="slider-text">
+                                    <div class="slider-title">Скидки до 50%</div>
+                                    <div class="slider-descr">На всю кондитерскую упаковку</div>
+                                    <div class="slider-more">
+                                        <a href="#" class="slider-link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="slider-item" style="background-image: url(img/slider-item.jpg);">
                                 <div class="slider-text">
                                     <div class="slider-title">Скидки до 50%</div>
@@ -252,157 +330,169 @@
                         <section class="catalog">
                             <h2>Наши товары</h2>
                             <ul class="catalog-nav">
-                                <li class="catalog-nav_item"><a href="#" class="catalog-nav_link active">Хиты продаж</a></li>
-                                <li class="catalog-nav_item"><a href="#" class="catalog-nav_link">Новинки</a></li>
-                                <li class="catalog-nav_item"><a href="#" class="catalog-nav_link">Лучшая цена</a></li>
+                                <li class="catalog-nav_item"><button class="tablinks catalog-nav_link active" onclick="openCity(event, 'London')" id="defaultOpen">Хиты продаж</button></li>
+                                <li class="catalog-nav_item"><button class="tablinks catalog-nav_link" onclick="openCity(event, 'Paris')">Новинки</button></li>
+                                <li class="catalog-nav_item"><button class="tablinks catalog-nav_link" onclick="openCity(event, 'Tokyo')">Лучшая цена</button></li>
                             </ul>
                             <div class="catalog-body">
-                                <ul class="catalog-list">
-                                    <li class="catalog-item">
-                                        <div class="catalog-search">
-                                            <button class="catalog-bigger">
-                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
-                                            </button>
-                                        </div>
-                                        <a href="#"><img src="img/catalog-image1.jpg" alt="" class="catalog-image"></a>
-                                        <h5 class="catalog-title">
-                                            <a href="#" class="catalog-link">
-                                                Гель со вкусом и ароматом «Клубники», 125 гр
-                                            </a>
-                                        </h5>
-                                        <div class="catalog-price">84 руб / шт</div>
-                                        <form class="catalog-buttons">
-                                            <div class="many">
-                                                <button class="many-btn">-</button>
-                                                <input type="text" class="many-field" value="1">
-                                                <button class="many-btn">+</button>
+                                <div id="London" class="tabcontent">
+                                    <ul class="catalog-list">
+                                        <li class="catalog-item">
+                                            <div class="catalog-search">
+                                                <button class="catalog-bigger">
+                                                    <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                                </button>
                                             </div>
-                                            <button class="catalog-add">
-                                                <img src="img/add-icon.png" alt="" class="add-icon">
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li class="catalog-item">
-                                        <div class="catalog-search">
-                                            <button class="catalog-bigger">
-                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
-                                            </button>
-                                        </div>
-                                        <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
-                                        <h5 class="catalog-title">
-                                            <a href="#" class="catalog-link">
-                                                Глазурь "IL-айсинг" (упак 500 гр) сухая кондитерская смесь
-                                            </a>
-                                        </h5>
-                                        <div class="catalog-price">165 руб / шт</div>
-                                        <form class="catalog-buttons">
-                                            <div class="many">
-                                                <button class="many-btn">-</button>
-                                                <input type="text" class="many-field" value="1">
-                                                <button class="many-btn">+</button>
+                                            <a href="#"><img src="img/catalog-image1.jpg" alt="" class="catalog-image"></a>
+                                            <h5 class="catalog-title">
+                                                <a href="#" class="catalog-link">
+                                                    Гель со вкусом и ароматом «Клубники», 125 гр
+                                                </a>
+                                            </h5>
+                                            <div class="catalog-price">84 руб / шт</div>
+                                            <form class="catalog-buttons">
+                                                <div class="many">
+                                                    <button class="many-btn">-</button>
+                                                    <input type="text" class="many-field" value="1">
+                                                    <button class="many-btn">+</button>
+                                                </div>
+                                                <button class="catalog-add">
+                                                    <img src="img/add-icon.png" alt="" class="add-icon">
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li class="catalog-item">
+                                            <div class="catalog-search">
+                                                <button class="catalog-bigger">
+                                                    <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                                </button>
                                             </div>
-                                            <button class="catalog-add">
-                                                <img src="img/add-icon.png" alt="" class="add-icon">
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li class="catalog-item">
-                                        <div class="catalog-search">
-                                            <button class="catalog-bigger">
-                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
-                                            </button>
-                                        </div>
-                                        <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
-                                        <h5 class="catalog-title">
-                                            <a href="#" class="catalog-link">
-                                                Комплект силиконовых форм SILIKOMART - "Корона"
-                                            </a>
-                                        </h5>
-                                        <div class="catalog-price">3 760 руб / шт</div>
-                                        <form class="catalog-buttons">
-                                            <div class="many">
-                                                <button class="many-btn">-</button>
-                                                <input type="text" class="many-field" value="1">
-                                                <button class="many-btn">+</button>
+                                            <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
+                                            <h5 class="catalog-title">
+                                                <a href="#" class="catalog-link">
+                                                    Глазурь "IL-айсинг" (упак 500 гр) сухая кондитерская смесь
+                                                </a>
+                                            </h5>
+                                            <div class="catalog-price">165 руб / шт</div>
+                                            <form class="catalog-buttons">
+                                                <div class="many">
+                                                    <button class="many-btn">-</button>
+                                                    <input type="text" class="many-field" value="1">
+                                                    <button class="many-btn">+</button>
+                                                </div>
+                                                <button class="catalog-add">
+                                                    <img src="img/add-icon.png" alt="" class="add-icon">
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li class="catalog-item">
+                                            <div class="catalog-search">
+                                                <button class="catalog-bigger">
+                                                    <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                                </button>
                                             </div>
-                                            <button class="catalog-add">
-                                                <img src="img/add-icon.png" alt="" class="add-icon">
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li class="catalog-item">
-                                        <div class="catalog-search">
-                                            <button class="catalog-bigger">
-                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
-                                            </button>
-                                        </div>
-                                        <a href="#"><img src="img/catalog-image1.jpg" alt="" class="catalog-image"></a>
-                                        <h5 class="catalog-title">
-                                            <a href="#" class="catalog-link">
-                                                Гель со вкусом и ароматом «Клубники», 125 гр
-                                            </a>
-                                        </h5>
-                                        <div class="catalog-price">84 руб / шт</div>
-                                        <form class="catalog-buttons">
-                                            <div class="many">
-                                                <button class="many-btn">-</button>
-                                                <input type="text" class="many-field" value="1">
-                                                <button class="many-btn">+</button>
+                                            <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
+                                            <h5 class="catalog-title">
+                                                <a href="#" class="catalog-link">
+                                                    Комплект силиконовых форм SILIKOMART - "Корона"
+                                                </a>
+                                            </h5>
+                                            <div class="catalog-price">3 760 руб / шт</div>
+                                            <form class="catalog-buttons">
+                                                <div class="many">
+                                                    <button class="many-btn">-</button>
+                                                    <input type="text" class="many-field" value="1">
+                                                    <button class="many-btn">+</button>
+                                                </div>
+                                                <button class="catalog-add">
+                                                    <img src="img/add-icon.png" alt="" class="add-icon">
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li class="catalog-item">
+                                            <div class="catalog-search">
+                                                <button class="catalog-bigger">
+                                                    <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                                </button>
                                             </div>
-                                            <button class="catalog-add">
-                                                <img src="img/add-icon.png" alt="" class="add-icon">
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li class="catalog-item">
-                                        <div class="catalog-search">
-                                            <button class="catalog-bigger">
-                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
-                                            </button>
-                                        </div>
-                                        <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
-                                        <h5 class="catalog-title">
-                                            <a href="#" class="catalog-link">
-                                                Глазурь "IL-айсинг" (упак 500 гр) сухая кондитерская смесь
-                                            </a>
-                                        </h5>
-                                        <div class="catalog-price">165 руб / шт</div>
-                                        <form class="catalog-buttons">
-                                            <div class="many">
-                                                <button class="many-btn">-</button>
-                                                <input type="text" class="many-field" value="1">
-                                                <button class="many-btn">+</button>
+                                            <a href="#"><img src="img/catalog-image1.jpg" alt="" class="catalog-image"></a>
+                                            <h5 class="catalog-title">
+                                                <a href="#" class="catalog-link">
+                                                    Гель со вкусом и ароматом «Клубники», 125 гр
+                                                </a>
+                                            </h5>
+                                            <div class="catalog-price">84 руб / шт</div>
+                                            <form class="catalog-buttons">
+                                                <div class="many">
+                                                    <button class="many-btn">-</button>
+                                                    <input type="text" class="many-field" value="1">
+                                                    <button class="many-btn">+</button>
+                                                </div>
+                                                <button class="catalog-add">
+                                                    <img src="img/add-icon.png" alt="" class="add-icon">
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li class="catalog-item">
+                                            <div class="catalog-search">
+                                                <button class="catalog-bigger">
+                                                    <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                                </button>
                                             </div>
-                                            <button class="catalog-add">
-                                                <img src="img/add-icon.png" alt="" class="add-icon">
-                                            </button>
-                                        </form>
-                                    </li>
-                                    <li class="catalog-item">
-                                        <div class="catalog-search">
-                                            <button class="catalog-bigger">
-                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
-                                            </button>
-                                        </div>
-                                        <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
-                                        <h5 class="catalog-title">
-                                            <a href="#" class="catalog-link">
-                                                Комплект силиконовых форм SILIKOMART - "Корона"
-                                            </a>
-                                        </h5>
-                                        <div class="catalog-price">3 760 руб / шт</div>
-                                        <form class="catalog-buttons">
-                                            <div class="many">
-                                                <button class="many-btn">-</button>
-                                                <input type="text" class="many-field" value="1">
-                                                <button class="many-btn">+</button>
+                                            <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
+                                            <h5 class="catalog-title">
+                                                <a href="#" class="catalog-link">
+                                                    Глазурь "IL-айсинг" (упак 500 гр) сухая кондитерская смесь
+                                                </a>
+                                            </h5>
+                                            <div class="catalog-price">165 руб / шт</div>
+                                            <form class="catalog-buttons">
+                                                <div class="many">
+                                                    <button class="many-btn">-</button>
+                                                    <input type="text" class="many-field" value="1">
+                                                    <button class="many-btn">+</button>
+                                                </div>
+                                                <button class="catalog-add">
+                                                    <img src="img/add-icon.png" alt="" class="add-icon">
+                                                </button>
+                                            </form>
+                                        </li>
+                                        <li class="catalog-item">
+                                            <div class="catalog-search">
+                                                <button class="catalog-bigger">
+                                                    <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                                </button>
                                             </div>
-                                            <button class="catalog-add">
-                                                <img src="img/add-icon.png" alt="" class="add-icon">
-                                            </button>
-                                        </form>
-                                    </li>
-                                </ul>
+                                            <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
+                                            <h5 class="catalog-title">
+                                                <a href="#" class="catalog-link">
+                                                    Комплект силиконовых форм SILIKOMART - "Корона"
+                                                </a>
+                                            </h5>
+                                            <div class="catalog-price">3 760 руб / шт</div>
+                                            <form class="catalog-buttons">
+                                                <div class="many">
+                                                    <button class="many-btn">-</button>
+                                                    <input type="text" class="many-field" value="1">
+                                                    <button class="many-btn">+</button>
+                                                </div>
+                                                <button class="catalog-add">
+                                                    <img src="img/add-icon.png" alt="" class="add-icon">
+                                                </button>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                                    
+                                <div id="Paris" class="tabcontent">
+                                    <h3>Новинки</h3>
+                                    <p>Описание... Описание... Описание... Описание... Описание... Описание... Описание... Описание... </p> 
+                                </div>
+                                    
+                                <div id="Tokyo" class="tabcontent">
+                                    <h3>Лучшая цена</h3>
+                                    <p>Описание... Описание... Описание... Описание... Описание... Описание... Описание... Описание... </p> 
+                                </div>
                             </div>
                         </section>
                         <section class="classes">
@@ -503,5 +593,8 @@
         </footer>
     </div>
     <script src="js/less.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/sliders.js"></script>
 </body>
 </html>
