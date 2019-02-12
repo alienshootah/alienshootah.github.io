@@ -283,6 +283,12 @@ header {
     font-size: 20px;
     color: #3b3a35;
     font-family: 'MuseoCyrl-500', Arial, Helvetica, sans-serif;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
 
     &:hover,
     &:focus {
@@ -1023,9 +1029,15 @@ footer {
     left: -90px;
     z-index: 9999;
 }
+.dropdown-content-down {
+    display: none;
+    position: absolute;
+    bottom: 80px;
+    left: -90px;
+    z-index: 9999;
+}
 .show {display:block;}
 .city {
-
     background-color: rgb(255, 255, 255);
     box-shadow: 4.95px 4.95px 46.02px 12.98px rgba(24, 23, 29, 0.039);
     width: 400px;
@@ -1047,6 +1059,17 @@ footer {
         top: -22px;
         left: 0;
         width: 100%;
+    }
+    &-down::before {
+        content: none;
+    }
+    &-down::after {
+        content: url(../img/city-arrow.png);
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+        width: 100%;
+        transform: rotate(180deg);
     }
 }
 .city-name {
@@ -1084,7 +1107,6 @@ footer {
 }
 
 .simple {
-
     background-color: rgb(255, 255, 255);
     box-shadow: 4.95px 4.95px 46.02px 12.98px rgba(24, 23, 29, 0.039);
     width: 400px;
