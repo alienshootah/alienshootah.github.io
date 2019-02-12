@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Карточка товара | Мир кондитера</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet/less" href="css/style.less">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="hidden">Мир кондитера и товары для кондитера</h1>
+        <section class="how">
+            <div class="content">
+                <div class="row how-body">
+                    <div class="col-6">
+                        <ul class="how-list">
+                            <li class="how-item"><a href="#" class="how-link">Доставка</a></li>
+                            <li class="how-item"><a href="#" class="how-link">Как заказать</a></li>
+                            <li class="how-item"><a href="#" class="how-link">Как оплатить</a></li>
+                            <li class="how-item"><a href="#" class="how-link">Оферта</a></li>
+                            <li class="how-item"><a href="#" class="how-link">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="text-right col-6">
+                        <div class="how-user">
+                            <img src="img/how-icon.png" alt="" class="how-icon">
+                            <a href="#" class="how-user_link">Вход</a> | 
+                            <a href="#" class="how-user_link">Регистрация</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <header>
+            <div class="content">
+                <div class="row header-up">
+                    <div class="col-3 header-logo">
+                        <a href="#" class="logo-link">Мир кондитера</a>
+                        <div class="logo-descr">Товары для кондитера</div>
+                    </div>
+                    <div class="col-7 header-info">
+                        <ul class="header-list">
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <img src="img/header-icon1.png" alt="" class="header-icon">
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">Ваш город:</div>
+                                    <div class="dropdown">
+                                        <button href="#" class="header-link header-dropdown dropbtn" onclick="myFunction()">Москва</button>
+                                        <div class="dropdown-content" id="myDropdown">
+                                            <div class="text-center city">
+                                                <div class="city-body">
+                                                    <p class="city-text">Ваш город<br>
+                                                    (или ближайший к вам):</p>
+                                                    <p class="city-name">Москва</p>
+                                                    <button class="city-btn active" onclick="myFunction()">Да</button>
+                                                    <span onclick="myFunction()"><button class="city-btn dropbtn" onclick="myFunction2()">Нет</button></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-content" id="myDropdown2">
+                                        <div class="simple">
+                                            <div class="simple-body">
+                                                <div class="simple-title">Ваш (или ближайший к вам) город:</div>
+                                                <input type="text" class="simple-field" placeholder="Введите название..." required>
+                                                <ul class="simple-list" onclick="myFunction2()">
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Санкт-Петербург, Ленинградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Н. Новгород, Нижегородская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link active">Казань, Респ. Татарстан</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Челябинск, Челябинская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Ростов-на-Дону, Ростовская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Пермь, Пермская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Воронеж, Воронежская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Волгоград, Волгоградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Санкт-Петербург, Ленинградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Н. Новгород, Нижегородская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link active">Казань, Респ. Татарстан</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Челябинск, Челябинская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Ростов-на-Дону, Ростовская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Пермь, Пермская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Воронеж, Воронежская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Волгоград, Волгоградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Санкт-Петербург, Ленинградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Н. Новгород, Нижегородская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link active">Казань, Респ. Татарстан</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Челябинск, Челябинская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Ростов-на-Дону, Ростовская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Пермь, Пермская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Воронеж, Воронежская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Волгоград, Волгоградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="simple-ps">
+                                                <p class="simple-ps_text">
+                                                    Не нашли свой город? Можем 
+                                                    <a href="#" class="simple-ps_link">доставить</a>
+                                                    в любую точку России
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <img src="img/header-icon2.png" alt="" class="header-icon">
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">Телефон:</div>
+                                    <a href="tel:+83852602747" class="header-link">8 (3852) <b>602-747</b></a>
+                                </div>
+                            </li>
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <img src="img/header-icon3.png" alt="" class="header-icon">
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">Почта:</div>
+                                    <a href="mailto:mir-conditera@bk.ru" class="header-link">mir-conditera@bk.ru</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 header-bucket">
+                        <ul class="header-list">
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <a href="#"><img src="img/header-icon4.png" alt="" class="header-icon"></a>
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">3 товара</div>
+                                    <a href="#" class="header-link"><b>1 280 руб</b></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="header-decor">
+            <div class="content">
+                <div class="row header-down">
+                    <div class="col-9 header-menu">
+                        <ul class="menu-list">
+                            <li class="menu-item"><a href="#" class="menu-link">О компании</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">Акции</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">Лучшая цена</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">Новинки</a></li>
+                            <li class="menu-item"><a href="#" class="menu-link"><b class="menu-hot">Мастер классы</b></a></li>
+                            <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3 header-search">
+                        <form class="search-body">
+                            <input type="text" class="search-field" placeholder="Поиск по товарам..." required>
+                            <button class="search-button">
+                                <img src="img/search-icon.png" alt="" class="search-icon">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="row main-body">
+                    <div class="col-3 main-left">
+                        <div class="left-title">
+                            <h3 class="left-title_text"><img src="img/left-title_icon.png" alt="" class="left-title_icon"> Каталог</h3>
+                        </div>
+                        <ul class="left-list">
+                            <li class="left-item"><button class="left-link">Инструменты для декора</button></li>
+                            <li class="left-item"><button class="left-link">Кондитерский инвентарь</button></li>
+                            <li class="left-item"><button class="left-link">Кондитерские ингредиенты</button></li>
+                            <li class="left-item">
+                                <button href="#" class="left-link">Кондитерская упаковка</button>
+                                <ul class="left-drop panel">
+                                    <li class="drop-item"><a href="#" class="drop-link">Бумажные формы и капсулы</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Подложки, салфетки</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Подносы, подставки, трубочки, шпажки</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Упаковка, коробки</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Коробки для торта</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Лента, бумажный наполнитель, пакеты</a></li>
+                                </ul>
+                            </li>
+                            <li class="left-item">
+                                <button href="#" class="left-link">Все для пищевой печати</button>
+                                <ul class="left-drop panel">
+                                    <li class="drop-item"><a href="#" class="drop-link">Бумажные формы и капсулы</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Подложки, салфетки</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Подносы, подставки, трубочки, шпажки</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Упаковка, коробки</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Коробки для торта</a></li>
+                                    <li class="drop-item"><a href="#" class="drop-link">Лента, бумажный наполнитель, пакеты</a></li>
+                                </ul>
+                            </li>
+                            <li class="left-item"><button class="left-link">Литература для кондитера</button></li>
+                            <li class="left-item"><button class="left-link">Оплата Мастер-классов</button></li>
+                            <li class="left-item"><button class="left-link">Подарочный сертификат</button></li>
+                        </ul>
+                        <div class="master">
+                            <img src="img/master-image.jpg" alt="" class="master-image">
+                            <div class="master-text">
+                                <h4 class="master-title">Мастер <br>классы</h4>
+                                <span class="master-date">19.03.2019</span>
+                                <div class="master-btn">
+                                    <a href="#" class="master-link">Записаться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-9 main-right">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Главная</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Каталог</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Упаковка, коробки</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Упаковка для торта</a></li>
+                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Гель со вкусом и ароматом «Клубники», 125 гр</a></li>
+                        </ul>
+                        <h1 class="catalog-titleone">Гель со вкусом и ароматом «Клубники», 125 гр</h1>
+
+                        <section class="card">
+                            <h2 class="hidden">Подробная информация о товаре</h2>
+                            <div class="row card-body">
+                                <div class="col-4">
+                                    <ul class="single-item card-slider">
+                                        <li class="card-item"><img src="img/card-image.jpg" alt="" class="card-image"></li>
+                                        <li class="card-item"><img src="img/card-image.jpg" alt="" class="card-image"></li>
+                                        <li class="card-item"><img src="img/card-image.jpg" alt="" class="card-image"></li>
+                                        <li class="card-item"><img src="img/card-image.jpg" alt="" class="card-image"></li>
+                                    </ul>
+                                </div>
+                                <div class="col-8 card-body_right">
+                                    <div class="card-price">84 руб / шт</div>
+                                    <div class="card-now">
+                                        <img src="img/card-now-icon.png" alt="" class="card-now-icon">
+                                        Есть в наличии
+                                    </div>
+                                    <div class="card-buttons">
+                                        <div class="many many-card">
+                                            <button class="many-btn">-</button>
+                                            <input type="text" class="many-field" value="1">
+                                            <button class="many-btn">+</button>
+                                        </div>
+                                        <button class="card-btn active">
+                                            <img src="img/card-btn_icon.png" alt="" class="card-btn_icon"> 
+                                            В корзину
+                                        </button>
+                                        <button class="card-btn">Купить в 1 клик</button>
+                                    </div>
+                                    <p class="card-descr">
+                                        Декор кондитерский со вкусом и ароматом «Клубники». 
+                                        С помощью геля можно создавать поздравительные надписи 
+                                        и оформлять поверхность любого кондитерского изделия: 
+                                        торта, пирожного, десерта и т.д. Цвет: красный. Упаковка 125 гр. 
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="catalog">
+                            <h2 class="custom-title">Похожие товары</h2>
+                            <div class="catalog-body">
+                                <ul class="catalog-list catalog-list-full">
+                                    <li class="catalog-item">
+                                        <div class="catalog-search">
+                                            <button class="catalog-bigger">
+                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                            </button>
+                                        </div>
+                                        <a href="#"><img src="img/catalog-image1.jpg" alt="" class="catalog-image"></a>
+                                        <h5 class="catalog-title">
+                                            <a href="#" class="catalog-link">
+                                                Гель со вкусом и ароматом «Клубники», 125 гр
+                                            </a>
+                                        </h5>
+                                        <div class="catalog-price">84 руб / шт</div>
+                                        <form class="catalog-buttons">
+                                            <div class="many">
+                                                <button class="many-btn">-</button>
+                                                <input type="text" class="many-field" value="1">
+                                                <button class="many-btn">+</button>
+                                            </div>
+                                            <button class="catalog-add">
+                                                <img src="img/add-icon.png" alt="" class="add-icon">
+                                            </button>
+                                        </form>
+                                    </li>
+                                    <li class="catalog-item">
+                                        <div class="catalog-search">
+                                            <button class="catalog-bigger">
+                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                            </button>
+                                        </div>
+                                        <a href="#"><img src="img/catalog-image2.jpg" alt="" class="catalog-image"></a>
+                                        <h5 class="catalog-title">
+                                            <a href="#" class="catalog-link">
+                                                Глазурь "IL-айсинг" (упак 500 гр) сухая кондитерская смесь
+                                            </a>
+                                        </h5>
+                                        <div class="catalog-price">165 руб / шт</div>
+                                        <form class="catalog-buttons">
+                                            <div class="many">
+                                                <button class="many-btn">-</button>
+                                                <input type="text" class="many-field" value="1">
+                                                <button class="many-btn">+</button>
+                                            </div>
+                                            <button class="catalog-add">
+                                                <img src="img/add-icon.png" alt="" class="add-icon">
+                                            </button>
+                                        </form>
+                                    </li>
+                                    <li class="catalog-item">
+                                        <div class="catalog-search">
+                                            <button class="catalog-bigger">
+                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                            </button>
+                                        </div>
+                                        <a href="#"><img src="img/catalog-image3.jpg" alt="" class="catalog-image"></a>
+                                        <h5 class="catalog-title">
+                                            <a href="#" class="catalog-link">
+                                                Комплект силиконовых форм SILIKOMART - "Корона"
+                                            </a>
+                                        </h5>
+                                        <div class="catalog-price">3 760 руб / шт</div>
+                                        <form class="catalog-buttons">
+                                            <div class="many">
+                                                <button class="many-btn">-</button>
+                                                <input type="text" class="many-field" value="1">
+                                                <button class="many-btn">+</button>
+                                            </div>
+                                            <button class="catalog-add">
+                                                <img src="img/add-icon.png" alt="" class="add-icon">
+                                            </button>
+                                        </form>
+                                    </li>
+                                    <li class="catalog-item">
+                                        <div class="catalog-search">
+                                            <button class="catalog-bigger">
+                                                <img src="img/catalog-search_icon.png" alt="" class="catalog-search_icon">
+                                            </button>
+                                        </div>
+                                        <a href="#"><img src="img/catalog-image1.jpg" alt="" class="catalog-image"></a>
+                                        <h5 class="catalog-title">
+                                            <a href="#" class="catalog-link">
+                                                Гель со вкусом и ароматом «Клубники», 125 гр
+                                            </a>
+                                        </h5>
+                                        <div class="catalog-price">84 руб / шт</div>
+                                        <form class="catalog-buttons">
+                                            <div class="many">
+                                                <button class="many-btn">-</button>
+                                                <input type="text" class="many-field" value="1">
+                                                <button class="many-btn">+</button>
+                                            </div>
+                                            <button class="catalog-add">
+                                                <img src="img/add-icon.png" alt="" class="add-icon">
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="content">
+                <div class="row footer-up">
+                    <div class="col-3 header-logo">
+                        <a href="#" class="logo-link">Мир кондитера</a>
+                        <div class="logo-descr">товары для кондитера</div>
+                    </div>
+                    <div class="col-7 header-info">
+                        <ul class="header-list">
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <img src="img/header-icon1.png" alt="" class="header-icon">
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">Ваш город:</div>
+                                    <div class="dropdown">
+                                        <button class="header-link header-dropdown dropbtn" onclick="myFunction3()">Москва</button>
+                                        <div class="dropdown-content-down" id="myDropdown3">
+                                            <div class="text-center city city-down">
+                                                <div class="city-body">
+                                                    <p class="city-text">Ваш город<br>
+                                                    (или ближайший к вам):</p>
+                                                    <p class="city-name">Москва</p>
+                                                    <button class="city-btn active" onclick="myFunction3()">Да</button>
+                                                    <span onclick="myFunction3()"><button class="city-btn dropbtn" onclick="myFunction4()">Нет</button></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-content-down" id="myDropdown4">
+                                        <div class="simple simple">
+                                            <div class="simple-body">
+                                                <div class="simple-title">Ваш (или ближайший к вам) город:</div>
+                                                <input type="text" class="simple-field" placeholder="Введите название..." required>
+                                                <ul class="simple-list" onclick="myFunction4()">
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Санкт-Петербург, Ленинградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Н. Новгород, Нижегородская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link active">Казань, Респ. Татарстан</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Челябинск, Челябинская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Ростов-на-Дону, Ростовская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Пермь, Пермская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Воронеж, Воронежская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Волгоград, Волгоградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Санкт-Петербург, Ленинградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Н. Новгород, Нижегородская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link active">Казань, Респ. Татарстан</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Челябинск, Челябинская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Ростов-на-Дону, Ростовская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Пермь, Пермская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Воронеж, Воронежская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Волгоград, Волгоградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Санкт-Петербург, Ленинградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Н. Новгород, Нижегородская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link active">Казань, Респ. Татарстан</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Челябинск, Челябинская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Ростов-на-Дону, Ростовская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Пермь, Пермская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Воронеж, Воронежская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Волгоград, Волгоградская обл.</button></li>
+                                                    <li class="simple-item"><button class="simple-link">Москва, Московская обл.</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="simple-ps">
+                                                <p class="simple-ps_text">
+                                                    Не нашли свой город? Можем 
+                                                    <a href="#" class="simple-ps_link">доставить</a>
+                                                    в любую точку России
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <img src="img/header-icon2.png" alt="" class="header-icon">
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">Телефон:</div>
+                                    <a href="tel:+83852602747" class="header-link">8 (3852) <b>602-747</b></a>
+                                </div>
+                            </li>
+                            <li class="header-item">
+                                <div class="header-image">
+                                    <img src="img/header-icon3.png" alt="" class="header-icon">
+                                </div>
+                                <div class="header-text">
+                                    <div class="header-descr">Почта:</div>
+                                    <a href="mailto:mir-conditera@bk.ru" class="header-link">mir-conditera@bk.ru</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-2 text-right header-bucket">
+                        <a href="#" class="menu-link"><b class="menu-hot">Мастер классы</b></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="header-decor">
+            <div class="content">
+                <div class="row footer-down">
+                    <div class="col-3 footer-copy">
+                        <p>&copy; 2013 - 2019 гг.</p> 
+                        <p>«Мир кондитера»</p>
+                    </div>
+                    <div class="col-4 footer-alltime">
+                        <p>Мы принимаем заказы круглосуточно.</p> 
+                        <p>Самовывоз с 10.00 до 20.00</p>
+                    </div>
+                    <div class="col-5 footer-what">
+                        <ul class="what-list">
+                            <li class="what-item"><p>Вид</p>  <p>оплаты:</p></li>
+                            <li class="what-item"><img src="img/what-icon1.png" alt="" class="what-icon"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/less.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/sliders.js"></script>
+</body>
+</html>
