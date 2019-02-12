@@ -10,61 +10,6 @@
     <link rel="stylesheet/less" href="css/style.less">
 </head>
 <body>
-    <div>
-        <div class="text-center city">
-            <div class="city-body">
-                <p class="city-text">Ваш город<br>
-                (или ближайший к вам):</p>
-                <p class="city-name">Москва</p>
-                <button class="city-btn active">Да</button>
-                <button class="city-btn">Нет</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="simple">
-        <div class="simple-body">
-            <div class="simple-title">Ваш (или ближайший к вам) город:</div>
-            <input type="text" class="simple-field" placeholder="Введите название..." required>
-            <ul class="simple-list">
-                <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link active">Казань, Респ. Татарстан</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Казань, Респ. Татарстан</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Казань, Респ. Татарстан</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
-                <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
-            </ul>
-        </div>
-        <div class="simple-ps">
-            <p class="simple-ps_text">
-                Не нашли свой город? Можем 
-                <a href="#" class="simple-ps_link">доставить</a>
-                в любую точку России
-            </p>
-        </div>
-    </div>
-    
     <div class="container-fluid">
         <h1 class="hidden">Мир кондитера и товары для кондитера</h1>
         <section class="how">
@@ -104,7 +49,64 @@
                                 </div>
                                 <div class="header-text">
                                     <div class="header-descr">Ваш город:</div>
-                                    <a href="#" class="header-link header-dropdown">Москва</a>
+                                    <div class="dropdown">
+                                        <a href="#" class="header-link header-dropdown dropbtn" onclick="myFunction()">Москва</a>
+                                        <div class="dropdown-content" id="myDropdown">
+                                            <div class="text-center city">
+                                                <div class="city-body">
+                                                    <p class="city-text">Ваш город<br>
+                                                    (или ближайший к вам):</p>
+                                                    <p class="city-name">Москва</p>
+                                                    <button class="city-btn active">Да</button>
+                                                    <button class="city-btn dropbtn" onclick="myFunction2()">Нет</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-content" id="myDropdown2">
+                                        <div class="simple">
+                                            <div class="simple-body">
+                                                <div class="simple-title">Ваш (или ближайший к вам) город:</div>
+                                                <input type="text" class="simple-field" placeholder="Введите название..." required>
+                                                <ul class="simple-list">
+                                                    <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link active">Казань, Респ. Татарстан</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Казань, Респ. Татарстан</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Москва, Московская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Санкт-Петербург, Ленинградская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Н. Новгород, Нижегородская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Казань, Респ. Татарстан</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Челябинск, Челябинская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Ростов-на-Дону, Ростовская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Пермь, Пермская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Воронеж, Воронежская обл.</a></li>
+                                                    <li class="simple-item"><a href="#" class="simple-link">Волгоград, Волгоградская обл.</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="simple-ps">
+                                                <p class="simple-ps_text">
+                                                    Не нашли свой город? Можем 
+                                                    <a href="#" class="simple-ps_link">доставить</a>
+                                                    в любую точку России
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </li>
                             <li class="header-item">
