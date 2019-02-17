@@ -207,6 +207,7 @@ h2 {
 
 .how {
     background-color: #f1f1f1;
+    background-image: url(../img/header-bg.png);
     padding: 15px 0;
 
     &-list {
@@ -240,6 +241,10 @@ h2 {
                 text-decoration: underline;
             }
         }
+        &-icon::before {
+            content: url(../img/how-icon.png);
+            padding-right: 10px;
+        }
     }
     &-icon {
         margin-bottom: -2px;
@@ -248,9 +253,9 @@ h2 {
 
 header {
     padding: 30px 0;
-    background-image: url(../img/header-bg.jpg);
+    background-color: #ffffff;
+    background-image: url(../img/header-bg.png);
     background-repeat: repeat;
-    background-size: cover;
 }
 .header-up {
     padding-bottom: 20px;
@@ -277,6 +282,18 @@ header {
     align-items: center;
     margin: 0 10px;
     position: relative;
+}
+.header-item-one::before {
+    content: url(../img/header-icon1.png);
+    padding-right: 25px;
+}
+.header-item-two::before {
+    content: url(../img/header-icon2.png);
+    padding-right: 25px;
+}
+.header-item-three::before {
+    content: url(../img/header-icon3.png);
+    padding-right: 25px;
 }
 .header-image {
     margin-right: 20px;
@@ -310,7 +327,6 @@ header {
     position: relative;
     margin-left: 10px;
     top: -2px;
-    
 }
 .header-bucket {
     display: flex;
@@ -324,6 +340,16 @@ header {
 .header-down {
     padding-top: 20px;
     align-items: center;
+}
+.header-buy {
+    border-radius: 3px;
+    padding: 20px;
+    display: flex;
+    border: 0;
+    cursor: pointer;
+    background-image: -moz-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
 }
 
 /* Меню */
@@ -369,24 +395,24 @@ header {
 }
 .search-body {
     position: relative;
-    
 }
 .search-field {
-    width: 100%;
+    width: 360px;
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
     color: #7c7c7c;
     font-size: 18px;
     font-family: 'MuseoCyrl-300', Arial, Helvetica, sans-serif;
     border: 0;
-    padding: 10px;
+    padding: 15px 20px;
+    box-sizing: border-box;
 }
 .search-button {
     background-color: transparent;
     border: 0;
     position: absolute;
-    right: -15px;
-    top: 10px;
+    right: 10px;
+    top: 15px;
     cursor: pointer;
 }
 
@@ -410,6 +436,13 @@ header {
     padding: 0;
     margin: 0;
     font-weight: normal;
+
+    &::before {
+        content: url(../img/left-title_icon.png);
+        padding-right: 15px;
+        position: relative;
+        top: -2px;
+    }
 }
 .left-title_icon {
     margin-right: 10px;
@@ -580,10 +613,17 @@ header {
     margin: 60px 0 40px 0;
     color: #ffffff;
     position: relative;
+    border-radius: 10px;
+    background-color: rgb(0, 166, 175);
+    min-height: 400px;
 
     &-image {
         width: 100%;
         border-radius: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 200px;
     }
     &-text {
         position: absolute;
@@ -604,20 +644,27 @@ header {
     height: 70px;
     border-radius: 10px;
 }
-.decor.notactive .right-decor {
-    display: none;
-}
 .right-decor {
     font-size: 18px;
     font-family: 'MuseoSansCyrl-500', Arial, Helvetica, sans-serif;
     color: #ffffff;
     border-radius: 10px;
-    background-color: rgb(88, 88, 88);
+    background-image: url(../img/decor-image.png);
+    background-size: cover;
     padding: 15px 30px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    min-height: 50px;
+
+    &-text::after {
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        content: url(../img/right-decor-info.png);
+    }
 }
 .right-alarm {
     font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
@@ -706,15 +753,29 @@ header {
         position: relative;
         font-size: 24px;
         color: #3b3a35;
-
+        position: relative;
+        height: 500px;
+        
+        
+        &-left {
+            border-radius: 10px;
+            background-color: rgb(238, 238, 238);
+            width: 420px;
+        }
         &-right {
             color: #ffffff;
+            background-image: url(../img/actions-iten-right.jpg);
+            border-radius: 10px;
+            background-size: cover;
+            margin-left: 60px;
         }
     }
     &-image {
-        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
         border-radius: 10px;
-        height: 500px;
+        
     }
     &-text {
         position: absolute;
@@ -953,7 +1014,8 @@ header {
     &-now {
         margin: 15px 0;
 
-        &-icon {
+        &::before {
+            content: url(../img/card-now-icon.png);
             margin-right: 8px;
             margin-bottom: 0;
         }
@@ -1024,10 +1086,17 @@ header {
         box-shadow: 8.875px 19.032px 34.8px 5.2px rgba(178, 178, 178, 0.027);    
     }
     &-item {
-        width: 30%;
+        width: 31%;
         padding: 10px 10px 10px 15px;
         border-left: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
         position: relative;
+
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            border-bottom: 1px solid transparent;
+        }
 
         &:nth-child(1),
         &:nth-child(4),
@@ -1073,12 +1142,24 @@ header {
     }
       
 }
+
 .catalog-list-full .catalog-item {
-    width: 22%;
+    width: 22.5%;
     padding: 10px 10px 10px 15px;
     border-left: 1px solid #e1e1e1;
     position: relative;
 
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6) {
+        border-bottom: 1px solid #e1e1e1;
+    }
+    &:nth-child(9),
+    &:nth-child(10),
+    &:nth-child(11),
+    &:nth-child(12) {
+        border-bottom: 1px solid transparent;
+    }
     &:nth-child(1),
     &:nth-child(5),
     &:nth-child(9),
@@ -1089,6 +1170,9 @@ header {
     &:nth-child(29) {
         border-left: 1px solid transparent;
     }
+}
+.catalog-list-half .catalog-item {
+    border-bottom: 1px solid transparent!important;
 }
 .catalog-buttons {
     display: flex;
@@ -1112,8 +1196,8 @@ header {
     text-align: center;
     cursor: pointer;
     border: 0;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border-radius: 3px;
     background-color: rgb(88, 88, 88);
     color: #ffffff;
@@ -1132,8 +1216,8 @@ header {
     font-size: 17px;
 }
 .many-card .many-btn {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height:20px;
     text-align: center;
     padding: 0;
 }
@@ -1210,10 +1294,9 @@ header {
 
 /* Подвал */
 footer {
-    background-image: url(../img/footer-bg.jpg);
+    background-color: #ededed;
+    background-image: url(../img/footer-bg.png);
     background-repeat: repeat;
-    background-size: cover;
-    
 }
 .footer-up {
     align-items: center;
