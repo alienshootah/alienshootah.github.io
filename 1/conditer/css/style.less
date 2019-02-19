@@ -662,11 +662,11 @@ header {
 }
 
 /* Секции */
-.decor.notactive {
+.decor {
     background-image: url(../img/decor-image.png);
     background-size: cover;
     width: 100%;
-    min-height: 50px;
+    min-height: 70px;
     border-radius: 10px;
 }
 .right-decor {
@@ -684,6 +684,11 @@ header {
     position: relative;
     min-height: 50px;
 
+    &-text {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-right: 55px;
+    }
     &-text::after {
         position: absolute;
         right: 30px;
@@ -1525,11 +1530,25 @@ footer {
     left: -90px;
     z-index: 9999;
 }
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
 .dropdown-content-down {
     display: none;
     position: absolute;
     bottom: 80px;
     left: -90px;
+    z-index: 9999;
+}
+.dropdown-content-down2 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     z-index: 9999;
 }
 .show {display:block;}
@@ -1671,4 +1690,7 @@ footer {
 /* Аккордеон */
 .panel {
     display: none;
+}
+.panel.active {
+    display: block;
 }
