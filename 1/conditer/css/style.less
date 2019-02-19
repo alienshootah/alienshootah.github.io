@@ -187,20 +187,22 @@ body {
 h1 {
     font-size: 36px;
     font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
+    margin-top: 15px;
 }
 h2 {
-    font-size: 36px;
+    font-size: 38px;
     text-align: center;
     font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
     background-image: url(../img/h2-decor.png);
     background-repeat: no-repeat;
     background-position: bottom center;
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 .custom-title {
     background-image: none;
     text-align: left;
     padding-bottom: 0;
+    font-size: 36px;
 }
 
 /* Шапка */
@@ -213,7 +215,8 @@ h2 {
     &-list {
         display: flex;
         justify-content: space-between;
-        margin: 0 -15px;
+        margin-left: -15px;
+        margin-right: 40px;
     }
     &-item {
         margin: 0 15px;
@@ -233,7 +236,7 @@ h2 {
         &_link {
             color: #3b3a35;
             text-decoration: none;
-            padding: 0 10px;
+            padding: 0 12px;
             font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
 
             &:hover,
@@ -243,7 +246,9 @@ h2 {
         }
         &-icon::before {
             content: url(../img/how-icon.png);
-            padding-right: 10px;
+            padding-right: 24px;
+            position: relative;
+            top: 1px;
         }
     }
     &-icon {
@@ -252,13 +257,13 @@ h2 {
 }
 
 header {
-    padding: 30px 0;
+    padding: 20px 0 10px 0;
     background-color: #ffffff;
     background-image: url(../img/header-bg.png);
     background-repeat: repeat;
 }
 .header-up {
-    padding-bottom: 20px;
+    padding-bottom: 0;
 }
 .logo-link {
     font-size: 33px;
@@ -274,18 +279,20 @@ header {
 }
 .header-list {
     display: flex;
-    justify-content: space-between;
-    margin: 0 -20px;
+    margin-left: -50px;
 }
 .header-item {
     display: flex;
     align-items: center;
-    margin: 0 10px;
+    margin-right: 70px;
     position: relative;
+}
+.header-item:last-child {
+    margin-right: 0;
 }
 .header-item-one::before {
     content: url(../img/header-icon1.png);
-    padding-right: 25px;
+    padding-right: 20px;
 }
 .header-item-two::before {
     content: url(../img/header-icon2.png);
@@ -296,7 +303,7 @@ header {
     padding-right: 25px;
 }
 .header-image {
-    margin-right: 20px;
+    margin-right: 30px;
 }
 .header-descr {
     font-size: 16px;
@@ -338,7 +345,7 @@ header {
     border: 0;
 }
 .header-down {
-    padding-top: 20px;
+    padding-top: 5px;
     align-items: center;
 }
 .header-buy {
@@ -358,13 +365,11 @@ header {
     font-size: 20px;
     color: #3b3a35;
     font-family: 'MuseoCyrl-700', Arial, Helvetica, sans-serif;
-    margin: 0 -10px;
+   
+    margin-right: 30px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-}
-.menu-item {
-    margin: 0 10px;
 }
 .menu-link {
     color: #3b3a35;
@@ -411,14 +416,23 @@ header {
     background-color: transparent;
     border: 0;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 15px;
     cursor: pointer;
 }
 
 /* Навбар */
 .main-body {
-    margin: 60px 0;
+    margin: 62px 0;
+}
+.main-left {
+    padding-right: 10px;
+}
+.main-right {
+    padding-left: 0;
+}
+.main-right_container {
+    padding-left: 20px;
 }
 .left-title {
     background-image: -moz-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
@@ -466,13 +480,14 @@ header {
     color: #3b3a35;
     text-decoration: none;
     display: block;
-    padding: 20px 30px;
+    padding: 22px 30px 22px 30px;
     width: 100%;
     border: 0;
     background-color: transparent;
     text-align: left;
     cursor: pointer;
     outline: none;
+    font-size: 17px;
 
     &:hover,
     &.active {
@@ -482,6 +497,7 @@ header {
     &::after {
         content: url(../img/left-link.png);
         float: right;
+        margin-right: -4px;
     }
     &:hover::after,
     &.active::after {
@@ -522,7 +538,7 @@ header {
     &-text {
         position: absolute;
         top: 0;
-        padding: 40px 50px;
+        padding: 45px;
         color: #ffffff;
     }
     &-title {
@@ -534,9 +550,10 @@ header {
     &-date {
         padding: 20px 0;
         display: block;
+        font-size: 18px;
     }
     &-btn {
-        margin-top: 40px;
+        margin-top: 35px;
         margin-left: -10px;
     }
     &-link {
@@ -558,7 +575,7 @@ header {
 
 .news {
     border: 1px solid #d6d6d6;
-    padding: 20px;
+    padding: 35px 30px;
 
     &-title {
         display: flex;
@@ -597,6 +614,10 @@ header {
         font-size: 18px;
         font-family: 'MuseoSansCyrl-100', Arial, Helvetica, sans-serif;
     }
+    &-text {
+        padding: 0;
+        margin: 10px 0 0 0;
+    }
     &-link {
         text-decoration: none;
         color: #1a1830;
@@ -615,24 +636,28 @@ header {
     position: relative;
     border-radius: 10px;
     background-color: rgb(0, 166, 175);
-    min-height: 400px;
+    min-height: 380px;
 
     &-image {
-        width: 100%;
         border-radius: 10px;
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 200px;
+        width: 185px;
     }
     &-text {
         position: absolute;
-        top: 0;
-        padding: 0 50px;
+        top: 10px;
+        padding: 0 45px;
         font-size: 36px;
     }
     &-title {
         font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
+        margin-bottom: 40px;
+    }
+    &-descr {
+        margin-top: 0;
+        padding: 0;
     }
 }
 
@@ -641,7 +666,7 @@ header {
     background-image: url(../img/decor-image.png);
     background-size: cover;
     width: 100%;
-    height: 70px;
+    min-height: 50px;
     border-radius: 10px;
 }
 .right-decor {
@@ -651,7 +676,7 @@ header {
     border-radius: 10px;
     background-image: url(../img/decor-image.png);
     background-size: cover;
-    padding: 15px 30px;
+    padding: 12px 30px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
@@ -686,20 +711,21 @@ header {
     font-size: 24px;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 105px;
 }
 .slider-title {
     font-size: 68px;
     font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
 }
 .slider-descr {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 .slider-more {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
     border: 1px solid rgb(26,201,211);
-    padding: 40px 30px;
+    padding: 40px 25px;
     border-radius: 60px;
 }
 .slider-link {
@@ -710,7 +736,10 @@ header {
     background-image: -ms-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
     text-decoration: none;
     color: #ffffff;
-    padding: 20px 40px;
+    padding: 25px 80px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    outline: none;
 
     &:hover,
     &:focus {
@@ -722,8 +751,8 @@ header {
     background-image: url(../img/better-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 40px 0;
-    padding: 0 20px;
+    margin: 25px 0;
+    padding: 0;
     border-radius: 10px;
     color: #ffffff;
     font-size: 18px;
@@ -733,7 +762,7 @@ header {
         display: flex;
     }
     &-item {
-        padding: 40px;
+        padding: 22px 40px;
         width: 25%;
         border-right: 1px solid #3dc1c9;
 
@@ -747,8 +776,12 @@ header {
     }
 }
 .actions {
-    margin: 10px 0;
+    margin-top: 75px;
+    margin-bottom: 100px;
 
+    &-body {
+        margin-top: 60px;
+    }
     &-item {
         position: relative;
         font-size: 24px;
@@ -760,14 +793,15 @@ header {
         &-left {
             border-radius: 10px;
             background-color: rgb(238, 238, 238);
-            width: 420px;
+            width: 450px;
+            padding-right: 0;
         }
         &-right {
             color: #ffffff;
             background-image: url(../img/actions-iten-right.jpg);
             border-radius: 10px;
             background-size: cover;
-            margin-left: 60px;
+            margin-left: 30px;
         }
     }
     &-image {
@@ -780,17 +814,18 @@ header {
     &-text {
         position: absolute;
         top: 0;
-        padding: 35px 40px;
+        padding: 35px 30px;
     }
     &-mark {
         display: inline-block;
         margin-bottom: 10px;
+        margin-top: 10px;
         background-color: rgb(0, 166, 175);
         border-radius: 30px;
         font-size: 16px;
         font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
         color: #ffffff;
-        padding: 10px 20px;
+        padding: 10px 25px;
         text-transform: uppercase;
 
         &-reverse {
@@ -799,15 +834,16 @@ header {
         }
     }
     &-title {
-        font-size: 110px;
+        margin-top: 30px;
+        font-size: 120px;
         font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
     }
     &-descr {
         font-family: 'MuseoCyrl-700', Arial, Helvetica, sans-serif;
     }
     &-more {
-        margin-top: 40px;
-        margin-left: -10px;
+        margin-top: 50px;
+        
     }
     &-link {
         border-radius: 26px;
@@ -817,8 +853,8 @@ header {
         background-image: -ms-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
         color: #ffffff;
         text-decoration: none;
-        padding: 15px 40px;
-        font-size: 14px;
+        padding: 17px 50px;
+        font-size: 15px;
 
         &:hover,
         &:focus {
@@ -828,7 +864,7 @@ header {
     }
 }
 .actions-text-right {
-    padding: 70px 80px;
+    padding: 85px 65px;
 }
 .actions-item-left {
     padding-left: 0;
@@ -838,23 +874,27 @@ header {
 }
 
 .catalog-nav {
-    margin: 10px -10px;
+    margin-top: 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 60px;
     display: flex;
     justify-content: center;
 
     &_item {
-        margin: 30px 10px;
+        margin: 10px 15px;
     }
     &_link {
         text-decoration: none;
         background-color: #e9e9e9;
         color: #7a7a7a;  
-        border-radius: 30px;
-        padding: 10px 30px;
+        border-radius: 40px;
+        padding: 20px 60px;
         outline: none;
         border: 0;
         cursor: pointer;
-        
+        font-size: 24px;
+
         &:hover,
         &:focus,
         &.active {
@@ -863,12 +903,16 @@ header {
             background-image: -ms-linear-gradient( 0deg, rgb(0,166,175) 0%, rgb(26,201,211) 100%);
             color: #ffffff; 
         }
+        &.active {
+            font-weight: bold;
+        }
     }
 }
 
 /* Хлебные крошки */
 
 .breadcrumb {
+    margin-top: 10px;
     display: flex;
     font-size: 16px;
     color: #c0c0c0;
@@ -984,8 +1028,13 @@ header {
 /* Карточка товара */
 
 .card {
+    margin-top: 35px;
+    margin-bottom: 50px;
     font-family: 'MuseoSansCyrl-300', Arial, Helvetica, sans-serif;
-    padding: 40px 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 8.875px 19.032px 34.8px 5.2px rgba(178, 178, 178, 0.027);
@@ -994,7 +1043,7 @@ header {
         align-items: center;
 
         &_right {
-            margin-left: 40px;
+            margin-left: 50px;
         }
     }
     &-item {
@@ -1003,7 +1052,10 @@ header {
     &-image {
         width: 230px;
         height: 260px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        padding-right: 20px;
     }
     &-price {
         color: #3b3a35;
@@ -1012,12 +1064,12 @@ header {
         margin-bottom: 10px;
     }
     &-now {
-        margin: 15px 0;
+        margin: 15px 5px;
 
         &::before {
             content: url(../img/card-now-icon.png);
-            margin-right: 8px;
-            margin-bottom: 0;
+            margin-right: 15px;
+            margin-bottom: -2px;
         }
     }
     &-buttons {
@@ -1029,11 +1081,12 @@ header {
         color: #11afb7;
         border-radius: 30px;
         background-color: transparent;
-        padding: 10px 30px;
+        padding: 12px 27px;
         cursor: pointer;
         outline: none;
         font-family: 'MuseoCyrl-700', Arial, Helvetica, sans-serif;
-        margin: 0 5px;
+        margin: 0 7px;
+        font-size: 16px;
 
         &:hover,
         &:focus {
@@ -1060,6 +1113,10 @@ header {
             }
         }
     }
+    &-descr {
+        padding-top: 10px;
+        line-height: 1.4;
+    }
 }
 .many-card {
     margin-right: 10px;
@@ -1075,7 +1132,7 @@ header {
     &-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         color: #3b3a35;
         font-size: 18px;
         border-width: 1px;
@@ -1086,8 +1143,8 @@ header {
         box-shadow: 8.875px 19.032px 34.8px 5.2px rgba(178, 178, 178, 0.027);    
     }
     &-item {
-        width: 31%;
-        padding: 10px 10px 10px 15px;
+        width: 27%;
+        padding: 20px 40px 60px 25px;
         border-left: 1px solid #e1e1e1;
         border-bottom: 1px solid #e1e1e1;
         position: relative;
@@ -1112,19 +1169,33 @@ header {
     &-image {
         width: 205px;
         height: 230px;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 80px;
         display: block;
+
+        &-similar {
+            margin-bottom: 20px;
+            width: 170px;
+            height: 180px;
+        }
     }
     &-bigger {
         background-color: transparent;
         border: 0;
         position: absolute;
-        right: 0;
+        right: 30px;
+        top: 30px;
         cursor: pointer;
     }
     &-title {
         padding: 0;
         margin: 0;
+        font-size: 18px;
+
+        &-smilar {
+            font-size: 15px;
+        }
     }
     &-link {
         text-decoration: none;
@@ -1136,7 +1207,7 @@ header {
         }
     }
     &-price {
-        margin: 10px 0;
+        margin: 20px 0;
         font-size: 24px;
         font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
     }
@@ -1144,8 +1215,8 @@ header {
 }
 
 .catalog-list-full .catalog-item {
-    width: 22.5%;
-    padding: 10px 10px 10px 15px;
+    width: 21%;
+    padding: 20px 20px 40px 20px;
     border-left: 1px solid #e1e1e1;
     position: relative;
 
@@ -1224,7 +1295,7 @@ header {
 
 .catalog-add {
     border: 0;
-    padding: 10px 20px 5px 20px;
+    padding: 11px 22px 6px 22px;
     border-radius: 5px;
     background-color: rgb(0, 166, 175);
     cursor: pointer;
@@ -1245,7 +1316,7 @@ header {
         font-size: 36px;
         font-family: 'MuseoCyrl-900', Arial, Helvetica, sans-serif;
         color: #ffffff;
-        margin: 100px 0 60px 0;
+        margin: 60px 0 70px 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1254,8 +1325,22 @@ header {
             background-image: url(../img/classes-item-bg2.jpg);
         }
     }
+    &-item:last-child {
+        margin-bottom: 30px;
+    }
+    &-text {
+       width: 280px;
+    }
+    &-picture {
+        width: 400px;
+    }
     &-image {
         margin-top: -40px;
+        margin-left: 40px;
+        margin-bottom: -8px;
+    }
+    &-title {
+        margin-bottom: 30px;
     }
     &-yellow {
         color: #ffe13a;
@@ -1265,7 +1350,7 @@ header {
         font-size: 16px;
         color: #ffffff;
         text-decoration: none;
-        padding: 15px 30px;
+        padding: 20px 35px;
         border-radius: 30px;
         border: 1px solid transparent;
         background-image: -moz-linear-gradient( 0deg, rgb(81,80,77) 0%, rgb(214,178,123) 0%, rgb(112,194,123) 0%, rgb(9,210,122) 0%, rgb(52,235,207) 100%);
@@ -1308,13 +1393,26 @@ footer {
     color: #a6a5a3;
     font-size: 18px;
     font-family: 'MuseoCyrl-300', Arial, Helvetica, sans-serif;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-bottom: 20px;
 }
 .what-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.footer-copy {
+    padding-right: 0;
+}
+.footer-alltime {
+    padding-left: 0;
+    margin-left: -20px;
+}
+.footer-what {
+    padding-left: 25px;
+}
+.footer-hot {
+    font-size: 20px;
 }
 
 /* Слайдер */
@@ -1355,7 +1453,7 @@ footer {
 }
 .right-slider .slick-prev, 
 .right-slider .slick-next {
-    top: 48%;
+    top: 50%;
     width: 70px;
     height: 70px;
 }
@@ -1363,7 +1461,7 @@ footer {
     z-index: 5000;
 }
 .right-slider .slick-next {
-    right: -30px; 
+    right: -35px; 
     z-index: 5000;
 }
 
@@ -1390,15 +1488,16 @@ footer {
 }
 .card-slider .slick-prev, 
 .card-slider .slick-next {
-    top: 48%;
+    top: 55%;
     width: 70px;
     height: 70px;
 }
-.card-slider .slick-prev {left: -30px; 
+.card-slider .slick-prev {
+    left: -30px; 
     z-index: 5000;
 }
 .card-slider .slick-next {
-    right: -30px; 
+    right: -10px; 
     z-index: 5000;
 }
 
