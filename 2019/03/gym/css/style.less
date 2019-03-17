@@ -155,18 +155,52 @@ header {
     background-color: #72d0f4;
     color: #ffffff;
 }
-.header-body {
-    align-items: center;
+.header {
+    &-body {
+        align-items: center;
+    }
+    &-logo {
+        padding-right: 0;
+    }
+    &-menu {
+        padding-left: 0;
+    }
+}
+
+/* Menu icon */
+.menu-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 5px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
 }
 
 /* Menu */
-
+.nav-icon {
+    display: none;
+    background-color: transparent;
+    border: 0;
+}
 .menu {
     text-transform: uppercase;
     color: #ffffff;
     font-family: 'OpenSans-Semibold', Arial, Helvetica, sans-serif;
     font-size: 13px;
-    padding: 35px 0;
+    padding: 40px 0;
 
     &-list {
         display: flex;
@@ -206,8 +240,22 @@ header {
         }
     }
 }
-.dropdown {
+
+/* Drop */
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'OpenSans-Semibold', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.dropdown-content {
     display: none;
+}
+.show {display: block;}
+
+.dropdown {
     background-color: #ffffff;
     color: #72d0f4;
     padding: 5px 10px;
@@ -309,6 +357,7 @@ header {
         margin-bottom: -5px;
     }
 }
+
 .classes {
     &-list {
         background-color: #72d0f4;
@@ -336,6 +385,10 @@ header {
     &-name {
         color: #ffffff;
         text-decoration: none;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
     }
 }
 .share {
@@ -346,6 +399,12 @@ header {
     }
     &-item {
         margin: 0 10px;
+    }
+    &-link {
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
     }
 }
 .prices {
@@ -394,11 +453,17 @@ header {
         text-align: center;
         padding: 0 20px 10px 20px;
     }
+    &-item {
+        outline: none;
+    }
     &-image {
         width: 80px;
         height: 80px;
         border-radius: 100%;
         margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
     }
     &-name {
         color: #72d0f4;
@@ -530,7 +595,6 @@ header {
     &-img {
         width: 70px;
         height: 70px;
-        margin-right: 20px;
         border-radius: 5px;
     }
     &-title {
@@ -726,4 +790,38 @@ footer {
     }
 }
 
-/* Slider */
+/* Slider: Trainers */
+.trainers-slider .slick-prev:before, .trainers-slider .slick-next:before 
+{ font-family: "slick"; font-size: 60px; line-height: 1; color: #000; opacity: 1; 
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.trainers-slider .slick-prev:before { content: url(../img/trainers-arrow_left.png); }
+[dir="rtl"] .trainers-slider .slick-prev:before { content: url(../img/trainers-arrow_right.png); }
+
+[dir="rtl"] .trainers-slider .slick-next { left: -10px; top: 70px; right: auto;}
+.trainers-slider .slick-next:before { content: url(../img/trainers-arrow_right.png); }
+[dir="rtl"] .trainers-slider .slick-next:before { content: url(../img/trainers-arrow_left.png); }
+.trainers-slider .slick-prev, 
+.trainers-slider .slick-next {
+    top: 35%;
+}
+.trainers-slider .slick-prev {left: 10px; z-index: 100;}
+.trainers-slider .slick-next {right: 10px; z-index: 100;}
+
+
+/* Slider: Gallery */
+.slick-prev:before, .slick-next:before 
+{ font-family: "slick"; font-size: 60px; line-height: 1; color: #000; opacity: 1; 
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+.slick-prev:before { content: url(../img/gall-arrow-left.png); }
+[dir="rtl"] .slick-prev:before { content: url(../img/gall-arrow-right.png); }
+
+[dir="rtl"] .slick-next { left: -10px; top: 70px; right: auto;}
+.slick-next:before { content: url(../img/gall-arrow-right.png); }
+[dir="rtl"] .slick-next:before { content: url(../img/gall-arrow-left.png); }
+.slick-prev, .slick-next {
+    top: 50%;
+}
+.slick-prev {left: 10px; z-index: 100;}
+.slick-next {right: 50px; z-index: 100;}
