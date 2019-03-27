@@ -1,3 +1,7 @@
+function myMenu(x) {
+    x.classList.toggle("change");
+}
+
 $('.one-time').slick({
     dots: false,
     arrows: false,
