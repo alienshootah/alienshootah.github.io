@@ -9,75 +9,95 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="player">
-            <div class="player-info">
-                <div class="player-top">
-                    <div class="player-upload">Upload</div>
-                    <div class="player-menu">
-                        <button class="player-menu_btn">
-                            <img src="img/player-menu.png" alt="" class="player-img">
-                        </button>
+        <div class="dropdown">
+            <div class="player">
+                <div class="player-info">
+                    <div class="player-top">
+                        <div class="player-upload">Upload</div>
+                        <div class="player-menu">
+                            <button onclick="myFunction()" class="dropbtn">
+                                Tracks
+                            </button>
+                        </div>
+                    </div>
+                    <div class="player-picture">
+                        <a href="#"><img src="img/player-image.png" alt="" class="player-image"></a> 
+                    </div>
+                    <div class="player-title">Franck Black</div>
+                    <div class="player-buttons">
+                        <div class="player-left">
+                            <button class="player-btn">
+                                <img src="img/player-icon.png" alt="" class="player-icon">
+                            </button>
+                        </div>
+                        <div class="player-center">
+                            <button class="player-btn">
+                                <img src="img/player-icon2.png" alt="" class="player-icon">
+                            </button>
+                            <button class="player-btn">
+                                <img src="img/player-icon3.png" alt="" class="player-icon">
+                            </button>
+                            <button class="player-btn">
+                                <img src="img/player-icon4.png" alt="" class="player-icon">
+                            </button>
+                        </div>
+                        <div class="player-right">
+                            <button class="player-btn">
+                                <img src="img/player-icon5.png" alt="" class="player-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="player-down">
+                        <div class="player-time">2.26</div>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        </div>
+                        <div class="player-time">4.52</div>
                     </div>
                 </div>
-                <div class="player-picture">
-                    <a href="#"><img src="img/player-image.png" alt="" class="player-image"></a> 
+                <div id="myDropdown" class="dropdown-content">
+                    <div class="player-tracks">
+                        <div class="player-tracks_title">Music PlayList</div>
+                        <ul class="player-list">
+                            <li class="player-item"> 
+                                <div class="player-num">1</div>
+                                Liquid Hip Hop
+                                <div class="player-time_end">3:12</div>
+                            </li>
+                            <li class="player-item"> 
+                                <div class="player-num">2</div>
+                                Sound System
+                                <div class="player-time_end">1.54</div>
+                            </li>
+                            <li class="player-item"> 
+                                <div class="player-num">3</div>
+                                Uncomfortable
+                                <div class="player-time_end">4.21</div>
+                            </li>
+                            <li class="player-item active"> 
+                                <div class="player-num">4</div>
+                                Franck Black
+                                <div class="player-time_end">2.12</div>
+                            </li>
+                            <li class="player-item"> 
+                                <div class="player-num">5</div>
+                                Ghetto star
+                                <div class="player-time_end">3.46</div>
+                            </li>
+                            <li class="player-item">
+                                <div class="player-num">6</div>
+                                Freebies 
+                                <div class="player-time_end">1.54</div>
+                            </li>
+                        </ol>
+                        <div class="copy">
+                            Design by <a href="http://freebranders.com" class="copy-link">freebranders.com</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="player-title">Franck Black</div>
-                <div class="player-buttons">
-                    <div class="player-left">
-                        <button class="player-btn">
-                            <img src="img/player-icon.png" alt="" class="player-icon">
-                        </button>
-                    </div>
-                    <div class="player-center">
-                        <button class="player-btn">
-                            <img src="img/player-icon2.png" alt="" class="player-icon">
-                        </button>
-                        <button class="player-btn">
-                            <img src="img/player-icon3.png" alt="" class="player-icon">
-                        </button>
-                        <button class="player-btn">
-                            <img src="img/player-icon4.png" alt="" class="player-icon">
-                        </button>
-                    </div>
-                    <div class="player-right">
-                        <button class="player-btn">
-                            <img src="img/player-icon5.png" alt="" class="player-icon">
-                        </button>
-                    </div>
-                </div>
-                <div class="player-down">
-                    <div class="player-time">2.26</div>
-                    <div class="slidecontainer">
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                    </div>
-                    <div class="player-time">4.52</div>
-                </div>
-            </div>
-            <div class="player-tracks">
-                <div class="player-tracks_title">Music PlayList</div>
-                <ol class="player-list">
-                    <li class="player-item"> Liquid Hip Hop
-                        <div class="player-time_end">3:12</div>
-                    </li>
-                    <li class="player-item"> Sound System
-                        <div class="player-time_end">1.54</div>
-                    </li>
-                    <li class="player-item"> Uncomfortable
-                        <div class="player-time_end">4.21</div>
-                    </li>
-                    <li class="player-item active"> Franck Black
-                        <div class="player-time_end">2.12</div>
-                    </li>
-                    <li class="player-item"> Ghetto star
-                        <div class="player-time_end">3.46</div>
-                    </li>
-                    <li class="player-item"> Voodoo Jazz
-                        <div class="player-time_end">1.54</div>
-                    </li>
-                </ol>
             </div>
         </div>
     </div>
+    <script src="js/apps.js"></script>
 </body>
 </html>
