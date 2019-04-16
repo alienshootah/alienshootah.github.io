@@ -24,9 +24,9 @@ function openCity(evt, cityName) {
 // Поисковые системы
 $('#flagstrap3').flagStrap({
   countries: {
-    "UA": "<img src='../img/google-sel.jpg'>",
-    "GB": "<img src='../img/google-sel.jpg'> 2",
-    "US": "<img src='../img/google-sel.jpg'> 3",
+    "UA": "<img src='img/google-sel.jpg'>",
+    "GB": "<img src='img/google-sel.jpg'> 2",
+    "US": "<img src='img/google-sel.jpg'> 3",
 
   },
 
