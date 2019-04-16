@@ -94,6 +94,6 @@ jQuery( document ).ready( function( $ ) {
   }
 
 
-  $("html").mouseover(function() {
+  $("html").mouseleave(function() {
     checkCookie();
   }); });
