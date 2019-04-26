@@ -1,0 +1,1174 @@
+﻿<html>
+<head>
+	<title>Gogetrank</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" />
+	<link rel="stylesheet" href="css/flags.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="logo-block">
+                        <a href="#" class="mobile-btn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <a href="http://uat.gogetrank.com">
+                            <img src="img/logo.png" style="max-width: 211px;" alt=""> <!--  logo.svg main-logo.png -->
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <div class="mobile-block">
+                        <div class="nav-block">
+                            <ul class="menu">
+                                <li>
+                                    <a href="l/price.html">Прайс</a>
+                                </li>
+                                <li>
+                                    <a href="l/about.html">О Нас</a>
+                                </li>
+                                <li>
+                                    <a href="l/affiliate.html">Партнерам</a>
+                                </li>
+                            </ul>
+                            <ul class="lk">
+                                <li class="enter">
+                                    <a href="#login" class="loginsbutton" data-box="1" data-toggle="modal" data-target="#reg">Войти</a>
+                                </li>
+                                <li class="registration">
+                                    <a href="#reg" class="loginsbutton" data-box="2" data-toggle="modal" data-target="#reg">Регистрация</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+	<header>
+		<div class="top-block">
+			<div class="position-middle">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="title-block">
+								<style type="text/css">
+									.select-flag {
+										background: #fff;
+										border-radius: 25px;
+										width: 220px;
+										height: 293px;
+									}
+									.select-flag .buttons-flag {
+										padding: 20px 
+									}
+									.select-flag .buttons-flag button {
+										background: none;
+										border:none;
+										border-bottom: 2px solid #f1ecec;
+										color: #3a4156;
+										font-weight: bold;
+										padding-bottom: 8px;
+										width: 50%;
+										float: left;
+										font-size: 16px;
+										transition: 0.1s;
+									}
+
+									.select-flag .buttons-flag button.active,
+									.select-flag .buttons-flag button:hover {
+										border-bottom: 2px solid #3057bf; 
+										color: #3057bf;
+									}
+
+									.select-flag  ul {
+										border: none;
+										box-shadow: none !important;
+										display: block !important;
+
+									}
+									.select-flag  ul {
+										width: 100% !important; 
+									}
+									.select-flag  ul li:first-child {
+										display: none !important;
+									}
+									.select-flag  ul li a {
+										cursor: pointer;
+									}
+									.select-flag button {
+										display: none !important;
+									}
+									.select-flag .no-result {
+										text-align: center;
+										font-size: 12px;
+									}
+
+									.select-flag .buttons-flag button {
+										display: block !important;
+									}
+
+									.select-flag input[type="text"] {
+										background: #f7f7f7;
+										border-radius: 40px;
+										height: 30px;
+										width: 180px;
+										margin: 30px auto 20px;
+										border: none;
+										position: relative;
+										display: block;
+										padding: 0 10px 0 40px;
+										font-size: 12px;
+										background: url("img/search-flag.png") no-repeat top center #f7f7f7;
+										background-position: 12px 8px;
+									}
+									.select-flag {
+										overflow: hidden;
+										position: absolute;
+										-webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.1);
+										-moz-box-shadow:    0px 5px 6px 0px rgba(0, 0, 0, 0.1);
+										box-shadow:         0px 5px 6px 0px rgba(0, 0, 0, 0.1);
+									}
+									.select-flag:after {
+									    content: ' ';
+									    width: 100%;
+									    position: absolute;
+									    pointer-events: none;
+									    z-index: 1999;
+									    left: 0;
+									    bottom: -45px;
+									    height: 145px;
+									    background: url(img/hide-block-reviews.png) repeat-x top center;
+									}
+
+									.select-block p {
+										cursor: pointer;
+										display: block;
+										height: 43px;
+										line-height: 43px;
+									}
+
+									.select-block {
+										position: relative;
+									}
+									.flag-input {
+										position: relative;
+									}
+									.select-flag {
+										position: absolute;
+										top: 60px;
+										left: 0;
+									}
+									.flag-input {
+										width: 10px;
+										float: left;
+									}
+
+									.select-flag .Google-block, 
+									.select-flag .Yandex-block {
+										display: none;
+
+									}
+									.select-flag .active {
+										display: block;
+									}
+								</style>
+								
+								<h1><span>Точная проверка</span>позиций сайта<br>и прогноз SEO трафика</h1>
+								<form action="#" method="post" class="check-site">
+									<p class="title">Проверяй позиции и получай кэшбек <span>до 30%</span></p>
+									<div class="domen-block">
+										<div class="form-block">
+											<div class="input-block">
+												<input type="text" name="domen" placeholder="Введите домен">
+											</div>
+											<div class="select-block">
+												<p><i class="flagstrap-icon flagstrap-ru"></i><span>RU</span></p>
+													
+													<div class="select-flag" style="display: none;">
+														<div class="buttons-flag">
+															<button class="active" data-box="Google-block">Google</button>
+															<button data-box="Yandex-block">Yandex</button>
+														</div>
+														<div class="Google-block active">
+															<input type="text" name="search-block" placeholder="Найти">
+															<div id="countrySelect"></div>
+														</div>
+														<div class="Yandex-block">
+															<input type="text" name="search-block" placeholder="Найти">
+															<div id="citySelect"></div>
+														</div>
+													
+													</div>
+												
+												<!--
+												<div id="country"
+										        	data-button-size="country"
+										            data-input-name="country"
+										            data-selected-country="UA"
+										            data-scrollable="true"
+										            data-scrollable-height="250px"
+										            data-countries='{"UA": "Украина","RU": "RU"}'>
+										        </div>
+										    	-->
+
+												<!-- <select name="region">
+													<option style="background-image:url(img/ua.png);" value="UA">
+														UA
+													</option>
+													<option value="UA">
+														<img src="img/ua.png" alt="">RU
+													</option>
+													<option value="UA">
+														<img src="img/ua.png" alt="">EN
+													</option>
+												</select>-->
+											</div> 
+
+										</div>
+										<input type="submit" value="Начать">
+									</div>
+								</form>
+								
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
+							<div class="img-block">
+								<img src="img/top.png" alt="">
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+		
+	</header>
+	<section class="advantages ">
+	<div class="container ">
+		<div class="done-works hidden-xs">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="block">
+						<p class="title"><span>2 х 10</span><sup>6</sup></p>
+						<div class="desc">проверенных ключей</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="block">
+						<p class="title"><span>275341</span></p>
+						<p class="desc">ключ вошел в ТОП 10</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="block">
+						<p class="title"><span>1251</span></p>
+						<p class="desc">закрытых тасок в JIRA</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-3">
+					<div class="block">
+						<p class="title"><span>3 место</span></p>
+						<p class="desc">в битве стартапов 2018</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="video">
+			<div class="info-block">
+				<p class="title">Мы разработали уникальную систему поискового маркетинга Gogetrank</p>
+				<p class="desc">Таким образом сложившаяся структура организации представляет собой интересный эксперимент проверки дальнейших направлений развития.</p>
+				<p class="desc">С другой стороны новая модель организационной деятельности обеспечивает широкому кругу</p>
+			</div>
+			<div class="video-block">
+				<a data-fancybox href="https://www.youtube.com/watch?v=_6vvcy_d7xg">
+					<img  src="img/video.png" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="advantages-block">
+		<div class="container">
+			<h2>Преимущества системы</h2>
+			<p class="h2-desc">Обгоняй конкурентов и будь в ТОПе</p>
+			<div class="row block">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="img-block">
+						<img style="margin-left: -30px;" src="img/ggl-ya.png" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="info-block">
+						<p class="title">Запоминание ТОП 100 SERP по ключу для Google и Яндекс</p>
+						<p class="desc">По каждому из ключей мы собираем весь ТОП 100 сайтов в поиске на каждую дату проверок. Вы можете в один клик посмотреть динамику всех конкурентов по семантике и выгрузить эти данные в эксель. Это дает широкие возможности для анализа того, что происходит в поиске</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="triangle-block">
+			<div class="container">
+				<div class="row block">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="info-block">
+							<p class="title">Фильтрация по быстрорастущим конкурентам</p>
+							<p class="desc">Мы разработали специальный фильтр, благодаря которому вы в 1 клик можете найти всех конкурентов, кто быстро вырос по ключу. Благодаря такому анализу вы найдете причины их роста и сможете применить их для формирования собственной стратегии продвижения</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="img-block">
+							<img style="margin-right: -10px;" src="img/filter.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row block">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="img-block">
+						<img style="margin-left: -50px;" src="img/notification.png" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="info-block">
+						<p class="title">Нотификации при выпадении из ТОП и блока подсказок</p>
+						<p class="desc">Для того, что бы оперативно реагировать на изменения в выдаче мы разработали систему нотификаций. Вы автоматом получаете на почту письмо, если позиции просели на заданный порог, или например если вы выпали из блока быстрых ответов Google.</p>
+					</div>
+				</div>
+			</div>
+			<div class="hidden-block">
+				<div class="row block">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="info-block" style="margin-top: 60px;">
+							<p class="title">Прогноз трафика на сайте</p>
+							<p class="desc">Мы разработали алгоритм, который делает оценку потенциала по загруженной семантике. Трафик без продвижения мы оцениванием, с помощью временных рядов. Прогноз трафика с продвижением строиться на гипотезе того, что те запросы которые за ТОП 10, с какой-то вероятностью войдут в ТОП 10. Этот прогноз - ориентир, что может получить сайт благодаря SEO</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="img-block">
+							<img style="margin-right: -76px;" src="img/adv-img4.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="row block">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="img-block">
+							<img style="margin-left: -30px;" src="img/adv-img5.png" alt="">
+						</div>
+						
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="info-block">
+							<p class="title">Работа с группами запросов</p>
+							<p class="desc">Мы сделали возможность импортировать кластеризованную семантику и отслеживать группы запросов по кластерам, <br>Также вы можете приостанавливать проверку по определенным группам</p>
+						</div>
+					</div>
+				</div>
+				<div class="row block">
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="info-block">
+							<p class="title">Отслеживание смены релевантности страниц</p>
+							<p class="desc">Наша система позволяет выгрузить ключи с целевыми URL. Специальный фильтр позволяет увидеть все те УРЛ, для которых текущий релевантный URL не соответствует целевому</p>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-12">
+						<div class="img-block">
+							<img style="margin-right: -86px;" src="img/adv-img6.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="button-show-more">
+				<a href="#" class="show-more">Показать еще</a>
+			</div>
+		</div>
+		<div class="other-project-block">
+			<div class="container">
+				<div class="block-other-project">
+					<div class="other-project">
+						<img src="img/girl.png" alt="">
+						<p class="title">У вас проект в другой системе?</p>
+						<p class="desc">Пополни счет на 500 грн и мы перенесем твой проект<br> бесплатно со всей историей</p>
+						<button type="button" class="to-project" data-toggle="modal" data-target="#myModal">Перенести проект</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="reviews">
+	<div class="container">
+		<h2>Отзывы</h2>
+		<p class="h2-desc">Довольные комментарии наших клиентов</p>
+		<div class="visible-xs">
+			<div class="owl-carousel owl-carousel-reviews owl-theme">
+				<div class="item">
+					<div class="review-block active" data-item="1">
+						<div class="top-block">
+							<div class="title-block">
+								<div class="avatar">
+									<img src="" alt="">
+								</div>
+								<div class="title">
+									<p class="author">Константин</p>
+									<a href="pampik.com">pampik.com</a>
+								</div>
+
+							</div>
+							<div class="logo-block">
+								<img src="img/forter.png" alt="">
+							</div>
+						</div>
+						<div class="rating">
+							<img src="img/stars-rate.png" alt="">
+						</div>
+						<p class="description">Новый текст. Равным образом новая модель организационной деятельности играет важную роль в формировании новых предложений. Таким образом реализация намеченных плановых заданий играет важную роль в формировании систем массового участия.</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="review-block active" data-item="1">
+						<div class="top-block">
+							<div class="title-block">
+								<div class="avatar">
+									<img src="" alt="">
+								</div>
+								<div class="title">
+									<p class="author">Константин</p>
+									<a href="pampik.com">pampik.com</a>
+								</div>
+
+							</div>
+							<div class="logo-block">
+								<img src="img/forter.png" alt="">
+							</div>
+						</div>
+						<div class="rating">
+							<img src="img/stars-rate.png" alt="">
+						</div>
+						<p class="description">Новый текст. Равным образом новая модель организационной деятельности играет важную роль в формировании новых предложений. Таким образом реализация намеченных плановых заданий играет важную роль в формировании систем массового участия.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row hidden-xs">
+			<div class="col-lg-7 col-md-7 col-sm-12">
+				<!-- Дублировать div.review-block и добавлять data-item соответсвующий ниже li -->
+				<div class="review-block active" data-item="1">
+					<div class="top-block">
+						<div class="title-block">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="title">
+								<p class="author">Константин</p>
+								<a href="pampik.com">pampik.com</a>
+							</div>
+
+						</div>
+						<div class="logo-block">
+							<img src="img/forter.png" alt="">
+						</div>
+					</div>
+					<div class="rating">
+						<img src="img/stars-rate.png" alt="">
+					</div>
+					<p class="description">Новый текст. Равным образом новая модель организационной деятельности играет важную роль в формировании новых предложений. Таким образом реализация намеченных плановых заданий играет важную роль в формировании систем массового участия.</p>
+				</div>
+				<div class="review-block" data-item="2">
+					<div class="top-block">
+						<div class="title-block">
+							<div class="avatar">
+								<img src="" alt="">
+							</div>
+							<div class="title">
+								<p class="author">Леха</p>
+								<a href="setmylife.com">setmylife.com</a>
+							</div>
+
+						</div>
+						<div class="logo-block">
+							<img src="img/pampik.png" alt="">
+						</div>
+					</div>
+					<div class="rating">
+						<img src="img/stars-rate.png" alt="">
+					</div>
+					<p class="description">Равным образом новая модель организационной деятельности играет важную роль в формировании новых предложений. Таким образом реализация намеченных плановых заданий играет важную роль в формировании систем массового участия.</p>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<style type="text/css">
+							.buttons-reviews {
+								text-align: center;
+								margin-top: 10px;
+							}
+							.buttons-reviews a {
+								border-radius: 4px;
+								display: inline-block;
+								height: 30px;
+								width: 60px;
+								line-height: 30px;
+								text-align: center;
+								background: #264eb8;
+								margin: 2px;
+								color: #fff;
+
+								transition: 0.1s;
+
+							}
+							.buttons-reviews a:hover {
+								opacity: 0.9s;
+							}
+						</style>
+						<div class="buttons-reviews">
+							<a href="#left" data-action="prev">сюда</a>
+							<a href="#right" data-action="next">туда</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-12 hidden-xs">
+				<div class="reviews-select">
+					<div class="overscroll">
+						<ul>
+
+							<!-- Дублировать li и добавлять data-item соответсвующий выше div.review-block -->
+							<li data-item="1">
+								<div class="mini-review-block">
+									<div class="top-block">
+										<div class="title-block">
+											<div class="avatar">
+												<img src="" alt="">
+											</div>
+											<div class="title">
+												<p class="author">Елена</p>
+												<div class="rating">
+													<img src="img/stars-rate.png" alt="">
+												</div>
+												<a href="dhi.com.ua" target="_blank">dhi.com.ua</a>
+											</div>
+										</div>
+										<div class="logo-block">
+											<img src="img/dhl.png" alt="">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-item="2">
+								<div class="mini-review-block">
+									<div class="top-block">
+										<div class="title-block">
+											<div class="avatar">
+												<img src="" alt="">
+											</div>
+											<div class="title">
+												<p class="author">Николай</p>
+												<div class="rating">
+													<img src="img/stars-rate.png" alt="">
+												</div>
+												<a href="forter.ua"  target="_blank">forter.ua</a>
+											</div>
+										</div>
+										<div class="logo-block">
+											<img src="img/forter.png" alt="">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-item="3">
+								<div class="mini-review-block">
+									<div class="top-block">
+										<div class="title-block">
+											<div class="avatar">
+												<img src="" alt="">
+											</div>
+											<div class="title">
+												<p class="author">Дмитрий</p>
+												<div class="rating">
+													<img src="img/stars-rate.png" alt="">
+												</div>
+												<a href="forter.ua" target="_blank">cidre</a>
+											</div>
+										</div>
+										<div class="logo-block">
+											<img src="img/cidre.png" alt="">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-item="4">
+								<div class="mini-review-block">
+									<div class="top-block">
+										<div class="title-block">
+											<div class="avatar">
+												<img src="" alt="">
+											</div>
+											<div class="title">
+												<p class="author">Елена</p>
+												<div class="rating">
+													<img src="img/stars-rate.png" alt="">
+												</div>
+												<a href="dhi.com.ua" target="_blank">dhi.com.ua</a>
+											</div>
+										</div>
+										<div class="logo-block">
+											<img src="img/dhl.png" alt="">
+										</div>
+									</div>
+								</div>
+							</li>
+							<li data-item="5">
+								<div class="mini-review-block">
+									<div class="top-block">
+										<div class="title-block">
+											<div class="avatar">
+												<img src="" alt="">
+											</div>
+											<div class="title">
+												<p class="author">Дмитрий</p>
+												<div class="rating">
+													<img src="img/stars-rate.png" alt="">
+												</div>
+												<a href="forter.ua" target="_blank">cidre</a>
+											</div>
+										</div>
+										<div class="logo-block">
+											<img src="img/cidre.png" alt="">
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="our-partners">
+	<div class="container">
+		<h2>Нам доверяют</h2>
+		<p class="h2-desc">Нашими услугами уже воспользовались</p>
+		<div class="row visible-xs">
+			<div class="col-xs-12">
+				<div class="owl-carousel owl-carousel-partners owl-theme">
+				    <div class="item"><img src="img/dhl2.png" alt=""></div>
+				    <div class="item"><img src="img/ambassador.png" alt=""></div>
+				    <div class="item"><img src="img/forter2.png" alt=""></div>
+				    <div class="item"><img src="img/cava.png" alt=""></div>
+				    <div class="item"><img src="img/cidre2.png" alt=""></div>
+				    <div class="item"><img src="img/bsk.png" alt=""></div>
+				    <div class="item"><img src="img/novetilo.png" alt=""></div>
+				    <div class="item"><img src="img/klampa.png" alt=""></div>
+				    <div class="item"><img src="img/solnce.png" alt=""></div>
+				    <div class="item"><img src="img/pampik2.png" alt=""></div>
+				    <div class="item"><img src="img/kontramarka.png" alt=""></div>
+				    <div class="item"><img src="img/totti.png" alt=""></div>
+				</div>
+			</div>
+		</div>
+		<style type="text/css">
+			.p-block-img {
+				text-align: center;
+			}
+			.p-block-img .row div {
+				height: 120px;
+				position: relative;
+
+				line-height: 120px;
+			}
+			.p-block-img .row div img {
+				position: absolute;
+				top: 50%;
+			    left: 50%;
+			    transform: translate(-50%);
+			    transform: translateY(-50%) translateX(-50%);
+			}
+
+    
+		</style>
+		<div class="p-block-img">
+			<div class="row hidden-xs">
+				<div class="col-sm-3"><img src="img/dhl2.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/ambassador.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/forter2.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/cava.png" alt=""></div>
+			</div>
+			<div class="row hidden-xs">
+				<div class="col-sm-3"><img src="img/cidre2.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/bsk.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/novetilo.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/klampa.png" alt=""></div>
+			</div>
+			<div class="row hidden-xs">
+				<div class="col-sm-3"><img src="img/solnce.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/pampik2.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/kontramarka.png" alt=""></div>
+				<div class="col-sm-3"><img src="img/totti.png" alt=""></div>
+			</div>
+		</div>
+		<!--
+		<div class="row visible-xs">
+			<div class="col-lg-12">
+				<div class="block">
+					<img src="img/dhl2.png" alt="">
+					<img src="img/ambassador.png" alt="">
+					<img src="img/forter2.png" alt="">
+					<img src="img/cava.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="row hidden-xs">
+			<div class="col-lg-12">
+				<div class="block">
+					<img src="img/cidre2.png" alt="">
+					<img src="img/bsk.png" alt="">
+					<img src="img/novetilo.png" alt="">
+					<img src="img/klampa.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="row hidden-xs">
+			<div class="col-lg-12">
+				<div class="block">
+					<img src="img/solnce.png" style="margin-left: 80px;" alt="">
+					<img src="img/pampik2.png" alt="">
+					<img src="img/kontramarka.png" alt="">
+					<img src="img/totti.png" alt="">
+				</div>
+			</div>
+		</div>
+	-->
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div class="img-block">
+					<img src="img/pedestal.png" alt="">
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div class="info-block">
+					<p class="title">Мы стали победителями Startup Battle в 2018 году</p>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12">
+							<div class="img-block">
+								<img src="img/startup.png" alt="">
+							</div>
+							
+						</div>
+						<div class="col-lg-8 col-md-8 col-sm-12">
+							<p class="desc">Это открытое оффлайн онлайн-мероприятие для игроков рынка венчурных инвестиций, организованное профессиональной сетью Startup Network и Crowd INC</p>
+							<a href="#read-more" class="read-more">Читать подробнее</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="registration-block">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<div class="img-block">
+					<img src="img/pc.png" alt="">
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<p class="title">Первые 100 позиций — бесплатно!</p>
+				<p class="desc">Зарегистрируйтесь в один клик и посмотрите на каком месте находится Ваш сайт в  поиске <span>Google</span> и <span>Yandex</span></p>
+				<a href="#" class="registration" data-box="2" data-toggle="modal" data-target="#reg">Зарегистрироваться</a>
+			</div>
+		</div>
+	</div>
+</section>
+	<footer>
+			<div class="container">
+				<div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <ul class="footer-nav">
+                            <li><a href="#">Решения</a></li>
+                            <li><a href="#">Прайс</a></li>
+                            <li><a href="#">О нас</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="address-block">
+                            <p>Украина, Киев, Тополевая 4, офис 7.<br class="visible-sm visible-xs"> Телефон: <a href="tel:+38-066-166-77-22">+38-066-166-77-22</a></p>
+                            <p>Техподдержка <a href="mailto:support@gogetrank.com">support@gogetrank.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <ul class="under">
+                    <li><a href="#">Политика конфиденциальности</a></li>
+                    <li><a href="#">Отказ от ответственности</a></li>
+                    <li><a href="#">Согласие с рассылкой</a></li>
+                </ul>
+			</div>
+		</footer>
+    <!-- Modal -->
+    <div class="modal fade modal-login" id="reg" tabindex="-1" role="dialog" aria-labelledby="regModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><img src="img/exit-button.png"></span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <style type="text/css">
+              .modal-login .modal-dialog {
+                max-width: 412px;
+                width: 100%;
+              }
+
+              .modal-login .modal-header {
+                border-bottom: 0;
+              }
+
+              .modal-login .modal-header .close {
+                opacity: 1;
+                transition: 0.1s;
+              }
+              .modal-login .modal-header .close:hover {
+                opacity: 0.9
+              }
+
+              .buttons-login {
+                padding: 0 16px 0 24px;
+              }
+              .buttons-login button {
+                width: 50%;
+                height: 39px;
+                color: #3a4156;
+                text-align: center;
+                font-weight: bold;
+                overflow: hidden;
+                border: 1px solid #e9e9e9;
+                outline: none;
+                background: #fff;
+              }
+
+              .buttons-login button.active {
+                background-color: #01cca3;
+                color: #fff;
+                font-size: 14px;
+                text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
+              }
+
+              .buttons-login button:first-child {
+                margin-right: -4px;
+                -webkit-border-top-left-radius: 20px;
+                -webkit-border-bottom-left-radius: 20px;
+                -moz-border-radius-topleft: 20px;
+                -moz-border-radius-bottomleft: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+
+              }
+              .buttons-login button:last-child {
+                margin-left: -4px;
+                -webkit-border-top-right-radius: 20px;
+                -webkit-border-bottom-right-radius: 20px;
+                -moz-border-radius-topright: 20px;
+                -moz-border-radius-bottomright: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+              }
+              .form-login {
+                padding: 0 10px;
+                margin-top: 20px;
+              }
+
+              .form-login label {
+                display: block;
+                font-weight: 300;
+                margin-bottom: 20px;
+                color: #3a4156;
+
+              }
+              .form-login label:last-child {
+                margin-bottom: 0;
+              }
+              .form-login label span {
+                display: block;
+                font-weight: 300;
+                font-size: 16px;
+                margin-bottom: 6px;
+              }
+              .form-login label input {
+                width: 100%;
+                height: 40px;
+                color: #3a4156;
+                outline: none;
+                background: #f7f7f7;
+                border-radius: 50px;
+                border: none;
+                padding: 0 25px;
+                font-size: 14px;
+                font-weight: 300;
+
+              }
+
+              .form-login label input.error {
+                background: #f8eeee
+              }
+
+              .form-login label .error-text {
+                color: #ad4b4b;
+                font-size: 12px;
+                margin-top: 6px;
+                display: none;
+                position: relative;
+                top: 6px;
+              }
+              
+              .form-login label.save input {
+                display: none;
+              }
+              .form-login label.save input + span {
+                float: left;
+                width: 16px;
+                height: 16px;
+                margin: -1px 10px 20px 0 ;
+                padding: 0 0px 0 0;
+                border-radius: 3px;
+                display: block;
+                border: 1px solid #e9e9e9;
+                background: none;
+                position: relative;
+              }
+              .form-login label.save:hover {
+                cursor: pointer;
+              }
+              .form-login label.save input:checked + span:after {
+                position: absolute;
+                width: 10px;
+                display: block;
+                height: 10px;
+                top: 2px;
+                border-radius: 2px;
+                left: 2px;
+                background: #01cca3;
+                content: ' ';
+              }
+
+              .form-login .sub {
+                margin-top: 20px;
+              }
+              .form-login .sub {
+                font-size: 12px;
+              }
+              .form-login .sub a {
+                font-size: 12px;
+                text-decoration: underline;
+              }
+
+
+              .form-login input[type='submit'] {
+                  font-size: 16px;
+                  color: #fefefe;
+                  text-align: center;
+                  display: block;
+                  text-decoration: none;
+                  height: 40px;
+                  box-sizing: border-box;
+                  padding: 7px 45px;
+                  transition: 0.1s;
+                  border-radius: 22px;
+                  border:0;
+                  font-weight: 500;
+                  background-color: #01cca3;
+                  /* box-shadow: inset  1px 0px 0px rgba(255, 255, 255, 0.45);
+                  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15); */
+                  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.45);
+                  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.15);
+                  margin-left: 10px;
+                  margin: 20px auto;
+                  background-position: -4px -60px ;
+              }
+
+              .form-login input[type='submit']:hover {
+
+                    background: url("img/hovera.png") no-repeat top center #01cca3;
+                   background-position: -55px -24px;
+
+                }
+              .form-login input[type='submit']:active {
+                  background: #05b08d;
+              }
+
+              .box {
+                display: none;
+              }
+              .box.active {
+                display: block;
+              }
+              .modal-content {
+                border-radius: 26px;
+              }
+
+
+
+            </style>
+            <div class="buttons-login">
+              <div class="row">
+                <button class="login active" data-box="1">Войти</button>
+                <button class="reg" data-box="2">Регистрация</button>
+              </div>
+            </div>
+            <div class="box box-1 active form-login">
+              <form action="/" method="post">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>
+                      <span>E-mail</span>
+                      <input type="text" name="email" class="test-email">
+                      <span class="error-text">Вы ввели неверные данные</span>
+                    </label>
+                    <label>
+                      <span>Пароль</span>
+                      <input type="text" name="password">
+                    </label>
+                  </div>
+                </div>
+                <div class="row sub">
+                  <div class="col-md-6">
+                    <label class="save">
+                      <input type="checkbox" name=""><span></span>Запомнить меня
+                      
+                    </label>
+                  </div>
+                  <div class="col-md-6">
+                    <a class="pull-right" href="#lostpassword">Забыли пароль?</a>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" name="" value="Войти">
+                  </div>
+                </div> 
+              </form>
+            </div>
+            <div class="box box-2 form-login">
+              <form action="/" method="post">
+                <div class="row">
+                  <div class="col-md-12">
+                    <label>
+                      <span>E-mail</span>
+                      <input type="text" name="email" class="test-email">
+                      <span class="error-text">Вы ввели неверные данные</span>
+                    </label>
+                    <label>
+                      <span>Пароль</span>
+                      <input type="text" name="password">
+                    </label>
+                    <label>
+                      <span>Повторите пароль</span>
+                      <input type="text" name="repassword">
+                    </label>
+                  </div>
+                </div>
+                <div class="row sub">
+                  <div class="col-md-12">
+                    <label class="save">
+                      <input type="checkbox" style="margin-bottom: 20px;" name=""><span></span>Я согласен с условиями<br><a href="#police">Политики конфиденциальности</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" name="" value="Войти">
+                  </div>
+                </div> 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+		</div>
+
+		<!-- Модальное окно с почтой и телефоном -->
+		<div id="myModal" class="modal custom-mod fade" role="dialog">
+			<div class="modal-dialog custom-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content custom-modal-content">
+					<div class="modal-header custom-modal-header">
+							<button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true"><img src="img/exit-button.png"></span>
+							</button>
+
+					</div>
+					<div class="modal-body">
+
+						<form action="/" method="post">
+							<div class="row">
+								<div class="col-md-12">
+									<label class="custom-label">
+										<span class="custom-label_name">E-mail</span>
+										<input type="email" name="email" class="test-email custom-field" required>
+									</label>
+									<label class="custom-label">
+										<span class="custom-label_name">Телефон</span>
+										<input type="number" name="password" class=" custom-field" required>
+									</label>
+								</div>
+							</div>
+							<div class="row sub">
+								<div class="col-md-12">
+									<label class="save custom-save">
+										<input type="checkbox" style="margin-bottom: 5px; margin-right: 5px;" name="" checked><span></span>Я согласен с условиями<br><a href="#police">Политики конфиденциальности</a>
+									</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 text-center">
+									<input type="submit" name="" class="custom-modal-btn" value="Отправить" data-toggle="modal" data-dismiss="modal" data-target="#myModal2">
+								</div>
+							</div> 
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<!-- Модальное окно благодарности -->
+			<div id="myModal2" class="modal custom-mod fade" role="dialog">
+					<div class="modal-dialog custom-dialog">
+		
+						<!-- Modal content-->
+						<div class="modal-content custom-modal-content">
+							<div class="modal-header custom-modal-header">
+									<button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true"><img src="img/exit-button.png"></span>
+									</button>
+		
+							</div>
+							<div class="modal-body">
+		
+								<h3 class="text-center custom-title">Спасибо! <br>
+									Мы свяжемся с вами в ближайшее время!</h3> 
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.flagstrap.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
