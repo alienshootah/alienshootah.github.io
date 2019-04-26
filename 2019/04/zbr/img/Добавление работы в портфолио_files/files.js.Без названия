@@ -1,0 +1,357 @@
+var File = function(arg)
+{
+	if(typeof(arg)=='number')
+	{
+		this.get_exists(arg);
+	}else this.add(arg);
+};
+
+File.prototype.get_exists = function (id)
+{
+	this.id = id;
+	this.container = $('#file_'+id);
+	var data = this.container.data('data');
+	this.file_name = data.file_name;
+	this.x = data.x;
+	this.y = data.y;
+	this.width = data.width;
+	this.src_width = data.src_width;
+	this.src_height = data.src_height;
+	this.name = data.name;
+	this.description = data.description;	
+	this.preview = data.preview;
+};
+
+File.prototype.x = 0;
+File.prototype.y = 0;
+File.prototype.width = 500;
+
+File.prototype.add = function (data)
+{
+	this.id = data.id;
+	this.type = data.type;
+	this.file_name = data.file_name;	
+	this.x = data.x;
+	this.y = data.y;
+	this.width = data.width;
+	this.src_width = data.src_width;
+	this.src_height = data.src_height;
+	this.name = data.name;
+	this.description = data.description;
+	this.preview = data.preview;
+	this.container = $('#file_'+id);
+};
+
+File.prototype.edit = function ()
+{
+	
+};
+
+File.prototype.save = function ()
+{
+	
+};
+
+var File_controller = function(container)
+{
+	this.container = $(container);
+	
+	self_ = this;
+	this.container.find('.work').each(function(i, item){
+		self_.add_file($(item).data('data'));
+	});
+};
+
+File_controller.prototype.files = [];
+File_controller.prototype.actions = '';
+File_controller.prototype.set_actions = function (actions)
+{	
+	this.actions = actions;
+}
+
+File_controller.prototype.add_file = function (data)
+{
+	if(typeof(data)!='object')
+	{
+		if(/file_\d+/.test(data))
+		{
+			id = data.replace(/file_/, '');			
+		}else
+		{
+			id = data;
+		}
+		id = parseInt(id);
+		var file = new File(id);
+	}else
+	{
+		id = parseInt(data.id);
+		var file = new File(data);
+	}
+	var container_id = '#file_'+id;
+	
+	if($(container_id).length==0)
+	{		 
+		var html = '<li class="work" id="file_' + id + '">'+
+				'<input type="hidden" id="position_' + id + '">'+
+				'<input type="hidden" name="files[]" value="' + id + '">'+
+				'<div>'+
+					'<img src="' + data.preview + '" alt="" id="file_preview_' + id + '">'+
+				'</div>'+
+				'<div class="work-title">' + data.file_name + '</div>'+
+				'<div class="controls">'+
+				  this.actions+
+					'<a class="icon-bin delete" href="" title="Удалить"></a>'+
+				'</div>'+
+			'</li>';
+				
+		
+		this.container.prepend(html);
+		$(container_id).data('data',data);
+	}
+	
+	this.files[file.id] = file; 
+	self_.check_positions();
+	this.container.trigger('file.file_added');
+};
+
+File_controller.prototype.file_saved = function()
+{	
+	if(!this.current_file) return;	
+		$('#file_edit_window').modal('hide');
+		var file = this.files[this.current_file];
+		var img = $('#file_preview_'+file.id);
+		var src = img.attr('src');
+		
+		var time = new Date();				
+		$('#file_preview_'+file.id).attr('src',src+'?'+time);
+};
+
+File_controller.prototype.save_file_preview = function ()
+{
+	var file = this.files[this.current_file];	
+	file.x = $('#x').val();
+	file.y = $('#y').val();
+	file.width = $('#width').val();
+
+	this.current_file = file.id;
+	$('#save_file_data').submit();		
+};
+
+File_controller.prototype.save_file_descr = function ()
+{
+	$('#file_description').sync();
+	var file = this.files[this.current_file];	
+	file.description = $('#file_description').val();
+	file.name = $('#file_name').val();
+	var url = '/ajax/?section=files&action=save_file_descr&id='+file.id;
+	var data = {'description':file.description,'name':file.name};
+	$.post(url, data,
+			function(data){ 
+			$('#file_description').destroy();
+			$('#file_edit_descr_window').modal('hide');
+	});
+};
+
+File_controller.prototype.check_positions = function(){
+	$('#files_list .work').each(function(i,item){
+		var dat = $(item).data('data');
+		var id = dat.id;
+		$('#position_'+id).attr('name','files_position['+id+']').val(i);
+	});
+};	
+
+File_controller.prototype.edit_file_descr = function (item)
+{
+	var data = $(item).parents('.work').data('data');			
+	var file = this.files[data.id];
+	$('#file_description').val(file.description);
+	$('#file_name').val(file.name);
+	$('#file_edit_descr_window').modal('show');
+
+	var wbbOpt = 
+	{
+		buttons: "bold,italic,underline,strike,|,bullist,|,h2,h3",
+		allButtons: {
+			bullist: {
+				transform: {
+					'<ul>{SELTEXT}</ul>':'[list]{SELTEXT}[/list]',
+					'<li>{SELTEXT}</li>':'[*]{SELTEXT[^\[\]\*]}',
+				}
+			},
+			h2:	{
+				title: 'Заголовок H2',
+				buttonText: 'H2',
+				transform: {
+					'<div class="h2">{SELTEXT}</div>':'[h2]{SELTEXT}[/h2]'
+				}
+			},
+			h3:	{
+				title: 'Заголовок H3',
+				buttonText: 'H3',
+				transform: {
+					'<div class="h3">{SELTEXT}</div>':'[h3]{SELTEXT}[/h3]'
+				}
+			}
+		}, 
+		resize_maxheight: 500,
+		minheight: 200
+	};
+	$('#file_description').wysibb(wbbOpt);
+	$('#file_description').bbcode(file.description);
+	this.current_file = file.id;
+};
+
+File_controller.prototype.edit_file_preview = function (item)
+{
+	var data = $(item).parents('.work').data('data');			
+	var file = this.files[data.id];
+	
+	//$('#file_preview').attr('src','/download/'+file.id+'_500xp.jpg');
+	//$('#file_description').val(file.description);
+	$('#fid').val(file.id);
+	
+	
+	x = file.x; 
+	y = file.y;
+	x2 = parseInt(file.x)+parseInt(file.width);
+	y2 = parseInt(file.y)+((parseInt(file.width)/4)*3);	
+	
+	mult = file.src_width/500;
+	minH = 187;
+	minW = 250;
+	
+	$('#small_preview').attr('src',files_url+'/download/'+file.id+'_500xp.jpg');	
+	$('#file_preview').hide();	
+	
+	$('#file_preview').on('load',function(){
+		if(!file.loaded)
+		{
+			files.files[file.id].loaded = true;			
+			jcrop_api.setImage(files_url+'/download/'+file.id+'_500xp.jpg');
+			jcrop_api.setOptions({trueSize: [file.src_width, file.src_height]});
+			if(file.width>0)
+			{
+				setTimeout(function(){
+						jcrop_api.setSelect([ x, y, x2, y2 ]); 
+						$('#file_preview').show();								
+					},200);
+			}else
+			{
+				jcrop_api.release(); 
+				$('#file_preview').show();				
+			}
+			
+			$('#file_edit_window').modal('show');
+		}
+	});	
+	$('#file_preview').attr('src',files_url+'/download/'+file.id+'_500xp.jpg');	
+	
+	jcrop_api.setOptions({trueSize: [file.src_width, file.src_height]});
+	
+	
+	if(file.loaded)
+	{
+		jcrop_api.setImage(files_url+'/download/'+file.id+'_500xp.jpg');	
+		if(file.width==0)
+		{
+			setTimeout(function(){jcrop_api.release();},200);
+		}else
+		{
+			setTimeout(function(){
+				jcrop_api.setSelect([ x, y, x2, y2 ]);},200);
+		}
+		$('#file_preview').show();		
+		$('#file_edit_window').modal('show');
+	}
+	this.current_file = file.id;
+};
+
+File_controller.prototype.delete_file = function (item)
+{
+	var data = $(item).parents('.work').data('data');			
+	var file = this.files[data.id];
+	$('#file_'+file.id).remove();
+	delete(this.files[file.id]);	
+	this.container.trigger('file.file_deleted');
+};
+
+function selected(c)
+{
+	$('#x').val(c.x);
+	$('#y').val(c.y);
+	$('#width').val(c.w);
+	
+	var rx = 250 / c.w;
+	var ry = 187 / c.h;
+
+	wi = $('.jcrop-holder').width()* mult;
+	he = $('.jcrop-holder').height()* mult;
+	$('#small_preview').css({
+		width: Math.round(rx * wi) + 'px',
+		height: Math.round(ry * he) + 'px',
+		marginLeft: '-' + Math.round(rx * c.x) + 'px',
+		marginTop: '-' + Math.round(ry * c.y) + 'px'
+	});
+}
+
+$(function(){
+	
+	files = new File_controller('#files_list');
+	mult = 1;
+	
+	if(typeof($('#file_preview').Jcrop)!='undefined' && typeof(jcrop_api)=='undefined')
+	{	
+		jcrop_api = $.Jcrop($('#file_preview'),{
+			onSelect : selected,				
+			onChange : selected,
+			minSize: [250,187],
+			aspectRatio: 4/3,
+			setSelect:   [ 0, 0, 500, 500 ]
+		});
+		if(typeof(jcrop_api)!='undefined') jcrop_api.release();
+	}
+	
+	$(window).trigger('files_loaded');
+
+	$('.work_list').delegate('.work .icon-cog','click',function(){
+		files.edit_file_preview(this);	
+		files.edit_file_descr(this);
+		return false;
+	});
+	
+	$('.files_list').delegate('.work .edit_descr','click',function(){
+		files.edit_file_descr(this);
+		return false;
+	});	
+	
+	$('#close_overlay_descr').click(function(){
+		setTimeout(function(){ $('#file_description').destroy();},300);
+	});
+	
+	$('.files_list').delegate('.work .delete','click',function(){
+		files.delete_file(this);
+		return false;
+	});
+	
+	$('#save_file_data_btn').click(function(){
+		files.save_file_preview();
+		files.save_file_descr();
+	});	
+	
+	$('#frame').on('load',function(){
+		files.file_saved();
+	});
+	
+	$('#file_preview').on('load',function(){jcrop_api.setSelect([ x, y, x2, y2 ]);});
+	
+	$( "#files_list" ).sortable(
+			{
+				stop: function( event, ui ) { // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 
+									files.check_positions();
+											}
+			}		
+	);
+	$( "#files_list" ).disableSelection();	
+	
+	files.check_positions();
+});

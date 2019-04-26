@@ -1,0 +1,60 @@
+$(function()
+{
+	$('#parent_category_id, #parent_extra_category_id').on('change', function()
+	{		
+		var val = $(this).val();
+		var select_name = '';
+		var related_select_name = '';
+
+		if ($(this).attr('id') == 'parent_category_id')
+		{
+			select_name = 'select[name="category_id"]';
+			related_select_name = 'select[name="extra_category_id"]';
+		}
+		else
+		{
+			select_name = 'select[name="extra_category_id"]';
+			related_select_name = 'select[name="category_id"]';
+		}
+
+		var select = $(this).parents('form').find(select_name);
+
+		select.empty().attr('disabled', 'disabled').append('<option value="">Выберите категорию</option>');
+		if (val == 0) return;
+		
+		$.each(category_list, function(i, cat)
+		{		
+			if (cat['parent_id'] == val)
+			{
+				select.append('<option value="' + cat['id'] + '">' + cat['name'] + '</option>');
+				select.removeAttr('disabled');
+			}
+		});
+
+		var related_select = $(this).parents('form').find(related_select_name);
+		var related_val = related_select.val();
+
+		if (related_val)
+		{
+			select.find('option[value=' + related_val + ']').attr('disabled', 'disabled');
+		}
+
+		$(this).trigger('category_select');
+	});	
+			
+	$('#category_id, #extra_category_id').on('change', function()
+	{
+		var category_id = $(this).val();
+		var related_select_name = ($(this).attr('id') == 'category_id') ? 'select[name="extra_category_id"]' : 'select[name="category_id"]';
+		var related_select = $(this).parents('form').find(related_select_name);
+		if (!related_select) return;
+
+		related_select.find('option:disabled').removeAttr('disabled');
+		if (category_id != '')
+		{
+			related_select.find('option[value=' + category_id + ']').attr('disabled', 'disabled');
+		}
+	});
+
+	$('#category_id, #extra_category_id').change();
+});

@@ -80,7 +80,7 @@ jQuery( document ).ready( function( $ ) {
     }
     return "";
   }
-
+getElementsByClassName
   function checkCookie() {
     var popUp = getCookie("poppedUp");
     // if the cookie isn't empty, then don't show the modal, otherwise show the modal
