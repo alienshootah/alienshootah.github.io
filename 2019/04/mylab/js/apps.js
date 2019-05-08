@@ -8,8 +8,8 @@ function myMenu() {
 }
 
 $('.one-time').slick({
-    dots: false,
-    arrows: true,
+    dots: true,
+    arrows: false,
     infinite: true,
     speed: 300,
     slidesToShow: 1,
@@ -29,20 +29,27 @@ $('.one-time').slick({
 
 $('.multiple-items').slick({
   infinite: true,
-  slidesToShow: 2,
-  slidesToScroll: 2,
-  dots: true,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  dots: false,
   autoplay: true,
   arrows: false,
   responsive: [
     {
-      breakpoint: 550,
+      breakpoint: 992,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         dots: false,
       }
       
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
     }
   ]
 });
@@ -58,13 +65,13 @@ function openGal(evt, cityName) {
   var i, tabcontent, tablinks;
 
   // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
+  tabcontent = document.getElementsByClassName("tab-content");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
   // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = document.getElementsByClassName("portfolio-menu_link");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
@@ -76,23 +83,3 @@ function openGal(evt, cityName) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
-
-// Accordion
-var acc = document.getElementsByClassName("accordeon");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
