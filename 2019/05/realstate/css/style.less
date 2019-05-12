@@ -1389,7 +1389,216 @@ header {
         }
     }
 }
+.blog {
+    margin-top: 20px;
+    &-list {
+        font-size: 14px;
+    }
+    &-item {
+        border: 1px solid #f2f2f2;
+        box-shadow: 0.5px 0.866px 2px 0px rgba(0, 0, 0, 0.078);
+        margin: 40px 0;
+        padding-bottom: 20px;
+    }
+    &-picture {
+        position: relative;
+    }
+    &-image {
+        width: 100%;
+        height: 400px;
+    }
+    &-info {
+        position: absolute;
+        bottom: 60px;
+        left: 0;
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px 150px 20px 20px;
+        color: #9bb3b8;
+        font-family: @sans-italic;
+        font-size: 14px;
+    }
+    &-title {
+        font-size: 30px;
+        color: #ffffff;
+        font-family: @sans-bold;
+        padding: 0;
+        margin: 0;
 
+        &-s {
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+    }
+    &-dop {
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+
+        &_item {
+            margin: 0 5px;
+
+            &::after {
+                position: relative;
+                top: -2px;
+                content: url(../img/blog-dop_item.png);
+                margin: 0 0 0 6px;
+            }
+            &:last-child::after {
+                content: none;
+                margin: 0;
+            }
+        }
+        &_comments {
+            color: #9bb3b8;
+        }
+    }
+    &-text {
+        padding: 0 20px;
+    }
+    &-more {
+        display: inline-block;
+        padding: 0 20px;
+        font-family: @sans-italic;
+    }
+    &-wrap {
+        margin: 40px 0;
+    }
+    &-form {
+        display: flex;
+        & .search-field {
+            margin-right: 20px;
+        }
+        & .search-btn {
+            width: 90px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+.med {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+    text-align: center;
+    &-item {
+        margin: 10px;
+    }
+    &-link {
+        display: block;
+        width: 75px;
+        height: 75px;
+        background-color: #f2f3f4;
+        border-bottom: 2px solid #c2c2c3;
+
+        &.active,
+        &:hover,
+        &:focus {
+            background-color: #fe5c11;
+            border-bottom: 2px solid #cb4a0e;
+        }
+    }
+    &-icon {
+        position: relative;
+        top: 22px;
+        background-image: url(../img/soc-icon-one.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+
+        &-one {
+            background-image: url(../img/soc-icon-one.png);
+        }
+        &-two {
+            background-image: url(../img/soc-icon-two.png);
+        }
+        &-three {
+            background-image: url(../img/soc-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/soc-icon-four.png);
+        }
+    }
+}
+.popular {
+    font-size: 14px;
+    &-item {
+        display: flex;
+        margin: 20px 0;
+    }
+    &-image {
+        width: 80px;
+        height: 60px;
+        margin-right: 20px;
+    }
+    &-link {
+        color: #000000;
+        font-family: @sans-bold;
+    }
+    &-descr {
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        font-family: @sans-italic;
+    }
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+    &-item {
+        margin: 5px 7px;
+    }
+    &-link {
+        display: inline-block;
+        background-color: #f2f3f4;
+        padding: 3px 7px;
+        color: #000000;
+        font-size: 14px;
+        border-bottom: 2px solid transparent;
+
+        &.active,
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            background-color: #fe5c11;
+            border-bottom: 2px solid #cb4a0e;
+            text-decoration: none;
+        }
+    }
+}
+.archives {
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+        width: 45%;
+        margin: 5px;
+        &::before {
+            content: url(../img/archives-item.png);
+            padding-right: 10px;
+            position: relative;
+            top: -2px;
+        }
+    }
+    &-link {
+        color: #000000;
+    }
+}
+.flickr {
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+        margin: 2px 5px;
+    }
+    &-image {
+        width: 80px;
+        height: 80px;
+    }
+}
 /* Footer */
 
 footer {
