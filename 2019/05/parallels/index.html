@@ -4,20 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet/less" href="css/style.less">
+    <link rel="stylesheet/less" href="css/media.less">
     <title>Parallels</title>
 </head>
 <body>
     <div class="container-fluid">
         <header>
             <div class="content">
+                <button class="menu-responsive" onclick="myMenu()">Menu</button>
+                <button class="search-btn" onclick="myDrop()">
+                    <span class="search-icon"></span>
+                </button>
+                <div class="search" id="myDropdown">
+                    <form action="/" class="search-form">
+                        <input type="text" class="search-field" placeholder="Search here...">
+                    </form>
+                </div>
                 <div class="row header-body">
                     <div class="col-4">
                         <a href="#"><span class="header-logo"></span></a>
                         <h1 class="hidden">Parallels main site</h1>
                     </div>
                     <div class="col-8">
-                        <nav>
+                        <nav id="myTopnav" class="topnav">
                             <ul class="header-list">
                                 <li class="header-item"><a href="#" class="header-link">Home</a></li>
                                 <li class="header-item"><a href="#" class="header-link">Services</a></li>
@@ -26,14 +38,6 @@
                                 <li class="header-item"><a href="#" class="header-link">About</a></li>
                                 <li class="header-item"><a href="#" class="header-link">Contact</a></li>
                             </ul>
-                            <button class="search-btn">
-                                <span class="search-icon"></span>
-                            </button>
-                            <div class="search">
-                                <form action="/" class="search-form">
-                                    <input type="text" class="search-field" placeholder="Search here...">
-                                </form>
-                            </div>
                         </nav>
                     </div>
                 </div>
@@ -41,13 +45,25 @@
         </header>
         <section class="slider">
                 <h2 class="hidden">Main slider of the site</h2>
-                <ul class="slider-list">
+                <ul class="one-time slider-list">
                     <li class="slider-item" style="background-image: url(img/slider-item.jpg);">
                         <div class="content">
-                            <div class="text-center">
-                                <img src="img/arrow-left.png" alt=""> 
-                                <img src="img/arrow-right.png" alt="">
+                            <div class="slider-text">
+                                <div class="slider-title">Welcome to Parallels</div>
+                                <p class="slider-descr">Clean Responsive Parallax Theme</p>
                             </div>
+                        </div>
+                    </li>
+                    <li class="slider-item" style="background-image: url(img/slider-item.jpg);">
+                        <div class="content">
+                            <div class="slider-text">
+                                <div class="slider-title">Welcome to Parallels</div>
+                                <p class="slider-descr">Clean Responsive Parallax Theme</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="slider-item" style="background-image: url(img/slider-item.jpg);">
+                        <div class="content">
                             <div class="slider-text">
                                 <div class="slider-title">Welcome to Parallels</div>
                                 <p class="slider-descr">Clean Responsive Parallax Theme</p>
@@ -105,174 +121,179 @@
                 <h2 class="portfolio">Portfolio</h2>
                 <ul class="portfolio-menu">
                     <li class="portfolio-menu_Item">
-                        <button class="portfolio-menu_btn">Web-design</button>
+                        <button class="portfolio-menu_btn" onclick="openCity(event, 'design1')">Web-design</button>
                     </li>
                     <li class="portfolio-menu_Item">
-                        <button class="portfolio-menu_btn">Ui Design</button>
+                        <button class="portfolio-menu_btn" onclick="openCity(event, 'design2')">Ui Design</button>
                     </li>
                     <li class="portfolio-menu_Item">
-                        <button class="portfolio-menu_btn">Prototype</button>
+                        <button class="portfolio-menu_btn" onclick="openCity(event, 'design3')">Prototype</button>
                     </li>
                     <li class="portfolio-menu_Item">
-                        <button class="portfolio-menu_btn active">Photograpfy</button>
+                        <button class="portfolio-menu_btn active" onclick="openCity(event, 'design4')" id="defaultOpen">Photograpfy</button>
                     </li>
                 </ul>
-                <ul class="portfolio-list">
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image1.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image2.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image3.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image4.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image5.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image6.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item active">
-                        <img src="img/portfolio-image7.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="portfolio-item">
-                        <img src="img/portfolio-image8.jpg" alt="" class="portfolio-image">
-                        <div class="portfolio-hide">
-                            <h4 class="portfolio-title">Clean night sky</h4>
-                            <div class="portfolio-name">photography</div>
-                            <ul class="stat">
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-one"></span> 53
-                                    </button>
-                                </li>
-                                <li class="stat-item">
-                                    <button class="stat-btn">
-                                        <span class="stat-icon stat-icon-two"></span> 230
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-                <div class="text-center portfolio-more">
-                    <button class="portfolio-more_btn">
-                        Load more 
-                    </button>
+                <div class="tabcontent" id="design1">Web-design</div>
+                <div class="tabcontent" id="design2">Ui Design</div>
+                <div class="tabcontent" id="design3">Prototype</div>
+                <div class="tabcontent" id="design4">
+                    <ul class="portfolio-list">
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image1.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image2.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image3.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image4.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image5.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image6.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item active">
+                            <img src="img/portfolio-image7.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="portfolio-item">
+                            <img src="img/portfolio-image8.jpg" alt="" class="portfolio-image">
+                            <div class="portfolio-hide">
+                                <h4 class="portfolio-title">Clean night sky</h4>
+                                <div class="portfolio-name">photography</div>
+                                <ul class="stat">
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-one"></span> 53
+                                        </button>
+                                    </li>
+                                    <li class="stat-item">
+                                        <button class="stat-btn">
+                                            <span class="stat-icon stat-icon-two"></span> 230
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text-center portfolio-more">
+                        <button class="portfolio-more_btn">
+                            Load more 
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -646,10 +667,10 @@
         <footer>
             <div class="content">
                 <div class="row footer-body">
-                    <div class="col-6">
+                    <div class="col-4">
                         <a href="#"><span class="header-logo footer-logo"></span></a>
                     </div>
-                    <div class="col-6">
+                    <div class="col-8">
                         <ul class="footer-list">
                             <li class="footer-item"><a href="tel:+25558885550320" class="footer-link">2 (555) 888 555 03 0</a></li>
                             <li class="footer-item"><a href="email:info@domain.com" class="footer-link">info@domain.com</a></li>
@@ -662,5 +683,7 @@
     </div>
     <script src="js/less.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
