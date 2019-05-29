@@ -20,11 +20,11 @@
                         <nav>
                             <ul class="header-list">
                                 <li class="header-item">
-                                    <a href="#" class="header-link active">
+                                    <button class="header-link active" onclick="dopDroprown()">
                                         <span class="header-icon header-icon-one"></span>
                                         Топ пляжи
-                                    </a>
-                                    <div class="dopmenu">
+                                    </button>
+                                    <div class="dopmenu" id="dropdown-dop">
                                         <div class="dopmenu-body">
                                             <ul class="dopmenu-list">
                                                 <li class="dopmenu-item">
@@ -349,6 +349,15 @@
         </section>
         <section class="vedpar">
             <h2 class="hidden">Видео проморолик на нашем сайте</h2>
+            <div class="vedpar-self">
+                <video class="vedpar-all" id="main-video" controls>
+                    <source src="promo/6_catalog-filters.mp4" type="video/mp4" class="vedpar-sr">
+                    Your browser does not support the video tag.
+                </video>
+                <div id="custom-play-button" class="vedpar-self-icon" onclick="myVedpar()">
+                    <span class="vedpar-btn"></span>
+                </div>
+            </div>
         </section>
         <section class="insta">
             <div class="content">
@@ -413,5 +422,6 @@
     </div>
     <script src="js/less.min.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
