@@ -150,13 +150,54 @@ h2 {
         height: 140px;
         transition: ease 0.7s;
         box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-position: 70px 25px;
+        background-image: none;
+        &-one {
+            &.active,
+            &:hover,
+            &:focus {
+                background-image: url(../img/header-icon-one.png);
+                background-position: 70px 25px;
+            }
+        }
+        &-two {
+            background-position: 70px 27px;
+            &.active,
+            &:hover,
+            &:focus {
+                background-image: url(../img/header-icon-two.png);
+            }
+        }
+        &-three {
+            background-position: 75px 25px;
+            &.active,
+            &:hover,
+            &:focus {
+                background-image: url(../img/header-icon-three.png);
+            }
+        }
+        &-four {
+            background-position: 75px 25px;
+            &.active,
+            &:hover,
+            &:focus {
+                background-image: url(../img/header-icon-four.png);
+            }
+        }
+        &-five {
+            &.active,
+            &:hover,
+            &:focus {
+                background-image: url(../img/header-icon-five.png);
+            }
+        }
         &.active,
         &:hover,
         &:focus {
             color: #ffffff;
-            padding-top: 20px;
-            padding-bottom: 20px;
             background-color: #18a1bb;
+            padding-top: 90px;
         }
         &.active .header-icon,
         &:hover .header-icon,
@@ -166,7 +207,6 @@ h2 {
     }
     &-icon {
         margin: 0 auto;
-        display: none;
         width: 70px;
         height: 70px;
         background-image: url(../img/header-icon-one.png);
@@ -194,6 +234,14 @@ h2 {
         justify-content: flex-end;
         min-width: 150px;
         margin-left: -50px;
+    }
+}
+button.header-link {
+    padding-top: 0;
+    &.active,
+    &:hover,
+    &:focus {
+        padding-top: 60px;
     }
 }
 .dopmenu {
@@ -243,6 +291,7 @@ h2 {
         &:hover,
         &:focus {
             background-color: #89b9e6;
+            transition: ease 0.7s;
         }
     }
     &-icon {
@@ -318,8 +367,8 @@ h2 {
 .search {
     position: relative;
     margin-right: 20px;
-    &-button {
-        display: inline-block;
+    &-btn {
+        display: block;
         width: 20px;
         height: 20px;
         background-image: url(../img/search-button.png);
@@ -331,6 +380,10 @@ h2 {
         position: absolute;
         right: 42px;
         top: -3px;
+
+        &.shw {
+            display: block;
+        }
     }
     &-field {
         padding: 5px;
@@ -339,22 +392,19 @@ h2 {
 .lang {
     margin-top: -8px;
     position: relative;
-    &-icon {
-        position: relative;
-        top: 4px;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-image: url(../img/lang-icon.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        margin-right: 5px;
-    }
     &-button {
         font-size: 15px;
         font-family: @SFUIText-bold;
         text-transform: uppercase;
-
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        width: 80px;
+        height: 20px;
+        background-image: url(../img/lang-icon.png);
+        background-position: left;
+        background-repeat: no-repeat;
+        padding-left: 20px;
         &::after {
             content: url(../img/lang-button.png);
             margin-left: 5px;
@@ -372,6 +422,9 @@ h2 {
         font-family: @SFUIText-bold;
         font-size: 15px;
         color: #666666;
+        &.show {
+            display: block;
+        }
     }
     &-item {
         margin: 5px 0;
