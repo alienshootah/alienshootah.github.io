@@ -1,13 +1,20 @@
 
+/* Слайдеры */
+
+$('.one-time').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: false,
+    autoplaySpeed: 5000,
+});
+
 /* Дропдауны */
 function dopDroprown() {
     document.getElementById("dropdown-dop").classList.toggle("shw");
-}
-function searchDrop() {
-    document.getElementById("search-me").classList.toggle("shw");
-}
-function langDrop() {
-    document.getElementById("lang-me").classList.toggle("show");
 }
 
 /* Видео на главной */
