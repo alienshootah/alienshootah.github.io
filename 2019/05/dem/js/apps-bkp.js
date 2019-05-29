@@ -10,6 +10,20 @@ function langDrop() {
     document.getElementById("lang-me").classList.toggle("show");
 }
 
+// Скрывает дропдаун когда клик происходит за пределами открытого окна
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("show");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.toggle('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
 /* Видео на главной */
 // Изображение в видео запуск ролика
 $(".vedpar-self").each(function () {

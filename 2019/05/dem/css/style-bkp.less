@@ -98,10 +98,6 @@ input, select {
 body {
     font-family: @SFUIText-regular;
 }
-.container-fluid {
-    margin: 0;
-    padding: 0;
-}
 .content {
     max-width: 1310px;
     padding: 0 15px;
@@ -152,6 +148,7 @@ h2 {
         padding-bottom: 0;
         padding-top: 60px;
         height: 140px;
+        transition: ease 0.7s;
         box-sizing: border-box;
         background-repeat: no-repeat;
         background-position: 70px 25px;
@@ -198,11 +195,9 @@ h2 {
         &.active,
         &:hover,
         &:focus {
-            transition: ease 0.7s;
             color: #ffffff;
             background-color: #18a1bb;
             padding-top: 90px;
-            text-decoration: none;
         }
         &.active .header-icon,
         &:hover .header-icon,
@@ -296,9 +291,7 @@ button.header-link {
         &:hover,
         &:focus {
             background-color: #89b9e6;
-            color: #ffffff;
             transition: ease 0.7s;
-            text-decoration: none;
         }
     }
     &-icon {
@@ -359,12 +352,6 @@ button.header-link {
         display: block;
         box-sizing: border-box;
         margin-left: 1px;
-        transition: ease 0.7s;
-        &:hover,
-        &:focus {
-            background-color: rgba(0, 0, 0, 0.75);
-        }
-        
         &-up {
             background-image: url(../img/slider-btn-up.png);
             background-repeat: no-repeat;
@@ -387,16 +374,16 @@ button.header-link {
         background-image: url(../img/search-button.png);
         background-position: center;
         background-repeat: no-repeat;
-        outline: none!important;
-        &::before {
-            content: none!important;
-        }
     }
     &-form {
-        border: 0;
-        box-shadow: none;
-        margin-top: -15px!important;
-        width: 200px;
+        display: none;
+        position: absolute;
+        right: 42px;
+        top: -3px;
+
+        &.shw {
+            display: block;
+        }
     }
     &-field {
         padding: 5px;
@@ -413,43 +400,31 @@ button.header-link {
         top: 4px;
         display: inline-block;
         width: 80px;
+        height: 20px;
         background-image: url(../img/lang-icon.png);
-        background-position: 0px 10px;
+        background-position: left;
         background-repeat: no-repeat;
         padding-left: 20px;
-        outline: none!important;
-        margin-top: -5px;
         &::after {
-            position: relative;
-            top: 7px;
-            left: -3px;
-            content: ''!important;
-            background-image: url(../img/lang-button.png);
-            background-position: center;
-            background-repeat: no-repeat;
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 0!important;
+            content: url(../img/lang-button.png);
+            margin-left: 5px;
         }
-        &::before {
-            content: none!important;
-        }
-    }
-    &-dropdown {
-        border: 0;
-        box-shadow: 0;
-        padding: 0;
-        margin-right: 15px;
     }
     &-list {
+        display: none;
+        position: absolute;
         text-align: right;
+        right: 10px;
+        top: 30px;
         background-color: #cccccc;
-        width: 100%;
+        width: 50px;
         padding: 5px 10px;
         font-family: @SFUIText-bold;
         font-size: 15px;
         color: #666666;
+        &.show {
+            display: block;
+        }
     }
     &-item {
         margin: 5px 0;
@@ -471,14 +446,7 @@ button.header-link {
     background-image: url(../img/fact-bg.png);
     background-position: bottom center;
     background-repeat: no-repeat;
-    & a {
-        color: #ffffff;
-        &:hover,
-        &:focus {
-            color: #ffffff;
-            text-decoration: none;
-        }
-    }
+
     &-list {
         color: #ffffff;
         font-size: 14px;
@@ -491,13 +459,12 @@ button.header-link {
         position: relative;
         margin-bottom: 20px;
         &-full .fact-image {
-            width: 100%;
+            width: 865px;
         }
     }
     &-image {
-        width: 100%;
-        max-height: 420px;
-        height: 100%;
+        width: 420px;
+        height: 420px;
     }
     &-hide {
         position: absolute;
@@ -518,10 +485,8 @@ button.header-link {
     background-color: #e5eef9;
     padding: 80px 0 40px 0;
     &-menu {
-        margin-top: 40px;
         display: flex;
         justify-content: center;
-        flex-wrap: nowrap;
         font-size: 14px;
         font-family: @SFUIText-bold;
     }
@@ -539,50 +504,13 @@ button.header-link {
         padding-bottom: 20px;
         box-sizing: border-box;
         transition: ease 0.7s;
-        background-image: none;
-        background-repeat: no-repeat;
-        background-position: 110px 25px;
-        &-one {
-            &.active,
-            &:hover {
-                background-image: url(../img/places-icon-one.png);
-            }
-        }
-        &-two {
-            &.active,
-            &:hover {
-                background-image: url(../img/places-icon-two.png);
-            }
-        }
-        &-three {
-            background-position: 95px 25px;
-            &.active,
-            &:hover {
-                background-image: url(../img/places-icon-three.png);
-            }
-        }
-        &-four {
-            background-position: 100px 25px;
-            &.active,
-            &:hover {
-                background-image: url(../img/places-icon-four.png);
-            }
-        }
-        &-five {
-            background-position: 105px 25px;
-            &.active,
-            &:hover {
-                background-image: url(../img/places-icon-five.png);
-            }
-        }
-
         &.active,
-        &:hover {
-            padding-top: 100px;
+        &:hover,
+        &:focus {
+            padding-top: 20px;
             padding-bottom: 20px;
             color: #ffffff;
             background-color: #60c0b3;
-            text-decoration: none;
             
         }
         &.active .places-icon,
@@ -591,7 +519,6 @@ button.header-link {
             display: block;
         }
     }
-    /*
     &-icon {
         display: none;
         width: 50px;
@@ -619,17 +546,8 @@ button.header-link {
             background-image: url(../img/places-icon-five.png);
         }
     }
-    */
-    & .tab-pane {
-        margin: 40px -10px 40px -10px;
-    }
     &-body {
         margin: 40px -10px 40px -10px;
-
-        & a {
-            color: #ffffff;
-            text-decoration: none;
-        }
     }
     &-half {
         justify-content: space-between;
@@ -639,22 +557,18 @@ button.header-link {
     &-picture {
         position: relative;
         color: #ffffff;
-        &.active .places-hide,
-        &:hover .places-hide,
-        &:focus .places-hide {
+
+        &.active .places-hide {
             display: block;
         }
     }
     &-hide {
         display: none;
         position: absolute;
-        bottom: 0;
+        bottom: 20px;
+        left: 20px;
         box-sizing: border-box;
         padding-right: 20px;
-        padding-left: 20px;
-        padding-bottom: 20px;
-        width: 100%;
-        background-image: linear-gradient(0deg, #000000, transparent);
     }
     &-title {
         font-size: 22px;
@@ -663,7 +577,7 @@ button.header-link {
         width: 100%;
     }
     & .col-12 {
-        margin-top: -30px;
+        margin-top: -32px;
         padding: 0 10px 0 10px;
     }
 }
@@ -671,6 +585,7 @@ button.header-link {
     background-image: url(../img/vedpar-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+  
     &:hover .vedpar-all,
     &:focus .vedpar-all {
         opacity: 1;
@@ -715,11 +630,8 @@ button.header-link {
     }
 }
 
+
 .insta {
-    margin: 60px 0;
-    &-body {
-        padding: 40px 0;
-    }
     &-list {
         display: flex;
         flex-wrap: wrap;
@@ -751,7 +663,6 @@ footer {
         text-decoration: none;
         &:hover,
         &:focus {
-            color: #000000;
             text-decoration: underline;
         }
     }
@@ -782,3 +693,5 @@ footer {
         }
     }
 }
+
+/* Dropdown */
