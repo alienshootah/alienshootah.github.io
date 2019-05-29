@@ -1,7 +1,7 @@
 
 /* Дропдауны */
 function dopDroprown() {
-    document.getElementById("dropdown-dop").classList.toggle("show");
+    document.getElementById("dropdown-dop").classList.toggle("shw");
 }
 function searchDrop() {
     document.getElementById("search-me").classList.toggle("shw");
