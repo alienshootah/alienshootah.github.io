@@ -168,7 +168,7 @@
                                 <button class="search-btn">
                                     <span class="search-button"></span>
                                 </button>
-                                <form action="/" class="search-form">
+                                <form action="/" class="search-form" id="search-me">
                                     <input type="text" class="search-field" placeholder="Искать на сайте" required>
                                 </form>
                             </div>
@@ -350,11 +350,18 @@
         <section class="vedpar">
             <h2 class="hidden">Видео проморолик на нашем сайте</h2>
             <div class="vedpar-self">
+                <div class="youtube-embed-wrapper vedpar-all" id="main-video"
+                    style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden;">
+                    <iframe allowfullscreen="" frameborder="0" height="360" src="//www.youtube.com/embed/N8IvtILrmjk" 
+                    style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;" width="640"></iframe>
+                </div>
+                <!--
                 <video class="vedpar-all" id="main-video" controls>
                     <source src="promo/6_catalog-filters.mp4" type="video/mp4" class="vedpar-sr">
                     Your browser does not support the video tag.
                 </video>
-                <div id="custom-play-button" class="vedpar-self-icon" onclick="myVedpar()">
+                -->
+                <div id="main-video2" class="vedpar-self-icon" onmousedown="myVedpar()">
                     <span class="vedpar-btn"></span>
                 </div>
             </div>

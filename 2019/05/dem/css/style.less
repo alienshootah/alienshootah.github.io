@@ -217,9 +217,17 @@ h2 {
 
         &-blue .dopmenu-link {
             background-color: #53baad;
+            &:hover,
+            &:focus {
+                background-color: #6ccabe;
+            }
         }
         &-green .dopmenu-link {
             background-color: #83ca59;
+            &:hover,
+            &:focus {
+                background-color: #94d66d;
+            }
         }
     }
     &-link {
@@ -232,6 +240,10 @@ h2 {
         margin: 1px;
         display: block;
         box-sizing: border-box;
+        &:hover,
+        &:focus {
+            background-color: #89b9e6;
+        }
     }
     &-icon {
         display: block;
@@ -526,6 +538,10 @@ h2 {
         opacity: 1;
         transition: all 0.7s;
     }
+    &:hover .vedpar-self-icon,
+    &:focus .vedpar-self-icon {
+       display: none;
+    }
     &-all {
         opacity: 0;
         width: 100%;
@@ -546,6 +562,9 @@ h2 {
             opacity: 1;
             cursor: pointer;
             display: block;
+            &.hide {
+                display: none;
+            }
         }
     }
     &-btn {
