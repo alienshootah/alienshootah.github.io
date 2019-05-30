@@ -25,6 +25,21 @@ $('.sl-slider').slick({
 /* Дропдауны */
 function dopDroprown() {
     document.getElementById("dropdown-dop").classList.toggle("and");
+    document.getElementById("dropdown-dop2").classList.remove("and");
+    document.getElementById("dropdown-dop3").classList.remove("and");
+    document.getElementById("dropdown-dop4").classList.remove("and");
+}
+function dopDroprown2() {
+    document.getElementById("dropdown-dop2").classList.toggle("and");
+    document.getElementById("dropdown-dop3").classList.remove("and");
+    document.getElementById("dropdown-dop4").classList.remove("and");
+}
+function dopDroprown3() {
+    document.getElementById("dropdown-dop3").classList.toggle("and");
+    document.getElementById("dropdown-dop4").classList.remove("and");
+}
+function dopDroprown4() {
+    document.getElementById("dropdown-dop4").classList.toggle("and");
 }
 
 /* Видео на главной */
