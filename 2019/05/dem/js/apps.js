@@ -12,9 +12,19 @@ $('.one-time').slick({
     autoplaySpeed: 5000,
 });
 
+// slick carousel
+$('.sl-slider').slick({
+    dots: false,
+    vertical: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+});
+
+
 /* Дропдауны */
 function dopDroprown() {
-    document.getElementById("dropdown-dop").classList.toggle("shw");
+    document.getElementById("dropdown-dop").classList.toggle("and");
 }
 
 /* Видео на главной */
