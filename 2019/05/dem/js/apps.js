@@ -24,25 +24,27 @@ $('.sl-slider').slick({
 
 /* Дропдауны */
 function dopDroprown() {
-    document.getElementById("dropdown-dop").classList.toggle("and");
-    document.getElementById("dropdown-dop2").classList.remove("and");
-    document.getElementById("dropdown-dop3").classList.remove("and");
-    document.getElementById("dropdown-dop4").classList.remove("and");
+    document.getElementById("drop").classList.toggle("and");
+    document.getElementById("drop2").classList.remove("and");
+    document.getElementById("drop3").classList.remove("and");
+    document.getElementById("drop4").classList.remove("and");
 }
 function dopDroprown2() {
-    document.getElementById("dropdown-dop2").classList.toggle("and");
-    document.getElementById("dropdown-dop3").classList.remove("and");
-    document.getElementById("dropdown-dop4").classList.remove("and");
+    document.getElementById("drop2").classList.toggle("and");
+    document.getElementById("drop3").classList.remove("and");
 }
 function dopDroprown3() {
-    document.getElementById("dropdown-dop3").classList.toggle("and");
-    document.getElementById("dropdown-dop4").classList.remove("and");
+    document.getElementById("drop3").classList.toggle("and");
+    document.getElementById("drop4").classList.remove("and");
 }
 function dopDroprown4() {
-    document.getElementById("dropdown-dop4").classList.toggle("and");
+    document.getElementById("drop4").classList.toggle("and");
+}
+function dopDroprown4() {
+    document.getElementById("drop4").classList.toggle("and");
 }
 
-/* Видео на главной */
+// Видео на главной 
 // Изображение в видео запуск ролика
 $(".vedpar-self").each(function () {
     var video = $(this).find("video");

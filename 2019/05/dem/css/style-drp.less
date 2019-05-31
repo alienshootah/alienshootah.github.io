@@ -117,6 +117,13 @@ h2 {
 
 /* Header */
 
+.slick-list {
+    position: static!important;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 .header {
     &-body {
         align-items: center;
@@ -224,17 +231,16 @@ button.header-link {
 .dopmenu {
     position: absolute;
     z-index: 9999;
-    
     & .draggable {
-        height: 600px!important;
+        min-height: 600px!important;
     }
     & .slick-track {
-        height: 600px!important;
+        min-height: 600px!important;
     }
-
     &-body {
         display: flex;
         margin: 0 -1px;
+        position: relative;
     }
     &-list {
         text-align: center;
@@ -258,7 +264,7 @@ button.header-link {
         }
     }
     &-item {
-        width: 195px;
+        min-width: 195px!important;
     }
     &-link {
         color: #ffffff;
@@ -326,25 +332,27 @@ button.header-link {
         margin-left: 197px;
     }
 }
+.nav-drop {
+    position: relative;
+}
 .dropdown-dop {
     visibility: hidden;
     position: absolute;
-    z-index: 9999;
-    top: 140px;
+    top: 0;
     &.and {
         visibility: visible;
     }
     &-1 {
-        left: 56px;
+        left: 152px;
     }
     &-2 {
-        left: 252px;
+        left: 350px;
     }
     &-3 {
-        left: 450px;
+        left: 548px;
     }
     &-4 {
-        left: 648px;
+        left: 746px;
     }
 }
 .slid {
