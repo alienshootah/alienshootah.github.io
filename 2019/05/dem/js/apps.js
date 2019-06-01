@@ -1,5 +1,18 @@
-
+$(function(){
+    $("#bootnavbar").bootnavbar();
+    });
 /* Слайдеры */
+
+$('.fact-slider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: false,
+    autoplaySpeed: 5000,
+});
 
 $('.one-time').slick({
     dots: false,
