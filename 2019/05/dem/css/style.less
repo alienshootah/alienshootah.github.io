@@ -116,11 +116,17 @@ h2 {
 }
 
 /* Header */
-
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    background-color: #ffffff;
+}
 .header {
     &-body {
         align-items: center;
         margin-top: -10px;
+
     }
     &-logo {
         display: inline-block;
@@ -336,13 +342,13 @@ button.header-link {
         visibility: visible;
     }
     &-1 {
-        left: 56px;
+        left: 48px;
     }
     &-2 {
-        left: 252px;
+        left: 242px;
     }
     &-3 {
-        left: 450px;
+        left: 438px;
     }
     &-4 {
         left: 648px;
@@ -470,10 +476,11 @@ button.header-link {
 /* Sections */
 
 .fact {
-    background-image: url(../img/fact-bg.png);
-    background-position: bottom center;
+    padding-top: 130px;
+    background-image: none;
     background-repeat: no-repeat;
-    padding-bottom: 120px;
+    background-position: center;
+    background-size: cover;
     & a {
         color: #ffffff;
         &:hover,
@@ -489,6 +496,10 @@ button.header-link {
         flex-wrap: wrap;
         justify-content: space-between;
         padding: 10px 0 20px 0;
+        background-image: url(../img/fact-bg.png);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        padding-bottom: 120px;
     }
     &-item {
         overflow: hidden;
@@ -502,6 +513,10 @@ button.header-link {
             font-size: 26px;
             margin-bottom: 15px;
         }
+        &:hover .fact-image,
+        &:focus .fact-image {
+            transform: scale(1.1, 1.1);
+        }
     }
     &-image {
         box-sizing: border-box;
@@ -509,9 +524,6 @@ button.header-link {
         max-height: 420px;
         height: 100%;
         transition: all 0.7s;
-        &:hover {
-            transform: scale(1.1, 1.1);
-        }
     }
     &-hide {
         position: absolute;
@@ -530,6 +542,10 @@ button.header-link {
 }
 .places {
     background-color: #e5eef9;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding: 80px 0 20px 0;
     &-menu {
         margin-top: 40px;
@@ -626,6 +642,10 @@ button.header-link {
             opacity: 1;
             transition: all .2s cubic-bezier(0,0,.58,1);
         }
+        &:hover .places-image,
+        &:focus .places-image {
+            transform: scale(1.1, 1.1);
+        }
     }
     &-slick-item {
         margin: 0 10px;
@@ -663,9 +683,6 @@ button.header-link {
         width: 100%;
         height: 100%;
         transition: all 0.7s;
-        &:hover {
-            transform: scale(1.1, 1.1);
-        }
     }
     & .col-12 {
         padding: 8px 3px 10px 5px;
@@ -723,7 +740,6 @@ button.header-link {
         background-position: center;
     }
 }
-
 .insta {
     margin: 50px 0;
     &-body {
