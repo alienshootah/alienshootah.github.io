@@ -1,6 +1,24 @@
-$(function(){
-    $("#bootnavbar").bootnavbar();
-    });
+/* Анимация иконки меню */
+
+function myMenu(x) {
+    x.classList.toggle("change");
+}
+
+/* Меню адаптив */
+
+function myMobile() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "header-list") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-list";
+      document.getElementById("drop").classList.remove("and");
+      document.getElementById("drop2").classList.remove("and");
+      document.getElementById("drop3").classList.remove("and");
+      document.getElementById("drop4").classList.remove("and");
+    }
+}
+
 /* Слайдеры */
 
 $('.fact-slider').slick({
@@ -32,6 +50,14 @@ $('.sl-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     verticalSwiping: true,
+    responsive: [
+        {
+          breakpoint: 993,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
 });
 
 

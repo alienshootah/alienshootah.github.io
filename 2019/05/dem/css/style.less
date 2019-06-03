@@ -116,6 +116,9 @@ h2 {
 }
 
 /* Header */
+.menu-mobile {
+    display: none;
+}
 header {
     width: 100%;
     position: fixed;
@@ -163,6 +166,7 @@ header {
         background-repeat: no-repeat;
         background-position: 70px 25px;
         background-image: none;
+        transition: all 1s;
         &-one {
             &.active,
             &:hover,
@@ -400,8 +404,9 @@ button.header-link {
     &-form {
         border: 0;
         box-shadow: none;
-        margin-top: -15px!important;
+        margin-top: -18px!important;
         width: 200px;
+        background-color: transparent;
     }
     &-field {
         padding: 5px;
@@ -507,6 +512,7 @@ button.header-link {
         margin-bottom: 20px;
         &-full .fact-image {
             width: 100%;
+            max-width: 848px;
         }
         &-full .fact-title {
             letter-spacing: 2.5px;
@@ -524,12 +530,14 @@ button.header-link {
         max-height: 420px;
         height: 100%;
         transition: all 0.7s;
+        max-width: 417px;
     }
     &-hide {
         position: absolute;
         left: 30px;
         bottom: 23px;
         box-sizing: border-box;
+        padding-right: 10px;
     }
     &-title {
         font-size: 24px;
@@ -557,21 +565,25 @@ button.header-link {
     }
     &-item {
         margin: 2px;
+        width: 257px;
+        height: 138px;
     }
     &-link {
         text-align: center;
         display: block;
-        width: 255px;
-        height: 138px;
+        width: 100%;
+        height: 100%;
         color: #000000;
         text-decoration: none;
         padding-top: 65px;
         padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
         box-sizing: border-box;
-        transition: ease 0.7s;
+        transition: all 1s;
         background-image: none;
         background-repeat: no-repeat;
-        background-position: 110px 25px;
+        background-position: center 30px;
         &-one {
             &.active,
             &:hover {
@@ -585,21 +597,18 @@ button.header-link {
             }
         }
         &-three {
-            background-position: 95px 25px;
             &.active,
             &:hover {
                 background-image: url(../img/places-icon-three.png);
             }
         }
         &-four {
-            background-position: 100px 25px;
             &.active,
             &:hover {
                 background-image: url(../img/places-icon-four.png);
             }
         }
         &-five {
-            background-position: 105px 25px;
             &.active,
             &:hover {
                 background-image: url(../img/places-icon-five.png);
@@ -613,7 +622,6 @@ button.header-link {
             color: #ffffff;
             background-color: #60c0b3;
             text-decoration: none;
-            
         }
         &.active .places-icon,
         &:hover .places-icon,
@@ -648,7 +656,7 @@ button.header-link {
         }
     }
     &-slick-item {
-        margin: 0 10px;
+        margin: 0 10px 0 0;
         outline: none!important;
     }
     &-hide {
@@ -758,6 +766,7 @@ button.header-link {
     &-item {
         box-sizing: border-box;
         padding: 10px 5px;
+        width: 50%;
     }
     &-image {
         width: 100%;
