@@ -86,13 +86,13 @@
 }
 @media (max-width: 992px) {
     .menu-mobile {
-        display: inline-block;
+        display: block;
         outline: none!important;
+        position: absolute;
+        top: 2px;
+        left: 62px;
     }
     .menu-container {
-        position: relative;
-        top: 0;
-        left: 10px;
         display: inline;
         cursor: pointer;
         display: inline-block;
@@ -265,7 +265,62 @@
     }
 }
 @media (max-width: 540px) {
-    
+    .fact-item {
+        width: 100%;
+    }
+    .fact-item-full .fact-title {
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+    .places-half {
+        & .col-6 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .vedpar-self-icon {
+        top: 36%;
+    }
+    .insta-body {
+        & .col-4 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+    .insta-item {
+        padding: 5px 0;
+    }
+    .footer-body {
+        & .col-4 {
+            -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        & .col-4:nth-child(2) {
+            order: -1;
+        }
+    }
+    .footer-list {
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .social {
+        justify-content: center;
+        margin: 10px 0;
+        &-item {
+            margin: 0 15px;
+        }
+        &-icon {
+            margin-left: 0;
+        }
+    }
 }
-@media (max-width: 425px) {}
+@media (max-width: 425px) {
+    .fact .content {
+        padding: 0;
+    }
+}
 @media (max-width: 375px) {}

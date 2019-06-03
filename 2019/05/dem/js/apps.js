@@ -30,6 +30,14 @@ $('.fact-slider').slick({
     adaptiveHeight: true,
     autoplay: false,
     autoplaySpeed: 5000,
+    responsive: [
+        {
+          breakpoint: 540,
+          settings: {
+            arrows: false
+          }
+        }
+    ]
 });
 
 $('.one-time').slick({
@@ -41,6 +49,14 @@ $('.one-time').slick({
     adaptiveHeight: true,
     autoplay: false,
     autoplaySpeed: 5000,
+    responsive: [
+        {
+          breakpoint: 540,
+          settings: {
+            arrows: false
+          }
+        }
+    ]
 });
 
 // slick carousel
@@ -57,7 +73,7 @@ $('.sl-slider').slick({
             arrows: false
           }
         }
-      ]
+    ]
 });
 
 
