@@ -409,6 +409,7 @@ button.header-link {
 }
 .search {
     position: relative;
+    z-index: 9999;
     margin-right: 20px;
     &-btn {
         display: block;
@@ -502,11 +503,11 @@ button.header-link {
 /* Sections */
 
 .fact {
-    padding-top: 130px;
-    background-image: none;
+    padding-top: 150px;
+    background-image: url(../img/fact-bg.png);
+    background-position: bottom center;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding-bottom: 10px;
     & a {
         color: #ffffff;
         &:hover,
@@ -521,11 +522,7 @@ button.header-link {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: 10px 0 20px 0;
-        background-image: url(../img/fact-bg.png);
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        padding-bottom: 120px;
+        padding: 0;
     }
     &-slider_item {
         outline: none!important;
@@ -570,6 +567,33 @@ button.header-link {
     }
     &-descr {
         font-size: 14px;
+    }
+
+    /* Стили слайдера */
+
+    & .slick-track {
+        display: flex!important;
+        flex-wrap: wrap!important;
+        box-sizing: border-box!important;
+        width: 100%!important;
+        justify-content: flex-start!important;
+    }
+    & .slick-slide {
+        float: none;
+    }
+    &-item {
+        height: 420px;
+        width: 417px;
+        display: block;
+        margin-bottom: 0;
+    }
+    &-item:first-child {
+        width: 834px;
+    }
+    &-picture {
+        overflow: hidden;
+        margin-left: 7px;
+        margin-right: 7px;
     }
 }
 .places {
@@ -747,6 +771,77 @@ button.header-link {
         padding: 10px 0 10px 15px;
     }
 }
+/* Стили слайдера Подкатегорий */
+
+.places .swiper-button-prev {
+    left: 40px;
+}
+.places .swiper-button-next {
+    right: 40px;
+}
+.places .swiper-contain {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.places .swiper-wrapper {
+    box-sizing: border-box;
+}
+.places .swiper-slide {
+    margin: 0;
+    padding: 0;
+}
+.places .swiper-slide:nth-child(1),
+.places .swiper-slide:nth-child(3),
+.places .swiper-slide:nth-child(5) {
+    width: 66%!important;
+}
+.places .swiper-slide:nth-child(2),
+.places .swiper-slide:nth-child(4),
+.places .swiper-slide:nth-child(6) {
+    width: 34%!important;
+}
+/* Стили слайдера */
+
+.places-slider .slick-track {
+    display: flex!important;
+    flex-wrap: wrap!important;
+    box-sizing: border-box!important;
+    width: 100%!important;
+    justify-content: flex-start!important;
+}
+.places-slider .slick-slide {
+    float: none;
+}
+.places-slider {
+    display: flex;
+    flex-wrap: wrap;
+}
+.places-slider_item {
+    display: block;
+}
+.places-slider_item:nth-child(1) {
+    width: 50%;
+}
+.places-slider_item:nth-child(2) {
+    width: 50%;
+}
+.places-slider_item:nth-child(3) {
+    width: 100%;
+}
+.places-image {
+    height: 430px;
+}
+.places-picture {
+    margin: 10px;
+}
+.places-picture-long {
+    margin-top: 0;
+}
+.places-image-long {
+    height: 880px;
+}
+
 .vedpar {
     background-image: url(../img/vedpar-bg2.jpg);
     background-repeat: no-repeat;

@@ -1,3 +1,30 @@
+/* Слайдер в факт */
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+/* Слайдер в подкатегориях */
+var swiper = new Swiper('.swiper-contain', {
+  slidesPerView: 2,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+/* Слайдер в подразделах 
+var swiper = new Swiper('.swiper-contain', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});*/
+
 /* Анимация иконки меню */
 
 function myMenu(x) {
@@ -26,7 +53,9 @@ $('.fact-slider').slick({
     arrows: true,
     infinite: true,
     speed: 300,
-    slidesToShow: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    variableWidth: true,
     adaptiveHeight: true,
     autoplay: false,
     autoplaySpeed: 5000,
@@ -39,7 +68,26 @@ $('.fact-slider').slick({
         }
     ]
 });
-
+$('.places-slider').slick({
+  dots: false,
+  arrows: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  variableWidth: true,
+  adaptiveHeight: true,
+  autoplay: false,
+  autoplaySpeed: 5000,
+  responsive: [
+      {
+        breakpoint: 540,
+        settings: {
+          arrows: false
+        }
+      }
+  ]
+});
 $('.one-time').slick({
     dots: false,
     arrows: true,
