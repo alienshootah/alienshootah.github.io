@@ -1,5 +1,3 @@
-
-
 /* Слайдер в факт */
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
@@ -11,8 +9,8 @@ var swiper = new Swiper('.swiper-container', {
 
 /* Слайдер в подкатегориях */
 var swiper = new Swiper('.swiper-contain', {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
+  slidesPerView: 1,
+  autoHeight: true, // enable auto height
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -41,24 +39,6 @@ function myMobile() {
 }
 
 /* Слайдеры */
-
-// slick carousel
-$('.sl-slider').slick({
-  dots: false,
-  vertical: true,
-  arrows: true,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  verticalSwiping: true,
-  responsive: [
-      {
-        breakpoint: 993,
-        settings: {
-          arrows: true,
-        }
-      }
-  ]
-});
 
 $('.fact-slider').slick({
     dots: false,
@@ -100,6 +80,42 @@ $('.places-slider').slick({
       }
   ]
 });
+$('.one-time').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    autoplay: false,
+    autoplaySpeed: 5000,
+    responsive: [
+        {
+          breakpoint: 540,
+          settings: {
+            arrows: false
+          }
+        }
+    ]
+});
+
+// slick carousel
+$('.sl-slider').slick({
+    dots: false,
+    vertical: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    verticalSwiping: true,
+    responsive: [
+        {
+          breakpoint: 993,
+          settings: {
+            arrows: false
+          }
+        }
+    ]
+});
+
 
 /* Дропдауны */
 function dopDroprown() {
