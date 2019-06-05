@@ -9,21 +9,12 @@ var swiper = new Swiper('.swiper-container', {
 
 /* Слайдер в подкатегориях */
 var swiper = new Swiper('.swiper-contain', {
-  slidesPerView: 2,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-/* Слайдер в подразделах 
-var swiper = new Swiper('.swiper-contain', {
   slidesPerView: 1,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});*/
+});
 
 /* Анимация иконки меню */
 
@@ -50,7 +41,7 @@ function myMobile() {
 
 $('.fact-slider').slick({
     dots: false,
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 300,
     slidesToShow: 5,
@@ -61,9 +52,9 @@ $('.fact-slider').slick({
     autoplaySpeed: 5000,
     responsive: [
         {
-          breakpoint: 540,
+          breakpoint: 767,
           settings: {
-            arrows: false
+            dots: fase,
           }
         }
     ]
