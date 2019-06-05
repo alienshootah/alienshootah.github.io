@@ -10,6 +10,7 @@ var swiper = new Swiper('.swiper-container', {
 /* Слайдер в подкатегориях */
 var swiper = new Swiper('.swiper-contain', {
   slidesPerView: 1,
+  autoHeight: true, // enable auto height
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
