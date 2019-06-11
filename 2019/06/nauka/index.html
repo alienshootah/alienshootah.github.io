@@ -20,9 +20,21 @@
                         <nav>
                             <ul class="menu-list">
                                 <li class="menu-item"><a href="#" class="menu-link">MÓJ PROFIL</a></li>
-                                <li class="menu-item"><a href="#" class="menu-link">NAUKA<span class="menu-green"></span></a></li>
+                                <li class="menu-item"><a href="#" class="menu-link active">NAUKA</a></li>
                                 <li class="menu-item"><a href="#" class="menu-link">EGZAMINY</a></li>
-                                <li class="menu-item"><button class="menu-link menu-dropdown">Janusz Nowak</button></li>
+                                <li class="menu-item">
+                                    <div class="dropdown">
+                                        <button type="button" class="menu-link menu-dropdown" data-toggle="dropdown">
+                                            <span class="menu-dropdown-icon"></span>
+                                            Janusz Nowak
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Link 1</a>
+                                            <a class="dropdown-item" href="#">Link 2</a>
+                                            <a class="dropdown-item" href="#">Link 3</a>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -75,61 +87,67 @@
                             <span class="half-number half-number-red">5</span>
                         </li>
                     </ul>
-                    <p class="main-question">13. Dlaczego nie można budować piwnic na podmokłym terenie?</p>
-                    <ul class="question">
-                        <li class="question-item active">
-                            <span class="question-lett">A</span>
-                            Bo nie można i tyle<br>
-                            w temacie proszę<br>
-                            waści pana godnego
-                        </li>
-                        <li class="question-item">
-                            <span class="question-lett">B</span>
-                            Panie, bo się to przeca<br>
-                            zapadnie i co wtedy<br>
-                            będzie, tragedia panie
-                        </li>
-                        <li class="question-item">
-                            <span class="question-lett">C</span>
-                            Przecież to nie ma <br>
-                            sensu aby budować <br>
-                            na wodzie typie
-                        </li>
-                    </ul>
+                    <p class="text-center main-question">13. Dlaczego nie można budować piwnic na podmokłym terenie?</p>
+                    <form method="post" action="send.php">
+                        <div class="radio-group question">
+                            <div class='question-item radio selected' data-value="One">
+                                <span class="question-lett">A</span>
+                                Bo nie można i tyle<br>
+                                w temacie proszę<br>
+                                waści pana godnego
+                            </div>
+                            <div class='question-item radio' data-value="Two">
+                                <span class="question-lett">B</span>
+                                Panie, bo się to przeca<br>
+                                zapadnie i co wtedy<br>
+                                będzie, tragedia panie
+                            </div>
+                            <div class='question-item radio' data-value="Three">
+                                <span class="question-lett">C</span>
+                                Przecież to nie ma <br>
+                                sensu aby budować <br>
+                                na wodzie typie
+                            </div>
+                        </div>
+                    </form>
                     <div class="end">
                         <div class="row end-body">
-                            <div class="col-3">
-                                <button class="end-btn">Wróć</button>
+                            <div class="col-2">
+                                <button class="end-btn"> <span class="end-btn-icon"></span> Wróć</button>
                             </div>
-                            <div class="col-6">
+                            <div class="col-8">
                                 <ul class="end-list">
                                     <li class="end-item">
-                                        <button class="end-title">
-                                            <span class="end-icon end-icon-one"></span>
-                                            Podpowiedź rysunkowa
-                                        </button>
-                                        <div class="end-hide">
-                                            <span class="end-image"></span>
+                                        <div class="dropdown">
+                                            <button type="button" class="end-title" data-toggle="dropdown">
+                                                <span class="end-icon end-icon-one"></span>
+                                                Podpowiedź rysunkowa
+                                            </button>
+                                            <div class="dropdown-menu end-hide">
+                                                <span class="end-image"></span>
+                                            </div>
                                         </div>
                                     </li>
                                     <li class="end-item">
-                                        <button class="end-title">
-                                            <span class="end-icon end-icon-two"></span>
-                                            Podpowiedź tekstowa
-                                        </button>
-                                        <div class="end-hide">
-                                            <p class="text-center end-text">
-                                                Lorem ipsum dolorem semit emt<br>
-                                                dolorem semit dolorem valorem<br>
-                                                semit dolorem volorem semit don<br>
-                                                valorem semit lorem semit<br>
-                                                noker soker boasd dore kor.
-                                            </p>
+                                        <div class="dropdown">
+                                            <button type="button" class="end-title" data-toggle="dropdown">
+                                                <span class="end-icon end-icon-two"></span>
+                                                Podpowiedź tekstowa
+                                            </button>
+                                            <div class="dropdown-menu end-hide">
+                                                <p class="text-center end-text">
+                                                    Lorem ipsum dolorem semit emt<br>
+                                                    dolorem semit dolorem valorem<br>
+                                                    semit dolorem volorem semit don<br>
+                                                    valorem semit lorem semit<br>
+                                                    noker soker boasd dore kor.
+                                                </p>
+                                            </div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-3 text-right">
+                            <div class="col-2 text-right">
                                 <button class="end-btn end-btn-reverse">Dalej</button>
                             </div>
                         </div>
@@ -142,5 +160,6 @@
     <script src="js/popper.min.js"></script>
     <script src="bootstrap-4/js/bootstrap.min.js"></script>
     <script src="js/less.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
