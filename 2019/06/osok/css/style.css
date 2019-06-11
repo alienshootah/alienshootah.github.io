@@ -1,0 +1,148 @@
+
+/* Основные стили */
+
+.content {
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+
+/* Задание 2 */
+
+.list {
+    max-width: 200px;
+    padding-left: 0;
+    margin: 0 auto;
+}
+.list-item {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: olivedrab;
+    color: #ffffff;
+}
+
+/* Задание 3 */
+.cards {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    color: #333333;
+}
+
+.cards th,
+.cards td {
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+.cards td:first-child,
+.cards td:last-child {
+    text-align: center;
+}
+.cards-image {
+    width: 75px;
+    width: 75px;
+}
+.cards-field {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 75px;
+}
+.cards a {
+    color: #333333;
+    text-decoration: none;
+}
+.cards a:hover,
+.cards a:focus {
+    text-decoration: underline;
+}
+.cards-close {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    cursor: pointer;
+    outline: none;
+}
+.cards-close:before {
+    content: "X";
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+    position: relative;
+    top: -3px;
+}
+
+/* Задание 5 */
+
+.five {
+    width: 100%;
+    max-width: 600px;
+}
+
+@media (max-width: 767px){
+
+    /* Задание 3: Адаптив */
+
+    .cards tr {
+        background-color: #cccccc;
+        border-radius: 5px;
+        width: 100%;
+        height: 140px;
+        display: block;
+        position: relative;
+        margin: 10px 0;
+    }
+    .cards td {
+        display: inline-block;
+        border-bottom: none;
+    }
+    .cards td:first-child,
+    .cards td:last-child {
+        text-align: left;
+    }
+    .cards thead {
+        display: none;
+    }
+    .cards-category {
+        position: absolute;
+        left: 90px;
+        top: 10px;
+        font-size: 22px;
+    }
+    .cards-name {
+        position: absolute;
+        left: 90px;
+        top: 40px;
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    .cards-price {
+        position: absolute;
+        bottom: 15px;
+        left: 90px;
+    }
+    .cards-field {
+        position: absolute;
+        bottom: 10px;
+        left: 130px;
+    }
+    .cards-val {
+        position: absolute;
+        bottom: 15px;
+        left: 225px;
+    }
+    .cards-close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}

@@ -1,0 +1,274 @@
+/* Шрифты */
+
+@Rubik-Regular: 'Rubik-Regular', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url(../fonts/Rubik-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Основные стили */
+
+body {
+    font-family: @Rubik-Regular;
+    background-color: #f7fbff;
+    color: #313131;
+}
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-family: @Rubik-Regular;
+    font-size: 40px;
+    color: #06187a;
+}
+
+/* Шапка */
+
+header {
+    background-color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 1.9px;
+    text-transform: uppercase;
+    border-bottom: solid 2px #e3ebf7;
+}
+.header-logo {
+    display: block;
+    width: 89px;
+    height: 43px;
+    background-image: url(../img/header-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Меню */
+
+.menu {
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-item {
+        &:last-child {
+            border-left: solid 2px #e3ebf7;
+        }
+    }
+    &-link {
+        color: #06187a;
+        padding: 20px 0 20px 0;
+        background-color: transparent;
+        border: 0;
+        position: relative;
+    }
+    &-dropdown {
+        padding-left: 60px;
+        padding-right: 20px;
+        color: #313131;
+        font-size: 16px;
+    }
+    &-green {
+        position: relative;
+        top: -2px;
+        left: 5px;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border: solid 2px #25d776;
+        border-radius: 50%;
+    }
+}
+
+/* Мейн */
+
+.main {
+    &-body {
+        font-size: 14px;
+        box-shadow: 0 2px 20px 3px rgba(0, 32, 96, 0.02);
+        border: solid 2px #f1f5fb;
+        background-color: #ffffff;
+        margin: 65px 0 140px 0;
+        padding: 50px 40px 100px 40px;
+    }
+    &-descr {
+        &_text {
+            color: #b8bede;
+            font-size: 12px;
+            display: block;
+        }
+    }
+    &-question {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+}
+.line {
+    &-item {
+        margin: 6px 0;
+    }
+    &-body {   
+        width: 100%;
+        height: 37px;
+        background-color: #f7fbff;
+        border-radius: 5px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    &-visual {
+        background-color: #25d776;
+        position: absolute;
+        height: 37px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: right;
+        color: #ffffff;
+        box-sizing: border-box;
+        border-radius: 5px;
+        padding-top: 9px;
+        padding-right: 10px;
+        &-red {
+            background-color: #25d776;
+            width: 78%;
+        }
+        &-green {
+            background-color: #d74a25;
+            width: 28%;
+        }
+    }
+}
+.half {
+    text-align: center;
+    padding: 20px 0;
+    margin: 10px 0;
+    border-top: solid 2px #e3ebf7;
+    border-bottom: solid 2px #e3ebf7;
+    display: flex;
+    justify-content: center;
+    &-item {
+        padding: 0 40px;
+    }
+    &-number {
+        margin-top: 5px;
+        line-height: 1.17;
+        color: #06187a;
+        font-size: 24px;
+        &-blue {
+            color: #06187a;
+        }
+        &-green {
+            color: #25d776;
+        }
+        &-red {
+            color: #d74a25;
+        }
+    }
+}
+.question {
+    text-align: center;
+    color: #1154c7;
+    margin: 0 -12px;
+    display: flex;
+    justify-content: center;
+    &-item {
+        border-radius: 5px;
+        border: solid 2px #f1f5fb;
+        padding: 40px 30px;
+        opacity: 0.3;
+        margin: 0 12px;
+        transition: ease 0.7s;
+
+        &.active,
+        &:hover,
+        &:focus {
+            opacity: 1;
+            border: solid 2px #06187a;
+        }
+    }
+    &-lett {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+}
+.end {
+    position: relative;
+    &-body {
+        margin-top: 20px;
+        color: #06187a;
+        font-size: 14px;
+    }
+    &-title {
+        color: #1154c7;
+        font-size: 14px;
+        border: 0;
+        background-color: transparent;
+        margin: 13px 0 26px 0;
+    }
+    &-btn {
+        margin-top: 60px;
+        color: #1154c7;
+        font-size: 13px;
+        border-radius: 5px;
+        padding: 6px 36px;
+        box-shadow: 0 2px 17px 2px rgba(21, 107, 191, 0.08);
+        border: solid 2px #1154c7;
+        background-color: transparent;
+        transition: ease 0.7s;
+        &:hover,
+        &:focus {
+            color: #ffffff;
+            background-color: #1154c7;
+        }
+        &-reverse {
+            color: #ffffff;
+            background-color: #1154c7;
+            &:hover,
+            &:focus {
+                color: #1154c7;
+                background-color: #ffffff;
+            }
+        }
+    }
+    &-list {
+        margin: 0 -25px;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &-item {
+        width: 312px;
+        text-align: center;
+        box-shadow: 0 2px 20px 3px rgba(0, 32, 96, 0.02);
+        border: solid 2px #f1f5fb;
+        border-radius: 5px;
+        background-color: #ffffff;
+        padding: 18px;
+        margin: 20px 15px;
+    }
+    &-image {
+        display: block;
+        width: 100%;
+        background-color: #f6f6f6;
+        height: 170px;
+        
+    }
+}
+    
+
+/* Дропдауны */
