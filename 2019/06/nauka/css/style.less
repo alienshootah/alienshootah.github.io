@@ -1,10 +1,17 @@
 /* Шрифты */
 
 @Rubik-Regular: 'Rubik-Medium', Arial, Helvetica, sans-serif;
+@Rubik-Reg: 'Rubik-Regular', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'Rubik-Medium';
     src: url(../fonts/Rubik-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url(../fonts/Rubik-Regular.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -47,6 +54,7 @@ h1 {
 h2 {
     font-size: 24px;
     color: #06187a;
+    font-family: @Rubik-Reg;
 }
 
 /* Шапка */
@@ -235,6 +243,10 @@ header {
             background-color: #e7ce1c;
             width: 22%;
         }
+        &-blue {
+            background-color: #06187a;
+            width: 35%;
+        }
     }
 }
 .half {
@@ -325,6 +337,9 @@ header {
         &:focus .end-arrow-left {
             background-image: url(../img/arrowright.svg);
             transform: rotate(180deg);
+        }
+        &-centered {
+            padding: 8px 50px;
         }
         &-reverse {
             color: #ffffff;
@@ -728,6 +743,9 @@ header {
     &-btn {
         padding: 8px 35px;
     }
+    &-title {
+        font-weight: normal;
+    }
 }
 
 /* Step 7 */
@@ -764,7 +782,7 @@ header {
     &-body {
         padding-bottom: 20px;
     }
-    & .collapsed .czy-icon {
+    & .czy-icon {
         background-image: url(../img/yes.svg);
     }
     & .collapsed .czy-drop {
@@ -775,11 +793,13 @@ header {
         display: inline-block;
         width: 15px;
         height: 15px;
-        background-image: url(../img/no.png);
         background-repeat: no-repeat;
         background-position: center;
         margin-right: 40px;
         margin-top: 1px;
+    }
+    & .red-false .czy-icon {
+        background-image: url(../img/no.png);
     }
     &-btn {
         padding: 26px 0;
@@ -850,7 +870,205 @@ header {
     }
 }
 
-/* Млдальное окно */
+/* My profile */
+
+.profile {
+    &-list {
+        display: flex;
+        margin-top: 30px;
+    }
+    &-item {
+        background-color: #ffffff;
+        box-shadow: 0 2px 20px 3px rgba(0, 32, 96, 0.02);
+        border: solid 2px #f1f5fb;
+        background-color: #ffffff;
+        width: 100%;
+        max-width: 424px;
+        padding: 30px 40px;
+        margin: 12px;
+    }
+    &-name {
+        font-size: 20px;
+        line-height: 1.4;
+        color: #313131;
+        display: block;
+        &_descr {
+            display: block;
+            font-size: 16px;
+            line-height: 1.75;
+            color: #b8bede;
+        }
+    }
+    &-picture {
+        background-image: url(../img/Back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 40px -40px 0 -40px;
+    }
+    &-img {
+        width: 80%;
+    }
+    &-dane {
+        letter-spacing: 0px;
+        color: #06187a;
+        font-size: 16px;
+        border-bottom: 2px solid #f1f5fb;
+        margin: 0 -40px;
+        padding: 0 40px 25px 40px;
+    }
+    &-form {
+        margin-top: 20px;
+    }
+    & label {
+        display: block;
+        font-size: 12px;
+        color: #b8bede;
+        margin: 12px 0;
+        font-weight: normal;
+    }
+    &-field {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 0;
+        border: 0;
+        margin: 5px 0;
+        font-size: 16px;
+        color: #313131;
+        &::placeholder {
+            color: #313131;
+        }
+    }
+    &-gray {
+        font-size: 14px;
+        color: #313131;
+        margin: 32px 0;
+    }
+    &-button {
+        color: #ffffff;
+        background-color: #1154c7;
+        border: 2px solid #1154c7;
+        border-radius: 5px;
+        letter-spacing: 0px;
+        padding: 12px 30px;
+        font-size: 13px;
+        &-gray {
+            margin-top: 5px;
+            box-shadow: 0 2px 17px 2px rgba(220, 220, 220, 0.29);
+            background-color: #dcdcdc;
+            border: 2px solid #dcdcdc;
+            padding: 12px 43px;
+            &:hover,
+            &:focus {
+                color: #dcdcdc!important;
+            }
+        }
+        &:hover,
+        &:focus {
+            color: #1154c7;
+            background-color: transparent;
+        }
+        &-end {
+            margin-top: 25px;
+        }
+    }
+    &-brak {
+        display: block;
+        font-size: 40px;
+        letter-spacing: 0px;
+        margin-top: 36px;
+
+        &_descr {
+            font-size: 12px;
+            color: #b8bede;
+        }
+    }
+    &-zapla {
+        font-size: 14px;
+        color: #06187a;
+        line-height: 1.57;
+    }
+}
+.form-check-label {
+    color: #313131!important;
+    font-size: 14px;
+}
+.profile-field-radio::before {
+    background-color: #000000;
+}
+
+/* Egzamin 2 */
+
+.egzamin {
+    &-body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &-list {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+    }
+    &-item {
+        margin: 10px 25px;
+    }
+    &-title {
+        font-size: 64px;
+    }
+    &-prev {
+        font-size: 12px;
+        color: #b8bede;
+        margin-bottom: 0;
+    }
+    &-number {
+        font-size: 24px;
+        color: #06187a;
+    }
+    &-page2-list {
+        padding-bottom: 0;
+    }
+    &-page2-list .page2-lab {
+        font-size: 16px;
+    }
+    &-page2-list .page2-text {
+        font-size: 18px;
+    }
+    &-dropdown {
+        display: block;
+        width: 10px;
+        height: 9px;
+        background-image: url(../img/dropdown.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        top: 4px;
+    }
+    &-button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-sublist {
+        color: #06187a;
+        padding-left: 35px;
+        padding-right: 15px;
+        margin-left: 0;
+    }
+    &-tag {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    &-drop {
+        position: relative;
+        top: -20px;
+    }
+    &-drop .dropdown-menu {
+        overflow-y: scroll;
+        max-height: 250px;
+    }
+}
+
+/* Модальное окно */
+
 .custom-modal {
     color: #313131;
     text-align: center;
@@ -898,18 +1116,86 @@ header {
     }
 }
 
-/* Закрывашки */
+/* Custom radiobuttons */
 
-.alert {
+.container {
+    display: block;
     position: relative;
-    margin-bottom: 0;
-    border-radius: 0;
-    padding: 0;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px!important;
+    line-height: 1.57;
+    letter-spacing: 0px;
+    color: #313131!important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 21px;
+    height: 21px;
+    background-color: #f7fbff;
+    border-radius: 50%;
+    box-shadow: 0 8px 12px -1px #f7fbff;
+    border: solid 1px #d3e2f1;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+      top: 5.8px;
+      left: 5.8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+
+/* Закрывашки */
+.dropdown-menu {
+    box-shadow: 0 2px 20px 3px rgba(0, 32, 96, 0.07);
+    border: solid 2px #e3ebf7;
+    background-color: #ffffff;
+}
+.dropdown-item {
+    font-size: 14px;
+    text-transform: initial;
+    color: #142794;
 }
 
-.alert-dismissible {
-    padding-right: 0;
-}
-.alert-dismissible {
-    padding-right: 0;
-}
+/* Состояния ответов */
