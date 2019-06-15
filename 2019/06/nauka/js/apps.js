@@ -11,9 +11,3 @@ $('.radio-group .radio').click(function(){
     //alert(val);
     $(this).parent().find('input').val(val);
 });
-
-// Закрытие пунктов на странице
-
-function myClose() {
-    document.getElementsByClassName("spec-item")[0].classList.add("hide");
-}
