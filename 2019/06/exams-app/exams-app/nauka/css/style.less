@@ -864,8 +864,16 @@ footer {
         margin-right: 40px;
         margin-top: 1px;
     }
+    .question-item-red {
+        border: solid 2px hsl(216, 56%, 96%);
+        opacity: 0.3;
+    }
     & .red-false .czy-icon {
         background-image: url(../img/no.svg);
+    }
+    & .red-false .question-item-red {
+        border: solid 2px #d74a25;
+        opacity: 1;
     }
     &-btn {
         padding: 26px 0;
@@ -1119,6 +1127,9 @@ footer {
         padding-right: 15px;
         margin-left: 0;
     }
+    &-link {
+        color: #06187a;
+    }
     &-tag {
         margin-top: 15px;
         margin-bottom: 15px;
@@ -1133,7 +1144,7 @@ footer {
     }
 }
 
-/* Регистраниция */
+/* Регистрация */
 
 .rej {
     margin: 40px 0;
@@ -1185,6 +1196,14 @@ footer {
         margin-bottom: 52px;
         position: relative;
         cursor: pointer;
+        &_link {
+            color: #313131;
+            text-decoration: underline;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
     }
     &-check {
         position: absolute;
@@ -1259,6 +1278,17 @@ footer {
     &-buttons {
         margin: 57px -10px;
     }
+}
+
+/* Статические страницы */
+
+.current {
+    box-shadow: 0 2px 20px 3px rgba(0, 32, 96, 0.02);
+    border: solid 2px #f1f5fb;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    font-family: @Rubik-Reg;
 }
 
 /* Модальное окно */
