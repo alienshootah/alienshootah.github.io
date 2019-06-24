@@ -304,6 +304,7 @@ h2 {
     }
 }
 .world {
+    margin: 200px 0;
     &-name {
         margin-top: 20px;
         font-size: 48px;
@@ -406,6 +407,136 @@ h2 {
         background-position: left center;
         padding-left: 15px;
         margin-left: 5px;
+    }
+}
+.craft {
+    font-size: 32px;
+    font-family: @open-regular;
+    margin: 160px 0;
+    &-body {
+        margin: 60px 0;
+
+        &-reverse .craft-text {
+            order: -1;
+        }
+    }
+    &-picture {
+        position: relative;
+    }
+    &-image {
+        width: 100%;
+        &-shadow {
+            width: 140%;
+            position: absolute;
+            z-index: -100;
+            top: 0;
+            left: 0;
+        }
+    }
+    &-yellow {
+        background-image: url(../img/craft-yellow.png);
+        background-repeat: repeat-x;
+        background-position: bottom left;        
+    }
+    &-more {
+        margin-top: 40px;
+        font-size: 13px;
+        font-family: @open-bold;
+        text-transform: uppercase;
+        &_link {
+            color: #ffdd00;
+            background-image: url(../img/craft-more.png);
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 25px;
+            &:hover,
+            &:focus {
+                color: #000000;
+                background-image: url(../img/craft-more-hover.png);
+            }
+        }
+    }
+}
+.awards {
+    &-list {
+        margin: 60px 0;
+        text-align: center;
+        font-size: 14px;
+        font-family: @open-light;
+        display: flex;
+    }
+    &-item {
+        opacity: 0.32;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 10px 0px rgba(114, 114, 114, 0.063);
+        padding: 40px 50px;
+        width: 33.3333%;
+        position: relative;
+        transition: ease 0.7s;
+        &:hover,
+        &:focus,
+        &.active {
+            opacity: 1;
+            box-shadow: 6px 10.392px 32px 0px rgba(77, 77, 77, 0.063);
+        }
+    }
+    &-name {
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 25px 0;
+    }
+    &-in {
+        background-image: url(../img/awards-in.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 29px;
+        height: 53px;
+        position: absolute;
+        top: 0;
+        right: 23px;
+    }
+    &-pagination {
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_item {
+            margin: 0 10px;
+            padding: 5px 0;
+            border-bottom: 1px solid transparent;
+            &:hover,
+            &:focus,
+            &.active {
+                color: #ffdd00;
+                border-bottom: 1px solid #ffdd00;
+            }
+            &:hover:first-child,
+            &:focus:first-child,
+            &.active:first-child {
+                border-bottom: 1px solid transparent;
+            }
+            &:hover:last-child,
+            &:focus:last-child,
+            &.active:last-child {
+                border-bottom: 1px solid transparent;
+            }
+        }
+        &_arrow {
+            background-image: url(../img/awards-pagination_arrow-left.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 33px;
+            height: 15px;
+            position: relative;
+            top: 3px;
+            &-right {
+                transform: rotate(180deg);
+            }
+            &:hover,
+            &:focus {
+                background-image: url(../img/awards-pagination_arrow-yellow.png);
+            }
+        }
     }
 }
 
