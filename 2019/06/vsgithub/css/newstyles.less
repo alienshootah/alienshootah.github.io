@@ -112,10 +112,6 @@ h2 {
     }
 }
 
-/* Header */
-
-/* Menu */
-
 /* Sections */
 
 .promo {
@@ -124,18 +120,23 @@ h2 {
     background-position: top right;
     background-size: 60%;
     min-height: 746px;
+    margin-top: -120px;
+    padding-top: 120px;
     &-title {
-        margin-top: 20px;
+        margin-top: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        line-height: 1.2;
     }
     &-descr {
         font-size: 14px;
         @open-light: 'OpenSans-Light', Arial, Helvetica, sans-serif;
         width: 100%;
         max-width: 320px;
-        margin-top: 80px;
+        margin-top: 55px;
     }
     &-more {
-        margin-top: 120px;
+        margin-top: 155px;
         margin-bottom: 20px;
         &_link {
             background-color: rgb(255, 221, 0);
@@ -162,7 +163,7 @@ h2 {
         background-repeat: no-repeat;
     }
     &-end {
-        margin-top: 100px;
+        margin-top: 180px;
         &_body {
             margin: 0 -15px;
         }
@@ -179,13 +180,15 @@ h2 {
     display: flex;
     align-items: flex-end;
     &-item {
-        margin: 10px;
+        margin: 5px 10px;
         &:first-child {
             position: relative;
             top: -20px;
         }
     }
     &-awards {
+        justify-content: flex-end;
+        margin-right: 15px;
         .trasted-item {
             &:first-child {
                 position: relative;
@@ -195,14 +198,15 @@ h2 {
     }
 }
 .discover {
-    margin: 0 -15px;
+    margin: 10px -15px;
     text-transform: uppercase;
     font-family: @open-bold;
     font-size: 13px;
     position: relative;
     &-link {
         position: absolute;
-        left: -230px;
+        left: -290px;
+        top: 3px;
         background-image: url(../img/promo-arrow.png);
         background-position: center right;
         background-repeat: no-repeat;
@@ -214,7 +218,7 @@ h2 {
     }
     &-list {
         position: absolute;
-        right: -260px;
+        right: -300px;
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -223,7 +227,7 @@ h2 {
     &-item {
         margin: 0 10px;
         &:first-child {
-            margin-right: 20px;
+            margin-right: 40px;
         }
     }
     &-contact {
@@ -251,9 +255,11 @@ h2 {
     }
 }
 .services {
+    margin-top: 40px;
     &-backtitle {
-        font-size: 168px;
-        font-family: @helvetica-bold;
+        font-size: 210px;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
         opacity: 0.05;
         text-transform: uppercase;
         letter-spacing: -10px;
@@ -267,13 +273,12 @@ h2 {
         border-bottom: 1px solid #f2f2f2;
         display: flex;
         flex-wrap: wrap;
-        margin: 140px 0;
+        margin: 70px 0;
     }
     &-item {
         display: flex;
-        align-items: center;
         width: 50%;
-        padding: 40px;
+        padding: 50px 70px 40px 70px;
         box-sizing: border-box;
         &:nth-child(1),
         &:nth-child(3) {
@@ -289,9 +294,10 @@ h2 {
         font-size: 58px;
         font-family: Arial, Helvetica, sans-serif;
         color: #ffdd00;
-        margin-right: 40px;
+        margin-right: 60px;
     }
     &-title {
+        padding-top: 10px;
         font-weight: bold;
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
@@ -305,21 +311,27 @@ h2 {
     }
 }
 .world {
-    margin: 200px 0;
+    margin: 231px 0;
     &-name {
-        margin-top: 20px;
-        font-size: 48px;
+        margin-top: 25px;
+        font-size: 57px;
         font-family: Arial, Helvetica, sans-serif;
-        font-weight: bold;
+  
     }
 }
 .mapa {
-    background-image: url(../img/world-bg.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    width: 100%;
-    min-height: 580px;
-    position: relative;
+    margin-top: 55px;
+    &-wrapper {
+        margin: 0 auto;
+        background-image: url(../img/world-bg.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        width: 110%;
+        height: 780px;
+        position: relative;
+        left: -25px;
+    }
     &-list {
         font-family: @open-light;
         font-size: 14px;
@@ -328,47 +340,42 @@ h2 {
     &-item {
         position: absolute;
         width: 280px;
+        display: inline-block;
         &:nth-child(1) {
-            top: 0;
+            top: 358px;
             left: 0;
         }
         &:nth-child(2) {
-            top: 100px;
-            left: 100px;
+            top: 385px;
+            right: 235px;
         }
         &:nth-child(3) {
-            top: 150px;
-            left: 150px;
+            top: 240px;
+            right: 375px;
         }
         &:nth-child(4) {
-            top: 250px;
-            left: 250px;
+            top: 495px;
+            right: 125px;
         }
         &:nth-child(5) {
-            top: 100px;
-            right: 100px;
+            top: 305px;
+            right: 470px;
         }
         &:nth-child(6) {
-            top: 100px;
-            right: 150px;
+            top: 255px;
+            left: 480px;
         }
         &:nth-child(7) {
-            top: 150px;
-            right: 100px;
+            top: 185px;
+            left: 475px;
         }
         &:nth-child(8) {
-            top: 50px;
-            right: 250px;
+            top: 220px;
+            right: 460px;
         }
-        &.active .mapa-hidden,
-        &:hover .mapa-hidden,
-        &:focus .mapa-hidden {
-            display: block;
-        }
-        &.active .mapa-btn,
-        &:hover .mapa-btn,
-        &:focus .mapa-btn {
-            background-image: url(../img/mapa-btn-active.png);
+        &:nth-child(9) {
+            top: 205px;
+            right: 425px;
         }
     }
     &-btn {
@@ -379,8 +386,15 @@ h2 {
         background-image: url(../img/mapa-btn.png);
         background-repeat: no-repeat;
         background-position: left center;
+        position: relative;
+        z-index: 1;
         &:hover,
         &:focus {
+            background-image: url(../img/mapa-btn-active.png);
+        }
+        &.active .mapa-btn,
+        &:hover .mapa-btn,
+        &:focus .mapa-btn {
             background-image: url(../img/mapa-btn-active.png);
         }
     }
@@ -388,15 +402,18 @@ h2 {
         display: none;
         position: absolute;
         text-align: left;
-        z-index: 1000;
+        z-index: 9999;
         background-color: rgb(255, 255, 255);
         box-shadow: 9px 15.588px 34px 0px rgba(77, 77, 77, 0.063);
-        padding: 30px 20px;
+        padding: 30px 25px;
+        &.show {
+            display: block;
+        }
     }
     &-title {
         font-family: @helvetica-bold;
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 21px;
+        margin-bottom: 5px;
     }
     &-more {
         margin-bottom: 30px;
@@ -414,18 +431,26 @@ h2 {
     font-size: 32px;
     font-family: @open-regular;
     margin: 160px 0;
+    padding-top: 5px;
     &-body {
-        margin: 60px 0;
-
-        &-reverse .craft-text {
+        margin: 60px 0 110px 0;
+        &-reverse .craft-info {
             order: -1;
+            padding-top: 22px;
+            padding-left: 0px;
         }
+    }
+    &-title {
+        font-weight: 900;
+        font-size: 46px;
+        line-height: 1.2;
     }
     &-picture {
         position: relative;
     }
     &-image {
         width: 100%;
+        /*
         &-shadow {
             width: 140%;
             position: absolute;
@@ -433,6 +458,15 @@ h2 {
             top: 0;
             left: 0;
         }
+        */
+    }
+    &-info {
+        padding-top: 17px;
+        padding-left: 62px;
+    }
+    &-text {
+        line-height: 1.4;
+        margin-top: 10px;
     }
     &-yellow {
         background-image: url(../img/craft-yellow.png);
@@ -440,7 +474,7 @@ h2 {
         background-position: bottom left;        
     }
     &-more {
-        margin-top: 40px;
+        margin-top: 35px;
         font-size: 13px;
         font-family: @open-bold;
         text-transform: uppercase;
@@ -459,13 +493,14 @@ h2 {
     }
 }
 .awards {
+    padding-top: 110px;
     padding-bottom: 60px;
     &-wrapper {
         position: relative;
         padding-bottom: 60px;
     }
     &-list {
-        margin: 60px 0;
+        margin: 55px 0;
         text-align: center;
         font-size: 14px;
         font-family: @open-light;
@@ -488,7 +523,7 @@ h2 {
     &-name {
         font-size: 20px;
         font-family: Arial, Helvetica, sans-serif;
-        margin: 25px 0;
+        margin: 20px 0 25px 0;
     }
     &-image {
         margin: 0 auto;
@@ -554,24 +589,29 @@ h2 {
     }
 }
 .aboutus {
+    margin-top: 50px;
     position: relative;
     &-storm {
         padding: 20px 0;
         position: absolute;
-        top: 0;
+        top: -90px;
+        letter-spacing: -10px;
         right: 0;
         z-index: -100;
-        font-size: 175px;
+        font-size: 215px;
         font-family: @helvetica-bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
         text-transform: uppercase;
         display: flex;
         align-items: center;
         &_image {
             position: relative;
-            top: 5px;
+            top: 20px;
+            right: -30px;
             display: block;
-            width: 123px;
-            height: 143px;
+            width: 163px;
+            height: 183px;
             background-image: url(../img/aboutus-storm_image.png);
             background-repeat: no-repeat;
             background-position: center;
@@ -582,12 +622,15 @@ h2 {
         }
     }
     &-title {
-        margin: 70px 0;
+        margin: 25px 0;
+        font-size: 46px;
+        font-weight: 900;
     }
     &-list {
         font-size: 14px;
         font-family: @open-light;
         display: flex;
+        margin-top: 120px;
     }
     &-item {
         width: 33.3333%;
@@ -615,22 +658,33 @@ h2 {
             font-family: @open-bold;
             color: #ffdd00;
             margin-right: 10px;
+            position: relative;
+            top: -15px;
+            left: 2px;
         }
         &_descr {
             font-size: 16px;
             font-family: @helvetica-bold;
+            position: relative;
+            top: -14px;
+            left: 2px;
+            margin-left: 10px;
         }
+    }
+    &-descr {
+        margin-top: 20px;
+        margin-right: 130px;
     }
 }
 .blog {
-    margin: 100px 0;
+    margin: 215px 0;
     &-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         &_link {
             position: relative;
-            top: 5px;
+            top: 15px;
             font-size: 13px;
             font-family: @open-bold;
             text-transform: uppercase;
@@ -643,6 +697,11 @@ h2 {
                 text-decoration: underline;
             }
         }
+    }
+    &-title {
+        margin-top: 20px;
+        font-size: 48px;
+        font-weight: 900;
     }
     &-list {
         margin: 50px 0;
@@ -660,6 +719,7 @@ h2 {
     }
     &-image {
         width: 100%;
+        height: 225px;
         opacity: 0;
     }
     &-text {
@@ -668,7 +728,7 @@ h2 {
         left: 0;
         width: 100%;
         height: 98%;
-        padding: 20px;
+        padding: 35px 30px 35px 20px;
         box-sizing: border-box;
     }
     &-date {
@@ -680,31 +740,41 @@ h2 {
     }
     &-descr {
         display: block;
-        font-size: 16px;
+        font-size: 17px;
         font-family: @helvetica-bold;
+        padding-top: 5px;
+        line-height: 1.4;
     }
 }
 .talk {
+    padding-top: 40px;
     &-body {
-        background-color: rgb(255, 255, 255);
+        background-color: #ffffff;
         box-shadow: 8px 13.856px 26px 0px rgba(77, 77, 77, 0.063);
-        width: 80%;
-        margin: 50px auto;
-        padding: 30px 40px;
+        width: 78%;
+        margin: 0 auto;
+        padding: 20px 40px 32px 40px;
         display: flex;
         justify-content: center;
         font-family: @open-light;
         font-size: 14px;
     }
+    &-picture {
+        width: 20%;
+        text-align: right;
+    }
     &-image {
         width: 113px;
         height: 193px;
-        margin-right: 60px;
+        margin-right: 50px;
     }
     &-title {
+        position: relative;
+        top: -5px;
         font-size: 25px;
         font-family: Arial, Helvetica, sans-serif;
-        margin-bottom: 10px;
+        margin-bottom: 0;
+        font-weight: 900;
     }
     &-more {
         margin: 35px 0;
@@ -716,12 +786,13 @@ h2 {
 footer {
     position: relative;
     padding: 100px 0;
+    margin-top: 152px;
 }
 .footer {
     &-title {
-        border-bottom: 2px solid #000000;
+        border-bottom: 1px solid #000000;
         position: relative;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
     &-vstorm {
         padding-right: 40px;
@@ -731,7 +802,6 @@ footer {
         left: 0;
     }
     &-logo {
-
         background-image: url(../img/footer-logo.png);
         background-repeat: no-repeat;
         background-position: center;
@@ -747,14 +817,20 @@ footer {
     &-pres {
         font-size: 14px;
         font-family: @open-bold;
-        margin-top: 70px;
+        margin-top: 55px;
+        &_wrap {
+            padding-top: 45px;
+        }
     }
     &-list {
-        margin-top: -15px;
+        margin-top: -10px;
         padding-left: 50px;
+        &-first {
+            margin-left: 50px;
+        }
     }
     &-item {
-        margin: 15px 0;
+        margin: 12px 0;
     }
     &-link {
         &:hover,
@@ -767,8 +843,8 @@ footer {
     }
     &-top {
         position: absolute;
-        right: -140px;
-        top: 220px;
+        right: -235px;
+        top: 225px;
         text-transform: uppercase;
         font-size: 12px;
         font-family: @open-bold;
@@ -784,10 +860,15 @@ footer {
 }
 .contact {
     padding-left: 10px;
+    &-title {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
     &-adress,
     &-link {
         padding: 5px 0;
         display: inline-block;
+        font-size: 14px;
     }
     &-link {
         &:hover,
@@ -797,12 +878,12 @@ footer {
     }
     &-wateu {
         font-size: 13px;
-        margin-top: 15px;
+        margin-top: 5px;
     }
 }
 .social {
     display: flex;
-    margin: 30px -5px;
+    margin: 35px 0 0 -5px;
     &-item {
         margin: 0 5px;
     }
@@ -851,7 +932,7 @@ footer {
     padding-bottom: 20px;
 }
 .awards .slick-slide {
-    height: 340px!important;
+    height: 300px!important;
 }
 .awards .slick-prev,
 .awards .slick-next {
