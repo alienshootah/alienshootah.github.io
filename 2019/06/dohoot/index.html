@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dohoot</title>
+    <link rel="stylesheet/less" href="css/style.less">
 </head>
 <body>
-    <!--
-        <div class="alert alert-success alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Success!</strong> Indicates a successful or positive action.
-        </div>
-    -->
     <div class="container-fluid">
         <header>
             <div class="content">
@@ -28,18 +23,16 @@
                                 <li class="header-item"><a href="#" class="header-link">EduCation</a></li>
                                 <li class="header-item"><a href="#" class="header-link">Entertainment</a></li>
                                 <li class="header-item"><a href="#" class="header-link">Mobility</a></li>
-                                <li class="header-item">
-                                    <form action="/" class="header-form">
-                                    <input type="text" class="search-field">
-                                    <button class="search-btn"></button>
-                                </form>
-                                </li>
                             </ul>
+                            <form action="/" class="header-form">
+                                <input type="text" class="header-field" placeholder="Search here...">
+                                <button class="header-btn"></button>
+                            </form>
                         </nav>
                     </div>
                     <div class="col-2">
                         <button class="header-login">
-                            <span class="header-login_icon"></span>
+                            <span class="header-login_icon"></span> Login
                         </button>
                     </div>
                 </div>
@@ -50,16 +43,16 @@
                 <h2 class="what-title">What are you looking for?</h2>
                 <form action="/" class="what-form">
                     <select class="what-field">
-                        <option value="Dubai"></option>
-                        <option value="Deli"></option>
-                        <option value="Kioto"></option>
+                        <option>Dubai</option>
+                        <option>Deli</option>
+                        <option>Kioto</option>
                     </select>
                     <select class="what-field">
-                        <option value="Education"></option>
-                        <option value="Traveling"></option>
-                        <option value="Working"></option>
+                        <option>Education</option>
+                        <option>Traveling</option>
+                        <option>Working</option>
                     </select>
-                    <input type="text" class="what-field" placeholder="Keyword, name, date, ...">
+                    <input type="text" class="what-field what-field-search" placeholder="Keyword, name, date, ...">
                     <button class="what-btn">Search</button>
                 </form>
             </div>
@@ -70,17 +63,17 @@
                 <div class="row filters">
                     <div class="col-4">
                         <ul class="filters-list">
-                            <li class="filters-item"><a href="#" class="filters-link">Recommended</a></li>
+                            <li class="filters-item"><a href="#" class="filters-link active">Recommended</a></li>
                             <li class="filters-item"><a href="#" class="filters-link">Latest</a></li>
                             <li class="filters-item"><a href="#" class="filters-link">Hightlights</a></li>
                         </ul>
                     </div>
                     <div class="col-4">
                         <form action="/" class="latest-form">
-                        <select class="latest-filed">
-                            <option value="Dubai"></option>
-                            <option value="Deli"></option>
-                            <option value="Kyoto"></option>
+                        <select class="latest-field">
+                            <option value="">Dubai</option>
+                            <option value="">Deli</option>
+                            <option value="">Kyoto</option>
                         </select>
                         <button class="latest-btn">
                             Show map 
@@ -91,11 +84,11 @@
                     <div class="col-4">
                         <ul class="latest-list">
                             <li class="latest-item">Filter:</li>
-                            <li class="latest-item"><a href="#"><span class="filter-icon fliter-icon-one"></span></a></li>
-                            <li class="latest-item"><a href="#"><span class="filter-icon fliter-icon-two"></span></a></li>
-                            <li class="latest-item"><a href="#"><span class="filter-icon fliter-icon-three"></span></a></li>
-                            <li class="latest-item"><a href="#"><span class="filter-icon fliter-icon-four"></span></a></li>
-                            <li class="latest-item"><a href="#"><span class="filter-icon fliter-icon-five"></span></a></li>
+                            <li class="latest-item"><a href="#"><span class="filters-icon filters-icon-one"></span></a></li>
+                            <li class="latest-item"><a href="#"><span class="filters-icon filters-icon-two"></span></a></li>
+                            <li class="latest-item"><a href="#"><span class="filters-icon filters-icon-three"></span></a></li>
+                            <li class="latest-item"><a href="#"><span class="filters-icon filters-icon-four"></span></a></li>
+                            <li class="latest-item"><a href="#"><span class="filters-icon filters-icon-five"></span></a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,7 +105,7 @@
                         <h3 class="result-title">2 bedroom house for rent in Dubai</h3>
                         <span class="result-agensy">Vision agency</span>
                         <div class="result-stars">
-                            <span class="result-stars"></span> (365)
+                            <span class="result-stars-icon"></span> (365)
                         </div>
                         <div class="result-hide">
                             <button class="result-btn">
@@ -130,7 +123,7 @@
                         <h3 class="result-title">Beach party festival 2014</h3>
                         <span class="result-agensy result-agensy-orange">Long bach</span>
                         <div class="result-stars">
-                            <span class="result-stars"></span> (1165)
+                            <span class="result-stars-icon"></span> (1165)
                         </div>
                         <div class="result-hide">
                             <button class="result-btn">
@@ -148,7 +141,209 @@
                         <h3 class="result-title">Aliguam quis pulvinar purus</h3>
                         <span class="result-agensy result-agensy-purple">Bus trans</span>
                         <div class="result-stars">
-                            <span class="result-stars"></span> (365)
+                            <span class="result-stars-icon"></span> (365)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <span class="result-price">$2,990</span>
+                        <img src="img/result-icon1.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">4 bedroom house for rent in Dubai</h3>
+                        <span class="result-agensy">reality Agency</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (165)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item big">
+                        <img src="img/big-image1.jpg" alt="" class="big-image">
+                        <div class="big-title">
+                            <span class="big-icon big-icon-one"></span>
+                            <h3 class="big-title-text">Vision agency</h3>
+                            <div class="big-rating">
+                                <span class="big-rating-image"></span>
+                                <span class="big-rating-num">(365)</span> 
+                            </div>
+                        </div>
+                        <div class="big-info">
+                            <div class="big-info-left">
+                                <img src="img/big-info-image.jpg" alt="" class="big-info-image">
+                            </div>
+                            <div class="big-info-right">
+                                <img src="img/big-info-rating.png" alt="" class="big-info-rating">
+                                <h4 class="big-info-name">Lucy-P</h4>
+                                <p class="big-info-descr">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, 
+                                    quis posuere orci ornare. Duis mattis sagittis fringilla.” 
+                                    <a href="#" class="big-info-more">...read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item big">
+                        <img src="img/big-image2.jpg" alt="" class="big-image">
+                        <div class="big-title">
+                            <span class="big-icon big-icon-one"></span>
+                            <h3 class="big-title-text">Skybox club</h3>
+                            <div class="big-rating">
+                                <span class="big-rating-image"></span>
+                                <span class="big-rating-num">(1365)</span> 
+                            </div>
+                        </div>
+                        <div class="big-info">
+                            <div class="big-info-left">
+                                <img src="img/big-info-image2.jpg" alt="" class="big-info-image">
+                            </div>
+                            <div class="big-info-right">
+                                <img src="img/big-info-rating.png" alt="" class="big-info-rating">
+                                <h4 class="big-info-name">Peter145</h4>
+                                <p class="big-info-descr">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, 
+                                    quis posuere orci ornare. Duis mattis sagittis fringilla.” 
+                                    <a href="#" class="big-info-more">...read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <span class="result-price">$2,990</span>
+                        <img src="img/result-icon1.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">2 bedroom house for rent in Dubai</h3>
+                        <span class="result-agensy">Vision agency</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (365)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <img src="img/result-icon2.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">Beach party festival 2014</h3>
+                        <span class="result-agensy result-agensy-orange">Long bach</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (1165)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <img src="img/result-icon3.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">Aliguam quis pulvinar purus</h3>
+                        <span class="result-agensy result-agensy-purple">Bus trans</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (365)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <span class="result-price">$2,990</span>
+                        <img src="img/result-icon1.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">4 bedroom house for rent in Dubai</h3>
+                        <span class="result-agensy">reality Agency</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (165)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item big">
+                        <img src="img/big-image2.jpg" alt="" class="big-image">
+                        <div class="big-title">
+                            <span class="big-icon big-icon-one"></span>
+                            <h3 class="big-title-text">Skybox club</h3>
+                            <div class="big-rating">
+                                <span class="big-rating-image"></span>
+                                <span class="big-rating-num">(1365)</span> 
+                            </div>
+                        </div>
+                        <div class="big-info">
+                            <div class="big-info-left">
+                                <img src="img/big-info-image2.jpg" alt="" class="big-info-image">
+                            </div>
+                            <div class="big-info-right">
+                                <img src="img/big-info-rating.png" alt="" class="big-info-rating">
+                                <h4 class="big-info-name">Peter145</h4>
+                                <p class="big-info-descr">“Aliquam quis pulvinar purus. Etiam cursus ipsum quis enim faucibus, 
+                                    quis posuere orci ornare. Duis mattis sagittis fringilla.” 
+                                    <a href="#" class="big-info-more">...read more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <span class="result-price">$2,990</span>
+                        <img src="img/result-icon1.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">2 bedroom house for rent in Dubai</h3>
+                        <span class="result-agensy">Vision agency</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (365)
+                        </div>
+                        <div class="result-hide">
+                            <button class="result-btn">
+                                <span class="result-btn_icon"></span>
+                            </button>
+                            <div class="result-wrap">
+                                <span class="result-wrap_stars"></span>
+                                <span class="result-wrap_comments"></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="result-item">
+                        <img src="img/result-icon2.jpg" alt="" class="result-icon">
+                        <span class="result-home"></span>
+                        <h3 class="result-title">Beach party festival 2014</h3>
+                        <span class="result-agensy result-agensy-orange">Long bach</span>
+                        <div class="result-stars">
+                            <span class="result-stars-icon"></span> (1165)
                         </div>
                         <div class="result-hide">
                             <button class="result-btn">
@@ -161,8 +356,99 @@
                         </div>
                     </li>
                 </ul>
+                <div class="result-more">
+                    <a href="#" class="result-more_link">Load more</a>
+                </div>
             </div>
         </section>
+        <section class="chat">
+            <div class="content">
+                <h2 class="chat-title">What can DuHoot offer to you?</h2>
+                <p class="chat-descr">Etiam cursus ipsum quis enim faucibus</p>
+                <ul class="chat-list">
+                    <li class="chat-item">
+                        <span class="chat-icon chat-icon-one"></span>
+                    </li>
+                    <li class="chat-item">
+                        <span class="chat-icon chat-icon-two"></span>
+                    </li>
+                    <li class="chat-item">
+                        <span class="chat-icon chat-icon-three"></span>
+                    </li>
+                    <li class="chat-item">
+                        <span class="chat-icon chat-icon-four"></span>
+                    </li>
+                    <li class="chat-item">
+                        <span class="chat-icon chat-icon-five"></span>
+                    </li>
+                </ul>
+                <div class="reality">
+                    <h3 class="reality-title">Reality</h3>
+                    <div class="row reality-body">
+                        <div class="col-6">
+                            <span class="reality-icon reality-icon-one"></span>
+                            <p class="reality-text">
+                                Cum sociis natoque penatibus et magnis dis parturient montes, 
+                                nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim 
+                                mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.
+                            </p>
+                        </div>
+                        <div class="col-6">
+                            <span class="reality-icon reality-icon-two"></span>
+                            <p class="reality-text">
+                                Cum sociis natoque penatibus et magnis dis parturient montes, 
+                                nascetur ridiculus mus. Morbi gravida tellus in purus pharetra, vel dignissim 
+                                mauris viverra. Maecenas vitae risus est. In hendrerit, massa at.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="content">
+                <div class="subscribe">
+                    <h2 class="subscribe-title">Subscribe to our newslater</h2>
+                    <form action="/" class="subscribe-form">
+                        <input type="mail" class="subscribe-field" placeholder="your@email.com" required>
+                        <button class="subscribe-btn">subscribe</button>
+                    </form>
+                </div>
+                <div class="row footer-body">
+                    <div class="col-4">
+                        <h3 class="footer-title">Ipsum quis</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#" class="footer-link">Aliquam quis</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Pulvinar purus</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Etiam cursus</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Ipsum quis</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Enim faucibus</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="footer-title">Ipsum quis</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#" class="footer-link">Aliquam quis</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Pulvinar purus</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Etiam cursus</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Ipsum quis</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Enim faucibus</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3 class="footer-title">Follow us</h3>
+                        <ul class="social">
+                            <li class="social-item"><a href="#"><span class="social-icon social-icon-one"></span></a></li>
+                            <li class="social-item"><a href="#"><span class="social-icon social-icon-two"></span></a></li>
+                            <li class="social-item"><a href="#"><span class="social-icon social-icon-three"></span></a></li>
+                            <li class="social-item"><a href="#"><span class="social-icon social-icon-four"></span></a></li>
+                        </ul>
+                        <p class="footer-copy">Copyright &copy; All Rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+    <script src="js/less.min.js"></script>
 </body>
 </html>
