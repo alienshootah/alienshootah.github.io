@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=d, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Innosphere</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet/less" href="css/style.less">
+    <link rel="stylesheet/less" href="css/media.less">
+</head>
+<body>
+    <div class="container-fluid">
+        <header style="background-image: url(../img/header-bg.jpg);">
+            <div class="content">
+                <div class="row header-body">
+                    <div class="col-5"></div>
+                    <div class="col-7">
+                        <ul class="header-list">
+                            <li class="header-item">
+                                <span class="header-icon header-icon-one"></span> 
+                                Visit our office
+                                <p class="header-contact">
+                                    2945 Rinehart Road, Sunrise
+                                </p>
+                            </li>
+                            <li class="header-item">
+                                <span class="header-icon header-icon-two"></span> 
+                                Contact us via phone
+                                <p class="header-contact">
+                                    <a href="tel:+442079460041385" 
+                                    class="header-contact_link">+44 20 7946 0041 3685</a>
+                                </p>
+                            </li>
+                            <li class="header-item">
+                                <span class="header-icon header-icon-three"></span> 
+                                Ask us questions
+                                <p class="header-contact">
+                                    <a href="mailto:info@innosphere.com" 
+                                    class="header-contact_link">info@innosphere.com</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav>
+                    <button class="mobile" onclick="myMenu()">Menu</button>
+                    <ul class="menu" id="myTopnav">
+                        <li class="menu-item"><a href="#" class="menu-link">Homepage</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">SEARCH</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link active">RECENT IMAGES</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">ABOUT</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">TESTIMONIALS</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">SPONSORS</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">TEAM</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Contact</a></li>
+                    </ul>
+                    <ul class="social">
+                        <li class="social-item"><a href="#"><span class="social-icon social-icon-one"></span></a></li>
+                        <li class="social-item"><a href="#"><span class="social-icon social-icon-two"></span></a></li>
+                        <li class="social-item"><a href="#"><span class="social-icon social-icon-three"></span></a></li>
+                    </ul>
+                </nav>
+                <div class="beauty">
+                    <div class="beauty-wrap">
+                        <h1 class="beauty-title">
+                            Your beautiful handcrafted stock 
+                            photography marketplace.
+                        </h1>
+                        <p class="beauty-descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi 
+                            venenatis tortor non ipsum condimentum molestie...
+                        </p>
+                    </div>
+                    <div class="beauty-more">
+                        <a href="#" class="beauty-more_link">KNOW MORE</a>
+                    </div>
+                </div>
+                <div class="search">
+                    <button class="search-btn">
+                        <span class="search-btn_icon"></span> 
+                        <span class="search-btn_text">Search all galleries</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section class="categories">
+            <div class="content">
+                <h2 class="hidden">Filter on categories</h2>
+                <form action="/" class="categories-form">
+                    <ul class="categories-list">
+                        <li class="categories-item">
+                            <label class="categories-lbl">
+                                Categories
+                                <select class="categories-field">
+                                    <option>Architecture</option>
+                                    <option>Architecture</option>
+                                    <option>Architecture</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="categories-item">
+                            <label class="categories-lbl">
+                                License Type
+                                <select class="categories-field">
+                                    <option>Creative</option>
+                                    <option>Creative</option>
+                                    <option>Creative</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="categories-item">
+                            <label class="categories-lbl">
+                                Image Size
+                                <select class="categories-field">
+                                    <option>XXXL</option>
+                                    <option>XXXL</option>
+                                    <option>XXXL</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="categories-item">
+                            <label class="categories-lbl">
+                                Color
+                                <span class="categories-apply">
+                                    <input id="color" class="categories-apply-field" placeholder="#f6546a">
+                                    <button class="categories-apply-btn">Apply</button>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="categories-item">
+                            <label for="browse" class="categories-lbl">
+                                Browse
+                                <select id="browse" class="categories-field">
+                                    <option>Most Viewed</option>
+                                    <option>Most Viewed</option>
+                                    <option>Most Viewed</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="categories-item">
+                            <label class="categories-lbl">
+                                Location
+                                <select class="categories-field">
+                                    <option>Worldwide</option>
+                                    <option>Worldwide</option>
+                                    <option>Worldwide</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="categories-item categories-item-adults">
+                            <label class="categories-lbl">
+                                Adult Content
+                            </label>
+                            <div class="categories-adult" id="adult">
+                                <button class="categories-adult-btn">yes</button>
+                                <button class="categories-adult-btn-noactive">no</button>
+                            </div>
+                        </li>
+                        <li class="categories-item categories-item-over">
+                            <label for="Start" class="categories-lbl">
+                                <span class="categories-start">Start searching</span>
+                                <button id="Start" class="categories-btn">START YOUR SEARCH</button>
+                            </label>
+                        </li>
+                    </ul>
+                </form>
+                <div class="categories-wrapper">
+                    <div class="categories-over">
+                        Over 40 Million Stock Photos, Vectors, Videos, and Music Tracks
+                    </div>
+                    <p class="categories-text">
+                        Search for images anywhere using our award-winning iPad®, iPhone®, and Android® apps. 
+                        Functional enough to use alone, beautiful enough to show off to clients.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="recently">
+            <div class="content">
+                <h2 class="recently-title">Recently uploaded</h2>
+                <div class="row recently-wrap">
+                    <div class="col-4">
+                        <div class="recently-item">
+                            <img src="img/recently-image1.jpg" alt="" class="recently-image recently-image-img">
+                            <div class="recently-hide">
+                                <span class="recently-name">OLD MAN FROM INDIA</span>
+                                <i class="recently-author">by Frank Tucker</i>
+                            </div>
+                        </div>
+                        <div class="recently-item">
+                            <img src="img/recently-image2.jpg" alt="" class="recently-image recently-image-img">
+                            <div class="recently-hide">
+                                <span class="recently-name">OLD MAN FROM INDIA</span>
+                                <i class="recently-author">by Frank Tucker</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="recently-item">
+                            <img src="img/recently-image-big.jpg" alt="" class="recently-image recently-image-big">
+                            <div class="recently-hide">
+                                <span class="recently-name">OLD MAN FROM INDIA</span>
+                                <i class="recently-author">by Frank Tucker</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="recently-block">
+                            <div class="recently-block_left">
+                                <img src="img/recently-block_image.jpg" alt="" class="recently-image recently-block_image">
+                                <div class="recently-hide">
+                                    <span class="recently-name">OLD MAN FROM INDIA</span>
+                                    <i class="recently-author">by Frank Tucker</i>
+                                </div>
+                            </div>
+                            <div class="recently-block_right">
+                                <div class="recently-block_item">
+                                    <img src="img/recently-block_img.jpg" alt="" class="recently-image recently-block_img">
+                                    <div class="recently-hide">
+                                        <span class="recently-name">OLD MAN FROM INDIA</span>
+                                        <i class="recently-author">by Frank Tucker</i>
+                                    </div>
+                                </div>
+                                <div class="recently-block_item">
+                                    <img src="img/recently-block_img2.jpg" alt="" class="recently-image recently-block_img">
+                                    <div class="recently-hide">
+                                        <span class="recently-name">OLD MAN FROM INDIA</span>
+                                        <i class="recently-author">by Frank Tucker</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="recently-more">
+                    <button class="recently-more_btn">Load more</button>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <h2 class="about-title">About Stock photography</h2>
+            <div class="about-wrap">
+                <div class="content">
+                    <h3 class="about-wrap_title">What is Stock Photography?</h3>
+                    <p class="about-wrap_text">
+                        Supply of photographs, which are often licensed for specific uses. 
+                        It is used to fulfill the needs of creative assignments instead of hiring a photographer, 
+                        often for a lower cost. Today, stock images can be presented in searchable online databases. 
+                        They can be purchased and delivered online. 
+                    </p>
+                    <div class="about-more">
+                        <a href="#" class="about-more_link">KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hear">
+            <div class="content">
+                <h2 class="hear-title">Hear what our customers are saying</h2>
+                <ul class="hear-list">
+                    <li class="hear-item">
+                        <blockquote class="hear-quote">
+                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula consequat velit eget iaculis. ”
+                        </blockquote>
+                        <div class="hear-author">
+                            <p class="hear-name">Jennifer R. Rhoades, CEO, Bubblesphere</p>
+                            <img src="img/hear-image.jpg" alt="" class="hear-image">
+                        </div>
+                    </li>
+                    <li class="hear-item">
+                        <blockquote class="hear-quote hear-quote-blue">
+                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vehicula consequat velit eget iaculis. ”
+                        </blockquote>
+                        <div class="hear-author">
+                            <p class="hear-name">Matthew J. Sears, Founder of Feedclub</p>
+                            <img src="img/hear-image2.jpg" alt="" class="hear-image">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="sponsors">
+            <div class="content">
+                <h2 class="sponsors-title">Our sponsors</h2>
+                <ul class="multiple-items sponsors-slider">
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image1.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image2.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image3.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image4.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image5.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image1.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image2.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image3.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image4.png" alt="" class="sponsors-image">
+                    </li>
+                    <li class="sponsors-item">
+                        <img src="img/sponsors-image5.png" alt="" class="sponsors-image">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="team">
+            <div class="content">
+                <h2 class="team-title">Meet our team</h2>
+                <ul class="team-list">
+                    <li class="team-item">
+                        <img src="img/team-image1.jpg" alt="" class="team-image">
+                        <b class="team-name">Patricia Wright</b>
+                        <i class="team-prof">Lead Developer</i>
+                        <p class="team-text">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Duis et feugiat mi. Sed lacinia 
+                            euismod convallis. 
+                        </p>
+                        <ul class="soc">
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-one"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-two"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-three"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-four"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="team-item">
+                        <img src="img/team-image2.jpg" alt="" class="team-image">
+                        <b class="team-name">James C. Cotter</b>
+                        <i class="team-prof">CEO</i>
+                        <p class="team-text">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Duis et feugiat mi. Sed lacinia 
+                            euismod convallis. 
+                        </p>
+                        <ul class="soc">
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-one"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-two"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-three"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-four"></span></a></li>
+                        </ul>
+                    </li>
+                    <li class="team-item">
+                        <img src="img/team-image3.jpg" alt="" class="team-image">
+                        <b class="team-name">Sarah Cole</b>
+                        <i class="team-prof">Web Designer</i>
+                        <p class="team-text">
+                            Lorem ipsum dolor sit amet, 
+                            consectetur adipiscing elit. 
+                            Duis et feugiat mi. Sed lacinia 
+                            euismod convallis. 
+                        </p>
+                        <ul class="soc">
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-one"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-two"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-three"></span></a></li>
+                            <li class="soc-item"><a href="#"><span class="soc-icon soc-icon-four"></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="map">
+            <h2 class="hidden">Map and where we are</h2>
+        </section>
+        <section class="links">
+            <div class="content">
+                <h2 class="links-title">Get in touch with us</h2>
+                <div class="row links-body">
+                    <div class="col-8">
+                        <form action="/" class="links-form">
+                            <ul class="links-list">
+                                <li class="links-item">
+                                    <input type="text" class="links-field" placeholder="First name" required>
+                                </li>
+                                <li class="links-item">
+                                    <input type="text" class="links-field" placeholder="Last name" required>
+                                </li>
+                                <li class="links-item">
+                                    <input type="email" class="links-field" placeholder="Email" required>
+                                </li>
+                                <li class="links-item">
+                                    <input type="number" class="links-field" placeholder="Phone number" required>
+                                </li>
+                                <li class="links-item links-item-big">
+                                    <textarea class="links-field" cols="30" rows="5" placeholder="Message"></textarea>
+                                </li>
+                            </ul>
+                            <button class="links-btn">Send message</button>
+                        </form>
+                    </div>
+                    <div class="col-4">
+                        <div class="adress">
+                            <h3 class="adress-title">Our address</h3>
+                            <ul class="adress-list">
+                                <li class="adress-item">
+                                    <div class="adress-left">
+                                        <b class="adress-name">Address:</b>
+                                    </div>
+                                    <div class="adress-right">
+                                        3497 Gateway Road Portland, OR 97217
+                                    </div>
+                                </li>
+                                <li class="adress-item">
+                                    <div class="adress-left">
+                                        <b class="adress-name">Phone:</b>
+                                    </div>
+                                    <div class="adress-right">
+                                        <a href="tel:+2295032899830" class="adress-link">(229) 503-289-9830</a>
+                                    </div>
+                                </li>
+                                <li class="adress-item">
+                                    <div class="adress-left">
+                                        <b class="adress-name">Email:</b>
+                                    </div>
+                                    <div class="adress-right">
+                                        <a href="mailto:+2295032899830" class="adress-link">mail@mobilecom.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <h3 class="adress-title adress-title-about">About us</h3>
+                            <p class="adress-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc gravida dapibus sapien.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="content">
+                <ul class="tweet">
+                    <li class="tweet-item">
+                        <a href="#"><span class="tweet-icon tweet-icon-one"></span></a>
+                    </li>
+                    <li class="tweet-item">
+                        <a href="#"><span class="tweet-icon tweet-icon-two"></span></a>
+                    </li>
+                    <li class="tweet-item">
+                        <a href="#"><span class="tweet-icon tweet-icon-three"></span></a>
+                    </li>
+                    <li class="tweet-item">
+                        <a href="#"><span class="tweet-icon tweet-icon-four"></span></a>
+                    </li>
+                </ul>
+                <p class="footer-copy">
+                    © 2019 Innosphere - All rights reserved - desing made by <a href="https://hr.linkedin.com/in/vidkraljicradulovic/" 
+                    class="footer-copy_link">Vid Kraljić Radulović</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/apps.js"></script>
+    <script src="js/less.min.js"></script>
+</body>
+</html>
