@@ -1,3 +1,13 @@
+/* 
+
+Чтобы скомпилировать scss через gulp, нужно:
+0. Установить node.js, зайти в терминал.
+1. Зайти в папку с проектом
+2. Установить gulp в проект командой:
+
+
+*/
+
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
