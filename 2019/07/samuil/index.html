@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Samuil</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,53 +20,62 @@
                             <button class="search-btn"></button>
                         </form>
                     </div>
-                    <div class="col-4">
+                    <div class="col-4 text-center">
+                        <h1 class="hidden">Samuil e-commerce magazine</h1>
                         <a href="#" class="header-logo"></a>
                     </div>
                     <div class="col-4">
-                        <div class="account">
-                            <button class="account-btn">Account</button>
-                            <ul class="account-list">
-                                <li class="account-item">
-                                    <a href="#" class="account-link">Login</a>
-                                </li>
-                                <li class="account-item">
-                                    <a href="#" class="account-link">Logout</a>
-                                </li>
-                                <li class="account-item">
-                                    <a href="#" class="account-link">Profile</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="lang">
-                            <button class="lang-btn">
-                                <span class="lang-icon lang-icon-eng"></span>
-                            </button>
-                            <ul class="lang-list">
-                                <li class="lang-item">
-                                    <a href="#"><span class="lang-icon lang-icon-eng"></span></a>
-                                </li>
-                                <li class="lang-item">
-                                    <a href="#"><span class="lang-icon lang-icon-eng"></span></a>
-                                </li>
-                                <li class="lang-item">
-                                    <a href="#"><span class="lang-icon lang-icon-eng"></span></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="bag">
-                            <button class="bag-btn">My bag</button>
-                            <ul class="bag-list">
-                                <li class="bag-item">
-                                    <a href="#" class="bag-link">Add item +</a>
-                                </li>
-                                <li class="bag-item">
-                                    <a href="#" class="bag-link">Items (3)</a>
-                                </li>
-                                <li class="bag-item">
-                                    <a href="#" class="bag-link">Clear bag</a>
-                                </li>
-                            </ul>
+                        <div class="header-rights">
+                            <div class="account">
+                                <button class="dropbtn account-btn" onclick="myDrop1()">Account</button>
+                                <div class="dropdown-content" id="myDrop1">
+                                    <ul class="account-list">
+                                        <li class="account-item">
+                                            <a href="#" class="account-link">Login</a>
+                                        </li>
+                                        <li class="account-item">
+                                            <a href="#" class="account-link">Logout</a>
+                                        </li>
+                                        <li class="account-item">
+                                            <a href="#" class="account-link">Profile</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="lang">
+                                <button class="dropbtn lang-btn" onclick="myDrop2()">
+                                    <span class="lang-icon lang-icon-eng"></span>
+                                </button>
+                                <div class="dropdown-content" id="myDrop2">
+                                    <ul class="lang-list">
+                                        <li class="lang-item">
+                                            <a href="#"><span class="lang-icon lang-icon-eng"></span></a>
+                                        </li>
+                                        <li class="lang-item">
+                                            <a href="#"><span class="lang-icon lang-icon-eng"></span></a>
+                                        </li>
+                                        <li class="lang-item">
+                                            <a href="#"><span class="lang-icon lang-icon-eng"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bag">
+                                <button class="dropbtn bag-btn" onclick="myDrop3()">My bag</button>
+                                <div class="dropdown-content" id="myDrop3">
+                                    <ul class="bag-list">
+                                        <li class="bag-item">
+                                            <a href="#" class="bag-link">Add item +</a>
+                                        </li>
+                                        <li class="bag-item">
+                                            <a href="#" class="bag-link">Items (3)</a>
+                                        </li>
+                                        <li class="bag-item">
+                                            <a href="#" class="bag-link">Clear bag</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,15 +107,107 @@
                                 <span class="pre-descr">Pre Fall</span>
                                 <div class="pre-title">FAVORITES</div>
                                 <p class="pre-info">
-                                    leek Booties, pumps, and more frome brands like nine west.
+                                    Seek Booties, pumps, and more frome brands like nine west.
                                     Biggest collection ever then you expected.
                                 </p>
                                 <div class="pre-more">
                                     <a href="#" class="pre-more_link">Shop Now</a>
                                 </div>
                             </div>
-                            <div class="pre-image">
-                                <img src="img/pre-image.jpg" alt="" class="pre-image">
+                            <div class="pre-picture">
+                                <img src="img/pre-image.png" alt="" class="pre-image">
+                            </div>
+                        </div>
+                        <div class="pre-detail">
+                            <div class="pre-detail_item">SALE ON - <span class="pre-detail_gray">50% OFF</span></div>
+                            <div class="pre-detail_item">FREE UK DELIVERY <span class="pre-detail_gray">ON ORDERS OVER $250</span></div>
+                            <div class="pre-detail_item">FREE UK RETURNS</div>
+                        </div>
+                    </li>
+                    <li class="pre-item">
+                        <div class="pre-body">
+                            <div class="pre-text">
+                                <span class="pre-descr">Pre Fall</span>
+                                <div class="pre-title">FAVORITES</div>
+                                <p class="pre-info">
+                                    Seek Booties, pumps, and more frome brands like nine west.
+                                    Biggest collection ever then you expected.
+                                </p>
+                                <div class="pre-more">
+                                    <a href="#" class="pre-more_link">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="pre-picture">
+                                <img src="img/pre-image.png" alt="" class="pre-image">
+                            </div>
+                        </div>
+                        <div class="pre-detail">
+                            <div class="pre-detail_item">SALE ON - <span class="pre-detail_gray">50% OFF</span></div>
+                            <div class="pre-detail_item">FREE UK DELIVERY <span class="pre-detail_gray">ON ORDERS OVER $250</span></div>
+                            <div class="pre-detail_item">FREE UK RETURNS</div>
+                        </div>
+                    </li>
+                    <li class="pre-item">
+                        <div class="pre-body">
+                            <div class="pre-text">
+                                <span class="pre-descr">Pre Fall</span>
+                                <div class="pre-title">FAVORITES</div>
+                                <p class="pre-info">
+                                    Seek Booties, pumps, and more frome brands like nine west.
+                                    Biggest collection ever then you expected.
+                                </p>
+                                <div class="pre-more">
+                                    <a href="#" class="pre-more_link">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="pre-picture">
+                                <img src="img/pre-image.png" alt="" class="pre-image">
+                            </div>
+                        </div>
+                        <div class="pre-detail">
+                            <div class="pre-detail_item">SALE ON - <span class="pre-detail_gray">50% OFF</span></div>
+                            <div class="pre-detail_item">FREE UK DELIVERY <span class="pre-detail_gray">ON ORDERS OVER $250</span></div>
+                            <div class="pre-detail_item">FREE UK RETURNS</div>
+                        </div>
+                    </li>
+                    <li class="pre-item">
+                        <div class="pre-body">
+                            <div class="pre-text">
+                                <span class="pre-descr">Pre Fall</span>
+                                <div class="pre-title">FAVORITES</div>
+                                <p class="pre-info">
+                                    Seek Booties, pumps, and more frome brands like nine west.
+                                    Biggest collection ever then you expected.
+                                </p>
+                                <div class="pre-more">
+                                    <a href="#" class="pre-more_link">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="pre-picture">
+                                <img src="img/pre-image.png" alt="" class="pre-image">
+                            </div>
+                        </div>
+                        <div class="pre-detail">
+                            <div class="pre-detail_item">SALE ON - <span class="pre-detail_gray">50% OFF</span></div>
+                            <div class="pre-detail_item">FREE UK DELIVERY <span class="pre-detail_gray">ON ORDERS OVER $250</span></div>
+                            <div class="pre-detail_item">FREE UK RETURNS</div>
+                        </div>
+                    </li>
+                    <li class="pre-item">
+                        <div class="pre-body">
+                            <div class="pre-text">
+                                <span class="pre-descr">Pre Fall</span>
+                                <div class="pre-title">FAVORITES</div>
+                                <p class="pre-info">
+                                    Seek Booties, pumps, and more frome brands like nine west.
+                                    Biggest collection ever then you expected.
+                                </p>
+                                <div class="pre-more">
+                                    <a href="#" class="pre-more_link">Shop Now</a>
+                                </div>
+                            </div>
+                            <div class="pre-picture">
+                                <img src="img/pre-image.png" alt="" class="pre-image">
                             </div>
                         </div>
                         <div class="pre-detail">
@@ -121,21 +224,107 @@
                 <h2 class="hidden">Feature products</h2>
                 <ul class="feature-slider">
                     <li class="feature-item">
-                        <div class="feature-picture">
-                            <img src="img/feature-image1.jpg" alt="" class="feature-image">
+                        <div class="feature-body">
+                            <div class="feature-picture">
+                                <img src="img/feature-image1.jpg" alt="" class="feature-image">
+                            </div>
+                            <div class="feature-text">
+                                <div class="feature-price">$64</div>
+                                <h3 class="feature-title">Classic - Tortoiseshell</h3>
+                                <p class="feature-descr">
+                                    Our first frame style ‘The classic’ is available in a standard 
+                                    unisex fit, in a new Tortoiseshell finish.It’s made from a durable, 
+                                    adventure-proof acetate and features a strong 5-tooth thing
+                                    And also avialable in 3 colors with same style
+                                    Isn’t it awesome!
+                                </p>
+                                <div class="feature-more">
+                                    <a href="#" class="feature-more_link">Buy Now</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="feature-text">
-                            <div class="feature-price">$64</div>
-                            <h3 class="feature-title">Classic - Tortoiseshell</h3>
-                            <p class="feature-descr">
-                                Our first frame style ‘The classic’ is available in a standard 
-                                unisex fit, in a new Tortoiseshell finish.It’s made from a durable, 
-                                adventure-proof acetate and features a strong 5-tooth thing
-                                And also avialable in 3 colors with same style
-                                Isn’t it awesome!
-                            </p>
-                            <div class="feature-more">
-                                <a href="#" class="feature-more_link">Buy Now</a>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-body">
+                            <div class="feature-picture">
+                                <img src="img/feature-image1.jpg" alt="" class="feature-image">
+                            </div>
+                            <div class="feature-text">
+                                <div class="feature-price">$64</div>
+                                <h3 class="feature-title">Classic - Tortoiseshell</h3>
+                                <p class="feature-descr">
+                                    Our first frame style ‘The classic’ is available in a standard 
+                                    unisex fit, in a new Tortoiseshell finish.It’s made from a durable, 
+                                    adventure-proof acetate and features a strong 5-tooth thing
+                                    And also avialable in 3 colors with same style
+                                    Isn’t it awesome!
+                                </p>
+                                <div class="feature-more">
+                                    <a href="#" class="feature-more_link">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-body">
+                            <div class="feature-picture">
+                                <img src="img/feature-image1.jpg" alt="" class="feature-image">
+                            </div>
+                            <div class="feature-text">
+                                <div class="feature-price">$64</div>
+                                <h3 class="feature-title">Classic - Tortoiseshell</h3>
+                                <p class="feature-descr">
+                                    Our first frame style ‘The classic’ is available in a standard 
+                                    unisex fit, in a new Tortoiseshell finish.It’s made from a durable, 
+                                    adventure-proof acetate and features a strong 5-tooth thing
+                                    And also avialable in 3 colors with same style
+                                    Isn’t it awesome!
+                                </p>
+                                <div class="feature-more">
+                                    <a href="#" class="feature-more_link">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-body">
+                            <div class="feature-picture">
+                                <img src="img/feature-image1.jpg" alt="" class="feature-image">
+                            </div>
+                            <div class="feature-text">
+                                <div class="feature-price">$64</div>
+                                <h3 class="feature-title">Classic - Tortoiseshell</h3>
+                                <p class="feature-descr">
+                                    Our first frame style ‘The classic’ is available in a standard 
+                                    unisex fit, in a new Tortoiseshell finish.It’s made from a durable, 
+                                    adventure-proof acetate and features a strong 5-tooth thing
+                                    And also avialable in 3 colors with same style
+                                    Isn’t it awesome!
+                                </p>
+                                <div class="feature-more">
+                                    <a href="#" class="feature-more_link">Buy Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <div class="feature-body">
+                            <div class="feature-picture">
+                                <img src="img/feature-image1.jpg" alt="" class="feature-image">
+                            </div>
+                            <div class="feature-text">
+                                <div class="feature-price">$64</div>
+                                <h3 class="feature-title">Classic - Tortoiseshell</h3>
+                                <p class="feature-descr">
+                                    Our first frame style ‘The classic’ is available in a standard 
+                                    unisex fit, in a new Tortoiseshell finish.It’s made from a durable, 
+                                    adventure-proof acetate and features a strong 5-tooth thing
+                                    And also avialable in 3 colors with same style
+                                    Isn’t it awesome!
+                                </p>
+                                <div class="feature-more">
+                                    <a href="#" class="feature-more_link">Buy Now</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -150,9 +339,11 @@
                         <a href="#" class="offer-link">
                             <div class="offer-item">
                                 <img src="img/offer-image1.jpg" alt="" class="offer-image">
-                                <h3 class="offer-title">NEW STYLE FOR THIS SEASON</h3>
-                                <p class="offer-descr">DONEC AT MATTIS PURUS ACCUMSAN</p>
-                                <span class="offer-now">WATCH NOW >></span>
+                                <div class="offer-text">
+                                    <h3 class="offer-title">NEW STYLE FOR THIS SEASON</h3>
+                                    <p class="offer-descr">DONEC AT MATTIS PURUS ACCUMSAN</p>
+                                    <span class="offer-now">WATCH NOW >></span>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -160,9 +351,11 @@
                         <a href="#" class="offer-link">
                             <div class="offer-item">
                                 <img src="img/offer-image2.jpg" alt="" class="offer-image">
-                                <h3 class="offer-title">JEWELRY</h3>
-                                <p class="offer-descr">COLLECTION FOR WOMEN</p>
-                                <span class="offer-now">WATCH NOW >></span>
+                                <div class="offer-text">
+                                    <h3 class="offer-title">JEWELRY</h3>
+                                    <p class="offer-descr">COLLECTION FOR WOMEN</p>
+                                    <span class="offer-now">WATCH NOW >></span>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -176,7 +369,7 @@
                 <ul class="products-list">
                     <li class="products-item">
                         <div class="tags">
-                            <h3 class="tags-title">Tags</h3>
+                            <h3 class="tags-title">Tags <span class="tags-icon"></span></h3>
                             <ul class="tags-list">
                                 <li class="tags-item"><a href="#" class="tags-link">Popular</a></li>
                                 <li class="tags-item"><a href="#" class="tags-link">Sales</a></li>
@@ -187,125 +380,137 @@
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image1.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item active">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image2.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image3.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-top">Top<br>Selling</span>
-                        <span class="products-plus"></span>
+                        <div class="products-hot">
+                            <span class="products-top">Top<br>Selling</span>
+                            <span class="products-plus"></span>
+                        </div>
                         <img src="img/products-image4.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image5.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-top">Top<br>Selling</span>
-                        <span class="products-plus"></span>
+                        <div class="products-hot">
+                            <span class="products-top">Top<br>Selling</span>
+                            <span class="products-plus"></span>
+                        </div>
                         <img src="img/products-image6.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-top">Top<br>Selling</span>
-                        <span class="products-plus"></span>
+                        <div class="products-hot">
+                            <span class="products-top">Top<br>Selling</span>
+                            <span class="products-plus"></span>
+                        </div>
                         <img src="img/products-image7.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image8.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image9.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image10.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-top">Top<br>Selling</span>
-                        <span class="products-plus"></span>
+                        <div class="products-hot">
+                            <span class="products-top">Top<br>Selling</span>
+                            <span class="products-plus"></span>
+                        </div>
                         <img src="img/products-image11.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image12.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-top">Top<br>Selling</span>
-                        <span class="products-plus"></span>
+                        <div class="products-hot">
+                            <span class="products-top">Top<br>Selling</span>
+                            <span class="products-plus"></span>
+                        </div>
                         <img src="img/products-image13.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image14.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image15.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-top">Top<br>Selling</span>
-                        <span class="products-plus"></span>
+                        <div class="products-hot">
+                            <span class="products-top">Top<br>Selling</span>
+                            <span class="products-plus"></span>
+                        </div>
                         <img src="img/products-image16.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
                     </li>
                     <li class="products-item">
                         <button class="products-btn">Add to Cart</button>
-                        <span class="products-plus"></span>
+                        <div class="products-hot"></div>
                         <img src="img/products-image17.jpg" alt="" class="products-image">
                         <h3 class="products-name">The Name Product</h3>
                         <span class="products-price">$220.00</span>
@@ -318,99 +523,136 @@
         </section>
         <section class="hot">
             <div class="content">
-                <h2 class="hot-title">Hot products</h2>
-                <ul class="hot-slider">
-                    <li class="hot-item">
-                        <a href="#"><img src="img/hot-image1.jpg" alt="" class="hot-image"></a>
-                        <h3 class="hot-descr">Girls Hi hell</h3>
-                        <span class="hot-code">z58ccr</span>
-                    </li>
-                    <li class="hot-item">
-                        <a href="#"><img src="img/hot-image2.jpg" alt="" class="hot-image"></a>
-                        <h3 class="hot-descr">Smart watch</h3>
-                        <span class="hot-code">z58ccr</span>
-                    </li>
-                    <li class="hot-item">
-                        <a href="#"><img src="img/hot-image3.jpg" alt="" class="hot-image"></a>
-                        <h3 class="hot-descr">Girls XX glass</h3>
-                        <span class="hot-code">z58ccr</span>
-                    </li>
-                    <li class="hot-item">
-                        <a href="#"><img src="img/hot-image4.jpg" alt="" class="hot-image"></a>
-                        <h3 class="hot-descr">The lader belt</h3>
-                        <span class="hot-code">z58ccr</span>
-                    </li>
-                    <li class="hot-item">
-                        <a href="#"><img src="img/hot-image5.jpg" alt="" class="hot-image"></a>
-                        <h3 class="hot-descr">Smart hand bag</h3>
-                        <span class="hot-code">z58ccr</span>
-                    </li>
-                </ul>
+                <div class="hot-body">
+                    <h2 class="hot-title">Hot products</h2>
+                    <ul class="hot-slider">
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image1.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Girls Hi hell</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image2.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Smart watch</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image3.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Girls XX glass</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image4.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">The lader belt</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image5.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Smart hand bag</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image1.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Girls Hi hell</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image2.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Smart watch</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image3.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Girls XX glass</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image4.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">The lader belt</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                        <li class="hot-item">
+                            <a href="#"><img src="img/hot-image5.jpg" alt="" class="hot-image"></a>
+                            <h3 class="hot-descr">Smart hand bag</h3>
+                            <span class="hot-code">z58ccr</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="trade">
             <div class="content">
-                <h2 class="trade-title">Trade Services</h2>
-                <ul class="trade-list">
-                    <li class="trade-item">
-                        <a href="#" class="trade-name">
-                            <span class="trade-icon trade-icon-one"></span> 
-                            Business Identity
-                        </a>
-                        <p class="trade-get">Get Verified, Build Trust</p>
-                        <p class="trade-text">
-                            Display your verified status
-                            faster responses from supplies when verify
-                        </p>
-                    </li>
-                    <li class="trade-item">
-                        <a href="#" class="trade-name">
-                            <span class="trade-icon trade-icon-two"></span> 
-                            Trade Assurance
-                        </a>
-                        <p class="trade-get">Get Verified, Build Trust</p>
-                        <p class="trade-text">
-                            Display your verified status
-                            faster responses from supplies when verify
-                        </p>
-                    </li>
-                    <li class="trade-item">
-                        <a href="#" class="trade-name">
-                            <span class="trade-icon trade-icon-three"></span> 
-                            E-credit Line
-                        </a>
-                        <p class="trade-get">Get Verified, Build Trust</p>
-                        <p class="trade-text">
-                            Display your verified status
-                            faster responses from supplies when verify
-                        </p>
-                    </li>
-                    <li class="trade-item">
-                        <a href="#" class="trade-name">
-                            <span class="trade-icon trade-icon-four"></span> 
-                            Inspection Service
-                        </a>
-                        <p class="trade-get">Get Verified, Build Trust</p>
-                        <p class="trade-text">
-                            Display your verified status
-                            faster responses from supplies when verify
-                        </p>
-                    </li>
-                </ul>
+                <div class="trade-body">
+                    <h2 class="trade-title">Trade Services</h2>
+                    <ul class="trade-list">
+                        <li class="trade-item">
+                            <a href="#" class="trade-name">
+                                <span class="trade-icon trade-icon-one"></span> 
+                                Business Identity
+                            </a>
+                            <p class="trade-get">Get Verified, Build Trust</p>
+                            <p class="trade-text">
+                                Display your verified status
+                                faster responses from supplies when verify
+                            </p>
+                        </li>
+                        <li class="trade-item">
+                            <a href="#" class="trade-name">
+                                <span class="trade-icon trade-icon-two"></span> 
+                                Trade Assurance
+                            </a>
+                            <p class="trade-get">Get Verified, Build Trust</p>
+                            <p class="trade-text">
+                                Display your verified status
+                                faster responses from supplies when verify
+                            </p>
+                        </li>
+                        <li class="trade-item">
+                            <a href="#" class="trade-name">
+                                <span class="trade-icon trade-icon-three"></span> 
+                                E-credit Line
+                            </a>
+                            <p class="trade-get">Get Verified, Build Trust</p>
+                            <p class="trade-text">
+                                Display your verified status
+                                faster responses from supplies when verify
+                            </p>
+                        </li>
+                        <li class="trade-item">
+                            <a href="#" class="trade-name">
+                                <span class="trade-icon trade-icon-four"></span> 
+                                Inspection Service
+                            </a>
+                            <p class="trade-get">Get Verified, Build Trust</p>
+                            <p class="trade-text">
+                                Display your verified status
+                                faster responses from supplies when verify
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section class="brands">
             <div class="content">
                 <h2 class="hidden">Our brands</h2>
                 <ul class="brands-list">
-                    <li class="brands-item"><img src="brands-image1.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image2.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image3.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image4.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image5.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image6.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image7.png" alt="" class="brands-image"></li>
-                    <li class="brands-item"><img src="brands-image8.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image1.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image2.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image3.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image4.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image5.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image6.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image7.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image8.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image1.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image2.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image3.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image4.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image5.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image6.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image7.png" alt="" class="brands-image"></li>
+                    <li class="brands-item"><img src="img/brands-image8.png" alt="" class="brands-image"></li>
                 </ul>
             </div>
         </section>
@@ -432,7 +674,7 @@
                     <div class="col-5">
                         <h3 class="footer-title">MAILING LIST</h3>
                         <form action="/" class="footer-form">
-                            <input type="text" class="footer-form" placeholder="Enter your name">
+                            <input type="text" class="footer-field" placeholder="Enter your name">
                             <button class="footer-btn">Sign up for discount</button>
                         </form>
                     </div>
@@ -440,5 +682,8 @@
             </div>
         </footer>
     </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
