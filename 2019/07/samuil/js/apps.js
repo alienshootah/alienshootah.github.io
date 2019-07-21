@@ -1,3 +1,12 @@
+// Responsive menu
+function myMenu() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "menu-wrapper") {
+      x.className += " responsive";
+    } else {
+      x.className = "menu-wrapper";
+    }
+  }
 
 // Dropdowns
 /* When the user clicks on the button, 
@@ -46,12 +55,62 @@ $('.hot-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 3,
     dots: false,
-    arrows: true
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+            slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 990,
+            settings: {
+            slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 425,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            }
+        }
+    ]
 });
 $('.brands-list').slick({
     infinite: true,
     slidesToShow: 6,
     slidesToScroll: 3,
     dots: false,
-    arrows: true
+    arrows: true,
+    responsive: [
+        {
+            breakpoint: 990,
+            settings: {
+            slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 375,
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            }
+        }
+    ]
 });
