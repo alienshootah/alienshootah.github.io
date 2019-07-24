@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Kaporshop</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -12,29 +16,31 @@
             <div class="content">
                 <div class="row header-body">
                     <div class="col-4">
-                        <a href="#" class="header-logo"></a>
+                        <a href="#" class="header-logo">KaporShop</a>
                         <h1 class="hidden">Online store Kaporshop</h1>
                     </div>
                     <div class="col-4">
-                        <form action="/" class="header-search">
+                        <form action="/" class="header-form">
                             <input type="text" class="header-field" placeholder="Search here...">
                             <button class="header-btn"></button>
                         </form>
                     </div>
                     <div class="col-4">
-                        <div class="bucket">
-                            <button class="bucket-btn">3</button>
-                            <span class="bucket-icon"></span>
-                        </div>
-                        <div class="account">
-                            <button class="account-btn">My Account</button>
-                        </div>
-                        <div class="dropdown-content">
-                            <ul class="account-list">
-                                <li class="account-item"><a href="#" class="account-link">Messages (2)</a></li>
-                                <li class="account-item"><a href="#" class="account-link">Profile</a></li>
-                                <li class="account-item"><a href="#" class="account-link">Logout</a></li>
-                            </ul>
+                        <div class="header-right">
+                            <div class="bucket">
+                                <button class="bucket-btn">3</button>
+                                <span class="bucket-icon"></span>
+                            </div>
+                            <div class="account">
+                                <button class="account-btn" onclick="myDrop()">My Account</button>
+                                <div class="dropdown-content" id="myDrop">
+                                    <ul class="account-list">
+                                        <li class="account-item"><a href="#" class="account-link">Messages (2)</a></li>
+                                        <li class="account-item"><a href="#" class="account-link">Profile</a></li>
+                                        <li class="account-item"><a href="#" class="account-link">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,14 +48,17 @@
         </header>
         <nav>
             <div class="content">
-                <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">HOME</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">CATALOG</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">ABOUT</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">DOCUMENTATION</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">BLOG </a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">CONTACTS</a></li>
-                </ul>
+                <button class="menu-button" onclick="myMenu()">Menu</button>
+                <div class="menu-mobile" id="myTopnav">
+                    <ul class="menu">
+                        <li class="menu-item"><a href="#" class="menu-link">HOME</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">CATALOG</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">ABOUT</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">DOCUMENTATION</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">BLOG </a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">CONTACTS</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <section class="pre">
@@ -66,7 +75,35 @@
                                 </div>
                             </div>
                             <div class="pre-picture">
-                                <img src="img/pre-image.png" alt="" class="pre-image">
+                                <img src="img/pre-image.jpg" alt="" class="pre-image">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pre-item">
+                        <div class="pre-body">
+                            <div class="pre-text">
+                                <span class="pre-descr">The latest gear from</span>
+                                <div class="pre-title">Our Online Store</div>
+                                <div class="pre-more">
+                                    <a href="#" class="pre-more_link">View Collection</a>
+                                </div>
+                            </div>
+                            <div class="pre-picture">
+                                <img src="img/pre-image.jpg" alt="" class="pre-image">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pre-item">
+                        <div class="pre-body">
+                            <div class="pre-text">
+                                <span class="pre-descr">The latest gear from</span>
+                                <div class="pre-title">Our Online Store</div>
+                                <div class="pre-more">
+                                    <a href="#" class="pre-more_link">View Collection</a>
+                                </div>
+                            </div>
+                            <div class="pre-picture">
+                                <img src="img/pre-image.jpg" alt="" class="pre-image">
                             </div>
                         </div>
                     </li>
@@ -89,7 +126,7 @@
                                 <span class="featured-view">View Product</span>
                             </div>
                             <div class="featured-picture">
-                                <a href="#"><img src="img/featured-image1.png" alt="" class="featured-image"></a>
+                                <a href="#"><img src="img/featured-image1.jpg" alt="" class="featured-image"></a>
                             </div>
                         </div>
                         <div class="featured-item featured-item-long">
@@ -98,7 +135,7 @@
                                 <span class="featured-view">View Product</span>
                             </div>
                             <div class="featured-picture">
-                                <a href="#"><img src="img/featured-image2.png" alt="" class="featured-image"></a>
+                                <a href="#"><img src="img/featured-image2.jpg" alt="" class="featured-image"></a>
                             </div>
                         </div>
                     </div>
@@ -109,7 +146,7 @@
                                 <span class="featured-view">View Product</span>
                             </div>
                             <div class="featured-picture">
-                                <a href="#"><img src="img/featured-image3.png" alt="" class="featured-image"></a>
+                                <a href="#"><img src="img/featured-image3.jpg" alt="" class="featured-image"></a>
                             </div>
                         </div>
                         <div class="featured-item">
@@ -118,7 +155,7 @@
                                 <span class="featured-view">View Product</span>
                             </div>
                             <div class="featured-picture">
-                                <a href="#"><img src="img/featured-image4.png" alt="" class="featured-image"></a>
+                                <a href="#"><img src="img/featured-image4.jpg" alt="" class="featured-image"></a>
                             </div>
                         </div>
                     </div>
@@ -127,13 +164,137 @@
         </section>
         <section class="popular">
             <div class="content">
-                <h2 class="popular-title"></h2>
-                <p class="featured-descr"></p>
+                <h2 class="popular-ttl">POPULAR PRODUCTS</h2>
+                <ul class="popular-list">
+                    <li class="popular-item">
+                        <a href="#"><img src="img/popular-image1.jpg" alt="" class="popular-image"></a>
+                        <h3 class="popular-name">Product Name Here</h3>
+                        <span class="popular-price">$140.00</span>
+                    </li>
+                    <li class="popular-item">
+                        <a href="#"><img src="img/popular-image2.jpg" alt="" class="popular-image"></a>
+                        <h3 class="popular-name">Product Name Here</h3>
+                        <span class="popular-price">$140.00</span>
+                    </li>
+                    <li class="popular-item">
+                        <a href="#"><img src="img/popular-image3.jpg" alt="" class="popular-image"></a>
+                        <h3 class="popular-name">Product Name Here</h3>
+                        <span class="popular-price">$140.00</span>
+                    </li>
+                    <li class="popular-item">
+                        <a href="#"><img src="img/popular-image4.jpg" alt="" class="popular-image"></a>
+                        <h3 class="popular-name">Product Name Here</h3>
+                        <span class="popular-price">$140.00</span>
+                    </li>
+                </ul>
+                <div class="popular-more">
+                    <button class="popular-more_btn">VIEW ALL PRODUCTS</button>
+                </div>
             </div>
         </section>
+        <section class="blog">
+            <div class="content">
+                <h2 class="blog-title">UPDATED NEW FROM THE BLOG</h2>
+                <ul class="blog-list">
+                    <li class="blog-item">
+                        <a href="#"><img src="img/blog-image1.jpg" alt="" class="blog-image"></a>
+                        <h3 class="blog-name">POST NAME HERE</h3>
+                        <span class="blog-date">post date here</span>
+                        <p class="blog-text">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </li>
+                    <li class="blog-item">
+                        <a href="#"><img src="img/blog-image2.jpg" alt="" class="blog-image"></a>
+                        <h3 class="blog-name">POST NAME HERE</h3>
+                        <span class="blog-date">post date here</span>
+                        <p class="blog-text">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </li>
+                    <li class="blog-item">
+                        <a href="#"><img src="img/blog-image3.jpg" alt="" class="blog-image"></a>
+                        <h3 class="blog-name">POST NAME HERE</h3>
+                        <span class="blog-date">post date here</span>
+                        <p class="blog-text">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </li>
+                    <li class="blog-item">
+                        <a href="#"><img src="img/blog-image4.jpg" alt="" class="blog-image"></a>
+                        <h3 class="blog-name">POST NAME HERE</h3>
+                        <span class="blog-date">post date here</span>
+                        <p class="blog-text">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="story">
+            <div class="content">
+                <h2 class="story-title">THE MINIMAL STORY</h2>
+                <div class="row story-body">
+                    <div class="col-6">
+                        <img src="img/story-image.jpg" alt="" class="story-image">
+                    </div>
+                    <div class="col-4">
+                        <p class="story-text">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                        </p>
+                        <p class="story-text">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <div class="story-author">
+                            <img src="img/story-author_image.jpg" alt="" class="story-author_image">
+                            <p class="story-author_text">
+                                It is a long established fact that a reader.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="content">
+                <h2 class="hidden">Subscribe to uor newsletter</h2>
+                <form action="/" class="subscribe-form">
+                    <div class="subscribe-lbl">
+                        <span class="subscribe-text">Stay updateed on latest product releases and promotions</span>
+                        <div class="subscribe-right">
+                            <input type="email" class="subscribe-field" placeholder="Enter Your Email" required>
+                            <button class="subscribe-btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="content">
+                <div class="row footer-body">
+                    <div class="col-4">
+                        <span class="footer-logo">minimal</span>
+                    </div>
+                    <div class="col-8">
+                        <ul class="footer-list">
+                            <li class="footer-item"><a href="#" class="footer-link">Search</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">About Us</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Privacy Policy</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Terms & Condition</a></li>
+                            <li class="footer-item"><a href="#" class="footer-link">Return Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text-center footer-copy">
+                    Design by <a href="https://www.deviantart.com/smitexpert" class="footer-copy_link">Smitexpert</a>
+                </p>
+            </div>
+        </footer>
     </div>
-    <!--
-        Design by <a href="https://www.deviantart.com/smitexpert">Smitexpert</a>
-    -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
