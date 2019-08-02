@@ -1,3 +1,39 @@
+/* Fonts */
+@font-face {
+  font-family: 'Dublin';
+  src: url(../fonts/Dublin.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade-BdCn20';
+  src: url(../fonts/TradeGothicLTStd-BdCn20.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade-BdCn20Obl';
+  src: url(../fonts/TradeGothicLTStd-BdCn20Obl.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade-Cn18';
+  src: url(../fonts/TradeGothicLTStd-Cn18.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trade-Cn18Obl';
+  src: url(../fonts/TradeGothicLTStd-Cn18Obl.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Avatar generator */
 body {
   padding: 0;
@@ -12,6 +48,10 @@ ul {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .hidden {
@@ -31,6 +71,12 @@ ul {
   min-height: 1000px;
   text-align: center;
   padding: 50px 0 110px 0;
+  position: relative;
+}
+
+.avgen-body {
+  margin: 0 auto;
+  width: 980px;
 }
 
 .avgen-arrow {
@@ -51,11 +97,6 @@ ul {
 
 .avgen-arrow-two {
   background-image: url(../img/avgen-arrow_right.png);
-}
-
-.avgen-list {
-  margin: 0 auto;
-  width: 980px;
 }
 
 .avgen-picture {
@@ -167,4 +208,179 @@ ul {
 }
 
 /* Modals */
+.custom-modal {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.avgen-modal {
+  display: inline-block;
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  text-align: right;
+  padding: 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.shares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 30px -15px 20px -15px;
+}
+
+.shares-item {
+  margin: 0 15px;
+}
+
+.shares-icon {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.shares-icon-one {
+  background-color: #4566aa;
+  background-image: url(../img/shares-icon-one.png);
+}
+
+.shares-icon-two {
+  background-color: #00c2ec;
+  background-image: url(../img/shares-icon-two.png);
+}
+
+.shares-icon-three {
+  background-color: #00d947;
+  background-image: url(../img/shares-icon-three.png);
+}
+
+.shares-icon-four {
+  background-color: #c55321;
+  background-image: url(../img/shares-icon-four.png);
+}
+
+.shares-icon-five {
+  background-color: #009be3;
+  background-image: url(../img/shares-icon-five.png);
+}
+
+.shares-icon-six {
+  background-color: #8e160d;
+  background-image: url(../img/shares-icon-six.png);
+}
+
+.shares-close {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 0;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/shares-icon-seven.png);
+  cursor: pointer;
+}
+
+.overture {
+  width: 100%;
+  max-width: 1600px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.overture-close {
+  margin-top: 30px;
+}
+
+.overture-pre {
+  font-size: 90px;
+  font-family: "Trade-BdCn20", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.overture-title {
+  font-size: 225px;
+  font-family: "Dublin", Arial, Helvetica, sans-serif;
+  line-height: 1;
+}
+
+.overture-text {
+  font-size: 50px;
+  font-family: "Trade-BdCn20", Arial, Helvetica, sans-serif;
+}
+
+.overture-btn {
+  margin-top: 40px;
+  background-color: white;
+  font-size: 56px;
+  font-family: "Trade-BdCn20Obl", Arial, Helvetica, sans-serif;
+  color: #1f1f1f;
+  text-transform: uppercase;
+  padding: 10px 115px;
+  border-radius: 45px;
+  cursor: pointer;
+  border: 0;
+}
+
+.overture-btn:hover, .overture-btn:focus {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+.ouvert {
+  color: #ffffff;
+}
+
+.ouvert-close {
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+.ouvert-title {
+  margin-top: 350px;
+  font-size: 115px;
+  font-family: "Trade-BdCn20", Arial, Helvetica, sans-serif;
+  line-height: 10px;
+}
+
+.ouvert-text {
+  margin-top: 40px;
+  font-size: 70px;
+  font-family: "Trade-BdCn20", Arial, Helvetica, sans-serif;
+}
+
+.ouvert-btn {
+  margin-top: 0;
+}
 /*# sourceMappingURL=avatar.css.map */

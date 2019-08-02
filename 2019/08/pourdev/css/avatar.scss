@@ -1,3 +1,42 @@
+/* Fonts */
+
+$dublin: 'Dublin', Arial, Helvetica, sans-serif;
+$trade-cn20: 'Trade-BdCn20', Arial, Helvetica, sans-serif;
+$trade-cn20obl: 'Trade-BdCn20Obl', Arial, Helvetica, sans-serif;
+$trade-cn18: 'Trade-Cn18', Arial, Helvetica, sans-serif;
+$trade-cn18obl: 'Trade-Cn18Obl', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'Dublin';
+    src: url(../fonts/Dublin.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trade-BdCn20';
+    src: url(../fonts/TradeGothicLTStd-BdCn20.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trade-BdCn20Obl';
+    src: url(../fonts/TradeGothicLTStd-BdCn20Obl.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trade-Cn18';
+    src: url(../fonts/TradeGothicLTStd-Cn18.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trade-Cn18Obl';
+    src: url(../fonts/TradeGothicLTStd-Cn18Obl.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Avatar generator */
 
 body {
@@ -10,6 +49,7 @@ ul {
     margin: 0;
 }
 .text-center {text-align: center;}
+.text-right {text-align: right;}
 .hidden {
     visibility: hidden;
     padding: 0;
@@ -26,6 +66,11 @@ ul {
     min-height: 1000px;
     text-align: center;
     padding: 50px 0 110px 0;
+    position: relative;
+    &-body {
+        margin: 0 auto;
+        width: 980px;
+    }
     &-arrow {
         display: inline-block;
         width: 70px;
@@ -42,10 +87,6 @@ ul {
         &-two {
             background-image: url(../img/avgen-arrow_right.png);
         }
-    }
-    &-list {
-        margin: 0 auto;
-        width: 980px;
     }
     &-picture {
         box-sizing: border-box;
@@ -138,4 +179,141 @@ ul {
 
 /* Modals */
 
-
+.custom-modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    box-sizing: border-box;
+}
+.avgen-modal {
+    display: inline-block;
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 40px;
+    box-sizing: border-box;
+}   
+.shares {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px -15px 20px -15px;
+    &-item {
+        margin: 0 15px;
+    }
+    &-icon {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 0;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: center;
+        &-one {
+            background-color: #4566aa;
+            background-image: url(../img/shares-icon-one.png);
+        }
+        &-two {
+            background-color: #00c2ec;
+            background-image: url(../img/shares-icon-two.png);
+        }
+        &-three {
+            background-color: #00d947;
+            background-image: url(../img/shares-icon-three.png);
+        }
+        &-four {
+            background-color: #c55321;
+            background-image: url(../img/shares-icon-four.png);
+        }
+        &-five {
+            background-color: #009be3;
+            background-image: url(../img/shares-icon-five.png);
+        }
+        &-six {
+            background-color: #8e160d;
+            background-image: url(../img/shares-icon-six.png);
+        }
+    }
+    &-close {
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: 0;
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(../img/shares-icon-seven.png);
+        cursor: pointer;
+    }
+}
+.overture {
+    width: 100%;
+    max-width: 1600px;
+    text-align: center;
+    color: #ffffff;
+    &-close {
+        margin-top: 30px;
+    }
+    &-pre {
+        font-size: 90px;
+        font-family: $trade-cn20;
+        text-transform: uppercase;
+    }
+    &-title {
+        font-size: 225px;
+        font-family: $dublin;
+        line-height: 1;
+    }
+    &-text {
+        font-size: 50px;
+        font-family: $trade-cn20;
+    }
+    &-btn {
+        margin-top: 40px;
+        background-color: rgb(255, 255, 255);
+        font-size: 56px;
+        font-family: $trade-cn20obl;
+        color: #1f1f1f;
+        text-transform: uppercase;
+        padding: 10px 115px;
+        border-radius: 45px;
+        cursor: pointer;
+        border: 0;
+        &:hover,
+        &:focus {
+            background-color: #1f1f1f;
+            color: #ffffff;
+        }
+    }
+}
+.ouvert {
+    color: #ffffff;
+    &-close {
+        margin-right: 40px;
+        margin-top: 30px;
+    }
+    &-title {
+        margin-top: 350px;
+        font-size: 115px;
+        font-family: $trade-cn20;
+        line-height: 10px;
+    }
+    &-text {
+        margin-top: 40px;
+        font-size: 70px;
+        font-family: $trade-cn20;
+    }
+    &-btn {
+        margin-top: 0;
+    }
+}
