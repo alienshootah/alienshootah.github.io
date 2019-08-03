@@ -67,6 +67,11 @@ ul {
     text-align: center;
     padding: 50px 0 110px 0;
     position: relative;
+    &-wrapper {
+        margin: 0 auto;
+        width: 980px;
+        position: relative;
+    }
     &-body {
         margin: 0 auto;
         width: 980px;
@@ -100,6 +105,7 @@ ul {
     }
     &-btn {
         position: absolute;
+        z-index: 1000;
         display: block;
         width: 100px;
         height: 100px;
@@ -110,6 +116,7 @@ ul {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
+        
         &-one {
             background-image: url(../img/avgen-social.png);
             top: 40px;
@@ -177,13 +184,46 @@ ul {
     }
 }
 
+/* Slider */
+.avgen-list .slick-prev:before, 
+.avgen-list .slick-next:before 
+{ font-family: "slick"; font-size: 60px; line-height: 1; color: #000; opacity: 1; 
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }   
+
+    .avgen-list .slick-prev:before { content: url(../img/avgen-arrow_left.png); }
+[dir="rtl"] .avgen-list .slick-prev:before { content: url(../img/avgen-arrow_right.png); }
+
+[dir="rtl"] .avgen-list .slick-next { left: -10px; top: 70px; right: auto;}
+.avgen-list .slick-next:before { content: url(../img/avgen-arrow_right.png); }
+[dir="rtl"] .avgen-list .slick-next:before { content: url(../img/avgen-arrow_left.png); }
+.avgen-list .slick-prev, 
+.avgen-list .slick-next {
+    top: 52%;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 100%);
+    border: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.avgen-list .slick-prev {left: -100px; z-index: 100;}
+.avgen-list .slick-next {right: -100px; z-index: 100;}
+
+.avgen-list .slick-prev:before, 
+.avgen-list .slick-next:before {
+    font-size: 0;
+}
+
 /* Modals */
 
 .custom-modal {
     display: none; /* Hidden by default */
     position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    z-index: 9999;
+    padding-top: 40px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -201,6 +241,7 @@ ul {
     text-align: right;
     padding: 40px;
     box-sizing: border-box;
+    z-index: 9999;
 }   
 .shares {
     display: flex;

@@ -4,33 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/avatar.css">
     <title>Avatar Generator</title>
 </head>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <section class="avgen">
         <div class="content">
             <h2 class="hidden">Avatar Generator</h2>
-            <div class="text-center">
-                <span class="avgen-arrow avgen-arrow-one"></span>
-                <span class="avgen-arrow avgen-arrow-two"></span>
-            </div>
             <div class="avgen-body">
-                <ul class="avgen-list">
-                    <li class="avgen-item">
-                        <div class="avgen-picture">
-                            <img src="img/avgen-image.jpg" alt="" class="avgen-image">
-                            <button class="avgen-btn avgen-btn-one"></button>
-                            <button class="avgen-btn avgen-btn-two"></button>
-                        </div>
-                    </li>
-                </ul>
+                <div class="avgen-wrapper">
+                    <button class="avgen-btn avgen-btn-one" id="myBtn"></button>
+                    <button class="avgen-btn avgen-btn-two" id="myBtn2"></button>
+                    <ul class="avgen-list">
+                        <li class="avgen-item"><img src="img/avgen-image.jpg" alt="" class="avgen-image"  id="myBtn3"></li>
+                        <li class="avgen-item"><img src="img/avgen-image.jpg" alt="" class="avgen-image"></li>
+                        <li class="avgen-item"><img src="img/avgen-image.jpg" alt="" class="avgen-image" ></li>
+                        <li class="avgen-item"><img src="img/avgen-image.jpg" alt="" class="avgen-image"></li>
+                        <li class="avgen-item"><img src="img/avgen-image.jpg" alt="" class="avgen-image"></li>
+                    </ul>
+                </div>
                 <div class="second">
                     <ul class="second-list">
                         <li class="second-item"><button class="second-btn"><span class="second-icon second-icon-one"></span></button></li>
@@ -43,8 +37,8 @@
             </div>
         </div>
 
-        <!-- Modals -->
-        <div class="custom-modal">
+        <!-- Modal 1 -->
+        <div class="custom-modal" id="myModal">
             <div class="avgen-modal">
                 <ul class="shares">
                     <li class="shares-item"><a href="#"><span class="shares-icon shares-icon-one"></span></a></li>
@@ -54,13 +48,15 @@
                     <li class="shares-item"><a href="#"><span class="shares-icon shares-icon-five"></span></a></li>
                     <li class="shares-item"><a href="#"><span class="shares-icon shares-icon-six"></span></a></li>
                 </ul>
-                <button class="shares-close"></button>
+                <button class="shares-close close"></button>
             </div>
         </div>
-        <div class="custom-modal">
+
+        <!-- Modal 2 -->
+        <div class="custom-modal" id="myModal2">
             <div class="avgen-modal overture">
                 <div class="text-right overture-close">
-                    <button class="shares-close"></button>
+                    <button class="shares-close close2"></button>
                 </div>
                 <span class="overture-pre">Welcome <br>to the amazing</span>
                 <div class="overture-title">Trombinamax</div>
@@ -71,10 +67,12 @@
                 <button class="overture-btn">Go !</button>
             </div>
         </div>
-        <div class="custom-modal">
+
+        <!-- Modal 3 -->
+        <div class="custom-modal" id="myModal3">
             <div class="ouvert">
                 <div class="text-right ouvert-close">
-                    <button class="shares-close"></button>
+                    <button class="shares-close close3"></button>
                 </div>
                 <div class="ouvert-title">Mode aléatoir</div>
                 <p class="ouvert-text">(attention, ça va exploser)</p>
@@ -82,5 +80,8 @@
             </div>
         </div>
     </section>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
