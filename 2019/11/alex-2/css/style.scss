@@ -1,0 +1,74 @@
+.container {
+    max-width: 350px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.manuals {
+    font-size: 18px;
+    color: #ffffff;
+    &-item {
+        margin: 10px 0;
+        position: relative;
+    }
+    &-btn {
+        width: 100%;
+        background-color: #056839;
+        color: #ffffff;
+        padding: 10px 25px;
+        border-radius: 5px;;
+        border: 0;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        &::after {
+            position: absolute;
+            display: block;
+            background-image: url(../img/acc-btn.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            content: '';
+            width: 15px;
+            height: 10px;
+            right: 10px;
+            top: 12px;
+        }
+        &:hover::after,
+        &:focus::after {
+            transform: rotate(90deg);
+        }
+    }
+}
+.drop {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    z-index: 100;
+    top: 30px;
+    left: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: #00502a;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    &.show {
+        display: block;
+    }
+    &-link {
+        font-size: 14px;
+        padding: 5px 20px;
+        display: block;
+        width: 100%;
+        color: #00deff;
+        text-decoration: none;
+        box-sizing: border-box;
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: #3c8964;
+        }
+    }
+}
