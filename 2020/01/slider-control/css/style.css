@@ -1,0 +1,40 @@
+.container {
+    width: 60%;
+    margin: 100px auto;
+}
+.slider-container {
+    position: relative;
+}
+.slider-container .track {
+    width: 100%;
+    height: 6px;
+    background-color: #cccccc;
+}
+.slider-container .track .progress {
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    transform-origin: 0;
+}
+.slider-container .thump {
+    width: 20px;
+    height: 20px;
+    background-color: tomato;
+    position: absolute;
+    top: -8px;
+    border-radius: 50px;
+    transform: translate(-50%);
+}
+.thump-indicator {
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+    border-radius: 50px;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 3;
+}
+.thump-indicator.focus {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
