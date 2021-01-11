@@ -1,0 +1,113 @@
+.col-3 {width: 25%;}
+.col-3 {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.filters {
+    &-subtitle {
+        text-transform: uppercase;
+        border-bottom: 1px solid #333333;
+        padding-bottom: 5px;
+        font-size: 17px;
+    }
+    &-accordion {
+        position: relative;
+        cursor: pointer;
+        
+        &:after {
+            content: '+';
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+            top: -1px;
+        }
+        &.active:after,
+        &:hover:after,
+        &:focus:after {
+            content: '-';
+            right: 8px;
+            top: -3px;
+        }
+    }
+    &-panel {
+        display: none;
+        transition: all 0.5s ease-in-out;
+        &.active {
+            display: block;
+        }
+    }
+    &-ind {
+        font-size: 14px;
+        margin: 0 0 20px 0;
+    }
+    &-list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    &-link {
+        text-decoration: none;
+        color: #3d3535;
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        box-sizing: border-box;
+        &.active .filters-icon,
+        &:hover .filters-icon,
+        &:focus .filters-icon {
+            margin-right: 15px;
+        }
+    }
+    &-icon {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        position: relative;
+        top: 5px;
+        margin-right: 5px;
+        background-color: transparent;
+        transition: all 0.5s ease-in-out;
+        &-pink {
+            background-color: pink;
+        }
+        &-white {
+            background-color: white;
+        }
+        &-black {
+            background-color: black;
+        }
+        &-beige {
+            background-color: beige;
+        }
+        &-green {
+            background-color: green;
+        }
+        &-gray {
+            background-color: gray;
+        }
+        &-brown {
+            background-color: brown;
+        }
+        &-blue {
+            background-color: blue;
+        }
+    }
+    &-field {
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #cccccc;
+        padding: 10px 5px;
+        &-range {
+            width: 100%;
+            background-color: #cccccc;
+        }
+    }
+    &-label {
+        display: inline-block;
+        padding: 5px 0;
+        width: 100%;
+    }
+}
