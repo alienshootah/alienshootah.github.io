@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монтаж печей</title>
+    <link href="bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <!--
+    <button type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        выпадайка
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        текст
+    </ul>
+
+    <div class="dropdown">
+        <button  id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Tutorials
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a tabindex="-1" href="#">HTML</a></li>
+            <li><a tabindex="-1" href="#">CSS</a></li>
+            <li class="dropdown-submenu">
+                <a class="submenus" href="#">New dropdown <span class="caret"></span> +</a>
+                <ul class="dropdown-menu">
+                    <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                    <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="submenus" href="#">Another dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">3rd level dropdown</a></li>
+                            <li><a href="#">3rd level dropdown</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    -->
+    
+   <!--
+       Дропдаун второго уровня
+    <button type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+        выпадайка
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        текст
+    </ul>
+
+    Многоуровневое меню
+    <div class="dropdown">
+        <button  id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Tutorials
+        <span class="caret"></span></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-submenu">
+                <ul>
+                    <li>
+                        <a class="submenus" href="#">New dropdown <span class="caret"></span> +</a>
+                        <ul class="dropdown-menu sasaas">
+                            <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                            <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                            <li class="dropdown-submenu">
+                                <a class="submenus" href="#">Another dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">3rd level dropdown</a></li>
+                                    <li><a href="#">3rd level dropdown</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    -->
+
+
+    <header class="header">
+        <div class="content">
+            <div class="header-body">
+                <div class="header-left">
+                    <div class="header-picture">
+                        <a href="/">
+                            <img src="img/header-logo.svg" alt="" class="header-logo">
+                            <img src="img/header-logo-mobile.svg" alt="" class="header-logo-mobile">
+                        </a>
+                    </div>
+                    <ul class="header-menu">
+                        <li class="header-item"><a href="#" class="header-link">О нас</a></li>
+                        <li class="header-item"><a href="#" class="header-link">Отзывы</a></li>
+                        <li class="header-item"><a href="#" class="header-link">Контакты</a></li>
+                        <li class="header-item"><a href="#" class="header-link">Доставка и оплата</a></li>
+                    </ul>
+                    <div class="mobmenu">
+                        <button class="mobmenu-btn">Меню</button>
+                        <div class="mobmenu-body">
+                            <ul class="mobmenu-list">
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link active">Акции</a></li>
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link">Дымоходы</a></li>
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link">Монтаж</a></li>
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link">Портфолио</a></li>
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link">Отзывы</a></li>
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link">Контакты</a></li>
+                                <li class="mobmenu-item"><a href="#" class="mobmenu-link">Доставка</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-cat">
+                        <button class="header-cat-btn">Каталог</button>
+                    </div>
+                    <div class="header-bucket">
+                        <button class="header-bucket-btn">
+                            <span class="header-bucket-num">10</span>
+                        </button>
+                    </div>
+                    <div class="header-filters">
+                        <button class="header-filters-btn"></button>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="mob-consult">
+                        <button class="mob-consult-btn"></button>
+                    </div>
+                    <p class="drop-adress">г. Санкт-Петербург, ул. Ленсовета, 43</p>
+                    <div class="drop">
+                        <button class="drop-btn" id="dropdownAdress" data-bs-toggle="dropdown" aria-expanded="false">(812) 924-66-61 <span class="drop-icon"></span></button>
+                        <div class="dropdown-menu drop-body" aria-labelledby="dropdownAdress">
+                            <ul class="drop-list">
+                                <li class="drop-item">
+                                    <span class="drop-name">Адрес магазина</span>
+                                    <p class="drop-text">г. Санкт-Петербург, ул. Ленсовета, 43</p>
+                                </li>
+                                <li class="drop-item">
+                                    <span class="drop-name">Телефон</span>
+                                    <p class="drop-text">
+                                        <a href="tel:+78129246661" class="drop-link">+7 (812) 924-66-61</a>
+                                    </p>
+                                </li>
+                                <li class="drop-item">
+                                    <span class="drop-name">E-mail</span>
+                                    <p class="drop-text"><a href="mailto:pechkiru@mail.ru" class="drop-link">pechkiru@mail.ru</a></p>
+                                </li>
+                                <li class="drop-item">
+                                    <div class="drop-consult">
+                                        <a href="tel:+78129246661" class="drop-consult-link">
+                                            Консультация 
+                                            <span class="drop-consult-icon"></span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="drop-item">
+                                    <span class="drop-name">Время работы магазина</span>
+                                    <p class="drop-text drop-text-simple">
+                                        ПН-ПТ — с 10:00 до 20:00<br>
+                                        СБ — с 10:00 до 18:00<br>
+                                        ВС — выходной
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hedend">
+            <div class="content">
+                <div class="hedend-body">
+                    <div class="hedend-left">
+                        <div class="cat">
+                            
+                            <div class="dropdown">
+                                <button class="cat-btn" id="dropdownCatalog" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="cat-btn-icon"></span> 
+                                    Каталог
+                                </button>
+                                    
+                                <div class="dropdown-menu cat-body" aria-labelledby="dropdownCatalog">
+
+                                    <ul class="cat-list">
+                                        <li class="cat-item">
+
+                                            <div class="dropdown">
+                                                <button  id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">Tutorials
+                                                <span class="caret"></span></button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    
+                                                    <li><a tabindex="-1" href="#">HTML</a></li>
+                                                    <li><a tabindex="-1" href="#">CSS</a></li>
+                                                    <li class="dropdown-submenu">
+                                                        <a class="submenus" href="#">New dropdown <span class="caret"></span> +</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                                                            <li><a tabindex="-1" href="#">2nd level dropdown</a></li>
+                                                            <li class="dropdown-submenu">
+                                                                <a class="submenus" href="#">Another dropdown <span class="caret"></span></a>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><a href="#">3rd level dropdown</a></li>
+                                                                    <li><a href="#">3rd level dropdown</a></li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <!--
+                                                <a href="#" class="cat-link">
+                                                    <span class="cat-icon cat-icon-one"></span>
+                                                    Печи для бани
+                                                </a>
+                                            -->
+                                            <!--
+                                            <div class="subcat">
+                                                <div class="subcat-body">
+                                                    <div class="row subcat-row">
+                                                        <div class="col-4 subcat-col">
+                                                            <h4 class="subcat-title">Тип</h4>
+                                                            <ul class="subcat-list">
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Печи для бани</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Чугунные</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Стальные</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">С баком для воды</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">С теплообменником</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">С закрытой каменкой</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">С открытой каменкой</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">С выносной топкой</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Без выноса топки</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Для русской бани</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-4 subcat-col">
+                                                            <h4 class="subcat-title">Топливо</h4>
+                                                            <ul class="subcat-list">
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Дровянные печи</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Электрические печи</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Газовые печи</a></li>
+                                                            </ul>
+                                                            <h4 class="subcat-title">Бренд</h4>
+                                                            <ul class="subcat-list">
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Везувий</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Термофор</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Теплодар</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Варвара</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Гефест</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Добросталь</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">ВВД</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-4 subcat-col">
+                                                            <h4 class="subcat-title">Рекомендованные</h4>
+                                                            <ul class="subcat-list">
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Баки для воды</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Камни</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Теплообменники</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Парогенераторы</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Пульт для электрокаменки</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Контакторная коробка</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Трубы дымохода</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Установка печи в бане</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Защитные экраны</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Панно</a></li>
+                                                                <li class="subcat-item"><a href="#" class="subcat-link">Газогорелочное устройство</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            -->
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-thue"></span>
+                                                Печи для дачи
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-three"></span>
+                                                Печи-камины
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-four"></span>
+                                                Котлы
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-five"></span>
+                                                Камины
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-six"></span>
+                                                Каминные топки
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-seven"></span>
+                                                Каминные облицовки
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-eight"></span>
+                                                Садовые печи
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-nine"></span>
+                                                Печное литье
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-ten"></span>
+                                                Дымоходы
+                                            </a>
+                                        </li>
+                                        <li class="cat-item">
+                                            <a href="#" class="cat-link">
+                                                <span class="cat-icon cat-icon-eleven"></span>
+                                                Монтаж
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="mainmenu">
+                            <li class="mainmenu-item"><a href="#" class="mainmenu-link">Акции</a></li>
+                            <li class="mainmenu-item"><a href="#" class="mainmenu-link">Дымоходы</a></li>
+                            <li class="mainmenu-item"><a href="#" class="mainmenu-link">Монтаж</a></li>
+                        </ul>
+                    </div>
+                    <div class="hedend-center">
+                        <div class="find">
+                            <button class="find-button"></button>
+                            <div class="find-drop">
+                                <form acticon="/" class="find-form">
+                                    <div class="find-body">
+                                        <input type="text" class="find-field" placeholder="Введите названия товара или категории" required>
+                                        <button class="find-btn"></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hedend-right">
+                        <div class="urstat">
+                            <ul class="urstat-list">
+                                <li class="urstat-item">
+                                    <button class="urstat-btn urstat-btn-one">
+                                        <span class="urstat-num noitems">0</span>
+                                    </button>
+                                </li>
+                                <li class="urstat-item">
+                                    <button class="urstat-btn urstat-btn-thue">
+                                        <span class="urstat-num">2</span>
+                                    </button>
+                                </li>
+                                <li class="urstat-item">
+                                    <button class="urstat-btn urstat-btn-three">
+                                        <span class="urstat-num">10</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </header>
+    <secticon class="montage">
+        <div class="content">
+            <div class="pagin">
+                <ul class="pagin-list">
+                    <li class="pagin-item">
+                        <a href="#" class="pagin-link"><span class="pagin-icon"></span></a>
+                    </li>
+                    <li class="pagin-item">
+                        <a href="#" class="pagin-link">Монтажи</a>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="montage-title">Монтажи печей, каминов, дымоходов и котлов</h1>
+            <p class="montage-descr">
+                Профессиональный монтаж в Санкт-Петербурге под ключ!
+            </p>
+            <ul class="services">
+                <li class="services-item services-item-half">
+                    <a href="#">
+                        <img src="img/services-image.jpg" alt="Установка печи в доме" class="services-image">
+                        <div class="services-descr">
+                            <div class="services-left">
+                                <h3 class="services-subtitle">Установка печи в доме</h3>
+                                <span class="services-price">от 5 000 р.</span>
+                            </div>
+                            <div class="services-right">
+                                <span class="services-icon"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-item active services-item-half">
+                    <a href="#" class="active">
+                        <img src="img/services-image2.jpg" alt="Установка печи в доме" class="services-image">
+                        <div class="services-descr">
+                            <div class="services-left">
+                                <h3 class="services-subtitle">Установка печи в бане</h3>
+                                <span class="services-price">от 10 000 р.</span>
+                            </div>
+                            <div class="services-right">
+                                <span class="services-icon"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-item">
+                    <a href="#">
+                        <img src="img/services-image3.jpg" alt="Установка камина" class="services-image">
+                        <div class="services-descr">
+                            <div class="services-left">
+                                <h3 class="services-subtitle">Установка камина</h3>
+                                <span class="services-price">от 10 000 р.</span>
+                            </div>
+                            <div class="services-right">
+                                <span class="services-icon"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-item">
+                    <a href="#">
+                        <img src="img/services-image4.jpg" alt="Установка котла" class="services-image">
+                        <div class="services-descr">
+                            <div class="services-left">
+                                <h3 class="services-subtitle">Установка котла</h3>
+                                <span class="services-price">от 20 000 р.</span>
+                            </div>
+                            <div class="services-right">
+                                <span class="services-icon"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="services-item">
+                    <a href="#">
+                        <img src="img/services-image5.jpg" alt="Установка дымохода" class="services-image">
+                        <div class="services-descr">
+                            <div class="services-left">
+                                <h3 class="services-subtitle">Установка дымохода</h3>
+                                <span class="services-price">от 10 000 р.</span>
+                            </div>
+                            <div class="services-right">
+                                <span class="services-icon"></span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="better">
+                <ul class="better-list">
+                    <li class="better-item">
+                        <span class="better-icon better-icon-one"></span>
+                        <h3 class="better-title">Сервисное обслуживание</h3>
+                    </li>
+                    <li class="better-item">
+                        <span class="better-icon better-icon-thue"></span>
+                        <h3 class="better-title">Гарантия - 5 лет</h3>
+                    </li>
+                    <li class="better-item">
+                        <span class="better-icon better-icon-three"></span>
+                        <h3 class="better-title">40 отзывов</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="free">
+                <h3 class="free-title">
+                    Бесплатно расчитаем стоимость монтажа и дадим консультацию
+                </h3>
+                <div class="free-btns">
+                    <button class="free-btn">
+                        Консультация <span class="free-icon free-icon-one"></span>
+                    </button>
+                    <span class="free-or"> или </span>
+                    <button class="free-btn free-btn-light">
+                        Расчёт стоимости <span class="free-icon free-icon-thue"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="works">
+                <h2 class="works-title">Наши работы</h2>
+                <ul class="works-menu">
+                    <li class="works-menu-item"><a href="#" class="works-menu-link">Печи</a></li>
+                    <li class="works-menu-item"><a href="#" class="works-menu-link active">Камины</a></li>
+                    <li class="works-menu-item"><a href="#" class="works-menu-link">Котлы</a></li>
+                    <li class="works-menu-item"><a href="#" class="works-menu-link">Все</a></li>
+                </ul>
+                <div class="works-body">
+                    <div class="works-content">
+                        <ul class="works-list">
+                            <li class="works-item">
+                                <a href="#">
+                                    <img src="img/works-image.jpg" alt="Установка банной печи Термофор Гейзер" class="works-image">
+                                    <div class="works-descr">
+                                        <div class="works-left">
+                                            <span class="works-subtitle">Установка банной печи Термофор Гейзер</span>
+                                        </div>
+                                        <div class="works-right">
+                                            <span class="works-icon"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="works-item active">
+                                <a href="#">
+                                    <img src="img/works-image2.jpg" alt="Установка банной печи Технолит Гефест" class="works-image">
+                                    <div class="works-descr">
+                                        <div class="works-left">
+                                            <span class="works-subtitle">Установка банной печи Технолит Гефест</span>
+                                        </div>
+                                        <div class="works-right">
+                                            <span class="works-icon"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="works-item">
+                                <a href="#">
+                                    <img src="img/works-image3.jpg" alt="Установка банной печи Термофор Гейзер" class="works-image">
+                                    <div class="works-descr">
+                                        <div class="works-left">
+                                            <span class="works-subtitle">Установка банной печи Термофор Гейзер</span>
+                                        </div>
+                                        <div class="works-right">
+                                            <span class="works-icon"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="works-item">
+                                <a href="#">
+                                    <img src="img/works-image4.jpg" alt="Установка камина Keddy maxette" class="works-image">
+                                    <div class="works-descr">
+                                        <div class="works-left">
+                                            <span class="works-subtitle">Установка камина Keddy maxette</span>
+                                        </div>
+                                        <div class="works-right">
+                                            <span class="works-icon"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="works-item">
+                                <a href="#" class="active">
+                                    <img src="img/works-image5.jpg" alt="Установка камина с топкой Brunner Panorama-Kamin 51/25/101/25" class="works-image">
+                                    <div class="works-descr">
+                                        <div class="works-left">
+                                            <span class="works-subtitle">Установка камина с топкой Brunner Panorama-Kamin 51/25/101/25</span>
+                                        </div>
+                                        <div class="works-right">
+                                            <span class="works-icon"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="works-item">
+                                <a href="#" class="active">
+                                    <img src="img/works-image6.jpg" alt="Установка камина с топкой Ferlux 19" class="works-image">
+                                    <div class="works-descr">
+                                        <div class="works-left">
+                                            <span class="works-subtitle">Установка камина с топкой Ferlux 19</span>
+                                        </div>
+                                        <div class="works-right">
+                                            <span class="works-icon"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="works-more">
+                    <button class="works-more-btn">Загрузить ещё</button>
+                </div>
+            </div>
+        </div>
+    </secticon>
+    <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script src="js/apps.js"></script>  
+</body>
+</html>

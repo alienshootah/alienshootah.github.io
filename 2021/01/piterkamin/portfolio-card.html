@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка портфолио</title>
+    <link href="bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <header class="header" id="navbar">
+        <div class="content">
+            <div class="header-body">
+                <div class="header-left">
+                    <div class="header-picture">
+                        <a href="/">
+                            <img src="img/header-logo.svg" alt="" class="header-logo">
+                            <img src="img/header-logo-mobile.svg" alt="" class="header-logo-mobile">
+                        </a>
+                    </div>
+                    <ul class="header-menu">
+                        <li class="header-item"><a href="#" class="header-link">О нас</a></li>
+                        <li class="header-item"><a href="#" class="header-link">Отзывы</a></li>
+                        <li class="header-item"><a href="#" class="header-link">Контакты</a></li>
+                        <li class="header-item"><a href="#" class="header-link">Доставка и оплата</a></li>
+                    </ul>
+                    <div class="mobmenu">
+                        <div class="dropdown">
+                            <button class="mobmenu-btn" type="button" id="dropdownMainMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="mobmenu-text">Меню</span>
+                            </button>
+                            <div class="dropdown-menu mobmenu-body" aria-labelledby="dropdownMainMenu">
+                                <button class="mobmenu-title">
+                                    <span class="mobmenu-title-close"></span>
+                                    <span class="mobmenu-title-text">Меню</span>
+                                </button>
+                                <ul class="mobmenu-list">
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link active">Акции</a></li>
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link">Дымоходы</a></li>
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link">Монтаж</a></li>
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link">Портфолио</a></li>
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link">Отзывы</a></li>
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link">Контакты</a></li>
+                                    <li class="mobmenu-item"><a href="#" class="mobmenu-link">Доставка</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-filters">
+                        <button class="header-filters-btn"></button>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <p class="drop-adress">г. Санкт-Петербург, ул. Ленсовета, 43</p>
+                    <div class="drop">
+                        <div class="mob-consult">
+                            <button class="mob-consult-btn"></button>
+                        </div>
+                        <button class="drop-btn" id="dropdownAdress" data-bs-toggle="dropdown" aria-expanded="false"><span class="drop-num">(812) 924-66-61</span> <span class="drop-icon"></span></button>
+                        <div class="dropdown-menu dropdown-menu-end drop-body" aria-labelledby="dropdownAdress">
+                            <button class="mobmenu-title">
+                                <span class="mobmenu-title-close"></span>
+                                <span class="mobmenu-title-text">Контакты</span>
+                            </button>
+                            <ul class="drop-list">
+                                <li class="drop-item">
+                                    <span class="drop-name">Адрес магазина</span>
+                                    <p class="drop-text">г. Санкт-Петербург, ул. Ленсовета, 43</p>
+                                </li>
+                                <li class="drop-item">
+                                    <span class="drop-name">Телефон</span>
+                                    <p class="drop-text">
+                                        <a href="tel:+78129246661" class="drop-link">+7 (812) 924-66-61</a>
+                                    </p>
+                                </li>
+                                <li class="drop-item">
+                                    <span class="drop-name">E-mail</span>
+                                    <p class="drop-text"><a href="mailto:pechkiru@mail.ru" class="drop-link">pechkiru@mail.ru</a></p>
+                                </li>
+                                <li class="drop-item">
+                                    <div class="drop-consult">
+                                        <a href="tel:+78129246661" class="drop-consult-link">
+                                            Консультация 
+                                            <span class="drop-consult-icon"></span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="drop-item">
+                                    <span class="drop-name">Время работы магазина</span>
+                                    <p class="drop-text drop-text-simple">
+                                        ПН-ПТ — с 10:00 до 20:00<br>
+                                        СБ — с 10:00 до 18:00<br>
+                                        ВС — выходной
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hedend hedend-gray">
+            <div class="content">
+                <div class="hedend-body">
+                    <div class="hedend-left">
+                        <div class="cat">
+                            <button class="cat-btn" id="dropdownCatalog" data-bs-toggle="dropdown" aria-expanded="false"> 
+                                <span class="cat-btn-icon"></span> 
+                                <span class="cat-btn-text">Каталог</span> 
+                            </button>
+                            <div class="dropdown-menu cat-body" aria-labelledby="dropdownCatalog">
+                                <button class="mobmenu-title">
+                                    <span class="mobmenu-title-close"></span>
+                                    <span class="mobmenu-title-text">Каталог</span>
+                                </button>
+                                <ul class="cat-list">
+                                    <li class="cat-item">
+                                        <div class="dropdown-submenu">
+                                            <a href="#" class="submenus cat-link active">
+                                                <span class="cat-icon cat-icon-one"></span>
+                                                Печи для бани
+                                            </a>
+                                            <ul class="subcat">
+                                                <li>
+                                                    <div class="subcat-body">
+                                                        <button class="close mobmenu-title">
+                                                            <span class="mobmenu-title-close"></span>
+                                                            <span class="mobmenu-title-text">Печи для бани</span>
+                                                        </button>
+                                                        <div class="subcat-content">
+                                                            <div class="mobmenu-nav">
+                                                                <button type="button" class="close mobmenu-nav-btn">
+                                                                    Перейти в категорию
+                                                                    <span class="mobmenu-nav-icon"></span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="row subcat-row">
+                                                                <div class="col-4 subcat-col">
+                                                                    <h4 class="subcat-title">Тип</h4>
+                                                                    <ul class="subcat-list">
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Печи для бани</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Чугунные</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Стальные</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">С баком для воды</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">С теплообменником</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">С закрытой каменкой</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">С открытой каменкой</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">С выносной топкой</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Без выноса топки</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Для русской бани</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-4 subcat-col">
+                                                                    <h4 class="subcat-title">Топливо</h4>
+                                                                    <ul class="subcat-list">
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Дровянные печи</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Электрические печи</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Газовые печи</a></li>
+                                                                    </ul>
+                                                                    <h4 class="subcat-title">Бренд</h4>
+                                                                    <ul class="subcat-list">
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Везувий</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Термофор</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Теплодар</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Варвара</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Гефест</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Добросталь</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">ВВД</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="col-4 subcat-col">
+                                                                    <h4 class="subcat-title">Рекомендованные</h4>
+                                                                    <ul class="subcat-list">
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Баки для воды</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Камни</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Теплообменники</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Парогенераторы</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Пульт для электрокаменки</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Контакторная коробка</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Трубы дымохода</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Установка печи в бане</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Защитные экраны</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Панно</a></li>
+                                                                        <li class="subcat-item"><a href="#" class="subcat-link">Газогорелочное устройство</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="cat-item">
+                                        <div class="dropdown-submenu">
+                                            <a href="#" class="submenus cat-link">
+                                                <span class="cat-icon cat-icon-thue"></span>
+                                                Печи для дачи
+                                            </a>
+                                            <ul class="subcat">
+                                                <li>
+                                                    <button class="close mobmenu-title">
+                                                        <span class="mobmenu-title-close"></span>
+                                                        <span class="mobmenu-title-text">Печи для дачи</span>
+                                                    </button>
+                                                    <div class="subcat-content">
+                                                        <div class="mobmenu-nav">
+                                                            <button type="button" class="close mobmenu-nav-btn">
+                                                                Перейти в категорию
+                                                                <span class="mobmenu-nav-icon"></span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="subcat-body">
+                                                            <h4 class="subcat-title">Печи для дачи</h4>
+                                                            <p>Содержимое каталога</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-three"></span>
+                                            Печи-камины
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-four"></span>
+                                            Котлы
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-five"></span>
+                                            Камины
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-six"></span>
+                                            Каминные топки
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-seven"></span>
+                                            Каминные облицовки
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-eight"></span>
+                                            Садовые печи
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-nine"></span>
+                                            Печное литье
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-ten"></span>
+                                            Дымоходы
+                                        </a>
+                                    </li>
+                                    <li class="cat-item">
+                                        <a href="#" class="cat-link">
+                                            <span class="cat-icon cat-icon-eleven"></span>
+                                            Монтаж
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="mainmenu">
+                            <li class="mainmenu-item"><a href="#" class="mainmenu-link">Акции</a></li>
+                            <li class="mainmenu-item"><a href="#" class="mainmenu-link">Дымоходы</a></li>
+                            <li class="mainmenu-item"><a href="#" class="mainmenu-link">Монтаж</a></li>
+                        </ul>
+                    </div>
+                    <div class="hedend-center">
+                        <div class="find">
+                            <button class="find-button"></button>
+                            <div class="find-drop">
+                                <form acticon="/" class="find-form">
+                                    <div class="find-body">
+                                        <input type="text" class="find-field" placeholder="Введите названия товара или категории" required>
+                                        <button class="find-btn"></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hedend-right">
+                        <div class="urstat">
+                            <ul class="urstat-list">
+                                <li class="urstat-item">
+                                    <button class="urstat-btn urstat-btn-one">
+                                        <span class="urstat-num noitems">0</span>
+                                    </button>
+                                </li>
+                                <li class="urstat-item">
+                                    <button class="urstat-btn urstat-btn-thue">
+                                        <span class="urstat-num">2</span>
+                                    </button>
+                                </li>
+                                <li class="urstat-item">
+                                    <button class="urstat-btn urstat-btn-three">
+                                        <span class="urstat-num">10</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </header>
+    <secticon class="montage">
+        <div class="content">
+            <div class="pagin">
+                <ul class="pagin-list">
+                    <li class="pagin-item">
+                        <a href="#" class="pagin-link"><span class="pagin-icon"></span></a>
+                    </li>
+                    <li class="pagin-item">
+                        <a href="#" class="pagin-link">Печи для бани</a>
+                    </li>
+                    <li><a href="#" class="pagin-link">Печи термофор</a></li>
+                </ul>
+            </div>
+            <h1 class="montage-title">Установка печи Олимп «Русский пар» + экслюзивный портал</h1>
+
+            <div class="cardman">
+                <div class="cardman-body">
+                    <div class="cardman-left">
+                        <img src="img/cardman-image.jpg" alt="" class="cardman-image">
+                    </div>
+                    <div class="cardman-right">
+                        <ul class="cardman-list">
+                            <li class="cardman-item">
+                                <div class="cardman-picture">
+                                    <span class="cardman-icon cardman-icon-one"></span>
+                                </div>
+                                <div class="cardman-descr">
+                                    <span class="cardman-pre">Работа выполнена за</span>
+                                    <span class="cardman-val">3 дня</span>
+                                </div>
+                            </li>
+                            <li class="cardman-item">
+                                <div class="cardman-picture">
+                                    <span class="cardman-icon cardman-icon-thue"></span>
+                                </div>
+                                <div class="cardman-descr">
+                                    <span class="cardman-pre">Цена за монтаж</span>
+                                    <span class="cardman-val">30 000 рублей</span>
+                                </div>
+                            </li>
+                            <li class="cardman-item">
+                                <div class="cardman-picture">
+                                    <span class="cardman-icon cardman-icon-three"></span>
+                                </div>
+                                <div class="cardman-descr">
+                                    <span class="cardman-pre">Гарантия на монтаж</span>
+                                    <span class="cardman-val">3 года</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <h3 class="cardman-title">Задача</h3>
+                        <p>Необходимо спроектировать и установить печь и систему дымоудаления для неё.</p>
+                        <h3 class="cardman-title">Особенности</h3>
+                        <p>Температура в дымоходе около 100°С.</p>
+                        <p>Для газового котла обязателен вентиляционный канал диаметром не менее 100 мм; документальное оформление дымохода и вентиляции; обязательно наличие газового проекта (только для вновь подключаемых объектов).</p>
+                        <h3 class="cardman-title">Решение</h3>
+                        <p>Допускается использование тонкостенной (толщиной 0,5 мм) нержавеющей трубы внутри и оцинкованной трубы снаружи т.к. перепад температур незначителен. А это удешевление проекта!</p>
+                        <p>Одновременно с самим дымоходом прокладываем вентиляционный канал. Сразу по окончании монтажа выдаем АКТ ВДПО на дымоходы и вентканалы.</p>
+                        <h3 class="cardman-title">Оборудование</h3>
+                        <div class="optional">
+                            <ul class="optional-list">
+                                <li class="optional-item">
+                                    <a href="#" class="optional-link">Печь Олимп «Русский пар»</a>
+                                    <span class="optional-price">53 000 р.</span>
+                                </li>
+                                <li class="optional-item">
+                                    <a href="#" class="optional-link">Облицовка «Змеевик»</a>
+                                    <span class="optional-price">40 000 р.</span>
+                                </li>
+                                <li class="optional-item">
+                                    <a href="#" class="optional-link active">Дымоход</a>
+                                    <span class="optional-price">25 000 р.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="processing">
+                <h2 class="processing-title">Процесс работы</h2>
+                <ul class="processing-list">
+                    <li class="processing-item">
+                        <div class="processing-descr">
+                            <div class="processing-num">
+                                <span class="processing-num-current">1</span>
+                                <span class="processing-num-all">/28</span>
+                            </div>
+                            <div class="processing-text">Установка профиля на плавающих подвесах для монтажа термоизоляции.</div>
+                        </div>
+                        <div class="processing-picture">
+                            <img src="img/processing-image.jpg" alt="" class="processing-image">
+                        </div>
+                    </li>
+                    <li class="processing-item">
+                        <div class="processing-descr">
+                            <div class="processing-num">
+                                <span class="processing-num-current">2</span>
+                                <span class="processing-num-all">/28</span>
+                            </div>
+                            <div class="processing-text">По проекту монтируем каркас дровницы.</div>
+                        </div>
+                        <div class="processing-picture">
+                            <img src="img/processing-image2.jpg" alt="" class="processing-image">
+                        </div>
+                    </li>
+                    <li class="processing-item">
+                        <div class="processing-descr">
+                            <div class="processing-num">
+                                <span class="processing-num-current">3</span>
+                                <span class="processing-num-all">/28</span>
+                            </div>
+                            <div class="processing-text">В ниши каркаса укладываем фольгированную вату.</div>
+                        </div>
+                        <div class="processing-picture">
+                            <img src="img/processing-image3.jpg" alt="" class="processing-image">
+                        </div>
+                    </li>
+                    <li class="processing-item">
+                        <div class="processing-descr">
+                            <div class="processing-num">
+                                <span class="processing-num-current">4</span>
+                                <span class="processing-num-all">/28</span>
+                            </div>
+                            <div class="processing-text">Весь каркас зашиваем плитами «Суперизол» под дальнейшую отделку.</div>
+                        </div>
+                        <div class="processing-picture">
+                            <div class="slider">
+                                <div class="text-center">Слайдер</div>
+                                <ul class="processing-slider">
+                                    <li class="processing-slider-item">
+                                        <img src="img/processing-image4.jpg" alt="" class="processing-slider-image">
+                                    </li>
+                                    <li class="processing-slider-item">
+                                        <img src="img/processing-image4.jpg" alt="" class="processing-slider-image">
+                                    </li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <div class="text-center">
+                <h3>Навигация</h3>
+                <p>
+                    <span class="processing-arrow processing-arrow-left"></span>
+                    <span class="processing-arrow processing-arrow-right"></span>
+                </p>
+            </div>
+            <div class="next">
+                <h3 class="portfol-title next-title">Следующий проект</h3>
+                <p class="next-more">
+                    <a href="#" class="next-more-link"><span class="next-more-text">Установка банной печи Технолит Гефест</span></a>
+                </p>
+            </div>
+
+            <div class="portfol">
+                <div class="portfol-title">Другие монтажи</div>
+                <ul class="portfol-list">
+                    <li class="portfol-item">
+                        <a href="#">
+                            <img src="img/portfol-image1.jpg" alt="Установка банной печи Термофор Гейзер" class="portfol-image">
+                            <div class="portfol-descr">
+                                <div class="portfol-left">
+                                    <h3 class="portfol-maintitle">Установка банной печи</h3>
+                                    <span class="portfol-subtitle">Термофор Гейзер</span>
+                                </div>
+                                <div class="portfol-right">
+                                    <span class="portfol-icon"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="portfol-item">
+                        <a href="#">
+                            <img src="img/portfol-image2.jpg" alt="Установка банной печи Термофор Гейзер" class="portfol-image">
+                            <div class="portfol-descr">
+                                <div class="portfol-left">
+                                    <h3 class="portfol-maintitle">Установка банной печи</h3>
+                                    <span class="portfol-subtitle">Термофор Гейзер</span>
+                                </div>
+                                <div class="portfol-right">
+                                    <span class="portfol-icon"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="portfol-item">
+                        <a href="#">
+                            <img src="img/portfol-image3.jpg" alt="Установка банной печи Термофор Гейзер" class="portfol-image">
+                            <div class="portfol-descr">
+                                <div class="portfol-left">
+                                    <h3 class="portfol-maintitle">Установка банной печи</h3>
+                                    <span class="portfol-subtitle">Термофор Гейзер</span>
+                                </div>
+                                <div class="portfol-right">
+                                    <span class="portfol-icon"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="dotes">
+                    <ul class="dotes-list">
+                        <li class="dotes-item">
+                            <span class="dotes-icon"></span>
+                        </li>
+                        <li class="dotes-item">
+                            <span class="dotes-icon"></span>
+                        </li>
+                        <li class="dotes-item">
+                            <span class="dotes-icon active"></span>
+                        </li>
+                        <li class="dotes-item">
+                            <span class="dotes-icon"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </secticon>
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <script src="js/apps.js"></script>  
+</body>
+</html>
