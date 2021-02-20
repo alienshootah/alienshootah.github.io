@@ -138,9 +138,12 @@ h2 {
     position: sticky;
     top: 0;
     z-index: 9999;
-
+    &-mobile {
+        display: none;
+    }
     &-body {
         align-items: center;
+        margin: 0 -15px;
     }
     &-image {
         margin-bottom: -25px;
@@ -213,6 +216,7 @@ h2 {
     }
     &-drop {
         position: absolute;
+        z-index: 9999;
         right: 0;
         background-color: #ffffff;
         padding: 10px 20px;
@@ -221,6 +225,9 @@ h2 {
         top: 50px;
         text-align: left;
         display: none;
+        &.show {
+            display: block;
+        }
     }
     &-item {
         margin: 15px 0;
@@ -252,6 +259,8 @@ h2 {
     &-body {
         max-width: 800px;
         margin: 0 auto;
+        position: relative;
+        z-index: 200;
     }
 }
 .round {
@@ -331,12 +340,12 @@ h2 {
         max-width: 460px;
         width: 100%;
         position: absolute;
-        left: 30%;
-        bottom: 5%;
+        left: 42%;
+        bottom: 14%;
         text-align: center;
     }
     &-stars {
-        margin-top: 12px;
+        margin: 12px 0;
     }
     &-title {
         font-family: $sfc-bold;
@@ -366,7 +375,7 @@ h2 {
     background-image: url(../img/features-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 40px 0;
+    padding: 90px 0 70px 0;
     margin-top: -10px;
     &-title {
         background: -webkit-linear-gradient(#949494 0%, #4E4D4D 100%);
@@ -377,7 +386,7 @@ h2 {
         display: flex;
         justify-content: center;
         text-align: center;
-        margin: 40px -10px 0 -10px;
+        margin: 60px -10px 0 -10px;
     }
     &-item {
         width: 295px;
@@ -386,6 +395,7 @@ h2 {
         box-shadow: 0px 4px 3px transparent, 0px 4px 15px transparent;
         border-radius: 33px;
         transition: all 0.5s;
+        padding-top: 20px;
         &:hover,
         &:focus,
         &.active {
@@ -412,6 +422,7 @@ h2 {
         font-weight: bold;
         font-size: 20px;
         letter-spacing: 0.0570588em;
+        margin: 35px 0;
     }
     &-descr {
         text-align: left;
@@ -419,7 +430,7 @@ h2 {
         background: -webkit-linear-gradient(180deg, #666565 0%, #4E4D4D 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        padding: 15px 45px;
+        padding: 15px 25px;
         box-sizing: border-box;
         width: 100%;
         text-align: justify;
@@ -431,7 +442,7 @@ h2 {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     color: #ffffff;
     position: relative;
-    padding: 60px 0 200px 0;
+    padding: 60px 0 220px 0;
     &-decor {
         position: absolute;
         background-repeat: no-repeat;
@@ -441,22 +452,22 @@ h2 {
             background-image: url(../img/why-decor-one.png);
             width: 464px;
             height: 464px;
-            right: 109px;
-            top: 225px;
+            right: 119px;
+            top: 185px;
         }
         &-thue {
             background-image: url(../img/why-decor-thue.png);
             width: 390px;
             height: 390px;
-            left: 96px;
-            top: 474px;
+            left: 106px;
+            top: 444px;
         }
         &-three {
             background-image: url(../img/why-decor-three.png);
             width: 418px;
             height: 418px;
-            right: 325px;
-            bottom: 96px;
+            right: 315px;
+            bottom: 66px;
         }
     }
     &-body {
@@ -467,6 +478,9 @@ h2 {
         font-size: 34px;
         line-height: 81px;
         letter-spacing: 0.0570588em;
+        position: relative;
+        top: -16px;
+        left: 2px;
     }
     &-table {
         font-size: 19px;
@@ -478,7 +492,7 @@ h2 {
             border-bottom: 2px solid rgba(255, 255, 255, 0.8);
         }
         & th {
-            min-width: 140px;
+            min-width: 310px;
             font-weight: 600;
             font-size: 22px;
             letter-spacing: 0.0570588em;
@@ -533,7 +547,7 @@ h2 {
     }
 }
 .news {
-    padding: 60px 0 40px 0;
+    padding: 75px 0 20px 0;
     background-image: url(../img/news-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -607,9 +621,9 @@ h2 {
 }
 .reviews {
     background: linear-gradient(135.06deg, #6EE7FF 31%, #1F63F0 90.94%);
-    padding: 50px 0 70px 0;
+    padding: 50px 0 50px 0;
     position: relative;
-    min-height: 921px;
+    min-height: 821px;
     &-body {
         position: relative;
         z-index: 100;
@@ -623,7 +637,7 @@ h2 {
             background-image: url(../img/reviews-decor-one.png);
             width: 403px;
             height: 411px;
-            top: 10%;
+            top: 240px;
             left: 0;
         }
         &-thue {
@@ -651,23 +665,22 @@ h2 {
         &:nth-child(1) {
             width: 432px;
             height: 387px;
-            left: 50px;
-            top: 0;
-
+            left: 90px;
+            top: -10px;
         }
         &:nth-child(2) {
             width: 440px;
             height: 480px;
             background-image: url(../img/reviews-item-bg2.png);
-            right: 150px;
-            top: 100px;
+            right: 120px;
+            top: 20px;
         }
         &:nth-child(3) {
             width: 428px;
             height: 367px;
             background-image: url(../img/reviews-item-bg3.png);
-            left: 250px;
-            top: 500px;
+            left: 265px;
+            top: 415px;
         }
     }
     &-up{
@@ -708,7 +721,7 @@ h2 {
         &-btn {
             position: absolute;
             right: 250px;
-            top: 780px;
+            top: 720px;
             background-color: #FFFFFF;
             box-shadow: 0px 2px 0px #D9D9D9;
             border-radius: 17px;
@@ -745,10 +758,13 @@ h2 {
     border-radius: 40px;
     position: absolute;
     left: 250px;
-    top: 380px;
+    top: 250px;
     font-size: 21px;
     letter-spacing: 0.0820588em;
     color: #4F4F4F;
+    &.show {
+        display: block;
+    }
     &-close {
         width: 50px;
         height: 50px;
@@ -801,7 +817,6 @@ h2 {
         font-size: 21px;
         letter-spacing: 0.0820588em;
         &::placeholder {
-            font-size: 21px;
             letter-spacing: 0.0820588em;
             color: #BDBDBD;
         }
@@ -828,17 +843,17 @@ h2 {
 /* Footer */
 
 .footer {
-    padding: 50px 0;
+    padding: 60px 0;
+    position: relative;
+    z-index: 8888;
     & .col-4 {
-        &:nth-child(1) {
-            padding-left: 200px;
-        }
-        &:nth-child(3) {
-            padding-left: 100px;
-        }
+        padding-left: 150px;
+    }
+    & .col-3 {
+        padding-left: 120px;
     }
     &-logo {
-        margin: 0 auto;
+        margin: -25px auto 0 auto;
     }
     &-copy {
         text-align: center;
@@ -846,7 +861,7 @@ h2 {
         font-size: 18px;
         letter-spacing: 0.0570588em;
         padding: 0;
-        margin: 0;
+        margin: -0;
     }
     &-title {
         font-weight: bold;
