@@ -168,6 +168,20 @@
         bottom: 80px;
         top: auto;
     }
+    /* Blog */
+    .main-body {
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        & .col-9 {
+            width: 100%;
+        }
+        & .col-3 {
+            width: 100%;
+        }
+    }
+    .sidebar {
+        position: static;
+    }
 }
 @media(max-width: 768px) {
     .header {
@@ -264,6 +278,19 @@
     .footer-logo {
         margin-top: 0;
     }
+    /* Blog */
+    .posts-text {
+        flex-wrap: wrap;
+        &-left {
+            width: 100%;
+            text-align: center;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 40px;
+            margin-left: 0;
+        }
+    }
 }
 @media(max-width: 600px) {
     /*
@@ -308,6 +335,32 @@
     .contact {
         left: 0;
         width: 100%;
+    }
+    /* Blog */
+    .main {
+        padding-top: 20px;
+    }
+    .posts-item {
+        margin-bottom: 25px;
+    }
+    .posts-info {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .posts-text-right {
+        margin-top: 10px;
+    }
+    .posts-text {
+        margin: 10px 0;
+    }
+    .posts-text-title {
+        font-size: 24px;
+    }
+    .posts-text-descr {
+        font-size: 18px;
+    }
+    .pagination-item {
+        margin: 5px;
     }
 }
 @media(max-width: 425px) {
@@ -397,5 +450,18 @@
     }
     .footer-copy {
         font-size: 16px;
+    }
+    /* Blog */
+    .pagination-list {
+        font-size: 16px;
+        line-height: 32px
+    }
+    .pagination-link {
+        width: 32px;
+        height: 32px;
+    }
+    .pagination-icon {
+        position: relative;
+        top: 2px;
     }
 }
