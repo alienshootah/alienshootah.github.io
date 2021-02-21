@@ -15,6 +15,3 @@ langButton.addEventListener("click", function() {
 /* Current year */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();
-
-
-

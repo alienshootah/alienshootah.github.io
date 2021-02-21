@@ -1,21 +1,11 @@
 /* Fonts */
 
 $sfc-regular: 'SFCompactRounded-Regular', Arial, Helvetica, sans-serif;
-$sfc-black: 'SFCompactRounded-Black', Arial, Helvetica, sans-serif;
 $sfc-bold: 'SFCompactRounded-Bold', Arial, Helvetica, sans-serif;
-$sfc-heavy: 'SFCompactRounded-Heavy', Arial, Helvetica, sans-serif;
-$sfc-light: 'SFCompactRounded-Light', Arial, Helvetica, sans-serif;
-$sfc-medium: 'SFCompactRounded-Medium', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'SFCompactRounded-Regular';
     src: url(../fonts/SFCompactRounded-Regular.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SFCompactRounded-Black';
-    src: url(../fonts/SFCompactRounded-Black.otf);
     font-weight: normal;
     font-style: normal;
 }
@@ -25,25 +15,6 @@ $sfc-medium: 'SFCompactRounded-Medium', Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-style: bold;
 }
-@font-face {
-    font-family: 'SFCompactRounded-Heavy';
-    src: url(../fonts/SFCompactRounded-Heavy.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SFCompactRounded-Light';
-    src: url(../fonts/SFCompactRounded-Light.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'SFCompactRounded-Medium';
-    src: url(../fonts/SFCompactRounded-Medium.otf);
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 /* Grid */
 
@@ -109,7 +80,9 @@ input {
 }
 
 /* Main styles */
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: $sfc-regular;
     
@@ -252,6 +225,7 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     min-height: 1200px;
     padding: 40px 0;
     box-sizing: border-box;
@@ -377,8 +351,10 @@ h2 {
     background-image: url(../img/features-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     padding: 90px 0 70px 0;
     margin-top: -10px;
+
     &-title {
         background: -webkit-linear-gradient(#949494 0%, #4E4D4D 100%);
         -webkit-background-clip: text;
@@ -529,9 +505,9 @@ h2 {
 .news {
     padding: 75px 0 20px 0;
     background-image: url(../img/news-bg.jpg);
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     &-line {
         display: flex;
         align-items: center;
@@ -1291,6 +1267,8 @@ h2 {
     line-height: 65px;
     letter-spacing: 0.0820588em;
     position: relative;
+    height: 100%;
+    width: 100%;
     &-wrapper {
         background: linear-gradient(222.48deg, #6EE7FF 5.95%, #1F63F0 131.76%);
     }

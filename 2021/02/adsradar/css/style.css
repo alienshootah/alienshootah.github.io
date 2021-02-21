@@ -7,38 +7,10 @@
 }
 
 @font-face {
-  font-family: 'SFCompactRounded-Black';
-  src: url(../fonts/SFCompactRounded-Black.otf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'SFCompactRounded-Bold';
   src: url(../fonts/SFCompactRounded-Bold.otf);
   font-weight: bold;
   font-style: bold;
-}
-
-@font-face {
-  font-family: 'SFCompactRounded-Heavy';
-  src: url(../fonts/SFCompactRounded-Heavy.otf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SFCompactRounded-Light';
-  src: url(../fonts/SFCompactRounded-Light.otf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'SFCompactRounded-Medium';
-  src: url(../fonts/SFCompactRounded-Medium.otf);
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* Grid */
@@ -159,6 +131,10 @@ input {
 }
 
 /* Main styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "SFCompactRounded-Regular", Arial, Helvetica, sans-serif;
 }
@@ -332,6 +308,7 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   min-height: 1200px;
   padding: 40px 0;
   -webkit-box-sizing: border-box;
@@ -469,6 +446,7 @@ h2 {
   background-image: url(../img/features-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   padding: 90px 0 70px 0;
   margin-top: -10px;
 }
@@ -648,9 +626,9 @@ h2 {
 .news {
   padding: 75px 0 20px 0;
   background-image: url(../img/news-bg.jpg);
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .news-line {
@@ -1607,6 +1585,8 @@ h2 {
   line-height: 65px;
   letter-spacing: 0.0820588em;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .about-wrapper {
