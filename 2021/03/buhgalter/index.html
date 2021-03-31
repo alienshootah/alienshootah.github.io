@@ -142,26 +142,35 @@
                                     <form action="/" class="connect-form">
                                         <ul class="connect-list">
                                             <li class="connect-item">
-                                                <span class="connect-icon connect-icon-one"></span>
-                                                <input type="text" class="connect-field" placeholder="Ваше имя">
+                                                <label class="connect-label">
+                                                    <span class="connect-icon connect-icon-one"></span>
+                                                    <input type="text" class="connect-field" placeholder="Ваше имя">
+                                                </label>
                                             </li>
                                             <li class="connect-item">
-                                                <span class="connect-icon connect-icon-thue"></span>
-                                                <input type="email" class="connect-field" placeholder="Ваш Email">
+                                                <label class="connect-label">
+                                                    <span class="connect-icon connect-icon-thue"></span>
+                                                    <input type="email" class="connect-field" placeholder="Ваш Email" required>
+                                                </label>
                                             </li>
                                             <li class="connect-item">
-                                                <span class="connect-icon connect-icon-three"></span>
-                                                <input type="number" class="connect-field" placeholder="Ваш телефон" required>
+                                                <label class="connect-label">
+                                                    <span class="connect-icon connect-icon-three"></span>
+                                                    <input type="number" class="connect-field" placeholder="Ваш телефон" required>
+                                                </label>
                                             </li>
                                             <li class="connect-item">
-                                                <button type="text" class="connect-field connect-field-doc">
-                                                    <span class="connect-icon connect-icon-four connect-icon-doc"></span>
-                                                    <span class="connect-text">Прикрепить документ</span>
-                                                </button>
+                                                <label class="connect-label">
+                                                    <span class="connect-icon connect-icon-four"></span>
+                                                    <input type="file" class="connect-field connect-field-document" value="Прикрепить документ" multiple>
+                                                    <span class="connect-document">Прикрепить документ</span>
+                                                </label>
                                             </li>
-                                            <li class="connect-item">
-                                                <span class="connect-icon connect-icon-five"></span>
-                                                <textarea type="text" class="connect-field" placeholder="Сообщение"></textarea>
+                                            <li class="connect-item connect-item-full">
+                                                <label class="connect-label">
+                                                    <span class="connect-icon connect-icon-five"></span>
+                                                    <textarea type="text" class="connect-field" placeholder="Сообщение"></textarea>
+                                                </label>
                                             </li>
                                         </ul>
                                         <div class="connect-end">
@@ -182,7 +191,7 @@
                 <li class="numbers-item">
                     <div class="numbers-body">
                         <div class="numbers-picture">
-                            <span class="numbers-text">8</span>
+                            <span class="numbers-text numbers-text-one">8</span>
                         </div>
                         <div class="numbers-info">
                             <div class="numbers-subtitle">ЛЕТ ОПЫТА</div>
@@ -193,7 +202,7 @@
                 <li class="numbers-item">
                     <div class="numbers-body">
                         <div class="numbers-picture">
-                            <span class="numbers-text">11</span>
+                            <span class="numbers-text numbers-text-thue">11</span>
                         </div>
                         <div class="numbers-info">
                             <div class="numbers-subtitle">БУХГАЛТЕРОВ</div>
@@ -204,7 +213,7 @@
                 <li class="numbers-item">
                     <div class="numbers-body">
                         <div class="numbers-picture">
-                            <span class="numbers-text">240</span>
+                            <span class="numbers-text numbers-text-three">240</span>
                         </div>
                         <div class="numbers-info">
                             <div class="numbers-subtitle">КЛИЕНТОВ</div>
@@ -215,7 +224,7 @@
                 <li class="numbers-item">
                     <div class="numbers-body">
                         <div class="numbers-picture">
-                            <span class="numbers-text">0</span>
+                            <span class="numbers-text numbers-text-four">0</span>
                         </div>
                         <div class="numbers-info">
                             <div class="numbers-subtitle">РУБЛЕЙ</div>
@@ -288,6 +297,15 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="team-item">
+                            <div class="team-wrap">
+                                <img src="img/team-img-thue.jpg" alt="" class="team-img">
+                                <div class="team-descr">
+                                    <div class="team-descr-name">Петрова Ирина</div>
+                                    <span class="team-descr-work">Бухгалтер</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -318,29 +336,31 @@
             </div>
             <form action="/" class="online-form">
                 <div class="row online-body">
-                    <div class="col-4">
-                        <div class="online-title">Ваша система налогооблажания</div>
-                        <ul class="online-list">
-                            <li class="online-item">
-                                <label class="online-label">
-                                    <input type="radio" class="online-radio">
-                                    <span class="online-text">ОСН</span>
-                                </label>
-                            </li>
-                            <li class="online-item">
-                                <label class="online-label">
-                                    <input type="radio" class="online-radio">
-                                    <span class="online-text">УСН 15%</span>
-                                </label>
-                            </li>
-                            <li class="online-item">
-                                <label class="online-label">
-                                    <input type="radio" class="online-radio">
-                                    <span class="online-text">УСН 6%</span>
-                                </label>
-                            </li>
-                        </ul>
-                        <div class="online-title">Особенности</div>
+                    <div class="col-5">
+                        <div class="online-radios">
+                            <div class="online-subtitle">Ваша система налогооблажания</div>
+                            <ul class="online-list">
+                                <li class="online-item">
+                                    <label class="online-label" for="online-one">
+                                        <input type="radio" id="online-one" name="yoursys" class="online-radio" value="ОСН">
+                                        <span class="online-text online-text-radio">ОСН</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label" for="online-thue">
+                                        <input type="radio" id="online-thue" name="yoursys" class="online-radio"  value="УСН 15%" checked>
+                                        <span class="online-text online-text-radio">УСН 15%</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label" for="online-three">
+                                        <input type="radio" id="online-three" name="yoursys" class="online-radio" value="УСН 6%">
+                                        <span class="online-text online-text-radio">УСН 6%</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="online-subtitle">Особенности</div>
                         <div class="online-wrap">
                             <ul class="online-list">
                                 <li class="online-item">
@@ -351,7 +371,43 @@
                                 </li>
                                 <li class="online-item">
                                     <label class="online-label">
+                                        <input type="checkbox" class="online-check" checked>
+                                        <span class="online-text">Экспортные/импортные/валютные операции, до 10 операций в квартал</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label">
                                         <input type="checkbox" class="online-check">
+                                        <span class="online-text">Экспортные/импортные/валютные операции, 10-30 операций в квартал</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label">
+                                        <input type="checkbox" class="online-check">
+                                        <span class="online-text">Использование льгот /  раздельный учет</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label">
+                                        <input type="checkbox" class="online-check" checked>
+                                        <span class="online-text">Экспортные/импортные/валютные операции, до 10 операций в квартал</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label">
+                                        <input type="checkbox" class="online-check">
+                                        <span class="online-text">Экспортные/импортные/валютные операции, 10-30 операций в квартал</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label">
+                                        <input type="checkbox" class="online-check">
+                                        <span class="online-text">Использование льгот /  раздельный учет</span>
+                                    </label>
+                                </li>
+                                <li class="online-item">
+                                    <label class="online-label">
+                                        <input type="checkbox" class="online-check" checked>
                                         <span class="online-text">Экспортные/импортные/валютные операции, до 10 операций в квартал</span>
                                     </label>
                                 </li>
@@ -364,12 +420,18 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-8">
+                    <div class="col-7">
                         <div class="online-single">
-                            <div class="online-title">Количество операций</div>
+                            <div class="online-subtitle">Количество операций</div>
                             <div class="measure">
-                                <input type="text" class="measure-field">
-                                <ul class="measure-line">
+                                <!--
+                                    <input type="range" class="measure-field">
+                                -->
+                                <div class="range-wrap">
+                                    <input type="range" class="range">
+                                    <output class="bubble"></output>
+                                </div>
+                                <ul class="measure-list">
                                     <li class="measure-item">
                                         <span class="measure-line"></span>
                                         <span class="measure-num">до 10</span>
@@ -406,10 +468,16 @@
                             </div>
                         </div>
                         <div class="online-single">
-                            <div class="online-title">Количество сотрудников</div>
+                            <div class="online-subtitle">Количество сотрудников</div>
                             <div class="measure">
-                                <input type="text" class="measure-field">
-                                <ul class="measure-line">
+                                <!--
+                                    <input type="text" class="measure-field">
+                                -->
+                                <div class="range-wrap">
+                                    <input type="range" class="range">
+                                    <output class="bubble"></output>
+                                </div>
+                                <ul class="measure-list">
                                     <li class="measure-item">
                                         <span class="measure-line"></span>
                                         <span class="measure-num">0</span>
@@ -468,7 +536,7 @@
                                 <div class="col-7">
                                     <div class="result-buttons">
                                         <button class="result-btn">Оставить заявку</button>
-                                        <button class="result-btn result-btn-wtile">Отправить расчет на почту</button>
+                                        <button class="result-btn result-btn-white">Отправить расчет на почту</button>
                                     </div>
                                 </div>
                             </div>
@@ -482,24 +550,43 @@
         <div class="content">
             <div class="watch-title">Видео консультации</div>
             <div class="row watch-body">
-                <div class="col-6">Видео 1</div>
-                <div class="col-6">Видео 2</div>
+                <div class="col-6">
+                    <div class="watch-vid">
+                        <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="watch-vid">
+                        <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
+                    </div>
+                </div>
             </div>
             <div class="watch-small">
-                <div class="watch-subtitle">
-                    <span class="watch-subtitle-small">другие</span> видео
+                <div class="diplom-title watch-subtitle">
+                    <span class="diplom-small">другие</span> видео
                 </div>
+                <!--
+                    <div class="watch-subtitle">
+                        <span class="watch-subtitle-small">другие</span> видео
+                    </div>
+                -->
                 <ul class="watch-list">
                     <li class="watch-item">
-                        Видео 1
+                        <div class="watch-vid">
+                            <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
+                        </div>
                         <div class="watch-descr">Видео: налогооблажание</div>
                     </li>
                     <li class="watch-item">
-                        Видео 2
+                        <div class="watch-vid">
+                            <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
+                        </div>
                         <div class="watch-descr">Видео: налогооблажание</div>
                     </li>
                     <li class="watch-item">
-                        Видео 3
+                        <div class="watch-vid">
+                            <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
+                        </div>
                         <div class="watch-descr">Видео: налогооблажание</div>
                     </li>
                 </ul>
@@ -886,5 +973,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/apps.js"></script>
 </body>
 </html>
