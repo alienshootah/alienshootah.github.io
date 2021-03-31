@@ -546,7 +546,7 @@
             </form>
         </div>
     </section>
-    <section class="watch">
+    <section class="watch" style="display: none;">
         <div class="content">
             <div class="watch-title">Видео консультации</div>
             <div class="row watch-body">
@@ -657,31 +657,38 @@
     <section class="free">
         <div class="content">
             <div class="free-title">
-                <span class="free-title-small">Консультация</span> Бесплатно
+                Консультация <span class="free-title-big">Бесплатно</span>
             </div>
             <div class="free-top">
                 <form action="/" class="free-form">
                     <ul class="free-list">
                         <li class="free-item">
-                            <span class="free-icon free-icon-one"></span>
-                            <input type="text" class="free-field" placeholder="Ваше имя">
+                            <label class="connect-label">
+                                <span class="connect-icon connect-icon-one"></span>
+                                <input type="text" class="connect-field" placeholder="Ваше имя">
+                            </label>
                         </li>
                         <li class="free-item">
-                            <span class="free-icon free-icon-thue"></span>
-                            <input type="email" class="free-field" placeholder="Ваш Email">
+                            <label class="connect-label">
+                                <span class="connect-icon connect-icon-thue"></span>
+                                <input type="email" class="connect-field" placeholder="Ваш Email" required>
+                            </label>
                         </li>
                         <li class="free-item">
-                            <span class="free-icon free-icon-three"></span>
-                            <input type="number" class="free-field" placeholder="Ваш телефон">
+                            <label class="connect-label">
+                                <span class="connect-icon connect-icon-three"></span>
+                                <input type="number" class="connect-field" placeholder="Ваш телефон" required>
+                            </label>
                         </li>
                         <li class="free-item">
-                            <button class="free-file">
-                                <span class="free-icon free-icon-four"></span>
-                                <span class="free-text">Прикрепить документ</span>
-                            </button>
+                            <label class="connect-label">
+                                <span class="connect-icon connect-icon-four"></span>
+                                <input type="file" class="connect-field connect-field-document" value="Прикрепить документ" multiple>
+                                <span class="connect-document">Прикрепить документ</span>
+                            </label>
                         </li>
                         <li class="free-item">
-                            <button class="free-btn">Отправить заявку</button>
+                            <button class="connect-btn">Отправить заявку</button>
                         </li>
                     </ul>
                 </form>
@@ -711,8 +718,8 @@
             <div class="useful">
                 <ul class="useful-list">
                     <li class="useful-item">
-                        <span class="useful-descr">Мессендеры:</span>
-                        <div class="social">
+                        <span class="phones-pre useful-descr">Мессендеры:</span>
+                        <div class="social useful-social">
                             <ul class="social-list">
                                 <li class="social-item">
                                     <a href="#"><span class="social-icon social-icon-one"></span></a>
@@ -730,7 +737,7 @@
                         </div>
                     </li>
                     <li class="useful-item">
-                        <span class="useful-descr">Полезные ссылки:</span>
+                        <span class="phones-pre useful-descr">Полезные ссылки:</span>
                         <div class="helper">
                             <ul class="helper-list">
                                 <li class="helper-item">
@@ -767,12 +774,14 @@
     <section class="consult">
         <div class="content">
             <div class="consult-title">on-line запись на консультацию</div>
-            <img src="img/consult-image.jpg" alt="" class="consult-image">
+            <div class="text-center">
+                <img src="img/consult-image.jpg" alt="" class="consult-image">
+            </div>
         </div>
     </section>
     <section class="moreus">
         <div class="content">
-            <div class="moreus-title"></div>
+            <div class="moreus-title">мы в социальных сетях</div>
             <ul class="moreus-list">
                 <li class="moreus-item">
                     <div class="moreus-elem">
@@ -811,7 +820,9 @@
                 <div class="moreus-tab"></div>
                 <div class="moreus-tab">
                     <div class="live">
-                        <div class="live-title"></div>
+                        <div class="diplom-title live-title">
+                            <span class="diplom-small">Авангард</span> live
+                        </div>
                         <ul class="live-list">
                             <li class="live-item">
                                 <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
@@ -883,15 +894,15 @@
     <footer class="footer">
         <div class="content">
             <div class="row footer-top">
-                <div class="col-3">
+                <div class="col-2">
                     <div class="footer-logo">
                         <img src="img/footer-logo-image.png" alt="" class="footer-logo-image">
                         <span class="footer-logo-text">БУХГАЛТЕРСКОЕ ОБСЛУЖИВАНИЕ</span>
                     </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <div class="footer-title">ПРИСОЕДИНЯЙТЕСЬ К НАМ В СОЦИАЛЬНЫХ СЕТЯХ</div>
-                    <ul class="social-list">
+                    <ul class="social-list footer-social">
                         <li class="social-item">
                             <a href="#"><span class="social-icon social-icon-one"></span></a>
                         </li>
@@ -901,9 +912,15 @@
                         <li class="social-item">
                             <a href="#"><span class="social-icon social-icon-three"></span></a>
                         </li>
+                        <li class="social-item">
+                            <a href="#"><span class="social-icon social-icon-five"></span></a>
+                        </li>
+                        <li class="social-item">
+                            <a href="#"><span class="social-icon social-icon-six"></span></a>
+                        </li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                     <div class="footer-title">Услуги</div>
                     <ul class="footer-list">
                         <li class="footer-item">
@@ -937,7 +954,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                     <div class="adress">
                         <ul class="adress-list">
                             <li class="adress-item">
@@ -950,24 +967,29 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="footer-more">
-                        <button class="footer-btn">Онлайн калькулятор</button>
-                        <button class="footer-btn footer-btn-white">Заказ обратного звонка</button>
+                    <div class="adress-more">
+                        <button class="adress-btn">Онлайн калькулятор</button>
+                        <button class="adress-btn adress-btn-white">Заказ обратного звонка</button>
                     </div>
                 </div>
             </div>
-            <div class="row footer-down">
-                <div class="col-6">
-                    Copyright © Авангард Авторские права защищены 2013 - 
-                    <span class="footer-date">2021</span> г. | 
-                    <a href="" class="footer-down-link">Карта сайта</a>
-                </div>
-                <div class="col-6 text-right">
-                    <div class="footer-copy">
-                        <span class="footer-copy-text">Разработка, наполнение сайта</span>
-                        <a href="#">
-                            <img src="img/footer-copy-image.png" alt="" class="footer-copy-image">
-                        </a>
+           
+        </div>
+        <div class="footer-down">
+            <div class="content">
+                <div class="row footer-down-body">
+                    <div class="col-6">
+                        Copyright © Авангард Авторские права защищены 2013 - 
+                        <span class="footer-date">2021</span> г. | 
+                        <a href="#" class="footer-down-link">Карта сайта</a>
+                    </div>
+                    <div class="col-6 text-right">
+                        <div class="footer-copy">
+                            <span class="footer-copy-text">Разработка, наполнение сайта</span>
+                            <a href="#">
+                                <img src="img/footer-copy-image.png" alt="" class="footer-copy-image">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
