@@ -1,3 +1,76 @@
+/* Dropdown */
+const menuBtn = document.querySelector(".nav-drop-btn");
+menuBtn.addEventListener("click", function() {
+  document.querySelector(".drop-body").classList.toggle("show");
+});
+
+/* Current year */
+year = document.querySelector('.footer-date');
+year.innerHTML = new Date().getFullYear();
+
+/* Sliders */
+$('.promo-list').slick({
+  dots: false,
+  arrows: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  adaptiveHeight: true,
+  /*
+  responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          dots: false
+        }
+      }
+    ]
+    */
+});
+$('.diplom-list').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  variableWidth: true,
+  responsive: [
+    {
+      breakpoint: 1430,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 425,
+      settings: {
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+/* Tabs */
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabs-item");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tabs-btn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+
 // Custom range
 const allRanges = document.querySelectorAll(".range-wrap");
 allRanges.forEach(wrap => {
