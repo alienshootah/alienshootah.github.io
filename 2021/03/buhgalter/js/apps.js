@@ -56,11 +56,11 @@ $('.diplom-list').slick({
 /* Tabs */
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabs-item");
+  tabcontent = document.getElementsByClassName("moreus-tab");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tabs-btn");
+  tablinks = document.getElementsByClassName("moreus-btn");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
@@ -71,7 +71,7 @@ function openTab(evt, tabName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-// Custom range
+/* Custom range
 const allRanges = document.querySelectorAll(".range-wrap");
 allRanges.forEach(wrap => {
   const range = wrap.querySelector(".range");
@@ -90,6 +90,28 @@ function setBubble(range, bubble) {
   const newVal = Number(((val - min) * 100) / (max - min));
   bubble.innerHTML = val;
 
-  // Sorta magic numbers based on size of the native UI thumb
+ 
   bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
 }
+*/
+
+// Filters: Range
+var slider = document.getElementById("online-range");
+var sliderBig = document.getElementById("online-range-big");
+var output = document.getElementById("online-value");
+output.innerHTML = "0";
+
+slider.oninput = function() {
+    output.innerHTML = this.value;
+}
+
+slider.addEventListener("mousemove", function() {
+    var x = slider.value;
+    var color = 'linear-gradient(90deg, rgb(0, 168, 236)' + x +'%, rgb(223, 226, 233)' + x + '%)';
+    slider.style.background = color;
+})
+sliderBig.addEventListener("mousemove", function() {
+  var x = sliderBig.value;
+  var color = 'linear-gradient(90deg, rgb(0, 168, 236)' + x +'%, rgb(223, 226, 233)' + x + '%)';
+  sliderBig.style.background = color;
+})

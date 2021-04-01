@@ -550,15 +550,11 @@
                     </div>
                     <div class="col-7">
                         <div class="online-single">
-                            <div class="online-subtitle">Количество операций</div>
+                            <div class="online-subtitle">
+                                <span class="online-subtitle-text">Количество операций</span> 
+                             </div>
                             <div class="measure">
-                                <!--
-                                    <input type="range" class="measure-field">
-                                -->
-                                <div class="range-wrap">
-                                    <input type="range" class="range">
-                                    <output class="bubble"></output>
-                                </div>
+                                <input type="range" min="1" max="100" step="1" id="online-range-big" class="measure-field">
                                 <ul class="measure-list">
                                     <li class="measure-item">
                                         <span class="measure-line"></span>
@@ -596,15 +592,12 @@
                             </div>
                         </div>
                         <div class="online-single">
-                            <div class="online-subtitle">Количество сотрудников</div>
+                            <div class="online-subtitle online-subtitle-full">
+                               <span class="online-subtitle-text">Количество сотрудников</span> 
+                               <span class="online-subtitle-num" id="online-value"></span> 
+                            </div>
                             <div class="measure">
-                                <!--
-                                    <input type="text" class="measure-field">
-                                -->
-                                <div class="range-wrap">
-                                    <input type="range" class="range">
-                                    <output class="bubble"></output>
-                                </div>
+                                <input type="range" min="1" max="100" step="1" id="online-range" class="measure-field">
                                 <ul class="measure-list">
                                     <li class="measure-item">
                                         <span class="measure-line"></span>
@@ -693,12 +686,13 @@
                 <div class="diplom-title watch-subtitle">
                     <span class="diplom-small">другие</span> видео
                 </div>
-                <!--
-                    <div class="watch-subtitle">
-                        <span class="watch-subtitle-small">другие</span> видео
-                    </div>
-                -->
                 <ul class="watch-list">
+                    <li class="watch-item">
+                        <div class="watch-vid">
+                            <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
+                        </div>
+                        <div class="watch-descr">Видео: налогооблажание</div>
+                    </li>
                     <li class="watch-item">
                         <div class="watch-vid">
                             <div class="youtube-embed-wrapper" style="position:relative;padding-bottom:56.25%;padding-top:30px;height:0;overflow:hidden"><iframe allowfullscreen="" frameborder="0" height="360" src="https://www.youtube.com/embed/0km8cmdcdCw" style="position:absolute;top:0;left:0;width:100%;height:100%" width="640"></iframe></div>
@@ -913,7 +907,7 @@
             <ul class="moreus-list">
                 <li class="moreus-item">
                     <div class="moreus-elem">
-                        <button class="moreus-btn">
+                        <button class="moreus-btn" onclick="openTab(event, 'Instagram')">
                             <span class="moreus-icon moreus-icon-one"></span>
                             <span class="moreus-text">Instagram</span>
                         </button>
@@ -921,7 +915,7 @@
                 </li>
                 <li class="moreus-item">
                     <div class="moreus-elem">
-                        <button class="moreus-btn">
+                        <button class="moreus-btn" onclick="openTab(event, 'Vkontakte')" id="defaultOpen">
                             <span class="moreus-icon moreus-icon-thue"></span>
                             <span class="moreus-text">ВКонтакте</span>
                         </button>
@@ -929,7 +923,7 @@
                 </li>
                 <li class="moreus-item">
                     <div class="moreus-elem">
-                        <button class="moreus-btn">
+                        <button class="moreus-btn" onclick="openTab(event, 'Facebook')">
                             <span class="moreus-icon moreus-icon-three"></span>
                             <span class="moreus-text">Facebook</span>
                         </button>
@@ -937,7 +931,7 @@
                 </li>
                 <li class="moreus-item">
                     <div class="moreus-elem">
-                        <button class="moreus-btn">
+                        <button class="moreus-btn" onclick="openTab(event, 'Odnoklasniki')">
                             <span class="moreus-icon moreus-icon-four"></span>
                             <span class="moreus-text">Однокласники</span>
                         </button>
@@ -945,8 +939,8 @@
                 </li>
             </ul>
             <div class="moreus-tabs">
-                <div class="moreus-tab"></div>
-                <div class="moreus-tab">
+                <div class="moreus-tab" id="Instagram">Instagram</div>
+                <div class="moreus-tab" id="Vkontakte">
                     <div class="live">
                         <div class="diplom-title live-title">
                             <span class="diplom-small">Авангард</span> live
@@ -961,11 +955,29 @@
                             <li class="live-item">
                                 <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
                             </li>
+                            <li class="live-item">
+                                <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
+                            </li>
+                            <li class="live-item">
+                                <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
+                            </li>
+                            <li class="live-item">
+                                <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
+                            </li>
+                            <li class="live-item">
+                                <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
+                            </li>
+                            <li class="live-item">
+                                <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
+                            </li>
+                            <li class="live-item">
+                                <a href="#"><img src="img/live-image.jpg" alt="" class="live-image"></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div class="moreus-tab"></div>
-                <div class="moreus-tab"></div>
+                <div class="moreus-tab" id="Facebook">Facebook</div>
+                <div class="moreus-tab" id="Odnoklasniki">Однокласники</div>
             </div>
         </div>
     </section>
