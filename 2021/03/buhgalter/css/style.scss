@@ -81,9 +81,11 @@ button {
     border: 0;
     cursor: pointer;
     outline: none;
+    font-family: $roboto-regular;
 }
 input {
     box-sizing: border-box;
+    font-family: $roboto-regular;
 }
 
 /* Main styles */
@@ -114,6 +116,9 @@ body {
         margin: 10px 0;
     }
     &-mail {
+        &-mobile {
+            display: none;
+        }
         font-size: 16px;
         line-height: 16px;
         display: flex;
@@ -272,7 +277,7 @@ body {
         display: inline-block;
         width: 14px;
         position: relative;
-        top: 3px;
+        top: 0;
         margin-right: 3px;
         &-item {
             display: block;
@@ -289,7 +294,6 @@ body {
         justify-content: space-between;
         position: relative;
         font-family: $roboto-medium;
-        text-align: center;
     }
     &-link {
         display: block;
@@ -302,6 +306,7 @@ body {
         padding: 15px 50px;
         transition: all 0.5s;
         font-family: $roboto-medium;
+        text-align: center;
         &:hover,
         &:focus {
             background-color: #00A8EC;
@@ -329,6 +334,7 @@ body {
     &-drop {
         &-btn {
             display: flex;
+            align-items: center;
         }
     }
 }
@@ -342,6 +348,7 @@ body {
         width: 100%;
         background-color: #ffffff;
         box-shadow: 0px 14px 24px rgba(0, 0, 0, 0.25);
+        font-family: $roboto-regular;
         &.show {
             display: block;
         }
@@ -360,6 +367,7 @@ body {
         list-style-type: disc;
         color: #00A8EC;
         margin: 10px 40px 10px 20px;
+        font-family: $roboto-regular;
     }
     &-link {
         color: #2E394D;
@@ -598,6 +606,12 @@ body {
     &-item {
         margin: 10px 0;
         width: 20%;
+        &:nth-child(2) .numbers-text {
+            letter-spacing: -0.17em;
+        }
+        &:nth-child(3) .numbers-text {
+            letter-spacing: -0.01em;
+        }
     }
     &-body {
         display: flex;
@@ -643,7 +657,7 @@ body {
         }
         &-four {
             &::before {
-                left: -11px;
+                left: -9px;
             }
         }
     }
@@ -1252,6 +1266,9 @@ body {
             }
         }
     }
+    &-descr {
+        text-align: left;
+    }
 }
 .free {
     background-position: center;
@@ -1292,6 +1309,8 @@ body {
         width: 18.5%;
         & .connect-btn {
             width: 100%;
+            height: 47px;
+            padding: 15px 20px;
         }
     }
 }
@@ -1387,6 +1406,8 @@ body {
         width: 100%;
         text-align: left;
         box-sizing: border-box;
+        display: flex;
+        align-items: center;
         &:hover,
         &:focus {
             background-color: #C03292;
@@ -1400,7 +1421,7 @@ body {
         background-repeat: no-repeat;
         margin-right: 20px;
         position: relative;
-        top: 3px;
+        top: 0;
         &-one {
             background-image: url(../img/helper-icon-one.png);
         }
@@ -1433,6 +1454,11 @@ body {
             background-color: #2E394D;
             margin-right: 25px;
         }
+    }
+    &-image {
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
     }
 }
 .moreus {
@@ -1569,7 +1595,7 @@ body {
     }
 }
 .price {
-    padding: 60px;
+    padding: 60px 0;
     &-title {
         margin: 30px 0;
         font-weight: bold;
@@ -1802,7 +1828,7 @@ body {
     -webkit-font-smoothing: antialiased; 
     -moz-osx-font-smoothing: grayscale; 
     transition: all 0.5s;
-}   
+}
 
 .slick-prev:before { content: url(../img/promo-arrow-left-w.png); }
 [dir="rtl"] .slick-prev:before { content: url(../img/promo-arrow-right-w.png); }
@@ -1910,14 +1936,4 @@ body {
 .slick-dots li button:before {
     content: none;
 }
-
-/*
-.slick-dots li.slick-active button:before,
-    .slick-dots li:hover button:before,
-    .slick-dots li:focus button:before {
-        border: 1px solid #0097B3;
-        opacity: 1;
-        content: '';
-    } 
-*/
   
