@@ -78,13 +78,24 @@ slider.oninput = function() {
     output.innerHTML = this.value;
 }
 
-slider.addEventListener("mousemove", function() {
+slider.addEventListener("touchmove", function() {
     var x = slider.value;
     var color = 'linear-gradient(90deg, rgb(0, 168, 236)' + x +'%, rgb(223, 226, 233)' + x + '%)';
     slider.style.background = color;
 })
-sliderBig.addEventListener("mousemove", function() {
+sliderBig.addEventListener("touchmove", function() {
   var x = sliderBig.value;
   var color = 'linear-gradient(90deg, rgb(0, 168, 236)' + x +'%, rgb(223, 226, 233)' + x + '%)';
   sliderBig.style.background = color;
+})
+
+slider.addEventListener("mousemove", function() {
+  var x = slider.value;
+  var color = 'linear-gradient(90deg, rgb(0, 168, 236)' + x +'%, rgb(223, 226, 233)' + x + '%)';
+  slider.style.background = color;
+})
+sliderBig.addEventListener("mousemove", function() {
+var x = sliderBig.value;
+var color = 'linear-gradient(90deg, rgb(0, 168, 236)' + x +'%, rgb(223, 226, 233)' + x + '%)';
+sliderBig.style.background = color;
 })

@@ -98,14 +98,8 @@
     .team-info {
         right: -100px;
     }
-    .diplom-list {
-        width: 90%;
-    }
     .helper-btn {
         height: 60px;
-    }
-    .live-list {
-        width: 92%;
     }
     .footer-top-item {
         &:nth-child(1) {
@@ -223,6 +217,7 @@
         }
         &-title {
             font-size: 40px;
+            line-height: 47px;
         }
     }
     .connect {
@@ -241,6 +236,36 @@
         &-end {
             text-align: center;
         }
+    }
+    .diplom {
+        &-list {
+            width: 92%;
+        }
+        &-image {
+            height: 270px;
+        }
+        & .diplom-title {
+            top: 120px;
+            left: -200px;
+        }
+    }
+    .diplom-title {
+        font-size: 60px;
+        line-height: 83px;
+    }
+    .diplom-small {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .watch-subtitle {
+        left: -145px;
+        top: 75px;
+    }
+    .watch-body {
+        margin-bottom: 90px;
+    }
+    .watch-list {
+        width: 90%;
     }
     .numbers {
         &-list {
@@ -270,6 +295,7 @@
     }
     .team {
         margin-top: 0;
+        margin-bottom: 100px;
         &-body {
             display: block;
             & .col-6 {
@@ -287,9 +313,6 @@
             width: 99%;
         }
     }
-    .diplom-list {
-        width: 85%;
-    }
     .wecan-item {
         width: 44%;
     }
@@ -304,7 +327,11 @@
             &-text {
                 display: none;
             }
+            &-mobile {
+                display: inline-block;
+            }
         }
+        
         &-top {
             flex-wrap: wrap;
             padding: 20px 0;
@@ -328,5 +355,104 @@
     }
 }
 @media(max-width: 768px) {
-    
+    .header {
+        & .social-icon {
+            width: 34px;
+            height: 34px;
+            &:after {
+                mask-size: contain;
+                width: 14px;
+                height: 14px;
+            }
+        }
+        &-number {
+            font-size: 14px;
+            line-height: 16px;
+            &-icon {
+                width: 9px;
+                height: 9px;
+                background-image: url(../img/header-number-mobile.png);
+                margin-right: 10px;
+            }
+        }
+        &-mail {
+            font-size: 14px;
+            &-icon {
+                width: 12px;
+                height: 12px;
+                background-image: url(../img/header-mail-mobile.png);
+                margin-right: 10px;
+            }
+        }
+    }
+    .drop-list {
+        margin: 10px 60px 10px 1px;
+        font-size: 14px;
+        line-height: 34px;
+    }
+    .title {
+        margin-left: 130px;
+        position: relative;
+        &:before {
+            width: 120px;
+            position: absolute;
+            left: -130px;
+            top: 21px;
+        }
+    }
+    .watch-title:before {
+        left: auto;
+        right: 350px;
+    }
+    .promo {
+        background-image: url(../img/promo-bg-mobile.jpg);
+    }
+    .better {
+        padding: 30px 0;
+        &-list {
+            margin: 0 -14px;
+        }
+        &-item {
+            margin: 20px 24px;
+            width: 25%;
+        }
+    }
+    .team {
+        &-title {
+            width: 320px;
+            margin-left: auto;
+            text-align: left;
+            &:before {
+                left: -135px;
+            }
+        }
+        &-info {
+            right: 90px;
+        }
+    }
+    .online {
+        padding: 30px 0;
+        &-body {
+            display: block;
+            & .online-left,
+            & .online-right {
+                width: 100%;
+            }
+            & .online-right {
+                margin-top: 40px;
+            }
+        }
+    }
+    .measure-list {
+        margin-bottom: 40px;
+    }
+    .result {
+        margin-top: 0;
+        &-btn {
+            padding: 14px 30px;
+        }
+    }
+    .watch {
+        margin: 50px 0 20px 0;
+    }
 }
