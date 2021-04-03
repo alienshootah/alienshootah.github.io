@@ -1,3 +1,9 @@
+/* Mobile btn */
+const mobileBtn = document.querySelector(".mobile-btn");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".nav").classList.toggle("show");
+});
+
 /* Dropdown */
 const menuBtn = document.querySelector(".nav-drop-btn");
 menuBtn.addEventListener("click", function() {
@@ -40,9 +46,8 @@ $('.diplom-list').slick({
       }
     },
     {
-      breakpoint: 425,
+      breakpoint: 740,
       settings: {
-        dots: false,
         slidesToShow: 1,
         slidesToScroll: 1
       }
