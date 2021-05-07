@@ -43,7 +43,7 @@
                                 </div>
                             </div>
                             <div class="header-consult">
-                                <button class="header-consult-btn">Консультация по поступлению</button>
+                                <button class="header-consult-btn" id="myBtn">Консультация по поступлению</button>
                             </div>
                         </div>
                     </div>
@@ -54,8 +54,8 @@
             <div class="content">
                 <ul class="menu-list">
                     <li class="menu-item menu-haschild">
-                        <a href="#" class="menu-link">Колледжи</a>
-                        <div class="drop" style="display: none;">
+                        <button onclick="myDrop1()" class="menu-link">Колледжи</button>
+                        <div class="drop" id="myDrop1">
                             <div class="drop-body">
                                 <ul class="drop-list">
                                     <li class="drop-item"><a href="#" class="drop-link">Колледжи</a></li>
@@ -69,8 +69,8 @@
                         </div>
                     </li>
                     <li class="menu-item menu-haschild">
-                        <a href="#" class="menu-link">ВУЗы</a>
-                        <div class="drop">
+                        <button onclick="myDrop2()" class="menu-link">ВУЗы</button>
+                        <div class="drop" id="myDrop2">
                             <div class="drop-body">
                                 <ul class="drop-list">
                                     <li class="drop-item"><a href="#" class="drop-link">Московский Международный Университет</a></li>
@@ -87,8 +87,8 @@
                         <a href="#" class="menu-link">Среднее проф. образование</a>
                     </li>
                     <li class="menu-item menu-haschild">
-                        <a href="#" class="menu-link">Высшее образование</a>
-                        <div class="drop" style="display: none;">
+                        <button onclick="myDrop3()" class="menu-link">Высшее образование</button>
+                        <div class="drop" id="myDrop3">
                             <div class="drop-body">
                                 <ul class="drop-list">
                                     <li class="drop-item"><a href="#" class="drop-link">Высшее образование</a></li>
@@ -113,13 +113,13 @@
         <section class="promo">
             <div class="content">
                 <div class="row promo-body">
-                    <div class="col-6">
+                    <div class="col-7">
                         <h1 class="promo-title">Подберем программу обучения и поможем поступить в престижный ВУЗ или колледж</h1>
                         <ul class="promo-list">
-                            <li class="promo-item">Дистанционная форма обучения.</li>
-                            <li class="promo-item">Процесс поступления займёт не более 7 дней.</li>
-                            <li class="promo-item">По окончании обучения Вы получите диплом гос. образца!</li>
-                            <li class="promo-item">Наши услуги для Вас 0 руб.!</li>
+                            <li class="promo-item">- Дистанционная форма обучения.</li>
+                            <li class="promo-item">- Процесс поступления займёт не более 7 дней.</li>
+                            <li class="promo-item">- По окончании обучения Вы получите диплом гос. образца!</li>
+                            <li class="promo-item">- Наши услуги для Вас 0 руб.!</li>
                         </ul>
                         <div class="promo-more">
                             <a href="#" class="promo-more-link">
@@ -128,8 +128,10 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <img src="img/promo-image.png" alt="" class="promo-image">
+                    <div class="col-5">
+                        <div class="text-right">
+                            <img src="img/promo-image.png" alt="" class="promo-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,12 +147,12 @@
                     </li>
                     <li class="steps-item">
                         <span class="steps-icon steps-icon-thue"></span>
-                        <h3 class="steps-title">Поступить легко</h3>
+                        <h3 class="steps-title">Поступить <br>легко</h3>
                         <p class="steps-text">Процесс поступления занимает не более 7 дней. Вступительные в виде тестирования.  98% наших абитуриентов сдают вступительные испытания с первого раза!</p>
                     </li>
                     <li class="steps-item">
                         <span class="steps-icon steps-icon-three"></span>
-                        <h3 class="steps-title">Комфортное обучение</h3>
+                        <h3 class="steps-title">Комфортное <br>обучение</h3>
                         <p class="steps-text">Вы будете учиться 100% дистанционно в удобное для Вас время. На сессии и экзамены ездить не нужно. Мы помогаем Вам на протяжении всего обучения!</p>
                     </li>
                     <li class="steps-item">
@@ -318,7 +320,7 @@
                     </li>
                 </ul>
                 <div class="way-more">
-                    <button class="way-more-link">Загрузить еще</button>
+                    <button class="way-more-btn">Загрузить еще</button>
                 </div>
             </div>
         </section>
@@ -479,7 +481,7 @@
                     </li>
                 </ul>
                 <div class="way-more">
-                    <button class="way-more-link">Загрузить еще</button>
+                    <button class="way-more-btn">Загрузить еще</button>
                 </div>
             </div>
         </section>
@@ -640,7 +642,7 @@
                     </li>
                 </ul>
                 <div class="way-more">
-                    <button class="way-more-link">Загрузить еще</button>
+                    <button class="way-more-btn">Загрузить еще</button>
                 </div>
             </div>
         </section>
@@ -657,10 +659,12 @@
                         </div>
                     </div>
                     <div class="col-3 help-right">
-                        <a href="#" class="help-link">
-                            <span class="help-link-icon"></span>
-                            <span class="help-link-text">Оставить заявку</span>
-                        </a>
+                        <div class="help-more">
+                            <a href="#" class="promo-more-link help-more-link">
+                                <span class="promo-icon"></span>
+                                <span class="promo-text">Оставить заявку</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -823,7 +827,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer-bottom">
+            </div>
+            <div class="footer-bottom">
+                <div class="content">
                     <p class="footer-copy">
                         Образование Online – все права защищены.  2019-2021 © 
                         <a href="#" class="footer-copy-link">Политика конфиденциальности</a>
@@ -832,5 +838,43 @@
             </div>
         </footer>
     </div>
+    <!-- Modal start -->
+    <div class="modal" id="myModal">
+        <div class="modal-body">
+            <button class="modal-close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <h3 class="modal-title">Оставить заявку</h3>
+            <form action="/" class="modal-form">
+                <ul class="modal-list">
+                    <li class="modal-item">
+                        <input type="text" class="modal-field" placeholder="Ваше имя" required>
+                    </li>
+                    <li class="modal-item">
+                        <input type="number" class="modal-field" placeholder="Ваш телефон" required>
+                    </li>
+                    <li class="modal-item">
+                        <input type="email" class="modal-field" placeholder="Ваш email" required>
+                    </li>
+                    <li class="modal-item">
+                        <div class="modal-more">
+                            <button class="modal-more-btn">Отправить</button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div class="policy">
+                <span class="policy-icon"></span>
+                <div class="policy-descr">
+                    <p class="policy-text">
+                        Оставляя заявку вы соглашаетесь с нашей 
+                        <a href="#" class="policy-link">политикой конфиденциальности</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
+    <script src="js/apps.js"></script>
 </body>
 </html>
