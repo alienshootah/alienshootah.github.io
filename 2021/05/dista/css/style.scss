@@ -338,6 +338,17 @@ h2 {
         min-height: 490px;
         padding: 20px 25px;
         align-items: center;
+        &-normal {
+            min-height: auto;
+        }
+        &-default {
+            min-height: auto;
+            background-image: none;
+            align-items: flex-start;
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0 -15px;
+        }
     }
     &-title {
         color: #173d7a;
@@ -345,6 +356,13 @@ h2 {
         font-family: $raleway-extra;
         padding-top: 0;
         margin-top: 0;
+    }
+    &-subtitle {
+        font-family: $open-semi;
+        font-size: 16px;
+        color: #e85a72;
+        padding: 0;
+        margin: -10px 0 40px 0;
     }
     &-item {
         margin: 5px 0;
@@ -623,6 +641,17 @@ h2 {
     color: #ffffff;
     padding: 60px 0;
     font-size: 14px;
+    &-white {
+        background-color: #ffffff;
+        color: #333333;
+        & .usefull-title {
+            color: #173d7a;
+        }
+        & .usefull-link {
+            color: #333333;
+            border-bottom: 1px solid #333333;
+        }
+    }
     &-body {
         margin: 0 -15px;
     }
@@ -765,6 +794,7 @@ h2 {
     font-size: 11px;
     display: flex;
     align-items: center;
+    color: #ffffff;
     &-icon {
         content: '';
         display: inline-block;
@@ -899,6 +929,213 @@ h2 {
         &:hover,
         &:focus {
             border-bottom: 1px solid transparent;
+        }
+    }
+}
+
+/* Pages */
+
+.daprog {
+    text-align: left;
+    background-color: #173d7a;
+    color: #ffffff;
+    padding: 15px 40px 30px 40px;
+    &-title {
+        font-size: 20px;
+        font-family: $open-bold;
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &-subtitle {
+        text-align: center;
+        margin: 5px 0;
+        padding: 0;
+        font-size: 14px;
+    }
+    &-list {
+        margin: 20px 0;
+    }
+    &-item {
+        margin: 10px 0;
+    }
+    &-field {
+        padding: 10px 15px;
+        box-sizing: border-box;
+        width: 100%;
+        color: #666666;
+        &::placeholder {
+            color: #666666;
+        }
+    }
+    &-more {
+        text-align: center;
+        margin-top: 20px;
+    }
+    &-btn {
+        background-color: #e85a72;
+        color: #ffffff;
+        padding: 15px 25px;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: $open-semi;
+        border: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            color: #e85a72;
+            background-color: transparent;
+            border: 1px solid #e85a72;
+        }
+        &:hover .daprog-icon,
+            &:focus .daprog-icon {
+                background-color: #e85a72;
+            }
+    }
+    &-icon {
+        display: inline-block;
+        width: 30px;
+        height: 26px;
+        margin-right: 15px;
+        position: relative;
+        top: 1px;
+        mask-image: url(../img/promo-icon.png);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: #d8e9f0;
+        transition: all 0.5s;
+    }
+    &-text {
+        position: relative;
+        top: -6px;
+    }
+    & .conf {
+        max-width: 270px;
+        margin: 0 auto;
+    }
+}
+.contact {
+    &-body {
+        margin: 0 -15px;
+    }
+    &-list {
+        color: #464553;
+        font-size: 16px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+    }
+    &-icon {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: 15px;
+        &-one {
+            background-image: url(../img/contact-icon-one.png);
+            width: 21px;
+            height: 26px;
+        }
+        &-thue {
+            background-image: url(../img/contact-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/contact-icon-three.png);
+            width: 23px;
+            height: 18px;
+        }
+    }
+    &-link {
+        color: #464553;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #464553;
+        }
+    }
+    &-subtitle {
+        color: #e85a72;
+        font-family: $open-semi;
+        font-size: 16px;
+    }
+    &-title {
+        text-transform: uppercase;
+        color: #173d7a;
+        margin-bottom: 30px;
+    }
+}
+.callback {
+    &-list {
+        margin: 0 -5px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: space-between;
+    }
+    &-item {
+        margin: 5px;
+        width: 100%;
+        &-half {
+            width: 46.5%;
+        }
+    }
+    &-field {
+        padding: 10px 15px;
+        width: 100%;
+        box-sizing: border-box;
+        font-family: $open-regular;
+        font-size: 14px;
+        border: 1px solid #d1d1d1;
+        &::placeholder {
+            color: #666666;
+        }
+        &-text {
+            min-height: 120px;
+        }
+    }
+    &-btn {
+        color: #ffffff;
+        background-color: #e85a72;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: $open-regular;
+        border: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border: 1px solid #e85a72;
+            color: #e85a72;
+            background-color: transparent;
+        }
+    }
+    &-end {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    & .conf {
+        color: #999999;
+        font-size: 14px;
+        margin-top: 0;
+        margin-left: 20px;
+        &-icon {
+            background-image: url(../img/conf-icon-gray.png);
+            width: 16px;
+            height: 20px;
+            min-width: 16px;
+        }
+        &-link {
+            color: #999999;
+            border-bottom: 1px solid #999999;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
         }
     }
 }
