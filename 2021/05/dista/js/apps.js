@@ -1,4 +1,10 @@
 
+/* Mobile btn */
+const mobileBtn = document.querySelector(".mobile-btn");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".menu").classList.toggle("show");
+});
+
 /* Dropdowns */
 function myDrop1() {
     document.getElementById("myDrop1").classList.toggle("show");
