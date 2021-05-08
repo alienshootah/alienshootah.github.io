@@ -420,7 +420,11 @@ h2 {
         text-align: center;
         display: flex;
         justify-content: space-between;
-    
+        &-white {
+            & .steps-icon {
+                border: 1px solid #efefef;
+            }
+        }
     }
     &-item {
         width: 23%;
@@ -1137,5 +1141,77 @@ h2 {
                 border-bottom: 1px solid transparent;
             }
         }
+    }
+}
+.instruction {
+    background-color: #fdeef1;
+    color: #000000;
+    padding: 60px 0;
+    font-size: 14px;
+    &-title {
+        display: flex;
+        align-items: center;
+        padding-right: 50px;
+        margin-bottom: 20px;
+    }
+    &-icon {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 20px;
+        &-one {
+            background-image: url(../img/instruction-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/instruction-icon-thue.png);
+            width: 48px;
+            min-width: 48px;
+        }
+        &-three {
+            background-image: url(../img/instruction-icon-three.png);
+            width: 47px;
+            height: 47px;
+            min-width: 47px;
+        }
+    }
+    &-text {
+        color: #173d7a;
+        font-size: 18px;
+        font-family: $open-bold;
+    }
+    &-list {
+        &-red {
+            & .instruction-item:before {
+                background-color: #e85a72;
+            }
+        }
+    }
+    &-item {
+        padding-left: 30px;
+        position: relative;
+        margin: 25px 0;
+        &:before {
+            position: absolute;
+            left: 0;
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            mask-image: url(../img/instruction-item.png);
+            mask-position: center;
+            mask-repeat: no-repeat;
+            background-color: #173d7a;
+        }
+    }
+}
+.smaller {
+    &-list {
+        margin-bottom: 20px;
+    }
+    &-item {
+        margin: 7px 0;
     }
 }
