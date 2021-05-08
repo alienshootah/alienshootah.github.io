@@ -586,6 +586,25 @@ h2 {
     background-color: #173d7a;
     color: #ffffff;
     padding: 30px 0;
+    &-red {
+        background-color: #e85a72;
+        & .help-icon {
+            background-image: url(../img/help-icon-blue.png);
+        }
+        & .help-more-link {
+            background-color: #173d7a;
+            &:hover,
+            &:focus {
+                border: 1px solid #173d7a;
+                color: #173d7a;
+                background-color: transparent;
+            }
+            &:hover .promo-icon,
+            &:focus .promo-icon {
+                background-color: #173d7a;
+            }
+        }
+    }
     &-body {
         justify-content: space-between;
     }
@@ -1261,5 +1280,97 @@ h2 {
         margin: 10px;
         width:230px;
         height: 320px;
+    }
+}
+.togo {
+    &-item {
+        background-color: #ffffff;
+        margin: 25px 0;
+        font-size: 14px;
+        color: #333333;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+    }
+    &-logo {
+        width: 148px;
+        height: 59px;
+        margin-right: 20px;
+    }
+    &-subtitle {
+        font-family: $open-bold;
+        font-size: 15px;
+        color: #173d7a;
+        text-transform: uppercase;
+    }
+    &-btn {
+        text-transform: uppercase;
+        background-color: #173d7a;
+        color: #ffffff;
+        font-size: 13px;
+        font-family: $open-regular;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border: 1px solid #173d7a;
+            color: #173d7a;
+            background-color: transparent;
+        }
+    }
+}
+.howto {
+    padding: 60px 0;
+    background-color: #fdeef1;
+    &-image {
+        margin-right: 20px;
+    }
+}
+
+/* Tabs */
+
+.tabes {
+    margin-top: 20px;
+    &-menu {
+        display: flex;
+        border-bottom: 1px solid rgba(232, 90, 114, 0.3);
+    }
+    & button {
+        color: #ffffff;
+        font-size: 14px;
+        font-family: $open-semi;
+        background-color: #e85a72;
+        padding: 10px 20px;
+        margin: 1px 2px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: transparent;
+            color: #173d7a;
+        }
+    }
+    &-line {
+        margin: 0 -15px;
+    }
+    &-body {
+        padding: 20px 0 0 0;
+    }
+    &-content {
+        display: none;
+    }
+}
+.simple {
+    &-item {
+        margin-bottom: 10px;
     }
 }
