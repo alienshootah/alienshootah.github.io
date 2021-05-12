@@ -32,18 +32,29 @@
     }
     .header {
         box-shadow: 3px 9px 13px -3px rgba(0, 0, 0, 0.14);
-        margin: 15px 0 0 0;
+        margin: 0;
+        padding-top: 15px;
         padding-bottom: 15px;
+        position: sticky;
+        top: 0;
+        background-color: #ffffff;
+        z-index: 9999;
         &-right {
             text-align: right;
         }
     }
     .header-text,
     .header-consult,
-    .header-right-body {
+    .header-body .telephone {
         display: none;
     }
+    .header-body .header-right-body {
+        position: absolute;
+        top: 26px;
+        right: 52px;
+    }
     .menu {
+        margin-top: 0;
         display: none;
         position: absolute;
         width: 100%;
@@ -204,7 +215,7 @@
 }
 @media(max-width: 530px) {
     .header {
-        margin: 10px 0 0 0;
+        padding-top: 10px;
         padding-bottom: 10px;
         &-img {
             display: none;
@@ -212,6 +223,9 @@
                 display: inline-block;
             }
         }
+    }
+    .header .header-right-body {
+        top: 16px;
     }
     .header-consult-btn {
         padding: 12px 10px;
@@ -301,7 +315,7 @@
     .togo-btn {
         width: 100%;
     }
-    .tabes button {
+    .tabes-btn {
         width: 100%;
     }
     .tabes-line {

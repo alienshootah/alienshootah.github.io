@@ -17,7 +17,7 @@ function myDrop3() {
 }
 
   // Close the dropdown menu if the user clicks outside of it
-  window.onclick = function(event) {
+window.onclick = function(event) {
     if (!event.target.matches('.menu-link')) {
       var dropdowns = document.getElementsByClassName("drop");
       var i;
@@ -27,6 +27,10 @@ function myDrop3() {
           openDropdown.classList.remove('show');
         }
       }
+    }
+    /* Модальное окно */
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
 }
 
@@ -50,69 +54,34 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+/* Tabs */
+window.addEventListener("load", function() {
+    // store tabs variable
+    var theTabs = document.querySelectorAll("ul.tabes-menu > li");
 
-/* Tabs1 */
-
-function openTab(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabes-content");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tabes-btn");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-/* Tabs2 */
-
-function openTab2(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabes-content2");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tabes-btn2");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen2").click();
-
-/* Tabs3 */
-
-function openTab3(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabes-content3");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tabes-btn3");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen3").click();
+    function theTabClicks(tabClickEvent) {
+        var clickedTab = tabClickEvent.currentTarget;
+        var tabParent = tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
+        var theTabs = tabParent.querySelectorAll("ul.tabes-menu > li");
+        for (var i = 0; i < theTabs.length; i++) {
+            theTabs[i].classList.remove("active");
+        }
+        
+        clickedTab.classList.add("active");
+        tabClickEvent.preventDefault();
+        var contentPanes = tabParent.querySelectorAll(".tabes-content");
+        for (i = 0; i < contentPanes.length; i++) {
+            contentPanes[i].classList.remove("active");
+        }
+        var anchorReference = tabClickEvent.target;
+        var activePaneId = anchorReference.getAttribute("href");
+        var activePane = tabParent.querySelector(activePaneId);
+        activePane.classList.add("active");
+    }
+    for (i = 0; i < theTabs.length; i++) {
+        theTabs[i].addEventListener("click", theTabClicks)
+    }
+});
 
 
 
