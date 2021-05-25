@@ -185,7 +185,8 @@ h1 {
   font-family: "Raleway-ExtraBold", Arial, Helvetica, sans-serif;
   font-size: 30px;
   color: #282c37;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 35px;
   padding-bottom: 0;
 }
 
@@ -265,7 +266,7 @@ h2 {
   top: 3px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .header-white {
     background-image: none;
     background-color: transparent;
@@ -324,9 +325,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   text-transform: uppercase;
   margin-left: 40px;
 }
@@ -502,14 +503,16 @@ h2 {
   border: 1px solid #e8e8e8;
   padding: 30px 20px 15px 20px;
   width: 190px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-.about-item-black {
+.about-item:hover, .about-item:focus, .about-item-black {
   background-color: #282c37;
   color: #ffffff;
 }
 
-.about-item-black .about-descr {
+.about-item:hover .about-descr, .about-item:focus .about-descr, .about-item-black .about-descr {
   color: #ffffff;
 }
 
@@ -1572,7 +1575,7 @@ h2 {
 }
 
 .propos {
-  margin: 40px 0;
+  margin: 33px 0;
 }
 
 .propos-body {
@@ -1582,14 +1585,14 @@ h2 {
 .propos-sidebar {
   background-color: #282c37;
   color: #ffffff;
-  padding: 20px 30px 20px 0;
+  padding: 12px 30px 20px 0;
   font-size: 14px;
   font-family: "OpenSans-SemiBold", Arial, Helvetica, sans-serif;
 }
 
 .propos-item {
   padding-left: 28px;
-  margin: 15px 0;
+  margin: 21px 0;
   position: relative;
 }
 
@@ -1622,6 +1625,16 @@ h2 {
   font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
   font-size: 18px;
   text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.proper-list {
+  line-height: 1.6;
+}
+
+.proper-item {
+  margin: 6px 0;
 }
 
 .also {
@@ -1633,17 +1646,19 @@ h2 {
   line-height: 1.6;
   font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
   font-size: 17px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .also-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px -15px;
+  margin: 10px -17px;
 }
 
 .also-item {
-  margin: 10px 15px;
+  margin: 10px 17px;
 }
 
 .also-image {

@@ -131,7 +131,8 @@ h1 {
     font-family: $raleway-extra;
     font-size: 30px;
     color: #282c37;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 35px;
     padding-bottom: 0;
 }
 h2 {
@@ -201,7 +202,7 @@ h2 {
         }
     }
 }
-@media(min-width: 768px) {
+@media(min-width: 1200px) {
     .header {
         &-white {
             background-image: none;
@@ -254,7 +255,7 @@ h2 {
     color: #ffffff;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-transform: uppercase;
     margin-left: 40px;
     &-item {
@@ -396,6 +397,9 @@ h2 {
         border: 1px solid #e8e8e8;
         padding: 30px 20px 15px 20px;
         width: 190px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus,
         &-black {
             background-color: #282c37;
             color: #ffffff;
@@ -1215,20 +1219,20 @@ h2 {
     }
 }
 .propos {
-    margin: 40px 0;
+    margin: 33px 0;
     &-body {
         margin: 0 -15px;
     }
     &-sidebar {
         background-color: #282c37;
         color: #ffffff;
-        padding: 20px 30px 20px 0;
+        padding: 12px 30px 20px 0;
         font-size: 14px;
         font-family: $open-semi;
     }
     &-item {
         padding-left: 28px;
-        margin: 15px 0;
+        margin: 21px 0;
         position: relative;
         &:before {
             content: '';
@@ -1258,6 +1262,16 @@ h2 {
         font-family: $open-bold;
         font-size: 18px;
         text-transform: uppercase;
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+}
+.proper {
+    &-list {
+        line-height: 1.6;
+    }
+    &-item {
+        margin: 6px 0;
     }
 }
 .also {
@@ -1267,13 +1281,15 @@ h2 {
         line-height: 1.6;
         font-family: $open-bold;
         font-size: 17px;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
     &-list {
         display: flex;
-        margin: 20px -15px;
+        margin: 10px -17px;
     }
     &-item {
-        margin: 10px 15px;
+        margin: 10px 17px;
     }
     &-image {
         margin-bottom: 5px;
