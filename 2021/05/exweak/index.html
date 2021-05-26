@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Основной экран</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -13,17 +14,17 @@
             <div class="content">
                 <div class="header-body">
                     <ul class="header-list">
-                        <li class="header-item">
+                        <li class="header-item header-item-menu">
                             <button class="header-menu">
                                 <span class="header-menu-icon"></span>
                             </button>
                         </li>
-                        <li class="header-item">
+                        <li class="header-item header-item-logo">
                             <a href="#">
                                 <img src="img/header-logo.png" alt="" class="header-logo">
                             </a>
                         </li>
-                        <li class="header-item">
+                        <li class="header-item header-item-social">
                             <button class="header-social">
                                 <span class="header-social-icon"></span>
                             </button>
@@ -32,6 +33,61 @@
                 </div>
             </div>
         </header>
+        <div class="sidebar">
+            <div class="sidebar-body">
+                <div class="sidebar-top">
+                    <span class="sidebar-profile"></span>
+                    <button class="sidebar-close">
+                        <span class="sidebar-close-icon"></span>
+                    </button>
+                    <h3 class="sidebar-title">Настройки</h3>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item">
+                        <label class="sidebar-button" id="sb-left">
+                            <span class="sidebar-icon sidebar-icon-one"></span>
+                            <span class="sidebar-text">Я - левша</span>
+                            <span class="sidebar-control">
+                                <div class="switch">
+                                    <input type="checkbox" id="check-hand">
+                                    <span class="slider round"></span>
+                                </div>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="sidebar-item">
+                        <button class="sidebar-button">
+                            <span class="sidebar-icon sidebar-icon-thue"></span>
+                            <span class="sidebar-text">Цветовая схема</span>
+                        </button>
+                    </li>
+                    <li class="sidebar-item sidebar-item-gray">
+                        <button class="sidebar-button sidebar-button-modal" id="myBtn3">
+                            <span class="sidebar-text">Blue Ocean</span>
+                            <span class="sidebar-text-icon"></span>
+                        </button>
+                    </li>
+                    <li class="sidebar-item">
+                        <label class="sidebar-button">
+                            <span class="sidebar-icon sidebar-icon-three"></span>
+                            <span class="sidebar-text">Звуки</span>
+                            <span class="sidebar-control">
+                                <div class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </div>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="sidebar-item sidebar-item-gray">
+                        <button class="sidebar-button" id="myBtn2">
+                            <span class="sidebar-icon sidebar-icon-four"></span>
+                            <span class="sidebar-text">Сброс настроек</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <main class="main">
             <div class="content">
                 <div class="main-body">
@@ -40,179 +96,195 @@
                     </h1>
                     <ul class="main-list">
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-one"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-one"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Подготовка</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">20</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Подготовка</h3>
-                                    <p class="main-descr">Краткое описание</p>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">20</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
                             </div>
                         </li>
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-thue"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-thue"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Работа</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">30</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Работа</h3>
-                                    <p class="main-descr">Краткое описание</p>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">30</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
                             </div>
                         </li>
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-three"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-three"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Отдых</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">90</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Отдых</h3>
-                                    <p class="main-descr">Краткое описание</p>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">90</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
                             </div>
                         </li>
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-four"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-four"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Циклы</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">4</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Циклы</h3>
-                                    <p class="main-descr">Краткое описание</p>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">4</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
                             </div>
                         </li>
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-five"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-five"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Сеты</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">1</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Сеты</h3>
-                                    <p class="main-descr">Краткое описание</p>
-                                </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">1</span>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
+                        </li>
+                        <li class="main-item active">
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-six"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Отдых между сетами</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">150</span>
+                                    </div>
+                                </div>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn" id="myBtn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
+                                </div>
                             </div>
                         </li>
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-six"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-seven"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Успокоиться</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">300</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Отдых между сетами</h3>
-                                    <p class="main-descr">Краткое описание</p>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">150</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
                             </div>
                         </li>
                         <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-seven"></span>
+                            <div class="main-wrap">
+                                <div class="main-visible">
+                                    <div class="main-picture">
+                                        <span class="main-icon main-icon-seven"></span>
+                                    </div>
+                                    <div class="main-text">
+                                        <h3 class="main-subtitle">Успокоиться</h3>
+                                        <p class="main-descr">Краткое описание</p>
+                                    </div>
+                                    <div class="main-num">
+                                        <span class="main-num-val">300</span>
+                                    </div>
                                 </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Успокоиться</h3>
-                                    <p class="main-descr">Краткое описание</p>
+                                <div class="shad">
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-one"></span>
+                                    </button>
+                                    <button class="shad-btn">
+                                        <span class="shad-icon shad-icon-thue"></span>
+                                    </button>
                                 </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">300</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
-                            </div>
-                        </li>
-                        <li class="main-item">
-                            <div class="main-visible">
-                                <div class="main-picture">
-                                    <span class="main-icon main-icon-seven"></span>
-                                </div>
-                                <div class="main-text">
-                                    <h3 class="main-subtitle">Успокоиться</h3>
-                                    <p class="main-descr">Краткое описание</p>
-                                </div>
-                                <div class="main-num">
-                                    <span class="main-num-val">300</span>
-                                </div>
-                            </div>
-                            <div class="shad">
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-one"></span>
-                                </button>
-                                <button class="shad-btn">
-                                    <span class="shad-icon shad-icon-thue"></span>
-                                </button>
                             </div>
                         </li>
                     </ul>
@@ -224,15 +296,15 @@
                 <div class="footer-body">
                     <ul class="footer-list">
                         <li class="footer-item">
-                            <button class="footer-btn">
+                            <button class="footer-btn footer-btn-round">
                                 <span class="footer-icon footer-icon-one"></span>
                             </button>
                         </li>
                         <li class="footer-item">
-                            <button class="footer-btn footer-btn-full">Старт</button>
+                            <button class="footer-btn">Старт</button>
                         </li>
                         <li class="footer-item">
-                            <button class="footer-btn">
+                            <button class="footer-btn footer-btn-round">
                                 <span class="footer-icon footer-icon-thue"></span>
                             </button>
                         </li>
@@ -244,30 +316,71 @@
     <!-- Modal start -->
     <div class="modal" id="myModal">
         <div class="modal-body">
-            <button class="modal-close">
-                <span class="modal-close-icon"></span>
-            </button>
-            <h3 class="modal-title">Оставить заявку</h3>
+            <h3 class="modal-title">
+                Сохранить <br>
+                <span class="modal-title-name">“Тренировка бицепса с гантелями на лавке Скотта”</span> ?
+            </h3>
             <form action="/" class="modal-form">
                 <ul class="modal-list">
                     <li class="modal-item">
-                        <input type="text" class="modal-field" placeholder="Ваше имя" required>
+                        <button class="modal-btn modal-close">Отмена</button>
                     </li>
                     <li class="modal-item">
-                        <input type="text" class="modal-field tel" placeholder="Ваш телефон" required>
-                    </li>
-                    <li class="modal-item">
-                        <input type="email" class="modal-field" placeholder="Ваш email" required>
-                    </li>
-                    <li class="modal-item">
-                        <div class="modal-more">
-                            <button class="modal-more-btn">Отправить</button>
-                        </div>
+                        <button class="modal-btn">Да</button>
                     </li>
                 </ul>
             </form>
         </div>
     </div>
+    <div class="modal modal-empty" id="myModal2">
+        <div class="modal-body">
+            <h3 class="modal-title">
+                Сбросить <br>все настройки <br>по умолчанию ?
+            </h3>
+            <form action="/" class="modal-form">
+                <ul class="modal-list">
+                    <li class="modal-item">
+                        <button class="modal-btn modal-close-thue">Отмена</button>
+                    </li>
+                    <li class="modal-item">
+                        <button class="modal-btn">Да</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div class="modal modal-color" id="myModal3">
+        <div class="modal-body">
+            <h3 class="modal-title">
+                Цвет настроения:
+            </h3>
+            <div class="colorise">
+                <form action="/">
+                    <ul class="colorise-list">
+                        <li class="colorise-item">
+                            <button class="colorise-btn colorise-btn-blue">Blue Ocean</button>
+                        </li>
+                        <li class="colorise-item">
+                            <button class="colorise-btn colorise-btn-red">Red Dragon</button>
+                        </li>
+                        <li class="colorise-item">
+                            <button class="colorise-btn colorise-btn-pink">Pink Panther</button>
+                        </li>
+                        <li class="colorise-item">
+                            <button class="colorise-btn colorise-btn-violet">Ultra Violet</button>
+                        </li>
+                        <li class="colorise-item">
+                            <button class="colorise-btn colorise-btn-yellow">Yellow Sun</button>
+                        </li>
+                        <li class="colorise-item">
+                            <button class="colorise-btn colorise-btn-green">Green Plant</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
     <!-- Modal end -->
+    <script src="js/apps.js"></script>
 </body>
 </html>
