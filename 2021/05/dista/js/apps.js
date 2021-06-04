@@ -18,7 +18,7 @@ function myDrop3() {
 
   // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
-    if (!event.target.matches('.menu-link')) {
+    if (!event.target.matches('.drop-btn')) {
       var dropdowns = document.getElementsByClassName("drop");
       var i;
       for (i = 0; i < dropdowns.length; i++) {
