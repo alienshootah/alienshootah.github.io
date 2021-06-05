@@ -486,14 +486,35 @@ h1 {
     }
 }
 .wedo {
-    margin: 90px 0;
+    margin: 90px 0 65px 0;
+    &-list {
+        margin: 35px -40px 0 15px;
+        font-size: 13px;
+        line-height: 1.4;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &-item {
+        border: 1px solid #e7e7e7;
+        border-radius: 10px;
+        box-sizing: border-box;
+        padding: 20px 60px 20px 75px;
+        position: relative;
+        margin: 22px 40px;
+        width: 43%;
+    }
     &-picture {
         width: 100px;
         height: 100px;
         border-radius: 10px;
         border: 3px solid gray;
+        background-color: #ffffff;
         text-align: center;
         box-sizing: border-box;
+        position: absolute;
+        left: -50px;
+        top: 38px;
         &-blue {
             border-color: #3153a7;
         }
@@ -526,5 +547,17 @@ h1 {
         &-four {
             background-image: url(../img/wedo-icon-four.png);
         }
+    }
+    &-title {
+        font-size: 16px;
+        font-family: $raleway-bold;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    &-text {
+        margin-top: 8px;
+        padding-top: 0;
     }
 }
