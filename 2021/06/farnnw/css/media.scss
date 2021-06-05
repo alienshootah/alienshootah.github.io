@@ -28,6 +28,17 @@
         width: 45%;
         margin: 22px 0;
     }
+    .projects {
+        &-list {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        &-item {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: auto;
+        }
+    }
 }
 @media(max-width: 992px) {
     .about {
@@ -52,10 +63,17 @@
     }
 }
 @media(max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
     .header {
         border-bottom: 1px solid #dddddd;
         box-shadow: 3px 0px 12px 3px rgba(221, 221, 221, 0.4);
-        position: relative;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9999;
+        background-color: #ffffff;
         & .drop {
             position: absolute;
             top: 22px;
@@ -145,6 +163,19 @@
     .wedo {
         margin: 40px 0;
     }
+    .projects-item {
+        width: 44%;
+    }
+    .projects-picture {
+        &::after {
+            width: 100%;
+            height: 175px;
+        }
+    }
+    .projects-image {
+        width: 100%;
+        height: 175px;
+    }
 }
 @media(max-width: 520px) {
     .footer-copy {
@@ -183,5 +214,39 @@
     .wedo-picture {
         position: static;
         margin: 0 auto;
+    }
+    .filters {
+        &-drop {
+            & .drop-body {
+                right: auto;
+                left: 0;
+            }
+        }
+        &-list {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        &-item {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+    }
+    .projects {
+        margin: 40px 0;
+    }
+    .projects-item {
+        width: 100%;
+    }
+    .projects-picture {
+        &::after {
+            width: 100%;
+            height: 175px;
+        }
+    }
+    .projects-image {
+        width: 100%;
+        height: 175px;
     }
 }
