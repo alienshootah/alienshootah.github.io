@@ -1,0 +1,227 @@
+/* Fonts */
+
+$mont-light: 'Montserrat-Light', Arial, Helvetica, sans-serif;
+$mont-medium: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+$mont-regular: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
+$mont-semibold: 'Montserrat-SemiBold', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(../fonts/OMontserrat-Light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Grid */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.row {
+    display: flex;
+    margin: 0 -15px;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.col-12{width: 100%;}
+.col-11{width: 91.66666667%;}
+.col-10{width: 83.33333333%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66666667%;}
+.col-7 {width: 58.33333333%;}
+.col-6 {width: 50%;}
+.col-5 {width: 41.66666667%;}
+.col-4 {width: 33.33333333%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66666667%;}
+.col-1 {width: 8.33333333%;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: $mont-medium;
+}
+input, textarea {
+    box-sizing: border-box;
+    font-family: $mont-light;
+}
+
+/* Main styles */
+
+html {
+    scroll-behavior: smooth;
+}
+.content {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1230px;
+}
+body {
+    font-family: $mont-light;
+    overflow-x: hidden;
+    font-size: 14px;
+    color: #2e2e2e;
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+    font-family: $mont-semibold;
+}
+
+/* Header */
+
+.header {
+    &-top {
+        margin: 30px 0;
+    }
+    &-body {
+        align-items: center;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+    &-link {
+        color: #2e2e2e;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #2e2e2e;
+        }
+    }
+    &-bottom {
+        font-size: 15px;
+        &-body {
+            align-items: center;
+        }
+    }
+}
+.lang {
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -5px;
+    }
+    &-item {
+        margin: 0 5px;
+    }
+    &-icon {
+        display: inline-block;
+        width: 20px;
+        height: 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/lang-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/lang-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/lang-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/lang-icon-four.png);
+        }
+    }
+}
+.login {
+    &-btn {
+        font-family: $mont-medium;
+    }
+    &-icon {
+        display: inline-block;
+        width: 18px;
+        height: 17px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/login-icon.png);
+        margin-right: 7px;
+        position: relative;
+        top: 3px;
+    }
+}
+.adress {
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-tel {
+        color: #2e2e2e;
+        font-family: $mont-medium;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            color: #646262;
+        }
+    }
+    &-link {
+        color: #000000;
+        font-size: 14px;
+        text-decoration: none;
+        border-bottom: 1px solid #000000;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
