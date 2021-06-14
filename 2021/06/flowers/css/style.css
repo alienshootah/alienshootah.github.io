@@ -1,7 +1,7 @@
 /* Fonts */
 @font-face {
   font-family: 'Montserrat-Light';
-  src: url(../fonts/OMontserrat-Light.ttf);
+  src: url(../fonts/Montserrat-Light.ttf);
   font-weight: normal;
   font-style: normal;
 }
@@ -342,6 +342,7 @@ h2 {
 
 .basket-icon {
   display: inline-block;
+  min-width: 34px;
   width: 34px;
   height: 35px;
   background-position: center;
@@ -534,7 +535,7 @@ h2 {
 }
 
 .special-item {
-  width: 50%;
+  width: 100%;
 }
 
 .special-item:first-child {
@@ -543,7 +544,6 @@ h2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: big;
-  width: 100%;
 }
 
 .special-item:nth-child(2) {
@@ -749,7 +749,8 @@ h2 {
 }
 
 .cats-image {
-  width: 227px;
+  max-width: 227px;
+  width: 100%;
   height: 257px;
   margin: 0 auto;
   display: block;
@@ -1289,6 +1290,8 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .payment-item {
