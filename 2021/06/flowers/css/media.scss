@@ -59,6 +59,11 @@
     }
 }
 @media(max-width: 992px) {
+    .header {
+        &-mobile-link {
+            display: inline;
+        }
+    }
     .header-top {
         display: none;
     }
@@ -68,7 +73,10 @@
     }
     .basket-list {
         margin: 0;
-        display: block;
+        display: inline-block;
+        position: absolute;
+        top: 21px;
+        right: 52px;
     }
     .basket-item {
         margin: 0;
@@ -76,17 +84,81 @@
             display: none;
         }
     }
-    .basket-text {
-        display: none;
+    .basket-btn {
+        position: relative;
     }
     .basket-icon-thue {
         background-image: url(../img/basket-icon-thue-mobile.png);
         width: 20px;
         height: 19px;
     }
+    .basket-text {
+        position: absolute;
+        top: -1px;
+        right: 1px;
+        font-size: 0;
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: red;
+        border-radius: 50%;
+        max-width: 5px;
+        margin-left: 0;
+    }
     .nav {
         margin-top: 0;
+        height: 60px;
+        box-sizing: border-box;
+        padding-top: 10px;
     }
+    .nav-body {
+        flex-wrap: wrap;
+        & .col-9,
+        & .col-3 {
+            width: 100%;
+        }
+        & .col-3 {
+            order: -1;
+        }
+    }
+    .nav-list {
+        display: none;
+    }
+    .find {
+        display: none;
+    }
+    .header {
+        &-search {
+            display: inline-block;
+            position: absolute;
+            top: 21px;
+            right: 93px;
+            &-icon {
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/header-search-icon.png);
+            }
+        }
+        &-menu {
+            display: inline-block;
+            position: absolute;
+            top: 20px;
+            right: 15px;
+            &-icon {
+                display: inline-block;
+                width: 19px;
+                height: 19px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/header-menu-icon.png);
+            }
+        }
+    }
+
+    /* Sections */
     .cats-decor {
         right: 0;
     }
@@ -114,4 +186,7 @@
     .better-item {
         width: 41%;
     }
+}
+@media(max-width: 768px) {
+    
 }
