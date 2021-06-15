@@ -235,7 +235,7 @@
         }
         &-item {
             width: 45%;
-            padding: 5px 5px 0 5px;
+            padding: 5px 3px 0 3px;
             margin: 10px;
             display: flex;
             flex-wrap: wrap;
@@ -249,10 +249,38 @@
         }
         &-icon {
             position: static;
+            background-size: contain;
+            &-one {
+                position: relative;
+                width: 70px;
+                height: 79px;
+                top: 8px;
+                left: 10px;
+            }
+            &-thue {
+                position: relative;
+                min-width: auto;
+                width: 132px;
+                height: 92px;
+                left: -10px;
+                top: 4px;
+                bottom: auto;
+            }
+            &-three {
+                width: 81px;
+                height: 91px;
+                left: -31px;
+                top: auto;
+                bottom: 3px;
+            }
+            &-four {
+                width: 103px;
+                height: 90px;
+            }
         }
         &-text {
             order: -1;
-            margin: 25px 0 10px 0;
+            margin: 18px 0 4px 0;
         }
     }
     .cats-item {
@@ -270,9 +298,10 @@
         }
     }
     .info {
-        margin-bottom: 40px;
+        padding-bottom: 40px;
+        margin-bottom: 0;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: bottom right;
         background-image: url(../img/info-bg-mob.png);
         background-size: contain;
         &::after {
@@ -376,14 +405,15 @@
     }
     .better {
         &-list {
-            font-size: 12px;
+            font-size: 11px;
         }
         &-item {
             width: 43%;
+            border-radius: 4px;
         }
     }
     .cats {
-        margin: 43px 0 25px 0;
+        margin: 39px 0 25px 0;
         & .content {
             position: relative;
         }
@@ -391,6 +421,7 @@
             display: none;
         }
         &-top {
+            padding-bottom: 21px;
             & .col-7 {
                 display: none;
             }
@@ -414,6 +445,7 @@
         &-subtitle {
             flex-wrap: wrap;
             justify-content: flex-end;
+            margin: -8px 0 8px 0;
         }
         &-like {
             order: -1;
@@ -431,7 +463,7 @@
         }
         &-buy {
             &-btn {
-                padding: 5px 10px;
+                padding: 5px 12px;
                 font-size: 12px;
             }
         }
@@ -516,9 +548,11 @@
         
     }
     .help {
+        margin: 36px 0 29px 0;
         &-work {
-            padding: 25px;
+            padding: 35px;
             background-image: url(../img/help-work-mobile.jpg);
+            border-radius: 5px;
         }
         &-title {
             font-size: 16px;
@@ -542,6 +576,10 @@
         font-size: 12px;
         font-family: 'Montserrat-Regular', Arial, Helvetica, sans-serif;
         margin-top: 30px;
+        line-height: 1.6;
+        &-title {
+            margin-bottom: 22px;
+        }
     }
     h1 {
         font-size: 16px;
@@ -560,7 +598,7 @@
                     &:nth-child(1) {
                         width: 100%;
                         order: 1;
-                        margin: 20px 0;
+                        margin: 26px 0 8px 0;
                     }
                     &:nth-child(2) {
                         width: 50%;
@@ -616,14 +654,14 @@
     }
     /* Slider */
     .slick-dots {
-        bottom: -35px
+        bottom: -41px;
     }
     .slick-dots li {
-        margin: 0;
+        margin: 0 -1px;
     }
     .slick-dots li button:before {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
         font-size: 0;
         border: 1px solid #ccd7b5;
         padding: 0;
