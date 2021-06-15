@@ -1,3 +1,33 @@
+/* Mobile btn's */
+const mobileBtn = document.querySelector(".header-menu");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".nav-drop").classList.toggle("show");
+});
+
+const searchBtn = document.querySelector(".header-search");
+searchBtn.addEventListener("click", function() {
+  document.querySelector(".find").classList.toggle("show");
+});
+
+const sortBtn = document.querySelector(".sort-mobile");
+sortBtn.addEventListener("click", function() {
+  document.querySelector(".sort-drop").classList.toggle("show");
+});
+
+/* Sliders */
+function mobileOnlySlider() {
+    $('.special-list').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+}
+if(window.innerWidth < 565) {
+    mobileOnlySlider();
+}
+
 /* Current year in footer */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();

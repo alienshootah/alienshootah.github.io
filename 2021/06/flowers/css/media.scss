@@ -324,6 +324,9 @@
         padding: 0 40px;
     }
     .special {
+        &-list {
+            display: block;
+        }
         &-item {
             width: 100%;
         }
@@ -343,7 +346,7 @@
                 display: block;
             }
             & .special-image {
-                height: auto;
+                height: 100%;
             }
         }
         &-subtitle {
@@ -355,7 +358,7 @@
             font-size: 20px;
         }
         &-image {
-            height: auto;
+            height: 100%;
         }
         &-decor {
             width: 84px;
@@ -442,9 +445,20 @@
     .sort {
         position: absolute;
         top: 0;
-        right: 15px;
+        right: 40px;
         &-drop {
             display: none;
+            background-color: #ccd7b5;
+            padding: 5px 10px;
+            box-sizing: border-box;
+            z-index: 999;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            border-radius: 5px;
+            &.show {
+                display: block;
+            }
         }
         &-mobile {
             display: flex;
@@ -470,6 +484,14 @@
             margin: 10px 0;
             &:first-child {
                 display: none;
+            }
+        }
+        &-btn {
+            color: #2e2e2e;
+            &.active,
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #2e2e2e;
             }
         }
     }
@@ -592,6 +614,25 @@
             background-size: contain;
         }
     }
+    /* Slider */
+    .slick-dots {
+        bottom: -35px
+    }
+    .slick-dots li {
+        margin: 0;
+    }
+    .slick-dots li button:before {
+        width: 8px;
+        height: 8px;
+        font-size: 0;
+        border: 1px solid #ccd7b5;
+        padding: 0;
+        border-radius: 50%;
+        opacity: 1;
+    }
+    .slick-dots li.slick-active button:before {
+        background-color: #ccd7b5;
+    }
 }
 @media(max-width: 375px) {
     .find,
@@ -618,5 +659,8 @@
     }
     .header-search {
         right: 93px;
+    }
+    .sort {
+        right: 15px;
     }
 }
