@@ -21,7 +21,8 @@ function mobileOnlySlider() {
         infinite: true,
         speed: 500,
         slidesToShow: 1,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        arrows: false
     });
 }
 if(window.innerWidth < 565) {
