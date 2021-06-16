@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <title>Каталог товаров / FlowerShop</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- Range slider -->
+	<link rel="stylesheet" href="range/jquery-ui.css">
+	<script src="range/jquery-1.12.4.js"></script>
+	<script src="range/jquery-ui.js"></script>
+    <!-- Range slider end -->
 </head>
 <body>
     <div class="container-fluid">
@@ -179,7 +185,7 @@
                     </div>
                     <div class="cata-nav">
                         <div class="row cata-nav-body">
-                            <div class="col-2">
+                            <div class="col-3">
                                 <div class="cata-filter">
                                     <button class="cata-filter-btn">
                                         <span class="cata-filter-icon"></span>
@@ -187,7 +193,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-5">
+                            <div class="col-4">
                                 <p class="cata-filter-find">
                                     Найдено <span class="cata-filter-value">214</span> товаров
                                 </p>
@@ -225,11 +231,23 @@
                         <div class="col-3 cata-left">
                             <div class="filters">
                                 <div class="filters-body">
-                                    <form action="/" class="filters-form">
+                                    <form class="filters-form">
                                         <div class="filters-ind">
                                             <h3 class="filters-title">Цена:</h3>
                                             <div class="filters-block">
-                                                <input type="text" class="filters-field filters-field-range">
+                                                <div class="run">
+                                                    <div class="run-top">
+                                                        <div id="slider-range" class="run-val"></div>
+                                                    </div>
+                                                    <div class="run-body">
+                                                        <div class="run-left">
+                                                          <input type="text" id="amount" readonly class="run-field">
+                                                        </div>
+                                                        <div class="run-right">
+                                                          <input type="text" id="amount2" readonly class="run-field run-field-right">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="filters-ind">
@@ -393,7 +411,7 @@
                         <div class="col-9 cata-right">
                             <div class="tags">
                                 <div class="row tags-body">
-                                    <div class="col-10">
+                                    <div class="col-9 tags-left">
                                         <ul class="tags-list">
                                             <li class="tags-item">
                                                 <button class="tags-btn">
@@ -421,7 +439,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="col-2">
+                                    <div class="col-3 text-right tags-right">
                                         <div class="tags-clear">
                                             <button class="tags-clear-btn">
                                                 Очистить фильтр
@@ -691,72 +709,6 @@
                                             и упаковка - на ваш выбор
                                         </div>
                                     </li>
-                                    <li class="cats-item">
-                                        <img src="img/cats-image13.jpg" alt="" class="cats-image">
-                                        <h3 class="cats-subtitle">
-                                            <a href="#" class="cats-link">Букет Элегантность из роз
-                                                и хризантем (Бельгия)</a>
-                                            <button class="cats-like">
-                                                <span class="cats-like-icon"></span>
-                                            </button>
-                                        </h3>
-                                        <div class="cats-buy">
-                                            <div class="cats-price">
-                                                <span class="cats-name">Цена:</span> <b class="cats-semi">7 590 р.</b>
-                                            </div>
-                                            <button class="cats-buy-btn">
-                                                Купить
-                                            </button>
-                                        </div>
-                                        <div class="cats-info">
-                                            Состав:  роза Росия, высота цветов, декор
-                                            и упаковка - на ваш выбор
-                                        </div>
-                                    </li>
-                                    <li class="cats-item">
-                                        <img src="img/cats-image14.jpg" alt="" class="cats-image">
-                                        <h3 class="cats-subtitle">
-                                            <a href="#" class="cats-link">Букет из альстромерии и 
-                                                белых хризантем (Голландия)</a>
-                                            <button class="cats-like">
-                                                <span class="cats-like-icon"></span>
-                                            </button>
-                                        </h3>
-                                        <div class="cats-buy">
-                                            <div class="cats-price">
-                                                <span class="cats-name">Цена:</span> <b class="cats-semi">6 560 р.</b>
-                                            </div>
-                                            <button class="cats-buy-btn">
-                                                Купить
-                                            </button>
-                                        </div>
-                                        <div class="cats-info">
-                                            Состав:  роза Росия, высота цветов, декор
-                                            и упаковка - на ваш выбор
-                                        </div>
-                                    </li>
-                                    <li class="cats-item">
-                                        <img src="img/cats-image15.jpg" alt="" class="cats-image">
-                                        <h3 class="cats-subtitle">
-                                            <a href="#" class="cats-link">Изящный букет микс из роз
-                                                (Бельгия) Premium</a>
-                                            <button class="cats-like">
-                                                <span class="cats-like-icon"></span>
-                                            </button>
-                                        </h3>
-                                        <div class="cats-buy">
-                                            <div class="cats-price">
-                                                <span class="cats-name">Цена:</span> <b class="cats-semi">8 990 р.</b>
-                                            </div>
-                                            <button class="cats-buy-btn">
-                                                Купить
-                                            </button>
-                                        </div>
-                                        <div class="cats-info">
-                                            Состав:  роза Росия, высота цветов, декор
-                                            и упаковка - на ваш выбор
-                                        </div>
-                                    </li>
                                 </ul>
                                 <div class="pagin">
                                     <ul class="pagin-list">
@@ -888,8 +840,10 @@
             </div>
         </footer>
     </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
+
     <script src="slick/slick.min.js"></script>
     <script src="js/apps.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/range.js"></script>
 </body>
 </html>

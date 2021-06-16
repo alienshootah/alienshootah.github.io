@@ -1020,7 +1020,23 @@ h2 {
 
 .cata {
     position: relative;
-    padding: 40px 0;
+    padding: 33px 0 74px 0;
+    &-left {
+        min-width: 270px;
+    }
+    &-body {
+        &.full {
+            & .cata-left {
+                display: none;
+            }
+            & .cata-right {
+                width: 100%;
+            }
+            & .cats-item {
+                width: 25%;
+            }
+        }
+    }
     &-decor {
         display: inline-block;
         width: 209px;
@@ -1029,7 +1045,7 @@ h2 {
         background-repeat: no-repeat;
         background-image: url(../img/cata-decor.png);
         position: absolute;
-        top: 0;
+        top: -38px;
         right: 0;
         z-index: -1;
         &-thue {
@@ -1050,7 +1066,7 @@ h2 {
         border-bottom: 1px solid #b3b9b2;
     }
     &-nav {
-        margin: 30px 0;
+        margin: 36px 0 38px 0;
         &-body {
             align-items: center;
         }
@@ -1082,6 +1098,8 @@ h2 {
         }
     }
     &-list {
+        margin-top: 57px;
+        margin-right: -15px;
         & .cats-item {
             width: 33%;
         }
@@ -1091,7 +1109,7 @@ h2 {
     font-size: 12px;
     font-family: $mont-light;
     color: #2e2e2e;
-    padding-bottom: 20px;
+    padding-bottom: 26px;
     &-list {
         margin: 0 -5px;
         display: flex;
@@ -1122,11 +1140,11 @@ h2 {
 }
 .filters {
     border: 2px solid #ccd7b5;
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
     &-ind {
-        margin-bottom: 40px;
+        margin-bottom: 47px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -1135,11 +1153,12 @@ h2 {
         font-size: 14px;
         font-family: $mont-medium;
         color: #2e2e2e;
+        margin-top: 5px;
         margin-bottom: 20px;
         padding: 0;
     }
     &-item {
-        margin: 10px 0;
+        margin: 13px 0;
     }
     &-label {
         display: block;
@@ -1155,7 +1174,7 @@ h2 {
         margin-right: 8px;
     }
     &-more {
-        margin-top: 20px;
+        margin-top: 25px;
         &-btn {
             font-family: $mont-medium;
             font-size: 14px;
@@ -1170,7 +1189,7 @@ h2 {
         }
     }
     &-nav {
-        margin-top: 50px;
+        margin-top: 60px;
         &-btn {
             width: 100%;
             background-color: #93ab6d;
@@ -1202,8 +1221,91 @@ h2 {
         }
     }
 }
+.run {
+    &-top {
+        padding: 0 5px 0 7px;
+        margin-top: 32px;
+    }
+    &-val {
+        height: 2px!important;
+        background-color: #c4c4c4!important;
+        border: 0!important;
+        border-radius: 0!important;
+        & .ui-widget-header {
+            background-color: #ccd7b5!important;
+        }
+        & .ui-slider-handle {
+            top: -0.45em!important;
+            border-radius: 50%!important;
+            border: 0!important;
+            background-color: #ccd7b5!important;
+            width: 1em!important;
+            height: 1em!important;
+        }
+    }
+    &-body {
+        margin-top: 20px;
+        display: flex;
+    }
+    &-field {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 14px;
+        font-family: $mont-light;
+        color: #2e2e2e;
+        border: 0;
+        outline: none;
+        &-right {
+            text-align: right;
+        }
+    }
+}
 .tags {
+    &-list {
+        margin: -10px -15px 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        margin: 10px 15px;
+    }
     &-btn {
         background-color: #f5f3f0;
+        color: #2e2e2e;
+        font-size: 14px;
+        font-family: $mont-light;
+        padding: 12px 22px;
+        border-radius: 30px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color:#d4d4d4;
+        }
+    }
+    &-icon {
+        display: inline-block;
+        width: 9px;
+        height: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/tags-icon.png);
+        margin-left: 13px;
+    }
+    &-clear {
+        margin-top: 12px;
+        &-btn {
+            color: #c4c4c4;
+            font-size: 14px;
+            font-family: $mont-light;
+            padding: 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #c4c4c4;
+            }
+        }
     }
 }
