@@ -124,6 +124,12 @@
     }
     .cata-list {
         margin-right: -5px;
+        & .cats-name {
+            display: none;
+        }
+        & .cats-semi {
+            margin-left: 0;
+        }
     }
 }
 @media(max-width: 992px) {
@@ -418,6 +424,12 @@
             width: 50%;
         }
     }
+    .cata-body.full .cats-item {
+        width: 50%;
+    }
+    .tags {
+        display: none;
+    }
 }
 @media(max-width: 565px) {
     .header-menu {
@@ -538,6 +550,7 @@
         }
         &-image {
             height: 150px;
+            max-width: 150px;
         }
         &-subtitle {
             flex-wrap: wrap;
@@ -767,6 +780,43 @@
     }
     .slick-dots li.slick-active button:before {
         background-color: #ccd7b5;
+    }
+    /* Pages */ 
+    .cata-nav-body {
+        & .col-4 {
+            display: none;
+        }
+        & .col-3,
+        & .col-5 {
+            width: 50%;
+        }
+    }
+    .cata-sort {
+        right: 15px;
+    }
+    .cata-nav {
+        margin: 20px 0;
+    }
+    .cats-list {
+        margin-top: 0;
+    }
+    .cata-filter-text {
+        font-size: 0;
+        &::after {
+            content: 'Фильтр';
+            font-size: 14px;
+        }
+    }
+    .cata-decor {
+        width: 62px;
+        height: 112px;
+        background-image: url(../img/cata-decor-mobile.png);
+        top: 0;
+        &-thue {
+            width: 147px;
+            height: 126px;
+            background-image: url(../img/cata-decor-thue-mobile.png);
+        }
     }
 }
 @media(max-width: 375px) {
