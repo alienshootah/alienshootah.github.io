@@ -1015,3 +1015,195 @@ h2 {
         margin: 5px 10px;
     }
 }
+
+/* Pages */
+
+.cata {
+    position: relative;
+    padding: 40px 0;
+    &-decor {
+        display: inline-block;
+        width: 209px;
+        height: 358px;
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-image: url(../img/cata-decor.png);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        &-thue {
+            display: inline-block;
+            width: 379px;
+            height: 576px;
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-image: url(../img/cata-decor-thue.png);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+    &-top {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #b3b9b2;
+    }
+    &-nav {
+        margin: 30px 0;
+        &-body {
+            align-items: center;
+        }
+    }
+    &-filter {
+        &-btn {
+            font-size: 14px;
+            font-family: $mont-light;
+            color: #2e2e2e;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 14px;
+            width: 14px;
+            height: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/cata-filter-icon.png);
+            margin-right: 15px;
+        }
+        &-find {
+            color: #c4c4c4;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &-list {
+        & .cats-item {
+            width: 33%;
+        }
+    }
+}
+.breadcrumbs {
+    font-size: 12px;
+    font-family: $mont-light;
+    color: #2e2e2e;
+    padding-bottom: 20px;
+    &-list {
+        margin: 0 -5px;
+        display: flex;
+    }
+    &-item {
+        margin: 5px;
+        &::after {
+            content: '/';
+            display: inline-block;
+            margin-left: 8px;
+        }
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+    }
+    &-link {
+        color: #2e2e2e;
+        text-decoration: none;
+        transition: all 0.5s;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #2e2e2e;
+        }
+    }
+}
+.filters {
+    border: 2px solid #ccd7b5;
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    &-ind {
+        margin-bottom: 40px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-title {
+        font-size: 14px;
+        font-family: $mont-medium;
+        color: #2e2e2e;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    &-item {
+        margin: 10px 0;
+    }
+    &-label {
+        display: block;
+        color: #2e2e2e;
+        font-size: 14px;
+        font-family: $mont-light;
+    }
+    &-check {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 1px;
+        margin-right: 8px;
+    }
+    &-more {
+        margin-top: 20px;
+        &-btn {
+            font-family: $mont-medium;
+            font-size: 14px;
+            color: #2e2e2e;
+            padding: 0;
+            border-bottom: 1px solid #2e2e2e;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-nav {
+        margin-top: 50px;
+        &-btn {
+            width: 100%;
+            background-color: #93ab6d;
+            color: #2e2e2e;
+            font-size: 14px;
+            font-family: $mont-medium;
+            border-radius: 30px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            transition: all 0.5s;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:hover,
+            &:focus {
+                background-color: #b7ca99;
+                color: #2e2e2e;
+            }
+            &-empty {
+                background-color: transparent;
+                color: #c4c4c4;
+                font-family: $mont-light;
+                &:hover,
+                &:focus {
+                    background-color: #ddd;
+                }
+            }
+        }
+    }
+}
+.tags {
+    &-btn {
+        background-color: #f5f3f0;
+    }
+}
