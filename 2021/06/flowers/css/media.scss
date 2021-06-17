@@ -14,6 +14,10 @@
         width: 100%;
         margin-left: 0;
     }
+    /* Card */
+    .card-picture-right {
+        padding-left: 0;
+    }
 }
 @media(max-width: 1200px) {
     .nav-link {
@@ -130,6 +134,10 @@
         & .cats-semi {
             margin-left: 0;
         }
+    }
+    /* Card */
+    .also-btn {
+        padding: 8px 16px;
     }
 }
 @media(max-width: 992px) {
@@ -310,6 +318,52 @@
             }
         }
     }
+    /* Card */
+    .card-picture {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card-picture-right {
+        padding-left: 15px;
+        width: 100%;
+        order: -1;
+    }
+    .card-picture-left {
+        width: 100%;
+    }
+    .card-nav {
+        margin-top: 30px;
+        &::after {
+            content: none;
+        }
+        &-item {
+            border: 0;
+            margin: 0 5px;
+            height: 120px;
+        }
+        &-image {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .also-list {
+        flex-wrap: wrap;
+    }
+    .also-item {
+        width: 32%;
+    }
+    .reviews {
+        &-body {
+            display: block;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
 }
 @media(max-width: 768px) {
     .special-decor-thue {
@@ -474,6 +528,23 @@
                 background-image: url(../img/filters-mobile-icon.png);
             }
         }
+    }
+    /* Card */
+    .prices-name {
+        display: none;
+    }
+    .prices-value {
+        margin-left: 0;
+    }
+    .card-buy {
+        display: block;
+    }
+    .card-buy-right {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .also-item {
+        width: 49%;
     }
 }
 @media(max-width: 565px) {
@@ -866,6 +937,94 @@
             width: 147px;
             height: 126px;
             background-image: url(../img/cata-decor-thue-mobile.png);
+        }
+    }
+    /* Card */
+    .card {
+        padding: 20px 0 20px 0;
+        &-title {
+            font-size: 16px;
+        }
+        &-decor {
+            width: 60px;
+            height: 101px;
+            background-image: url(../img/card-decor-mobile.png);
+            bottom: auto;
+            right: 0px;
+            top: 5px;
+            left: auto;
+            &-thue {
+                width: 153px;
+                height: 207px;
+                background-image: url(../img/card-decor-thue-mobile.png);
+                top: auto;
+                right: 0;
+                left: auto;
+                bottom: 900px;
+            }
+        }
+        &-main {
+            margin-top: 0px;
+            &-body {
+                display: block;
+            }
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-picture {
+            margin-bottom: 30px;
+            &-left {
+                display: none;
+            }
+        }
+        &-mobile {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-descr {
+            width: 100%;
+            font-size: 12px;
+            margin: 0;
+        }
+        &-buy {
+            display: flex;
+            width: 100%;
+            order: -1;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            &-right {
+                margin-top: 0;
+                margin-left: 20px;
+                width: 100%;
+            }
+            &-btn {
+                width: 100%;
+                padding: 11px 30px 15px 30px;
+            }
+        }
+        &-subtitle {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        &-text {
+            margin-top: 0;
+        }
+    }
+    .favourite {
+        position: relative;
+        top: -3px;
+        &-icon {
+            top: 8px;
+        }
+    }
+    .also {
+        margin: 45px 0;
+        &-link {
+            font-size: 12px;
         }
     }
 }

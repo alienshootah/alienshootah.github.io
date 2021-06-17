@@ -24,6 +24,53 @@ if(window.innerWidth < 565) {
     mobileOnlySlider();
 }
 
+$('.card-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    asNavFor: '.card-slider',
+    vertical: true,
+    verticalSwiping: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          slidesToShow: 3,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          vertical: false,
+          verticalSwiping: false,
+          slidesToShow: 2,
+          arrows: false
+        }
+      }
+    ]
+  });
+  $('.card-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.card-nav',
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+   
+    responsive: [
+      {
+        breakpoint: 560,
+        settings: {
+          dots: true,
+        }
+      }
+    ]
+});
+
 /* Current year in footer */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();

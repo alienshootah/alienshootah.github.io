@@ -1113,6 +1113,7 @@ h2 {
     &-list {
         margin: 0 -5px;
         display: flex;
+        flex-wrap: wrap;
     }
     &-item {
         margin: 5px;
@@ -1318,7 +1319,7 @@ h2 {
 /* Card */
 
 .card {
-    padding: 40px 0 80px 0;
+    padding: 32px 0 21px 0;
     position: relative;
     &-decor {
         display: inline-block;
@@ -1329,7 +1330,7 @@ h2 {
         background-image: url(../img/card-decor.png);
         position: absolute;
         right: 0;
-        bottom: 600px;
+        bottom: 555px;
         z-index: -1;
         &-thue {
             display: inline-block;
@@ -1344,20 +1345,41 @@ h2 {
             z-index: -1;
         }
     }
+    &-main {
+        margin-top: 16px;
+    }
     &-picture {
         display: flex;
+        &-left {
+            min-width: 140px;
+        }
     }
     &-nav {
-        margin-top: -16px;
+        margin-top: -8px;
+        position: relative;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 102px;
+            box-sizing: border-box;
+            background-position: top;
+            background-repeat: repeat-x;
+            background-image: url(../img/card-nav-after.png);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
         &-item {
             width: 100px;
             height: 100px;
             border-radius: 20px;
             border: 1px solid #d7ddd6;
-            margin: 16px 0;
+            margin: 8px 0;
         }
         &-image {
             max-width: 100px;
+            min-width: 100px;
             width: 100%;
             height: 100px;
             object-fit: cover;
@@ -1372,23 +1394,24 @@ h2 {
             width: 100%;
         }
     }
-    &-main {
-        margin-top: 30px;
-    }
     &-title {
         font-family: $mont-medium;
         font-size: 24px;
+        margin-top: 0;
     }
     &-info {
+        margin-top: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     &-descr {
-        margin: 30px 0;
+        margin: 40px 0;
+        line-height: 1.4;
     }
     &-subtitle {
         font-size: 14px;
+        margin-bottom: 15px;
     }
     &-buy {
         display: flex;
@@ -1401,7 +1424,7 @@ h2 {
             background-color: #93ab6d;
             border-radius: 30px;
             box-sizing: border-box;
-            padding: 11px 60px 15px 60px;
+            padding: 11px 52px 15px 52px;
             font-size: 14px;
             color: #2e2e2e;
             transition: all 0.5s;
@@ -1421,7 +1444,7 @@ h2 {
         font-family: $mont-semibold;
         font-size: 24px;
         color: #2e2e2e;
-        margin-left: 25px;
+        margin-left: 20px;
     }
 }
 .favourite {
@@ -1471,9 +1494,10 @@ h2 {
     }
 }
 .also {
-    margin: 80px 0;
+    margin: 71px 0;
     &-list {
         display: flex;
+        margin-top: 25px;
     }
     &-item {
         width: 20%;
@@ -1488,7 +1512,7 @@ h2 {
         }
     }
     &-wrap {
-        padding: 10px 10px 20px 10px;
+        padding: 10px 13px 20px 13px;
         box-sizing: border-box;
         text-align: center;
     }
@@ -1499,7 +1523,7 @@ h2 {
         max-height: 210px;
     }
     &-link {
-        margin: 20px 0 20px 0;
+        margin: 24px 0 18px 0;
         display: block;
         text-decoration: none;
         color: #2e2e2e;
@@ -1526,7 +1550,7 @@ h2 {
         font-size: 14px;
         font-family: $mont-medium;
         color: #2e2e2e;
-        padding: 10px 20px;
+        padding: 11px 29px;
         border-radius: 30px;
         transition: all 0.5s;
         &:hover,
@@ -1540,14 +1564,14 @@ h2 {
         margin-top: 40px;
     }
     &-list {
-        line-height: 1.6;
+        line-height: 1.5;
     }
     &-item {
         background-color: #ccd7b5;
-        border-radius: 20px;
-        padding: 30px 35px;
+        border-radius: 15px;
+        padding: 23px 35px 7px 35px;
         box-sizing: border-box;
-        margin: 0 0 36px 0;
+        margin: 0 0 35px 0;
         position: relative;
         box-shadow: 3px 3px 10px 3px rgba(229, 229, 229, 0.35);
         &:after {
@@ -1571,6 +1595,9 @@ h2 {
     &-name {
         font-family: $mont-medium;
         font-size: 14px;
+    }
+    &-date {
+        font-size: 12px;
     }
     &-more {
         &-link  {
@@ -1602,10 +1629,11 @@ h2 {
         border-radius: 20px;
         border: 2px solid #ccd7b5;
         box-shadow: 3px 3px 10px 3px rgba(229, 229, 229, 0.35);
-        padding: 50px 40px;
+        padding: 34px 45px;
+        background-color: #fffcf7;
     }
     &-item {
-        margin-bottom: 30px;
+        margin-bottom: 19px;
         &:last-child {
             margin-bottom: 0;
         }
@@ -1628,10 +1656,14 @@ h2 {
             padding: 10px;
         }
     }
+    &-end {
+        margin-top: 25px;
+        margin-bottom: 13px;
+    }
     &-btn {
         background-color: #93ab6d;
         border-radius: 30px;
-        padding: 12px 30px;
+        padding: 11px 33px;
         color: #2e2e2e;
         font-size: 14px;
         font-family: $mont-medium;
@@ -1643,5 +1675,25 @@ h2 {
     }
 }
 .similar {
-    margin-top: 60px;
+    margin-top: 90px;
 }
+
+/* Slider */
+
+.card-nav {
+    & .slick-next,
+    & .slick-prev {
+        left: 33%;
+        z-index: 1000;
+    }
+    & .slick-prev {
+        top: 20px;
+    }
+    & .slick-next {
+        top: auto;
+        bottom: 5px;
+    }
+    & .slick-prev:before { content: url(../img/card-arrow-left.png); }
+    & .slick-next:before { content: url(../img/card-arrow-right.png); }
+}
+
