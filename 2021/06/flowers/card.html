@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Карточка товара / FlowerShop</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="header">
+            <div class="header-top">
+                <div class="content">
+                    <div class="row header-body">
+                        <div class="col-7">
+                            <ul class="header-list">
+                                <li class="header-item">
+                                    <a href="#" class="header-link">О магазине</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#" class="header-link">Оплата и доставка</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#" class="header-link">Корпоративным клиентам</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#" class="header-link">Каталог</a>
+                                </li>
+                                <li class="header-item">
+                                    <a href="#" class="header-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-2">
+                            <div class="lang">
+                                <ul class="lang-list">
+                                    <li class="lang-item">
+                                        <a href="#"><span class="lang-icon lang-icon-one"></span></a>
+                                    </li>
+                                    <li class="lang-item">
+                                        <a href="#"><span class="lang-icon lang-icon-thue"></span></a>
+                                    </li>
+                                    <li class="lang-item">
+                                        <a href="#"><span class="lang-icon lang-icon-three"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 text-right">
+                            <div class="login">
+                                <button class="login-btn">
+                                    <span class="login-icon"></span>
+                                    <span class="login-text">Вход/Регистрация</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="content">
+                    <div class="row header-bottom-body">
+                        <div class="col-3 header-bottom-left">
+                            <a href="#"><img src="img/header-logo.png" alt="" class="header-logo"></a>
+                        </div>
+                        <div class="col-6 header-bottom-center">
+                            <div class="adress">
+                                <ul class="adress-list">
+                                    <li class="adress-item">
+                                        Доставка цветов в Риге <br>
+                                        Работаем круглосуточно
+                                    </li>
+                                    <li class="adress-item">
+                                        Латвия, Рига<br>
+                                        ул.Краста, 91
+                                    </li>
+                                    <li class="adress-item">
+                                        <a href="tel:+37128493389" class="adress-tel">+371 28 49 33 89</a><br>
+                                        <a href="#" class="adress-link">Перезвоните мне</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3 header-bottom-right">
+                            <div class="basket">
+                                <ul class="basket-list">
+                                    <li class="basket-item">
+                                        <button class="basket-btn">
+                                            <span class="basket-icon basket-icon-one"></span>
+                                        </button>
+                                    </li>
+                                    <li class="basket-item">
+                                        <button class="basket-btn">
+                                            <span class="basket-icon basket-icon-thue"></span>
+                                            <span class="basket-text">Пока нет товаров</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="nav">
+                <div class="content">
+                    <div class="row nav-body">
+                        <div class="col-9">
+                            <div class="nav-drop">
+                                <ul class="nav-list">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Акции</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Новинки</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Букеты в коробках</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Свадебные</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Повод</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Цветы</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Розы</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">Пионы</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <a href="/" class="header-mobile-link">
+                                <img src="img/header-logo-mobile.png" alt="" class="header-logo-mobile">
+                            </a>
+                            <button class="header-search">
+                                <span class="header-search-icon"></span>
+                            </button>
+                            <button class="header-menu">
+                                <span class="header-menu-icon"></span>
+                            </button>
+                            <div class="find">
+                                <form action="/" class="find-form">
+                                    <div class="find-body">
+                                        <input type="text" class="find-field" placeholder="Поиск">
+                                        <button class="find-btn">
+                                            <span class="find-icon"></span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header> 
+        <main class="main">
+            <div class="cata">
+                <div class="content">
+                    <div class="cata-top">
+                        <div class="breadcrumbs">
+                            <ul class="breadcrumbs-list">
+                                <li class="breadcrumbs-item">
+                                    <a href="#" class="breadcrumbs-link">Главная</a>
+                                </li>
+                                <li class="breadcrumbs-item">Каталог</li>
+                            </ul>
+                        </div>
+                        <h1 class="cata-title">Каталог цветов</h1>
+                    </div>
+                    <div class="cata-nav">
+                        <div class="row cata-nav-body">
+                            <div class="col-3">
+                                <div class="cata-filter">
+                                    <button class="cata-filter-btn">
+                                        <span class="cata-filter-icon"></span>
+                                        <span class="cata-filter-text">Свернуть фильтр</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p class="cata-filter-find">
+                                    Найдено <span class="cata-filter-value">214</span> товаров
+                                </p>
+                            </div>
+                            <div class="col-5">
+                                <div class="sort cata-sort">
+                                    <button class="sort-mobile">
+                                        <span class="sort-mobile-text">По цене</span>
+                                        <span class="sort-mobile-icon"></span>
+                                    </button>
+                                    <div class="sort-drop">
+                                        <ul class="sort-list">
+                                            <li class="sort-item">
+                                                Сортировка:
+                                            </li>
+                                            <li class="sort-item">
+                                                <button class="sort-btn">Цвет</button>
+                                            </li>
+                                            <li class="sort-item">
+                                                <button class="sort-btn">Длина</button>
+                                            </li>
+                                            <li class="sort-item">
+                                                <button class="sort-btn">Цена</button>
+                                            </li>
+                                            <li class="sort-item">
+                                                <button class="sort-btn active">Популярность</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cata-body">
+                        <div class="col-3 cata-left">
+                            <div class="filters">
+                                <div class="filters-mobile">
+                                    <h3 class="filters-mobile-title">Фильтр</h3>
+                                    <button class="filters-mobile-btn">
+                                        <span class="filters-mobile-icon"></span>
+                                    </button>
+                                </div>
+                                <div class="filters-body">
+                                    <form class="filters-form">
+                                        <div class="filters-ind">
+                                            <h3 class="filters-title">Цена:</h3>
+                                            <div class="filters-block">
+                                                <div class="run">
+                                                    <div class="run-top">
+                                                        <div id="slider-range" class="run-val"></div>
+                                                    </div>
+                                                    <div class="run-body">
+                                                        <div class="run-left">
+                                                          <input type="text" id="amount" readonly class="run-field">
+                                                        </div>
+                                                        <div class="run-right">
+                                                          <input type="text" id="amount2" readonly class="run-field run-field-right">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-ind">
+                                            <h3 class="filters-title">Повод:</h3>
+                                            <div class="filters-block">
+                                                <ul class="filters-list">
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check" checked>
+                                                            <span class="filters-text">День Рождения</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Свадьба</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Свидание</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Сказать люблю</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="filters-more">
+                                                    <button class="filters-more-btn">
+                                                        <span class="filters-more-text">Показать еще</span>
+                                                        <span class="filters-more-value">13</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-ind">
+                                            <h3 class="filters-title">Состав букета:</h3>
+                                            <div class="filters-block">
+                                                <ul class="filters-list">
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Альстромерия</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Гвоздика</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Гербера</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Кустовая роза</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="filters-more">
+                                                    <button class="filters-more-btn">
+                                                        <span class="filters-more-text">Показать еще</span>
+                                                        <span class="filters-more-value">91</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-ind">
+                                            <h3 class="filters-title">Количество:</h3>
+                                            <div class="filters-block">
+                                                <ul class="filters-list">
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">15 шт.</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">25 - 31 шт.</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">51 шт.</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">101 шт.</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="filters-more">
+                                                    <button class="filters-more-btn">
+                                                        <span class="filters-more-text">Показать еще</span>
+                                                        <span class="filters-more-value">6</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-ind">
+                                            <h3 class="filters-title">Цветовая гамма:</h3>
+                                            <div class="filters-block">
+                                                <ul class="filters-list">
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Белые</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Голубые</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Розовые</span>
+                                                        </label>
+                                                    </li>
+                                                    <li class="filters-item">
+                                                        <label class="filters-label">
+                                                            <input type="checkbox" class="filters-check">
+                                                            <span class="filters-text">Красные</span>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                                <div class="filters-more">
+                                                    <button class="filters-more-btn">
+                                                        <span class="filters-more-text">Показать еще</span>
+                                                        <span class="filters-more-value">14</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filters-ind">
+                                            <div class="filters-nav">
+                                                <button class="filters-nav-btn">Применить фильтр</button>
+                                                <button class="filters-nav-btn filters-nav-btn-empty">Сбросить фильтр</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9 cata-right">
+                            <div class="tags">
+                                <div class="row tags-body">
+                                    <div class="col-9 tags-left">
+                                        <ul class="tags-list">
+                                            <li class="tags-item">
+                                                <button class="tags-btn">
+                                                    <span class="tags-text">Свадебные</span>
+                                                    <span class="tags-icon"></span>
+                                                </button>
+                                            </li>
+                                            <li class="tags-item">
+                                                <button class="tags-btn">
+                                                    <span class="tags-text">Розы</span>
+                                                    <span class="tags-icon"></span>
+                                                </button>
+                                            </li>
+                                            <li class="tags-item">
+                                                <button class="tags-btn">
+                                                    <span class="tags-text">Белые</span>
+                                                    <span class="tags-icon"></span>
+                                                </button>
+                                            </li>
+                                            <li class="tags-item">
+                                                <button class="tags-btn">
+                                                    <span class="tags-text">15 штук</span>
+                                                    <span class="tags-icon"></span>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-3 text-right tags-right">
+                                        <div class="tags-clear">
+                                            <button class="tags-clear-btn">
+                                                Очистить фильтр
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cata-wrapper">
+                                <ul class="cats-list cata-list">
+                                    <li class="cats-item">
+                                        <img src="img/cats-image1.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет микс из 11 оранжевых и 9 алых роз (Бельгия)</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">12 100 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item active">
+                                        <img src="img/cats-image2.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет из 51 красной розы 60 см (Россия) Premium</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">26 590 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image3.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет Весеннее настроение из роз и сирени</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">11 500 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image4.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Изящный и нежный букет из хризантем</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">10 320 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image5.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Изящный и нежный букет из хризантем</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">6 250 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image6.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет из 25 розовых роз 50 см
+                                                (Бельгия)</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">13 510 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image7.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Яркий букет из эустомы,
+                                                гортензии и желтых роз</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">7 400 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image8.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет Яркий комплимент из
+                                                9 лилий и хризантем</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">6 800 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image9.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет микс из 17 ярких гербер
+                                                (Голландия) Premium</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">4 590 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image10.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет микс из альстромерии
+                                                и хризантем (Бельгия)</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">6 700 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image11.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет микс из роз, орхидей,
+                                                хризантем и альстромерии</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">8 200 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                    <li class="cats-item">
+                                        <img src="img/cats-image12.jpg" alt="" class="cats-image">
+                                        <h3 class="cats-subtitle">
+                                            <a href="#" class="cats-link">Букет из 15 розовых роз 60 см
+                                                (Россия) Premium</a>
+                                            <button class="cats-like">
+                                                <span class="cats-like-icon"></span>
+                                            </button>
+                                        </h3>
+                                        <div class="cats-buy">
+                                            <div class="cats-price">
+                                                <span class="cats-name">Цена:</span> <b class="cats-semi">9 590 р.</b>
+                                            </div>
+                                            <button class="cats-buy-btn">
+                                                Купить
+                                            </button>
+                                        </div>
+                                        <div class="cats-info">
+                                            Состав:  роза Росия, высота цветов, декор
+                                            и упаковка - на ваш выбор
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="pagin">
+                                    <ul class="pagin-list">
+                                        <li class="pagin-item">
+                                            <a href="#" class="pagin-link active">1</a>
+                                        </li>
+                                        <li class="pagin-item">
+                                            <a href="#" class="pagin-link">2</a>
+                                        </li>
+                                        <li class="pagin-item">
+                                            <a href="#" class="pagin-link">3</a>
+                                        </li>
+                                        <li class="pagin-item">
+                                            <a href="#" class="pagin-link">...</a>
+                                        </li>
+                                        <li class="pagin-item">
+                                            <a href="#" class="pagin-link">15</a>
+                                        </li>
+                                        <li class="pagin-item">
+                                            <a href="#" class="pagin-link">></a>
+                                        </li>
+                                    </ul>
+                                    <div class="pagin-mobile">
+                                        <button class="pagin-mobile-btn">Смотреть еще</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="cata-decor"></span>
+                <span class="cata-decor-thue"></span>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="content">
+                    <div class="row footer-top-body">
+                        <div class="col-3">
+                            <div class="footer-flex">
+                                <div class="footer-num">
+                                    <a href="tel:+37128493389" class="footer-tel">+371 28 49 33 89</a><br>
+                                    <a href="#" class="footer-tel-callback">Перезвоните мне</a>
+                                </div>
+                                <div class="social">
+                                    <h3 class="social-title">Мы в соцсетях</h3>
+                                    <ul class="social-list">
+                                        <li class="social-item">
+                                            <a href="#"><span class="social-icon social-icon-one"></span></a>
+                                        </li>
+                                        <li class="social-item">
+                                            <a href="#"><span class="social-icon social-icon-thue"></span></a>
+                                        </li>
+                                        <li class="social-item">
+                                            <a href="#"><span class="social-icon social-icon-three"></span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="footer-policy">
+                                    <a href="#" class="footer-policy-link">Политика конфиденциальности</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <h3 class="footer-subtitle">Интернет-магазин</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">О магазине</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Оплата и доставка</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Корп. клиентам</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Отзывы</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h3 class="footer-subtitle">Покупателю</h3>
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Букеты в коробках</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Свадебные</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Подарки</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Розы</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Букеты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-3">
+                            <h3 class="footer-subtitle">Принимаем к оплате</h3>
+                            <div class="payment">
+                                <ul class="payment-list">
+                                    <li class="payment-item">
+                                        <img src="img/payment-image1.png" alt="" class="payment-image">
+                                    </li>
+                                    <li class="payment-item">
+                                        <img src="img/payment-image2.png" alt="" class="payment-image">
+                                    </li>
+                                    <li class="payment-item">
+                                        <img src="img/payment-image3.png" alt="" class="payment-image">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="content">
+                    <p class="footer-copy">
+                        © <span class="footer-date"></span> Интернет - магазин Flowershop. Все права защищены
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/apps.js"></script>
+</body>
+</html>
