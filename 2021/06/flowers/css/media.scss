@@ -208,7 +208,7 @@
         &-list {
             display: block;
             background-color: #fffcf7;
-            margin-top: 8px;
+            margin-top: 7px;
             margin-left: -15px;
             margin-right: -15px;
         }
@@ -415,6 +415,24 @@
     /* Pages */
     .cata-left {
         display: none;
+        border: 0;
+        border-radius: 0;
+        box-sizing: border-box;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: #fffcf7;
+    }
+    .cata-body {
+        &.full {
+            & .cata-left {
+                display: block;
+            }
+        }
     }
     .cata-right {
         width: 100%;
@@ -429,6 +447,33 @@
     }
     .tags {
         display: none;
+    }
+    .filters {
+        border: 0;
+        border-radius: 0;
+        &-mobile {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            &-title {
+                margin: 0;
+                padding: 0;
+            }
+            &-btn {
+                padding: 0;
+                position: relative;
+                top: 5px;
+            }
+            &-icon {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/filters-mobile-icon.png);
+            }
+        }
     }
 }
 @media(max-width: 565px) {
@@ -445,6 +490,9 @@
     .nav-list {
         margin-left: -40px;
         margin-right: -40px;
+        height: 100%;
+        max-height: 300px;
+        overflow-y: auto;
     }
     .find {
         padding-left: 40px;
@@ -797,7 +845,7 @@
     .cata-nav {
         margin: 20px 0;
     }
-    .cats-list {
+    .cata-list {
         margin-top: 0;
     }
     .cata-filter-text {
