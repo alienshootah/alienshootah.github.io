@@ -183,40 +183,25 @@
                     <div class="card-main">
                         <div class="row card-main-body">
                             <div class="col-6 card-left">
-                                <div class="card-picture">
-                                    <div class="card-picture-left">
+                                <div class="row card-picture">
+                                    <div class="col-2 card-picture-left">
                                         <ul class="card-nav">
                                             <li class="card-nav-item">
-                                                <img src="img/card-nav-image.jpg" alt="" class="card-nav-image">
+                                                <img src="img/card-nav-image1.jpg" alt="" class="card-nav-image">
                                             </li>
                                             <li class="card-nav-item">
-                                                <img src="img/card-nav-image.jpg" alt="" class="card-nav-image">
+                                                <img src="img/card-nav-image2.jpg" alt="" class="card-nav-image">
                                             </li>
                                             <li class="card-nav-item">
-                                                <img src="img/card-nav-image.jpg" alt="" class="card-nav-image">
+                                                <img src="img/card-nav-image3.jpg" alt="" class="card-nav-image">
                                             </li>
                                             <li class="card-nav-item">
-                                                <img src="img/card-nav-image.jpg" alt="" class="card-nav-image">
-                                            </li>
-                                            <li class="card-nav-item">
-                                                <img src="img/card-nav-image.jpg" alt="" class="card-nav-image">
+                                                <img src="img/card-nav-image4.jpg" alt="" class="card-nav-image">
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="card-picture-right">
+                                    <div class="col-10 card-picture-right">
                                         <ul class="card-slider">
-                                            <li class="card-slider-item">
-                                                <img src="img/card-slider-image.jpg" alt="" class="card-slider-image">
-                                            </li>
-                                            <li class="card-slider-item">
-                                                <img src="img/card-slider-image.jpg" alt="" class="card-slider-image">
-                                            </li>
-                                            <li class="card-slider-item">
-                                                <img src="img/card-slider-image.jpg" alt="" class="card-slider-image">
-                                            </li>
-                                            <li class="card-slider-item">
-                                                <img src="img/card-slider-image.jpg" alt="" class="card-slider-image">
-                                            </li>
                                             <li class="card-slider-item">
                                                 <img src="img/card-slider-image.jpg" alt="" class="card-slider-image">
                                             </li>
@@ -236,8 +221,10 @@
                                     <div class="card-info-right">
                                         <div class="favourite">
                                             <div class="favourite-body">
-                                                <span class="favourite-text">В избранное</span>
-                                                <span class="favourite-icon"></span>
+                                                <button class="favourite-btn">
+                                                    <span class="favourite-text">В избранное</span>
+                                                    <span class="favourite-icon"></span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -255,13 +242,19 @@
                                         <li class="card-item">Служба доставки работает круглосуточно и без выходных в пределах Москвы и ее пригородов.</li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="card-buy">
-                                <div class="card-buy-left">
-                                    <input type="text" class="card-buy-field">
-                                </div>
-                                <div class="card-buy-right">
-                                    <div class="card-buy-btn">В корзину</div>
+                                <div class="card-buy">
+                                    <div class="card-buy-left">
+                                       <div class="plusmin">
+                                           <div class="plusmin-body">
+                                               <button class="plusmin-btn">-</button>
+                                               <span class="plusmin-value">1</span>
+                                               <button class="plusmin-btn">+</button>
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="card-buy-right">
+                                        <button class="card-buy-btn">В корзину</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -270,72 +263,82 @@
                         <h2 class="also-title">Вы можете дополнить букет:</h2>
                         <ul class="also-list">
                             <li class="also-item">
-                                <img src="img/also-image1.jpg" alt="" class="also-image">
-                                <a href="#" class="also-link">Шампанское безалкогольное</a>
-                                <div class="also-buy">
-                                    <div class="also-left">
-                                        <b class="also-price">
-                                            <span class="also-price-value">+ 2 290</span> р.
-                                        </b>
-                                    </div>
-                                    <div class="also-right">
-                                        <button class="also-right-btn">Купить</button>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="also-item">
-                                <img src="img/also-image2.jpg" alt="" class="also-image">
-                                <a href="#" class="also-link">Плюшевый медведь 55 см</a>
-                                <div class="also-buy">
-                                    <div class="also-left">
-                                        <b class="also-price">
-                                            <span class="also-price-value">+1990 </span> р.
-                                        </b>
-                                    </div>
-                                    <div class="also-right">
-                                        <button class="also-right-btn">Купить</button>
+                                <div class="also-wrap">
+                                    <img src="img/also-image1.jpg" alt="" class="also-image">
+                                    <a href="#" class="also-link">Шампанское безалкогольное</a>
+                                    <div class="also-buy">
+                                        <div class="also-left">
+                                            <b class="also-price">
+                                                <span class="also-price-value">+ 2 290</span> р.
+                                            </b>
+                                        </div>
+                                        <div class="also-right">
+                                            <button class="also-btn">Купить</button>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="also-item">
-                                <img src="img/also-image3.jpg" alt="" class="also-image">
-                                <a href="#" class="also-link">Коробка-сердце с фруктами</a>
-                                <div class="also-buy">
-                                    <div class="also-left">
-                                        <b class="also-price">
-                                            <span class="also-price-value">+2700</span> р.
-                                        </b>
-                                    </div>
-                                    <div class="also-right">
-                                        <button class="also-right-btn">Купить</button>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="also-item">
-                                <img src="img/also-image4.jpg" alt="" class="also-image">
-                                <a href="#" class="also-link">Шарик «Смайлик» средний</a>
-                                <div class="also-buy">
-                                    <div class="also-left">
-                                        <b class="also-price">
-                                            <span class="also-price-value">+150 р.</span> р.
-                                        </b>
-                                    </div>
-                                    <div class="also-right">
-                                        <button class="also-right-btn">Купить</button>
+                                <div class="also-wrap">
+                                    <img src="img/also-image2.jpg" alt="" class="also-image">
+                                    <a href="#" class="also-link">Плюшевый медведь 55 см</a>
+                                    <div class="also-buy">
+                                        <div class="also-left">
+                                            <b class="also-price">
+                                                <span class="also-price-value">+1990 </span> р.
+                                            </b>
+                                        </div>
+                                        <div class="also-right">
+                                            <button class="also-btn">Купить</button>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="also-item">
-                                <img src="img/also-image5.jpg" alt="" class="also-image">
-                                <a href="#" class="also-link">Коробка шоколадных конфет</a>
-                                <div class="also-buy">
-                                    <div class="also-left">
-                                        <b class="also-price">
-                                            <span class="also-price-value">+350</span> р.
-                                        </b>
+                                <div class="also-wrap">
+                                    <img src="img/also-image3.jpg" alt="" class="also-image">
+                                    <a href="#" class="also-link">Коробка-сердце с фруктами</a>
+                                    <div class="also-buy">
+                                        <div class="also-left">
+                                            <b class="also-price">
+                                                <span class="also-price-value">+2700</span> р.
+                                            </b>
+                                        </div>
+                                        <div class="also-right">
+                                            <button class="also-btn">Купить</button>
+                                        </div>
                                     </div>
-                                    <div class="also-right">
-                                        <button class="also-right-btn">Купить</button>
+                                </div>
+                            </li>
+                            <li class="also-item">
+                                <div class="also-wrap">
+                                    <img src="img/also-image4.jpg" alt="" class="also-image">
+                                    <a href="#" class="also-link">Шарик «Смайлик» средний</a>
+                                    <div class="also-buy">
+                                        <div class="also-left">
+                                            <b class="also-price">
+                                                <span class="also-price-value">+150 р.</span> р.
+                                            </b>
+                                        </div>
+                                        <div class="also-right">
+                                            <button class="also-btn">Купить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="also-item">
+                                <div class="also-wrap">
+                                    <img src="img/also-image5.jpg" alt="" class="also-image">
+                                    <a href="#" class="also-link">Коробка шоколадных конфет</a>
+                                    <div class="also-buy">
+                                        <div class="also-left">
+                                            <b class="also-price">
+                                                <span class="also-price-value">+350</span> р.
+                                            </b>
+                                        </div>
+                                        <div class="also-right">
+                                            <button class="also-btn">Купить</button>
+                                        </div>
                                     </div>
                                 </div>
                             </li>
@@ -344,18 +347,18 @@
                     <div class="reviews">
                         <h2 class="reviews-title">Отзывы покупателей</h2>
                         <div class="row reviews-body">
-                            <div class="col-7 reviews-left">
+                            <div class="col-8 reviews-left">
                                 <ul class="reviews-list">
                                     <li class="reviews-item">
                                         <div class="reviews-top">
-                                            <span class="reviews-name">Игнат</span>
+                                            <b class="reviews-name">Игнат</b>
                                             <span class="reviews-date">25 апреля 2021</span>
                                         </div>
                                         <p class="reviews-text">Шикарный нежный букет, отличный презент для любимой девушки. Моя любимая была в восторге, не ожидала получить букет пионов в такое время. Букет действительно выглядит красиво, также, как на фото. Забирал в магазине, оплачивал картой.</p>
                                     </li>
                                     <li class="reviews-item">
                                         <div class="reviews-top">
-                                            <span class="reviews-name">Мария</span>
+                                            <b class="reviews-name">Мария</b>
                                             <span class="reviews-date">20 апреля 2021</span>
                                         </div>
                                         <p class="reviews-text">
@@ -365,51 +368,51 @@
                                     </li>
                                     <li class="reviews-item">
                                         <div class="reviews-top">
-                                            <span class="reviews-name">Виктория</span>
+                                            <b class="reviews-name">Виктория</b>
                                             <span class="reviews-date">10 марта 2021</span>
                                         </div>
                                         <p class="reviews-text">Такой букет дарила маме на 8 марта. Маме очень понравились цветы. Букет скромный и оригинальный, упаковка отлично подходит к цветам, видно руку профессионала.</p>
                                     </li>
                                     <li class="reviews-item">
                                         <div class="reviews-top">
-                                            <span class="reviews-name">Евгений</span>
+                                            <b class="reviews-name">Евгений</b>
                                             <span class="reviews-date">25 апреля 2021</span>
                                         </div>
                                         <p class="reviews-text">Шикарный нежный букет, отличный презент для любимой девушки. Моя любимая была в восторге, не ожидала получить букет пионов в такое время. Букет действительно выглядит красиво, также, как на фото. Забирал в магазине, оплачивал картой.</p>
                                     </li>
-                                    <li class="reviews-item">
-                                        <div class="reviews-more">
-                                            <a href="#" class="reviews-more-link">Смотреть все отзывы</a>
-                                            <span class="reviews-more-icon"></span>
-                                        </div>
-                                    </li>
                                 </ul>
+                                <div class="reviews-more">
+                                    <a href="#" class="reviews-more-link">Смотреть все отзывы</a>
+                                    <span class="reviews-more-icon"></span>
+                                </div>
                             </div>
-                            <div class="col-5 reviews-right">
+                            <div class="col-4 reviews-right">
                                 <div class="another">
                                     <form class="another-from">
                                         <div class="another-body">
                                             <ul class="another-list">
                                                 <li class="another-item">
                                                     <label class="another-label">
-                                                        <span class="another-text">Имя:</span>
+                                                        <b class="another-text">Имя:</b>
                                                         <input type="text" class="another-field">
                                                     </label>
                                                 </li>
                                                 <li class="another-item">
                                                     <label class="another-label">
-                                                        <span class="another-text">Номер телефона:</span>
+                                                        <b class="another-text">Номер телефона:</b>
                                                         <input type="text" class="another-field tel" required>
                                                     </label>
                                                 </li>
                                                 <li class="another-item">
                                                     <label class="another-label">
-                                                        <span class="another-text">Оставьте свой отзыв:</span>
+                                                        <b class="another-text">Оставьте свой отзыв:</b>
                                                         <textarea class="another-field another-field-area"></textarea>
                                                     </label>
                                                 </li>
                                                 <li class="another-item">
-                                                    <button class="another-btn">Оставить отзыв</button>
+                                                    <div class="text-center">
+                                                        <button class="another-btn">Оставить отзыв</button>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -442,7 +445,7 @@
                                     и упаковка - на ваш выбор
                                 </div>
                             </li>
-                            <li class="cats-item active">
+                            <li class="cats-item">
                                 <img src="img/cats-image2.jpg" alt="" class="cats-image">
                                 <h3 class="cats-subtitle">
                                     <a href="#" class="cats-link">Букет из 51 красной розы 60 см (Россия) Premium</a>

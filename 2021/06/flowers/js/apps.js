@@ -9,11 +9,6 @@ searchBtn.addEventListener("click", function() {
   document.querySelector(".find").classList.toggle("show");
 });
 
-const sortBtn = document.querySelector(".sort-mobile");
-sortBtn.addEventListener("click", function() {
-  document.querySelector(".sort-drop").classList.toggle("show");
-});
-
 /* Sliders */
 function mobileOnlySlider() {
     $('.special-list').slick({
