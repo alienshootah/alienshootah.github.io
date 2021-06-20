@@ -8,9 +8,9 @@ $('.gallery-list').slick({
     focusOnSelect: false,
     responsive: [
       {
-        breakpoint: 560,
+        breakpoint: 1720,
         settings: {
-          dots: true,
+          arrows: false,
         }
       }
     ]
@@ -23,9 +23,9 @@ $('.partners-list').slick({
   focusOnSelect: false,
   responsive: [
     {
-      breakpoint: 560,
+      breakpoint: 1720,
       settings: {
-        dots: true,
+        arrows: false,
       }
     }
   ]
