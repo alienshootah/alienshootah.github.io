@@ -194,6 +194,9 @@ h2 {
         }
     }
 }
+.nav-logo-link-mobile {
+    display: none;
+}
 .nav {
     &-body {
         align-items: center;
@@ -217,13 +220,6 @@ h2 {
         &:focus,
         &.active {
             background-color: #555555;
-        }
-        &-logo {
-            &-link {
-                &-mobile {
-                    display: none;
-                }
-            }
         }
     }
 }
@@ -495,6 +491,7 @@ h2 {
         padding: 18px 30px;
         border-radius: 10px;
         transition: all 0.5s;
+        box-sizing: border-box;
         &:hover,
         &:focus {
             background-color: #7e7a7a;
@@ -919,6 +916,8 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        position: relative;
+        z-index: 10;
     }
     &-item {
         width: 33%;
