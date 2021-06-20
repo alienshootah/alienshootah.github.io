@@ -265,6 +265,7 @@ h2 {
         &:before {
             position: absolute;
             top: -215px;
+            z-index: -1;
             display: block;
             width: 100%;
             text-align: center;
@@ -524,7 +525,8 @@ h2 {
         box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.35);
     }
     &-image {
-        border-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         width: 100%;
     }
     &-more {
@@ -1060,3 +1062,55 @@ h2 {
         }
     }
 }
+
+/* Slider */
+
+.slick {
+    &-prev:before { content: url(../img/gallery-arrow-left.png); }
+    &-next:before { content: url(../img/gallery-arrow-right.png); }
+    &-prev,
+    &-next {
+        top: 45%;
+    }
+    &-prev {
+        left: -60px;
+    }
+    &-next {
+        right: -30px;
+    }
+    &-dots {
+        bottom: -60px;
+        left: 30px;
+        width: auto;
+        & li {
+            margin: 0px 3px;
+        }
+        & li button:before {
+            width: 10px;
+            height: 10px;
+            background-color: #555555;
+            border-radius: 50%;
+            font-size: 0;
+            opacity: 1;
+            transition: all 0.5s;
+            &:hover {
+                display: none;
+            }
+        }
+        & li.slick-active button:before,
+        & li:hover button:before,
+        & li:focus button:before {
+            background-color: #b5b5b5;
+            opacity: 1;
+        }
+    }
+}
+.partners-list {
+    & .slick-prev {
+        left: -150px;
+    }
+    & .slick-next {
+        right: -120px;
+    }
+}
+
