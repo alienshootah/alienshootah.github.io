@@ -121,6 +121,9 @@ h2 {
 
 .header {
     position: relative;
+    &-mobile {
+        display: none;
+    }
     &-bgs {
         background-color: #242021;
         color: #ffffff;
@@ -214,6 +217,13 @@ h2 {
         &:focus,
         &.active {
             background-color: #555555;
+        }
+        &-logo {
+            &-link {
+                &-mobile {
+                    display: none;
+                }
+            }
         }
     }
 }
@@ -770,6 +780,7 @@ h2 {
     }
     &-icon {
         display: inline-block;
+        min-width: 67px;
         width: 67px;
         height: 67px;
         background-position: center;

@@ -39,12 +39,357 @@
     .footer-top-text {
         font-size: 200px;
     }
+    .slick-prev,
+    .slick-next {
+        display: none!important;
+    }
+    .gallery-list,
+    .partners-list,
+    .team-list,
+    .req-list,
+    .social-list {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 @media(max-width: 1520px) {
     .header-title {
         font-size: 170px;
     }
+    .drive:after {
+        height: 202px;
+        background-position: bottom center;
+    }
+    .drive-text {
+        padding-left: 100px;
+    }
+    .services:after {
+        background-position: top center;
+    }
+    .menu {
+        margin-top: -160px;
+    }
+    .advan {
+        padding-bottom: 182px;
+    }
+    .team {
+        padding-bottom: 250px;
+    }
+    .footer-top-text {
+        font-size: 170px;
+    }   
+    .clients-list {
+        margin: 0;
+    } 
 }
 @media(max-width: 1380px) {
+    .header-right {
+        position: relative;
+    }
+    .header-mobile {
+        display: inline-block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        &-icon {
+            display: inline-block;
+            width: 35px;
+            height: 22px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/header-mobile.png);
+        }
+    }
+    .header-title {
+        font-size: 150px;
+    }
+    .header-wrap {
+        margin-top: -30px;
+        margin-left: 10px;
+    }
+    .header-body {
+        margin-top: 75px;
+        margin-bottom: 128px;
+    }
+    .header-bgs {
+        min-height: 885px;
+    }
+    .nav-body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .nav-left {
+        width: 100%;
+        display: none;
+        background-color: #2b2628;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: right;
+        &.show {
+            display: block;
+        }
+    }
+    .nav-right {
+        width: 100%;
+        order: -1;
+        text-align: left;
+    }
+    .nav-list {
+        display: block;
+        width: 100%;
+    }
+    h2 {
+        font-size: 43px;
+    }
+    .advan-title {
+        &:before {
+            font-size: 155px;
+            top: -179px;
+        }
+    }
+
+    .menu-left {
+        display: none;
+    }
+    .menu-right {
+        width: 100%;
+    }
+    .clients-item {
+        margin: 45px;
+    }
+    .req-decor {
+        right: 0;
+    }
+
+    /* Sections */
+    .about {
+        background-position: bottom right;
+        min-height: auto;
+        padding-top: 300px;
+        padding-bottom: 300px;
+        &-body {
+            display: block;
+            background-color: rgba(255, 255, 255,0.75);
+            padding: 40px 20px 20px 20px;
+            width: 95%;
+            margin: 0 auto;
+            border-radius: 20px;
+            border: 1px solid #333333;
+            & .col-6 {
+                width: 100%;
+            }
+        }
+        &-title {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .drive-picture {
+        right: 25px;
+        bottom: -55px;
+    }
+    .drive-image {
+        width: 600px;
+    }
+    .services-wrap {
+        color: #252023!important;
+    }
+    .menu {
+        background-position: bottom left;
+        &-body {
+            display: block;
+            background-color: rgba(255, 255, 255,0.75);
+            padding: 40px 20px 20px 20px;
+            width: 95%;
+            margin: 0 auto;
+            border-radius: 20px;
+            border: 1px solid #333333;
+            & .col-8 {
+                display: none;
+            }
+            & .col-4 {
+                width: 100%;
+            }
+        }
+        &-title {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .clients {
+        padding-top: 280px;
+        &-title {
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .partners {
+        padding-top: 233px;
+        padding-bottom: 258px;
+        &-title {
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .advan {
+        background-position: top left;
+        &-body {
+            display: block;
+            background-color: rgba(255, 255, 255,0.75);
+            padding: 40px 20px 20px 20px;
+            width: 95%;
+            margin: 0 auto;
+            border-radius: 20px;
+            border: 1px solid #333333;
+            & .col-5 {
+                display: none;
+            }
+            & .col-7 {
+                width: 100%;
+            }
+        }
+        &-title {
+            &::before {
+                display: none;
+            }
+        }
+        &-list {
+            margin-top: 20px;
+        }
+    }
+    .team {
+        padding-top: 207px;
+        &-title:before {
+            display: none;
+        }
+    }
+    .req {
+        padding-top: 250px;
+        &-title:before {
+            display: none;
+        }
+    }
+    .footer {
+        padding-top: 225px;
+        &-top-text {
+            font-size: 150px;
+        }
+        &-title:before {
+            display: none;
+        }
+    }
+}
+@media(max-width: 1200px) {
+    .header-left {
+        width: 75%;
+    }
+    .header-right {
+        width: 25%;
+    }
+    .header-title {
+        font-size: 120px;
+    }
+    .services-item {
+        width: 100%;
+    }
+    .drive-text {
+        padding-left: 60px;
+    }
+    .drive-picture {
+        right: 0;
+    }
+    .sublove {
+        &-body {
+            display: block;
+        }
+        &-item {
+            margin-left: 0;
+            margin-right: 35px;
+            margin-top: 20px;
+        }
+    }
+    .partners-info {
+        padding: 20px 30px;
+    }
+    .links-body {
+        display: block;
+    }
+    .links-right {
+        margin-top: 40px;
+    }
+    .footer {
+        & .social-item {
+            margin: 0 20px 0 0;
+        }
+    }
+    .adress-link-tel {
+        font-size: 25px;
+    }
+    .footer-top-text {
+        font-size: 120px;
+    }
+}
+@media(max-width: 992px) {
+    .nav {
+        &-logo {
+            &-mobile {
+                position: relative;
+                top: -10px;
+            }
+            &-link {
+                display: none;
+                &-mobile {
+                    display: inline;
+                }
+            }
+        }
+    }
+    .header-body {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 40px 20px 20px 20px;
+        width: 95%;
+        margin: 10px auto 0 auto;
+        border-radius: 20px;
+        border: 1px solid #333333;
+        & .col-8 {
+            width: 100%;
+        }
+        & .col-4 {
+            display: none;
+        }
+    }
+    .header-mobile {
+        top: 35px;
+    }
+    .header-bgs {
+        min-height: 482px;
+    }
+    .header {
+        padding: 30px 0 0 0;
+        & .social-list {
+            margin-top: 50px;
+        }
+    }
+    .about {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    .drive:after {
+        height: 50px;
+    }
+    .drive-image {
+        width: 475px;
+    }
+    .menu {
+        min-height: 760px;
+        padding-top: 186px;
+    }
+}
+@media(max-width: 768px) {
 
 }
