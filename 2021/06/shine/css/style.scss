@@ -91,7 +91,7 @@ html {
 .content {
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1140px;
+    max-width: 1170px;
 }
 body {
     font-family: $geom;
@@ -107,11 +107,14 @@ h2 {
     margin-top: 0;
     padding-top: 0;
 }
+body {
+    color: #2B2422;
+}
 .green {
     color: #82B428;
 }
-body {
-    color: #2B2422;
+.blue {
+    color: #2DA3DC;
 }
 
 /* Header */
@@ -214,8 +217,167 @@ body {
 .new {
     margin: 100px 0;
     font-size: 24px;
+    &-image {
+        border-radius: 10px;
+    }
 }
-
+.better {
+    margin-bottom: 60px;
+    &-list {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &-item {
+        width: 33.3333%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+    &-wrap {
+        position: relative;
+    }
+    &-image {
+        border-radius: 10px;
+        width: 100%;
+    }
+    &-info {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        background-blend-mode: multiply;
+        border-radius: 0px 0px 10px 10px;
+        height: 148px;
+        width: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #ffffff;
+        padding: 32px 28px;
+        display: flex;
+    }
+    &-subtitle {
+        align-self: flex-end;
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: $geom;
+        color: #FFFFFF;
+    }
+}
+.place {
+    padding-top: 50px;
+    &-item {
+        width: 100%;
+        background: #FFFFFF;
+        border: 1px solid #C5C5C5;
+        box-sizing: border-box;
+        box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+    }
+    &-wrap {
+        display: flex;
+    }
+    &-picture {
+        width: 360px;
+        min-width: 360px;
+        margin-bottom: -1px;
+    }
+    &-image {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin: -1px -1px -1px -1px;
+        width: 100%;
+        height: 100%;
+    }
+    &-text {
+        padding-top: 70px;
+    }
+}
+.info {
+    font-size: 17px;
+    color: #000000;
+    padding-bottom: 20px;
+    &-body {
+        display: flex;
+    }
+    &-image {
+        width: 100%;
+        min-width: 375px;
+    }
+    &-text {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &-title {
+        font-weight: 800;
+        font-size: 24px;
+        color: #2B2422;
+        margin-top: 0;
+        margin-bottom: 50px;
+        padding-top: 0;
+    }
+    &-buy {
+        margin-top: 30px;
+        &-btn {
+            width: 241px;
+            background: 
+                linear-gradient(34.66deg, #82B428 16.88%, #C5D210 76%);
+            color: #FFFFFF;
+            font-size: 20px;
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            padding: 10px 10px 14px 10px;
+            box-sizing: border-box;
+            &:hover,
+            &:focus {
+                background: 
+                    linear-gradient(34.66deg, #6d9622 16.88%, #a9b410 76%);
+            }
+        }
+    }
+    &-more {
+        margin-top: 5px;
+        padding-left: 30px;
+        display: inline-block;
+        font-style: italic;
+        font-size: 17px;
+    }
+}
+.price {
+    padding: 0 67px 0 30px;
+    &-body {
+        border-top: 0.5px solid #000000;
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-pre {
+        font-size: 17px;
+        color: #2B2422;
+        display: inline-block;
+    }
+    &-main {
+        padding: 0;
+        margin: 5px 0;
+    }
+    &-val {
+        display: inline-block;
+        font-weight: 800;
+        font-size: 22px;
+        color: #2B2422;
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -30px 0 0;
+    }
+    &-item {
+        margin: 0 30px;
+    }
+}
 /* Modals */
 
 .modal {
