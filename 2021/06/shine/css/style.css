@@ -618,10 +618,10 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px -15px 0 -15px;
 }
 
 .details-item {
@@ -631,10 +631,141 @@ body {
           box-sizing: border-box;
 }
 
+.details-item:nth-child(1) {
+  width: 380px;
+}
+
+.details-item:nth-child(2) {
+  width: 316px;
+}
+
+.details-item:nth-child(3) {
+  width: 445px;
+}
+
+.details-item:nth-child(4) {
+  width: 445px;
+}
+
+.details-item:nth-child(5) {
+  width: 380px;
+}
+
+.details-item:nth-child(6) {
+  width: 316px;
+}
+
+.details-item:nth-child(7) {
+  width: 380px;
+}
+
+.details-item:nth-child(8) {
+  width: 316px;
+}
+
+.details-item:nth-child(9) {
+  width: 445px;
+}
+
+.details-wrap {
+  position: relative;
+}
+
 .details-image {
   height: 280px;
   width: 100%;
   border-radius: 10px;
+}
+
+.details-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 148px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  background-blend-mode: multiply;
+  border-radius: 0px 0px 10px 10px;
+  color: #ffffff;
+  padding: 31px 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.details-subtitle {
+  font-family: "Geometria", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  padding: 0;
+  margin: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.details-more {
+  font-size: 24px;
+  text-align: center;
+  color: #C5C5C5;
+  margin-top: 25px;
+}
+
+.details-more-btn {
+  font-size: 24px;
+  font-weight: 800;
+  color: #C5C5C5;
+}
+
+.discount {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/discount-bg.jpg);
+  min-height: 473px;
+  padding: 60px 0 80px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.discount-text {
+  width: 445px;
+  font-size: 24px;
+}
+
+.discount-more {
+  margin-top: 40px;
+}
+
+.discount-more-btn {
+  width: 213px;
+  height: 51px;
+  background: linear-gradient(34.66deg, #82B428 16.88%, #C5D210 76%);
+  -webkit-box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding-bottom: 2px;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.discount-more-btn:hover, .discount-more-btn:focus {
+  background: linear-gradient(34.66deg, #6e9625 16.88%, #abb617 76%);
+}
+
+.moving {
+  margin: 100px 0;
+  font-size: 24px;
+}
+
+.moving-text {
+  margin-top: 40px;
+}
+
+.moving-image {
+  width: 100%;
 }
 
 /* Modals */

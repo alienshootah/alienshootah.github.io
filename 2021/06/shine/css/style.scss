@@ -478,18 +478,121 @@ body {
     &-list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0 -15px;
+        justify-content: center;
+        margin: 30px -15px 0 -15px;
     }
     &-item {
         width: 33.3333%;
         padding: 15px;
         box-sizing: border-box;
+        &:nth-child(1) {
+            width: 380px;
+        }
+        &:nth-child(2) {
+            width: 316px;
+        }
+        &:nth-child(3) {
+            width: 445px;
+        }
+        &:nth-child(4) {
+            width: 445px;
+        }
+        &:nth-child(5) {
+            width: 380px;
+        }
+        &:nth-child(6) {
+            width: 316px;
+        }
+        &:nth-child(7) {
+            width: 380px;
+        }
+        &:nth-child(8) {
+            width: 316px;
+        }
+        &:nth-child(9) {
+            width: 445px;
+        }
+    }
+    &-wrap {
+        position: relative;
     }
     &-image {
         height: 280px;
         width: 100%;
         border-radius: 10px;
+    }
+    &-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 148px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        background-blend-mode: multiply;
+        border-radius: 0px 0px 10px 10px;
+        color: #ffffff;
+        padding: 31px 27px;
+        display: flex;
+        box-sizing: border-box;
+    }
+    &-subtitle {
+        font-family: $geom;
+        font-weight: normal;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        align-self: flex-end;
+    }
+    &-more {
+        font-size: 24px;
+        text-align: center;
+        color: #C5C5C5;
+        margin-top: 25px;
+        &-btn {
+            font-size: 24px;
+            font-weight: 800;
+            color: #C5C5C5;  
+        }
+    }
+}
+.discount {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/discount-bg.jpg);
+    min-height: 473px;
+    padding: 60px 0 80px 0;
+    box-sizing: border-box;
+    &-text {
+        width: 445px;
+        font-size: 24px;
+    }
+    &-more {
+        margin-top: 40px;
+        &-btn {
+            width: 213px;
+            height: 51px;
+            background: linear-gradient(34.66deg, #82B428 16.88%, #C5D210 76%);
+            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 50px;
+            padding-bottom: 2px;
+            font-size: 20px;
+            color: #FFFFFF;
+            &:hover,
+            &:focus {
+                background: linear-gradient(34.66deg, #6e9625 16.88%, #abb617 76%);
+            }
+        }
+    }
+}
+.moving {
+    margin: 100px 0;
+    font-size: 24px;
+    &-text {
+        margin-top: 40px;
+    }
+    &-image {
+        width: 100%;
     }
 }
 
