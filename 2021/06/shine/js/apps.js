@@ -7,6 +7,36 @@ $('.place-list').slick({
   arrows: false,
 });
 
+function mobileOnlySlider() {
+  $('.better-list').slick({
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      adaptiveHeight: true,
+      arrows: false
+  });
+  $('.prefer-list').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    arrows: false
+  });
+  $('.details-list').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    adaptiveHeight: true,
+    arrows: false
+  });
+}
+if(window.innerWidth < 560) {
+  mobileOnlySlider();
+}
+
 /* Modals */
 
 let buttons = document.querySelectorAll('.open-modal');
