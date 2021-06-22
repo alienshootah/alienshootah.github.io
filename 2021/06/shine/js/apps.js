@@ -1,6 +1,15 @@
+/* Sliders */
+
+$('.place-list').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true,
+  arrows: false,
+});
+
 /* Modals */
 
-let buttons = document.querySelectorAll('.curr-modal');
+let buttons = document.querySelectorAll('.open-modal');
 let modals = document.querySelectorAll('.modal');
 
 function showModal(id) {
@@ -24,7 +33,7 @@ buttons.forEach(b => {
 
 /**/
 modals.forEach(m => {
-  let x = m.querySelector('button.close');
+  let x = m.querySelector('button.modal-close');
   if (x !== 'modal-body') {
     x.addEventListener('click', hideModals);
   }
@@ -66,7 +75,5 @@ window.addEventListener("DOMContentLoaded", function() {
     input.addEventListener("focus", mask, false);
     input.addEventListener("blur", mask, false);
     input.addEventListener("keydown", mask, false)
-  
   });
-  
 });
