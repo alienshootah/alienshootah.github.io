@@ -5,6 +5,7 @@ $('.place-list').slick({
   slidesToScroll: 1,
   dots: true,
   arrows: false,
+  infinite: false,
 });
 
 function mobileOnlySlider() {
@@ -107,3 +108,21 @@ window.addEventListener("DOMContentLoaded", function() {
     input.addEventListener("keydown", mask, false)
   });
 });
+
+/* More-Less */
+
+function myMore() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("moreBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Показать еще";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Показать меньше";
+    moreText.style.display = "flex";
+  }
+}
