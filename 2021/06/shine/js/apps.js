@@ -135,3 +135,9 @@ function myMore() {
     moreText.style.display = "flex";
   }
 }
+
+/* Lozad */
+
+const el = document.querySelector('img');
+const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+observer.observe();
