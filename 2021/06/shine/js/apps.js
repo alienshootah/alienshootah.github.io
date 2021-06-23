@@ -11,7 +11,9 @@ $('.place-list').slick({
       breakpoint: 560,
       settings: {
         infinite: true,
-        dots: false
+        dots: false,
+        centerMode: true,
+        centerPadding: '30px',
       }
     }
   ]

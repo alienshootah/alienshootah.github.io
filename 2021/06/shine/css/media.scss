@@ -93,6 +93,9 @@
                 margin-top: 50px;
             }
         }
+        & p {
+            padding-right: 40px;
+        }
     }
     .better-item {
         width: 50%;
@@ -155,8 +158,8 @@
             width: 156px;
             height: 156px;
             top: auto;
-            bottom: -78px;
-            right: -60px;
+            bottom: -125px;
+            right: 0px;
             &-thue {
                 width: 82px;
                 height: 82px;    
@@ -245,7 +248,7 @@
         left: -71px;
     }
     h2 {
-        font-size: 24px;
+        font-size: 29px;
     }
     .new {
         font-size: 15px;
@@ -265,7 +268,7 @@
         margin-bottom: 40px;
         & h2 {
             color: #82B428;
-            width: 60%;
+            width: 210px;
         } 
         &-list {
             margin-top: 20px;
@@ -282,7 +285,7 @@
         }
         &-image {
             border-radius: 20px;
-            min-height: 467px;
+            height: 467px;
             object-fit: cover;
         }
         & .slick-dots {
@@ -346,7 +349,7 @@
             padding-top: 0;
         }
         &-list {
-            margin: -43px -15px;
+            margin: -43px -35px;
         }
         &-item {
             background: #FFFFFF;
@@ -354,6 +357,7 @@
             box-sizing: border-box;
             box-shadow: none;
             border-radius: 13.9705px;
+            margin: 45px 8px;
         }
         &-wrap {
             display: block;
@@ -395,8 +399,11 @@
             font-weight: 100;
             font-family: 'Geometria', Arial, Helvetica, sans-serif;
             display: inline-block;
-            margin-top: 0;
+            margin-top: 3px;
             font-size: 17px;
+            &::before {
+                content: 'или ';
+            }
         }
         &-right {
             margin-bottom: 24px;
@@ -471,7 +478,7 @@
             display: none;
         }
         &-list {
-            margin: -8px -35px 0 -35px;
+            margin: -8px -15px 0 -15px;
             & .slick-dots {
                 bottom: -38px;
             }
@@ -658,17 +665,20 @@
             font-size: 14px;
         }
     }
+    .place-item.slick-active {
+        box-shadow: 6.92192px 6.92192px 21.631px rgba(0, 0, 0, 0.25);
+    }
 }
-@media(max-width: 375px) {
+@media(max-width: 365px) {
+    .moving-row .col-5 {
+        padding: 0 15px;
+    }
     .content {
         padding: 0 15px;
     }
     .round-decor {
         bottom: -125px;
         right: 0px;
-    }
-    .better h2 {
-        width: 100%;
     }
     .price-list {
         margin-left: -15px;
