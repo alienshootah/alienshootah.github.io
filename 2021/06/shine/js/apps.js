@@ -6,6 +6,15 @@ $('.place-list').slick({
   dots: true,
   arrows: false,
   infinite: false,
+  responsive: [
+    {
+      breakpoint: 560,
+      settings: {
+        infinite: true,
+        dots: false
+      }
+    }
+  ]
 });
 
 function mobileOnlySlider() {
@@ -25,7 +34,7 @@ function mobileOnlySlider() {
     adaptiveHeight: true,
     arrows: false
   });
-  $('.details-list').slick({
+  $('.details-lister').slick({
     dots: true,
     infinite: true,
     speed: 500,
