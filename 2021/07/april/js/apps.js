@@ -1,5 +1,17 @@
-// Карточка товара
+/* Mobile btn's */
+const mobileBtn = document.querySelector(".mobile-btn");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".nav").classList.toggle("show");
+});
 
+
+// Language
+const langBtn = document.querySelector(".lang-btn");
+langBtn.addEventListener("click", function() {
+  document.querySelector(".lang-drop").classList.toggle("show");
+});
+
+// Modals
 $('.where-list').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -31,13 +43,14 @@ $('.subnav-list').slick({
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
+          arrows: true,
         }
       },
       {
-        breakpoint: 520,
+        breakpoint: 425,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           centerMode: false,
           arrows: false,
         }
