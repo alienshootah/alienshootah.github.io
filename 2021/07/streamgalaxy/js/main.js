@@ -49,7 +49,7 @@ const worksSlider = new Swiper('.works-portfolio__slider', {
 
 var swiper = new Swiper(".projects-slider", {
   slidesPerView: 4,
-  spaceBetween: 20,
+  spaceBetween: 40,
 
   navigation: {
     nextEl: '.works-portfolio__arrow_next',
