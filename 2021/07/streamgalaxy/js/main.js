@@ -82,6 +82,33 @@ var swiper = new Swiper(".projects-slider", {
   },
 });
 
+var prodSlider = new Swiper(".prod-slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  },
+  navigation: {
+    nextEl: '.prod-arrows-right',
+    prevEl: '.prod-arrows-left',
+  },
+});
+
 const handlesSlider = document.querySelector('.filter-portfolio__cost');
 const minNum = document.querySelector('#value-min-num')
 const maxNum = document.querySelector('#value-max-num')
