@@ -50,7 +50,32 @@ const worksSlider = new Swiper('.works-portfolio__slider', {
 var swiper = new Swiper(".projects-slider", {
   slidesPerView: 4,
   spaceBetween: 40,
-
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    1240: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    },
+    1540: {
+      slidesPerView: 4,
+      spaceBetween: 40
+    }
+  },
   navigation: {
     nextEl: '.works-portfolio__arrow_next',
     prevEl: '.works-portfolio__arrow_prev',
