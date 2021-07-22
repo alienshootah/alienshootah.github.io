@@ -109,6 +109,40 @@ var prodSlider = new Swiper(".prod-slider", {
   },
 });
 
+var othersSlider = new Swiper(".others-slider", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10
+    },
+    561: {
+      slidesPerView: 2,
+      spaceBetween: 10
+    },
+    // when window width is >= 480px
+    992: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    },
+    1680: {
+      slidesPerView: 4,
+      spaceBetween: 20
+    }
+  },
+  navigation: {
+    nextEl: '.others-arrows-right',
+    prevEl: '.others-arrows-left',
+  },
+});
+
 const handlesSlider = document.querySelector('.filter-portfolio__cost');
 const minNum = document.querySelector('#value-min-num')
 const maxNum = document.querySelector('#value-max-num')
