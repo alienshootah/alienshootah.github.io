@@ -143,6 +143,22 @@ var othersSlider = new Swiper(".others-slider", {
   },
 });
 
+function mobileOnlySlider() {
+  var lastSlider = new Swiper(".last-slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: '.last-arrow_next',
+      prevEl: '.last-arrow_prev',
+    },
+  });
+}
+if(window.innerWidth < 600) {
+  mobileOnlySlider();
+}
+
+
+
 const handlesSlider = document.querySelector('.filter-portfolio__cost');
 const minNum = document.querySelector('#value-min-num')
 const maxNum = document.querySelector('#value-max-num')
