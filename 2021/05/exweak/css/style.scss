@@ -788,42 +788,69 @@ input:checked + .slider:before {
         color: #E9EEF4;
         margin: 25px 0 30px 0;
     }
-    &-btn {
-        display: flex;
+    &-item {
+        &:hover .all-visible,
+        &:focus .all-visible,
+        &.active .all-visible {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            left: -86px;
+        }
+        &:hover .all-shad,
+        &:focus .all-shad,
+        &.active .all-shad {
+            visibility: visible;
+        }
+    }
+    &-wrap {
+        position: relative;
+    }
+    &-visible {
         background-color: #2B3648;
         border-radius: 5px;
         width: 100%;
         min-height: 80px;
         margin-bottom: 5px;
         text-align: left;
-        padding: 10px 100px 25px 25px;
+        padding: 10px 25px 25px 25px;
         box-sizing: border-box;
         color: #E9EEF4;
         font-family: $inter-reg;
         position: relative;
-        &:after {
-            content: '';
-            display: flex;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.7s;
+        left: 0;
+    }
+    &-left {
+        width: 85%;
+    }
+    &-right {
+        width: 15%;
+    }
+    &-button {
+        display: block;
+        align-self: center;
+        margin-left: auto;
+        margin-bottom: -17px;
+        &-icon {
+            display: inline-block;
             min-width: 26px;
             width: 24px;
             height: 26px;
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/all-icon.png);
-            position: absolute;
-            right: 32px;
-            top: 27px;
-            top: auto;
-            align-self: center;
-            margin-bottom: -13px;
         }
     }
     &-name {
         font-weight: 400;
         font-size: 18px;
-
         color: #E9EEF4;
         display: block;
+        margin-top: -4px;
     }
     &-time {
         font-size: 10px;
@@ -867,6 +894,16 @@ input:checked + .slider:before {
                     0px 1px 18px rgba(0, 0, 0, 0.12), 
                     0px 6px 10px rgba(0, 0, 0, 0.14);
             }
+        }
+    }
+    &-shad {
+        visibility: hidden;
+        width: 110px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        transition: all 0.7s;
+        & .shad-btn {
+            margin: 0px 5px;
         }
     }
 }
