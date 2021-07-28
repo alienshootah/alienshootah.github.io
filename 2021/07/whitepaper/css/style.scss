@@ -1,0 +1,152 @@
+/* Fonts */
+
+$open-regular: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+$exo-regular: 'Exo-Regular', Arial, Helvetica, sans-serif;
+$exo-bold: 'Exo-Bold', Arial, Helvetica, sans-serif;
+$roboto-regular: 'Roboto-Regular', Arial, Helvetica, sans-serif;
+$roboto-medium: 'Roboto-Medium', Arial, Helvetica, sans-serif;
+$roboto-bold: 'Roboto-Bold', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo-Regular';
+    src: url(../fonts/exo-2-0.regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo-Bold';
+    src: url(../fonts/exo-2-0.bold.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Grid */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+.row {
+    display: flex;
+    margin: 0 -15px;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.col-12{width: 100%;}
+.col-11{width: 91.66666667%;}
+.col-10{width: 83.33333333%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66666667%;}
+.col-7 {width: 58.33333333%;}
+.col-6 {width: 50%;}
+.col-5 {width: 41.66666667%;}
+.col-4 {width: 33.33333333%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66666667%;}
+.col-1 {width: 8.33333333%;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: $roboto-regular;
+}
+input, textarea {
+    box-sizing: border-box;
+    font-family: $roboto-regular;
+}
+
+/* Main styles */
+
+html {
+    scroll-behavior: smooth;
+}
+.content {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1170px;
+}
+body {
+    font-family: $roboto-regular;
+    overflow-x: hidden;
+    font-size: 14px;
+    color: #15354f;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $roboto-bold;
+}
+b, strong {
+    font-family: $roboto-medium;
+}
+
+/* Header */
+
+.header {
+    &-logo {
+        color: #16364f;
+        font-family: $exo-regular;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        &-semi {
+            font-family: $exo-bold;
+        }
+    }
+    &-descr {
+        margin-left: 15px;
+    }
+}
