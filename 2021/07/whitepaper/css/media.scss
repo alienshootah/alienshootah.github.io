@@ -1,0 +1,204 @@
+@media(max-width: 1200px) {
+    .header {
+        &-body {
+            padding: 15px 0;
+        }
+        &-left {
+            width: 8%;
+        }
+        &-center {
+            width: 75%;
+        }
+        &-text {
+            display: none;
+        }
+    }
+}
+@media(max-width: 992px) {
+    .header {
+        &-left {
+            width: 9%;
+        }
+        &-center {
+            width: 69%;
+        }
+        &-right {
+            width: 22%;
+        }
+    }
+    .nav {
+        &-list {
+            justify-content: flex-start;
+            margin: 0 -7px;
+        }
+        &-item {
+            margin: 0 7px;
+        }
+    }
+    .promo {
+        &-left {
+            width: 33.3332%;
+        }
+        &-right {
+            width: 66.6667%;
+        }
+    }
+}
+@media(max-width: 768px) {
+    body {
+        padding-top: 42px;
+    }
+    .header {
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.11);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 9999;
+        &.show {
+            & .header-center,
+            & .header-right {
+                display: block;
+            }
+        }
+        &-mobile {
+            display: block;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            &-icon {
+                display: inline-block;
+                width: 30px;
+                height: 23px;
+                min-width: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/header-mobile.png);
+            }
+        }
+        &-body {
+            border-bottom: 0;
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            &:after {
+                content: none;
+            }
+        }
+        &-text {
+            display: inline-block;
+        }
+        &-center {
+            display: none;
+            width: 100%;
+        }
+        &-right {
+            display: none;
+            width: 100%;
+            &:before {
+                content: none;
+            }
+        }
+        &-flex {
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            &-left {
+                width: 100%;
+            }
+            &-right {
+                width: 100%;
+                order: -1;
+                margin: 25px 0;
+            }
+        }
+    }
+    .social {
+        &-list {
+            justify-content: center;
+        }
+    }
+    .search {
+        margin: 0 auto 20px auto;
+    }
+    .nav {
+        margin-top: 25px;
+        &-list {
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        &-item {
+            width: 100%;
+            text-align: center;
+            margin: 5px 0;
+        }
+        &-link {
+            display: inline-block;
+        }
+    }
+    .promo {
+        &-row {
+            display: block;
+        }
+        &-left {
+            width: 100%;
+            text-align: center;
+        }
+        &-image {
+            max-width: 264px;
+            margin: 0 auto;
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .info {
+        margin: 40px 0;
+    }
+}
+@media(max-width: 540px) {
+    .header {
+        padding: 5px 0;
+        &-body {
+            padding: 0;
+        }
+        &-text {
+            max-width: 190px;
+        }
+        &-mobile {
+            top: 23px;
+        }
+    }
+    .footer {
+        &-body {
+            display: block;
+            text-align: center;
+        }
+        &-logo {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        &-descr {
+            width: 100%;
+        }
+        &-list {
+            display: block;
+            margin: 0 0 17px 0;
+        }
+        &-item {
+            margin: 10px 0;
+        }
+    }
+    .promo {
+        &-more {
+            &-link {
+                padding: 8px 11px;
+                font-size: 11px;
+            }
+        }
+    }
+}
