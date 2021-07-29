@@ -1,15 +1,30 @@
 /* Fonts */
 
 $open-regular: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
+$open-semi: 'OpenSans-SemiBold', Arial, Helvetica, sans-serif;
+$open-bold: 'OpenSans-Bold', Arial, Helvetica, sans-serif;
 $exo-regular: 'Exo-Regular', Arial, Helvetica, sans-serif;
 $exo-bold: 'Exo-Bold', Arial, Helvetica, sans-serif;
 $roboto-regular: 'Roboto-Regular', Arial, Helvetica, sans-serif;
 $roboto-medium: 'Roboto-Medium', Arial, Helvetica, sans-serif;
 $roboto-bold: 'Roboto-Bold', Arial, Helvetica, sans-serif;
+$roboto-light: 'Roboto-Light', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'OpenSans-Regular';
     src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url(../fonts/OpenSans-SemiBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url(../fonts/OpenSans-Bold.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -40,6 +55,12 @@ $roboto-bold: 'Roboto-Bold', Arial, Helvetica, sans-serif;
 @font-face {
     font-family: 'Roboto-Bold';
     src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto-Light.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -559,6 +580,139 @@ b, strong {
         } 
         &.active {
             padding: 6px 11px;
+        }
+    }
+}
+.project {
+    margin-top: 29px;
+    margin-bottom: 37px;
+    &-row {
+        margin-top: 25px;
+    }
+    &-subtitle {
+        font-family: $open-semi;
+        font-size: 18px;
+        color: #15354f;
+    }
+    &-image {
+        width: 270px;
+        height: 152px;
+        object-fit: cover;
+        float: left;
+        margin-right: 25px;
+        margin-bottom: 10px;
+    }
+    &-body {
+        margin-top: 47px;
+        line-height: 1.6;
+        letter-spacing: 0.19px;
+    }
+    &-pdf {
+        margin: 75px 0 40px 0;
+        border: 1px solid #6aafe6;
+        &-image {
+            width: 100%;
+        }
+    }
+}
+.levels {
+    margin: 26px 0;
+    padding: 10px 6px;
+    background-color: #d4dfe6;
+    line-height: 1.58;
+    letter-spacing: 0.33px;
+    &-list {
+        font-size: 15px;
+    }
+    &-sublist {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-family: $roboto-light;
+        font-size: 14px;
+        padding-left: 35px;
+    }
+}
+.sidebar {
+    line-height: 1.6;
+    letter-spacing: 0.22px;
+    &-wrapper {
+        margin-bottom: 70px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-title {
+        width: 76%;
+        color: #ffffff;
+        background-color: #15354f;
+        font-size: 15px;
+        font-family: $roboto-regular;
+        font-weight: normal;
+        padding: 5px 10px;
+        display: inline-block;
+        margin-bottom: 2px;
+        margin-top: 3px;
+    }
+    &-text {
+        margin-bottom: 10px;
+    }
+    & b, 
+      strong {
+        font-family: $open-bold;
+    }
+    &-vote {
+        &-btn {
+            background-color: #6aafe6;
+            color: #ffffff;
+            font-size: 13px;
+            text-transform: uppercase;
+            padding: 17px 20px;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background-color: #95ccfa;
+            }
+        }
+    }
+}
+.last {
+    &-list {
+        margin-top: 22px;
+    }
+    &-item {
+        margin: 6px 0;
+        display: flex;
+    }
+    &-image {
+        width: 70px;
+        height: 44px;
+        margin-right: 14px;
+    }
+    &-title {
+        font-size: 14px;
+        color: #15354f;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #15354f;
+        }
+    }
+    &-cat {
+        padding: 0;
+        margin: 0;
+        font-size: 11px;
+        color: #8c8c8c;
+        &-link {
+            color: #8c8c8c;
+            border-bottom: 1px solid #8c8c8c;
+            transition: all 0.5s;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
         }
     }
 }
