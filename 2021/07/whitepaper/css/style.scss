@@ -132,6 +132,27 @@ h1, h2, h3, h4, h5, h6 {
 b, strong {
     font-family: $roboto-medium;
 }
+.title {
+    display: inline-block;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #15354f;
+    padding: 11.5px 26px;
+    position: relative;
+    left: -26px;
+    margin-bottom: 10px;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 1px;
+        width: 1600px;
+        background-color: #15354f;
+        position: absolute;
+        top: 23px;
+        right: 0;
+        z-index: -1;
+    }
+}
 
 /* Header */
 
@@ -441,6 +462,104 @@ b, strong {
             &:focus {
                 border-bottom: 1px solid #a2bacd;
             }
+        }
+    }
+}
+
+/* Pages */
+
+.news {
+    margin: 29px 0 60px 0;
+    &-prev {
+        &-descr {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            letter-spacing: 0.22px;
+        }
+    }
+    &-list {
+        margin-top: 48px;
+    }
+    &-item {
+        margin: 30px 0 58px 0;
+    }
+    &-wrap {
+        display: flex;
+    }
+    &-image {
+        min-width: 270px;
+        width: 270px;
+        height: 130px;
+        object-fit: cover;
+        margin-right: 29px;
+    }
+    &-title {
+        font-size: 16px;
+        margin-top: -4px;
+        padding-top: 0;
+        margin-bottom: 15px;
+        letter-spacing: 0.17px;
+        &-link {
+            color: #15354f;
+            text-decoration: none;
+            border-bottom: 1px solid #6aafe6;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-descr {
+        line-height: 1.4;
+        margin-top: 0;
+        padding-top: 0;
+    }
+    &-text {
+        line-height: 1.55;
+        letter-spacing: 0.20px;
+        margin-bottom: 17px;
+    }
+    &-more {
+        font-family: $roboto-medium;
+        color: #6aafe6;
+        &-link {
+            display: inline-block;
+            color: #6aafe6;
+            text-decoration: none;
+            border-bottom: 1px solid #6aafe6;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+}
+.pagin {
+    &-list {
+        margin: 67px -10px 0 -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+    }
+    &-link {
+        color: #15354f;
+        text-decoration: none;
+        display: inline-block;
+        padding: 6px 4px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus,
+        &.active {
+            color: #ffffff;
+            background-color: #15354f;
+            
+        } 
+        &.active {
+            padding: 6px 11px;
         }
     }
 }
