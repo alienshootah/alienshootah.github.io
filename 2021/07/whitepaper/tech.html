@@ -95,29 +95,23 @@
                 </p>
                 <div class="tech-body">
                     <div class="menutab">
-                        <div class="row menutab-row">
-                            <div class="col-6 menutab-left">
-                                <ul class="menutab-list">
-                                    <li class="menutab-item">
-                                        <button class="menutab-btn active">Все записи</button>
-                                    </li>
-                                    <li class="menutab-item">
-                                        <button class="menutab-btn">Только с переводом</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-6 text-right menutab-right">
-                                <form class="menutab-form">
-                                    <button class="menutab-form-btn">
-                                        <span class="menutab-btn-icon"></span>
-                                    </button>
-                                    <input type="text" class="menutab-field" placeholder="Поиск по проектам..." required>
-                                </form>
-                            </div>
-                        </div>
+                        <form class="menutab-form">
+                            <button class="menutab-form-btn">
+                                <span class="menutab-btn-icon"></span>
+                            </button>
+                            <input type="text" class="menutab-field" placeholder="Поиск по проектам..." required>
+                        </form>
+                        <ul class="menutab-list">
+                            <li class="menutab-item active">
+                                <a href="#tab-1" class="menutab-btn">Все записи</a>
+                            </li>
+                            <li class="menutab-item">
+                                <a href="#tab-2" class="menutab-btn">Только с переводом</a>
+                            </li>
+                        </ul>  
                     </div>
                     <div class="tabs">
-                        <div class="tabs-content">
+                        <div id="tab-1" class="tabs-content active">
                             <ul class="tabs-list">
                                 <li class="tabs-item">
                                     <div class="tabs-wrapper">
@@ -256,6 +250,9 @@
                                     </div>
                                 </li>
                             </ul>
+                        </div>
+                        <div id="tab-2" class="tabs-content">
+                            Только с переводом
                         </div>
                     </div>
                 </div>

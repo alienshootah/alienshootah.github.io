@@ -798,14 +798,22 @@ b, strong {
     margin-bottom: 25px;
     position: relative;
     z-index: 1;
-    &-row {
-        align-items: center;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     &-list {
         display: flex;
+        order: -1;
     }
     &-item {
         margin-right: 3px;
+        &.active .menutab-btn,
+        &:hover .menutab-btn,
+        &:focus .menutab-btn {
+            color: #ffffff;
+            background-color: #6aafe6;
+            border: 1px solid #6aafe6;
+        }
     }
     &-btn {
         color: #626262;
@@ -813,13 +821,8 @@ b, strong {
         border: 1px solid #d1d1d1;
         border-bottom: 1px solid transparent;
         transition: all 0.5s;
-        &:hover,
-        &:focus,
-        &.active {
-            color: #ffffff;
-            background-color: #6aafe6;
-            border: 1px solid #6aafe6;
-        }
+        text-decoration: none;
+        display: inline-block;
     }
     &-form {
         display: flex;
@@ -857,6 +860,12 @@ b, strong {
 .tabs {
     font-size: 16px;
     color: #15354f;
+    &-content {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
     &-list {
         overflow-x: hidden;
     }
