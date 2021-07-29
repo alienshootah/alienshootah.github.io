@@ -716,3 +716,215 @@ b, strong {
         }
     }
 }
+.tech {
+    line-height: 1.6;
+    letter-spacing: 0.22px;
+}
+.latest {
+    margin-top: 75px;
+    &-list {
+        margin: 0 -15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        margin: 15px;
+    }
+    &-picture {
+        position: relative;
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 6px;
+            content: '';
+            display: inline-block;
+            width: 100%;
+            background-color: #6aafe6;
+            opacity: 0.7;
+            box-sizing: border-box;
+            transition: all 0.5s;
+        }
+        &:hover::after,
+        &:focus::after {
+            opacity: 0;
+        }
+    }
+    &-descr {
+        margin-top: 20px;
+    }
+    &-image {
+        width: 270px;
+        height: 130px;
+    }
+    &-title {
+        font-size: 18px;
+    }
+    &-more {
+        margin-top: 60px;
+        text-align: center;
+        &-link {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #15354f;
+            text-transform: uppercase;
+            padding: 16px 20px 14px 20px;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background-color: #306591;
+            }
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 19px;
+            width: 19px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/latest-more-icon.png);
+            margin-right: 5px;
+            position: relative;
+            top: 6px;
+        }
+    }
+}
+
+/* Tabs */
+
+.menutab {
+    border-bottom: 1px solid #6aafe6;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+    &-row {
+        align-items: center;
+    }
+    &-list {
+        display: flex;
+    }
+    &-item {
+        margin-right: 3px;
+    }
+    &-btn {
+        color: #626262;
+        padding: 10px 20px;
+        border: 1px solid #d1d1d1;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus,
+        &.active {
+            color: #ffffff;
+            background-color: #6aafe6;
+            border: 1px solid #6aafe6;
+        }
+    }
+    &-form {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: -5px;
+        &-btn {
+            margin-right: 5px;
+            position: relative;
+            top: 1px;
+        }
+    }
+    &-btn {
+        &-icon {
+            display: inline-block;
+            min-width: 15px;
+            width: 15px;
+            height: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/menutab-btn-icon.png);
+        }
+    }
+    &-field {
+        padding: 0;
+        border: 0;
+        font-size: 14px;
+        outline: none;
+        width: 145px;
+        &::placeholder {
+            color: #6aafe6;
+        }
+    }
+}
+.tabs {
+    font-size: 16px;
+    color: #15354f;
+    &-list {
+        overflow-x: hidden;
+    }
+    &-item {
+        margin: 0px 0;
+        padding: 10px 0;
+        &:before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            color: #cadbe9;
+            content:
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . ";
+        }
+    }
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-name {
+        background-color: #ffffff;
+        display: inline-block;
+        padding-right: 2px;
+    }
+    &-links {
+        display: flex;
+        align-items: center;
+        margin: -8px -8px 0 -8px;
+        background-color: #ffffff;
+        padding-left: 20px;
+    }
+    &-link {
+        display: flex;
+        align-items: center;
+        margin: 0 8px;
+        text-decoration: none;
+        color: #15354f;
+        font-size: 14px;
+        &:hover .tabs-text,
+        &:focus .tabs-text {
+            border-bottom: 1px solid #15354f;
+        }
+    }
+    &-text {
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+    }
+    &-icon {
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 10px;
+        &-one {
+            background-image: url(../img/tabs-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/tabs-icon-thue.png);
+        }
+    }
+}
