@@ -129,8 +129,20 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     background-color: #FFCF5C;
     padding: 16px 0;
+    & .content {
+        max-width: 1920px;
+    }
+    &-body {
+        padding: 0 50px;
+    }
     &-row {
         align-items: center;
+    }
+    &-left {
+        width: 22%;
+    }
+    &-center {
+        width: 36.33333333%;
     }
     &-logo {
         font-family: $firs-black;
@@ -174,6 +186,60 @@ h1, h2, h3, h4, h5, h6 {
         &:hover,
         &:focus {
             border-bottom: 1px solid #393333;
+        }
+    }
+    &-right {
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0 -15px;
+        }
+        &-item {
+            margin: 0 15px;
+        }
+    }
+    &-message {
+        &-btn {
+            padding: 9px 30px 11px 30px;
+            width: 282px;
+            height: 44px;
+            background-color: #393333;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 22px;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background-color: #504a4a;
+            }
+        }
+    }
+    &-phone {
+        &-link {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            color: #393333;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #393333;
+            }
+        }
+    }
+    &-mobile {
+        &-icon {
+            display: inline-block;
+            width: 38px;
+            height: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/header-mobile-icon.svg);
         }
     }
 }
