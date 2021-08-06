@@ -3,6 +3,7 @@
 $gothic: 'CenturyGothic', Arial, Helvetica, sans-serif;
 $radiate-exp: 'Radiate-Sans-Expanded', Arial, Helvetica, sans-serif;
 $radiate-reg: 'Radiate-Sans-Regular', Arial, Helvetica, sans-serif;
+$radiate-regsemi: 'Radiate-Sans-Regular-Semi', Arial, Helvetica, sans-serif;
 $firs-black: 'TT-Firs-Black', Arial, Helvetica, sans-serif;
 $firs-bold: 'TT-Firs-Bold', Arial, Helvetica, sans-serif;
 $firs-extra: 'TT-Firs-Extrabold', Arial, Helvetica, sans-serif;
@@ -22,6 +23,12 @@ $firs-extra: 'TT-Firs-Extrabold', Arial, Helvetica, sans-serif;
 @font-face {
     font-family: 'Radiate-Sans-Regular';
     src: url(../fonts/Radiate-Sans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Radiate-Sans-Regular-Semi';
+    src: url(../fonts/Radiate-Sans-Regular-Semi.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -1719,20 +1726,55 @@ h1, h2, h3, h4, h5, h6 {
 }
 .waste {
     padding: 100px 0 170px 0;
-    &-body {
-        max-width: 1000px;
-    }
     &-nav {
-        font-family: $radiate-exp;
-        font-weight: normal;
+        border-right: 2px solid rgba(57, 51, 51, 0.1);
+        &-btn {
+            font-family: $radiate-regsemi;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 140%;
+            color: rgba(57, 51, 51, 0.6);
+            padding: 0;
+            text-align: left;
+            width: 100%;
+        }
+        &-item {
+            padding: 35px 0 35px 0px;
+            margin-right: -2px;
+            &.active,
+            &:hover,
+            &:focus {
+                border-right: 2px solid #FFC24B;
+                font-family: $radiate-exp;
+            }
+            &.active .waste-nav-btn,
+            &:hover .waste-nav-btn,
+            &:focus .waste-nav-btn {
+                font-family: $radiate-exp;
+                color: #FFC24B;
+                opacity: 1;
+            }
+        }
+    }
+    &-lbl {
         font-size: 20px;
         line-height: 140%;
         color: #393333;
-        opacity: 0.6;
-
-        border-right: 2px solid rgba(57, 51, 51, 0.1);
-        &-item {
-            padding: 35px 0px;
+        &-text {
+            display: block;
         }
+    }
+    &-field {
+        width: 400px;
+        height: 50px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        box-sizing: border-box;
+        margin: 20px 0px;
+        padding: 14px 20px;
+        font-size: 18px;
+        line-height: 22px;
+        color: #393333;
+        opacity: 0.8;
     }
 }
