@@ -1888,7 +1888,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .watcher {
-    
     position: relative;
     &-body {
         margin: 0 auto;
@@ -1935,9 +1934,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .smi {
     text-align: center;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        width: 25%;
+    }
     &-wrapper {
         display: flex;
-        width: 380px;
         height: 150px;
         background: #FFFFFF;
         border: 1px solid #CCCCCC;
@@ -1947,5 +1952,94 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-image {
         align-self: center;
+    }
+    &-more {
+        &-text {
+            font-family: $radiate-exp;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 140%;
+            text-align: center;
+            color: #FFC24B;
+        }
+    }
+}
+.clients {
+    &-body {
+        position: relative;
+    }
+    &-wrapper {
+        max-width: 1290px;
+        margin: 0 auto;
+        background: #F7F5F5;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    &-left {
+        width: 28%;
+    }
+    &-right {
+        width: 72%;
+    }
+    &-title {
+        margin-top: 0;
+        padding-top: 0;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 140%;
+        color: #393333;
+    }
+    &-more {
+        margin-top: 15px;
+        text-align: center;
+        &-link {
+            display: inline-block;
+            padding: 12px 37px;
+            background: #393333;
+            color: #ffffff;
+            text-align: center;
+            transition: all 0.5s;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                background-color: #504a4a;
+            }
+        }
+    }
+}
+.pagin {
+    margin-top: 20px;
+    font-family: $gothic;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 140%;
+    text-align: right;
+    color: #c4c4c4;
+    &-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 -15px;
+    }
+    &-btn {
+        margin: 0 15px;
+        &-left {
+            display: none;
+        }
+    }
+    &-arrow {
+        display: inline-block;
+        min-width: 69px;
+        width: 69px;
+        height: 69px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-left {
+            background-image: url(../img/pagin-arrow-right.svg);
+            transform: rotate(180deg);
+        }
+        &-right {
+            background-image: url(../img/pagin-arrow-right.svg);
+        }
     }
 }
