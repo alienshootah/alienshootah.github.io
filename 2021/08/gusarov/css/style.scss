@@ -2667,3 +2667,236 @@ h1, h2, h3, h4, h5, h6 {
 .dma {
     margin-top: 20px;
 }
+
+/* Modal's */
+
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+
+    /* Font's and colors */
+    font-family: $gothic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #393333;
+    &-wrapper {
+        display: inline-block;
+        width: 872px;
+        background: #F7F5F5;
+        border: 2px solid #FFCF5C;
+        box-sizing: border-box;
+        padding: 30px;
+        position: relative;
+    }
+    &-close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        &-icon {
+            display: inline-block;
+            min-width: 25px;
+            width: 25px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/modal-close.svg);
+        }
+    }
+    &-title {
+        font-family: $radiate-exp;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 56px;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: #FFC24B;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        padding-top: 0;
+        &-success {
+            font-size: 34px;
+            margin-top: 45px;
+            margin-bottom: 10px;
+        }
+    }
+    &-footer {
+        margin-top: 20px;
+    }
+    &-field {
+        font-family: $gothic;
+        font-size: 18px;
+        line-height: 22px;
+        position: static;
+        width: 400px;
+        height: 60px;
+        background: #F7F5F5;
+        border: 2px solid #CCCCCC;
+        box-sizing: border-box;
+        margin: 10px 0px;
+        padding: 20px;
+        box-sizing: border-box;
+        &::placeholder {
+            color: #393333;
+            opacity: 0.7;
+        }
+    }
+    &-btn {
+        position: static;
+        width: 400px;
+        height: 60px;
+        background: #393333;
+        margin: 10px 0px;
+        font-family: $gothic;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #504a4a;
+        }
+    }
+}
+
+/* Modal's in wecan section */
+
+.modstep {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+
+    /* Font's and color */
+    font-family: $gothic;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: #393333;
+    &-wrapper {
+        display: inline-block;
+        width: 1250px;
+        background: #F7F5F5;
+        border: 2px solid #FFCF5C;
+        box-sizing: border-box;
+    }
+    &-row {
+        text-align: left;
+        margin: 0;
+    }
+    &-left {
+        background: #FFD164;
+        width: 240px;
+        min-height: 380px;
+        padding: 0;
+        text-align: right;
+        background-image: url(../img/modstep-icon-one.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        box-sizing: border-box;
+    }
+    &-spa {
+        & .modstep-left {
+            background-image: url(../img/modstep-icon-thue.svg);
+            background-position: top left;
+        }
+    }
+    &-ecommerce {
+        & .modstep-left {
+            background-image: url(../img/modstep-icon-three.svg);
+            background-position: bottom right;
+        }
+    }
+    &-catalog {
+        & .modstep-left {
+            background-image: url(../img/modstep-icon-four.svg);
+            background-position: center left;
+        }
+    }
+    &-site {
+        & .modstep-left {
+            background-image: url(../img/modstep-icon-five.svg);
+            background-position: bottom left;
+        }
+    }
+    &-right {
+        position: relative;
+        padding: 58px 30px 58px 40px;
+    }
+    &-title {
+        font-family: $radiate-exp;
+        font-weight: normal;
+        font-size: 25px;
+        line-height: 40px;
+        letter-spacing: 0.03em;
+        color: #FFC24B;
+    }
+    &-list {
+        list-style-type: disc;
+        padding-left: 25px;
+        max-width: 750px;
+    }
+    &-item {
+        margin: 3px 0;
+    }
+    &-form {
+        &-list {
+            margin: 40px -10px 10px -10px;
+            display: flex;
+        }
+        &-item {
+            margin: 10px;
+        }
+    }
+    &-field {
+        position: static;
+        width: 300px;
+        height: 50px;
+        background: #F7F5F5;
+        border: 2px solid #CCCCCC;
+        box-sizing: border-box;
+        padding: 14px 20px;
+        box-sizing: border-box;
+        font-family: $gothic;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        &::placeholder {
+            color: #393333;
+            opacity: 0.7;
+        }
+    }
+    &-btn {
+        padding: 14px 71px;
+        background: #393333;
+        font-family: $gothic;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        min-width: 300px;
+        &:hover,
+        &:focus {
+            background-color: #504a4a;
+        }
+    }
+}
