@@ -174,7 +174,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-/* SLIDERS */
+/* === SLIDERS === */
 
 /* Whywe section slider */
 const whyweSlider = new Swiper('.whywe-list', {
@@ -186,7 +186,6 @@ const whyweSlider = new Swiper('.whywe-list', {
 });
 
 /* Bonus section slider */
-
 /* Bonus nav */
 var bonusNav = new Swiper(".bonus-nav", {
   spaceBetween: 0,
@@ -203,3 +202,16 @@ const bonusSlider = new Swiper('.bonus-list', {
     swiper: bonusNav,
   },
 });
+
+/* Checkbox in price section */
+
+function checkAcknowledgement(form){
+  var checkbox = form["changebg"];
+  alert(checkbox); //shows [HTMLInputElement]
+  if (!checkbox.checked){ //A shorter method for checkbox.checked == false
+      alert('Please read through the acknowledgement and acknowledge it.');
+      return false;
+  } else {
+      return true;
+  }
+}
