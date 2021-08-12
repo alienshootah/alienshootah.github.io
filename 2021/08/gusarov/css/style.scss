@@ -159,6 +159,9 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     background-color: #FFCF5C;
     padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 8888;
     & .content {
         max-width: 1920px;
     }
@@ -278,9 +281,12 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     left: 10px;
     top: 30px;
+    &.show {
+        display: block;
+    }
     &-body {
         padding: 5px 20px 0 20px;
-        width: 70px;
+        width: 75px;
         background: rgba(57, 51, 51, 0.7);
         border: 1px solid #FFCF5C;
         box-sizing: border-box;
@@ -321,6 +327,7 @@ h1, h2, h3, h4, h5, h6 {
 .detail {
     display: none;
     position: fixed;
+    z-index: 9999;
     max-width: inherit;
     width: 100%;
     height: 100%;
@@ -328,6 +335,9 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     right: 0;
     bottom: 0;
+    &.show {
+        display: block;
+    }
     &-body {
         display: flex;
         width: 100%;
@@ -367,10 +377,6 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 350px;
         margin-left: 150px;
     }
-    &-item {
-        margin: 70px 0px;
-
-    }
     &-top {
         &-list {
             display: flex;
@@ -379,12 +385,23 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-btn {
+        display: block;
         color: #393333;
         font-weight: bold;
         font-size: 36px;
         line-height: 42px;
         letter-spacing: 0.03em;
         padding: 0;
+        text-decoration: none;
+        margin: 70px 0px;
+        &-active {
+            & .detail-btn-text {
+                border-bottom: 1px solid #393333;
+            }
+            & .detail-btn-icon {
+                opacity: 1;
+            }
+        }
         &-text {
             border-bottom: 1px solid transparent;
             transition: all 0.5s;
@@ -464,6 +481,9 @@ h1, h2, h3, h4, h5, h6 {
         box-sizing: border-box;
         backdrop-filter: blur(20px);
         border-radius: 15px;
+        &.show {
+            display: block;
+        }
         & .lang-link {
             color: #ffffff;
             &:hover,
@@ -546,6 +566,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .tabes {
+    &-body {
+        margin-top: 200px;
+    }
     &-title {
         font-family: $firs-extra;
         font-size: 24px;
@@ -557,7 +580,7 @@ h1, h2, h3, h4, h5, h6 {
     &-row {
         align-items: center;
         &-gift {
-            margin-top: 300px;
+            margin-top: 100px;
         }
     }
     &-list {
@@ -597,6 +620,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-orange {
         color: #FFC24B;
+    }
+    &-content {
+        display: none;
+        &-show {
+            display: block;
+        }
     }
 }
 
@@ -983,10 +1012,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
     &-item {
-        display: none;
-        &:first-child {
-            display: block;
-        }
+        
     }
     &-wrapper {
         display: flex;
@@ -1217,10 +1243,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
     &-item {
-        display: none;
-        &:first-child {
-            display: block;
-        }
+        
     }
     &-left {
         padding-top: 50px;
@@ -1315,9 +1338,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 100px;
     &.slow {
         background-image: url(../img/price-bg-slow.jpg);
-        & .price-content:first-child {
-            display: none;
-        }
+        
         & .price-content:last-child {
             display: block;
         }
@@ -1763,10 +1784,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
     &-content {
-        display: none;
-        &:first-child {
-            display: block;
-        }
+        
     }
     &-item {
         margin-bottom: 10px;
@@ -1888,10 +1906,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 40px;
     }
     &-item {
-        display: none;
-        &:first-child {
-            display: block;
-        }
+        
     }
 }
 .watcher {
@@ -2671,8 +2686,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Modal's */
 
 .modal {
+    display: none;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 9999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -2690,6 +2706,9 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 140%;
     text-align: center;
     color: #393333;
+    &.visible {
+        display: block;
+    }
     &-wrapper {
         display: inline-block;
         width: 872px;
@@ -2773,24 +2792,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Modal's in wecan section */
 
 .modstep {
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    text-align: center;
-
-    /* Font's and color */
-    font-family: $gothic;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 140%;
-    color: #393333;
     &-wrapper {
         display: inline-block;
         width: 1250px;

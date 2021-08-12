@@ -214,6 +214,10 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   background-color: #FFCF5C;
   padding: 16px 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 8888;
 }
 
 .header .content {
@@ -364,9 +368,13 @@ h1, h2, h3, h4, h5, h6 {
   top: 30px;
 }
 
+.drop.show {
+  display: block;
+}
+
 .drop-body {
   padding: 5px 20px 0 20px;
-  width: 70px;
+  width: 75px;
   background: rgba(57, 51, 51, 0.7);
   border: 1px solid #FFCF5C;
   -webkit-box-sizing: border-box;
@@ -412,6 +420,7 @@ h1, h2, h3, h4, h5, h6 {
 .detail {
   display: none;
   position: fixed;
+  z-index: 9999;
   max-width: inherit;
   width: 100%;
   height: 100%;
@@ -419,6 +428,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   right: 0;
   bottom: 0;
+}
+
+.detail.show {
+  display: block;
 }
 
 .detail-body {
@@ -470,10 +483,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 150px;
 }
 
-.detail-item {
-  margin: 70px 0px;
-}
-
 .detail-top-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -487,12 +496,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .detail-btn {
+  display: block;
   color: #393333;
   font-weight: bold;
   font-size: 36px;
   line-height: 42px;
   letter-spacing: 0.03em;
   padding: 0;
+  text-decoration: none;
+  margin: 70px 0px;
+}
+
+.detail-btn-active .detail-btn-text {
+  border-bottom: 1px solid #393333;
+}
+
+.detail-btn-active .detail-btn-icon {
+  opacity: 1;
 }
 
 .detail-btn-text {
@@ -583,6 +603,10 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   border-radius: 15px;
+}
+
+.lang-drop.show {
+  display: block;
 }
 
 .lang-drop .lang-link {
@@ -702,6 +726,10 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/soci-icon-three.svg);
 }
 
+.tabes-body {
+  margin-top: 200px;
+}
+
 .tabes-title {
   font-family: "TT-Firs-Extrabold", Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -718,7 +746,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabes-row-gift {
-  margin-top: 300px;
+  margin-top: 100px;
 }
 
 .tabes-list {
@@ -765,6 +793,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabes-orange {
   color: #FFC24B;
+}
+
+.tabes-content {
+  display: none;
+}
+
+.tabes-content-show {
+  display: block;
 }
 
 /* Sections */
@@ -1260,14 +1296,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.whywe-item {
-  display: none;
-}
-
-.whywe-item:first-child {
-  display: block;
-}
-
 .whywe-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1582,14 +1610,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.bonus-item {
-  display: none;
-}
-
-.bonus-item:first-child {
-  display: block;
-}
-
 .bonus-left {
   padding-top: 50px;
   padding-left: 270px;
@@ -1703,10 +1723,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .price.slow {
   background-image: url(../img/price-bg-slow.jpg);
-}
-
-.price.slow .price-content:first-child {
-  display: none;
 }
 
 .price.slow .price-content:last-child {
@@ -2258,14 +2274,6 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.waste-content {
-  display: none;
-}
-
-.waste-content:first-child {
-  display: block;
-}
-
 .waste-item {
   margin-bottom: 10px;
 }
@@ -2432,14 +2440,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .garant-wrapper {
   margin-top: 40px;
-}
-
-.garant-item {
-  display: none;
-}
-
-.garant-item:first-child {
-  display: block;
 }
 
 .watcher {
@@ -3389,9 +3389,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Modal's */
 .modal {
+  display: none;
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 9999;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -3415,6 +3416,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 140%;
   text-align: center;
   color: #393333;
+}
+
+.modal.visible {
+  display: block;
 }
 
 .modal-wrapper {
@@ -3523,34 +3528,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Modal's in wecan section */
-.modstep {
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-  text-align: center;
-  /* Font's and color */
-  font-family: "CenturyGothic", Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 140%;
-  color: #393333;
-}
-
 .modstep-wrapper {
   display: inline-block;
   width: 1250px;
