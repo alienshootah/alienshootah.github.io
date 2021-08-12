@@ -1265,12 +1265,12 @@ h1, h2, h3, h4, h5, h6 {
     &-body {
         position: relative;
     }
-    &-item {
-        
+    &-row {
+        margin: 0;
     }
     &-left {
         padding-top: 50px;
-        padding-left: 270px;
+        padding-left: 260px;
         width: 66.6666%;
     }
     &-right {
@@ -1302,18 +1302,30 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 24px;
         line-height: 29px;
         color: #393333;
-        margin: 0px -15px;
+        margin: 0px 0 0px -23px;
         display: flex;
         align-items: center;
+        text-align: center;
+
+        & .swiper-slide-thumb-active .bonus-nav-link {
+            font-weight: bold;
+                color: #FFC24B;
+                border-bottom: 1px solid #FFC24B;
+        }
+
         &-item {
-            margin: 0 15px;
+            margin: 0 15px 0 0;
+        }
+        & .swiper-slide {
+            width: 150px;
         }
         &-link {
+            display: inline-block;
             color: #393333;
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: all 0.5s;
-            &.active,
+            cursor: pointer;
             &:hover,
             &:focus {
                 font-weight: bold;
@@ -1324,7 +1336,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-arrows {
         position: static;
-        margin-left: 100px;
+        margin-left: 150px;
+        margin-top: -65px;
+    }
+    &-image {
+        width: 100%;
     }
 }
 .promotion {
@@ -1806,9 +1822,6 @@ h1, h2, h3, h4, h5, h6 {
     &-body {
         position: relative;
     }
-    &-content {
-        
-    }
     &-item {
         margin-bottom: 10px;
     }
@@ -1927,9 +1940,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-wrapper {
         margin-top: 40px;
-    }
-    &-item {
-        
     }
 }
 .watcher {

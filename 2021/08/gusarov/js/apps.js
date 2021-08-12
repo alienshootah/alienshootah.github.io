@@ -180,7 +180,26 @@ for (i = 0; i < acc.length; i++) {
 const whyweSlider = new Swiper('.whywe-list', {
   // Navigation arrows
   navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.whywe-right',
+      prevEl: '.whywe-left',
   }
+});
+
+/* Bonus section slider */
+
+/* Bonus nav */
+var bonusNav = new Swiper(".bonus-nav", {
+  spaceBetween: 0,
+  slidesPerView: 4,
+});
+
+/* Bonus slider */
+const bonusSlider = new Swiper('.bonus-list', {
+  navigation: {
+      nextEl: '.bonus-move-right',
+      prevEl: '.bonus-move-left',
+  },
+  thumbs: {
+    swiper: bonusNav,
+  },
 });
