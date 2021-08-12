@@ -156,3 +156,31 @@ window.addEventListener("DOMContentLoaded", function() {
   input.addEventListener("keydown", mask, false)
 });
 });
+
+/* Accordion */
+
+var acc = document.getElementsByClassName("accordion-btn");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+/* SLIDERS */
+
+/* Whywe section slider */
+const whyweSlider = new Swiper('.whywe-list', {
+  // Navigation arrows
+  navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+  }
+});

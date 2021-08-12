@@ -212,10 +212,15 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
     &-link {
+        padding: 0;
         color: #393333;
         text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: all 0.5s;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        color: #393333;
         &:hover,
         &:focus {
             border-bottom: 1px solid #393333;
@@ -496,10 +501,15 @@ h1, h2, h3, h4, h5, h6 {
         margin: 10px 0;
     }
     &-link {
+        padding: 0;
         color: #393333;
         text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: all 0.5s;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+        color: #393333;
         &:hover,
         &:focus {
             border-bottom: 1px solid #393333;
@@ -894,6 +904,10 @@ h1, h2, h3, h4, h5, h6 {
         &.active {
             background-color: #ffffff;
         }
+        &.active .accordion-title {
+            font-weight: bold;
+            color: #FFC24B;
+        }
         &.active::after {
             background-image: url(../img/accordion-close.svg);
         }
@@ -1007,12 +1021,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 100px;
     & .content {
         max-width: 1920px;
+        padding-left: 0;
     }
     &-body {
         position: relative;
-    }
-    &-item {
-        
     }
     &-wrapper {
         display: flex;
@@ -1027,6 +1039,11 @@ h1, h2, h3, h4, h5, h6 {
         left: 68%;
         margin: 0 -25px;
         left: 50%;
+        &-body {
+            position: relative;
+            z-index: 1000;
+            width: 250px;
+        }
     }
     &-arrow {
         display: inline-block;
@@ -1036,6 +1053,12 @@ h1, h2, h3, h4, h5, h6 {
         background-repeat: no-repeat;
         &-btn {
             margin: 0 25px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            &:after {
+                content: none;
+            }
         }
         &-left {
             transform: rotate(-180deg);

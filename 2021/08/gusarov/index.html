@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Gusarov</title>
 </head>
@@ -504,11 +505,11 @@
                                     </div>
                                 </li>
                                 <li class="accordion-item">
-                                    <button class="accordion-btn active">
+                                    <button class="accordion-btn">
                                         <span class="accordion-title">2. Разработка дизайн-макета</span>
                                         <span class="accordion-weeks">2-3 неделя</span>
                                     </button>
-                                    <div class="accordion-content active">
+                                    <div class="accordion-content">
                                         <ul class="accordion-sublist">
                                             <li class="accordion-subitem">
                                                 — создание дизайн-макета
@@ -605,7 +606,7 @@
                     </div>
                 </div>
                 <div class="steps-more">
-                    <button class="steps-more-btn">Обсудить задачу!</button>
+                    <button class="steps-more-btn open-modal" data-modal="modal-01">Обсудить задачу!</button>
                 </div>
             </div>
         </section>
@@ -614,7 +615,7 @@
                 <h2 class="title wecan-title">ЧТО ИМЕННО МЫ МОЖЕМ?</h2>
                 <ul class="wecan-list">
                     <li class="wecan-item">
-                        <div class="wecan-wrapper active">
+                        <div class="wecan-wrapper active open-modal" data-modal="modal-02">
                             <div class="wecan-picture">
                                 <span class="wecan-icon wecan-icon-one"></span>
                             </div>
@@ -624,7 +625,7 @@
                         </div>
                     </li>
                     <li class="wecan-item">
-                        <div class="wecan-wrapper">
+                        <div class="wecan-wrapper open-modal" data-modal="modal-03">
                             <div class="wecan-picture">
                                 <span class="wecan-icon wecan-icon-thue"></span>
                             </div>
@@ -634,7 +635,7 @@
                         </div>
                     </li>
                     <li class="wecan-item">
-                        <div class="wecan-wrapper">
+                        <div class="wecan-wrapper open-modal" data-modal="modal-04">
                             <div class="wecan-picture">
                                 <span class="wecan-icon wecan-icon-three"></span>
                             </div>
@@ -644,7 +645,7 @@
                         </div>
                     </li>
                     <li class="wecan-item">
-                        <div class="wecan-wrapper">
+                        <div class="wecan-wrapper open-modal" data-modal="modal-05">
                             <div class="wecan-picture">
                                 <span class="wecan-icon wecan-icon-four"></span>
                             </div>
@@ -654,7 +655,7 @@
                         </div>
                     </li>
                     <li class="wecan-item">
-                        <div class="wecan-wrapper">
+                        <div class="wecan-wrapper open-modal" data-modal="modal-06">
                             <div class="wecan-picture">
                                 <span class="wecan-icon wecan-icon-five"></span>
                             </div>
@@ -666,78 +667,98 @@
                 </ul>
             </div>
         </section>
+        
         <section class="whywe">
             <div class="content">
                 <div class="whywe-body">
-                    <ul class="whywe-list">
-                        <li class="whywe-item">
-                            <div class="whywe-wrapper">
-                                <div class="whywe-picture">
-                                    <img src="img/whywe-image1.jpg" alt="" class="whywe-image">
-                                </div>
-                                <div class="whywe-text">
-                                    <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
-                                    <div class="whywe-info">
-                                        <h3 class="whywe-subtitle">Два концепта дизайна</h3>
-                                        <p class="whywe-descr">Угодить клиенту трудно, но мы стараемся :) Если вам не понравится первая версия макета, мы сделаем другой. Всего — до двух концептов.</p>
+                    <div class="swiper-container whywe-list">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <li class="whywe-item">
+                                    <div class="whywe-wrapper">
+                                        <div class="whywe-picture">
+                                            <img src="img/whywe-image1.jpg" alt="" class="whywe-image">
+                                        </div>
+                                        <div class="whywe-text">
+                                            <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
+                                            <div class="whywe-info">
+                                                <h3 class="whywe-subtitle">Два концепта дизайна</h3>
+                                                <p class="whywe-descr">Угодить клиенту трудно, но мы стараемся :) Если вам не понравится первая версия макета, мы сделаем другой. Всего — до двух концептов.</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </li>
                             </div>
-                        </li>
-                        <li class="whywe-item">
-                            <div class="whywe-wrapper">
-                                <div class="whywe-picture">
-                                    <img src="img/whywe-image2.jpg" alt="" class="whywe-image">
-                                </div>
-                                <div class="whywe-text">
-                                    <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
-                                    <div class="whywe-info">
-                                        <h3 class="whywe-subtitle">Ведущие эксперты на рынке В2В</h3>
-                                        <p class="whywe-descr">
-                                            У нашего агентства богатый опыт в кейсах «Бизнес для бизнеса». Мы хорошо знаем, что вам нужно, а у наших специалистов набита рука — сомневаться в нас просто не приходится!
-                                        </p>
+                            <div class="swiper-slide">
+                                <li class="whywe-item">
+                                    <div class="whywe-wrapper">
+                                        <div class="whywe-picture">
+                                            <img src="img/whywe-image2.jpg" alt="" class="whywe-image">
+                                        </div>
+                                        <div class="whywe-text">
+                                            <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
+                                            <div class="whywe-info">
+                                                <h3 class="whywe-subtitle">Ведущие эксперты на рынке В2В</h3>
+                                                <p class="whywe-descr">
+                                                    У нашего агентства богатый опыт в кейсах «Бизнес для бизнеса». Мы хорошо знаем, что вам нужно, а у наших специалистов набита рука — сомневаться в нас просто не приходится!
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </li>
                             </div>
-                        </li>
-                        <li class="whywe-item">
-                            <div class="whywe-wrapper">
-                                <div class="whywe-picture">
-                                    <img src="img/whywe-image3.jpg" alt="" class="whywe-image">
-                                </div>
-                                <div class="whywe-text">
-                                    <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
-                                    <div class="whywe-info">
-                                        <h3 class="whywe-subtitle">Построим для вас CJM</h3>
-                                        <p class="whywe-descr">
-                                            Customer Journey Map (CJM) позволяет оптимизировать процессы работы и снизить рекламные бюджеты. Для вас путь пользователя разработает ведущий специалист по CJM в СНГ, Андрей Гусаров.
-                                        </p>
+                            <div class="swiper-slide">
+                                <li class="whywe-item">
+                                    <div class="whywe-wrapper">
+                                        <div class="whywe-picture">
+                                            <img src="img/whywe-image3.jpg" alt="" class="whywe-image">
+                                        </div>
+                                        <div class="whywe-text">
+                                            <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
+                                            <div class="whywe-info">
+                                                <h3 class="whywe-subtitle">Построим для вас CJM</h3>
+                                                <p class="whywe-descr">
+                                                    Customer Journey Map (CJM) позволяет оптимизировать процессы работы и снизить рекламные бюджеты. Для вас путь пользователя разработает ведущий специалист по CJM в СНГ, Андрей Гусаров.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </li>
                             </div>
-                        </li>
-                        <li class="whywe-item">
-                            <div class="whywe-wrapper">
-                                <div class="whywe-picture">
-                                    <img src="img/whywe-image4.jpg" alt="" class="whywe-image">
-                                </div>
-                                <div class="whywe-text">
-                                    <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
-                                    <div class="whywe-info">
-                                        <h3 class="whywe-subtitle">GUSAROV.partners</h3>
-                                        <p class="whywe-descr">
-                                            Если сами мы не сможем взяться за реализацию проекта, мы предложим вам на выбор ответственных и заслуживающих доверия подрядчиков. Мы полностью контролируем ход их работ и отвечаем за результат.
-                                        </p>
+                            <div class="swiper-slide">
+                                <li class="whywe-item">
+                                    <div class="whywe-wrapper">
+                                        <div class="whywe-picture">
+                                            <img src="img/whywe-image4.jpg" alt="" class="whywe-image">
+                                        </div>
+                                        <div class="whywe-text">
+                                            <h2 class="title whywe-title">ПОЧЕМУ ИМЕННО МЫ?</h2>
+                                            <div class="whywe-info">
+                                                <h3 class="whywe-subtitle">GUSAROV.partners</h3>
+                                                <p class="whywe-descr">
+                                                    Если сами мы не сможем взяться за реализацию проекта, мы предложим вам на выбор ответственных и заслуживающих доверия подрядчиков. Мы полностью контролируем ход их работ и отвечаем за результат.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                                </li>
+                            </div> 
+                        </div>
+                    </div>
                     <div class="whywe-arrows">
-                        <button class="whywe-arrow-btn disabled">
+                        <div class="whywe-arrows-body">
+                            <div class="swiper-button-prev whywe-arrow-btn">
+                                <span class="whywe-arrow whywe-arrow-left"></span>
+                            </div>
+                            <div class="swiper-button-next whywe-arrow-btn">
+                                <span class="whywe-arrow whywe-arrow-right"></span>
+                            </div>
+                        </div>
+                        
+                        <button class="whywe-arrow-btn" style="display: none;">
                             <span class="whywe-arrow whywe-arrow-left"></span>
                         </button>
-                        <button class="whywe-arrow-btn">
+                        <button class="whywe-arrow-btn" style="display: none;">
                             <span class="whywe-arrow whywe-arrow-right"></span>
                         </button>
                     </div>
@@ -2574,103 +2595,7 @@
     </div>
 
     <!-- Steps -->
-    <div class="modal modstep">
-        <div class="modstep-wrapper">
-            <div class="row modstep-row">
-                <div class="col-2 modstep-left">
-                </div>
-                <div class="col-10 modstep-right">
-                    <button class="modal-close">
-                        <span class="modal-close-icon"></span>
-                    </button>
-                    <h2 class="modstep-title">ПЕРЕНОС САЙТА НА ДРУГУЮ CMS</h2>
-                    <ul class="modstep-list">
-                        <li class="modstep-item">Поможем проекту безопасно «переехать» на другую CMS</li>
-                        <li class="modstep-item">После процедуры вы сможете использовать все маркетинговые возможности, модернизировать площадку и опережать конкурентов</li>
-                        <li class="modstep-item">Мы оценим все риски переноса сайта, проконтролируем процесс, не допустим потери трафика и позиций в выдаче поисковых систем</li>
-                    </ul>
-                    <form action="/" class="modstep-form">
-                        <ul class="modstep-form-list">
-                            <li class="modstep-form-item">
-                                <input type="text" class="modstep-field" placeholder="Ваше имя" required>
-                            </li>
-                            <li class="modstep-form-item">
-                                <input type="text" class="modstep-field tel" placeholder="Ваш телефон">
-                            </li>
-                            <li class="modstep-form-item">
-                                <button class="modstep-btn">Обсудить задачу!</button>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal modstep modstep-spa">
-        <div class="modstep-wrapper">
-            <div class="row modstep-row">
-                <div class="col-2 modstep-left">
-                </div>
-                <div class="col-10 modstep-right">
-                    <button class="modal-close">
-                        <span class="modal-close-icon"></span>
-                    </button>
-                    <h2 class="modstep-title">СОЗДАНИЕ ОДНОСТРАНИЧНОГО САЙТА</h2>
-                    <ul class="modstep-list">
-                        <li class="modstep-item">Анализируем целевую аудиторию, исследуем продукт или услугу, подбираем нужные аргументы и складываем из отдельных блоков убедительное повествование с точным призывом к действию</li>
-                        <li class="modstep-item">Выбираем работающие сценарии по принципу «пришел, увидел, сделал»</li>
-                        <li class="modstep-item">Готовый продукт с настроенными целями и счетчиками веб-аналитики</li>
-                    </ul>
-                    <form action="/" class="modstep-form">
-                        <ul class="modstep-form-list">
-                            <li class="modstep-form-item">
-                                <input type="text" class="modstep-field" placeholder="Ваше имя" required>
-                            </li>
-                            <li class="modstep-form-item">
-                                <input type="text" class="modstep-field tel" placeholder="Ваш телефон">
-                            </li>
-                            <li class="modstep-form-item">
-                                <button class="modstep-btn">Обсудить задачу!</button>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal modstep modstep-ecommerce">
-        <div class="modstep-wrapper">
-            <div class="row modstep-row">
-                <div class="col-2 modstep-left">
-                </div>
-                <div class="col-10 modstep-right">
-                    <button class="modal-close">
-                        <span class="modal-close-icon"></span>
-                    </button>
-                    <h2 class="modstep-title">СОЗДАНИЕ ИНТЕРНЕТ-МАГАЗИНА</h2>
-                    <ul class="modstep-list">
-                        <li class="modstep-item">Предлагаем создание понятной структуры и простой интуитивной навигации</li>
-                        <li class="modstep-item">Учитываем потребности разных сегментов целевой аудитории и выгодно подчеркиваем конкурентные преимущества продукции</li>
-                        <li class="modstep-item">Увеличиваем конверсию в заказы благодаря детальной проработке оформления и функционала корзины</li>
-                    </ul>
-                    <form action="/" class="modstep-form">
-                        <ul class="modstep-form-list">
-                            <li class="modstep-form-item">
-                                <input type="text" class="modstep-field" placeholder="Ваше имя" required>
-                            </li>
-                            <li class="modstep-form-item">
-                                <input type="text" class="modstep-field tel" placeholder="Ваш телефон">
-                            </li>
-                            <li class="modstep-form-item">
-                                <button class="modstep-btn">Обсудить задачу!</button>
-                            </li>
-                        </ul>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal modstep modstep-catalog">
+    <div class="modal modstep modstep-catalog" id="modal-03">
         <div class="modstep-wrapper">
             <div class="row modstep-row">
                 <div class="col-2 modstep-left">
@@ -2702,7 +2627,71 @@
             </div>
         </div>
     </div>
-    <div class="modal modstep modstep-site">
+    <div class="modal modstep modstep-ecommerce" id="modal-04">
+        <div class="modstep-wrapper">
+            <div class="row modstep-row">
+                <div class="col-2 modstep-left">
+                </div>
+                <div class="col-10 modstep-right">
+                    <button class="modal-close">
+                        <span class="modal-close-icon"></span>
+                    </button>
+                    <h2 class="modstep-title">СОЗДАНИЕ ИНТЕРНЕТ-МАГАЗИНА</h2>
+                    <ul class="modstep-list">
+                        <li class="modstep-item">Предлагаем создание понятной структуры и простой интуитивной навигации</li>
+                        <li class="modstep-item">Учитываем потребности разных сегментов целевой аудитории и выгодно подчеркиваем конкурентные преимущества продукции</li>
+                        <li class="modstep-item">Увеличиваем конверсию в заказы благодаря детальной проработке оформления и функционала корзины</li>
+                    </ul>
+                    <form action="/" class="modstep-form">
+                        <ul class="modstep-form-list">
+                            <li class="modstep-form-item">
+                                <input type="text" class="modstep-field" placeholder="Ваше имя" required>
+                            </li>
+                            <li class="modstep-form-item">
+                                <input type="text" class="modstep-field tel" placeholder="Ваш телефон">
+                            </li>
+                            <li class="modstep-form-item">
+                                <button class="modstep-btn">Обсудить задачу!</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modstep modstep-spa" id="modal-05">
+        <div class="modstep-wrapper">
+            <div class="row modstep-row">
+                <div class="col-2 modstep-left">
+                </div>
+                <div class="col-10 modstep-right">
+                    <button class="modal-close">
+                        <span class="modal-close-icon"></span>
+                    </button>
+                    <h2 class="modstep-title">СОЗДАНИЕ ОДНОСТРАНИЧНОГО САЙТА</h2>
+                    <ul class="modstep-list">
+                        <li class="modstep-item">Анализируем целевую аудиторию, исследуем продукт или услугу, подбираем нужные аргументы и складываем из отдельных блоков убедительное повествование с точным призывом к действию</li>
+                        <li class="modstep-item">Выбираем работающие сценарии по принципу «пришел, увидел, сделал»</li>
+                        <li class="modstep-item">Готовый продукт с настроенными целями и счетчиками веб-аналитики</li>
+                    </ul>
+                    <form action="/" class="modstep-form">
+                        <ul class="modstep-form-list">
+                            <li class="modstep-form-item">
+                                <input type="text" class="modstep-field" placeholder="Ваше имя" required>
+                            </li>
+                            <li class="modstep-form-item">
+                                <input type="text" class="modstep-field tel" placeholder="Ваш телефон">
+                            </li>
+                            <li class="modstep-form-item">
+                                <button class="modstep-btn">Обсудить задачу!</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modstep modstep-site" id="modal-02">
         <div class="modstep-wrapper">
             <div class="row modstep-row">
                 <div class="col-2 modstep-left">
@@ -2733,7 +2722,40 @@
             </div>
         </div>
     </div>
-
+    <div class="modal modstep" id="modal-06">
+        <div class="modstep-wrapper">
+            <div class="row modstep-row">
+                <div class="col-2 modstep-left">
+                </div>
+                <div class="col-10 modstep-right">
+                    <button class="modal-close">
+                        <span class="modal-close-icon"></span>
+                    </button>
+                    <h2 class="modstep-title">ПЕРЕНОС САЙТА НА ДРУГУЮ CMS</h2>
+                    <ul class="modstep-list">
+                        <li class="modstep-item">Поможем проекту безопасно «переехать» на другую CMS</li>
+                        <li class="modstep-item">После процедуры вы сможете использовать все маркетинговые возможности, модернизировать площадку и опережать конкурентов</li>
+                        <li class="modstep-item">Мы оценим все риски переноса сайта, проконтролируем процесс, не допустим потери трафика и позиций в выдаче поисковых систем</li>
+                    </ul>
+                    <form action="/" class="modstep-form">
+                        <ul class="modstep-form-list">
+                            <li class="modstep-form-item">
+                                <input type="text" class="modstep-field" placeholder="Ваше имя" required>
+                            </li>
+                            <li class="modstep-form-item">
+                                <input type="text" class="modstep-field tel" placeholder="Ваш телефон">
+                            </li>
+                            <li class="modstep-form-item">
+                                <button class="modstep-btn">Обсудить задачу!</button>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="swiper/swiper-bundle.min.js"></script>
     <script src="js/apps.js"></script>
 </body>
 </html>
