@@ -202,6 +202,35 @@ document.querySelector("input.price-field").addEventListener("change", (e) => {
     }
 });
 
+/* Tabs */
+window.addEventListener("load", function() {
+  
+  var theTabs = document.querySelectorAll("ul.garant-nav > li");
+
+  function theTabClicks(tabClickEvent) {
+      var clickedTab = tabClickEvent.currentTarget;
+      var tabParent = tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
+      var theTabs = tabParent.querySelectorAll("ul.garant-nav > li");
+      for (var i = 0; i < theTabs.length; i++) {
+          theTabs[i].classList.remove("active");
+      }
+      
+      clickedTab.classList.add("active");
+      tabClickEvent.preventDefault();
+      var contentPanes = tabParent.querySelectorAll(".garant-item");
+      for (i = 0; i < contentPanes.length; i++) {
+          contentPanes[i].classList.remove("active");
+      }
+      var anchorReference = tabClickEvent.target;
+      var activePaneId = anchorReference.getAttribute("href");
+      var activePane = tabParent.querySelector(activePaneId);
+      activePane.classList.add("active");
+  }
+  for (i = 0; i < theTabs.length; i++) {
+      theTabs[i].addEventListener("click", theTabClicks)
+  }
+});
+
 /* === SLIDERS === */
 
 /* Whywe section slider */
@@ -267,14 +296,20 @@ wasteSlider.on('slideChange', function() {
 const watcherSlider = new Swiper('.watcher-list', {
   spaceBetween: 0,
   slidesPerView: 1,
+  loop: true,
+  observer: true,
+  observeParents: true,
   navigation: {
-      nextEl: '.watcher-btn-right',
-      prevEl: '.watcher-btn-left',
+      nextEl: '.watcher-ai-right',
+      prevEl: '.watcher-ai-left',
   }
 });
 
 /* Clients slider */
 const clientsSlider = new Swiper('.clients-list', {
+  loop: true,
+  observer: true,
+  observeParents: true,
   navigation: {
       nextEl: '.clients-arrow-right',
       prevEl: '.clients-arrow-left',
@@ -287,12 +322,13 @@ const clientsSlider = new Swiper('.clients-list', {
 
 /* Listen slider */
 const listenSlider = new Swiper('.listen-list', {
+  loop: true,
+  observer: true,
+  observeParents: true,
   navigation: {
-      nextEl: '.clients-arrow-right',
-      prevEl: '.clients-arrow-left',
-  },
-  pagination: {
-    el: ".pagin-num",
-    type: "fraction",
+      nextEl: '.listen-arrow-right',
+      prevEl: '.listen-arrow-left',
   },
 });
+
+

@@ -16,7 +16,7 @@ function myDrop3() {
     document.getElementById("myDrop3").classList.toggle("show");
 }
 
-  // Close the dropdown menu if the user clicks outside of it
+// Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
     if (!event.target.matches('.drop-btn')) {
       var dropdowns = document.getElementsByClassName("drop");

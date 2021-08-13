@@ -1939,7 +1939,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .garant {
+    min-height: 900px;
     padding: 100px;
+    box-sizing: border-box;
     &-title {
         text-align: center;
     }
@@ -1948,6 +1950,9 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         justify-content: center;
+        &-item.active .garant-nav-btn {
+            background-color: #FFCF5C;
+        }
         &-btn {
             font-size: 18px;
             line-height: 140%;
@@ -1957,15 +1962,26 @@ h1, h2, h3, h4, h5, h6 {
             border: 1px solid #FFCF5C;
             margin: 10px;
             transition: all 0.5s;
+            text-decoration: none;
             &:hover,
-            &:focus,
-            &.active {
+            &:focus {
                 background-color: #FFCF5C;
             }
         }
     }
     &-wrapper {
         margin-top: 40px;
+    }
+
+    &-item {
+        background-color: #ffffff;
+        display: none;
+        top: 30px;
+        text-align: center;
+        &.active {
+            visibility: visible;
+            display: block;
+        }
     }
 }
 .watcher {
@@ -2217,6 +2233,9 @@ h1, h2, h3, h4, h5, h6 {
         padding: 200px 0;
         box-sizing: border-box;
     }
+    &-list {
+        overflow: hidden;
+    }
     &-row {
         align-items: center;
         justify-content: space-between;
@@ -2230,6 +2249,9 @@ h1, h2, h3, h4, h5, h6 {
         color: #000000;
         margin: 0;
         padding: 0;
+    }
+    &-video {
+        margin-top: 20px;
     }
     &-audio {
         height: 50px;
