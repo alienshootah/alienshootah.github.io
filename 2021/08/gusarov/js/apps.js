@@ -363,8 +363,8 @@ const teamMoreSlider = new Swiper('.team-fullmore', {
   observeParents: true,
   centeredSlides: true,
   navigation: {
-      nextEl: '.team-more-right',
-      prevEl: '.team-more-left',
+      nextEl: '.team-fullmore-right',
+      prevEl: '.team-fullmore-left',
   },
 });
 
