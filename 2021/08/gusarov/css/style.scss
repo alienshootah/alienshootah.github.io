@@ -1377,7 +1377,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 100px;
     &.slow {
         background-image: url(../img/price-bg-slow.jpg);
-        
+        & .price-content:first-child {
+            display: none;
+        }
         & .price-content:last-child {
             display: block;
         }
@@ -1408,8 +1410,18 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: center;
         &-item {
             margin: 0 17px;
-            &.active {
+            &:first-child {
                 font-weight: bold;
+            }
+        }
+        &.month {
+            & .price-nav-item {
+                &:first-child {
+                    font-weight: normal;
+                }
+                &:nth-child(3) {
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -1804,19 +1816,27 @@ h1, h2, h3, h4, h5, h6 {
         &-item {
             padding: 35px 0 35px 0px;
             margin-right: -2px;
-            &.active,
+            cursor: pointer;
             &:hover,
             &:focus {
                 border-right: 2px solid #FFC24B;
                 font-family: $radiate-exp;
             }
-            &.active .waste-nav-btn,
             &:hover .waste-nav-btn,
             &:focus .waste-nav-btn {
                 font-family: $radiate-exp;
                 color: #FFC24B;
                 opacity: 1;
             }
+        }
+        & .swiper-slide-thumb-active .waste-nav-item {
+            border-right: 2px solid #FFC24B;
+            font-family: $radiate-exp;
+        }
+        & .swiper-slide-thumb-active .waste-nav-btn {
+            font-family: $radiate-exp;
+            color: #FFC24B;
+            opacity: 1;
         }
     }
     &-body {
@@ -1894,15 +1914,22 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 18px;
             line-height: 22px;
             color: #FFFFFF;
+            &.disabled {
+                opacity: 0.5;
+                cursor: auto;
+                pointer-events: none;
+            }
         }
     }
     &-arrows {
         position: absolute;
         top: 100px;
         right: 0;
+        z-index: 1000;
     }
     &-arrow {
         &-right {
+            cursor: pointer;
             display: inline-block;
             width: 50px;
             height: 50px;

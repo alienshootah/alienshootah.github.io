@@ -174,11 +174,38 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+/* Checkbox in price section */
+
+function checkAcknowledgement(form){
+  var checkbox = form["changebg"];
+  alert(checkbox); //shows [HTMLInputElement]
+  if (!checkbox.checked){ //A shorter method for checkbox.checked == false
+      alert('Please read through the acknowledgement and acknowledge it.');
+      return false;
+  } else {
+      return true;
+  }
+}
+
+/* Switch in price section */
+const switchBox = document.querySelector(".price");
+const priceNav = document.querySelector(".price-nav");
+
+document.querySelector("input.price-field").addEventListener("change", (e) => {
+    const { checked } = e.target;   
+    if (checked) {
+        switchBox.classList.add("slow");
+        priceNav.classList.add("month");
+    } else {
+        switchBox.classList.remove("slow");
+        priceNav.classList.remove("month");
+    }
+});
+
 /* === SLIDERS === */
 
 /* Whywe section slider */
 const whyweSlider = new Swiper('.whywe-list', {
-  // Navigation arrows
   navigation: {
       nextEl: '.whywe-right',
       prevEl: '.whywe-left',
@@ -203,15 +230,35 @@ const bonusSlider = new Swiper('.bonus-list', {
   },
 });
 
-/* Checkbox in price section */
+/* Waste section slider */
+/* Waste nav */
+var wasteNav = new Swiper(".waste-nav", {
+  direction: "vertical",
+  spaceBetween: 0,
+  slidesPerView: 3,
+});
 
-function checkAcknowledgement(form){
-  var checkbox = form["changebg"];
-  alert(checkbox); //shows [HTMLInputElement]
-  if (!checkbox.checked){ //A shorter method for checkbox.checked == false
-      alert('Please read through the acknowledgement and acknowledge it.');
-      return false;
+/* Waste slider */
+const wasteSlider = new Swiper('.swiper-waste', {
+  // Navigation arrows
+  spaceBetween: 0,
+  navigation: {
+    nextEl: '.waste-arrows-right',
+  },
+  thumbs: {
+    swiper: wasteNav,
+  },
+});
+
+/* hide left arrow by deafult */
+var arrow = document.getElementsByClassName('waste-more-btn')[0];
+arrow.classList.add('disabled');
+/* Swiper API - if index = 1 hide left arrow / otherwise show */
+wasteSlider.on('slideChange', function() {
+  var realIndex = wasteSlider.realIndex;
+  if (realIndex !== 2) {
+    arrow.classList.add('disabled');
   } else {
-      return true;
+    arrow.classList.remove('disabled');
   }
-}
+});
