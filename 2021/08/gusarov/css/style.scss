@@ -1939,7 +1939,6 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .garant {
-    min-height: 900px;
     padding: 100px;
     box-sizing: border-box;
     &-title {
@@ -1974,12 +1973,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     &-item {
-        background-color: #ffffff;
         display: none;
-        top: 30px;
-        text-align: center;
         &.active {
-            visibility: visible;
             display: block;
         }
     }
@@ -2270,6 +2265,9 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         justify-content: center;
+        &-item.active .weare-nav-btn {
+            background-color: #FFCF5C;
+        }
         &-btn {
             font-size: 18px;
             line-height: 140%;
@@ -2279,9 +2277,9 @@ h1, h2, h3, h4, h5, h6 {
             border: 1px solid #FFCF5C;
             margin: 10px;
             transition: all 0.5s;
+            text-decoration: none;
             &:hover,
-            &:focus,
-            &.active {
+            &:focus {
                 background-color: #FFCF5C;
             }
         }
@@ -2304,9 +2302,9 @@ h1, h2, h3, h4, h5, h6 {
         margin: 15px -15px;
         text-align: center;
         flex-wrap: wrap;
+        overflow: hidden;
     }
     &-item {
-        width: 430px;
         margin: 15px;
         &:hover .team-more-text,
         &:focus .team-more-text,
@@ -2341,6 +2339,25 @@ h1, h2, h3, h4, h5, h6 {
     &-arrows {
         & .watcher-btn {
             top: 45%;
+        }
+    }
+    &-arrow {
+        &-left {
+            left: -60px;
+        }
+        &-right {
+            right: -60px;
+        }
+    }
+    &-more {
+        & .swiper-slide-active .team-more-text {
+            visibility: visible;
+        }
+        &-left {
+            left: -60px;
+        }
+        &-right {
+            right: -60px;
         }
     }
 }
@@ -2636,6 +2653,12 @@ h1, h2, h3, h4, h5, h6 {
                 background-color: #393333;
                 color: #ffffff;
             }
+        }
+    }
+    &-drop {
+        display: none;
+        &.show {
+            display: block;
         }
     }
 }

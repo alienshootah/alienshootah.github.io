@@ -2480,7 +2480,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .garant {
-  min-height: 900px;
   padding: 100px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2529,14 +2528,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .garant-item {
-  background-color: #ffffff;
   display: none;
-  top: 30px;
-  text-align: center;
 }
 
 .garant-item.active {
-  visibility: visible;
   display: block;
 }
 
@@ -2918,6 +2913,10 @@ h1, h2, h3, h4, h5, h6 {
           justify-content: center;
 }
 
+.weare-nav-item.active .weare-nav-btn {
+  background-color: #FFCF5C;
+}
+
 .weare-nav-btn {
   font-size: 18px;
   line-height: 140%;
@@ -2928,9 +2927,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  text-decoration: none;
 }
 
-.weare-nav-btn:hover, .weare-nav-btn:focus, .weare-nav-btn.active {
+.weare-nav-btn:hover, .weare-nav-btn:focus {
   background-color: #FFCF5C;
 }
 
@@ -2960,10 +2960,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .team-item {
-  width: 430px;
   margin: 15px;
   display: none;
 }
@@ -3002,6 +3002,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .team-arrows .watcher-btn {
   top: 45%;
+}
+
+.team-arrow-left {
+  left: -60px;
+}
+
+.team-arrow-right {
+  right: -60px;
+}
+
+.team-more .swiper-slide-active .team-more-text {
+  visibility: visible;
+}
+
+.team-more-left {
+  left: -60px;
+}
+
+.team-more-right {
+  right: -60px;
 }
 
 .stack-title {
@@ -3341,6 +3361,14 @@ h1, h2, h3, h4, h5, h6 {
 .faion-more-btn:hover, .faion-more-btn:focus {
   background-color: #393333;
   color: #ffffff;
+}
+
+.faion-drop {
+  display: none;
+}
+
+.faion-drop.show {
+  display: block;
 }
 
 .gift {

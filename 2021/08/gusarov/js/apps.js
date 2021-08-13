@@ -22,6 +22,18 @@ socialBtn.addEventListener("click", function() {
   document.querySelector(".lang-drop").classList.toggle("show");
 });
 
+/* More btn */
+const moreBtn = document.querySelector(".faion-more-btn");
+moreBtn.addEventListener("click", function() {
+  document.querySelector(".faion-drop").classList.toggle("show");
+  if(document.querySelector(".faion-drop.show")) {
+    document.querySelector(".faion-more-btn").textContent="Показать меньше";
+  } 
+  else {
+    document.querySelector(".faion-more-btn").textContent="Показать больше";
+  }
+});
+
 
 /* Tabs in menu */
 
@@ -328,6 +340,31 @@ const listenSlider = new Swiper('.listen-list', {
   navigation: {
       nextEl: '.listen-arrow-right',
       prevEl: '.listen-arrow-left',
+  },
+});
+
+/* Team slider */
+const teamSlider = new Swiper('.team-slider', {
+  slidesPerView: 3,
+  loop: true,
+  observer: true,
+  observeParents: true,
+  navigation: {
+      nextEl: '.team-arrow-right',
+      prevEl: '.team-arrow-left',
+  },
+});
+
+/* Team more slider */
+const teamMoreSlider = new Swiper('.team-more', {
+  slidesPerView: 3,
+  loop: true,
+  observer: true,
+  observeParents: true,
+  centeredSlides: true,
+  navigation: {
+      nextEl: '.team-more-right',
+      prevEl: '.team-more-left',
   },
 });
 
