@@ -356,7 +356,7 @@ const teamSlider = new Swiper('.team-slider', {
 });
 
 /* Team more slider */
-const teamMoreSlider = new Swiper('.team-more', {
+const teamMoreSlider = new Swiper('.team-fullmore', {
   slidesPerView: 3,
   loop: true,
   observer: true,
