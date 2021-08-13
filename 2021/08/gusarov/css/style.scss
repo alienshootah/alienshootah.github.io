@@ -1376,7 +1376,6 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/price-bg.jpg);
     padding-bottom: 100px;
     &.slow {
-        background-image: url(../img/price-bg-slow.jpg);
         & .price-content:first-child {
             display: none;
         }
@@ -1974,7 +1973,7 @@ h1, h2, h3, h4, h5, h6 {
     &-body {
         margin: 0 auto;
         max-width: 1240px;
-        padding-right: 100px;
+        padding-right: 0;
     }
     &-subtitle {
         font-family: $radiate-exp;
@@ -1987,10 +1986,12 @@ h1, h2, h3, h4, h5, h6 {
     &-row {
         align-items: center;
         justify-content: center;
+        margin: 0;
     }
     &-btn {
         position: absolute;
         top: 47%;
+        z-index: 1000;
         &-left {
             left: 0;
         }
@@ -2012,6 +2013,9 @@ h1, h2, h3, h4, h5, h6 {
         &-right {
             background-image: url(../img/watcher-arrow-right.svg);
         }
+    }
+    &-image {
+        width: 100%;
     }
 }
 .smi {
@@ -2054,6 +2058,9 @@ h1, h2, h3, h4, h5, h6 {
 .clients {
     &-body {
         position: relative;
+    }
+    &-list {
+        overflow: hidden;
     }
     &-wrapper {
         max-width: 1290px;
@@ -2108,10 +2115,13 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         margin: 0 -15px;
     }
+    & .swiper-pagination-current {
+        color: #FFC24B;
+    }
     &-btn {
         margin: 0 15px;
         &-left {
-            display: none;
+            visibility: hidden;
         }
     }
     &-arrow {
@@ -2128,6 +2138,9 @@ h1, h2, h3, h4, h5, h6 {
         &-right {
             background-image: url(../img/pagin-arrow-right.svg);
         }
+    }
+    &-num {
+        width: auto;
     }
 }
 .also {

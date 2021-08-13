@@ -262,3 +262,37 @@ wasteSlider.on('slideChange', function() {
     arrow.classList.remove('disabled');
   }
 });
+
+/* Watcher slider */
+const watcherSlider = new Swiper('.watcher-list', {
+  spaceBetween: 0,
+  slidesPerView: 1,
+  navigation: {
+      nextEl: '.watcher-btn-right',
+      prevEl: '.watcher-btn-left',
+  }
+});
+
+/* Clients slider */
+const clientsSlider = new Swiper('.clients-list', {
+  navigation: {
+      nextEl: '.clients-arrow-right',
+      prevEl: '.clients-arrow-left',
+  },
+  pagination: {
+    el: ".pagin-num",
+    type: "fraction",
+  },
+});
+
+/* Listen slider */
+const listenSlider = new Swiper('.listen-list', {
+  navigation: {
+      nextEl: '.clients-arrow-right',
+      prevEl: '.clients-arrow-left',
+  },
+  pagination: {
+    el: ".pagin-num",
+    type: "fraction",
+  },
+});
