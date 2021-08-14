@@ -615,6 +615,7 @@ h1, h2, h3, h4, h5, h6 {
                 left: -222px;
                 top: -12px;
                 margin-right: 0;
+                z-index: 0;
             }
         }
     }
@@ -631,6 +632,9 @@ h1, h2, h3, h4, h5, h6 {
         &-gift {
             margin-top: 100px;
         }
+    }
+    &-left {
+        z-index: 1;
     }
     &-list {
         font-family: $firs-bold;
@@ -689,6 +693,7 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 840px;
     text-align: center;
     color: #ffffff;
+    margin-top: -5px;
     &-body {
         padding-top: 234px;
         box-sizing: border-box;
@@ -759,14 +764,14 @@ h1, h2, h3, h4, h5, h6 {
     &-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px -20px;
+        margin: 20px 0;
     }
     &-item {
         width: 50%;
     }
     &-picture {
         position: relative;
-        margin: 10px 20px;
+        margin: 5px 10px;
     }
     &-flow {
         position: absolute;
@@ -774,6 +779,9 @@ h1, h2, h3, h4, h5, h6 {
         left: 0;
         right: 0;
         bottom: 0;
+    }
+    &-image {
+        width: 100%;
     }
     &-number {
         display: block;
@@ -861,7 +869,7 @@ h1, h2, h3, h4, h5, h6 {
     &-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -20px;
+        margin: 0;
     }
     &-item {
         width: 33.3333%;
@@ -964,12 +972,15 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
     }
+    &-image {
+        width: 100%;
+    }
 }
 .accordion {
     &-btn {
         display: block;
         width: 100%;
-        padding: 35px 35px 35px;
+        padding: 35px 70px 35px 35px;
         text-align: left;
         position: relative;
         transition: all 0.5s;
@@ -1046,7 +1057,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 17px;
     }
     &-list {
-        margin: 0 -20px;
+        margin: 0;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -1168,7 +1179,7 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
     &-list {
-        margin: 0 -50px;
+        margin: 0;
         display: flex;
     }
     &-item {
@@ -1297,6 +1308,9 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         bottom: -190px;
         left: -170px;
+    }
+    &-image {
+        width: 100%;
     }
 }
 .results {
@@ -1444,6 +1458,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .promotion {
+    &-row {
+        margin: 0;
+    }
     &-left {
         background-color: #FFD164;
     }
@@ -1574,8 +1591,8 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-left: 0;
+        margin-right: 0;
     }
     &-item {
         width: 33%;
@@ -1718,7 +1735,7 @@ h1, h2, h3, h4, h5, h6 {
         background: #FFFFFF;
         display: block;
         width: 100%;
-        padding: 35px;
+        padding: 35px 70px 35px 35px;
         text-align: left;
         box-sizing: border-box;
         font-weight: bold;
@@ -2709,6 +2726,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .author {
     &-more {
+        display: flex;
+        align-items: center;
         margin: 26px -20px 0 -20px;
     }
     &-btn {
@@ -2727,7 +2746,7 @@ h1, h2, h3, h4, h5, h6 {
             background-color: #504a4a;
         }
         &-blue {
-            padding: 15px 32px;
+            padding: 13.5px 32px;
             background: #32B4FF;
             &:hover,
             &:focus {
@@ -2757,7 +2776,7 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.03em;
         color: #393333;
         margin-top: 20px;
-        padding: 35px;
+        padding: 35px 70px 35px 35px;
         box-sizing: border-box;
         background: #FFFFFF;
         width: 100%;
