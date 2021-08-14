@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-size: 45px;
     line-height: 72px;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: #FFC24B;
 }
@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header {
     background-color: #FFCF5C;
-    padding: 16px 0;
+    padding: 15px 0 11px 0;
     position: sticky;
     top: 0;
     z-index: 8888;
@@ -197,7 +197,12 @@ h1, h2, h3, h4, h5, h6 {
             height: 2px;
             background-color: #393333;
             margin-left: 20px;
+            position: relative;
+            top: 6px;
         }
+    }
+    &-audit {
+        padding: 14px 0 15px 0;
     }
     &-list {
         font-weight: bold;
@@ -206,9 +211,17 @@ h1, h2, h3, h4, h5, h6 {
         color: #393333;
         display: flex;
         align-items: center;
+        margin-top: 13px;
+        margin-left: -20px;
+        &-audit {
+            justify-content: center;
+            & .header-item {
+                margin: 0 28px;
+            }
+        }
     }
     &-item {
-        margin-right: 50px;
+        margin-right: 53px;
         position: relative;
     }
     &-link {
@@ -231,10 +244,10 @@ h1, h2, h3, h4, h5, h6 {
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            margin: 0 -15px;
+            margin: 12px -16px 0 -16px;
         }
         &-item {
-            margin: 0 15px;
+            margin: 0px 16px;
         }
     }
     &-message {
@@ -284,14 +297,14 @@ h1, h2, h3, h4, h5, h6 {
 .drop {
     display: none;
     position: absolute;
-    left: 10px;
-    top: 30px;
+    left: 13px;
+    top: 34px;
     &.show {
         display: block;
     }
     &-body {
         padding: 5px 20px 0 20px;
-        width: 75px;
+        width: 71px;
         background: rgba(57, 51, 51, 0.7);
         border: 1px solid #FFCF5C;
         box-sizing: border-box;
@@ -352,14 +365,14 @@ h1, h2, h3, h4, h5, h6 {
     &-left {
         width: 33%;
         background-color: #FFCF5C;
-        padding: 50px 50px 150px 50px;
+        padding: 20px 50px 150px 50px;
         box-sizing: border-box;
         min-width: 700px;
     }
     &-right {
         width: 67%;
         background-color: #ffffff;
-        padding: 50px 10px 50px 150px;
+        padding: 23px 10px 50px 150px;
         box-sizing: border-box;
     }
     &-logo {
@@ -379,14 +392,14 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 42px;
         letter-spacing: 0.03em;
         color: #393333;
-        margin-top: 350px;
-        margin-left: 150px;
+        margin-top: 361px;
+        margin-left: 103px;
     }
     &-top {
+        position: relative;
         &-list {
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
     }
     &-btn {
@@ -398,7 +411,7 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: 0.03em;
         padding: 0;
         text-decoration: none;
-        margin: 70px 0px;
+        margin: 75px 0px;
         &-active {
             & .detail-btn-text {
                 border-bottom: 1px solid #393333;
@@ -446,6 +459,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 20px;
         line-height: 25px;
         color: #393333;
+        margin-left: 70px;
         &-link {
             color: #393333;
             text-decoration: none;
@@ -458,6 +472,10 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-close {
+        margin-left: 40px;
+        position: absolute;
+        right: 30px;
+        top: 10px;
         &-icon {
             display: inline-block;
             width: 30px;
@@ -550,13 +568,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .soci {
+    margin-left: 75px;
     &-list {
         display: flex;
         align-items: center;
-        margin: 0 -10px;
+        margin: 0 -15px;
     }
     &-item {
-        margin: 0 10px;
+        margin: 0 15px;
     }
     &-icon {
         display: inline-block;
@@ -577,7 +596,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 .tabes {
     &-body {
-        margin-top: 200px;
+        margin-top: 244px;
+        &-cases {
+            margin-top: 328px;
+            & .tabes-item {
+                margin: 53px 0px 53px 0px;
+            }
+            & .tabes-image {
+                margin-top: -48px;
+            }
+        }
+        &-gift {
+            margin-top: 293px;
+            & .tabes-image {
+                position: relative;
+                left: -222px;
+                top: -12px;
+                margin-right: 0;
+            }
+        }
     }
     &-title {
         font-family: $firs-extra;
@@ -585,7 +622,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 28px;
         letter-spacing: 0.03em;
         color: #393333;
-        margin: 50px 0px;
+        margin: 50px 0px 5px 0px;
     }
     &-row {
         align-items: center;
@@ -601,7 +638,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #393333;
     }
     &-item {
-        margin: 50px 0px;
+        margin: 49px 0px 55px 0px;
     }
     &-link {
         color: #393333;
@@ -614,7 +651,8 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-image {
-        margin-right: 175px;
+        margin-right: 222px;
+        margin-top: 40px;
     }
     &-bigtitle {
         font-family: $firs-black;
@@ -646,11 +684,11 @@ h1, h2, h3, h4, h5, h6 {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 900px;
+    min-height: 840px;
     text-align: center;
     color: #ffffff;
     &-body {
-        padding-top: 300px;
+        padding-top: 234px;
         box-sizing: border-box;
         max-width: 900px;
         width: 100%;
@@ -670,10 +708,11 @@ h1, h2, h3, h4, h5, h6 {
     &-descr {
         font-family: $radiate-exp;
         font-weight: normal;
-        font-size: 30px;
+        font-size: 28px;
         line-height: 48px;
         text-align: center;
         color: #FFC24B;
+        margin: -5px 0 0 0;
     }
     &-bonus {
         margin-top: 200px;
@@ -684,11 +723,21 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         color: #ffffff;
     }
+    &-subtitle {
+        font-family: $radiate-exp;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        text-align: center;
+        color: #ffffff;
+    }
     &-orange {
         color: #FFC24B;
+        display: inline-block;
+        margin-bottom: 5px;
     }
     &-more {
-        margin-top: 30px;
+        margin-top: 54px;
     }
     &-icon {
         display: inline-block;
@@ -700,7 +749,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .promo {
-    padding: 100px 0;
+    padding: 70px 0;
+    &-title {
+        margin-top: 19px;
+        margin-bottom: 0;
+    }
     &-list {
         display: flex;
         flex-wrap: wrap;
@@ -722,7 +775,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-number {
         display: block;
-        font-family: $radiate-exp;
+        font-family: $radiate-regsemi;
         font-weight: normal;
         font-size: 50px;
         line-height: 140%;
@@ -737,7 +790,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 140%;
         text-align: center;
         color: #FFFFFF;
-        margin-top: 20px;
+        margin-top: 4px;
         padding: 0 32px;
         box-sizing: border-box;
     }
@@ -745,6 +798,13 @@ h1, h2, h3, h4, h5, h6 {
 .prepare {
     text-align: center;
     padding: 50px 0 100px 0;
+    &-title {
+        font-size: 44px;
+        margin-bottom: 10px;
+    }
+    &-form {
+        margin-top: 49px;
+    }
     &-body {
         max-width: 940px;
         width: 100%;
@@ -753,10 +813,12 @@ h1, h2, h3, h4, h5, h6 {
     &-list {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        margin: 0 -5px;
     }
     &-item {
-        width: 33%;
+        width: 32%;
+        margin: 0 5px;
     }
     &-field {
         width: 100%;
@@ -815,7 +877,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-wrapper {
         background-color: #ffffff;
-        padding: 20px;
+        padding: 19px 30px;
         box-sizing: border-box;
         display: flex;
         align-items: center;
@@ -860,7 +922,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #393333;
         margin-top: 0;
         padding-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 6px;
         padding-bottom: 0;
     }
     &-descr {
@@ -869,11 +931,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .steps {
-    padding: 50px 0 100px 0;
+    padding: 20px 0 100px 0;
     background: #F7F5F5;
+    &-left {
+        padding-top: 10px;
+    }
+    &-title {
+        margin-bottom: 10px;
+    }
+    &-video {
+        margin-top: 30px;
+    }
     &-more {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 44px;
         &-btn {
             padding: 10px 30px;
             width: 100%;
@@ -894,6 +965,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .accordion {
     &-btn {
+        display: block;
         width: 100%;
         padding: 35px 35px 35px;
         text-align: left;
@@ -910,6 +982,9 @@ h1, h2, h3, h4, h5, h6 {
         }
         &.active::after {
             background-image: url(../img/accordion-close.svg);
+        }
+        &.active .accordion-weeks {
+            margin-top: 20px;
         }
         &::after {
             position: absolute;
@@ -942,10 +1017,14 @@ h1, h2, h3, h4, h5, h6 {
         &:before {
             content: '';
             display: inline-block;
+            min-width: 40px;
             width: 40px;
+            min-height: 2px;
             height: 2px;
             background: #FFD164;
             margin-right: 20px;
+            position: relative;
+            top: -3px;
         }
     }
     &-content {
@@ -961,6 +1040,9 @@ h1, h2, h3, h4, h5, h6 {
 .wecan {
     padding: 50px 0 100px 0;
     background: #F7F5F5;
+    &-title {
+        margin-bottom: 17px;
+    }
     &-list {
         margin: 0 -20px;
         display: flex;
@@ -968,12 +1050,12 @@ h1, h2, h3, h4, h5, h6 {
         flex-wrap: wrap;
     }
     &-item {
-        width: 33%;
+        width: 33.3333%;
         padding: 20px;
         box-sizing: border-box;
     }
     &-wrapper {
-        padding: 35px 20px 35px 25px;
+        padding: 30px 18px 29px 30px;
         box-sizing: border-box;
         background-color: #ffffff;
         display: flex;
@@ -994,7 +1076,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 50px;
         background-position: center;
         background-repeat: no-repeat;
-        margin-right: 20px;
+        margin-right: 15px;
         &-one {
             background-image: url(../img/wecan-icon-one.svg);
         }
@@ -1023,6 +1105,9 @@ h1, h2, h3, h4, h5, h6 {
         max-width: initial;
         padding-left: 0;
     }
+    &-title {
+        margin-bottom: 40px;
+    }
     &-body {
         position: relative;
     }
@@ -1030,19 +1115,25 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
     &-text {
-        padding-top: 50px;
-        padding-left: 254px;
+        padding-top: 40px;
+        padding-left: 259px;
+    }
+    &-subtitle {
+        letter-spacing: 3px;
+        margin-bottom: 32px;
+    }
+    &-descr {
+        max-width: 500px;
     }
     &-arrows {
         position: absolute;
-        bottom: 50px;
-        left: 68%;
+        bottom: 75px;
         margin: 0 -25px;
-        left: 50%;
+        left: 47.8%;
         &-body {
             position: relative;
             z-index: 1000;
-            width: 250px;
+            width: 278px;
         }
     }
     &-arrow {
@@ -1079,8 +1170,8 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
     &-item {
-        width: 33%;
-        padding: 40px 50px;
+        width: 33.3333%;
+        padding: 15px 60px;
     }
     &-wrapper {
         display: flex;
@@ -1125,6 +1216,9 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 200px;
     & .content {
         max-width: 1920px;
+    }
+    &-title {
+        margin-top: 20px;
     }
     &-subtitle {
         font-family: $radiate-exp;
@@ -1186,13 +1280,13 @@ h1, h2, h3, h4, h5, h6 {
     &-num {
         font-weight: bold;
         font-size: 40px;
-        line-height: 140%;
+        line-height: 150%;
         text-align: right;
         color: #393333;
     }
     &-wrapper {
         background: #FFD164;
-        padding: 30px;
+        padding: 15px 30px 30px 30px;
         box-sizing: border-box;
         position: relative;
         min-height: 625px;
@@ -1204,7 +1298,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .results {
-    padding: 100px 0;
+    padding: 6px 0 100px 0;
     &-title {
         text-align: center;
         margin-bottom: 20px;
@@ -1258,7 +1352,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .bonus {
-    padding: 50px 0 100px 0;
+    padding: 50px 0 150px 0;
     & .content {
         max-width: 1920px;
     }
@@ -1269,7 +1363,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0;
     }
     &-left {
-        padding-top: 50px;
+        padding-top: 40px;
         padding-left: 260px;
         width: 66.6666%;
     }
@@ -1283,9 +1377,13 @@ h1, h2, h3, h4, h5, h6 {
     &-subtitle {
         font-family: $radiate-exp;
         font-weight: normal;
-        font-size: 28px;
-        line-height: 45px;
+        line-height: 43px;
         color: #393333;
+        margin-bottom: 0;
+        letter-spacing: 3px;
+    }
+    &-text {
+        margin: 16px 0;
     }
     &-more {
         padding-left: 260px;
@@ -1348,13 +1446,16 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #FFD164;
     }
     &-info {
-        padding: 120px 100px 120px 100px;
+        padding: 110px 100px 120px 114px;
     }
     &-text {
         max-width: 675px;
     }
     &-title {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        font-size: 41px;
+        line-height: 64px;
+        letter-spacing: 0;
     }
     &-more {
         &-btn {
@@ -1374,7 +1475,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../img/price-bg.jpg);
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     &.slow {
         & .price-content:first-child {
             display: none;
@@ -1397,6 +1498,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-title {
         text-align: center;
+        margin-top: -32px;
     }
     &-nav {
         font-style: normal;
@@ -1531,7 +1633,7 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
         letter-spacing: 0.03em;
         color: #393333;
-        margin: 10px 0;
+        margin: 14px 0 10px 0;
     }
     &-num {
         font-size: 35px;
@@ -1569,17 +1671,18 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 18px;
             line-height: 140%;
             color: #FFFFFF;
+            margin-top: 22px;
         }
     }
 }
 .todois {
-    padding: 5px 35px 35px 35px;
+    padding: 5px 35px 31px 35px;
     font-weight: normal;
     font-size: 18px;
     line-height: 140%;
     color: #393333;
     &-item {
-        margin: 5px 0;
+        margin: 4px 0;
         &:before {
             content: '';
             display: inline-block;
@@ -1600,10 +1703,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 .inccord {
     background: #F7F5F5;
-    padding: 50px 0 100px 0;
+    padding: 89px 0 100px 0;
     &-body {
         max-width: 1000px;
-        margin: 50px auto 0 auto;
+        margin: 40px auto 0 auto;
     }
     &-title {
         text-align: center;
@@ -1648,7 +1751,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-top {
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &-image {
         border-radius: 50%;
@@ -1660,6 +1763,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 20px;
         line-height: 25px;
         color: #393333;
+        margin-bottom: 10px;
     }
     &-work {
         font-weight: normal;
@@ -1671,18 +1775,20 @@ h1, h2, h3, h4, h5, h6 {
         list-style-type: disc;
         padding-left: 25px;
     }
+    &-item {
+        margin: -2px 0;
+    }
 }
 .instruct {
     background: #FFD164;
     color: #393333;
-    padding: 100px 0;
-  
+    padding: 90px 0 95px 0;
     &-title {
         color: #393333;
         text-align: center;
     }
     &-row {
-        margin-top: 80px;
+        margin-top: 40px;
         font-weight: normal;
         font-size: 18px;
         line-height: 22px;
@@ -1705,6 +1811,9 @@ h1, h2, h3, h4, h5, h6 {
     &-image {
         width: 100%;
     }
+    &-wrapper {
+        margin: 10px 0 45px 0;
+    }
     &-icon {
         display: inline-block;
         min-width: 50px;
@@ -1725,10 +1834,16 @@ h1, h2, h3, h4, h5, h6 {
             background-image: url(../img/instruct-icon-four.svg);
         }
     }
+    &-descr {
+        margin-top: 10px;
+    }
 }
 .better {
     background: #F7F5F5;
     padding: 100px 0;
+    &-title {
+        margin-bottom: 15px;
+    }
     &-list {
         display: flex;
         flex-wrap: wrap;
@@ -1761,6 +1876,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 30px;
         line-height: 140%;
         color: #393333;
+        margin-top: 22px;
+        margin-bottom: 5px;
     }
     &-icon {
         display: inline-block;
@@ -1789,7 +1906,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-text {
         padding: 0;
-        margin: 0;
+        margin: 0 0 10px 0;
         font-size: 20px;
         line-height: 140%;
         color: #393333;
@@ -1797,6 +1914,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .waste {
     padding: 100px 0 170px 0;
+    &-title {
+        margin-bottom: 10px;
+    }
     &-row {
         margin-top: 75px;
     }
