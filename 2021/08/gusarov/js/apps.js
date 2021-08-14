@@ -283,6 +283,7 @@ var wasteNav = new Swiper(".waste-nav", {
 const wasteSlider = new Swiper('.swiper-waste', {
   // Navigation arrows
   spaceBetween: 0,
+  autoHeight: true,
   navigation: {
     nextEl: '.waste-arrows-right',
   },
