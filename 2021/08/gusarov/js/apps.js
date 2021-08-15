@@ -5,8 +5,14 @@ menuBtn.addEventListener("click", function() {
 });
 
 /* Close menu btn */
-const closeMenuBtn = document.querySelector(".detail-close-btn");
+const closeMenuBtn = document.querySelector(".detail-close-btn1");
 closeMenuBtn.addEventListener("click", function() {
+  document.querySelector(".detail").classList.toggle("show");
+});
+
+/* Close menu btn 2 */
+const closeMenuBtn2 = document.querySelector(".detail-close-btn2");
+closeMenuBtn2.addEventListener("click", function() {
   document.querySelector(".detail").classList.toggle("show");
 });
 
@@ -268,6 +274,7 @@ const priceSlider = new Swiper('.price-responsive', {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
+  autoHeight: true,
   navigation: {
     nextEl: '.price-arrow-right',
     prevEl: '.price-arrow-left',
@@ -283,6 +290,7 @@ const priceSlider2 = new Swiper('.price-responsive2', {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
+  autoHeight: true,
   navigation: {
     nextEl: '.price-arrow-right2',
     prevEl: '.price-arrow-left2',
@@ -298,6 +306,7 @@ const betterSlider = new Swiper('.better-slider', {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
+  autoHeight: true,
   navigation: {
     nextEl: '.better-arrow-right',
     prevEl: '.better-arrow-left',
