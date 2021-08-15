@@ -800,10 +800,69 @@
     .swip-pagin .swiper-pagination-progressbar-fill {
         background: #FFCF5C;
     }
-    .garant .garant-nav {
-        width: 700px;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+    .garant {
+        &-responsive {
+            width: 600px;
+            margin: 0 auto;
+            overflow-x: scroll;
+            position: relative;
+            &-line {
+                display: block;
+                content: '';
+                min-width: 520px;
+                height: 3px;
+                background: #FFCF5C;
+                position: absolute;
+                bottom: 16px;
+                left: 63px;
+                z-index: 0;
+            }
+        }
+    }
+    .garant {
+        & .garant-nav {
+            flex-wrap: nowrap;
+            text-align: center;
+            justify-content: flex-start;
+            text-align: center;
+        }
+        & .garant-nav-item {
+            margin: 10px 0;
+            &:after {
+                display: block;
+                content: '';
+                width: 15px;
+                height: 15px;
+                background: #FFFFFF;
+                border: 2px solid #FFCF5C;
+                box-sizing: border-box;
+                border-radius: 50%;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+            }
+            &.active:after {
+                background: #FFCF5C;
+            }
+            &:nth-child(3) {
+                min-width: 140px;
+            }
+            &:nth-child(4) {
+                min-width: 175px;
+            }
+        }
+    }
+    .garant-nav-btn {
+        font-size: 12px;
+        padding: 9px 20px;
+        display: inline-block;
+        margin: 5px;
+    }
+    .weare-nav-btn {
+        font-size: 12px;
+        padding: 9px 20px;
+        display: inline-block;
+        margin: 5px;
     }
 }
 @media(max-width: 600px) {}

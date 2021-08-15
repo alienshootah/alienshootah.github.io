@@ -826,11 +826,69 @@
   .swip-pagin .swiper-pagination-progressbar-fill {
     background: #FFCF5C;
   }
+  .garant-responsive {
+    width: 600px;
+    margin: 0 auto;
+    overflow-x: scroll;
+    position: relative;
+  }
+  .garant-responsive-line {
+    display: block;
+    content: '';
+    min-width: 520px;
+    height: 3px;
+    background: #FFCF5C;
+    position: absolute;
+    bottom: 16px;
+    left: 63px;
+    z-index: 0;
+  }
   .garant .garant-nav {
-    width: 700px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    overflow-x: scroll;
+    text-align: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    text-align: center;
+  }
+  .garant .garant-nav-item {
+    margin: 10px 0;
+  }
+  .garant .garant-nav-item:after {
+    display: block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: #FFFFFF;
+    border: 2px solid #FFCF5C;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .garant .garant-nav-item.active:after {
+    background: #FFCF5C;
+  }
+  .garant .garant-nav-item:nth-child(3) {
+    min-width: 140px;
+  }
+  .garant .garant-nav-item:nth-child(4) {
+    min-width: 175px;
+  }
+  .garant-nav-btn {
+    font-size: 12px;
+    padding: 9px 20px;
+    display: inline-block;
+    margin: 5px;
+  }
+  .weare-nav-btn {
+    font-size: 12px;
+    padding: 9px 20px;
+    display: inline-block;
+    margin: 5px;
   }
 }
 /*# sourceMappingURL=media.css.map */

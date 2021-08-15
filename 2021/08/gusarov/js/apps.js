@@ -296,10 +296,10 @@ var wasteNav = new Swiper(".waste-nav", {
         type: "progressbar",
       },
     },
-    768: {
+    769: {
       direction: "vertical",
       spaceBetween: 0,
-      slidesPerView: 1,
+      slidesPerView: 3,
       pagination: false,
       pagination: {
         el: ".swip-pagin",
