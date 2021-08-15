@@ -1027,8 +1027,13 @@
         padding: 20px 0;
     }
     .steps {
+        padding: 20px 0 20px 0;
         & .garant-nav {
             margin-top: 0;
+        }
+        &-more-btn {
+            font-size: 14px;
+            max-width: 100%;
         }
     }
     .accordion {
@@ -1051,6 +1056,323 @@
         &-weeks {
             font-size: 12px;
             margin-top: 5px;
+            &:before {
+                margin-right: 10px;
+            }
+        }
+    }
+    .wecan {
+        padding: 50px 0 50px 0;
+        &-title {
+            text-align: center;
+        }
+        &-text {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-list {
+            margin: 0 -5px;
+        }
+        &-item {
+            padding: 5px;
+        }
+        &-wrapper {
+            padding: 10px;
+            display: block;
+            text-align: center;
+            min-height: 111px;
+        }
+        &-icon {
+            margin-right: 0;
+        }
+    }
+    .whywe {
+        &-subtitle {
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 26px;
+            color: #393333;
+            letter-spacing: normal;
+            margin-bottom: 0;
+        }
+        &-picture {
+            margin: 20px 0 30px 0;
+        }
+        &-arrow {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+            &-btn {
+                width: 30px;
+                height: 30px;
+                margin: 0 0 0 25px;
+            }
+        }
+    }
+    .garanties {
+        padding: 20px 0 0 0;
+        &-subtitle {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 140%;
+            color: #393333;
+            margin: 5px 0px;
+        }
+        &-descr {
+            font-size: 12px;
+            line-height: 140%;
+        }
+        &-icon {
+            margin-top: 10px;
+            margin-right: 10px;
+            min-width: 30px;
+            width: 30px;
+            height: 30px;
+            background-size: cover;
+        }
+    }
+    .cases {
+        padding-bottom: 40px;
+        &-subtitle {
+            font-size: 18px;
+            line-height: 140%;
+            color: #393333;
+        }
+        &-descr {
+            font-size: 12px;
+            line-height: 140%;
+        }
+        &-more {
+            margin: 20px -15px 0 -15px;
+        }
+        &-btn {
+            width: auto;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-wrapper {
+            background-color: transparent;
+            padding-right: 15px;
+            padding-left: 0;
+            padding-bottom: 0;
+            min-height: auto;
+        }
+        &-picture {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            margin-top: 40px;
+            &::after {
+                content: '';
+                display: inline-block;
+                height: 330px;
+                width: 70%;
+                background-color: #FFD164;
+                position: absolute;
+                z-index: 0;
+                top: -20px;
+                right: -15px;
+            }
+        }
+        &-image {
+            position: relative;
+            z-index: 1;
+        }
+        &-text {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 140%;
+        }
+        &-num {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 140%;
+        }
+    }
+    .results {
+        padding: 6px 0 0 0;
+        &-descr {
+            text-align: center;
+        }
+        &-list {
+            margin: 10px 0 0 0;
+        }
+        &-field {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-btn {
+            width: 100%;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 130%;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+    }
+    .bonus {
+        &-subtitle {
+            letter-spacing: normal;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    .promotion {
+        padding-bottom: 60px;
+        
+        &-left {
+            display: none;
+        }
+        &-info {
+            padding: 0;
+        }
+        &-title {
+            color: #393333;
+            position: relative;
+            margin-bottom: 40px;
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 277px;
+                height: 126px;
+                background-color: #FFD164;
+                position: absolute;
+                left: -15px;
+                top: 0;
+                z-index: -1;
+            }
+        }
+        &-text {
+            text-align: center;
+        }
+        &-more {
+            text-align: center;
+            &-btn {
+                width: 100%;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 130%;
+            }
+        }
+    }
+    .price {
+        padding-bottom: 50px;
+        &-discount {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 120%;
+            text-align: center;
+            color: #393333;
+        }
+        &-nav {
+            font-size: 12px;
+            line-height: 120%;
+        }
+        &-switch {
+            width: 50px;
+            height: 24px;
+        }
+        &-slider {
+            &:before {
+                width: 19px;
+                height: 19px;
+            }
+        }
+        &-field:checked + .price-slider:before {
+            transform: translateX(23px);
+        }
+        &-picture {
+            width: 70px;
+            height: 70px;
+        }
+        &-icon {
+            min-width: 35px;
+            width: 35px;
+            height: 35px;
+            background-size: cover;
+        }
+        &-subtitle {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 120%;
+            margin: 20px 0 20px 10px;
+        }
+        &-val {
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            margin: 5px 0;
+        }
+        &-num {
+            font-size: 28px;
+        }
+        &-rec {
+            padding-top: 6px;
+        }
+        &-more {
+            &-btn {
+                font-size: 14px;
+                line-height: 17px;
+            }
+            &-text {
+                font-size: 13px;
+                margin-top: 12px;
+            }
+        }
+    }
+    .inccord {
+        padding: 50px 0;
+        &-text {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-btn {
+            padding: 15px 50px 15px 20px;
+        }
+        &-image {
+            width: 70px;
+            height: 70px;
+        }
+        &-name {
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    .todois {
+        font-size: 14px;
+        line-height: 140%;
+        padding: 5px 20px 25px 20px;
+        &-item {
+            &:before {
+                background-size: cover;
+                min-width: 20px;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .pagin {
+        font-size: 24px;
+        line-height: 140%;
+        &-arrow {
+            display: inline-block;
+            min-width: 55px;
+            width: 55px;
+            height: 55px;
+            background-size: contain;
+            margin-top: 3px;
         }
     }
     .garant-responsive {
@@ -1065,11 +1387,6 @@
     .gift-right {
         margin-top: 20px;
         width: 100%;
-    }
-    .wecan-text {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
     }
 }
 @media(max-width: 520px) {}
