@@ -286,6 +286,27 @@ var wasteNav = new Swiper(".waste-nav", {
   direction: "vertical",
   spaceBetween: 0,
   slidesPerView: 3,
+  breakpoints: {
+    320: {
+      direction: "horizontal",
+      slidesPerView: 1,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swip-pagin",
+        type: "progressbar",
+      },
+    },
+    768: {
+      direction: "vertical",
+      spaceBetween: 0,
+      slidesPerView: 1,
+      pagination: false,
+      pagination: {
+        el: ".swip-pagin",
+        type: "progressbar",
+      },
+    },
+  },
 });
 
 /* Waste slider */
@@ -396,5 +417,4 @@ const teamMoreSlider = new Swiper('.team-fullmore', {
     type: "fraction",
   },
 });
-
 
