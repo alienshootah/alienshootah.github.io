@@ -261,6 +261,53 @@ const whyweSlider = new Swiper('.whywe-list', {
   },
 });
 
+/* Price 768px slider */
+const priceSlider = new Swiper('.price-responsive', {
+  observer: true,
+  observeParents: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.price-arrow-right',
+    prevEl: '.price-arrow-left',
+},
+pagination: {
+  el: ".pagin-num7",
+  type: "fraction",
+},
+});
+const priceSlider2 = new Swiper('.price-responsive2', {
+  observer: true,
+  observeParents: true,
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.price-arrow-right2',
+    prevEl: '.price-arrow-left2',
+},
+pagination: {
+  el: ".pagin-num8",
+  type: "fraction",
+},
+});
+
+/* Better 768px slider */
+const betterSlider = new Swiper('.better-slider', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: '.better-arrow-right',
+    prevEl: '.better-arrow-left',
+},
+pagination: {
+  el: ".pagin-num6",
+  type: "fraction",
+},
+});
+
 /* Bonus section slider */
 /* Bonus nav */
 var bonusNav = new Swiper(".bonus-nav", {
@@ -316,6 +363,7 @@ const wasteSlider = new Swiper('.swiper-waste', {
   autoHeight: true,
   navigation: {
     nextEl: '.waste-arrows-right',
+    prevEl: '.waste-prev-btn',
   },
   thumbs: {
     swiper: wasteNav,
@@ -324,15 +372,34 @@ const wasteSlider = new Swiper('.swiper-waste', {
 
 /* hide left arrow by deafult */
 var arrow = document.getElementsByClassName('waste-more-btn')[0];
+var prevArrow = document.getElementsByClassName('waste-prev-btn')[0];
 arrow.classList.add('disabled');
+
 /* Swiper API - if index = 1 hide left arrow / otherwise show */
 wasteSlider.on('slideChange', function() {
   var realIndex = wasteSlider.realIndex;
+
+  if (realIndex == 0) {
+    prevArrow.classList.add('hide');
+  }
+  else {
+    prevArrow.classList.remove('hide');
+  }
+
   if (realIndex !== 2) {
     arrow.classList.add('disabled');
   } else {
     arrow.classList.remove('disabled');
   }
+
+  if ((window.innerWidth < 768)) {
+    if (realIndex !== 2) {
+      arrow.textContent= "Далее";
+    } else {
+      arrow.textContent= "Узнать стоимость";
+    }
+  }
+
 });
 
 /* Watcher slider */
@@ -417,4 +484,6 @@ const teamMoreSlider = new Swiper('.team-fullmore', {
     type: "fraction",
   },
 });
+
+
 
