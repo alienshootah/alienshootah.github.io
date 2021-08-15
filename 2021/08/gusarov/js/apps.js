@@ -250,7 +250,15 @@ const whyweSlider = new Swiper('.whywe-list', {
   navigation: {
       nextEl: '.whywe-right',
       prevEl: '.whywe-left',
-  }
+  },
+  breakpoints: {
+    320: {
+      autoHeight: true,
+    },
+    993: {
+      autoHeight: false,
+    },
+  },
 });
 
 /* Bonus section slider */
@@ -262,6 +270,7 @@ var bonusNav = new Swiper(".bonus-nav", {
 
 /* Bonus slider */
 const bonusSlider = new Swiper('.bonus-list', {
+  autoHeight: true,
   navigation: {
       nextEl: '.bonus-move-right',
       prevEl: '.bonus-move-left',
@@ -312,10 +321,15 @@ const watcherSlider = new Swiper('.watcher-list', {
   loop: true,
   observer: true,
   observeParents: true,
+  autoHeight: true,
+  pagination: {
+    el: ".pagin-num2",
+    type: "fraction",
+  },
   navigation: {
       nextEl: '.watcher-ai-right',
       prevEl: '.watcher-ai-left',
-  }
+  },
 });
 
 /* Clients slider */
@@ -327,8 +341,9 @@ const clientsSlider = new Swiper('.clients-list', {
       nextEl: '.clients-arrow-right',
       prevEl: '.clients-arrow-left',
   },
+  autoHeight: true,
   pagination: {
-    el: ".pagin-num",
+    el: ".pagin-num1",
     type: "fraction",
   },
 });
@@ -342,6 +357,11 @@ const listenSlider = new Swiper('.listen-list', {
       nextEl: '.listen-arrow-right',
       prevEl: '.listen-arrow-left',
   },
+  autoHeight: true,
+  pagination: {
+    el: ".pagin-num3",
+    type: "fraction",
+  },
 });
 
 /* Team slider */
@@ -353,6 +373,10 @@ const teamSlider = new Swiper('.team-slider', {
   navigation: {
       nextEl: '.team-arrow-right',
       prevEl: '.team-arrow-left',
+  },
+  pagination: {
+    el: ".pagin-num4",
+    type: "fraction",
   },
 });
 
@@ -366,6 +390,10 @@ const teamMoreSlider = new Swiper('.team-fullmore', {
   navigation: {
       nextEl: '.team-fullmore-right',
       prevEl: '.team-fullmore-left',
+  },
+  pagination: {
+    el: ".pagin-num5",
+    type: "fraction",
   },
 });
 
