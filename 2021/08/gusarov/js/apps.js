@@ -466,6 +466,14 @@ const teamSlider = new Swiper('.team-slider', {
     el: ".pagin-num4",
     type: "fraction",
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    769: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 /* Team more slider */
@@ -481,6 +489,23 @@ const teamMoreSlider = new Swiper('.team-fullmore', {
   },
   pagination: {
     el: ".pagin-num5",
+    type: "fraction",
+  },
+});
+
+/* Stack slider */
+const stackSlider = new Swiper('.stack-slider', {
+  slidesPerView: 1,
+  loop: true,
+  observer: true,
+  observeParents: true,
+  centeredSlides: true,
+  navigation: {
+      nextEl: '.stack-arrow-right',
+      prevEl: '.stack-arrow-left',
+  },
+  pagination: {
+    el: ".pagin-num10",
     type: "fraction",
   },
 });
