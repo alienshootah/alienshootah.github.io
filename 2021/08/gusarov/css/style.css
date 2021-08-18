@@ -955,6 +955,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 54px;
 }
 
+.start-more-link {
+  display: inline-block;
+  position: relative;
+  top: -100px;
+}
+
 .start-icon {
   display: inline-block;
   width: 50px;
@@ -962,6 +968,11 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/start-icon.svg);
+  position: relative;
+  -webkit-animation: drag 1s ease-in-out infinite;
+          animation: drag 1s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .promo {
@@ -1398,7 +1409,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.wecan-wrapper.active, .wecan-wrapper:hover, .wecan-wrapper:focus {
+.wecan-wrapper:hover, .wecan-wrapper:focus {
   background: #FFD164;
   font-weight: bold;
 }
@@ -1470,6 +1481,7 @@ h1, h2, h3, h4, h5, h6 {
 .whywe-subtitle {
   letter-spacing: 3px;
   margin-bottom: 32px;
+  font-size: 28px;
 }
 
 .whywe-descr {
@@ -1519,7 +1531,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .garanties {
-  padding: 100px 0;
+  padding: 200px 0 100px 0;
 }
 
 .garanties-title {
@@ -1815,6 +1827,7 @@ h1, h2, h3, h4, h5, h6 {
 .bonus-subtitle {
   font-family: "Radiate-Sans-Expanded", Arial, Helvetica, sans-serif;
   font-weight: normal;
+  font-size: 28px;
   line-height: 43px;
   color: #393333;
   margin-bottom: 0;
@@ -1914,7 +1927,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .promotion-title {
   margin-bottom: 25px;
-  font-size: 41px;
+  font-size: 38px;
   line-height: 64px;
   letter-spacing: 0;
 }
@@ -2392,6 +2405,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .better-title {
   margin-bottom: 15px;
+  font-size: 42px;
 }
 
 .better-list {
@@ -2417,7 +2431,7 @@ h1, h2, h3, h4, h5, h6 {
           box-sizing: border-box;
   position: relative;
   border: 1px solid #CCCCCC;
-  min-height: 188px;
+  min-height: 200px;
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -2814,6 +2828,49 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+.watcher-video {
+  position: relative;
+}
+
+.watcher-play {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 38%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.watcher-play-icon {
+  display: inline-block;
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(57, 51, 51, 0.6);
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.watcher-play-icon:hover, .watcher-play-icon:focus {
+  background: #393333;
+}
+
+.watcher-play-icon:after {
+  position: absolute;
+  top: 26px;
+  left: 31px;
+  content: '';
+  display: inline-block;
+  min-width: 26px;
+  width: 26px;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/watcher-play-icon.svg);
+}
+
 .smi {
   margin: 50px 0 0 0;
   text-align: center;
@@ -3187,6 +3244,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .weare-descr {
   text-align: center;
+  max-width: 910px;
+  margin: 0 auto;
 }
 
 .team-body {
@@ -3665,12 +3724,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 140%;
   color: #393333;
   margin: 10px 0 15px 0;
+  position: relative;
+}
+
+.gift-lbl input:checked ~ .gift-checkmark:after {
+  display: block;
 }
 
 .gift-field {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.gift-checkmark {
   width: 25px;
   height: 25px;
+  background: #FFFFFF;
+  border: 1px solid #393333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-right: 17px;
+}
+
+.gift-checkmark:after {
+  display: none;
+  position: absolute;
+  content: '';
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #000000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .gift-more {
@@ -4120,5 +4210,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .modstep-btn:hover, .modstep-btn:focus {
   background-color: #504a4a;
+}
+
+/* Animation */
+@-webkit-keyframes drag {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 100px;
+  }
+}
+@keyframes drag {
+  from {
+    top: 80px;
+  }
+  to {
+    top: 100px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -751,6 +751,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-more {
         margin-top: 54px;
+        &-link {
+            display: inline-block;
+            position: relative;
+            top: -100px;
+        }
     }
     &-icon {
         display: inline-block;
@@ -759,8 +764,12 @@ h1, h2, h3, h4, h5, h6 {
         background-position: center;
         background-repeat: no-repeat;
         background-image: url(../img/start-icon.svg);
+        position: relative;
+        animation: drag 1s ease-in-out infinite;
+        animation-direction: alternate;
     }
 }
+
 .promo {
     padding: 70px 0;
     &-title {
@@ -1089,7 +1098,6 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         transition: all 0.5s;
         cursor: pointer;
-        &.active,
         &:hover,
         &:focus {
             background: #FFD164;
@@ -1148,6 +1156,7 @@ h1, h2, h3, h4, h5, h6 {
     &-subtitle {
         letter-spacing: 3px;
         margin-bottom: 32px;
+        font-size: 28px;
     }
     &-descr {
         max-width: 500px;
@@ -1188,7 +1197,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .garanties {
-    padding: 100px 0;
+    padding: 200px 0 100px 0;
     &-title {
         text-align: center;
     }
@@ -1407,10 +1416,11 @@ h1, h2, h3, h4, h5, h6 {
     &-subtitle {
         font-family: $radiate-exp;
         font-weight: normal;
+        font-size: 28px;
         line-height: 43px;
         color: #393333;
         margin-bottom: 0;
-        letter-spacing: 3px;
+        letter-spacing: 3px; 
     }
     &-text {
         margin: 16px 0;
@@ -1486,7 +1496,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-title {
         margin-bottom: 25px;
-        font-size: 41px;
+        font-size: 38px;
         line-height: 64px;
         letter-spacing: 0;
     }
@@ -1880,6 +1890,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 100px 0;
     &-title {
         margin-bottom: 15px;
+        font-size: 42px;
     }
     &-list {
         display: flex;
@@ -1897,7 +1908,7 @@ h1, h2, h3, h4, h5, h6 {
         box-sizing: border-box;
         position: relative;
         border: 1px solid #CCCCCC;
-        min-height: 188px;
+        min-height: 200px;
         cursor: pointer;
         transition: all 0.5s;
         &:hover,
@@ -2209,6 +2220,43 @@ h1, h2, h3, h4, h5, h6 {
     &-image {
         width: 100%;
     }
+    &-video {
+        position: relative;
+    }
+    &-play {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 38%;
+        box-sizing: border-box;
+        &-icon {
+            display: inline-block;
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(57, 51, 51, 0.6);
+            position: relative;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: rgba(57, 51, 51, 1);
+            }
+            &:after {
+                position: absolute;
+                top: 26px;
+                left: 31px;
+                content: '';
+                display: inline-block;
+                min-width: 26px;
+                width: 26px;
+                height: 28px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/watcher-play-icon.svg);
+            }
+        }
+    }
 }
 .smi {
     margin: 50px 0 0 0;
@@ -2492,6 +2540,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-descr {
         text-align: center;
+        max-width: 910px;
+        margin: 0 auto;
     }
 }
 .team {
@@ -2900,12 +2950,40 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 140%;
         color: #393333;
         margin: 10px 0 15px 0;
+        position: relative;
+        & input:checked ~ .gift-checkmark:after {
+            display: block;
+          }
     }
     &-field {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    } 
+    &-checkmark {
         width: 25px;
         height: 25px;
+        background: #FFFFFF;
+        border: 1px solid #393333;
+        box-sizing: border-box;
         margin-right: 17px;
-    } 
+        &:after {
+            display: none;
+            position: absolute;
+            content: '';
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid #000000;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
     &-more {
         margin-top: 30px;
         &-btn {
@@ -3268,5 +3346,17 @@ h1, h2, h3, h4, h5, h6 {
         &:focus {
             background-color: #504a4a;
         }
+    }
+}
+
+/* Animation */
+
+@keyframes drag {
+    from {
+       top: 80px;
+    }
+ 
+    to {
+        top: 100px;
     }
 }
