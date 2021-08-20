@@ -762,6 +762,12 @@
     .faq-text {
         max-width: initial;
     }
+    .faq-responsive {
+        display: none;
+        &-mobile {
+            display: block;
+        }
+    }
     .gift-row {
         flex-wrap: wrap;
     }
@@ -1260,11 +1266,18 @@
         &-descr {
             font-size: 12px;
             line-height: 140%;
+            margin-bottom: 0;
+        }
+        &-right {
+            margin-top: 0;
         }
         &-more {
-            margin: 20px -15px 0 -15px;
-            display: flex;
-            justify-content: space-between;
+            display: none;
+            &-mobile {
+                margin: 20px -15px 0 -15px;
+                display: flex;
+                justify-content: space-between;
+            }
         }
         &-btn {
             width: auto;
@@ -1279,9 +1292,17 @@
             padding-right: 15px;
             padding-left: 0;
             padding-bottom: 0;
+            padding-top: 0;
             min-height: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &-numbers {
+            width: 100%;
+            margin-top: 39px;
         }
         &-picture {
+            order: -1;
             position: relative;
             left: 0;
             bottom: 0;
@@ -1289,8 +1310,8 @@
             &::after {
                 content: '';
                 display: inline-block;
-                height: 330px;
-                width: 70%;
+                height: 108%;
+                width: 74%;
                 background-color: #FFD164;
                 position: absolute;
                 z-index: 0;
@@ -1946,11 +1967,17 @@
             flex-wrap: wrap;
         }
         &-left {
-            width: 100%;
+            display: none;
         }
         &-right {
-            margin-top: 20px;
             width: 100%;
+        }
+        &-picture {
+            margin-top: 20px;
+            &-mobile {
+                display: block;
+                max-width: 500px;
+            }
         }
         &-prev {
             font-weight: bold;
@@ -2131,11 +2158,14 @@
         width: 395px;
     }
     .cases-picture::after {
-        height: 250px;
+        height: 110%;
     }
     .channel-picture:after {
         background-position: left bottom;
         background-size: inherit;
+    }
+    .smi-image {
+        width: 60%;
     }
 }
 @media(max-width: 425px) {
@@ -2218,10 +2248,6 @@
         &-btn {
             margin: 0;
             padding: 10px 20px;
-        }
-        &-num {
-            position: relative;
-            top: -5px;
         }
     }
     .price-nav-item {

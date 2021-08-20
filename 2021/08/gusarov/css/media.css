@@ -778,6 +778,12 @@
   .faq-text {
     max-width: initial;
   }
+  .faq-responsive {
+    display: none;
+  }
+  .faq-responsive-mobile {
+    display: block;
+  }
   .gift-row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1270,8 +1276,15 @@
   .cases-descr {
     font-size: 12px;
     line-height: 140%;
+    margin-bottom: 0;
+  }
+  .cases-right {
+    margin-top: 0;
   }
   .cases-more {
+    display: none;
+  }
+  .cases-more-mobile {
     margin: 20px -15px 0 -15px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1293,9 +1306,22 @@
     padding-right: 15px;
     padding-left: 0;
     padding-bottom: 0;
+    padding-top: 0;
     min-height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cases-numbers {
+    width: 100%;
+    margin-top: 39px;
   }
   .cases-picture {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
     position: relative;
     left: 0;
     bottom: 0;
@@ -1304,8 +1330,8 @@
   .cases-picture::after {
     content: '';
     display: inline-block;
-    height: 330px;
-    width: 70%;
+    height: 108%;
+    width: 74%;
     background-color: #FFD164;
     position: absolute;
     z-index: 0;
@@ -1935,11 +1961,17 @@
         flex-wrap: wrap;
   }
   .gift-left {
-    width: 100%;
+    display: none;
   }
   .gift-right {
-    margin-top: 20px;
     width: 100%;
+  }
+  .gift-picture {
+    margin-top: 20px;
+  }
+  .gift-picture-mobile {
+    display: block;
+    max-width: 500px;
   }
   .gift-prev {
     font-weight: bold;
@@ -2118,11 +2150,14 @@
     width: 395px;
   }
   .cases-picture::after {
-    height: 250px;
+    height: 110%;
   }
   .channel-picture:after {
     background-position: left bottom;
     background-size: inherit;
+  }
+  .smi-image {
+    width: 60%;
   }
 }
 
@@ -2199,10 +2234,6 @@
   .cases-btn {
     margin: 0;
     padding: 10px 20px;
-  }
-  .cases-num {
-    position: relative;
-    top: -5px;
   }
   .price-nav-item {
     margin: 0px 10px;
