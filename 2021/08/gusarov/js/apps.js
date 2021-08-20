@@ -377,11 +377,26 @@ const wasteSlider = new Swiper('.swiper-waste', {
   thumbs: {
     swiper: wasteNav,
   },
+  breakpoints: {
+    320: {
+      navigation: {
+        nextEl: '.waste-next-btn',
+        prevEl: '.waste-prev-btn',
+      },
+    },
+    769: {
+      navigation: {
+        nextEl: '.waste-arrows-right',
+        prevEl: '.waste-prev-btn',
+      },
+    },
+  },
 });
 
 /* hide left arrow by deafult */
 var arrow = document.getElementsByClassName('waste-more-btn')[0];
 var prevArrow = document.getElementsByClassName('waste-prev-btn')[0];
+var nextArrow = document.getElementsByClassName('waste-next-btn')[0];
 arrow.classList.add('disabled');
 
 /* Swiper API - if index = 1 hide left arrow / otherwise show */
@@ -390,26 +405,50 @@ wasteSlider.on('slideChange', function() {
 
   if (realIndex == 0) {
     prevArrow.classList.add('hide');
+    
   }
   else {
     prevArrow.classList.remove('hide');
   }
 
   if (realIndex !== 2) {
+    arrow.classList.add('hide');
     arrow.classList.add('disabled');
   } else {
+    arrow.classList.remove('hide');
     arrow.classList.remove('disabled');
   }
 
   if ((window.innerWidth < 768)) {
+
     if (realIndex !== 2) {
-      arrow.textContent= "Далее";
+      arrow.classList.add('hide');
+      arrow.classList.remove('disabled');
+      nextArrow.classList.remove('hide');
     } else {
-      arrow.textContent= "Узнать стоимость";
+      arrow.classList.remove('hide');
+      nextArrow.classList.add('hide');
     }
   }
-
 });
+    
+/* New code start 
+const selectElement = document.querySelector('.waste-field-select');
+selectElement.addEventListener('change', (event) => {
+  nextArrow.classList.remove('disabled');
+}); 
+
+*/
+
+
+const selectElement = document.querySelectorAll('.waste-field');
+var i;
+for(i=0;i<selectElement.length;i++){
+  selectElement[i].addEventListener('change',myChange)
+}
+function myChange(){
+  nextArrow.classList.remove('disabled');
+}
 
 /* Watcher slider */
 const watcherSlider = new Swiper('.watcher-list', {

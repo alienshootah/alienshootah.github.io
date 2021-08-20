@@ -1031,7 +1031,13 @@
   .waste-more-btn {
     margin-left: 0;
   }
-  .waste-prev-btn {
+  .waste-more-btn.disabled {
+    display: none;
+  }
+  .waste-more-btn.hide {
+    display: none;
+  }
+  .waste-prev-btn, .waste-next-btn {
     text-align: center;
     display: inline-block;
     margin-right: 20px;
@@ -1046,10 +1052,10 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .waste-prev-btn.hide {
+  .waste-prev-btn.hide, .waste-next-btn.hide {
     display: none;
   }
-  .waste-prev-btn.disabled {
+  .waste-prev-btn.disabled, .waste-next-btn.disabled {
     opacity: 0.5;
     cursor: auto;
     pointer-events: none;
@@ -1629,7 +1635,7 @@
     position: relative;
     top: -10px;
   }
-  .waste-more-btn, .waste-prev-btn {
+  .waste-more-btn, .waste-prev-btn, .waste-next-btn {
     font-size: 14px;
   }
   .garant {
@@ -2140,7 +2146,8 @@
   .waste-more-btn {
     width: auto;
   }
-  .waste-prev-btn {
+  .waste-prev-btn,
+  .waste-next-btn {
     width: auto;
   }
   .modal-wrapper {

@@ -1010,9 +1010,16 @@
             align-items: center;
             &-btn {
                 margin-left: 0;
+                &.disabled {
+                    display: none;
+                }
+                &.hide {
+                    display: none;
+                }
             }
         }
-        &-prev {
+        &-prev,
+        &-next {
             &-btn {
                 text-align: center;
                 display: inline-block;
@@ -1036,7 +1043,6 @@
                 }
             }
         }
-        
     }
 }
 @media(max-width: 740px) {
@@ -1620,7 +1626,8 @@
             }
         }
         &-more-btn,
-        &-prev-btn {
+        &-prev-btn,
+        &-next-btn {
             font-size: 14px;
         }
     }
@@ -2148,7 +2155,8 @@
     .waste-more-btn {
         width: auto;
     }
-    .waste-prev-btn {
+    .waste-prev-btn,
+    .waste-next-btn {
         width: auto;
     }
     .modal-wrapper {
