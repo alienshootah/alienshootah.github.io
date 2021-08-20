@@ -342,6 +342,10 @@ var wasteNav = new Swiper(".waste-nav", {
   direction: "vertical",
   spaceBetween: 0,
   slidesPerView: 3,
+  navigation: {
+    nextEl: '.waste-next-btn',
+    prevEl: '.waste-prev-btn',
+  },
   breakpoints: {
     320: {
       direction: "horizontal",
@@ -386,6 +390,18 @@ const wasteSlider = new Swiper('.swiper-waste', {
     },
     769: {
       navigation: {
+        nextEl: '.waste-next-btn',
+        prevEl: '.waste-prev-btn',
+      },
+    },
+    800: {
+      navigation: {
+        nextEl: '.waste-arrows-right',
+        prevEl: '.waste-prev-btn',
+      },
+    },
+    2560: {
+      navigation: {
         nextEl: '.waste-arrows-right',
         prevEl: '.waste-prev-btn',
       },
@@ -419,7 +435,7 @@ wasteSlider.on('slideChange', function() {
     arrow.classList.remove('disabled');
   }
 
-  if ((window.innerWidth < 768)) {
+  if ((window.innerWidth < 769)) {
 
     if (realIndex !== 2) {
       arrow.classList.add('hide');
@@ -431,16 +447,8 @@ wasteSlider.on('slideChange', function() {
     }
   }
 });
-    
-/* New code start 
-const selectElement = document.querySelector('.waste-field-select');
-selectElement.addEventListener('change', (event) => {
-  nextArrow.classList.remove('disabled');
-}); 
 
-*/
-
-
+/* Проверка если хотя бы одно из полей в форме изменилось */
 const selectElement = document.querySelectorAll('.waste-field');
 var i;
 for(i=0;i<selectElement.length;i++){
