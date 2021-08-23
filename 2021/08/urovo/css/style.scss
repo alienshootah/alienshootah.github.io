@@ -121,6 +121,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: $raleway-extra;
 }
+h1 {
+    font-size: 28px;
+    color: #1970b1;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
 h2 {
     font-size: 24px;
     color: #282c37;
@@ -560,6 +566,66 @@ h2 {
 }
 
 /* Pages */
+.crumbs {
+    color: #9aaec7;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        &:after {
+            content: '-';
+            padding: 0 5px 0 2px;
+            display: inline-block;
+        }
+        &:last-child::after {
+            content: none;
+        }
+    }
+    &-link {
+        color: #9aaec7;
+        text-decoration: none;
+        border-bottom: 1px solid #9aaec7;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+.support {
+    &-form {
+        margin-top: 50px;
+    }
+    &-subtitle {
+        margin-bottom: 30px;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -14px;
+    }
+    &-item {
+        width: 50%;
+        &-full {
+            width: 100%;
+        }
+    }
+    &-wrapper {
+        padding: 14px;
+    }
+    &-field {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 15px 20px;
+        border: 1px solid #9aaec7;
+        font-size: 15px;
+        &::placeholder {
+            color: #4f5255;
+            font-family: $open-regular;
+        }
+    }
+}
 .policy {
     display: flex;
     align-items: center;
