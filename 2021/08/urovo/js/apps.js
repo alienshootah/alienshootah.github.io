@@ -1,9 +1,14 @@
+/* Menu btn */
+const menuBtn = document.querySelector(".header-mobile-btn");
+menuBtn.addEventListener("click", function() {
+  document.querySelector(".header-right").classList.toggle("show");
+});
+
 /* Promo slider */
 const promoSlider = new Swiper('.promo-list', {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
-  autoHeight: true,
   pagination: {
     el: ".pagination",
     clickable: true,
