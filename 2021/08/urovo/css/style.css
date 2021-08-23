@@ -253,9 +253,14 @@ h2 {
 /* Sections */
 .promo-body {
   background-color: #f7f9ff;
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.promo-list {
+  overflow: hidden;
+  position: relative;
 }
 
 .promo-subtitle {
@@ -317,8 +322,30 @@ h2 {
   width: 100%;
 }
 
+.pagination {
+  bottom: 55px !important;
+  position: absolute;
+  z-index: 1000;
+}
+
+.pagination .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  background: #2b8fda;
+  opacity: 0.7;
+}
+
+.pagination .swiper-pagination-bullet-active {
+  opacity: 0.3;
+}
+
 .wedo {
   margin: 100px 0;
+}
+
+.wedo-list {
+  overflow: hidden;
+  position: relative;
 }
 
 .wedo-wrapper {
@@ -363,8 +390,46 @@ h2 {
   border-bottom: 1px solid #0d3e62;
 }
 
+.navigation {
+  position: absolute;
+  z-index: 10;
+  top: 32%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.navigation-button {
+  cursor: pointer;
+  display: inline-block;
+  width: 49px;
+  height: 49px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.navigation-button-left {
+  background-image: url(../img/slider-arrow-left.png);
+  left: 15px;
+}
+
+.navigation-button-right {
+  background-image: url(../img/slider-arrow-right.png);
+  right: 15px;
+}
+
 .half-content {
   margin-bottom: 20px;
+}
+
+.half-list {
+  overflow: hidden;
+  position: relative;
+}
+
+.half-list .navigation {
+  top: 27%;
 }
 
 .half-wrapper {
@@ -419,13 +484,11 @@ h2 {
 
 .news-list {
   margin: 0 -15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  overflow: hidden;
 }
 
 .news-item {
-  width: 33.3333%;
+  width: 100%;
 }
 
 .news-wrapper {
@@ -462,6 +525,49 @@ h2 {
   line-height: 1.6;
   margin-top: 7px;
   padding-top: 0;
+}
+
+.news-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 40px;
+}
+
+.news-more {
+  margin-left: 15px;
+  margin-top: 0;
+}
+
+.news-more-link {
+  min-width: 180px;
+}
+
+.news-navigation {
+  position: static;
+  margin-left: 40px;
+}
+
+.news-arrow {
+  margin: 0 10px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  position: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.news-arrow-left {
+  background-image: url(../img/news-arrow-left.png);
+}
+
+.news-arrow-right {
+  background-image: url(../img/news-arrow-right.png);
 }
 
 /* Footer */
