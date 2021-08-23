@@ -73,6 +73,28 @@ breakpoints: {
 },
 });
 
+/* News slider */
+const assetsSlider = new Swiper('.assets-list', {
+  slidesPerView: 4,
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    nextEl: '.assets-arrow-right',
+    prevEl: '.assets-arrow-left',
+},
+breakpoints: {
+  320: {
+    slidesPerView: 2,
+  },
+  520: {
+    slidesPerView: 3,
+  },
+  769: {
+    slidesPerView: 4,
+  },
+},
+});
+
 /* Telephone mask */
 
 window.addEventListener("DOMContentLoaded", function() {
