@@ -60,6 +60,17 @@ const newsSlider = new Swiper('.news-list', {
     nextEl: '.news-arrow-right',
     prevEl: '.news-arrow-left',
 },
+breakpoints: {
+  320: {
+    slidesPerView: 1,
+  },
+  520: {
+    slidesPerView: 2,
+  },
+  769: {
+    slidesPerView: 3,
+  },
+},
 });
 
 /* Telephone mask */
