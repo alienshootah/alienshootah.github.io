@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Fonts */
 @font-face {
   font-family: 'CenturyGothic';
@@ -4423,7 +4424,12 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.people-picture:hover:after, .people-picture:focus:after {
+  opacity: 1;
+}
+
 .people-picture:after {
+  opacity: 0;
   content: '';
   position: absolute;
   top: 0;
@@ -4432,16 +4438,18 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: rgba(57, 51, 51, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .people-image {
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
-  height: 305px;
+  height: 100%;
   width: 305px;
   margin-left: -1px;
-  margin-bottom: -6px;
+  margin-bottom: -10px;
 }
 
 .people-descr {
@@ -4556,6 +4564,7 @@ h1, h2, h3, h4, h5, h6 {
 .ask-more-link:focus .ask-more-icon {
   color: #FFC24B;
   left: 25px;
+  background-image: url(../img/ask-more-icon-active.svg);
 }
 
 .ask-more-icon {
@@ -4571,7 +4580,141 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   top: 2px;
   left: 0;
-  -webkit-transition: all 0.9s;
-  transition: all 0.9s;
+  -webkit-transition: ease-in-out 0.7s;
+  transition: ease-in-out 0.7s;
+}
+
+.talk {
+  margin-top: 125px;
+  margin-bottom: 100px;
+}
+
+.talk-title {
+  font-family: "TT-Firs-Black", Arial, Helvetica, sans-serif;
+  font-size: 70px;
+  line-height: 82px;
+  letter-spacing: 0.03em;
+  color: #FFC24B;
+  margin-bottom: 0;
+}
+
+.talk-subtitle {
+  font-family: "TT-Firs-Extrabold", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.03em;
+  color: #FFC24B;
+  margin-bottom: 15px;
+}
+
+.talk-list {
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 20px;
+}
+
+.talk-item {
+  margin: 5px 0;
+}
+
+.talk-item:before {
+  content: '—';
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.talk-item-end {
+  margin-top: 50px;
+}
+
+.talk-item-end:before {
+  content: none;
+}
+
+.talk-form {
+  position: relative;
+  display: inline-block;
+}
+
+.talk-field {
+  display: block;
+  padding: 10px 30px 10px 20px;
+  width: 100%;
+  max-width: 300px;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+  border: 2px solid #CCCCCC;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+
+.talk-field::-webkit-input-placeholder {
+  color: #393333;
+  opacity: 0.7;
+}
+
+.talk-field:-ms-input-placeholder {
+  color: #393333;
+  opacity: 0.7;
+}
+
+.talk-field::-ms-input-placeholder {
+  color: #393333;
+  opacity: 0.7;
+}
+
+.talk-field::placeholder {
+  color: #393333;
+  opacity: 0.7;
+}
+
+.talk-btn {
+  padding: 10px 30px;
+  width: 300px;
+  height: 50px;
+  background: #393333;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.talk-btn:hover, .talk-btn:focus {
+  background-color: #504a4a;
+}
+
+.talk-decor {
+  position: absolute;
+  top: -35px;
+  right: -220px;
+  display: inline-block;
+  width: 145px;
+  height: 195px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url(../img/talk-decor.svg);
+  z-index: -1;
+}
+
+.talk-picture {
+  position: relative;
+}
+
+.talk-plane {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  display: inline-block;
+  width: 120px;
+  height: 245px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-image: url(../img/talk-plane.svg);
 }
 /*# sourceMappingURL=style.css.map */
