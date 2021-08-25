@@ -546,11 +546,38 @@
         }
     }
     .memories {
+        &-body {
+            display: none;
+        }
         &-list {
             flex-wrap: wrap;
+            overflow: hidden;
         }
         &-item {
             width: 100%;
+        }
+        &-mobile {
+            display: block;
+            & .swiper-pagination-bullet {
+                width: 5px;
+                height: 5px;
+                margin: 0 10px!important;
+                background-color: #CCCCCC;
+                opacity: 1;
+            }
+            & .swiper-pagination-bullet-active {
+                background-color: #FFC24B;
+                opacity: 1;
+            }
+        }
+        &-reverse {
+            & .memories-picture {
+                order: 1;
+            }
+        }
+        &-pagination {
+            text-align: center;
+            margin-top: -4px;
         }
     }
 }
@@ -2236,7 +2263,7 @@
         }
     }
     .memories {
-        margin-bottom: 60px;
+        margin-bottom: 45px;
         &-list {
             margin: 0 -12px;
         }

@@ -534,12 +534,39 @@
   .whywe-descr {
     font-size: 18px;
   }
+  .memories-body {
+    display: none;
+  }
   .memories-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    overflow: hidden;
   }
   .memories-item {
     width: 100%;
+  }
+  .memories-mobile {
+    display: block;
+  }
+  .memories-mobile .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    margin: 0 10px !important;
+    background-color: #CCCCCC;
+    opacity: 1;
+  }
+  .memories-mobile .swiper-pagination-bullet-active {
+    background-color: #FFC24B;
+    opacity: 1;
+  }
+  .memories-reverse .memories-picture {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .memories-pagination {
+    text-align: center;
+    margin-top: -4px;
   }
 }
 
@@ -2227,7 +2254,7 @@
     margin: 10px 0;
   }
   .memories {
-    margin-bottom: 60px;
+    margin-bottom: 45px;
   }
   .memories-list {
     margin: 0 -12px;

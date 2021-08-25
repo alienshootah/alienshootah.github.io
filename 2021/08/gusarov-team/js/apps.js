@@ -577,5 +577,15 @@ const stackSlider = new Swiper('.stack-slider', {
   },
 });
 
+/* Memories slider */
+const memoriesSlider = new Swiper('.memories-slider', {
+  slidesPerView: 1,
+  loop: true,
+  pagination: {
+    el: ".memories-pagination",
+    clickable: true,
+  },
+});
+
 
 
