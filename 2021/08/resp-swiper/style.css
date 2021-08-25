@@ -1,0 +1,121 @@
+@media (min-width: 31.25em) {
+    body {
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+  }
+  
+  .swiper-container {
+    margin-top: 2em; /* minor cosmetic */
+  }
+  
+    .swiper-wrapper {
+      /* now pagination is below slides */
+      margin-bottom: 3em;
+  
+      /* just enough width so slides handing off screen are partially visible */
+      width: 73.8%;
+    }
+  
+    @media (min-width: 31.25em) {
+      .swiper-wrapper {
+  
+        /* swiper is disabled at this breakpoint */
+        /* wrap slides  */
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+      }
+    }
+  
+      .swiper-slide {
+        /* a single column layout */
+        width: 100%;
+      }
+  
+      @media (min-width: 31.25em) {
+        .swiper-slide  {
+          /* swiper is disabled at this breakpoint */
+          /* going for a 2 column layout here */
+          width: 50%;
+        }
+      }
+  
+      @media (min-width: 43.75em) {
+        .swiper-slide  {
+          /* upping it to a 3 column layout */
+          width: 33.33333333333%;
+        }
+      }
+  
+      @media (min-width: 53em) {
+        .swiper-slide  {
+          /* and finally the 4 column layout */
+          width: 25%;
+        }
+      }
+  
+      .swiper-pagination {
+        /* show on small viewports */
+        display: block;
+      }
+  
+      @media (min-width: 31.25em) {
+        .swiper-pagination {
+          /* swiper is disabled at this breakpoint */
+          display: none;
+        }
+      }
+  
+  /* ==========================================================================
+     content in swiper
+   ========================================================================== */
+  
+  .product {
+    /* odds are you will use flexbox */
+    /* display: flex; */
+  
+    /* center it */
+    margin-left: auto;
+    margin-right: auto;
+  
+    /* adjust the width to add or remove whitespace  */
+    width: 82%;
+  }
+  
+    .photograph {
+      /* if parent is flex it will stretch this image */
+      /* align-self: center; */
+      display: block;
+  
+      height: auto;
+      width: 100%;
+    }
+  
+    .product__name.product__name {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: calc(.5em + 5vw);
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  
+    @media (min-width: 31.25em) {
+      .product__name.product__name {
+        font-size: .92em;
+      }
+    }
+  
+    .product__description {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: calc(.3em + 5vw);
+      font-weight: 300;
+      line-height: 1.1;
+      text-align: center;
+    }
+  
+    @media (min-width: 31.25em) {
+      .product__description {
+        font-size: .92em;
+      }
+    }
