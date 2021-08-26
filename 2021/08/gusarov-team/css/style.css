@@ -4915,6 +4915,14 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #504a4a;
 }
 
+.public-show {
+  display: none;
+}
+
+.public-show.visible {
+  display: none;
+}
+
 .public-list {
   margin: 0 -10px;
   display: -webkit-box;
@@ -4984,6 +4992,35 @@ h1, h2, h3, h4, h5, h6 {
 .public-sublink:hover, .public-sublink:focus {
   color: #FFC24B;
   border-bottom: 1px solid #FFC24B;
+}
+
+.public-more {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.public-more-btn {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 0;
+  color: #393333;
+}
+
+.public-more-btn:hover:after, .public-more-btn:focus:after {
+  background-color: transparent;
+}
+
+.public-more-btn:after {
+  content: '';
+  font-weight: normal;
+  display: block;
+  width: 130px;
+  height: 1px;
+  background-color: #393333;
+  margin: 5px auto 0 auto;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .certs-slider {
@@ -5124,7 +5161,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  min-height: 200px;
+  min-height: auto;
 }
 
 .done-sublist {
@@ -5304,5 +5341,58 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/times-more-icon.svg);
   position: relative;
   top: 4px;
+}
+
+/* Team thue page */
+.invid {
+  margin-top: 20px;
+}
+
+.invid-slider {
+  overflow: hidden;
+}
+
+.invid-image {
+  width: 100%;
+}
+
+.invid-video {
+  position: relative;
+  text-align: center;
+}
+
+.invid-play {
+  position: absolute;
+  top: 42%;
+  width: 100%;
+}
+
+.invid-icon {
+  display: inline-block;
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(57, 51, 51, 0.6);
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.invid-icon:hover, .invid-icon:focus {
+  background: rgba(57, 51, 51, 0.9);
+}
+
+.invid-icon:after {
+  position: absolute;
+  top: 27px;
+  left: 31px;
+  content: '';
+  min-width: 25px;
+  width: 25px;
+  height: 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/invid-icon-after.svg);
 }
 /*# sourceMappingURL=style.css.map */
