@@ -2682,6 +2682,18 @@
             height: 240px;
             object-fit: cover;
         }
+        &-more {
+            &-link {
+                width: 160px;
+                height: 40px;
+                border: 1px solid #393333;
+                font-size: 12px;
+                line-height: 130%;
+                letter-spacing: 0.02em;
+                color: #393333;
+                padding: 12px 30px;
+            }
+        }
     }
     .times {
         margin-top: 0;
@@ -2725,17 +2737,19 @@
     .public {
         &-list {
             display: block;
-            font-size: 18px;
+            font-size: 12px;
             line-height: 140%;
-            margin-top: 17px;
             margin: 0;
         }
         &-item {
             width: inherit;
-            margin: 16px 0;
+            margin: 18px 0;
             &:before {
-                content: '—';
+                content: '';
                 display: inline-block;
+                width: 19px;
+                height: 1px;
+                background-color: #393333;
                 margin-right: 5px;
             }
         }
@@ -2754,11 +2768,56 @@
             border-bottom: 1px solid #393333;
             text-decoration: none;
             font-weight: normal;
+            font-size: 12px;
+            line-height: 140%;
             &:hover,
             &:focus {
                 border-bottom: 1px solid #FFC24B;
                 
             }
+        }
+        &-sublist {
+            margin-top: -4px;
+        }
+        &-subitem {
+            margin: 8px 0;
+            &:before {
+                content: '—';
+                display: inline-block;
+                margin-right: 5px;
+            }
+        }
+        &-sublink {
+            font-size: 12px;
+            line-height: 140%;
+        }
+    }
+    .certs {
+        &-list {
+            display: none;
+        }
+        &-slider {
+            overflow: hidden;
+            margin: 0;
+            display: block;
+            & .swiper-pagination-bullet {
+                width: 5px;
+                height: 5px;
+                margin: 0 10px!important;
+                background-color: #CCCCCC;
+                opacity: 1;
+            }
+            & .swiper-pagination-bullet-active {
+                background-color: #FFC24B;
+                opacity: 1;
+            }
+        }
+        &-image {
+            max-width: initial;
+        }
+        &-pagination {
+            margin-top: 15px;
+            text-align: center;
         }
     }
 }

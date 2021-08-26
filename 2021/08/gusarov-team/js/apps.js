@@ -600,5 +600,16 @@ pagination: {
 },
 });
 
+/* Certs slider */
+var certsSlider = new Swiper(".certs-slider", {
+  slidesPerView: 2,
+  spaceBetween: 15,
+  autoHeight: true,
+  pagination: {
+    el: ".certs-pagination",
+    clickable: true,
+  },
+});
+
 
 
