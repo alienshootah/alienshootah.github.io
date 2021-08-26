@@ -4252,6 +4252,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .invid {
     margin-top: 20px;
+    &-pagination {
+        display: none;
+    }
     &-slider {
         overflow: hidden;
     }
@@ -4291,6 +4294,31 @@ h1, h2, h3, h4, h5, h6 {
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/invid-icon-after.svg);
+        }
+    }
+    &-nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 20px -20px;
+    }
+    &-arrow {
+        display: inline-block;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 20px;
+        cursor: pointer;
+        &-left {
+            background-image: url(../img/invid-arrow-right.svg);
+            transform: rotate(180deg);
+            position: relative;
+            top: 2px;
+        }
+        &-right {
+            background-image: url(../img/invid-arrow-right.svg);
         }
     }
 }

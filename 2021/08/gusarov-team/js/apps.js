@@ -611,5 +611,20 @@ var certsSlider = new Swiper(".certs-slider", {
   },
 });
 
+/* Invid slider */
+const invidSlider = new Swiper('.invid-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.invid-nav-right',
+    prevEl: '.invid-nav-left',
+},
+pagination: {
+  el: ".invid-pagination",
+  type: "fraction",
+},
+});
+
+
+
 
 
