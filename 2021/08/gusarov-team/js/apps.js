@@ -587,5 +587,18 @@ const memoriesSlider = new Swiper('.memories-slider', {
   },
 });
 
+/* Single slider */
+const singleSlider = new Swiper('.single-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.single-nav-right',
+    prevEl: '.single-nav-left',
+},
+pagination: {
+  el: ".single-pagination",
+  type: "fraction",
+},
+});
+
 
 
