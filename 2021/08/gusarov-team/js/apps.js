@@ -631,11 +631,19 @@ const invidSlider = new Swiper('.invid-slider', {
   navigation: {
     nextEl: '.invid-nav-right',
     prevEl: '.invid-nav-left',
-},
-pagination: {
-  el: ".invid-pagination",
-  type: "fraction",
-},
+  },
+  pagination: {
+    el: ".invid-pagination",
+    type: "fraction",
+  },
+  breakpoints: {
+    320: {
+      loop: true,
+    },
+    521: {
+      loop: false,
+    },
+  },
 });
 
 /* Glad slider */
@@ -644,11 +652,19 @@ const gladSlider = new Swiper('.glad-slider', {
   navigation: {
     nextEl: '.glad-nav-right',
     prevEl: '.glad-nav-left',
-},
-pagination: {
-  el: ".glad-pagination",
-  type: "fraction",
-},
+  },
+  pagination: {
+    el: ".glad-pagination",
+    type: "fraction",
+  },
+  breakpoints: {
+    320: {
+      loop: true,
+    },
+    521: {
+      loop: false,
+    },
+  },
 });
 
 
