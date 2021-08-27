@@ -624,6 +624,19 @@ pagination: {
 },
 });
 
+/* Glad slider */
+const gladSlider = new Swiper('.glad-slider', {
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.glad-nav-right',
+    prevEl: '.glad-nav-left',
+},
+pagination: {
+  el: ".glad-pagination",
+  type: "fraction",
+},
+});
+
 
 
 
