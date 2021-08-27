@@ -42,6 +42,20 @@ if(document.querySelector(".faion-more-btn")) {
   });
 }
 
+/* More btn in team thue */
+if(document.querySelector(".public-more-btn")) {
+  const moreBtn = document.querySelector(".public-more-btn");
+  moreBtn.addEventListener("click", function() {
+    document.querySelector(".public-show").classList.toggle("visible");
+    if(document.querySelector(".public-show.visible")) {
+      document.querySelector(".public-more-btn").textContent="Показать меньше";
+    } 
+    else {
+      document.querySelector(".public-more-btn").textContent="Показать больше";
+    }
+  });
+}
+
 
 
 /* Tabs in menu */
