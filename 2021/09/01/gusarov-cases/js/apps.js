@@ -209,6 +209,21 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
+var accs = document.getElementsByClassName("stages-btn");
+var accsi;
+
+for (accsi = 0; accsi < accs.length; accsi++) {
+  accs[accsi].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
 /* Checkbox in price section */
 
 function checkAcknowledgement(form){
