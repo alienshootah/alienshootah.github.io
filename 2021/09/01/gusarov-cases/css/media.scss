@@ -295,6 +295,24 @@
     .price-picture {
         margin-right: 10px;
     }
+    .services {
+        margin-bottom: 100px;
+        &-list {
+            margin: -50px -15px;
+        }
+        &-wrapper {
+            margin: 50px 25px;
+        }
+        &-subtitle {
+            font-size: 24px;
+        }
+        &-sublist {
+            margin: 0px 0 -8px 0;
+        }
+        &-subitem {
+            margin: 10px 0;
+        }
+    }
 }
 @media(max-width: 1320px) {
     .tabes-right {
@@ -509,6 +527,30 @@
             }
         }
     }
+    .services {
+        &-list {
+            flex-wrap: wrap;
+            margin: 0;
+        }
+        &-item {
+            width: 100%;
+            margin: 15px 0;
+        }
+        &-wrapper {
+            margin: 0;
+        }
+    }
+    .introduction {
+        &-left {
+            width: 25%;
+        }
+        &-right {
+            width: 75%;
+        }
+        &-quote {
+            padding-right: 50px;
+        }
+    }
 }
 @media(max-width: 1120px) {
     .watcher-row {
@@ -645,6 +687,18 @@
             text-align: center;
             margin-top: -4px;
         }
+    }
+    .deal {
+        &-left {
+            padding-right: 15px;
+            width: 70%;
+        }
+        &-right {
+            width: 30%;
+        }
+    }
+    .stages-image {
+        width: 100%;
     }
 }
 @media(max-width: 992px) {
@@ -981,6 +1035,33 @@
     }
     .talk-plane {
         display: none;
+    }
+    .deal {
+        &-left {
+            width: 65%;
+        }
+        &-right {
+            width: 35%;
+        }
+    }
+    .introduction {
+        &-left {
+            width: 30%;
+        }
+        &-right {
+            width: 70%;
+        }
+    }
+    .same {
+        &-list {
+            flex-wrap: wrap;
+        }
+        &-item {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 @media(max-width: 768px) {
@@ -2929,6 +3010,250 @@
             display: none;
         }
     }
+    .deal {
+        &-top {
+            background-image: url(../img/deal-bg-mobile.jpg);
+        }
+        &-title {
+            &-text {
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: 0.03em;
+            }
+        }
+        &-date {
+            font-size: 12px;
+            line-height: 15px;
+            &:before {
+                width: 230px;
+            }
+            &-value {
+                margin-top: 10px;
+            }
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            padding-top: 10px;
+        }
+        &-right {
+            order: -1;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .infos {
+        margin: 0;
+        padding: 15px 15px;
+    }
+    .stages {
+        &-row {
+            flex-wrap: wrap;
+            &-reverse {
+                & .col-3 {
+                    order: 1;
+                }
+            }
+        }
+        & .col-3 {
+            width: 100%;
+        }
+        & .col-9 {
+            width: 100%;
+        }
+        &-picture {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-top: 35px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .introduction {
+        &-row {
+            flex-wrap: wrap;
+            position: relative;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-subtitle {
+            position: absolute;
+            top: 75px;
+            left: 275px;
+            right: 15px;
+        }
+        &-descr {
+            padding-left: 0;
+        }
+        &-quote {
+            padding-right: 80px;
+        }
+    }
+    .services {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        &-title {
+            font-size: 28px;
+            line-height: 33px;
+        }
+        &-wrapper {
+            min-height: 384px;
+            &.active,
+            &:hover,
+            &:focus {
+                background-color: unset;
+                & .services-descr {
+                    background-color: #ffffff;
+                    border-left: 1px solid #CCCCCC;
+                    border-right: 1px solid #CCCCCC;
+                    border-bottom: 1px solid #CCCCCC;
+                }
+                & .services-image {
+                    opacity: 1;
+                }
+                & .services-link {
+                    color: #393333;
+                }
+                & .services-num-text {
+                    color: #393333;
+                    opacity: 0.7;
+                }
+                & .times-text {
+                    color: #393333;
+                    opacity: 0.7;
+                }
+                & .times-more {
+                    &-link {
+                        color: #393333;
+                    }
+                    &-icon {
+                        background-image: url(../img/times-more-icon.svg);
+                    }
+                }
+            }
+        }
+        &-subtitle {
+            font-size: 18px;
+            line-height: 21px;
+            letter-spacing: 0.03em;
+        }
+        &-descr {
+            padding: 20px 20px 15px 20px;
+            box-sizing: border-box;
+            position: static;
+            margin-top: -5px;
+        }
+        &-sublist {
+            flex-wrap: wrap;
+            margin: 15px 0 15px 0;
+        }
+        &-subitem {
+            width: 100%;
+            margin: 10px 0;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        &-num {
+            &-text {
+                max-width: 100%;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        &-value {
+            font-size: 20px;
+            line-height: 150%;
+            width: auto;
+            min-width: auto;
+            margin-right: 15px;
+            &:before {
+                margin-right: 5px;
+                min-width: 15px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        &-image {
+            margin-bottom: 0;
+            height: 200px;
+            object-fit: cover;
+            object-position: top;
+            &-thue {
+                height: 260px;
+            }
+        }
+        &-more {
+            &-link {
+                width: 160px;
+                height: 40px;
+                border: 1px solid #393333;
+                font-size: 12px;
+                line-height: 130%;
+                letter-spacing: 0.02em;
+                color: #393333;
+                padding: 12px 30px;
+            }
+        }
+        &-more {
+            margin-bottom: 50px;
+        }
+        &-wrapper {
+            & .times-more {
+                text-align: left;
+                padding-right: 0;
+            }
+            & .times-more-link {
+                font-size: 16px;
+            }
+        }
+    }
+    .same {
+        padding-bottom: 50px;
+        &-decor {
+            display: none;
+        }
+        margin-top: 20px;
+        &-form {
+            margin-top: 20px;
+        }
+        &-list {
+            margin-left: 0;
+            margin-right: 0;
+            text-align: center;
+        }
+        &-item {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            margin: 7px 0;
+            box-sizing: border-box;
+        }
+        &-title {
+            font-size: 28px;
+            line-height: 33px;
+            letter-spacing: 0.03em;
+        }
+        &-field {
+            max-width: 550px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        &-btn {
+            margin: 0;
+            width: 100%;
+            max-width: 550px;
+        }
+    }
 }
 @media(max-width: 520px) {
     .garant-responsive {
@@ -3113,6 +3438,136 @@
                 background-position: left bottom;
                 background-size: inherit;
             }
+        }
+    }
+    .deal {
+        &-top {
+            padding: 20px 0 30px 0;
+        }
+        &-title {
+            margin-top: 150px;
+        }
+        &-middle {
+            font-size: 14px;
+            line-height: 150%;
+            &-title {
+                font-size: 20px;
+                line-height: 23px;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+    .stages {
+        font-size: 12px;
+        line-height: 150%;
+        &-item {
+            margin: 30px 0;
+        }
+        &-btn {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.03em;
+            &:after {
+                top: 18px;
+                right: 13px;
+                height: 22px;
+                background-size: contain;
+            }
+        }
+        &-content {
+            padding: 0 20px 20px 20px;
+        }
+        &-title {
+            font-size: 12px;
+            line-height: 150%;
+            margin-bottom: 10px;
+        }
+        &-row {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        &-picture {
+            margin-top: 15px;
+        }
+        &-descr {
+            font-size: 12px;
+            line-height: 150%;
+            margin: 5px 0 0 0;
+        }
+    }
+    .infos {
+        font-size: 12px;
+        line-height: 140%;
+        &-list {
+            margin: 10px 0;
+        }
+        &-item {
+            margin: 15px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-icon {
+            margin-right: 10px;
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            background-size: contain;
+            position: relative;
+            top: -3px;
+        }
+        
+    }
+    .introduction {
+        font-size: 12px;
+        line-height: 150%;
+        &-title {
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.03em;
+        }
+        &-image {
+            width: 120px;
+            height: 120px;
+        }
+        &-subtitle {
+            top: 40px;
+            left: 150px;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-quote {
+            padding: 0 40px;
+            &:before {
+                width: 25px;
+                height: 25px;
+                background-size: contain;
+            }
+            &:after {
+                width: 25px;
+                height: 25px;
+                background-size: contain;
+            }
+        }
+    }
+    .services {
+        &-image {
+            height: 120px;
+        }
+    }
+    .same {
+        &-field {
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &-btn {
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
         }
     }
 }
