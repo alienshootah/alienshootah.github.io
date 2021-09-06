@@ -1063,6 +1063,32 @@
             }
         }
     }
+    .stages {
+        &-row {
+            flex-wrap: wrap;
+            & .col-7 {
+                width: 100%;
+                margin: 7px 0;
+            }
+            & .col-5 {
+                width: 100%;
+                margin: 7px 0;
+            }
+        }
+    }
+    .effect {
+        &-list {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 0 -10px;
+        }
+        &-item {
+            width: 50%;
+        }
+        &-wrapper {
+            padding: 10px;
+        }
+    }
 }
 @media(max-width: 768px) {
     .detail-btn-mobile {
@@ -3056,6 +3082,9 @@
     .infos {
         margin: 0;
         padding: 15px 15px 5px 15px;
+        &-sublist {
+            margin-left: 20px;
+        }
     }
     .stages {
         &-row {
@@ -3064,6 +3093,12 @@
                 & .col-3 {
                     order: 1;
                 }
+            }
+            & .col-8 {
+                width: 100%;
+            }
+            & .col-4 {
+                width: 100%;
             }
         }
         & .col-3 {
@@ -3079,6 +3114,26 @@
             margin-top: 35px;
             margin-left: auto;
             margin-right: auto;
+        }
+    }
+    .effect {
+        &-item {
+            width: 100%;
+        }
+        &-value {
+            font-size: 30px;
+            margin-right: 15px;
+            &:before {
+                margin-right: 7px;
+                min-width: 20px;
+                width: 20px;
+                height: 22px;
+            }
+        }
+        &-num {
+            &-text {
+                font-size: 16px;
+            }
         }
     }
     .introduction {
@@ -3505,12 +3560,23 @@
             line-height: 150%;
             margin: 5px 0 0 0;
         }
+        &-test {
+            &-list {
+                margin: 0 -15px;
+            }
+            &-item {
+                margin: 0 15px;
+            }
+        }
     }
     .infos {
         font-size: 12px;
         line-height: 140%;
         &-list {
             margin: 10px 0;
+        }
+        &-sublist {
+            margin-left: 17px;
         }
         &-item {
             margin: 15px 0;
@@ -3713,6 +3779,18 @@
             max-width: 180px;
         }
     } 
+    .stages {
+        &-test {
+            &-list {
+                flex-wrap: wrap;
+                margin: 0;
+            }
+            &-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
 }
 @media(max-width: 360px) {
     .price-nav-item {
