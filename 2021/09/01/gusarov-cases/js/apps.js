@@ -682,6 +682,24 @@ const gladSlider = new Swiper('.glad-slider', {
   },
 });
 
+/* Criteria filter case btn */
+if(document.querySelector(".criteria-drop-btn-one")) {
+  const criteriaBtn = document.querySelector(".criteria-drop-btn-one");
+  criteriaBtn.addEventListener("click", function() {
+    document.querySelector(".criteria-drop-one").classList.toggle("show");
+  });
+}
+
+
+/* Criteria filter region btn */
+if(document.querySelector(".criteria-drop-btn-thue")) {
+  const criteriaBtn2 = document.querySelector(".criteria-drop-btn-thue");
+  criteriaBtn2.addEventListener("click", function() {
+    document.querySelector(".criteria-drop-thue").classList.toggle("show");
+  });
+}
+
+
 
 
 

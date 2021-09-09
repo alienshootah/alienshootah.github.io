@@ -4590,6 +4590,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Cases single page */
 
 .deal {
+    & .content {
+        padding: 0 30px;
+    }
     &-top {
         background-position: center;
         background-repeat: no-repeat;
@@ -5027,6 +5030,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .services {
     margin-top: 130px;
+    & .content {
+        padding: 0 30px;
+    }
     &-title {
         text-align: center;
         font-family: $firs-black;
@@ -5067,6 +5073,15 @@ h1, h2, h3, h4, h5, h6 {
             & .services-num-text {
                 color: #FFFFFF;
                 opacity: 0.7;
+            }
+            & .services-value {
+                color: #ffffff;
+            }
+            .services-value-red:before {
+                background-image: url(../img/done-value-red-white.svg);
+            }
+            .services-value-green:before {
+                background-image: url(../img/done-value-green-white.svg);
             }
             & .times-text {
                 color: #FFFFFF;
@@ -5214,6 +5229,9 @@ h1, h2, h3, h4, h5, h6 {
 .same {
     padding-bottom: 100px;
     margin-top: 140px;
+    & .content {
+        padding: 0 30px;
+    }
     &-body {
         position: relative;
     }
@@ -5298,6 +5316,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .criteria {
+    & .content {
+        padding: 0 30px;
+    }
     &-top {
         padding: 50px 0;
         background-color: #FFCF5C;
@@ -5342,6 +5363,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-item {
             margin: 0 15px;
+            position: relative;
         }
         &-btn {
             font-size: 18px;
@@ -5370,6 +5392,36 @@ h1, h2, h3, h4, h5, h6 {
             margin-left: 10px;
             position: relative;
             top: 2px;
+        }
+    }
+    &-drop {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        display: none;
+        &.show {
+            display: block;
+        }
+        &-body {
+            min-width: 200px;
+            font-size: 16px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            box-shadow:0px 3px 12px 2px rgba(57, 51, 51, 0.1);
+        }
+        &-item {
+            margin: 5px 0;
+        }
+        &-link {
+            color: #393333;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #393333;
+            }
         }
     }
 }
@@ -5419,6 +5471,9 @@ h1, h2, h3, h4, h5, h6 {
 .business {
     padding-bottom: 100px;
     margin-top: 140px;
+    & .content {
+        padding: 0 30px;
+    }
     &-title {
         text-align: center;
         font-family: $firs-black;

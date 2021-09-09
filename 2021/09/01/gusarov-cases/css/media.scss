@@ -298,7 +298,7 @@
     .services {
         margin-bottom: 100px;
         &-list {
-            margin: -50px -15px;
+            margin: -50px -25px;
         }
         &-wrapper {
             margin: 50px 25px;
@@ -3126,6 +3126,8 @@
         &-left {
             width: 100%;
             padding-top: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
         &-right {
             order: -1;
@@ -3134,14 +3136,22 @@
             padding-right: 0;
         }
         &-middle {
+            & .content {
+                padding: 0 15px;
+            }
             &-item {
                 margin-bottom: 3px;
+            }
+        }
+        &-done {
+            & .content {
+                padding: 0 30px;
             }
         }
     }
     .infos {
         margin: 0;
-        padding: 15px 15px 5px 15px;
+        padding: 15px 30px 5px 30px;
         &-sublist {
             margin-left: 20px;
         }
@@ -3254,6 +3264,18 @@
                 & .times-text {
                     color: #393333;
                     opacity: 0.7;
+                }
+                .services-value-red {
+                    color: #F04438;
+                    &:before {
+                        background-image: url(../img/done-value-red.svg);
+                    }
+                }
+                .services-value-green {
+                    color: #8AC44B;
+                    &:before {
+                        background-image: url(../img/done-value-green.svg);
+                    }
                 }
                 & .times-more {
                     &-link {
@@ -4071,6 +4093,31 @@
     .people {
         & .content {
             padding: 0 15px;
+        }
+    }
+    .criteria,
+    .business {
+        & .content {
+            padding: 0 15px;
+        }
+    }
+    .deal {
+        & .content {
+            padding:  0 15px;
+        }
+        &-left {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .infos {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .services,
+    .same {
+        & .content {
+            padding:  0 15px;
         }
     }
 }
