@@ -700,24 +700,36 @@ if(document.querySelector(".criteria-drop-btn-thue")) {
 }
 
 /* 
-  Проверка на наличие .services-sublist 
+  Проверка на наличие  класса .services-sublist 
   у .service-descr. Если списка нет, 
   то height: блока .services-image 
-  составляет 470px
- */
+  составляет 470px, а если 1 или 2 
+  элемента то 544px соотвественно.
+*/
+if ((window.innerWidth > 741)) {
+  const serviceDescr = document.querySelectorAll('.criteria-middle');
+  const serviceSublist = document.querySelectorAll('.criteria-middle .services-sublist');
+  const servicesImage = document.querySelectorAll('.services-image');
+  var iss;
 
-/* Проверка если хотя бы одно из полей в форме изменилось */
-const serviceDescr = document.querySelectorAll('.services-descr .services-sublist');
-const serviceSublist = document.querySelectorAll('.services-sublist');
-var iss;
-
-for(iss=0;iss<serviceSublist.length;iss++){
-  if(serviceSublist[iss].hasChildNodes('services-subitem')) {
-    console.log("я есть");
-  } else {
-    console.log("меня нет");
+  if(serviceDescr) {
+    for(iss=0;iss<serviceSublist.length;iss++){
+      if(serviceSublist[iss].childElementCount > 2 ) {
+        // дефолтная высота если элементов больше двух
+      }
+      else if (serviceSublist[iss].childElementCount == 1) {
+        servicesImage[iss].style.height ="544px";
+      }
+      else if (serviceSublist[iss].childElementCount == 2) {
+        servicesImage[iss].style.height ="544px";
+      }
+      else {
+        servicesImage[iss].style.height ="470px";
+      }
+    }
   }
 }
+
 
 
 
