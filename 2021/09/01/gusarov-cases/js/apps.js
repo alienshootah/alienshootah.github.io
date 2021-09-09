@@ -699,6 +699,28 @@ if(document.querySelector(".criteria-drop-btn-thue")) {
   });
 }
 
+/* 
+  Проверка на наличие .services-sublist 
+  у .service-descr. Если списка нет, 
+  то height: блока .services-image 
+  составляет 470px
+ */
+
+/* Проверка если хотя бы одно из полей в форме изменилось */
+const serviceDescr = document.querySelectorAll('.services-descr .services-sublist');
+const serviceSublist = document.querySelectorAll('.services-sublist');
+var iss;
+
+for(iss=0;iss<serviceSublist.length;iss++){
+  if(serviceSublist[iss].hasChildNodes('services-subitem')) {
+    console.log("я есть");
+  } else {
+    console.log("меня нет");
+  }
+}
+
+
+
 
 
 
