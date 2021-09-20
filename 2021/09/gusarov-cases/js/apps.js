@@ -683,21 +683,25 @@ const gladSlider = new Swiper('.glad-slider', {
 });
 
 /* Criteria filter case btn */
-if(document.querySelector(".criteria-drop-btn-one")) {
-  const criteriaBtn = document.querySelector(".criteria-drop-btn-one");
-  criteriaBtn.addEventListener("click", function() {
+function myFilter1(event) {
+    event.stopPropagation();
     document.querySelector(".criteria-drop-one").classList.toggle("show");
-  });
+}
+
+function myFilter2(event) {
+  event.stopPropagation();
+  document.querySelector(".criteria-drop-thue").classList.toggle("show");
 }
 
 
-/* Criteria filter region btn */
-if(document.querySelector(".criteria-drop-btn-thue")) {
-  const criteriaBtn2 = document.querySelector(".criteria-drop-btn-thue");
-  criteriaBtn2.addEventListener("click", function() {
-    document.querySelector(".criteria-drop-thue").classList.toggle("show");
-  });
+// Close the dropdown menu if the user clicks outside of it
+if(document.querySelector(".criteria-drop-one") || document.querySelector(".criteria-drop-thue")) {
+  window.onclick = function(event) {
+    document.querySelector(".criteria-drop-one").classList.remove("show");
+    document.querySelector(".criteria-drop-thue").classList.remove("show");
+  }
 }
+
 
 /* 
   Проверка на наличие  класса .services-sublist 
