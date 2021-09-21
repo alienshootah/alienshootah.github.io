@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>РТС-Груз</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
     <div class="container-fluid">
@@ -17,6 +18,11 @@
                             <a href="#">
                                 <img src="img/header-image.png" alt="" class="header-image">
                             </a>
+                        </div>
+                        <div class="header-mobile">
+                            <button class="header-mobile-btn">
+                                <span class="header-mobile-icon"></span>
+                            </button>
                         </div>
                     </div>
                     <div class="col-6 header-center">
@@ -71,7 +77,7 @@
                                     </div>
                                 </div>
                                 <div class="info-right">
-                                    <button class="info-btn">
+                                    <button class="info-btn curr-modal" data-modal="modal-01">
                                         <span class="info-btn-icon"></span>
                                         <span class="info-btn-text">Рассчитать стоимость</span>
                                     </button>
@@ -101,7 +107,7 @@
                                 Помощь в таможенном оформлении
                             </li>
                         </ul>
-                        <div class="promo-more">
+                        <div class="promo-more curr-modal" data-modal="modal-01">
                             <button class="promo-more-btn">
                                 <span class="promo-more-icon"></span>
                                 <span class="promo-more-text">Рассчитать стоимость</span>
@@ -401,7 +407,7 @@
                                     <p>Абсолютно любая доставка из Китая в Россию застрахована в страховой компании «ПАРИ», включая нарушение сроков доставки. За каждые сутки опоздания на выгрузку по нашей вине, компания выплачивает компенсацию в размере 2000 рублей. Страховое покрытие действует как по России, так и по территории внутреннего Китая.</p>
                                     <p>Также компания осуществляет все традиционные способы доставки грузов из Китая, - морские контейнерные перевозки, железнодорожные и авиа-доставки.</p>
                                     <div class="garanties-more">
-                                        <button class="garanties-more-btn">
+                                        <button class="garanties-more-btn curr-modal" data-modal="modal-01">
                                             <span class="garanties-more-icon"></span>
                                             <span class="garanties-more-text">Получить консультацию</span>
                                         </button>
@@ -483,7 +489,7 @@
                                         </li>
                                     </ul>
                                     <div class="explain-more">
-                                        <button class="explain-more-btn">Заказать</button>
+                                        <button class="explain-more-btn curr-modal" data-modal="modal-01">Заказать</button>
                                     </div>
                                 </div>
                             </div>
@@ -540,7 +546,7 @@
                                         </li>
                                     </ul>
                                     <div class="explain-more">
-                                        <button class="explain-more-btn">Заказать</button>
+                                        <button class="explain-more-btn curr-modal" data-modal="modal-01">Заказать</button>
                                     </div>
                                 </div>
                             </div>
@@ -597,7 +603,7 @@
                                         </li>
                                     </ul>
                                     <div class="explain-more">
-                                        <button class="explain-more-btn">Заказать</button>
+                                        <button class="explain-more-btn curr-modal" data-modal="modal-01">Заказать</button>
                                     </div>
                                 </div>
                             </div>
@@ -741,7 +747,7 @@
                             <p>Мы готовы предоставить полный комплекс профессиональных транспортно-экспедиционных логистических услуг. От Вас всего лишь требуется задать параметры и поставить задачу: откуда, куда, как быстро доставить груз. Далее наши специалисты оперативно проложат оптимальный маршрут, произведут расчет стоимости и в кратчайшие сроки предоставят Вам готовое решение.</p>
                             <p>Ключевое слово в решении, - «с гарантией лучшей цены». При заказе перевозки Вам предоставляется персональный менеджер, готовый помочь Вам 24/7. Он отвечает за вашу доставку с момента приема заявки до передачи груза грузополучателю</p>
                             <div class="logistic-big">
-                                <button class="logistic-btn">Задать вопрос</button>
+                                <button class="logistic-btn curr-modal" data-modal="modal-01">Задать вопрос</button>
                             </div>
                         </div>
                     </div>
@@ -754,7 +760,7 @@
                                 <a href="tel:+88002003554" class="logistic-link">88002003554</a>
                             </p>
                             <div class="logistic-more">
-                                <button class="logistic-btn">Получить консультацию</button>
+                                <button class="logistic-btn curr-modal" data-modal="modal-01">Получить консультацию</button>
                             </div>
                         </div>
                     </div>
@@ -771,7 +777,7 @@
                     <b>Без рассылок, спама, навязчивых звонков и т.д. Один раз!</b>
                 </p>
                 <form class="ask-form">
-                    <input type="text" class="ask-field" placeholder="Ваш Телефон/WhatsApp или Email" required>
+                    <input type="text" class="ask-field tel" placeholder="Ваш Телефон/WhatsApp или Email" required>
                     <br>
                     <button class="ask-btn">
                         <span class="ask-btn-icon"></span>
@@ -849,7 +855,7 @@
                                         <input type="text" class="speak-field" placeholder="Имя" required>
                                     </li>
                                     <li class="speak-item">
-                                        <input type="text tel" class="speak-field" placeholder="Телефон">
+                                        <input type="text tel" class="speak-field tel" placeholder="Телефон">
                                     </li>
                                     <li class="speak-item">
                                         <button class="speak-btn">Отправить</button>
@@ -917,5 +923,6 @@
     </div>
     <!-- Modals end -->
 
+    <script src="js/apps.js"></script>
 </body>
 </html>
