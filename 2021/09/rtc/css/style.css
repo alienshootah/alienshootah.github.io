@@ -1337,12 +1337,20 @@ b {
   margin: 0 auto;
 }
 
+.ask-form {
+  margin-top: 50px;
+}
+
 .ask-field {
   font-size: 18px;
   padding: 10px 40px;
   border-width: 1px;
   border-color: #c6c6c6;
   border-style: solid;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 380px;
 }
 
 .ask-field::-webkit-input-placeholder {
@@ -1361,12 +1369,181 @@ b {
   color: #1c2840;
 }
 
+.ask-btn {
+  background-color: #ff3e49;
+  color: #ffffff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 12px 20px;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ask-btn-icon {
+  display: inline-block;
+  min-width: 35px;
+  width: 35px;
+  height: 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/ask-btn-icon.png);
+  margin-right: 10px;
+}
+
+.ask-btn:hover, .ask-btn:focus {
+  background-color: #fd6970;
+}
+
+/* Footer */
+.footer {
+  background-color: #404040;
+  color: #ffffff;
+  padding: 30px 0;
+}
+
+.footer-title {
+  margin-top: 0;
+  font-size: 16px;
+  font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.footer-item {
+  margin: 3px 0;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.footer-link:hover, .footer-link:focus {
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer-subitem {
+  margin: 10px 0;
+}
+
+.footer-sublink {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.footer-sublink:hover, .footer-sublink:focus {
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer-sublink-mail {
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer-sublink-mail:hover, .footer-sublink-mail:focus {
+  border-bottom: 1px solid transparent;
+}
+
+.soci-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px -4px 10px -4px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.soci-item {
+  margin: 0 4px;
+}
+
+.soci-icon {
+  display: inline-block;
+  min-width: 26px;
+  width: 26px;
+  height: 26px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/soci-icon.png);
+}
+
+.speak-item {
+  margin: 6px 0;
+}
+
+.speak-field {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #e8e8e8;
+  width: 178px;
+  height: 32px;
+  padding: 5px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  font-family: "OpenSans-Regular", Arial, Helvetica, sans-serif;
+}
+
+.speak-field::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.speak-field:-ms-input-placeholder {
+  color: #000000;
+}
+
+.speak-field::-ms-input-placeholder {
+  color: #000000;
+}
+
+.speak-field::placeholder {
+  color: #000000;
+}
+
+.speak-btn {
+  padding: 5px 10px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #bcbcbc;
+  text-align: center;
+  width: 178px;
+  height: 32px;
+  color: #000000;
+  font-size: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.speak-btn:hover, .speak-btn:focus {
+  background-color: #dbdbdb;
+}
+
 /* Modal */
 .modal {
   display: none;
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 1000;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -1403,14 +1580,14 @@ b {
 
 .modal-close {
   position: absolute;
-  right: 7px;
-  top: 7px;
+  right: -15px;
+  top: -15px;
 }
 
 .modal-close-icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-image: url(../img/modal-close-icon.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1418,9 +1595,9 @@ b {
 
 .modal-title {
   text-align: center;
-  color: #10286f;
+  color: #000000;
   font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
-  font-size: 19px;
+  font-size: 18px;
   text-transform: uppercase;
 }
 
@@ -1460,19 +1637,31 @@ b {
 }
 
 .modal-more-btn {
-  font-size: 14px;
-  font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-family: "OpenSans-Regular", Arial, Helvetica, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  background-color: #f1404b;
-  padding: 7px 15px;
+  background-color: #1c2840;
+  padding: 12px 25px;
   border: 1px solid transparent;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  border-radius: 30px;
 }
 
 .modal-more-btn:hover, .modal-more-btn:focus {
-  background-color: #e66d75;
+  background-color: #3f4e6d;
+}
+
+.modal-subtitle {
+  margin: 0;
+  font-size: 16px;
+  font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
+}
+
+.modal-subtext {
+  font-size: 16px;
+  margin: 5px 0 0 0;
 }
 
 .policy {
@@ -1491,9 +1680,9 @@ b {
 
 .policy-icon {
   display: inline-block;
-  width: 11px;
+  width: 13px;
   height: 15px;
-  min-width: 11px;
+  min-width: 13px;
   background-image: url(../img/policy-icon.png);
   background-position: center;
   background-repeat: no-repeat;

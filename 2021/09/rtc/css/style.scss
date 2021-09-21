@@ -1053,14 +1053,152 @@ b {
         max-width: 610px;
         margin: 0 auto;
     }
+    &-form {
+        margin-top: 50px;
+    }
     &-field {
         font-size: 18px;
         padding: 10px 40px;
         border-width: 1px;
         border-color: rgb(198, 198, 198);
         border-style: solid;
+        height: 50px;
+        box-sizing: border-box;
+        min-width: 380px;
         &::placeholder {
             color: #1c2840;
+        }
+    }
+    &-btn {
+        background-color: #ff3e49;
+        color: #ffffff;
+        transition: all 0.5s;
+        padding: 12px 20px;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-icon {
+            display: inline-block;
+            min-width: 35px;
+            width: 35px;
+            height: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/ask-btn-icon.png);
+            margin-right: 10px;
+        }
+        &:hover,
+        &:focus {
+            background-color: #fd6970;
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: #404040;
+    color: #ffffff;
+    padding: 30px 0;
+    &-title {
+        margin-top: 0;
+        font-size: 16px;
+        font-family: $open-bold;
+        text-transform: uppercase;
+    }
+    &-item {
+        margin: 3px 0;
+    }
+    &-link {
+        text-decoration: none;
+        color: #ffffff;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+    &-subitem {
+        margin: 10px 0;
+    }
+    &-sublink {
+        text-decoration: none;
+        color: #ffffff;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        font-family: $open-bold;
+        font-weight: 500;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #ffffff;
+        }
+        &-mail {
+            border-bottom: 1px solid #ffffff;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+}
+.soci {
+    &-list {
+        display: flex;
+        margin: 15px -4px 10px -4px;;
+        align-items: center;
+    }
+    &-item {
+        margin: 0 4px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 26px;
+        width: 26px;
+        height: 26px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/soci-icon.png);
+    }
+}
+.speak {
+    &-item {
+        margin: 6px 0;
+    }
+    &-field {
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: rgb(232, 232, 232);
+        width: 178px;
+        height: 32px;
+        padding: 5px 20px;
+        box-sizing: border-box;
+        font-size: 15px;
+        font-family: $open-regular;
+        &::placeholder {
+            color: #000000;
+        }
+    }
+    &-btn {
+        padding: 5px 10px;
+        border-width: 1px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+        background-color: rgb(188, 188, 188);
+        text-align: center;
+        width: 178px;
+        height: 32px;
+        color: #000000;
+        font-size: 15px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: rgb(219, 219, 219);
         }
     }
 }
@@ -1070,7 +1208,7 @@ b {
 .modal {
     display: none;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 1000; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;
@@ -1094,12 +1232,12 @@ b {
     }
     &-close {
         position: absolute;
-        right: 7px;
-        top: 7px;
+        right: -15px;
+        top: -15px;
         &-icon {
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             background-image: url(../img/modal-close-icon.png);
             background-position: center;
             background-repeat: no-repeat;
@@ -1107,9 +1245,9 @@ b {
     }
     &-title {
         text-align: center;
-        color: #10286f;
+        color: #000000;
         font-family: $open-bold;
-        font-size: 19px;
+        font-size: 18px;
         text-transform: uppercase;
     }
     &-item {
@@ -1130,19 +1268,29 @@ b {
         text-align: center;
         margin-top: 28px;
         &-btn {
-            font-size: 14px;
-            font-family: $open-bold;
+            font-size: 15px;
+            font-family: $open-regular;
             color: #ffffff;
             text-transform: uppercase;
-            background-color: #f1404b;
-            padding: 7px 15px;
+            background-color: #1c2840;
+            padding: 12px 25px;
             border: 1px solid transparent;
             transition: all 0.5s;
+            border-radius: 30px;
             &:hover,
             &:focus {
-                background-color: #e66d75;
+                background-color: #3f4e6d;
             }
         }
+    }
+    &-subtitle {
+        margin: 0;
+        font-size: 16px;
+        font-family: $open-bold;
+    }
+    &-subtext {
+        font-size: 16px;
+        margin: 5px 0 0 0;
     }
 }
 .policy {
@@ -1155,9 +1303,9 @@ b {
     text-align: left;
     &-icon {
         display: inline-block;
-        width: 11px;
+        width: 13px;
         height: 15px;
-        min-width: 11px;
+        min-width: 13px;
         background-image: url(../img/policy-icon.png);
         background-position: center;
         background-repeat: no-repeat;
