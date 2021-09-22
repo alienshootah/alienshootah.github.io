@@ -1,4 +1,4 @@
-@media(max-width: 1440px) {
+@media(max-width: 1290px) {
     .header-left {
         width: 25%;
     }
@@ -16,7 +16,7 @@
         width: 100%;
     }
     .better-list {
-        margin: 60px 0;
+        margin: 60px -15px;
     }
     .better-item {
         width: 50%;
@@ -47,7 +47,7 @@
         width: 100%;
     }
     .package-list {
-        margin: 0;
+        margin: 0 -16px;
     }
     .compleks-top {
         position: static;
@@ -60,8 +60,8 @@
     }
     .rewievs-list {
         flex-wrap: wrap;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: -16px;
+        margin-right: -16px;
     }
     .rewievs-item {
         width: 29.3333%;
@@ -93,7 +93,7 @@
     .delivery-wrapper {
         max-width: initial;
         font-size: 17px;
-        min-height: 203px;
+        min-height: auto;
     }
     .garanties {
         margin-top: 0;
@@ -120,11 +120,20 @@
     .better {
         margin-top: 75px;
         &-list {
-            margin: 0px 0;
+            margin: 0px -7px;
         }
         &-item {
-            padding: 8px 0;
-            width: 100%;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        &-wrapper {
+            min-height: 158px;
+        }
+    }
+    .ways-item {
+        &:after {
+            min-width: 40px;
+            width: 40px;
         }
     }
     .delivery-decor {
@@ -143,6 +152,7 @@
         }
         &-list {
             flex-wrap: wrap;
+            margin: 0;
         }
         &-item {
             margin: 18px 0;
@@ -155,11 +165,14 @@
             width: 100%;
         }
     }
-    .rewievs-item {
-        width: 44.3333%;
-    }
-    .rewievs-video-image {
-        width: 100%;
+    .rewievs {
+        &-list {
+            margin-left: -13px;
+            margin-right: -13px;
+        }
+        &-item {
+            width: 44.3333%;
+        }
     }
     .logistic {
         &-row {
@@ -181,7 +194,9 @@
         }
     }
     .footer {
-        padding: 15px 0;
+        &-top {
+            padding: 15px 0;
+        }
         &-row {
             flex-wrap: wrap;
             & .col-3 {
@@ -292,13 +307,22 @@
             }
         }
     }
+    .better {
+        &-item {
+            width: 100%;
+        }
+        &-wrapper {
+            min-height: auto;
+        }
+    }
+    .ways-item:after {
+        min-width: 71px;
+        width: 71px;
+    }
     .delivery {
         padding-top: 75px;
         &-decor {
             top: 150px;
-        }
-        &-wrapper {
-            min-height: auto;
         }
         &-map {
             padding-bottom: 75px;
@@ -327,7 +351,7 @@
             justify-content: center;
         }
         &-item {
-            width: 39.3333%;
+            width: 40.3333%;
         }
     }
     .logistic {
@@ -335,7 +359,7 @@
     }
 }
 @media(max-width: 425px) {
-    .promo-more {
+    .promo-more { 
         margin-top: 40px;
         &-btn {
             font-size: 17px;
@@ -408,6 +432,10 @@
     }
     .rewievs {
         margin-bottom: 0;
+        &-list {
+            margin-left: 0;
+            margin-right: 0;
+        }
         &-item {
             margin: 10px 0;
             width: 100%;
@@ -434,5 +462,12 @@
     }
     .soci-list {
         justify-content: center;
+    }
+}
+@media(max-width: 375px) {
+    .delivery {
+        &-decor {
+            display: none;
+        }
     }
 }

@@ -1002,6 +1002,11 @@ b {
     &-text {
         margin-top: 0;
     }
+    &-video {
+        &-image {
+            width: 100%;
+        }
+    }
 }
 .logistic {
     padding: 75px 0;
@@ -1120,17 +1125,22 @@ b {
 /* Footer */
 
 .footer {
-    background-color: #404040;
-    color: #ffffff;
-    padding: 30px 0;
+    &-top {
+        background-color: #1c2840;
+        color: #ffffff;
+        padding: 30px 0;
+    }
     &-title {
+        display: inline-block;
         margin-top: 0;
         font-size: 16px;
         font-family: $open-bold;
         text-transform: uppercase;
+        border-bottom: 1px solid #ff3e49;
+        padding-bottom: 4px;
     }
     &-item {
-        margin: 3px 0;
+        margin: 7px 0;
     }
     &-link {
         text-decoration: none;
@@ -1152,11 +1162,13 @@ b {
         transition: all 0.5s;
         font-family: $open-bold;
         font-weight: 500;
+        font-size: 17px;
         &:hover,
         &:focus {
             border-bottom: 1px solid #ffffff;
         }
         &-mail {
+            font-size: 14px;
             border-bottom: 1px solid #ffffff;
             &:hover,
             &:focus {
@@ -1164,24 +1176,52 @@ b {
             }
         }
     }
+    &-end {
+        background-color: #0b1425;
+        color: #cdcdcd;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+    &-copy {
+        padding: 0;
+        margin: 0;
+        &-link {
+            color: #cdcdcd;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #cdcdcd;
+            }
+        }
+    }
 }
 .soci {
+    margin-top: 5px;
+    &-item {
+        margin: 0 4px;
+    }
     &-list {
         display: flex;
         margin: 15px -4px 10px -4px;;
         align-items: center;
     }
-    &-item {
-        margin: 0 4px;
-    }
     &-icon {
         display: inline-block;
-        min-width: 26px;
-        width: 26px;
-        height: 26px;
+        min-width: 21px;
+        width: 21px;
+        height: 21px;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url(../img/soci-icon.png);
+        &-one {
+            background-image: url(../img/social-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/social-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/social-icon-three.png);
+        }
     }
 }
 .speak {
@@ -1195,29 +1235,29 @@ b {
         background-color: rgb(232, 232, 232);
         width: 178px;
         height: 32px;
-        padding: 5px 20px;
+        padding: 10px 13px;
         box-sizing: border-box;
-        font-size: 15px;
+        font-size: 14px;
         font-family: $open-regular;
         &::placeholder {
-            color: #000000;
+            color: #666666;
         }
     }
     &-btn {
-        padding: 5px 10px;
-        border-width: 1px;
-        border-color: rgb(0, 0, 0);
+        margin-top: 5px;
+        padding: 5px 15px;
         border-style: solid;
-        background-color: rgb(188, 188, 188);
+        background-color: #ff3e49;
         text-align: center;
-        width: 178px;
-        height: 32px;
-        color: #000000;
+        height: 34px;
+        color: #ffffff;
+        font-family: $open-bold;
         font-size: 15px;
         transition: all 0.5s;
+        text-transform: uppercase;
         &:hover,
         &:focus {
-            background-color: rgb(219, 219, 219);
+            background-color: #fd6970;
         }
     }
 }
