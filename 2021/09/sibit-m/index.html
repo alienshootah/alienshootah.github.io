@@ -116,7 +116,7 @@
                                     </div>
                                 </div>
                                 <div class="info-more">
-                                    <button class="info-more-btn">РАССЧИТАТЬ СТОИМОСТЬ</button>
+                                    <button class="info-more-btn curr-modal" data-modal="modal-01">РАССЧИТАТЬ СТОИМОСТЬ</button>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +173,7 @@
                         <br>
                         <br>
                         <br>
-                        <p>Или оставьте заявку <a href="#" class="cong-link">через форму</a></p>
+                        <p>Или оставьте заявку <button class="cong-link curr-modal" data-modal="modal-01" >через форму</button></p>
                     </div>
                 </div>
             </div>
@@ -191,7 +191,7 @@
                         </p>
                     </li>
                     <li class="how-item">
-                        <button class="how-btn">РАССЧИТАТЬ СТОИМОСТЬ</button>
+                        <button class="how-btn curr-modal" data-modal="modal-01">РАССЧИТАТЬ СТОИМОСТЬ</button>
                     </li>
                 </ul>
             </div>
@@ -563,7 +563,7 @@
                                 </div>
                                 <div class="col-4">
                                     <div class="end-more">
-                                        <a href="#" class="end-more-link">ЗАДАТЬ ВОПРОС</a>
+                                        <button class="end-more-link curr-modal" data-modal="modal-01">ЗАДАТЬ ВОПРОС</button>
                                     </div>
                                 </div>
                             </div>
@@ -573,5 +573,48 @@
             </div>
         </footer>
     </div>
+    
+    <!-- Modals start -->
+    <div class="modal" id="modal-01">
+        <div class="modal-body">
+            <button class="modal-close close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <h3 class="modal-title">Онлайн-заявка</h3>
+            <form action="/" class="modal-form">
+                <ul class="modal-list">
+                    <li class="modal-item">
+                        <input type="text" class="modal-field" placeholder="Ваше имя" required>
+                    </li>
+                    <li class="modal-item">
+                        <input type="text" class="modal-field tel" placeholder="Ваш телефон">
+                    </li>
+                    <li class="modal-item">
+                        <input type="text" class="modal-field" placeholder="Куда везем груз?" required>
+                    </li>
+                    <li class="modal-item">
+                        <input type="text" class="modal-field" placeholder="Объем в кг" required>
+                    </li>
+                    <li class="modal-item">
+                        <div class="modal-more">
+                            <button class="modal-more-btn">Отправить</button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div class="policy">
+                <span class="policy-icon"></span>
+                <div class="policy-descr">
+                    <p class="policy-text">
+                        Оставляя заявку вы соглашаетесь с нашей 
+                        <a href="#" class="policy-link">политикой конфиденциальности</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals end -->
+
+    <script src="js/apps.js"></script>
 </body>
 </html>
