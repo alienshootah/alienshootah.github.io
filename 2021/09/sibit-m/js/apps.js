@@ -1,4 +1,12 @@
-/* drop btn */
+/* Menu btn */
+const menuBtn = document.querySelector(".top-mobile-btn");
+if(menuBtn) {
+    menuBtn.addEventListener("click", function() {
+      document.querySelector(".top-row").classList.toggle("show");
+    });
+}
+
+/* Drop btn */
 const dropBtn = document.querySelector(".nav-btn");
 if(dropBtn) {
     dropBtn.addEventListener("click", function() {
