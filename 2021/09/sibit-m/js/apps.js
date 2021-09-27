@@ -1,12 +1,20 @@
-/* Menu btn */
-const menuBtn = document.querySelector(".header-mobile-btn");
-if(menuBtn) {
-    menuBtn.addEventListener("click", function() {
-      document.querySelector(".header").classList.toggle("show");
+/* drop btn */
+const dropBtn = document.querySelector(".nav-btn");
+if(dropBtn) {
+    dropBtn.addEventListener("click", function() {
+      document.querySelector(".drop").classList.toggle("show");
     });
 }
 
+/* Slider */
 
+var swiper = new Swiper(".slid-list", {
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+});
 
 /* Modals */
 
