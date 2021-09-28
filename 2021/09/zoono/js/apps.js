@@ -27,7 +27,7 @@ function fadeIn(el) {
   }
   
   // Initialise all the required variables
-  var btn = document.querySelectorAll(".drop-btn");
+  var btn = document.querySelectorAll(".drop-start");
   
   /*
    *	Button click event listeners
@@ -104,5 +104,19 @@ var clientsSlider = new Swiper(".clients-list", {
     navigation: {
       nextEl: ".clients-arrow-right",
       prevEl: ".clients-arrow-left",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      992: {
+        slidesPerView: 6,
+        spaceBetween: 50,
+      },
     },
 });
