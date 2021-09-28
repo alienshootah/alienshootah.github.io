@@ -161,12 +161,11 @@ h2 {
         color: #283d57;
         text-decoration: none;
         text-transform: uppercase;
-        border-bottom: 1px solid transparent;
         transition: all 0.5s;
         font-family: $open-bold;
         &:hover,
         &:focus {
-            border-bottom: 1px solid #283d57;
+            color: #895da2;
         }
     }
 }
@@ -211,11 +210,10 @@ h2 {
     &-link {
         color: #283d57;
         text-decoration: none;
-        border-bottom: 1px solid transparent;
         transition: all 0.5s;
         &:hover,
         &:focus {
-            border-bottom: 1px solid #283d57;
+            color: #895da2;
         }
     }
 }
@@ -387,6 +385,13 @@ h2 {
                 background-color: #895da2;
                 margin-bottom: -6px;
             }
+            &.active .program-nav-link,
+            &:hover .program-nav-link,
+            &:focus .program-nav-link {
+                background-color: #895da2;
+                color: #ffffff;
+                border: 1px solid #895da2;
+            }
         }
         &-link {
             width: 100%;
@@ -398,12 +403,6 @@ h2 {
             box-sizing: border-box;
             background-color: transparent;
             transition: all 0.5s;
-            &:hover,
-            &:focus {
-                background-color: #895da2;
-                color: #ffffff;
-                border: 1px solid #895da2;
-            }
         }
     }
     &-tabs {
@@ -411,6 +410,10 @@ h2 {
     }
     &-content {
         padding: 20px 0;
+        display: none;
+        &.active {
+            display: block;
+        }
     }
     &-subtitle {
         display: inline;
@@ -472,6 +475,7 @@ h2 {
         margin-bottom: 50px;
         display: flex;
         justify-content: space-between;
+        overflow: hidden;
     }
     &-picture {
         width: 150px;

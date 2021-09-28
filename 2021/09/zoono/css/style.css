@@ -229,14 +229,13 @@ h2 {
   color: #283d57;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
 }
 
 .header-link:hover, .header-link:focus {
-  border-bottom: 1px solid #283d57;
+  color: #895da2;
 }
 
 .drop {
@@ -290,13 +289,12 @@ h2 {
 .drop-link {
   color: #283d57;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .drop-link:hover, .drop-link:focus {
-  border-bottom: 1px solid #283d57;
+  color: #895da2;
 }
 
 /* Sections */
@@ -508,6 +506,14 @@ h2 {
   margin-bottom: -6px;
 }
 
+.program-nav-item.active .program-nav-link,
+.program-nav-item:hover .program-nav-link,
+.program-nav-item:focus .program-nav-link {
+  background-color: #895da2;
+  color: #ffffff;
+  border: 1px solid #895da2;
+}
+
 .program-nav-link {
   width: 100%;
   display: inline-block;
@@ -522,18 +528,17 @@ h2 {
   transition: all 0.5s;
 }
 
-.program-nav-link:hover, .program-nav-link:focus {
-  background-color: #895da2;
-  color: #ffffff;
-  border: 1px solid #895da2;
-}
-
 .program-tabs {
   margin: 40px 0;
 }
 
 .program-content {
   padding: 20px 0;
+  display: none;
+}
+
+.program-content.active {
+  display: block;
 }
 
 .program-subtitle {
@@ -616,6 +621,7 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
 }
 
 .clients-picture {
