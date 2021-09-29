@@ -88,7 +88,218 @@
             width: 25%;
         }
     }
+    .tech {
+        &-subtitle {
+            min-height: auto;
+        }
+    }
 }
 @media(max-width: 768px) {
-    
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #ffffff;
+        padding: 25px 0;
+        &-mobile {
+            display: block;
+            text-align: center;
+            &-btn {
+                padding: 0;
+                margin-top: 30px;
+            }
+            &-icon {
+                display: inline-block;
+                width: 30px;
+                height: 23px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/header-btn-icon.png);
+                padding: 10px 7px;
+                border: 1px solid #d1d1d1;
+            }
+        }
+        &-close {
+            display: block;
+            text-align: right;
+            margin-top: 15px;
+            &-icon {
+                display: inline-block;
+                width: 23px;
+                height: 23px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/header-close-icon.png);
+            }
+        }
+        &-row {
+            margin-left: 0;
+            margin-right: 0;
+            display: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 2000;
+            background-color: #ffffff;
+            &.show {
+                display: block;
+            }
+        }
+        &-center {
+            display: none;
+        }
+        &-left,
+        &-right {
+            width: 100%;
+        }
+        &-list {
+            display: block;
+            text-align: center;
+            margin: 0;
+        }
+        &-item {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    .drop {
+        position: static;
+        display: none;
+        &-body {
+            box-shadow: none;
+            background-color: transparent;
+            padding: 7px 20px 18px 20px;
+        }
+        &-btn:after {
+            margin-right: -11px;
+        }
+    }
+    .promo {
+        padding: 50px 0;
+        &-row {
+            display: block;
+            text-align: center;
+            & .col-8 {
+                width: 100%;
+            }
+            & .col-4 {
+                width: 100%;
+            }
+        }
+        &-block {
+            max-width: 100%;
+        }
+        &-act {
+            max-width: 100%;
+        }
+    }
+    .tech {
+        &-list {
+            display: block;
+            text-align: center;
+        }
+        &-item {
+            width: 100%;
+        }
+        &-more {
+            text-align: center;
+        }
+    }
+    .fog {
+        text-align: center;
+    }
+    .program {
+        &-nav {
+            display: block;
+            &-item {
+                width: 100%;
+            }
+        }
+    }
+    .useful {
+        &-item {
+            width: 42.3333%;
+        }
+    }
+}
+@media(max-width: 540px) {
+    .tech {
+        text-align: center;
+    }
+    .program {
+        &-row {
+            display: block;
+            & .col-4 {
+                width: 100%;
+            }
+            & .col-8 {
+                width: 100%;
+            }
+        }
+    }
+    .useful {
+        &-list {
+            text-align: center;
+        }
+        &-item {
+            width: 100%;
+        }
+    }
+    .clients {
+        text-align: center;
+        &-picture {
+            margin: 0 auto;
+        }
+    }
+}
+@media(max-width: 425px) {
+    h2 {
+        font-size: 22px;
+    }
+    .promo {
+        &-title {
+            font-size: 16px;
+        }
+        &-descr {
+            font-size: 16px;
+        }
+        &-subtitle {
+            font-size: 16px;
+        }
+    }
+    .fog {
+        &-row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        &-left {
+            padding: 20px 15px;
+        }
+        &-title {
+            font-size: 22px;
+        }
+    }
+    .banners-item {
+        width: 50%;
+    }
+    .footer {
+        padding: 50px 0 25px 0;
+        &-row {
+            text-align: center;
+            & .col-2 {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            & .col-3 {
+                margin: 15px 0;
+                width: 100%;
+            }
+        }
+    }
+    .social {
+        &-list {
+            justify-content: center;
+        }
+    }
 }

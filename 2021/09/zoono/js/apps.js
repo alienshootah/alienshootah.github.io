@@ -1,3 +1,15 @@
+/* Mobile button */
+const menuBtn = document.querySelector(".header-mobile-btn");
+menuBtn.addEventListener("click", function() {
+  document.querySelector(".header-row").classList.toggle("show");
+});
+
+/* Mobile close */
+const closeBtn = document.querySelector(".header-close-btn");
+closeBtn.addEventListener("click", function() {
+  document.querySelector(".header-row").classList.remove("show");
+});
+
 /* Dropdowns in header */
 
 function fadeIn(el) {
@@ -36,6 +48,7 @@ function fadeIn(el) {
   btn.forEach(function(btn) {
     btn.addEventListener("click", function(e) {
       e.stopPropagation();
+      e.preventDefault();
       var sibling = btn.nextElementSibling,
         firstVisible = document.querySelector('.visible'),
         dropDown;
@@ -106,6 +119,14 @@ var clientsSlider = new Swiper(".clients-list", {
       prevEl: ".clients-arrow-left",
     },
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      520: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
       640: {
         slidesPerView: 3,
         spaceBetween: 20,

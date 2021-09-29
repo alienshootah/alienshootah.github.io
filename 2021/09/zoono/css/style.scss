@@ -140,6 +140,12 @@ h2 {
 .header {
     padding: 30px 0;
     box-sizing: border-box;
+    &-mobile {
+        display: none;
+    }
+    &-close {
+        display: none;
+    }
     &-row {
         align-items: center;
     }
@@ -203,6 +209,8 @@ h2 {
     }
     &-list {
         font-size: 15px;
+        font-family: $open-bold;
+        text-transform: uppercase;
     }
     &-item {
         margin: 5px 0;
@@ -211,9 +219,10 @@ h2 {
         color: #283d57;
         text-decoration: none;
         transition: all 0.5s;
+        border-bottom: 1px solid #939eab;
         &:hover,
         &:focus {
-            color: #895da2;
+            border-bottom: 1px solid transparent;
         }
     }
 }
@@ -432,6 +441,7 @@ h2 {
         margin-top: 0;
         border-bottom: 1px solid #dbcee3;
         padding-bottom: 5px;
+        line-height: 1.8;
     }
     &-sublist {
         margin-top: 25px;
