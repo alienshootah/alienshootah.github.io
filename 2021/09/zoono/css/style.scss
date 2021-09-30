@@ -3,6 +3,7 @@
 $open-regular: 'OpenSans-Regular', Arial, Helvetica, sans-serif;
 $open-bold: 'OpenSans-Bold', Arial, Helvetica, sans-serif;
 $open-semi: 'OpenSans-SemiBold', Arial, Helvetica, sans-serif;
+$raleway-regular: 'Raleway-Regular', Arial, Helvetica, sans-serif;
 $raleway-bold: 'Raleway-Bold', Arial, Helvetica, sans-serif;
 $raleway-extra: 'Raleway-ExtraBold', Arial, Helvetica, sans-serif;
 $raleway-black: 'Raleway-Black', Arial, Helvetica, sans-serif;
@@ -22,6 +23,12 @@ $raleway-black: 'Raleway-Black', Arial, Helvetica, sans-serif;
 @font-face {
     font-family: 'OpenSans-SemiBold';
     src: url(../fonts/OpenSans-SemiBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url(../fonts/Raleway-Regular.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -968,6 +975,152 @@ h2 {
             &:focus {
                 background-color: #996eb3;
             }
+        }
+    }
+}
+.news {
+    &-top {
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/news-top-bg.jpg);
+        color: #edf1f5;
+        min-height: 115px;
+    }
+    &-title {
+        font-size: 30px;
+        font-family: $raleway-bold;
+        margin: 0;
+        padding: 35px 0;
+    }
+    &-body {
+        margin: 70px 0;
+    }
+    &-list {
+        margin: 0 -20px;
+    }
+    &-item {
+        margin: 20px;
+    }
+    &-wrapper {
+        max-width: 405px;
+        width: 100%;
+    }
+    &-image {
+        width: 100%;
+        height: 211px;
+        object-fit: cover;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-subtitle {
+        color: #0a203f;
+        font-size: 20px;
+        font-family: $open-bold;
+        text-transform: uppercase;
+    }
+    &-link {
+        text-decoration: none;
+        color: #0a203f;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #0a203f;
+        }
+    }
+    &-text {
+        font-size: 16px;
+        color: #0a203f;
+    }
+    &-more {
+        margin-top: 30px;
+        &-link {
+            display: inline-block;
+            color: #edf1f5;
+            background-color: #335683;
+            font-size: 20px;
+            font-family: $open-semi;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.5s;
+            padding: 12px 22px;
+            &:hover,
+            &:focus {
+                background-color: #5e84b6;
+            }
+        }
+    }
+}
+.self {
+    &-item {
+        margin: 50px 0 75px 0;
+        width: 100%;
+        &:first-child {
+            text-align: left;
+        }
+        &:last-child {
+            & .self-wrapper {
+                margin-left: auto;
+            }
+            
+        }
+    }
+    &-wrapper {
+        position: relative;
+        max-width: 800px;
+        width: 100%;
+    }
+    &-image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+    &-content {
+        position: absolute;
+        bottom: 25px;
+        left: 20px;
+        right: 60px;
+    }
+    &-block {
+        position: relative;
+    }
+    &-banner {
+        position: absolute;
+        top: -50px;
+        left: 15px;
+        background-color: #1c2840;
+        color: #ffffff;
+        font-size: 25px;
+        font-family: $raleway-bold;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        line-height: 1.6;
+        max-width: 560px;
+        width: 100%;
+        height: 100px;
+        &-pink {
+            background-color: #895da2;
+        }
+        &-link {
+            color: #ffffff;
+            text-decoration: none;
+
+        }
+    }
+    &-descr {
+        background-color: rgba(255, 255, 255, 0.9);
+        font-family: $raleway-regular;
+        font-size: 15px;
+        color: #1c2840;
+        padding: 50px 35px 20px 35px;
+        box-sizing: border-box;
+        &-blue {
+            background-color: #1c2840;
+            color: #ffffff;
         }
     }
 }
