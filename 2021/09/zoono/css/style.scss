@@ -7,6 +7,8 @@ $raleway-regular: 'Raleway-Regular', Arial, Helvetica, sans-serif;
 $raleway-bold: 'Raleway-Bold', Arial, Helvetica, sans-serif;
 $raleway-extra: 'Raleway-ExtraBold', Arial, Helvetica, sans-serif;
 $raleway-black: 'Raleway-Black', Arial, Helvetica, sans-serif;
+$raleway-semi: 'Raleway-SemiBold', Arial, Helvetica, sans-serif;
+$raleway-light: 'Raleway-Light', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'OpenSans-Regular';
@@ -47,6 +49,18 @@ $raleway-black: 'Raleway-Black', Arial, Helvetica, sans-serif;
 @font-face {
     font-family: 'Raleway-Black';
     src: url(../fonts/Raleway-Black.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway-SemiBold';
+    src: url(../fonts/Raleway-SemiBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Raleway-Light';
+    src: url(../fonts/Raleway-Light.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -198,7 +212,7 @@ h2 {
         box-shadow: 0px 5px 12px 1px rgba(40, 61, 87, 0.2);
         padding: 15px 20px;
         box-sizing: border-box;
-        min-width: 200px;
+        min-width: 250px;
         background-color: #ffffff;
     }
     &-btn:after {
@@ -1331,6 +1345,175 @@ h2 {
         }
         &-eight {
             background-image: url(../img/better-icon-eight.png);
+        }
+    }
+}
+.about {
+    &-top {
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/about-top-bg.jpg);
+        padding: 120px 0;
+        color: #edf1f5;
+    }
+    &-block {
+        max-width: 640px;
+    }
+    &-title {
+        color: #edf1f5;
+        font-size: 30px;
+        font-family: $raleway-extra;
+    }
+    &-descr {
+        font-family: $raleway-semi;
+        font-size: 20px;
+        margin-top: 60px;
+    }
+    &-author {
+        font-family: $raleway-light;
+        font-size: 20px;
+    }
+    &-body {
+        margin: 100px auto 50px auto;
+        text-align: center;
+        max-width: 920px;
+    }
+    &-subtitle {
+        text-align: center;
+    }
+}
+.mission {
+    margin: 50px 0;
+    &-row {
+        background-color: #283d57;
+        color: #ededed;
+        font-size: 16px;
+        margin: 0;
+    }
+    &-left {
+        padding: 30px 45px 45px 45px;
+        box-sizing: border-box;
+    }
+    &-right {
+        padding-right: 0;
+        padding-left: 0;
+        height: 365px;
+    }
+    &-title {
+        font-family: $raleway-bold;
+        font-size: 30px;
+        color: #ffffff;
+    }
+    &-image {
+        width: 100%;
+        height: 365px;
+        object-fit: cover;
+        margin-bottom: -6px;
+    }
+}
+.years {
+    margin: 50px 0;
+    &-list {
+        font-size: 11px;
+        color: #283d57;
+        margin: 0 -10px;
+        text-align: center;
+        display: flex;
+    }
+    &-item {
+        background-color: #e8f0f7;
+        margin: 10px;
+        width: calc(14.2857% - 20px);
+    }
+    &-wrapper {
+        padding: 45px 15px;
+        box-sizing: border-box;
+    }
+    &-date {
+        font-size: 30px;
+    }
+    &-text {
+        margin-top: 30px;
+        height: 100px;
+    }
+    &-icon {
+        display: inline-block;
+        width: 104px;
+        height: 69px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 30px;
+        &-one {
+            background-image: url(../img/years-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/years-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/years-icon-three.png);
+           
+        }
+        &-four {
+            background-image: url(../img/years-icon-four.png);
+           
+        }
+        &-five {
+            background-image: url(../img/years-icon-five.png);
+        
+        }
+        &-six {
+            background-image: url(../img/years-icon-six.png);
+          
+        }
+        &-seven {
+            background-image: url(../img/years-icon-seven.png);
+         
+        }
+    }
+}
+.facts {
+    &-body {
+        background-color: #f6f6f6;
+        padding: 30px 45px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+}
+.bio {
+    margin: 100px 0 125px 0;
+    &-row {
+        background-color: #283d57;
+        color: #ffffff;
+        margin: 0;
+    }
+    &-title {
+        font-size: 30px;
+    }
+    &-left {
+        padding: 0;
+    }
+    &-right {
+        height: 365px;
+        padding: 65px 60px;
+        box-sizing: border-box;
+    }
+    &-image {
+        width: 100%;
+        height: 365px;
+        object-fit: cover;
+        margin-bottom: -6px;
+    }
+    &-more {
+        margin-top: 50px;
+        &-link {
+            background-color: #895da2;
+            color: #edf1f5;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-family: $open-semi;
+            padding: 12px 20px;
         }
     }
 }
