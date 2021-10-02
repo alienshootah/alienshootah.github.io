@@ -206,20 +206,34 @@ var cardSlider = new Swiper(".card-slider", {
 });
 
 var cardNav = new Swiper(".card-nav", {
-  slidesPerView: 5,
   slideToClickedSlide: true,
   spaceBetween: 0,
   loop:true,
   thumbs: {
     swiper: cardSlider,
   },
-  
   breakpoints: {
-    540: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    375: {
       slidesPerView: 3,
       spaceBetween: 0,
     },
+    425: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    540: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
     768: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    992: {
       slidesPerView: 4,
       spaceBetween: 0,
     },
