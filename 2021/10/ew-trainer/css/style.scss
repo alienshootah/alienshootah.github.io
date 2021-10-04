@@ -107,6 +107,254 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     text-align: center;
     padding: 22px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #F9F9F9;
+    &-body {
+        position: relative;
+    }
+    &-menu {
+        position: absolute;
+        top: 11px;
+    }
+    &-icon {
+        display: inline-block;
+        width: 18px;
+        height: 12px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/header-icon.svg);
+    }
+}
+
+/* Menu */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8888;
+    height: 102%;
+    background: #F9F9F9;
+    box-shadow: 0px 0px 8px rgba(55, 74, 94, 0.1);
+    width: 309px;
+    &.show {
+        display: block;
+    }
+    &-body {
+        padding: 20px 27px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    &-close {
+        position: absolute;
+        top: 20px;
+        right: 18px;
+        &-icon {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/sidebar-close-icon.svg);
+        }
+    }
+    &-content {
+        margin-top: 20px;
+    }
+    &-item {
+        border-bottom: 0.5px solid #B3B9C5;
+        padding: 20px 0;
+        box-sizing: border-box;
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    &-title {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        &-link {
+            text-decoration: none;
+            color: #374A5E;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #374A5E;
+            }
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 20px;
+        width: 20px;
+        height: 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 15px;
+        position: relative;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 131.02%;
+        &-one {
+            background-image: url(../img/sidebar-icon-one.svg);
+        }
+        &-thue {
+            background-image: url(../img/sidebar-icon-thue.svg);
+        }
+    }
+    &-button {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        position: relative;
+    }
+    &-control {
+        display: inline-block;
+        position: absolute;
+        right: 5px;
+    }
+    &-sex {
+        margin-top: 20px;
+    }
+    &-lbl {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+    }
+    &-radio {
+        display: none;
+        &:checked ~ .sidebar-checkmark:after {
+            display: inline-block;
+        }
+    }
+    &-checkmark {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #374A5E;
+        border-radius: 50%;
+        margin: 0 5px 0 0;
+        position: relative;
+        top: 2px;
+        &:after {
+            display: none;
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            background: #374A5E;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+        }
+    }
+    &-pro {
+        &-link {
+            display: inline-block;
+            text-align: center;
+            background: #374A5E;
+            box-shadow: 0px 0px 4px rgba(55, 74, 94, 0.05);
+            box-sizing: border-box;
+            border-radius: 0px 10px 10px 0px;
+            padding: 4px 12px 3px 26px;
+            font-size: 15px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: #556f8a;
+            }
+        }
+    }
+}
+.profile {
+    margin-top: 20px;
+    &-picture {
+        margin-left: 2px;
+        margin-bottom: -2px;
+    }
+    &-image {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+    }
+    &-link {
+        font-size: 12px;
+        line-height: 131.02%;
+        color: #374A5E;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #374A5E;
+        }
+    }
+}
+
+/* Switches */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 27px;
+    height: 11px;
+}
+
+.switch input {display:none;}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transition: .4s;
+    transition: .4s;
+    &:before {
+        position: absolute;
+        content: "";
+        width: 14px;
+        height: 14px;
+        left: 2px;
+        bottom: 1px;
+        background-color: #374A5E;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}
+
+input:checked + .slider {
+    background-color: #ffffff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #ffffff;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    background: transparent;
+    width: 31px;
+    height: 16px;
+    border: 1px solid #374A5E;
+    border-radius: 8.5px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* Sections */
@@ -217,6 +465,75 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-thue {
             background-image: url(../img/sex-icon-thue.svg);
+        }
+    }
+}
+.main {
+    &-list {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5px -10px;
+        justify-content: center;
+    }
+    &-item {
+        margin: 8px 10px;
+    }
+    &-link {
+        display: flex;
+        width: 145px;
+        height: 145px;
+        margin: 0 auto;
+        background: #FFFFFF;
+        border: 0.5px solid #EAEAEA;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 4px rgba(55, 74, 94, 0.05);
+        border-radius: 22px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &-image {
+        width: 106px;
+        height: 87px;
+        object-fit: cover;
+    }
+    &-title {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 100%;
+        text-align: center;
+        color: #374A5E;
+        &-link {
+            text-decoration: none;
+            color: #374A5E;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                color: #556f8a;
+            }
+        }
+    }
+    &-number {
+        margin: 4px 0 0 0;
+        font-size: 12px;
+        line-height: 131.02%;
+        text-align: center;
+        color: #939DA8;
+    }
+    &-decor {
+        position: absolute;
+        z-index: 5;
+        top: 12px;
+        right: 12px;
+        &-icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(50% 50% at 50% 50%, rgba(55, 74, 94, 0.51) 0%, #374A5E 100%);
+            border-radius: 50%;
         }
     }
 }
