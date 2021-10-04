@@ -1,3 +1,15 @@
+/* Menu */
+
+const sidebar = document.querySelector(".sidebar");
+var headerClose = document.getElementsByClassName("sidebar-close")[0];
+const mobileBtn = document.querySelector(".header-menu");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".sidebar").classList.toggle("show");
+});
+headerClose.onclick = function() {
+  document.querySelector(".sidebar").classList.toggle("show");
+}
+
 var helloSlider = new Swiper(".hello-slider", {
     pagination: {
       el: ".hello-pagination",
