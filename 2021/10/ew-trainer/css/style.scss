@@ -569,11 +569,13 @@ input:checked + .slider:before {
             text-decoration: none;
             display: block;
             width: 100px;
-            height: 150px;
+            height: 145px;
             background-repeat: no-repeat;
             background-position: top;
             padding-top: 110px;
             box-sizing: border-box;
+            background-size: 100px 100px;
+            border-radius: 10px;
         }
         &-image {
             width: 100px;
@@ -609,16 +611,20 @@ input:checked + .slider:before {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &-left {
         width: 260px;
     }
     &-right {
-        width: calc(50px - 10px);
+        width: 50px;
         text-align: center;
         border-left: 0.5px dashed #CACED2;
-        margin-left: 10px;
+        margin-left: -10px;
         padding: 15px 3px;
+        &.active .workout-arrow {
+            transform: rotate(180deg);
+        }
     }
     &-info {
         font-size: 7px;
@@ -631,17 +637,17 @@ input:checked + .slider:before {
         background: #374A5E;
         border-radius: 16px;
         color: #FFFFFF;
-        padding: 1px 9px 0px 9px;
+        padding: 0px 4px 0px 4px;
         box-sizing: border-box;
         margin: 0 2px;
         border: 0.5px solid #374A5E;
-        width: calc(26% - 4px);
+        width: calc(25% - 4px);
         text-align: center;
     }
     &-type {
         background: #FFFFFF;
         border-radius: 16px;
-        padding: 1px 9px 0px 9px;
+        padding: 0px 4px 0px 4px;
         box-sizing: border-box;
         margin: 0 2px;
         border: 0.5px solid #374A5E;
@@ -650,7 +656,7 @@ input:checked + .slider:before {
     &-descr {
         margin: 4px 0 0 0;
         font-size: 10px;
-        line-height: 1.4;
+        line-height: 1.3;
     }
     &-arrow {
         display: inline-block;
@@ -667,9 +673,10 @@ input:checked + .slider:before {
 
 /* Dropdown */
 .drop {
+    width: 100%;
     display: none;
     &-body {
-        margin: 10px 0;
+        margin: 8px 0;
         border-top: 0.3px solid #CACED2;
     }
     &.show {
@@ -679,7 +686,7 @@ input:checked + .slider:before {
         font-size: 10px;
     }
     &-item {
-        padding: 10px;
+        padding: 5px 5px;
         border-bottom: 0.3px solid #CACED2;
     }
     &-top {
@@ -704,7 +711,7 @@ input:checked + .slider:before {
         margin: 0 3px;
     }
     &-descr {
-        margin: 5px 0;
+        margin: 5px 0 10px 0;
         line-height: 1.2;
         font-size: 9px;
     }
@@ -712,11 +719,11 @@ input:checked + .slider:before {
         display: flex;
     }
     &-left {
-        width: 90%;
+        width: 81%;
     }
     &-right {
         text-align: center;
-        width: 10%;
+        width: 19%;
     }
     &-training {
         display: flex;
@@ -741,27 +748,31 @@ input:checked + .slider:before {
 }
 .info {
     font-size: 8px;
+    margin-top: -5px;
+    line-height: 1.4;
     &-row {
-        margin: 10px 0 10px -8px;
+        margin: 0 0 0 -8px;
+        max-width: 250px;
     }
     &-left {
         padding: 0 0 0 8px;
         border-right: 0.5px dashed #CACED2;
+        margin-right: 10px;
     }
     &-right {
-        padding: 0 0 0 8px;
+        padding: 0;
     }
     &-wrapper {
         display: flex;
         justify-content: space-between;
     }
     &-value {
-        min-width: 35px;
+        min-width: 32px;
         position: relative;
         &::before {
             position: absolute;
-            top: 7px;
-            left: -8px;
+            top: 5px;
+            left: -9px;
             content: '';
             display: inline-block;
             width: 3px;
@@ -801,11 +812,13 @@ input:checked + .slider:before {
     }
     &-title {
         font-size: 16px;
+        margin-bottom: 10px;
     }
     &-text {
         height: 175px;
         overflow-y: scroll;
         padding: 20px 15px;
+        line-height: 1.3;
     }
     &-image {
         width: 100%;
@@ -850,25 +863,26 @@ input:checked + .slider:before {
     }
     &-body {
         display: inline-block;
-        width: 309px;
+        width: 310px;
         background: #F9F9F9;
         border: 0.5px solid #EAEAEA;
         box-sizing: border-box;
         box-shadow: 0px 0px 8px rgba(55, 74, 94, 0.1);
         border-radius: 10px;
-        padding: 20px 30px;
+        padding: 20px 27px;
+        
     }
     &-item {
         margin: 10px 0;
     }
     &-btn {
         width: 100%;
-        height: 45px;
+        height: 40px;
         border: 0.5px solid #CED1D6;
         box-sizing: border-box;
         filter: drop-shadow(0px 0px 4px rgba(206, 209, 214, 0.05));
         border-radius: 10px;
-        padding: 10px 5px;
+        padding: 12px 5px 8px 5px;
         font-weight: 500;
         font-size: 14px;
         font-family: $roboto-bold;
@@ -878,24 +892,24 @@ input:checked + .slider:before {
     }
     &-top {
         position: absolute;
-        top: -2px;
+        top: -5px;
         right: 6px;
-        margin: 0 -2px;
+        margin: 0 -1px;
     }
     &-decor {
         font-weight: 500;
-        font-size: 8px;
-        line-height: 1.2;
+        font-size: 6px;
+        line-height: 1;
         display: inline-block;
-        margin: 0 2px;
+        margin: 0 1px;
         &-online {
-            padding: 0 4px;
+            padding: 0 3px;
             border: 0.5px solid #374A5E;
             box-sizing: border-box;
             border-radius: 5px;
         }
         &-hit {
-            padding: 0 7px;
+            padding: 0 5px;
             background: #374A5E;
             border: 0.5px solid #374A5E;
             box-sizing: border-box;
@@ -903,7 +917,7 @@ input:checked + .slider:before {
             color: #ffffff;
         }
         &-new {
-            padding: 0 5px;
+            padding: 0 3px;
             background: #374A5E;
             border: 0.5px solid #374A5E;
             box-sizing: border-box;
