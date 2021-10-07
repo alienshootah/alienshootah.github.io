@@ -1072,8 +1072,12 @@ input:checked + .slider:before {
             border: 0.5px solid #EAEAEA;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
             border-radius: 10px 10px;
+            min-height: 417px;
             & .start-drop {
                 display: block;
+            }
+            & .start-decor {
+                display: none;
             }
         }
     }
@@ -1083,11 +1087,13 @@ input:checked + .slider:before {
         align-items: center;
         padding: 3px;
         border-bottom: 0.5px solid #EAEAEA;
+        box-sizing: border-box;
+        margin: 0 -5px;
     }
     &-left,
     &-center,
     &-right {
-        padding: 0;
+        padding: 0 5px;
     }
     &-decor {
         display: inline-block;
@@ -1200,9 +1206,19 @@ input:checked + .slider:before {
     }
 }
 .join {
-    opacity: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: 290px;
+    text-align: center;
+    width: 100%;
+    display: none;
     &-body {
-        width: 100%;
+        display: inline-block;
+        width: 309px;
         margin: 30px 0 50px 0;
         padding: 10px;
         background: #F9F9F9;
@@ -1257,9 +1273,16 @@ input:checked + .slider:before {
         box-shadow: 0px 0px 4px rgba(55, 74, 94, 0.1);
         border-radius: 5px;
         margin-bottom: 5px;
-        &.active {
+        &.active,
+        &:hover,
+        &:focus {
             background: #374A5E;
             color: #FFFFFF;
+        }
+        &.active .steps-icon path,
+        &:hover .steps-icon path,
+        &:focus .steps-icon path {
+            fill: #ffffff;
         }
     }
     &-wrapper {
@@ -1274,24 +1297,38 @@ input:checked + .slider:before {
         min-width: 25px;
         width: 25px;
         height: 22px;
-        background-position: center;
-        background-repeat: no-repeat;
+        & path {
+            fill: #374A5E;
+            width: 25px!important;
+        }
+        /*
+        mask-position: center;
+        mask-repeat: no-repeat;
         margin-right: 7px;
+        background-color: #374A5E;
+        */
+        /*
         &-one {
-            background-image: url(../img/steps-icon-one.svg);
+            mask-image: url(../img/steps-icon-one.svg);
+            -webkit-mask-image: url(../img/steps-icon-one.svg);
         }
         &-thue {
-            background-image: url(../img/steps-icon-thue.svg);
+            mask-image: url(../img/steps-icon-thue.svg);
+            -webkit-mask-image: url(../img/steps-icon-thue.svg);
         }
         &-three {
-            background-image: url(../img/steps-icon-three.svg);
+            mask-image: url(../img/steps-icon-three.svg);
+            -webkit-mask-image: url(../img/steps-icon-three.svg);
         }
         &-four {
-            background-image: url(../img/steps-icon-four.svg);
+            mask-image: url(../img/steps-icon-four.svg);
+            -webkit-mask-image: url(../img/steps-icon-four.svg);
         }
         &-five {
-            background-image: url(../img/steps-icon-five.svg);
+            mask-image: url(../img/steps-icon-five.svg);
+            -webkit-mask-image: url(../img/steps-icon-five.svg);
         }
+        */
     }
     &-text {
         display: inline-block;

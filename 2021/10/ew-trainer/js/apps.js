@@ -157,3 +157,13 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+/* Start btn */
+if(document.querySelector(".start-row")) {
+  const startBtn = document.querySelector(".start-row");
+  startBtn.addEventListener("click", function() {
+    document.querySelector(".start-action").classList.toggle("active");
+  });
+}
+
+

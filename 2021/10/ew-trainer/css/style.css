@@ -1330,10 +1330,15 @@ input:checked + .slider:before {
   -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px 10px;
+  min-height: 417px;
 }
 
 .start-action.active .start-drop {
   display: block;
+}
+
+.start-action.active .start-decor {
+  display: none;
 }
 
 .start-row {
@@ -1344,10 +1349,13 @@ input:checked + .slider:before {
           align-items: center;
   padding: 3px;
   border-bottom: 0.5px solid #EAEAEA;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 -5px;
 }
 
 .start-left, .start-center, .start-right {
-  padding: 0;
+  padding: 0 5px;
 }
 
 .start-decor {
@@ -1479,11 +1487,21 @@ input:checked + .slider:before {
 }
 
 .join {
-  opacity: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: 290px;
+  text-align: center;
+  width: 100%;
+  display: none;
 }
 
 .join-body {
-  width: 100%;
+  display: inline-block;
+  width: 309px;
   margin: 30px 0 50px 0;
   padding: 10px;
   background: #F9F9F9;
@@ -1556,9 +1574,15 @@ input:checked + .slider:before {
   margin-bottom: 5px;
 }
 
-.steps-item.active {
+.steps-item.active, .steps-item:hover, .steps-item:focus {
   background: #374A5E;
   color: #FFFFFF;
+}
+
+.steps-item.active .steps-icon path,
+.steps-item:hover .steps-icon path,
+.steps-item:focus .steps-icon path {
+  fill: #ffffff;
 }
 
 .steps-wrapper {
@@ -1581,29 +1605,39 @@ input:checked + .slider:before {
   min-width: 25px;
   width: 25px;
   height: 22px;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-right: 7px;
+  /*
+        mask-position: center;
+        mask-repeat: no-repeat;
+        margin-right: 7px;
+        background-color: #374A5E;
+        */
+  /*
+        &-one {
+            mask-image: url(../img/steps-icon-one.svg);
+            -webkit-mask-image: url(../img/steps-icon-one.svg);
+        }
+        &-thue {
+            mask-image: url(../img/steps-icon-thue.svg);
+            -webkit-mask-image: url(../img/steps-icon-thue.svg);
+        }
+        &-three {
+            mask-image: url(../img/steps-icon-three.svg);
+            -webkit-mask-image: url(../img/steps-icon-three.svg);
+        }
+        &-four {
+            mask-image: url(../img/steps-icon-four.svg);
+            -webkit-mask-image: url(../img/steps-icon-four.svg);
+        }
+        &-five {
+            mask-image: url(../img/steps-icon-five.svg);
+            -webkit-mask-image: url(../img/steps-icon-five.svg);
+        }
+        */
 }
 
-.steps-icon-one {
-  background-image: url(../img/steps-icon-one.svg);
-}
-
-.steps-icon-thue {
-  background-image: url(../img/steps-icon-thue.svg);
-}
-
-.steps-icon-three {
-  background-image: url(../img/steps-icon-three.svg);
-}
-
-.steps-icon-four {
-  background-image: url(../img/steps-icon-four.svg);
-}
-
-.steps-icon-five {
-  background-image: url(../img/steps-icon-five.svg);
+.steps-icon path {
+  fill: #374A5E;
+  width: 25px !important;
 }
 
 .steps-text {
