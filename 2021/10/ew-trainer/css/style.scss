@@ -1053,6 +1053,9 @@ input:checked + .slider:before {
         }
     }
 }
+
+/* Start training */
+
 .start {
     &-body {
         background: #FFFFFF;
@@ -1338,6 +1341,195 @@ input:checked + .slider:before {
         display: inline-block;
         position: relative;
         top: -4px;
+    }
+}
+
+/* Together & Group training */
+.together {
+    margin-bottom: 200px;
+}
+.find {
+    margin-bottom: 25px;
+    &-descr {
+        font-size: 10px;
+        padding-left: 10px;
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+    &-row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-search {
+        width: calc(100% - 70px);
+    }
+    &-field {
+        background: #FFFFFF;
+        border-radius: 10px;
+        height: 50px;
+        width: 100%;
+        padding: 17px 17px 17px 49px;
+        border: 0;
+        font-size: 16px;
+        line-height: 19px;
+        background-image: url(../img/find-search-icon.svg);
+        background-position: 16px;
+        background-repeat: no-repeat;
+        &::placeholder {
+            color: #B3B9C5;
+        }
+    }
+    &-btn {
+        width: 53px;
+        height: 50px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        transition: all 0.5s;
+        &-icon {
+            display: inline-block;
+            min-width: 19px;
+            width: 19px;
+            height: 18px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/find-btn-icon.svg);
+            transition: all 0.5s;
+        }
+        &:hover,
+        &:focus,
+        &.active {
+            background-color: #374A5E;
+        }
+        &:hover .find-btn-icon,
+        &:focus .find-btn-icon,
+        &.active .find-btn-icon {
+            background-image: url(../img/find-btn-icon-white.svg);
+        }
+    }
+}
+.results {
+    &-descr {
+        font-size: 10px;
+        padding-left: 10px;
+        margin-top: 0;
+        margin-bottom: 6px;
+    }
+    &-body {
+        background: #FFFFFF;
+        border-radius: 10px;
+        min-height: 230px;
+        padding: 8px 12px;
+        box-sizing: border-box;
+    }
+}
+.members {
+    &-item {
+        margin: 10px 0;
+    }
+    &-wrapper {
+        margin: 0 -5px;
+        display: flex;
+        align-items: center;
+    }
+    &-image {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        margin-left: 5px;
+        margin-right: 6px;
+        margin-bottom: -3px;
+    }
+    &-name {
+        background: #F9F9F9;
+        border-radius: 5px;
+        padding: 6px 7px;
+        font-size: 12px;
+        font-family: $roboto-bold;
+        line-height: 14px;
+        color: #374A5E;
+        margin-left: 6px;
+        margin-right: 5px;
+        width: calc(100% - 144px);
+    }
+    &-status {
+        background: #F9F9F9;
+        border-radius: 5px;
+        font-size: 12px;
+        font-family: $roboto-bold;
+        line-height: 14px;
+        color: #B3B9C5;
+        padding: 6px 9px;
+        margin: 0 5px;
+        min-width: 52px;
+        text-align: center;
+        &-online {
+            background: #374A5E;
+            color: #FFFFFF;
+        }
+    }
+    &-star {
+        text-align: center;
+        display: block;
+        min-width: 29px;
+        width: 29px;
+        height: 26px;
+        background: #F9F9F9;
+        border-radius: 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0 5px;
+    }
+    &-icon {
+        margin-top: 6px;
+        display: inline-block;
+        min-width: 13px;
+        width: 13px;
+        height: 13px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/members-icon-one.svg);
+        }
+        &-thue {
+            background-image: url(../img/members-icon-thue.svg);
+        }
+    }
+}
+.times {
+    margin-top: 25px;
+    &-list {
+        display: flex;
+        margin: 0 -7px;
+    }
+    &-item {
+        margin: 7px;
+        text-align: center;
+        width: calc(50% - 14px);
+    }
+    &-text {
+        font-size: 10px;
+    }
+    &-field {
+        width: 100%;
+        height: 50px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 0;
+        padding: 16px 16px 16px 46px;
+        font-size: 16px;
+        line-height: 19px;
+        background-repeat: no-repeat;
+        background-position: 16px;
+        margin-top: 6px;
+        &::placeholder {
+            color: #B3B9C5;
+        }
+        &-date {
+            background-image: url(../img/times-field-date.svg);
+        }
+        &-time {
+            background-image: url(../img/times-field-time.svg);
+        }
     }
 }
 
