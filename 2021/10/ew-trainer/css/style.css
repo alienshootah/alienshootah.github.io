@@ -1324,6 +1324,7 @@ input:checked + .slider:before {
 
 .start-action.active {
   position: absolute;
+  z-index: 10;
   width: 100%;
   background: #FFFFFF;
   border: 0.5px solid #EAEAEA;
@@ -1412,7 +1413,7 @@ input:checked + .slider:before {
 .start-num {
   text-align: center;
   font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
-  font-size: 192px;
+  font-size: 180px;
   line-height: 1;
   margin: 7px 0 8px 0;
 }
@@ -1586,6 +1587,8 @@ input:checked + .slider:before {
           box-shadow: 0px 0px 4px rgba(55, 74, 94, 0.1);
   border-radius: 5px;
   margin-bottom: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .steps-item.active, .steps-item:hover, .steps-item:focus {
@@ -1630,6 +1633,13 @@ input:checked + .slider:before {
 .steps-icon path {
   fill: #374A5E;
   width: 25px !important;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.steps-icon-three {
+  position: relative;
+  left: -1px;
 }
 
 .steps-icon-four {

@@ -1067,6 +1067,7 @@ input:checked + .slider:before {
         overflow: hidden;
         &.active {
             position: absolute;
+            z-index: 10;
             width: 100%;
             background: #FFFFFF;
             border: 0.5px solid #EAEAEA;
@@ -1141,7 +1142,7 @@ input:checked + .slider:before {
     &-num {
         text-align: center;
         font-family: $roboto-bold;
-        font-size: 192px;
+        font-size: 180px;
         line-height: 1;
         margin: 7px 0 8px 0;
     }
@@ -1285,6 +1286,7 @@ input:checked + .slider:before {
         box-shadow: 0px 0px 4px rgba(55, 74, 94, 0.1);
         border-radius: 5px;
         margin-bottom: 5px;
+        transition: all 0.5s;
         &.active,
         &:hover,
         &:focus {
@@ -1317,6 +1319,11 @@ input:checked + .slider:before {
         & path {
             fill: #374A5E;
             width: 25px!important;
+            transition: all 0.5s;
+        }
+        &-three {
+            position: relative;
+            left: -1px; 
         }
         &-four {
             position: relative;
