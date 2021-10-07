@@ -1550,7 +1550,59 @@ input:checked + .slider:before {
         color: #374A5E;
     }
 }
-
+.group {
+    &-nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 5px -5px;
+        &-item {
+            margin: 5px;
+            &.active,
+            &:hover,
+            &:focus {
+                & .group-nav-link {
+                    color: #FFFFFF;
+                    background: #374A5E;
+                }
+            }
+        }
+        &-link {
+            display: inline-block;
+            text-decoration: none;
+            font-family: $roboto-bold;
+            font-size: 12px;
+            line-height: 14px;
+            color: #374A5E;
+            background: #FFFFFF;
+            border-radius: 10px;
+            padding: 9px 15px;
+            transition: all 0.5s;
+            
+        }
+    }
+    &-btn {
+        padding: 0px;
+        font-size: 22px;
+        color: #374A5E;
+        width: 32px;
+        height: 32px;
+        background: #FFFFFF;
+        border-radius: 10px;
+        line-height: 1.3;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #374A5E;
+            color: #ffffff;
+        }
+    }
+    &-content {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
 /* Dropdown */
 .drop {
     width: 100%;
