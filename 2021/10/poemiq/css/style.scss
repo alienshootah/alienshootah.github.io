@@ -367,6 +367,109 @@ h1, h2, h3, h4, h5, h6, b, strong {
         }
     }
 }
+.preview {
+    &-body {
+        background-color: #f5edf3;
+        padding: 45px 35px;
+        box-sizing: border-box;
+    }
+    &-image {
+        width: 100%;
+        height: 174px;
+    }
+    &-title {
+        color: #000000;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &-descr {
+        font-size: 14px;
+        font-family: $open-regular;
+        color: #353866;
+        max-width: 620px;
+    }
+}
+.breadcrumbs {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 20px -5px;
+        font-family: $open-regular;
+        font-size: 14px;
+        color: #999999;
+    }
+    &-item {
+        margin: 5px;
+        &::before {
+            content: '-';
+            display: inline-block;
+        }
+        &:first-child {
+            &::before {
+                content: none;
+            }
+        }
+    }
+    &-link {
+        color: #999999;
+        text-decoration: none;
+        border-bottom: 1px solid #999999;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+.buy {
+    margin-top: 50px;
+    &-list {
+        display: flex;
+        margin: 0 -20px;
+    }
+    &-item {
+        width: calc(50% - 40px);
+        margin: 20px;
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &-picture {
+        margin-right: 35px;
+    }
+    &-image {
+        width: 300px;
+        height: 168px;
+    }
+    &-title {
+        font-size: 23px;
+        font-family: $raleway-light;
+        color: #353866;
+        line-height: 1.8;
+        margin-top: 0;
+    }
+    &-semi {
+        font-family: $raleway-medium;
+        display: block;
+    }
+    &-more {
+        font-family: $raleway-medium;
+        font-size: 12px;
+        &-link {
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 1px solid #353866;
+            transition: all 0.5s;
+            color: #353866;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+}
 
 /* Footer */
 
