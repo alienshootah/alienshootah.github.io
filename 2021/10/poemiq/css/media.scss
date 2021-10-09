@@ -36,6 +36,22 @@
             margin-right: 0;
         }
     }
+    .buy {
+        &-list {
+            display: block;
+        }
+        &-item {
+            width: calc(100% - 30px);
+        }
+    }
+    .preview {
+        &-row {
+            align-items: center;
+        }
+        &-image {
+            height: 134px;
+        }
+    }
 }
 @media(max-width: 768px) {
     .header {
@@ -153,6 +169,21 @@
             }
         }
     }
+    .preview {
+        &-row {
+            display: block;
+            & .col-4 {
+                width: 100%;
+            }
+            & .col-8 {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+        &-image {
+            height: auto;
+        }
+    }
 }
 @media(max-width: 540px) {
     .promo {
@@ -204,6 +235,24 @@
         text-align: center;
         &-descr {
             max-width: initial;
+        }
+    }
+    .preview {
+        &-body {
+            padding: 25px 25px;
+        }
+    }
+    .buy {
+        margin-top: 43px;
+        &-item {
+            margin-bottom: 40px;
+        }
+        &-picture {
+            margin: 0 0 20px 0;
+        }
+        &-wrapper {
+            display: block;
+            text-align: center;
         }
     }
 }
