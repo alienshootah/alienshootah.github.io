@@ -1,12 +1,17 @@
 @media(max-width: 1880px) {
+    .header {
+        background-size: 80%; 
+    }
     .services {
         &-list {
-            flex-wrap: wrap;
             margin-left: -15px;
             margin-right: -15px;
         }
         &-item {
             margin: 5px 15px;
+        }
+        &-link {
+            margin: 0;
         }
     }
     .wecan {
@@ -14,24 +19,24 @@
         &-list {
             justify-content: center;
         }
-        &-item {
-            width: calc(33.3333% - 30px);
-        }
     }
     .better {
         &-list {
-            flex-wrap: wrap;
             justify-content: center;
-            margin-left: -15px;
-            margin-right: -15px;
+            margin-left: -10px;
+            margin-right: -10px;
         }
         &-item {
-            width: calc(33.3333% - 30px);
+            width: calc(20% - 20px);
+        }
+        &-wrapper {
+            padding: 44px 30px;
         }
         &-subtitle {
-            min-height: auto;
+            font-size: 24px;
         }
     }
+    /*
     .types {
         &-item {
             position: static!important;
@@ -70,6 +75,32 @@
             text-align: center!important;
         }
     }
+    */
+    .types {
+        &-logo {
+            width: 100%;
+        }
+        &-title {
+            font-size: 58px;
+        }
+        &-item {
+            &:nth-child(2)  {
+                & .types-descr {
+                    right: 18px;
+                }
+            }
+            &:nth-child(3)  {
+                & .types-descr {
+                    right: -30px;
+                }
+            }
+            &:nth-child(4)  {
+                & .types-descr {
+                    top: -150px;
+                }
+            }
+        }
+    }
     .steps {
         margin-top: 100px;
         &-list {
@@ -81,7 +112,13 @@
             margin-right: 15px;
             margin-top: 20px;
             margin-bottom: 20px;
-            width: calc(33.3333% - 30px)
+            width: calc(20% - 30px)
+        }
+        &-picture {
+            width: 250px;
+            height: 250px;
+            background-size: contain;
+            padding-top: 96px;
         }
     }
 }
@@ -358,6 +395,7 @@
         &-list {
             font-size: 24px;
             text-align: center;
+            max-width: 100%;
         }
         &-wrapper {
             display: block;
@@ -366,6 +404,9 @@
     }
     .feedback {
         text-align: center;
+        &-list {
+            max-width: 100%;
+        }
         &-more {
             &-btn {
                 position: static;
