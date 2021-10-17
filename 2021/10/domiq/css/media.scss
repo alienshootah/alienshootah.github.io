@@ -138,18 +138,39 @@
             max-width: 97%;
             margin-left: auto;
             margin-right: auto;
-            background-color: rgba($color: #ffffff, $alpha: 0.75);
             margin-top: 60px;
             margin-bottom: 80px;
             text-align: center;
             padding: 20px;
             border-radius: 30px;
             box-sizing: border-box;
-            border: 1px solid #cccccc;
-            box-shadow: 1px 2px 20px 3px rgba($color: #000000, $alpha: 0.15);
         }
         &-descr {
             max-width: 100%;
+        }
+    }
+    .full {
+        &-body {
+            overflow-x: scroll;
+        }
+        &-image {
+            width: auto;
+        }
+    }
+    .services {
+        &-list {
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+            justify-content: center;
+        }
+        &-item {
+            margin: 15px;
+        }
+    }
+    .wecan {
+        &-item {
+            width: calc(50% - 30px);
         }
     }
     .better {
@@ -159,27 +180,67 @@
         &-descr {
             font-size: 36px;
         }
+        &-list {
+            flex-wrap: wrap;
+        }
+        &-item {
+            width: calc(33.3333% - 30px);
+        }
     }
     .types {
+        &-title {
+            font-size: 31px;
+        }
         &-item {
+            &:nth-child(1) {
+                width: 100%;
+                order: 0;
+                margin-bottom: 100px;
+            }
             &:nth-child(2) {
+                order: 2;
+                position: static;
                 & .types-image {
-                    position: relative;
-                    left: 11%;
+                    width: 100%;
+                    max-width: 500px;
+                }
+                & .types-descr {
+                    right: 58px;
                 }
             }
             &:nth-child(3) {
+                width: 50%;
+                order: 1;
+                top: 200px;
                 & .types-image {
-                    position: relative;
-                    right: 8%;
+                    width: 100%;
                 }
             }
             &:nth-child(4) {
+                width: 100%;
+                order: 3;
+                margin-top: 200px;
+                text-align: right;
                 & .types-image {
-                    position: relative;
-                    left: 8%;
+                    width: 100%;
+                    max-width: 680px;
+                }
+                & .types-descr {
+                    top: -100px;
+                    left: -450px;
                 }
             }
+        }
+        &-descr {
+            font-size: 25px;
+        }
+        &-logo {
+            max-width: 400px;
+        }
+    }
+    .steps {
+        &-item {
+            width: calc(33.3333% - 30px);
         }
     }
 }
