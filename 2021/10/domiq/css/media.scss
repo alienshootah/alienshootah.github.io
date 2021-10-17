@@ -659,12 +659,24 @@
     }
 }
 @media(max-width: 520px) {
+    .header {
+        &-body {
+            margin-bottom: 0;
+        }
+    }
+    .full {
+        margin-top: 25px;
+    }
     .services {
         &-link {
             width: 170px;
         }
     }
     .promo {
+        &-body {
+            padding-right: 0;
+            text-align: center;
+        }
         &-prev {
             font-size: 22px;
         }
@@ -689,8 +701,14 @@
         &-list {
             margin-top: 20px;
         }
+        &-item {
+            width: 100%;
+        }
         &-wrapper {
             padding: 40px 35px;
+        }
+        &-subtitle {
+            min-height: auto;
         }
         &-more {
             margin-top: 40px;
@@ -705,6 +723,31 @@
         }
         &-title {
             font-size: 24px;
+        }
+        &-item {
+            &:nth-child(2) {
+                & .types-image {
+                    left: -20px;
+                    width: 250px;
+                }
+                & .types-descr {
+                    top: -10px;
+                }
+            }
+            &:nth-child(3) {
+                & .types-descr {
+                    top: 0;
+                }
+            }
+            &:nth-child(4) {
+                & .types-image {
+                    left: -20px;
+                    width: 282px;
+                }
+                & .types-descr {
+                    top: -15px;
+                }
+            }
         }
         &-image {
             max-width: 282px;
