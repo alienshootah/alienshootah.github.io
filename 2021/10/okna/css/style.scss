@@ -781,7 +781,7 @@ h2 {
     background-color: #0091dc;
     color: #ffffff;
     padding: 32px 40px;
-    margin: 75px 0;
+    margin: 75px 0 0 0;
     font-size: 16px;
     &-row {
         align-items: center;
@@ -945,5 +945,212 @@ h2 {
     }
 }
 .brands {
-    
+    margin: 100px 0 100px 0;
+    &-list {
+        position: relative;
+    }
+    & .swiper-wrapper {
+        display: flex;
+        margin: 0 -15px;
+    }
+    &-item {
+        margin: 15px;
+    }
+    &-arrows {
+        position: absolute;
+        top: 32%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    &-arrow {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        position: absolute;
+        &-left {
+            left: -75px;
+            background-image: url(../img/clients-arrow-left.png);
+        }
+        &-right {
+            right: -75px;
+            background-image: url(../img/clients-arrow-right.png);
+        }
+    }
+}
+.also {
+    margin: 50px 0 150px 0;
+    &-body {
+        background-color: #f3f6f8;
+        padding: 40px 30px;
+        position: relative;
+    }
+    &-list {
+        font-size: 16px;
+        text-align: center;
+        margin: 10px -15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        margin: 30px 15px;
+        width: calc(16.6666% - 30px);
+    }
+    &-image {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin-bottom: 0px;
+    }
+    &-link {
+        color: #212834;
+        text-decoration: none;
+        border-bottom: 1px solid #212834;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+    &-decor {
+        display: inline-block;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        &-one {
+            top: -25px;
+            left: -130px;
+            width: 204px;
+            height: 159px;
+            background-image: url(../img/also-decor-one.png);
+        }
+    }
+}
+.steps {
+    &-list {
+        font-size: 16px;
+        margin: 45px -15px;
+        text-align: center;
+        display: flex;
+    }
+    &-item {
+        width: calc(16.6666% - 30px);
+        margin: 15px;
+        position: relative;
+        &:after {
+            position: absolute;
+            top: 25px;
+            left: 190px;
+            content: '';
+            display: inline-block;
+            min-width: 30px;
+            width: 30px;
+            height: 22px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/steps-item-after.png);
+        }
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+    }
+    &-picture {
+        position: relative;
+        margin-bottom: 10px;
+        width: 65px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &-number {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: #212834;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 65px;
+        width: 65px;
+        height: 65px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/steps-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/steps-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/steps-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/steps-icon-four.png);
+        }
+        &-five {
+            background-image: url(../img/steps-icon-five.png);
+        }
+        &-six {
+            background-image: url(../img/steps-icon-six.png);
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: #212834;
+    color: #ffffff;
+    padding: 50px 0;
+    &-logo {
+        display: flex;
+        align-items: center;
+        &-image {
+            margin-right: 15px;
+            position: relative;
+            top: -1px;
+        }
+        &-name {
+            font-family: $mont-medium;
+        }
+        &-text {
+            display: block;
+            font-family: $mont-light;
+        }
+    }
+    &-descr {
+        font-family: $roboto-light;
+        margin-top: 30px;
+    }
+    &-copy {
+        font-size: 12px;
+        margin-top: 30px;
+    }
+    &-title {
+        display: inline-block;
+        margin-top: 0;
+        color: #94b0ca;
+        font-family: $roboto-medium;
+        font-size: 18px;
+        font-weight: normal;
+        text-transform: uppercase;
+        border-bottom: 5px double #0091dc;
+        padding-bottom: 8px;
+    }
+    &-list {
+        font-size: 14px;
+    }
 }
