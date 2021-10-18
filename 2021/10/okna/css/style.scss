@@ -157,9 +157,14 @@ body {
     font-family: $roboto-reg;
     font-size: 14px;
     color: #212834;
+    line-height: 1.4;
 }
 h1, h2, h3, h4, h5, h6, b, strong {
     font-family: $mont-bold;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 22px;
 }
 
 /* Header */
@@ -349,6 +354,7 @@ h1, h2, h3, h4, h5, h6, b, strong {
 /* Sections */
 
 .promo {
+    overflow: hidden;
     &-body {
         background-position: top center;
         background-repeat: no-repeat;
@@ -357,6 +363,29 @@ h1, h2, h3, h4, h5, h6, b, strong {
         color: #ffffff;
         padding: 55px;
         box-sizing: border-box;
+        position: relative;
+    }
+    &-decor {
+        display: inline-block;
+        position: absolute;
+        &-one {
+            bottom: 0;
+            left: -150px;
+            width: 170px;
+            height: 143px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-icon-one.png);
+        }
+        &-thue {
+            top: 0;
+            right: -150px;
+            width: 119px;
+            height: 176px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-decor-thue.png);
+        }
     }
     &-block {
         max-width: 760px;
@@ -440,6 +469,215 @@ h1, h2, h3, h4, h5, h6, b, strong {
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/promo-btn-icon.png);
+        }
+    }
+}
+.better {
+    margin: 20px 0;
+    overflow: hidden;
+    &-body {
+        background-color: #f3f6f8;
+        padding: 50px 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+    &-picture {
+        position: relative;
+        left: -30px;
+    }
+    &-title {
+        margin-top: 0;
+    }
+    &-row {
+        & .col-8 {
+            padding-left: 40px;
+        }
+    }
+    &-list {
+        font-size: 16px;
+        margin: 40px 0;
+    }
+    &-item {
+        margin: 5px 0;
+        &:before {
+            content: '-';
+        }
+    }
+    &-decor {
+        display: inline-block;
+        width: 272px;
+        height: 213px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/better-decor-one.png);
+        position: absolute;
+        top: 75px;
+        right: -200px;
+    }
+}
+.info {
+    &-list {
+        display: flex;
+        max-width: 650px;
+    }
+    &-item {
+        background-color: #ffffff;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        margin: 2px;
+        width: calc(25% - 2px);
+        &:nth-child(1) {
+            background-color: #f7f9fa;
+        }
+        &:nth-child(2) {
+            background-color: #fafbfc;
+        }
+        &:nth-child(3) {
+            background-color: #fefefe;
+        }
+        &:nth-child(4) {
+            background-color: #212834;
+            color: #ffffff;
+        }
+    }
+    &-number {
+        font-size: 38px;
+        font-family: $roboto-black;
+    }
+    &-text {
+        margin: 5px 0 0 0;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 35px;
+        width: 35px;
+        height: 29px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/info-icon.png);
+        margin-top: 10px;
+    }
+    &-link {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 1px solid #ffffff;
+        transition: all 0.5s;
+        font-size: 14px;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+.types {
+    margin: 80px 0;
+    &-body {
+        position: relative;
+    }
+    &-nav {
+        font-size: 18px;
+        display: flex;
+        border-bottom: 1px solid #d7e2e9;
+        &-item {
+            &.active,
+            &:hover,
+            &:focus {
+                & .types-nav-link {
+                    background-color: rgb(0, 145, 220);
+                    color: #ffffff;
+                    box-shadow: 0px 6px 40px 0px rgba(0, 145, 220, 0.32);
+                }
+            }
+            &.active {
+                & .types-nav-link {
+                    font-family: $roboto-bold;
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            }
+        }
+        &-link {
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.5s;
+            padding: 15px 10px;
+            color: #212834;
+        }
+    }
+    &-left {
+        width: 28%;
+    }
+    &-center {
+        width: 42%;
+    }
+    &-right {
+        width: 30%;
+    }
+    &-image {
+        max-width: 350px;
+        max-height: 350px;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #d9e3ea;
+    }
+    &-content {
+        padding: 45px 0;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    &-name {
+        font-size: 20px;
+    }
+    &-subtitle {
+        margin-bottom: 0;
+        font-size: 16px;
+        font-family: $roboto-medium;
+    }
+    &-text {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+    &-list {
+        margin-top: 20px;
+        font-size: 16px;
+        font-family: $roboto-medium;
+    }
+    &-item {
+        margin: 5px 0;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 20px;
+            width: 20px;
+            height: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/types-item-before.png);
+            margin-right: 10px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    &-decor {
+        display: inline-block;
+        position: absolute;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            width: 168px;
+            height: 132px;
+            top: -25px;
+            left: -135px;
+            background-image: url(../img/types-decor-one.png);
+        }
+        &-thue {
+            top: 30px;
+            right: -135px;
+            width: 196px;
+            height: 143px;
+            background-image: url(../img/types-decor-thue.png);
         }
     }
 }
