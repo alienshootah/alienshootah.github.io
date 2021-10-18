@@ -345,3 +345,101 @@ h1, h2, h3, h4, h5, h6, b, strong {
         }
     }
 }
+
+/* Sections */
+
+.promo {
+    &-body {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/promo-bg.jpg);
+        color: #ffffff;
+        padding: 55px;
+        box-sizing: border-box;
+    }
+    &-block {
+        max-width: 760px;
+    }
+    &-title {
+        font-size: 39px;
+        font-family: $mont-extra;
+    }
+    &-list {
+        font-size: 18px;
+    }
+    &-item {
+        margin: 5px 0;
+        &:before {
+            content: '-';
+        }
+    }
+    &-more {
+        margin-top: 40px;
+        &-list {
+            margin: 0 -10px;
+            display: flex;
+            align-items: center;
+        }
+        &-item {
+            margin: 10px;
+        }
+    }
+    &-tel {
+        width: 240px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #0091dc;
+        padding: 16px 20px 14px 20px;
+        text-decoration: none;
+        background-color: #ffffff;
+        color: #666666;
+        box-sizing: border-box;
+        font-size: 18px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #dddddd;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 25px;
+            width: 25px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-tel-icon.png);
+            position: relative;
+            top: -1px;
+        }
+        &-text {
+            margin-left: 15px;
+        }
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        background-color: #0091dc;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 16px 20px 14px 20px;
+        font-size: 18px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #11a0e7;
+        }
+        &-text {
+            margin-right: 10px;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 25px;
+            width: 25px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-btn-icon.png);
+        }
+    }
+}
