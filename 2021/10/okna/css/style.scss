@@ -1,0 +1,285 @@
+/* Fonts */
+
+$mont-medium: 'Montserrat-Medium', Arial, Helvetica, sans-serif;
+$mont-light: 'Montserrat-Light', Arial, Helvetica, sans-serif;
+$mont-extra: 'Montserrat-ExtraBold', Arial, Helvetica, sans-serif;
+$mont-bold: 'Montserrat-Bold', Arial, Helvetica, sans-serif;
+
+$proxima-reg: 'ProximaNova-Regular', Arial, Helvetica, sans-serif;
+
+$roboto-reg: 'Roboto-Regular', Arial, Helvetica, sans-serif;
+$roboto-black: 'Roboto-Black', Arial, Helvetica, sans-serif;
+$roboto-bold: 'Roboto-Bold', Arial, Helvetica, sans-serif;
+$roboto-light: 'Roboto-Light', Arial, Helvetica, sans-serif;
+$roboto-medium: 'Roboto-Medium', Arial, Helvetica, sans-serif;
+
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(../fonts/Montserrat-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(../fonts/Montserrat-Light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url(../fonts/Montserrat-ExtraBold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(../fonts/Montserrat-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src: url(../fonts/ProximaNova-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url(../fonts/Roboto-Black.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto-Light.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Grid */
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.row {
+    display: flex;
+    margin: 0 -15px;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.col-12{width: 100%;}
+.col-11{width: 91.66666667%;}
+.col-10{width: 83.33333333%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66666667%;}
+.col-7 {width: 58.33333333%;}
+.col-6 {width: 50%;}
+.col-5 {width: 41.66666667%;}
+.col-4 {width: 33.33333333%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66666667%;}
+.col-1 {width: 8.33333333%;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: $roboto-reg;
+}
+input,
+textarea {
+    box-sizing: border-box;
+    font-family: $roboto-reg;
+}
+
+/* Main styles */
+
+html {
+    scroll-behavior: smooth;
+}
+.content {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1300px;
+}
+body {
+    font-family: $roboto-reg;
+    font-size: 14px;
+    color: #212834;
+}
+h1, h2, h3, h4, h5, h6, b, strong {
+    font-family: $mont-bold;
+}
+
+/* Header */
+
+.header {
+    padding: 30px 0;
+    &-row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/header-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/header-icon-thue.png);
+        }
+    }
+    &-item {
+        margin-left: 60px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &-wrapper {
+        display: flex;
+    }
+    &-descr {
+        margin-left: 15px;
+    }
+    &-text {
+        display: block;
+        color: #94b0ca;
+    }
+    &-tel {
+        color: #000000;
+        font-size: 15px;
+        font-family: $roboto-medium;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #000000;
+        }
+    }
+    &-mail {
+        color: #94b0ca;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #94b0ca;
+        }
+    }
+    &-btn {
+        background-color: #212834;
+        color: #ffffff;
+        font-size: 13px;
+        text-transform: uppercase;
+        padding: 15px 15px;
+        box-sizing: border-box;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #3e485a;
+        }
+    }
+}
+.logo {
+    font-size: 14px;
+    &-body {
+        display: flex;
+        align-items: center;
+    }
+    &-picture {
+        position: relative;
+        top: 1px;
+    }
+    &-descr {
+        margin-left: 15px;
+    }
+    &-name {
+        font-family: $mont-medium;
+    }
+    &-text {
+        font-family: $mont-light;
+        display: block;
+    }
+}
+
+/* Menu */
+
+.nav {
+    background-color: #0091dc;
+    margin-top: 20px;
+    &-list {
+        font-size: 16px;
+        color: #ffffff;
+        display: flex;
+    }
+    &-link {
+        color: #ffffff;
+        text-decoration: none;
+        display: inline-block;
+        padding: 15px 60px;
+    }
+}
+.drop {
+    display: none;
+}
