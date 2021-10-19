@@ -111,6 +111,9 @@ if(document.querySelector(".brands-list")) {
     var brandsSlider = new Swiper(".brands-list", {
         slidesPerView: 6,
         breakpoints: {
+          317: {
+            slidesPerView: 1,
+          },
           400: {
             slidesPerView: 2,
           },
