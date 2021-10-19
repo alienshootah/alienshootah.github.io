@@ -88,12 +88,12 @@ if(document.querySelector(".brands-list")) {
     var brandsSlider = new Swiper(".brands-list", {
         slidesPerView: 6,
         breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
           768: {
             slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          970: {
+            slidesPerView: 5,
             spaceBetween: 40,
           },
           1070: {
