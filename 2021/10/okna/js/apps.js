@@ -124,3 +124,74 @@ if(document.querySelector(".brands-list")) {
         },
     });
 }
+
+/* Dropdowns */
+
+// Transition
+function fadeIn(el) {
+    el.style.opacity = 0;
+    el.style.display = "block";
+  
+    (function fade() {
+      var val = parseFloat(el.style.opacity);
+      if (!((val += 0.1) >= 1.1)) {
+        el.style.opacity = val;
+        requestAnimationFrame(fade);
+      }
+    }());
+  }
+  
+  function fadeOut(el) {
+    (function fade() {
+      var val = parseFloat(el.style.opacity);
+      if ((val -= 0.1) == 0) {
+        el.style.opacity = 0;
+        el.style.display = "none";
+      } else {
+        el.style.opacity = val;
+        requestAnimationFrame(fade);
+      }
+    }());
+  }
+  
+  // Initialise all the required variables
+  var btn = document.querySelectorAll(".nav-drop");
+  
+  /*
+   *	Button click event listeners
+   *	Keeps track of the button click.
+   */
+  btn.forEach(function(btn) {
+    btn.addEventListener("click", function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      var sibling = btn.nextElementSibling,
+        firstVisible = document.querySelector('.visible'),
+        dropDown;
+  
+      /*
+       * Remove the visible class if an element is already in the DOM
+       */
+      if (firstVisible) {
+        fadeOut(firstVisible);
+        firstVisible.classList.remove("visible");
+      }
+  
+      if (!sibling.classList.contains("visible")) {
+        fadeIn(sibling);
+        sibling.classList.add("visible");
+      } else {
+        fadeOut(sibling);
+        sibling.classList.remove("visible");
+      }
+    });
+  });
+  
+  document.addEventListener("click", function() {
+    var visible = document.querySelector(".visible");
+  
+    if (visible) {
+        fadeOut(visible);
+        visible.classList.remove("visible");
+    }
+  });
