@@ -74,6 +74,19 @@ window.addEventListener("DOMContentLoaded", function() {
 if(document.querySelector(".clients-list")) {
     var clientsSlider = new Swiper(".clients-list", {
         slidesPerView: 3,
+        breakpoints: {
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          750: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          993: {
+            slidesPerView: 3,
+          },
+        },
         loop: true,
         navigation: {
             prevEl: ".clients-arrow-left",
@@ -88,8 +101,12 @@ if(document.querySelector(".brands-list")) {
     var brandsSlider = new Swiper(".brands-list", {
         slidesPerView: 6,
         breakpoints: {
-          768: {
-            slidesPerView: 4,
+          520: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          767: {
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           970: {
