@@ -721,20 +721,17 @@ h2 {
 }
 .clients {
     margin: 30px 0;
-    &-list {
-        margin: 0 -15px;
+    &-body {
         position: relative;
     }
-    & .swiper-wrapper {
+    &-list {
         display: flex;
-    }
-    & .swiper-slide {
-        margin: 15px;
-        width: calc(33.3333% - 30px);
+        overflow: hidden;
+        margin: 0 -15px;
     }
     &-item {
         border: 1px solid #d7e2e9;
-    
+        margin: 15px;
     }
     &-wrapper {
         padding: 20px;
@@ -760,6 +757,7 @@ h2 {
         box-sizing: border-box;
     }
     &-arrow {
+        z-index: 100;
         display: inline-block;
         width: 50px;
         height: 50px;
@@ -772,7 +770,7 @@ h2 {
             background-image: url(../img/clients-arrow-left.png);
         }
         &-right {
-            right: -60px;
+            right: -90px;
             background-image: url(../img/clients-arrow-right.png);
         }
     }
@@ -824,7 +822,7 @@ h2 {
     }
 }
 .special {
-    margin: 20px 0;
+    margin: 90px 0 20px 0;
     &-list {
         margin: 15px -15px;
         font-size: 16px;
@@ -946,11 +944,11 @@ h2 {
 }
 .brands {
     margin: 100px 0 100px 0;
-    &-list {
+    &-body {
         position: relative;
     }
-    & .swiper-wrapper {
-        display: flex;
+    &-list {
+        overflow: hidden;
         margin: 0 -15px;
     }
     &-item {
@@ -975,7 +973,7 @@ h2 {
             background-image: url(../img/clients-arrow-left.png);
         }
         &-right {
-            right: -75px;
+            right: -100px;
             background-image: url(../img/clients-arrow-right.png);
         }
     }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Главная | Оконный сервис</title>
 </head>
@@ -52,7 +53,7 @@
                                 </div>
                             </li>
                             <li class="header-item">
-                                <button class="header-btn">Бесплатная консультация</button>
+                                <button class="header-btn open-modal" data-modal="modal-01">Бесплатная консультация</button>
                             </li>
                         </ul>
                     </div>
@@ -145,7 +146,7 @@
                                     </a>
                                 </li>
                                 <li class="promo-more-item">
-                                    <button class="promo-btn">
+                                    <button class="promo-btn open-modal" data-modal="modal-01">
                                         <span class="promo-btn-text">
                                             Оставить заявку
                                         </span>
@@ -209,7 +210,7 @@
                                     <li class="info-item">
                                         <span class="info-icon"></span>
                                         <p class="info-text">
-                                           <a href="#" class="info-link">
+                                           <a href="#" class="info-link open-modal" data-modal="modal-01">
                                                 Заявка на <br>расчет!
                                            </a>
                                         </p>
@@ -229,35 +230,35 @@
                     <h2 class="types-title">Типы остекления</h2>
                     <ul class="types-nav">
                         <li class="types-nav-item">
-                            <a href="#" class="types-nav-link">Фасадное остекление</a>
+                            <a href="#tab-01" class="types-nav-link">Фасадное остекление</a>
                         </li>
                         <li class="types-nav-item">
-                            <a href="#" class="types-nav-link">Витражное остекление</a>
+                            <a href="#tab-02" class="types-nav-link">Витражное остекление</a>
                         </li>
                         <li class="types-nav-item">
-                            <a href="#" class="types-nav-link">Наращивание профиля</a>
+                            <a href="#tab-03" class="types-nav-link">Наращивание профиля</a>
                         </li>
                         <li class="types-nav-item">
-                            <a href="#" class="types-nav-link">Вклейка стекол</a>
+                            <a href="#tab-04" class="types-nav-link">Вклейка стекол</a>
                         </li>
                         <li class="types-nav-item active">
-                            <a href="#" class="types-nav-link">Бесшовные термокороба</a>
+                            <a href="#tab-05" class="types-nav-link">Бесшовные термокороба</a>
                         </li>
                     </ul>
                     <div class="types-tabs">
-                        <div class="types-content">
+                        <div class="types-content" id="tab-01">
                             Фасадное остекление
                         </div>
-                        <div class="types-content">
+                        <div class="types-content" id="tab-02">
                             Витражное остекление
                         </div>
-                        <div class="types-content">
+                        <div class="types-content" id="tab-03">
                             Наращивание профиля
                         </div>
-                        <div class="types-content">
+                        <div class="types-content" id="tab-04">
                             Вклейка стекол
                         </div>
-                        <div class="types-content active">
+                        <div class="types-content active" id="tab-05">
                             <div class="row types-row">
                                 <div class="col-4 types-left">
                                     <div class="types-picture">
@@ -334,54 +335,98 @@
         <section class="clients">
             <div class="content">
                 <h2 class="clients-title">НАШИ КЛИЕНТЫ</h2>
-                <div class="clients-list">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="clients-item">
-                                <div class="clients-wrapper">
-                                    <div class="clients-picture">
-                                        <img src="img/clients-image1.jpg" alt="" class="clients-image">
+                <div class="clients-body">
+                    <div class="clients-list">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <div class="clients-wrapper">
+                                        <div class="clients-picture">
+                                            <img src="img/clients-image1.jpg" alt="" class="clients-image">
+                                        </div>
+                                        <h3 class="clients-company">ООО “ЛСР”</h3>
+                                        <span class="clients-name">Петров А.В., директор.</span>
+                                        <p class="clients-text">
+                                            Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
+                                        </p>
                                     </div>
-                                    <h3 class="clients-company">ООО “ЛСР”</h3>
-                                    <span class="clients-name">Петров А.В., директор.</span>
-                                    <p class="clients-text">
-                                        Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
-                                    </p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <div class="clients-wrapper">
+                                        <div class="clients-picture">
+                                            <img src="img/clients-image2.jpg" alt="" class="clients-image">
+                                        </div>
+                                        <h3 class="clients-company">ООО “ПИК”</h3>
+                                        <span class="clients-name">Петров А.В., директор.</span>
+                                        <p class="clients-text">
+                                            Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <div class="clients-wrapper">
+                                        <div class="clients-picture">
+                                            <img src="img/clients-image3.jpg" alt="" class="clients-image">
+                                        </div>
+                                        <h3 class="clients-company">ООО “Интер Строй”</h3>
+                                        <span class="clients-name">Петров А.В., директор.</span>
+                                        <p class="clients-text">
+                                            Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <div class="clients-wrapper">
+                                        <div class="clients-picture">
+                                            <img src="img/clients-image1.jpg" alt="" class="clients-image">
+                                        </div>
+                                        <h3 class="clients-company">ООО “ЛСР”</h3>
+                                        <span class="clients-name">Петров А.В., директор.</span>
+                                        <p class="clients-text">
+                                            Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <div class="clients-wrapper">
+                                        <div class="clients-picture">
+                                            <img src="img/clients-image2.jpg" alt="" class="clients-image">
+                                        </div>
+                                        <h3 class="clients-company">ООО “ПИК”</h3>
+                                        <span class="clients-name">Петров А.В., директор.</span>
+                                        <p class="clients-text">
+                                            Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <div class="clients-wrapper">
+                                        <div class="clients-picture">
+                                            <img src="img/clients-image3.jpg" alt="" class="clients-image">
+                                        </div>
+                                        <h3 class="clients-company">ООО “Интер Строй”</h3>
+                                        <span class="clients-name">Петров А.В., директор.</span>
+                                        <p class="clients-text">
+                                            Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="clients-item">
-                                <div class="clients-wrapper">
-                                    <div class="clients-picture">
-                                        <img src="img/clients-image2.jpg" alt="" class="clients-image">
-                                    </div>
-                                    <h3 class="clients-company">ООО “ПИК”</h3>
-                                    <span class="clients-name">Петров А.В., директор.</span>
-                                    <p class="clients-text">
-                                        Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="clients-arrows">
+                            <span class="clients-arrow clients-arrow-left"></span>
+                            <span class="clients-arrow clients-arrow-right"></span>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="clients-item">
-                                <div class="clients-wrapper">
-                                    <div class="clients-picture">
-                                        <img src="img/clients-image3.jpg" alt="" class="clients-image">
-                                    </div>
-                                    <h3 class="clients-company">ООО “Интер Строй”</h3>
-                                    <span class="clients-name">Петров А.В., директор.</span>
-                                    <p class="clients-text">
-                                        Нашу проблему решили быстро, заявку выполнили эффективно, доброжелательно общались. Помогли с выбором остекления, доставкой, установкой. Очень довольны сотрудничеством. Будем сотрудничать дальше.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clients-arrows">
-                        <span class="clients-arrow clients-arrow-left"></span>
-                        <span class="clients-arrow clients-arrow-right"></span>
                     </div>
                 </div>
             </div>
@@ -563,42 +608,74 @@
         <section class="brands">
             <div class="content">
                 <h2 class="brands-title">Производители профиля</h2>
-                <div class="brands-list">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="brands-item">
-                                <img src="img/brands-image1.png" alt="" class="brands-image">
+                <div class="brands-body">
+                    <div class="brands-list">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image1.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image2.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image3.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image4.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image5.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image6.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image1.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image2.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image3.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image4.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image5.png" alt="" class="brands-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="brands-item">
+                                    <img src="img/brands-image6.png" alt="" class="brands-image">
+                                </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="brands-item">
-                                <img src="img/brands-image2.png" alt="" class="brands-image">
-                            </div>
+                        <div class="brands-arrows">
+                            <span class="brands-arrow brands-arrow-left"></span>
+                            <span class="brands-arrow brands-arrow-right"></span>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="brands-item">
-                                <img src="img/brands-image3.png" alt="" class="brands-image">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brands-item">
-                                <img src="img/brands-image4.png" alt="" class="brands-image">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brands-item">
-                                <img src="img/brands-image5.png" alt="" class="brands-image">
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="brands-item">
-                                <img src="img/brands-image6.png" alt="" class="brands-image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="brands-arrows">
-                        <span class="brands-arrow brands-arrow-left"></span>
-                        <span class="brands-arrow brands-arrow-right"></span>
                     </div>
                 </div>
             </div>
@@ -851,7 +928,7 @@
             </div>
         </div>
     </div>
-    <div class="modal visible modal-success" id="modal-02">
+    <div class="modal modal-success" id="modal-02">
         <div class="modal-body">
             <button class="modal-close close">
                 <span class="modal-close-icon"></span>
@@ -865,5 +942,8 @@
         </div>
     </div>
     <!-- Modals end -->
+
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
