@@ -82,7 +82,10 @@ if(document.querySelector(".clients-list")) {
     var clientsSlider = new Swiper(".clients-list", {
         slidesPerView: 3,
         breakpoints: {
-          57: {
+          319: {
+            slidesPerView: 1,
+          },
+          507: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
@@ -108,6 +111,9 @@ if(document.querySelector(".brands-list")) {
     var brandsSlider = new Swiper(".brands-list", {
         slidesPerView: 6,
         breakpoints: {
+          400: {
+            slidesPerView: 2,
+          },
           507: {
             slidesPerView: 2,
             spaceBetween: 20,
