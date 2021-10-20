@@ -1848,4 +1848,119 @@ h2 {
         background-image: url(../img/watch-icon.png);
     }
 }
+.projects {
+    &-nav {
+        position: relative;
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        border: 1px solid #d7e2e9;
+        padding: 20px 15px;
+        &:after {
+            content: none!important;
+        }
+        &-icon {
+            margin-left: 30px;
+            display: inline-block;
+            min-width: 11px;
+            width: 11px;
+            height: 11px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/projects-btn-icon.png);
+        }
+    }
+    &-drop {
+        position: absolute;
+        z-index: 10;
+        display: none;
+        &-body {
+            width: 100%;
+            min-width: 185px;
+            padding: 15px 20px;
+            border: 1px solid #d7e2e9;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.17);
+            border-radius: 5px;
+        }
+        &-item {
+            margin: 5px 0;
+        }
+        &-link {
+            color: #212834;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #212834;
+            }
+        }
+    }
+    &-body {
+        margin: 50px 0;
+    }
+    &-list {
+        margin: 30px -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        margin: 15px 15px 40px 15px;
+        width: calc(25% - 30px);
+    }
+    &-picture {
+        position: relative;
+        box-sizing: border-box;
+        &:hover,
+        &:focus {
+            & .projects-play {
+                display: none;
+            }
+        }
+    }
+    &-play {
+        position: absolute;
+        top: 33%;
+        width: 100%;
+        text-align: center;
+        transition: all 0.5s;
+        &-icon {
+            content: '';
+            display: inline-block;
+            min-width: 71px;
+            width: 71px;
+            height: 53px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/projects-picture-after.png);
+        }
+    }
+    &-image {
+        height: 165px;
+        width: 100%;
+        object-fit: cover;
+    }
+    &-title {
+        font-size: 16px;
+        font-family: $roboto-bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    &-name {
+        text-decoration: none;
+        color: #0091dc;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #0091dc;
+        }
+    }
+    &-text {
+        margin-top: 10px;
+    }
+}
 
