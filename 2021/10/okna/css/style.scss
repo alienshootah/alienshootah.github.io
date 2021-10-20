@@ -1399,45 +1399,19 @@ h2 {
 
 /* Pages */
 
-.breadcrumbs {
-    &-list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -5px 20px -5px;
-        font-size: 14px;
-        color: #999999;
-    }
-    &-item {
-        margin: 5px;
-        &::before {
-            content: '-';
-            display: inline-block;
-        }
-        &:first-child {
-            &::before {
-                content: none;
-            }
-        }
-    }
-    &-link {
-        color: #999999;
-        text-decoration: none;
-        border-bottom: 1px solid #999999;
-        transition: all 0.5s;
-        &:hover,
-        &:focus {
-            border-bottom: 1px solid transparent;
-        }
-    }
-}
+
 .contacts {
-    margin-top: 118px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    &-row {
+        margin-top: 80px;
+    }
     &-title {
-        font-size: 26px;
-        color: #353866;
-        text-transform: uppercase;
+        font-size: 20px;
+        color: #212834;
         margin-top: -7px;
         margin-bottom: 17px;
+        text-transform: inherit;
     }
     &-area {
         text-align: right;
@@ -1472,6 +1446,8 @@ h2 {
         height: 26px;
         background-position: center;
         background-repeat: no-repeat;
+        position: relative;
+        top: 2px;
         &-one {
             background-image: url(../img/contacts-icon-one.png);
         }
@@ -1487,22 +1463,22 @@ h2 {
         margin: 0;
         font-size: 16px;
         &-link {
-            color: #353866;
+            color: #212834;
             text-decoration: none;
             border-bottom: 1px solid transparent;
             transition: all 0.5s;
             &:hover,
             &:focus {
-                border-bottom: 1px solid #353866;
+                border-bottom: 1px solid #212834;
             }
         }
     }
     &-mail {
-        margin: 8px 0 0 0;
+        margin: 5px 0 0 0;
         &-link {
-            color: #353866;
+            color: #212834;
             text-decoration: none;
-            border-bottom: 1px solid #9a9bb2;
+            border-bottom: 1px solid #212834;
             transition: all 0.5s;
             &:hover,
             &:focus {
@@ -1514,9 +1490,9 @@ h2 {
 .feedback {
     margin-top: 54px;
     &-title {
-        font-size: 26px;
-        color: #353866;
-        text-transform: uppercase;
+        font-size: 20px;
+        color: #212834;
+        text-transform: inherit;
     }
     &-list {
         display: flex;
@@ -1532,7 +1508,7 @@ h2 {
     }
     &-field {
         border-width: 1px;
-        border-color: rgb(203, 166, 195);
+        border-color: #d7e2e9;
         border-style: solid;
         background-color: rgb(255, 255, 255);
         width: 100%;
@@ -1548,7 +1524,7 @@ h2 {
         }
     }
     &-btn {
-        background-color: #353866;
+        background-color: #212834;
         color: #ffffff;
         text-transform: uppercase;
         font-size: 13px;
@@ -1556,7 +1532,7 @@ h2 {
         transition: all 0.5s;
         &:hover,
         &:focus {
-            background-color: #4a4e86;
+            background-color: #3e485a;
         }
     }
     &-end {
@@ -1574,6 +1550,49 @@ h2 {
         }
         &-link {
             color: #999999;
+        }
+    }
+}
+.begin {
+    &-title {
+        color: #212834;
+        font-size: 22px;
+        font-family: $mont-bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    &-descr {
+        color: #212834;
+    }
+}
+.breadcrumbs {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 20px -5px;
+        font-size: 14px;
+        color: #999999;
+    }
+    &-item {
+        margin: 5px;
+        &::before {
+            content: '-';
+            display: inline-block;
+        }
+        &:first-child {
+            &::before {
+                content: none;
+            }
+        }
+    }
+    &-link {
+        color: #999999;
+        text-decoration: none;
+        border-bottom: 1px solid #999999;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
         }
     }
 }
