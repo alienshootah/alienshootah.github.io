@@ -1399,10 +1399,53 @@ h2 {
 
 /* Pages */
 
-
+.begin {
+    &-title {
+        color: #212834;
+        font-size: 22px;
+        font-family: $mont-bold;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+    }
+    &-descr {
+        color: #212834;
+        line-height: 1.6;
+    }
+}
+.breadcrumbs {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px 20px -5px;
+        font-size: 14px;
+        color: #999999;
+    }
+    &-item {
+        margin: 5px;
+        &::before {
+            content: '-';
+            display: inline-block;
+        }
+        &:first-child {
+            &::before {
+                content: none;
+            }
+        }
+    }
+    &-link {
+        color: #999999;
+        text-decoration: none;
+        border-bottom: 1px solid #999999;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
 .contacts {
-    margin-top: 50px;
-    margin-bottom: 100px;
+    margin-top: 30px;
+    margin-bottom: 77px;
     &-row {
         margin-top: 80px;
     }
@@ -1427,8 +1470,8 @@ h2 {
     }
     &-item {
         margin-right: 63px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 16px;
+        margin-bottom: 22px;
         &:last-child {
             margin-right: 0;
         }
@@ -1437,7 +1480,7 @@ h2 {
         display: flex;
     }
     &-picture {
-        margin-right: 15px;
+        margin-right: 10px;
     }
     &-icon {
         display: inline-block;
@@ -1462,6 +1505,7 @@ h2 {
     &-tel {
         margin: 0;
         font-size: 16px;
+        letter-spacing: 0.3px;
         &-link {
             color: #212834;
             text-decoration: none;
@@ -1497,7 +1541,7 @@ h2 {
     &-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px -18px;
+        margin: 24px -18px;
     }
     &-item {
         width: calc(50% - 36px);
@@ -1538,6 +1582,7 @@ h2 {
     &-end {
         display: flex;
         align-items: center;
+        margin-top: -5px;
     }
     & .policy {
         width: 270px;
@@ -1550,49 +1595,6 @@ h2 {
         }
         &-link {
             color: #999999;
-        }
-    }
-}
-.begin {
-    &-title {
-        color: #212834;
-        font-size: 22px;
-        font-family: $mont-bold;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-    &-descr {
-        color: #212834;
-    }
-}
-.breadcrumbs {
-    &-list {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -5px 20px -5px;
-        font-size: 14px;
-        color: #999999;
-    }
-    &-item {
-        margin: 5px;
-        &::before {
-            content: '-';
-            display: inline-block;
-        }
-        &:first-child {
-            &::before {
-                content: none;
-            }
-        }
-    }
-    &-link {
-        color: #999999;
-        text-decoration: none;
-        border-bottom: 1px solid #999999;
-        transition: all 0.5s;
-        &:hover,
-        &:focus {
-            border-bottom: 1px solid transparent;
         }
     }
 }
