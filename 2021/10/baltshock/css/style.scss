@@ -153,3 +153,149 @@ h2 {
     font-size: 22px;
     font-family: $raleway-extra;
 }
+
+/* Header */
+
+.header {
+    padding: 30px 0;
+    box-sizing: border-box;
+    &-row {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+.logo {
+    position: relative;
+    left: -25px;
+    &-body {
+        display: flex;
+        align-items: center;
+    }
+    &-picture {
+        margin-right: 15px;
+    }
+    &-name {
+        display: block;
+        color: #252b41;
+        font-family: $raleway-bold;
+        font-size: 16px;
+    }
+    &-text {
+        font-size: 14px;
+        font-family: $opensans-reg;
+        color: #3d98d8;
+    }
+}
+.adress {
+    font-size: 15px;
+    font-family: $opensans-reg;
+    color: #252b41;
+    & b {
+        font-family: $opensans-bold;
+    }
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-item {
+        margin-left: 60px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &-picture {
+        margin-right: 10px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/adress-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/adress-icon-thue.png);
+        }
+    }
+    &-text {
+        display: block;
+    }
+    &-time {
+        font-size: 13px;
+        color: #6e95b0;
+    }
+    &-tel {
+        font-size: 15px;
+        font-family: $opensans-bold;
+        &-link {
+            color: #252b41;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #252b41;
+            }
+        }
+    }
+    &-mail {
+        font-size: 13px;
+        &-link {
+            color: #6e95b0;
+            text-decoration: none;
+            border-bottom: 1px solid #6e95b0;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-btn {
+        background-color: #f13f4b;
+        color: #ffffff;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        font-family: $opensans-reg;
+        font-size: 13px;
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        &:hover,
+        &:focus {
+            background-color: #f85762;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 17px;
+            width: 17px;
+            height: 17px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/header-btn-icon.png);
+            margin-right: 8px;
+        }
+    }
+}
+.nav {
+    background-color: #6e95b0;
+    margin: 10px 0;
+    &-list {
+        font-family: $opensans-reg;
+        font-size: 14px;
+    }
+    &-link {
+        display: inline-block;
+        padding: 12px 15px;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
