@@ -49,3 +49,24 @@ window.addEventListener("DOMContentLoaded", function() {
 /* Current year in footer */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();
+
+/* Show more/less in way page */
+
+const wayBtn = document.querySelector(".drop-start1");
+const wayBtn2 = document.querySelector(".drop-start2");
+const wayBtn3 = document.querySelector(".drop-start3");
+if(wayBtn) {
+    wayBtn.addEventListener("click", function() {
+    document.querySelector(".way-sublist1").classList.toggle("show");
+  });
+}
+if(wayBtn2) {
+    wayBtn2.addEventListener("click", function() {
+    document.querySelector(".way-sublist2").classList.toggle("show");
+  });
+}
+if(wayBtn3) {
+    wayBtn3.addEventListener("click", function() {
+    document.querySelector(".way-sublist3").classList.toggle("show");
+  });
+}
