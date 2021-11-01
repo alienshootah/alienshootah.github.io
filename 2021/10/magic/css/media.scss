@@ -1,3 +1,5 @@
+
+
 @media(max-width: 1260px) {
     .nav {
         &-item {
@@ -28,7 +30,121 @@
     }
 }
 @media(max-width: 992px) {
+    .mobile {
+        display: block;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 30px 15px 15px 15px;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: 100%;
+        box-sizing: border-box;
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-title {
+            display: inline-block;
+            font-size: 24px;
+            font-family: 'CormorantUpright-Regular', Arial, Helvetica, sans-serif;
+            line-height: 130%;
+            text-align: center;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            &-link {
+                color: #F2F2F2;
+                text-decoration: none;
+            }
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 30px;
+            width: 30px;
+            height: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/mobile-icon.svg);
+        }
+    }
+    .bucket {
+        position: relative;
+        display: inline-block;
+        &-num {
+            width: 10px;
+            height: 10px;
+            background: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 50%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 8px;
+            line-height: 11px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #000000;
 
+            position: absolute;
+            top: -3px;
+            right: 0;
+            &-value {
+                position: relative;
+                top: -1px;
+                left: 0.5px;
+            }
+        }
+    }
+    .header {
+        background: #000000;
+        width: 280px;
+        bottom: 0;
+        overflow-y: scroll;
+        padding-left: 15px;
+        box-sizing: border-box;
+        display: none;
+        &.show {
+            display: block;
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            margin-top: 40px;
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .nav {
+        &-list {
+            display: block;
+            margin-top: 40px;
+        }
+        &-item {
+            margin: 40px 0;
+            &:first-child {
+                margin: 40px 0;
+            }
+        }
+    }
+    .promo {
+        &-title {
+            font-size: 90px;
+        }
+    }
+    .social {
+        top: 6px;
+        left: 8px;
+    }
+    .shop {
+        &-image {
+            height: 225px;
+        }
+        &-more {
+            top: 26%;
+        }
+    }
 }
 @media(max-width: 768px) {
     
