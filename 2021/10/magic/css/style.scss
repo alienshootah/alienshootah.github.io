@@ -1254,7 +1254,7 @@ h2 {
     &-wrapper {
         position: relative;
         &:hover .login-text {
-            display: block;
+            visibility: visible;
         }
     }
     &-field {
@@ -1277,7 +1277,7 @@ h2 {
         }
     }
     &-text {
-        display: none;
+        visibility: hidden;
         position: absolute;
         right: 20px;
         top: 22px;
@@ -1288,6 +1288,7 @@ h2 {
         letter-spacing: 0.04em;
         color: #F2F2F2;
         cursor: pointer;
+        transition: all 0.2s;
     }
     &-more {
         text-align: center;
@@ -1348,7 +1349,7 @@ h2 {
             display: none;
             position: absolute;
             content: '';
-            left: 1px;
+            left: 2px;
             top: 1px;
             width: 12px;
             height: 12px;
