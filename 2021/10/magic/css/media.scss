@@ -98,6 +98,15 @@
                 background-repeat: no-repeat;
                 background-image: url(../img/mobile-icon-load.svg);
             }
+            &-quit {
+                display: inline-block;
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/mobile-icon-quit.svg);
+            }
         }
     }
     .bucket {
@@ -222,6 +231,18 @@
             position: absolute;
             top: 10px;
             right: 0;
+        }
+    }
+    .myplace {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &-right {
+            width: 100%;
         }
     }
 }
@@ -851,6 +872,76 @@
             }
         }
     }
+    .myplace {
+        padding: 120px 0 25px 0;
+        background-image: url(../img/bucker-bg-mobile.jpg);
+        &::after {
+           content: none;
+        }
+        &-top {
+            margin-left: 0;
+            margin-right: 0;
+            padding: 0;
+            background-color: transparent;
+        }
+        &-item {
+            font-size: 16px;
+            line-height: 21px;
+            color: #E0E0E0;
+        }
+        &-header {
+            padding-bottom: 10px;
+        }
+        &-subtitle {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 21px;
+            &-link {
+                color: #F2F2F2;
+                &:hover,
+                &:focus {
+                    border-bottom: 1px solid #F2F2F2;
+                }
+            }
+        }
+        &-date {
+            font-size: 14px;
+            line-height: 19px;
+            text-align: right;
+            color: #E0E0E0;
+        }
+    }
+    .user {
+        margin-bottom: 20px;
+        &-picture {
+            margin-right: 15px;
+        }
+        &-image {
+            width: 76px;
+            height: 79px;
+        }
+        &-name {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 15px;
+        }
+        &-link {
+            font-size: 12px;
+            line-height: 15px;
+            color: #808080;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #808080;
+            }
+        }
+    }
+    .status {
+        font-size: 16px;
+        line-height: 21px;
+        display: flex;
+        align-items: flex-end;
+        color: #E0E0E0;
+    }
 }
 @media(max-width: 390px) {
     .mobile {
@@ -944,5 +1035,19 @@
             text-align: left;
             margin-top: 7px;
         }
+    }
+    .myplace {
+        &-item {
+            font-size: 14px;
+        }
+        &-subtitle {
+            font-size: 14px;
+        }
+        &-date {
+            font-size: 14px;
+        }
+    }
+    .status {
+        font-size: 14px;
     }
 }

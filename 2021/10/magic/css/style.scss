@@ -1368,7 +1368,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../img/catalog-bg.jpg);
-    padding: 171px 0 269px 0;
+    padding: 171px 0 69px 0;
     overflow: hidden;
     position: relative;
     &:after {
@@ -1384,6 +1384,7 @@ h2 {
         height: 100%;
         background: linear-gradient(180deg, #000000 2.14%, rgba(0, 0, 0, 0.53) 47.05%, #000000 99.98%, #000000 99.98%), rgba(0, 0, 0, 0.23);
         z-index: 1;
+        opacity: 0.9;
     }
     & .content {
         position: relative;
@@ -1392,10 +1393,55 @@ h2 {
     &-top {
         background: rgba(0, 0, 0, 0.3);
         box-sizing: border-box;
-        padding: 40px;
+        padding: 40px 20px;
+    }
+    &-item {
+        background: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        margin: 10px 0;
         box-sizing: border-box;
-        margin-left: -40px;
-        margin-right: -40px;
+        font-size: 16px;
+        line-height: 21px;
+        color: #E0E0E0;
+    }
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 25px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgba(243, 243, 243, 0.29);
+        margin-bottom: 10px;
+    }
+    &-subtitle {
+        font-family: $segoe-reg;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: #F2F2F2;
+        margin: 0;
+        &-link {
+            color: #F2F2F2;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #F2F2F2; 
+            }
+        }
+    }
+    &-date {
+        font-size: 16px;
+        line-height: 21px;
+        text-align: right;
+        color: #E0E0E0;
+    }
+    &-middle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
     }
 }
 .user {
@@ -1415,6 +1461,36 @@ h2 {
         font-size: 36px;
         line-height: 24px;
         color: #FFFFFF;
-        margin: 4px 0 0 0;
+        margin: 4px 0 8px 0;
+    }
+    &-item {
+        margin: 3px 0;
+    }
+    &-link {
+        font-size: 16px;
+        line-height: 140%;
+        color: #F5F5F5;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #F5F5F5;
+        }
+    }
+}
+.status {
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: #E0E0E0;
+    margin-top: 30px;
+    &-green {
+        color: #27AE60;
+    }
+    &-orange {
+        color: #AE6827;
     }
 }
