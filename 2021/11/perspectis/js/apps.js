@@ -9,6 +9,43 @@ if(mobileBtn) {
 
 */
 
+/* Clients slider */
+
+if(document.querySelector(".clients-list")) {
+  var brandsSlider = new Swiper(".clients-list", {
+      slidesPerView: 6,
+      spaceBetween: 30,
+      breakpoints: {
+        317: {
+          slidesPerView: 1,
+        },
+        400: {
+          slidesPerView: 2,
+        },
+        507: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        970: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+        1070: {
+          slidesPerView: 6,
+        },
+      },
+      loop: true,
+      navigation: {
+          prevEl: ".clients-arrow-left",
+          nextEl: ".clients-arrow-right",
+      },
+  });
+}
+
 /* Modals */
 
 let buttons = document.querySelectorAll('.open-modal');

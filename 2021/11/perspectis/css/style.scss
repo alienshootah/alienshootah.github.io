@@ -120,6 +120,9 @@ textarea {
 html {
     scroll-behavior: smooth;
 }
+section {
+    overflow: hidden;
+}
 .content {
     margin: 0 auto;
     padding: 0 15px;
@@ -146,6 +149,7 @@ h2 {
 
 .header {
     border-bottom: 1px solid #ccead4;
+    overflow: hidden;
     &-body {
         border-left: 1px solid #ccead4;
         border-right: 1px solid #ccead4;
@@ -323,6 +327,7 @@ h2 {
 /* Section's */
 
 .better {
+    margin-top: -1px;
     &-body {
         position: relative;
     }
@@ -642,11 +647,18 @@ h2 {
 }
 .clients {
     margin: 100px 0;
+    &-list {
+        overflow: hidden;
+    }
     &-item {
         border: 1px solid #e5e5e5;
-        padding: 18px;
+        
         box-sizing: border-box;
         text-align: center;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &-arrows {
         margin: 20px -10px 0 -10px;
