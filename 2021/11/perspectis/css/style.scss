@@ -344,6 +344,9 @@ h2 {
         padding: 60px 40px;
         box-sizing: border-box;
         width: 33.3333%;
+        &:nth-child(2) {
+            background-color: #009f29;
+        }
     }
     &-icon {
         display: inline-block;
@@ -383,6 +386,15 @@ h2 {
         padding-top: 40px;
         padding-bottom: 40px;
         box-sizing: border-box;
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+            position: relative;
+            top: 90px;
+        }
+        &:last-child {
+            background-color: transparent;
+        }
     }
     &-picture {
         padding-right: 40px;
@@ -480,6 +492,74 @@ h2 {
         &-thue {
             background-image: url(../img/together-icon-thue.png);
         }
+    }
+}
+.bonus {
+    border-top: 1px solid #ccead4;
+    border-bottom: 1px solid #ccead4;
+    &-body {
+        position: relative;
+    }
+    &-title {
+        display: inline-block;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -160px;
+        top: 135px;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -1px;
+        margin-bottom: -1px;
+    }
+    &-item {
+        background-color: #ededed;
+        width: 33.3333%;
+        padding: 40px;
+        box-sizing: border-box;
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(6) {
+            background-color: #f6f6f6;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &-picture {
+        margin-right: 40px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/bonus-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/bonus-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/bonus-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/bonus-icon-four.png);
+        }
+        &-five {
+            background-image: url(../img/bonus-icon-five.png);
+        }
+        &-six {
+            background-image: url(../img/bonus-icon-six.png);
+        }
+    }
+    &-subtitle {
+        font-family: $open-semi;
+        font-size: 20px;
     }
 }
 
