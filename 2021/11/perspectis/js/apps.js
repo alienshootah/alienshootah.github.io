@@ -1,13 +1,13 @@
-/* Mobile menu 
+/* Mobile menu */
 
-const mobileBtn = document.querySelector(".nav-btn");
+const mobileBtn = document.querySelector(".mobile-btn");
 if(mobileBtn) {
   mobileBtn.addEventListener("click", function() {
-    document.querySelector(".nav-drop").classList.toggle("show");
+    document.querySelector(".header-row").classList.toggle("show");
   });
 }
 
-*/
+
 
 /* Clients slider */
 

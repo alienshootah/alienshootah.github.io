@@ -99,7 +99,321 @@
             font-size: 40px;
         }
     }
+    .together {
+        flex-wrap: wrap;
+        &-btn {
+            margin-bottom: 10px;
+        }
+    }
+    .infos {
+        &-body {
+            display: block;
+            text-align: right;
+        }
+    }
+    .footer-social {
+        & .social-list {
+            justify-content: flex-end;
+        }
+    }
 }
 @media(max-width: 768px) {
-    
+    .header {
+        padding: 0;
+        &-row {
+            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin: 0;
+            z-index: 1000;
+            background-color: #ffffff;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            box-shadow: 0px 0px 8px 0px 
+            rgba(46, 31, 31, 0.17);
+            &.show {
+                & .header-center,
+                & .header-right {
+                    display: block;
+                }
+            }
+            
+        }
+        &-left {
+            width: 100%;
+        }
+        &-center {
+            width: 100%;
+            display: none;
+        }
+        &-right {
+            width: 100%;
+            display: block;
+            display: none;
+            padding-bottom: 20px;
+        }
+        &-logo {
+            width: 100px;
+        }
+    }
+    .nav {
+        &-list {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+        }
+        &-item {
+            margin: 0 15px;
+        }
+        &-link {
+            display: block;
+            width: 100%;
+            padding: 7px 0;
+            box-sizing: border-box;
+        }
+    }
+    .phones {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        &-item {
+            width: 100%;
+            margin: 0;
+            &:first-child {
+                display: block;
+            }
+            &:nth-child(2) {
+                display: block;
+            }
+        }
+        & .social {
+            &-list {
+                justify-content: center;
+            }
+        }
+    }
+    .mobile {
+        display: block;
+        position: absolute;
+        top: 22px;
+        right: 10px;
+        &-icon {
+            display: inline-block;
+            min-width: 25px;
+            width: 25px;
+            height: 26px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/mobile-icon.png);
+        }
+    }
+    .logo {
+        position: static;
+    }
+    .promo {
+        margin-top: 120px;
+        &-prev {
+            margin-top: 0;
+        }
+        &-row {
+            display: block;
+            text-align: center;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-picture {
+            position: static;
+        }
+        &-image {
+            width: 100%;
+        }
+        &-more {
+            &-btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .better {
+        &-list {
+            display: block;
+        }
+        &-item {
+            width: 100%;
+        }
+    }
+    .special {
+        &-item {
+            width: calc(100% - 30px);
+            position: static!important;
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+    .bonus {
+        &-item {
+            width: 100%;
+        }
+    }
+    .feedback {
+        &-list {
+            display: block;
+        }
+        &-item {
+            width: calc(100% - 30px);
+        }
+    }
+    .footer {
+        &-row {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        &-left {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        &-center {
+            width: 100%;
+            padding-left: 15px;
+            order: 1;
+            margin-top: 20px;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-list {
+            justify-content: center;
+        }
+        &-social .social-list {
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+    }
+    .infos {
+        &-body {
+            text-align: center;
+        }
+        &-right {
+            margin-left: 0;
+        }
+    }
+}
+@media(max-width: 520px) {
+    h2 {
+        margin-left: 0!important;
+        font-size: 20px;
+    }
+    .promo {
+        margin-top: 100px;
+        &-prev {
+            font-size: 25px;
+        }
+        &-title {
+            font-size: 27px;
+        }
+        &-descr {
+            font-size: 18px;
+        }
+        &-right {
+            padding-top: 25px;
+        }
+        &-more {
+            margin-top: 25px;
+            &-icon {
+                margin-right: 10px;
+            }
+            &-btn {
+                padding: 15px 20px;
+                font-size: 14px;
+            }
+        }
+    }
+    .special {
+        margin: 50px 0 20px 0;
+        &-item {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &-picture {
+            padding-right: 0;
+        }
+        &-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+        }
+        &-subtitle {
+            font-size: 20px;
+        }
+        &-descr {
+            font-size: 16px;
+        }
+        &-text {
+            font-size: 14px;
+        }
+    }
+    .bonus {
+        &-item {
+            padding: 20px;
+        }
+        &-wrapper {
+            display: block;
+            text-align: center;
+        }
+        &-picture {
+            margin-right: 0;
+        }
+    }
+    .feedback {
+        margin: 70px 0 50px 0;
+        &-body {
+            padding: 20px;
+        }
+        &-title {
+            font-size: 22px;
+        }
+        &-descr {
+            font-size: 14px;
+        }
+        &-item {
+            margin: 15px 0;
+            width: 100%;
+        }
+        &-btn {
+            padding: 12px 17px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-right: 10px;
+        }
+    }
+    .footer {
+        margin-top: 40px;
+        &-list {
+            display: block;
+            text-align: center;
+        }
+        &-item {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+@media(max-width: 375px) {
+    .promo {
+        &-more {
+            &-icon {
+                margin-right: 5px;
+            }
+        }
+    }
 }
