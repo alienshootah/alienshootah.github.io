@@ -132,5 +132,139 @@
     }
 }
 @media(max-width: 768px) {
-
+    .mobile {
+        display: block;
+        margin-left: 15px;
+        position: relative;
+        top: 4px;
+        &-btn {
+            padding: 0;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 25px;
+            width: 25px;
+            height: 26px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/mobile-icon.png);
+        }
+    }
+    .header {
+        background-color: #ffffff;
+        padding: 12px 0 8px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 40%;
+        }
+        &-center {
+            width: 100%;
+            order: 1;
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+        &-right {
+            width: 60%;
+            display: block;
+        }
+    }
+    .nav {
+        height: 350px;
+        overflow-y: scroll;
+        &-list {
+            display: block;
+            text-align: center;
+        }
+        &-item {
+            margin-right: 0;
+            &:last-child {
+                & .drop {
+                    text-align: center;
+                }
+            }
+        }
+        &-link {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    .drop {
+        position: static;
+        &-body {
+            box-shadow: none;
+            padding: 0 0 10px 0;
+            border: 0;
+        }
+        &-item {
+            &:before {
+                margin-left: -12px;
+            }
+        }
+    }
+    .info {
+        position: relative;
+        top: -3px;
+    }
+    .lang {
+        &-btn {
+            min-width: 75px;
+            padding: 6px;
+        }
+        &-drop {
+            min-width: 75px;
+            top: 36px;
+        }
+    }
+    .regular {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .footer {
+        & .col-3 {
+            width: 100%;
+            order: -1;
+            text-align: center;
+        }
+        & .col-4 {
+            width: 100%;
+        }
+        &-title {
+            text-align: center;
+        }
+    }
+    .adress {
+        &-list {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    .feedback {
+        &-btn {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .policy {
+        max-width: 300px;
+    }
+}
+@media(max-width: 510px) {
+    
 }
