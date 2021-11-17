@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Дашборд</title>
 </head>
-<body>
+<body class="dash-body">
     <div class="container-fluid">
         <div class="container-fluid">
             <header class="header">
@@ -32,11 +32,11 @@
                             <span class="sidebar-close-icon"></span>
                         </button>
                     </div>
-                    <div class="profile">
-                        <div class="profile-picture">
-                            <img src="img/profile-logo.png" alt="" class="profile-image">
-                        </div>
-                        <a href="#" class="profile-link">Профиль</a>
+                    <div class="sidebar-logo">
+                        <img src="img/sidebar-logo-image.svg" alt="" class="sidebar-logo-image">
+                        <p class="sidebar-logo-text">
+                            Вы сильнее своих оправданий!
+                        </p>
                     </div>
                     <div class="sidebar-content">
                         <ul class="sidebar-list">
@@ -77,13 +77,8 @@
                         </ul>
                     </div>  
                 </div>
-                <div class="sidebar-pro">
-                    <a href="#" class="sidebar-pro-link">
-                        Купить Премиум PRO
-                    </a>
-                </div>
             </section>
-            <div class="dash">
+            <div class="dacher">
                 <div class="package">
                     <div class="package-top">
                         <h3 class="package-title">Информация</h3>
@@ -117,66 +112,317 @@
                         <span class="package-line-ready"></span>
                     </div>
                 </div>
-            </div>
-            <div class="days">
-                <div class="days-body">
-                    <div class="days-list">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="days-item">
-                                    <h3 class="days-title">День 1</h3>
-                                    <p class="days-descr">
-                                        Сделан первый шаг!пвап вап
-                                        ав павпа авп авп
-                                        пав апвавппавппавапв
-                                    </p>
-                                    <div class="days-begin">
-                                        <span class="days-time">08:15</span>
-                                        <button class="days-start">Начать день</button>
-                                    </div>
-                                    <div class="times">
-                                        <ul class="times-list">
-                                            <li class="times-item">
-                                                <div class="times-wrapper">
-                                                    <div class="times-value">
-                                                        <span class="times-item-value">08:30</span>
+                <div class="days">
+                    <div class="days-body">
+                        <div class="days-list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="days-item">
+                                        <div class="days-top">
+                                            <h3 class="days-title">День 1</h3>
+                                            <p class="days-descr">
+                                                Сделан первый шаг!пвап вап
+                                                ав павпа авп авп
+                                                пав апвавппавппавапв
+                                            </p>
+                                            <div class="days-begin">
+                                                <span class="days-time">08:15</span>
+                                                <button class="days-start">Начать день</button>
+                                            </div>
+                                        </div>
+                                        <div class="times">
+                                            <ul class="times-list">
+                                                <li class="times-item">
+                                                    <div class="times-wrapper">
+                                                        <div class="times-value">
+                                                            <span class="times-item-value">08:15</span>
+                                                        </div>
+                                                        <div class="times-goal">
+                                                            Тёплая вода - 450 мл
+                                                        </div>
                                                     </div>
-                                                    <div class="times-goal">
-                                                        Чай
+                                                    <div class="times-descr">
+                                                        <i class="times-small">
+                                                            можно добавить лимон
+                                                        </i>
                                                     </div>
-                                                </div>
-                                                <div class="times-descr">
-                                                    <p class="times-text">
-                                                        Чай зелёный
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li class="times-item active">
-                                                <div class="times-wrapper">
-                                                    <div class="times-value">
-                                                        <span class="times-item-value">10:00</span>
+                                                </li>
+                                                <li class="times-item">
+                                                    <div class="times-wrapper">
+                                                        <div class="times-value">
+                                                            <span class="times-item-value">08:30</span>
+                                                        </div>
+                                                        <div class="times-goal">
+                                                            Чай
+                                                        </div>
                                                     </div>
-                                                    <div class="times-goal">
-                                                        Завтрак
+                                                    <div class="times-descr">
+                                                        <p class="times-text">
+                                                            <div class="thoose">
+                                                                <div class="thoose-left">
+                                                                    <select class="thoose-field">
+                                                                        <option value="Чай зеленый"></option>
+                                                                        <option value="Чай черный"></option>
+                                                                        <option value="Чай байховый"></option>
+                                                                        <option value="Чай белый"></option>
+                                                                        <option value="Чай индийский"></option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="thoose-right">
+                                                                    <span class="thoose-icon"></span>
+                                                                </div>
+                                                            </div>
+                                                        </p>
                                                     </div>
+                                                </li>
+                                                <li class="times-item active">
+                                                    <div class="times-wrapper">
+                                                        <div class="times-value">
+                                                            <span class="times-item-value">10:00</span>
+                                                        </div>
+                                                        <div class="times-goal">
+                                                            Завтрак
+                                                        </div>
+                                                    </div>
+                                                    <div class="times-descr">
+                                                        <p class="times-text">
+                                                            <div class="thoose">
+                                                                <div class="thoose-left">
+                                                                    <select class="thoose-field">
+                                                                        <option value="Каша овсяная - 170 гр."></option>
+                                                                        <option value="Каша овсяная - 340 гр."></option>
+                                                                        <option value="Каша овсяная - 510 гр."></option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="thoose-right">
+                                                                    <span class="thoose-icon"></span>
+                                                                </div>
+                                                            </div>
+                                                            <button class="times-more">
+                                                                <span class="times-more-icon"></span>
+                                                            </button>
+                                                            <div class="thoose">
+                                                                <div class="thoose-left">
+                                                                    <select class="thoose-field">
+                                                                        <option value="Арахисовая паста - 20 гр."></option>
+                                                                        <option value="Арахисовая паста - 40 гр."></option>
+                                                                        <option value="Арахисовая паста - 60 гр."></option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="thoose-right">
+                                                                    <span class="thoose-icon"></span>
+                                                                </div>
+                                                            </div>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="times-item">
+                                                    <div class="times-wrapper">
+                                                        <div class="times-value">
+                                                            <span class="times-item-value">08:15</span>
+                                                        </div>
+                                                        <div class="times-goal">
+                                                            Вода - <span class="times-value">450 мл</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="times-descr">
+                                                        <i class="times-small">
+                                                            Постепенно выпиваем воду до следующего приема пищи
+                                                        </i>
+                                                        <p class="times-text">
+                                                            <div class="thoose">
+                                                                <div class="thoose-left">
+                                                                    <select class="thoose-field">
+                                                                        <option value="Чай зеленый"></option>
+                                                                        <option value="Чай черный"></option>
+                                                                        <option value="Чай байховый"></option>
+                                                                        <option value="Чай белый"></option>
+                                                                        <option value="Чай индийский"></option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="thoose-right">
+                                                                    <span class="thoose-icon"></span>
+                                                                </div>
+                                                            </div>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="times-item">
+                                                    <div class="times-wrapper">
+                                                        <div class="times-value">
+                                                            <span class="times-item-value">08:15</span>
+                                                        </div>
+                                                        <div class="times-goal">
+                                                            Вода - <span class="times-value">450 мл</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="times-descr">
+                                                        <i class="times-small">
+                                                            Постепенно выпиваем воду до следующего приема пищи
+                                                        </i>
+                                                    </div>
+                                                </li>
+                                                <li class="times-item">
+                                                    <div class="times-wrapper">
+                                                        <div class="times-value">
+                                                            <span class="times-item-value">10:00</span>
+                                                        </div>
+                                                        <div class="times-goal">
+                                                            Перекус
+                                                        </div>
+                                                    </div>
+                                                    <div class="times-descr">
+                                                        <p class="times-text">
+                                                            <div class="thoose">
+                                                                <div class="thoose-left">
+                                                                    <select class="thoose-field">
+                                                                        <option value="Яйцо вареное без желтка - 170 гр."></option>
+                                                                        <option value="Яйцо вареное с желтком - 170 гр."></option>
+                                                                        <option value="Яйцо вареное - 170 гр."></option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="thoose-right">
+                                                                    <span class="thoose-icon"></span>
+                                                                </div>
+                                                            </div>
+                                                        </p>
+                                                        <i class="times-small">
+                                                            Яйцо отварить вкрутую, удалить желток
+                                                        </i>
+                                                        <button class="times-more">
+                                                            <span class="times-more-icon"></span>
+                                                        </button>
+                                                        <div class="thoose">
+                                                            <div class="thoose-left">
+                                                                <select class="thoose-field">
+                                                                    <option value="Яблоко зеленое - 110 гр."></option>
+                                                                    <option value="Яблоко зеленое - 110 гр."></option>
+                                                                    <option value="Яблоко зеленое - 110 гр."></option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="thoose-right">
+                                                                <span class="thoose-icon"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="share">
+                                            <div class="share-more">
+                                                <button class="share-more-btn">
+                                                    <span class="share-more-text">поделиться</span>
+                                                    <span class="share-more-icon"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="feedback">
+                                            <form class="feedback-form">
+                                                <textarea class="feedback-field" 
+                                                placeholder="Здесь Вы можете оставить свой комментарий, его увидит
+                                                Администрация и ответит на него в случае необходимости">
+                                                </textarea>
+                                                <div class="feedback-more">
+                                                    <button class="feedback-more-btn">Завершить день</button>
                                                 </div>
-                                                <div class="times-descr">
-                                                    <p class="times-text">
-                                                        Каша овсяная - 170 гр.
-                                                    </p>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="different">
+                    <div class="different-top">
+                        <h3 class="different-title">
+                            Вес
+                        </h3>
+                        <div class="different-change">
+                            <button class="different-change-btn">изменить</button>
+                        </div>
+                        <span class="different-icon"></span>
+                    </div>
+                    <div class="different-body">
+                        <ul class="different-list">
+                            <li class="different-item">
+                                <span class="different-text">Сброшено: </span>
+                                <b class="different-value">0.6 кг</b>
+                            </li>
+                            <li class="different-item">
+                                <span class="different-text">Текущий вес: </span>
+                                <b class="different-value">104.1 кг</b>
+                            </li>
+                            <li class="different-item">
+                                <span class="different-text">Начальный вес: </span>
+                                <b class="different-value">104.7 кг</b>
+                            </li>
+                        </ul>
+                        <img src="img/different-image.jpg" alt="" 
+                        class="different-image">
+                    </div>
+                </div>
+                <div class="volume">
+                    <div class="volume-top">
+                        <h3 class="volume-title">
+                            Вес
+                        </h3>
+                        <div class="volume-change">
+                            <button class="volume-change-btn">изменить</button>
+                        </div>
+                        <span class="volume-icon"></span>
+                    </div>
+                    <ul class="volume-list">
+                        <li class="volume-item">
+                            <span class="volume-round volume-round-purple"></span>
+                            <span class="volume-text">Плечи</span>
+                        </li>
+                        <li class="volume-item">
+                            <span class="volume-round volume-round-green"></span>
+                            <span class="volume-text">Грудь</span>
+                        </li>
+                        <li class="volume-item">
+                            <span class="volume-round volume-round-orange"></span>
+                            <span class="volume-text">Талия</span>
+                        </li>
+                        <li class="volume-item">
+                            <span class="volume-round volume-round-blue"></span>
+                            <span class="volume-text">Бедра</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <ul class="navigation-list">
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">
+                            <span class="navigation-icon navigation-icon-one"></span>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">
+                            <span class="navigation-icon navigation-icon-thue"></span>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">
+                            <span class="navigation-icon navigation-icon-three"></span>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">
+                            <span class="navigation-icon navigation-icon-four"></span>
+                        </a>
+                    </li>
+                    <li class="navigation-item">
+                        <a href="#" class="navigation-link">
+                            <span class="navigation-icon navigation-icon-five"></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <script src="js/apps.js"></script>
-        
     </div>
 </body>
 </html>
