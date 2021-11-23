@@ -401,6 +401,7 @@ body {
     bottom: 0;
     -webkit-transition: .4s;
     transition: .4s;
+    opacity: 0.5;
     &:before {
         position: absolute;
         content: "";
@@ -416,6 +417,7 @@ body {
 
 input:checked + .slider {
     background-color: #ffffff;
+    opacity: 1;
 }
 
 input:focus + .slider {
@@ -1117,6 +1119,79 @@ input:checked + .slider:before {
         right: 1px;
         &-thue {
             right: 5px;
+        }
+    }
+}
+
+/* Страницы */
+
+.wrong {
+    &-header {
+        padding-top: 10px;
+    }
+    &-title {
+        font-weight: 500;
+        font-size: 18px;
+        font-family: $roboto-bold;
+        line-height: 131.02%;
+        color: #181818;
+        text-align: center;
+    }
+    &-body {
+        background-color: #ffffff;
+        padding: 25px;
+        box-sizing: border-box;
+    }
+    &-item {
+        border-bottom: 1px solid #E9E9E9;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        box-sizing: border-box;
+        &:last-child {
+            border-bottom: 1px solid transparent;
+        }
+    }
+    &-subtitle {
+        font-weight: 500;
+        font-size: 12px;
+        font-family: $roboto-bold;
+        line-height: 131.02%;
+        color: #181818;
+        margin: 0;
+    }
+    &-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        & .sidebar-control {
+            position: relative;
+            top: -5px;
+        }
+    }
+    &-text {
+        font-size: 10px;
+        line-height: 131.02%;
+        color: #57585A;
+    }
+    &-more {
+        text-align: center;
+        margin: 20px 0 0 0;
+        &-link {
+            display: inline-block;
+            background: #8B2EFF;
+            border-radius: 5px;
+            color: #FDF8FF;
+            padding: 8px 13px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            font-family: $roboto-bold;
+            line-height: 14px;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: #9745fc;
+            }
         }
     }
 }
