@@ -7,9 +7,9 @@ if(mobileBtn) {
   });
 }
 
-/* Dropdowns */
+/* Dropdowns 
 
-// Transition
+
 function fadeIn(el) {
     el.style.opacity = 0;
     el.style.display = "block";
@@ -36,13 +36,10 @@ function fadeIn(el) {
     }());
   }
   
-  // Initialise all the required variables
-  var btn = document.querySelectorAll(".drop-btn");
   
-  /*
-    *	Button click event listeners
-    *	Keeps track of the button click.
-    */
+  var btn = document.querySelectorAll(".menu-item-has-children > a");
+  
+ 
   btn.forEach(function(btn) {
     btn.addEventListener("click", function(e) {
       e.stopPropagation();
@@ -51,9 +48,7 @@ function fadeIn(el) {
         firstVisible = document.querySelector('.visible'),
         dropDown;
   
-      /*
-        * Remove the visible class if an element is already in the DOM
-        */
+      
       if (firstVisible) {
         fadeOut(firstVisible);
         firstVisible.classList.remove("visible");
@@ -78,6 +73,43 @@ function fadeIn(el) {
         visible.classList.remove("visible");
     }
   });
+  
+  */
+
+var acca = document.querySelectorAll(".drop-btn");
+  var yy;
+
+  for (yy = 0; yy < acca.length; yy++) {
+    acca[yy].addEventListener("click", function(e) {
+      this.classList.toggle("active");
+      e.stopPropagation();
+	  e.preventDefault(); 
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+      panel.style.display = "none";
+      } else {
+      panel.style.display = "block";
+      }
+  });
+}
+
+/* Dropdowns */
+
+  var acc = document.querySelectorAll(".menu-item-has-children > a");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+      panel.style.display = "none";
+      } else {
+      panel.style.display = "block";
+      }
+  });
+  }
+
 
   /* Telephone mask */
 
