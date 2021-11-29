@@ -31,37 +31,17 @@
         <div class="sidebar">
             <div class="sidebar-body">
                 <div class="sidebar-top">
-                    <span class="sidebar-profile"></span>
+                    <div class="sidebar-profile-picture">
+                        <a href="#">
+                            <span class="sidebar-profile"></span>
+                        </a>
+                    </div>
+                    <a href="#" class="sidebar-profile-link">Профиль</a>
                     <button class="sidebar-close">
                         <span class="sidebar-close-icon"></span>
                     </button>
-                    <h3 class="sidebar-title">Настройки</h3>
                 </div>
                 <ul class="sidebar-list">
-                    <li class="sidebar-item">
-                        <label class="sidebar-button" id="sb-left">
-                            <span class="sidebar-icon sidebar-icon-one"></span>
-                            <span class="sidebar-text">Я - левша</span>
-                            <span class="sidebar-control">
-                                <div class="switch">
-                                    <input type="checkbox" id="check-hand">
-                                    <span class="slider round"></span>
-                                </div>
-                            </span>
-                        </label>
-                    </li>
-                    <li class="sidebar-item">
-                        <button class="sidebar-button">
-                            <span class="sidebar-icon sidebar-icon-thue"></span>
-                            <span class="sidebar-text">Цветовая схема</span>
-                        </button>
-                    </li>
-                    <li class="sidebar-item sidebar-item-gray">
-                        <button class="sidebar-button sidebar-button-modal" id="myBtn3">
-                            <span class="sidebar-text">Blue Ocean</span>
-                            <span class="sidebar-text-icon"></span>
-                        </button>
-                    </li>
                     <li class="sidebar-item">
                         <label class="sidebar-button">
                             <span class="sidebar-icon sidebar-icon-three"></span>
@@ -74,10 +54,77 @@
                             </span>
                         </label>
                     </li>
+                    <li class="sidebar-item">
+                        <label class="sidebar-button" id="sb-left">
+                            <span class="sidebar-icon sidebar-icon-one"></span>
+                            <span class="sidebar-text">Режим левши</span>
+                            <span class="sidebar-control">
+                                <div class="switch">
+                                    <input type="checkbox" id="check-hand">
+                                    <span class="slider round"></span>
+                                </div>
+                            </span>
+                        </label>
+                    </li>
+                    <li class="sidebar-item">
+                        <label class="sidebar-button">
+                            <span class="sidebar-icon sidebar-icon-five"></span>
+                            <span class="sidebar-text">Викторина</span>
+                            <span class="sidebar-control">
+                                <div class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </div>
+                            </span>
+                        </label>
+                    </li>
                     <li class="sidebar-item sidebar-item-gray">
-                        <button class="sidebar-button" id="myBtn2">
+                        <div class="sidebar-beauty">
+                            <button class="sidebar-button sidebar-button-modal sidebar-button-color" id="myBtn3">
+                                <span class="sidebar-icon sidebar-icon-thue"></span>
+                                <span class="sidebar-text">Цветовая схема</span>
+                                <span class="sidebar-color"></span>
+                                <span class="sidebar-text-icon"></span>
+                            </button>
+                            <div class="sidebar-drop">
+                                <div class="colorise">
+                                    <form action="/">
+                                        <ul class="colorise-list">
+                                            <li class="colorise-item">
+                                                <button class="colorise-btn colorise-btn-blue"></button>
+                                            </li>
+                                            <li class="colorise-item">
+                                                <button class="colorise-btn colorise-btn-red"></button>
+                                            </li>
+                                            <li class="colorise-item">
+                                                <button class="colorise-btn colorise-btn-pink"></button>
+                                            </li>
+                                            <li class="colorise-item">
+                                                <button class="colorise-btn colorise-btn-violet"></button>
+                                            </li>
+                                            <li class="colorise-item">
+                                                <button class="colorise-btn colorise-btn-yellow"></button>
+                                            </li>
+                                            <li class="colorise-item">
+                                                <button class="colorise-btn colorise-btn-green"></button>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="sidebar-item sidebar-item-gray">
+                        <button class="sidebar-button sidebar-button-help" id="myBtn2">
                             <span class="sidebar-icon sidebar-icon-four"></span>
-                            <span class="sidebar-text">Сброс настроек</span>
+                            <span class="sidebar-text">Сброс</span>
+                        </button>
+                    </li>
+                    <li class="sidebar-item sidebar-item-gray">
+                        <button class="sidebar-button sidebar-button-help">
+                            <span class="sidebar-icon sidebar-icon-six"></span>
+                            <span class="sidebar-text">Помощь</span>
                         </button>
                     </li>
                 </ul>
@@ -100,7 +147,7 @@
                                         <h3 class="main-subtitle">Подготовка</h3>
                                         <p class="main-descr">Краткое описание</p>
                                     </div>
-                                    <div class="main-num">
+                                    <div class="main-num" id="myBtn">
                                         <span class="main-num-val">20</span>
                                     </div>
                                 </div>
@@ -230,11 +277,12 @@
         </footer>
     </div>
     <!-- Modal start -->
-    <div class="modal" id="myModal">
+    <div class="modal" id="myModal" style="display: block;">
         <div class="modal-body">
             <h3 class="modal-title">
-                Сохранить <br>
-                <span class="modal-title-name">“Тренировка бицепса с гантелями на лавке Скотта”</span> ?
+                <span class="modal-title-name">Сохранить 
+                    “<b>Тренировка бицепса с гантелями на лавке Скотта</b>”
+                    ?</span>
             </h3>
             <form action="/" class="modal-form">
                 <ul class="modal-list">
