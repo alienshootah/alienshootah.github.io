@@ -116,9 +116,14 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
     text-align: center;
     text-transform: uppercase;
-    font-size: 52px;
+    font-size: 40px;
+    font-family: $roboto-reg;
+    color: #989797;
+
 }
-section {
+header,
+section,
+footer {
     overflow: hidden;
 }
 
@@ -186,7 +191,7 @@ section {
         }
     }
     &-bottom {
-        margin-top: 40px;
+        margin-top: 18px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -244,4 +249,278 @@ section {
         background-repeat: no-repeat;
         background-image: url(../img/search-icon.png);
     }
+}
+
+/* Sections */
+
+.promo {
+    &-image {
+        width: 100%;
+        margin-top: -2px;
+    }
+}
+.catalog {
+    margin-top: 72px;
+    &-list {
+        margin: 0 -70px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        width: calc(33.3333%  - 140px);
+        margin: 52px 70px;
+    }
+    &-picture {
+        border-bottom: 3px solid #989797;
+        padding-bottom: 10px;
+    }
+    &-image {
+        width: 100%;
+        margin-bottom: -6px;
+    }
+    &-descr {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 10px;
+        &-right {
+            text-align: right;
+        }
+    }
+    &-subtitle {
+        font-size: 24px;
+        font-family: $roboto-bold;
+        margin: 0;
+    }
+    &-price {
+        font-size: 24px;
+        font-family: $roboto-bold;
+        color: #019e9f;
+        margin: 0;
+    }
+    &-btn {
+        background-color: #01898a;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 17px;
+        font-family: $roboto-reg;
+        border-radius: 18px;
+        padding: 15px 30px;
+        box-sizing: border-box;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #06a5a5;
+        }
+    }
+}
+.steps {
+    margin-top: 59px;
+    margin-bottom: 88px;
+    &-list {
+        font-size: 31px;
+        margin: 70px -50px 0 -50px;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    &-item {
+        width: calc(25% - 100px);
+        margin: 28px 50px 35px 50px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 141px;
+        width: 141px;
+        height: 115px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/steps-icon.png);
+    }
+    &-text {
+        margin: 40px 0 0 0;
+    }
+}
+.price {
+    &-table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+        background-color: #d0e9c3;
+        margin-top: 93px;
+        & thead th {
+            background-color: #95c57f;
+            color: #ffffff;
+            font-weight: 500;
+            font-size: 31px;
+        }
+        & th,
+        & td {
+            padding: 7px 80px;
+        }
+        & tr:nth-child(even){background-color: #f2f2f2;}
+    }
+}
+.feedback {
+    margin: 147px 0 93px 0;
+    &-body {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/feedback-bg.jpg);
+        background-size: cover;
+        position: relative;
+        min-height: 387px;
+        border-radius: 20px;
+    }
+    &-title {
+        background-color: rgba(129, 163, 120, 0.47);
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: normal;
+        font-family: $roboto-reg;
+        padding: 15px 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    &-row {
+        text-align: center;
+        align-items: center;
+    }
+    &-field {
+        border: 1px solid #575756;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 30px;
+        padding: 10px 20px 10px 32px;
+        max-width: 470px;
+        width: 100%;
+        font-size: 27px;
+        margin-bottom: 65px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::placeholder {
+            color: #d5d5d5;
+        }
+    }
+    &-btn {
+        background-color: #6aa353;
+        color: #ffffff;
+        font-size: 31px;
+        text-transform: uppercase;
+        padding: 30px 133px;
+        box-sizing: border-box;
+        border-radius: 43px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #82c269;
+        }
+    }
+}
+.reviews {
+    margin-bottom: 127px;
+    &-list {
+        display: flex;
+        text-align: center;
+    }
+    &-item {
+        width: calc(33.3333% - 100px);
+        margin: 67px 50px;
+    }
+    &-image {
+        width: 286px;
+        height: 286px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &-subtitle {
+        display: block;
+        margin-top: 41px;
+    }
+    &-text {
+        margin: -5px 0 0 0;
+    }
+}
+
+/* Footer */
+
+.footer {
+    &-top {
+        background-color: #427d2b;
+        padding: 75px 0 47px 0;
+    }
+    &-list {
+        font-size: 34px;
+    }
+    &-item {
+        margin: 32px 0;
+    }
+    &-link {
+        color: #d5d5d5;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #d5d5d5;
+        }
+    }
+    &-bottom {
+        background-color: #828282;
+        color: #ffffff;
+        padding: 32px 0;
+        box-sizing: border-box;
+    }
+    &-copy {
+        font-family: $roboto-thin;
+        font-size: 28px;
+        color: #ffffff;
+        margin: 0;
+    }
+}
+.adress {
+    color: #ffffff;
+    &-list {
+        font-size: 34px;
+    }
+    &-item {
+        margin: 32px 0;
+    }
+    &-wrapper {
+        display: flex;
+    }
+    &-link {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 30px;
+        width: 30px;
+        height: 28px;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 50px;
+        position: relative;
+        top: 2px;
+        &-one {
+            background-image: url(../img/header-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/header-icon-thue.png);
+            min-width: 36px;
+            width: 36px;
+            height: 24px;
+        }
+    }
+
 }

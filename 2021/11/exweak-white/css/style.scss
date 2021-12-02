@@ -1,7 +1,8 @@
 /* Fonts */
 
 $roboto-reg: 'Roboto-Regular', Arial, Helvetica, sans-serif;
-$roboto-reg: 'roboto-reg', Arial, Helvetica, sans-serif;
+$roboto-medium: 'Roboto-Medium', Arial, Helvetica, sans-serif;
+$roboto-light: 'Roboto-Light', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'Roboto-Regular';
@@ -10,8 +11,14 @@ $roboto-reg: 'roboto-reg', Arial, Helvetica, sans-serif;
     font-style: bold;
 }
 @font-face {
-    font-family: 'roboto-reg';
-    src: url(../fonts/roboto-reg.ttf);
+    font-family: 'Roboto-Medium';
+    src: url(../fonts/Roboto-Medium.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url(../fonts/Roboto-Light.ttf);
     font-weight: bold;
     font-style: bold;
 }
@@ -427,7 +434,7 @@ input:checked + .slider:before {
         border: 0.5px solid #EAEAEA;
         box-sizing: border-box;
         border-radius: 10px;
-        padding-bottom: 80px;
+        padding-bottom: 110px;
     }
     &-title {
         font-size: 18px;
@@ -515,26 +522,26 @@ input:checked + .slider:before {
             mask-image: url(../img/main-icon-seven.svg);
         }
         &-eight {
-            mask-image: url(../img/main-icon-eight.png);
+            mask-image: url(../img/main-icon-eight.svg);
         }
     }
     &-subtitle {
         font-family: $roboto-reg;
         margin: 0;
         padding: 0;
-        font-weight: 600;
-        font-size: 15px;
+        font-weight: 500;
+        font-size: 17px;
         line-height: 131.02%;
         color: #374A5E;
     }
     &-descr {
         margin: 1px 0 0 0;
         padding: 0;
-        font-family: $roboto-reg;
+        font-family: $roboto-light;
         font-weight: 300;
         font-size: 9px;
         line-height: 131.02%;
-        color: #374A5E;
+        color: rgba(55, 74, 94, 0.8);
     }
 }
 .shad {
@@ -571,20 +578,32 @@ input:checked + .slider:before {
 
 /* Footer */
 
-.footer {
+.foot {
+    background: #F9F9F9;
     position: fixed;
     z-index: 7777;
     bottom: 0;
-    left: 0;
+    left:0;
     right: 0;
+    padding-bottom: 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    box-sizing: border-box;
+    &-lists {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.footer {
     color: #374A5E;
     background-color: #ffffff;
     padding: 15px 0;
     box-sizing: border-box;
-    &-start {
-        left: 0;
-        right: 0;
-    }
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: 0.5px solid #EAEAEA;
+    border-right: 0.5px solid #EAEAEA;
+    border-bottom: 0.5px solid #EAEAEA;
     &-body {
         background: #f5f6f8;
         border: 0.5px solid #EAEAEA;
@@ -838,6 +857,7 @@ input:checked + .slider:before {
         right: 0;
     }
     &-title {
+        font-family: $roboto-reg;
         font-weight: 500;
         font-size: 18px;
         line-height: 131.02%;
@@ -851,8 +871,8 @@ input:checked + .slider:before {
 /* Pages */
 
 .easyfinme {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 .all {
     padding-bottom: 15px;
@@ -862,7 +882,7 @@ input:checked + .slider:before {
         border: 0.5px solid #EAEAEA;
         box-sizing: border-box;
         border-radius: 10px;
-        padding-bottom: 80px;
+        padding-bottom: 90px;
     }
     &-title {
         font-size: 18px;
@@ -936,7 +956,7 @@ input:checked + .slider:before {
         }
     }
     &-name {
-        font-family: $roboto-reg;
+        font-family: $roboto-medium;
         display: block;
         margin-top: -4px;
         font-weight: 600;
@@ -948,11 +968,12 @@ input:checked + .slider:before {
         font-weight: 300;
         font-size: 9px;
         line-height: 131.02%;
-        color: #374A5E;
         display: block;
         position: absolute;
         left: 15px;
         bottom: 10px;
+        font-family: $roboto-light;
+        color: rgba(55, 74, 94, 0.8);
     }
     &-more {
         text-align: center;
@@ -1040,7 +1061,7 @@ input:checked + .slider:before {
     &-info {
         padding: 23px 0px 8px 0px;
         text-align: center;
-        font-weight: 400;
+        font-weight: 700;
         font-family: $roboto-reg;
 
         font-weight: bold;
@@ -1060,7 +1081,7 @@ input:checked + .slider:before {
         }
     }
     &-val {
-        font-family: $roboto-reg;
+        font-family: $roboto-medium;
         display: block;
         text-align: center;
         padding-bottom: 0;
@@ -1189,7 +1210,7 @@ input:checked + .slider:before {
         margin-top: 20px;
         display: block;
         font-style: italic;
-        font-family: $roboto-reg;
+        font-family: $roboto-medium;
     }
     &-answers {
         margin-top: 40px;
