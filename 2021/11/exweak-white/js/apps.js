@@ -57,17 +57,25 @@ var btn3 = document.getElementById("myBtn3");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("modal-close")[0];
 var span2 = document.getElementsByClassName("modal-close-thue")[0];
+var span3 = document.getElementsByClassName("modal-close-three")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+if(btn) {
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
 }
-btn2.onclick = function() {
-  modal2.style.display = "block";
+if(btn2) {
+  btn2.onclick = function() {
+    modal2.style.display = "block";
+  }
 }
-btn3.onclick = function() {
-  modal3.style.display = "block";
+if(btn3) {
+  btn3.onclick = function() {
+    modal3.style.display = "block";
+  }
 }
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -75,4 +83,23 @@ span.onclick = function() {
 }
 span2.onclick = function() {
   modal2.style.display = "none";
+}
+
+
+/* Dropdown */
+if(document.querySelectorAll(".sidebar-button-color")) {
+  var acc = document.querySelectorAll(".sidebar-button-color");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+      panel.style.display = "none";
+      } else {
+      panel.style.display = "block";
+      }
+  });
+  }
 }
