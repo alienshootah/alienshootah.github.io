@@ -108,7 +108,7 @@ if(document.querySelector(".clients-slider")) {
           slidesPerView: 5,
           spaceBetween: 40,
         },
-        1070: {
+        1600: {
           slidesPerView: 6,
         },
       },
