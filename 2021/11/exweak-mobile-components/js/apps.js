@@ -35,6 +35,7 @@ if(document.querySelector(".drop-open")) {
 if(document.querySelector(".days-list")) {
     var clientsSlider = new Swiper(".days-list", {
         slidesPerView: 1,
+        spaceBetween: 32,
         loop: true,
         navigation: {
             prevEl: ".days-arrow-left",

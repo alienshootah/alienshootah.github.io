@@ -75,6 +75,18 @@ if(document.querySelector(".catalog-slider")) {
   var brandsSlider = new Swiper(".catalog-slider", {
       slidesPerView: 3,
       spaceBetween: 40,
+      breakpoints: {
+        317: {
+          slidesPerView: 1,
+        },
+        520: {
+          slidesPerView: 2,
+        },
+        868: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
       loop: true,
       navigation: {
           prevEl: ".catalog-arrow-left",
@@ -93,20 +105,22 @@ if(document.querySelector(".clients-slider")) {
         317: {
           slidesPerView: 1,
         },
-        400: {
-          slidesPerView: 2,
+        520: {
+          slidesPerView: 3,
         },
-        507: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        767: {
+        768: {
           slidesPerView: 3,
           spaceBetween: 20,
         },
-        970: {
+        852: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1024: {
           slidesPerView: 5,
-          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 5,
         },
         1600: {
           slidesPerView: 6,

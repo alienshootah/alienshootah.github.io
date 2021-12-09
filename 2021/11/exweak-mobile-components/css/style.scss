@@ -560,10 +560,6 @@ input:checked + .slider:before {
     }
     &-list {
         position: relative;
-        overflow: hidden;
-    }
-    &-item {
-        overflow: hidden;
     }
     &-arrows {
         position: absolute;
@@ -693,6 +689,7 @@ input:checked + .slider:before {
         color: #FDF8FF;
         padding: 3px 7px 3px 20px;
         box-sizing: border-box;
+        position: relative;
     }
     &-goal {
         font-weight: bold;
@@ -723,6 +720,18 @@ input:checked + .slider:before {
     &-small {
         display: inline-block;
         margin-top: 4px;
+    }
+    &-arrow {
+        display: inline-block;
+        min-width: 11px;
+        width: 11px;
+        height: 8px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/times-arrow.svg);
+        left: -14px;
+        top: 7px;
+        position: absolute;
     }
 }
 .thoose {

@@ -108,7 +108,7 @@ var acca = document.querySelectorAll(".drop-btn");
       panel.style.display = "block";
       }
   });
-  }
+}
 
 
   /* Telephone mask */

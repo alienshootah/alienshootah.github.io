@@ -26,8 +26,333 @@
     }
 }
 @media(max-width: 1200px) {
-    
+    .promo {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            order: -1;
+            text-align: center;
+            margin: 20px 0;
+        }
+        &-image {
+            max-width: 600px;
+        }
+    }
+    .vids {
+        &-image {
+            width: 100%;
+        }
+        &-play {
+            top: 36%;
+        }
+    }
+    .feedback {
+        &-list {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        &-item {
+            margin: 10px;
+            width: calc(50% - 20px);
+        }
+        &-more {
+            margin-top: 20px;
+        }
+    }
+    .footer {
+        margin: 20px 0;
+        &-logo {
+            width: 100%;
+        }
+        &-item {
+            &::after {
+                top: -15px;
+            }
+            &:nth-child(2) {
+                &::after {
+                    top: 0;
+                }
+            }
+        }
+    }
 }
 @media(max-width: 992px) {
-    
+    .header {
+        &-row {
+            display: block;
+            text-align: center;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-list {
+            justify-content: center;
+            margin-top: 20px;
+        }
+        &-item {
+            margin: 0 25px;
+        }
+    }
+    .info {
+        &-row {
+            display: block;
+        }
+        &-left {
+            width: 100%;
+            text-align: center;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-image {
+            max-width: 300px;
+        }
+    }
+    .watch {
+        &-row {
+            display: block;
+            text-align: center;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-text {
+            max-width: 100%;
+        }
+    }
+    .vids-play {
+        top: 40%;
+    }
+    .feedback {
+        &-body {
+            
+        }
+        &-row {
+            display: block;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .header {
+        padding: 25px 0s;
+        &-row {
+            display: flex;
+            align-items: center;
+        }
+        &-left {
+            width: 50%;
+        }
+        &-right {
+            width: 50%;
+        }
+        &-list {
+            display: block;
+            margin-top: 0;
+        }
+        &-item {
+            margin: 5px 0;
+            &:last-child {
+                display: none;
+            }
+        }
+        &-wrapper {
+            justify-content: flex-end;
+        }
+    }
+    .promo {
+        text-align: center;
+        &-title {
+            font-size: 28px;
+        }
+        &-descr {
+            font-size: 16px;
+        }
+        &-list {
+            display: block;
+            text-align: center;
+        }
+        &-item {
+            margin-right: 0;
+        }
+        &-btn {
+            justify-content: center;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .info {
+        &-list {
+            display: block;
+        }
+        &-item {
+            margin-bottom: 15px;
+        }
+    }
+    .prime {
+        margin-bottom: 0;
+        &-image {
+            width: 100%;
+        }
+    }
+    .better {
+        padding-top: 60px;
+        &-decor {
+            display: none;
+        }
+        &-item {
+            width: calc(50% - 30px);
+        }
+    }
+    .feedback {
+        &-body {
+            padding: 40px 30px;
+        }
+        &-btn {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .footer {
+        font-size: 14px;
+        &-list {
+            display: block;
+            text-align: center;
+            margin: 0;
+        }
+        &-item {
+            margin: 20px 0;
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                width: 100%;
+            }
+            &::after {
+                content: none;
+            }
+            &:nth-child(1) {
+                margin-bottom: 0;
+            }
+            &:nth-child(2) {
+                margin-top: 0;
+            }
+        }
+        &-logo {
+            width: auto;
+        }
+    }
+}
+@media(max-width: 520px) {
+    h2 {
+        font-size: 16px;
+    }
+    .promo-title {
+        font-size: 25px;
+    }
+    .better {
+        &-list {
+            text-align: center;
+        }
+        &-item {
+            width: 100%;
+        }
+    }
+    .watch-body {
+        padding: 30px 30px;
+    }
+    .feedback {
+        text-align: center;
+        &-title {
+            font-size: 16px;
+        }
+        &-item {
+            width: 100%;
+        }
+    }
+}
+@media(max-width: 425px) {
+    .header {
+        padding: 28px 0 28px 0;
+        &-row {
+            display: block;
+            text-align: center;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-list {
+            margin-top: 20px;
+        }
+        &-wrapper {
+            justify-content: center;
+        }
+    }
+    .promo {
+        &-body {
+            padding: 20px;
+        }
+        &-title {
+            font-size: 18px;
+        }
+        &-descr {
+            font-size: 13px;
+        }
+        &-btn {
+            padding: 12px 16px;
+        }
+    }
+    .info {
+        &-body {
+            padding: 20px;
+        }
+    }
+    .better {
+        &-title {
+            padding: 10px 20px;
+        }
+    }
+    .vids-play-icon {
+        display: inline-block;
+        min-width: 70px;
+        width: 70px;
+        height: 40px;
+        background-size: contain;
+    }
+    .catalog {
+        &-title {
+            padding: 10px 20px;
+        }
+    }
+    .feedback {
+        &-title {
+            padding: 10px 20px;
+        }
+    }
+    .footer {
+        &-logo {
+            max-width: 250px;
+        }
+    }
 }
