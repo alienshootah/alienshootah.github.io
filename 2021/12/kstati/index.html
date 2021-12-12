@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-6 promo-right text-right">
                         <div class="promo-more">
-                            <a href="#" class="promo-more-link">хочу событие!</a>
+                            <button class="promo-more-link open-modal" data-modal="modal-01">хочу событие!</button>
                         </div>
                     </div>
                 </div>
@@ -124,17 +124,19 @@
                     </div>
                 </div>
                 <div class="where-more">
-                    <a href="#" class="where-more-link">
+                    <button class="where-more-link open-modal" data-modal="modal-01">
                         хочу событие!
-                    </a>
+                    </buton>
                 </div>
             </div>
         </section>
         <section class="projects">
             <div class="content">
-                <h2 class="projects-title">
-                    ИЗБРАННЫЕ ПР<span class="letter">О</span>ЕКТы
-                </h2>
+                <div class="projects-top">
+                    <h2 class="projects-title">
+                        ИЗБРАННЫЕ ПР<span class="letter">О</span>ЕКТы
+                    </h2>
+                </div>
                 <ul class="projects-list">
                     <li class="projects-item">
                         <span class="projects-name">Премия</span>
@@ -142,10 +144,10 @@
                             <img src="img/projects-image1.png" alt="" class="projects-image">
                         </div>
                         <div class="projects-more">
-                            <a href="#" class="projects-more-link">
+                            <button class="projects-more-link open-modal" data-modal="modal-02">
                                 <span class="projects-more-text">подробнее</span>
                                 <span class="projects-more-decor"></span>
-                            </a>
+                            </button>
                         </div>
                     </li>
                     <li class="projects-item">
@@ -154,10 +156,10 @@
                             <img src="img/projects-image2.png" alt="" class="projects-image">
                         </div>
                         <div class="projects-more">
-                            <a href="#" class="projects-more-link">
+                            <button class="projects-more-link">
                                 <span class="projects-more-text">подробнее</span>
                                 <span class="projects-more-decor"></span>
-                            </a>
+                            </button>
                         </div>
                     </li>
                     <li class="projects-item">
@@ -166,10 +168,10 @@
                             <img src="img/projects-image3.png" alt="" class="projects-image">
                         </div>
                         <div class="projects-more">
-                            <a href="#" class="projects-more-link">
+                            <button class="projects-more-link">
                                 <span class="projects-more-text">подробнее</span>
                                 <span class="projects-more-decor"></span>
-                            </a>
+                            </button>
                         </div>
                     </li>
                 </ul>
@@ -211,7 +213,7 @@
             <div class="content">
                 <span class="footer-decor"></span>
                 <div class="footer-copy">
-                    <img src="img/footer-logo.pmg" alt="" class="footer-logo">
+                    <img src="img/footer-logo.svg" alt="" class="footer-logo">
                     <span class="footer-copy-text">
                         Все права защищены. Вообще все.
                     </span>
@@ -219,5 +221,99 @@
             </div>
         </footer>
     </div>
+
+    <!-- Modals event -->
+    <div class="modal" id="modal-01">
+        <div class="modal-body">
+            <button class="modal-close close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <form class="modal-form">
+                <ul class="modal-list">
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-text">Имя</span>
+                            <input type="text" class="modal-field" required>
+                        </label>
+                    </li>
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-text">Телефон</span>
+                            <input type="text" class="modal-field tel">
+                        </label>
+                    </li>
+                </ul>
+                <label class="modal-lbl-end">
+                    <input type="checkbox" class="modal-check" required>
+                    <span class="modal-check-text">
+                        Согласен с политикой конфиденциальности
+                    </span>
+                </label>
+                <div class="modal-more">
+                    <button class="modal-more-btn">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="modal-02">
+        <div class="modal-body">
+            <div class="modal-responsive">
+                <div class="modal-body">
+                    <h3 class="modal-title">
+                        <span class="modal-title-decor"></span>
+                    </h3>
+                    <div class="row modal-row">
+                        <div class="col-6 modal-left">
+                            <ul class="modal-sublist">
+                                <li class="modal-subitem">
+                                    <b class="modal-semi">Событие:</b> премия и клиентское мероприятие для авторов спортивных и сценических костюмов и аксессуаров из страз SWAROWSKI
+                                </li>
+                                <li class="modal-subitem">
+                                    <b class="modal-semi">Концепция:</b> Закрытый клуб EVOLI
+                                </li>
+                                <li class="modal-subitem">
+                                    <b class="modal-semi">Количество участников:</b> 150
+                                </li>
+                                <li class="modal-subitem">
+                                    <b class="modal-semi">Место проведения:</b> LOFT HALL #3
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6 modal-right">
+                            <ul class="modal-sublist">
+                                <li class="modal-subitem">
+                                    <b class="modal-semi">Задача:</b> в рамках премии провести “прощание” бренда SWAROWSKI с российскими клиентами и презентацию нового бренда премиальных страз EVOLI
+                                </li>
+                                <li class="modal-subitem">
+                                    
+                                    <b class="modal-semi">Решение:</b> мероприятие в честь создания закрытого клуба нового бренда с раздачей отличительных знаков всем членам клуба и приветствием от Чемпионок мира по спортивной гимнастике Дины и Арины Авериных
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row modal-row">
+                        <div class="col-6 modal-left">
+                            <div class="modal-picture">
+                                <img src="img/modal-image1.jpg" alt="" class="modal-image">
+                            </div>
+                        </div>
+                        <div class="col-6 modal-right">
+                            <div class="modal-picture">
+                                <img src="img/modal-image2.jpg" alt="" class="modal-image">
+                            </div>
+                            <div class="modal-picture">
+                                <img src="img/modal-image3.jpg" alt="" class="modal-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-end">
+            <button class="modal-end-btn close">Закрыть</button>
+        </div>
+    </div>
+    <!-- Modals event -->
+    <script src="js/apps.js"></script>
 </body>
 </html>
