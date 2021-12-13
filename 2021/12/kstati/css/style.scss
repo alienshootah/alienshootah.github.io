@@ -799,6 +799,9 @@ h2 {
             border-bottom: none;
             & .ways-btn {
                 border-bottom: none;
+                &.active {
+                    border-bottom: 1px solid #000000;
+                }
             }
         }
     }
@@ -927,6 +930,9 @@ h2 {
         background: #E4FCED;
         border-bottom: 1px solid #000000;
     }
+    &-wraps {
+        padding-left: 25px;
+    }
 }
 .also {
     background-color: #030704;
@@ -959,6 +965,10 @@ h2 {
         color: #FFFFFF;
         text-align: left;
         margin: 0 0 35px 0;
+        &-link {
+            color: #ffffff;
+            text-decoration: none;
+        }
     }
     &-end {
         border-top: 1px solid #FFFFFF;
@@ -995,5 +1005,47 @@ h2 {
         &:focus {
             border-bottom: 1px solid #ffffff;
         }
+    }
+}
+.brand {
+    border-top: 1px solid #000000;
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    min-height: 160px;
+    box-sizing: border-box;
+    &-second {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    &-body {
+        display: inline-block;
+        width: 336px;
+        height: 162px;
+        text-align: center;
+        transform: rotate(11.28deg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/brand-body.svg);
+        background-size: contain;
+        padding: 35px 40px 35px 40px;
+        box-sizing: border-box;
+        margin-top: -50px;
+        &-thue {
+            margin-top: -85px;
+            width: 351px;
+            height: 170px;
+            background-image: url(../img/brand-body-thue.svg);
+            transform: rotate(-9.12deg);
+            padding: 0px 40px 35px 40px;
+            & .brand-image {
+                transform: rotate(-3deg);
+            }
+        }
+    }
+    &-image {
+        width: 100%;
+        transform: rotate(5deg);
     }
 }
