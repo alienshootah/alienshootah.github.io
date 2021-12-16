@@ -90,12 +90,12 @@ button {
     border: 0;
     cursor: pointer;
     outline: none;
-    font-family: $jost-regular;
+    font-family: $jost-light;
 }
 input,
 textarea {
     box-sizing: border-box;
-    font-family: $jost-regular;
+    font-family: $jost-light;
 }
 
 /* Main styles */
@@ -112,7 +112,7 @@ section {
     max-width: 1200px;
 }
 body {
-    font-family: $jost-regular;
+    font-family: $jost-light;
     font-size: 16px;
     line-height: 23px;
     color: #515151;
@@ -132,6 +132,15 @@ h1, h2, h3, h4, h5, h6 {
     &-row {
         align-items: center;
     }
+    &-left {
+        width: 45%;
+    }
+    &-center {
+        width: 33%;
+    }
+    &-right {
+        width: 32%;
+    }
     &-list {
         font-weight: 300;
         font-size: 16px;
@@ -145,6 +154,16 @@ h1, h2, h3, h4, h5, h6 {
         &:first-child {
             max-width: 142px;
             margin-right: 55px;
+        }
+    }
+    &-bottom {
+        position: relative;
+        &-body {
+            padding: 28px 0;
+            border-bottom: 1px solid #677E61;
+        }
+        &-row {
+            align-items: center;
         }
     }
 }
@@ -183,9 +202,73 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+.bart {
+    &-body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
 .lang {
     &-list {
         display: flex;
         align-items: center;
+    }
+    &-item {
+        margin: 0 5px;
+    }
+}
+.buys {
+    &-icon {
+        display: inline-block;
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/buys-icon.svg);
+        margin-right: 12px;
+    }
+    &-text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        color: #515151;
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        text-align: right;
+        justify-content: flex-end;
+    }
+}
+
+/* Navigation & Search */
+
+.nav {
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #515151;
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-link {
+        color: #515151;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #515151;
+        }
+    }
+}
+.find {
+    &-field {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
