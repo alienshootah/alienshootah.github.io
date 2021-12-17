@@ -127,6 +127,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: $jost-bold;
 }
+h2 {
+    font-size: 30px;
+    line-height: 43px;
+    color: #5A5B5B;
+    font-family: $jost-light;
+}
 
 /* Header */
 
@@ -314,18 +320,111 @@ h1, h2, h3, h4, h5, h6 {
 
 .promo {
     margin-top: 64px;
+
     &-text {
         font-weight: 600;
         font-size: 20px;
         line-height: 100%;
         color: #5A5B5B;
+        position: absolute;
+        top: 25px;
+        left: 25px;
     }
     &-picture {
         position: relative;
     }
-    &-text {
-        position: absolute;
-        top: 25px;
-        left: 25px;
+    &-image {
+        width: 100%;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -12.5px -15px 0 -15px;
+    }
+    &-item {
+        margin: 12.5px 15px;
+        width: calc(50% - 30px);
+    }
+}
+.new {
+    &-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0;
+        border-bottom: 1px solid #677E61;
+    }
+    &-all {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        color: #515151;
+        &-link {
+            text-decoration: none;
+            color: #515151;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s;
+            &:hover .new-all-text,
+            &:focus .new-all-text {
+                border-bottom: 1px solid #515151;
+            }
+        }
+        &-text {
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 15px;
+            width: 15px;
+            height: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/new-all-icon.svg);
+            position: relative;
+            top: 2px;
+            margin-left: 10px;
+        }
+    }
+    &-title {
+        margin: 0;
+    }
+    &-subtitle {
+        font-weight: 300;
+        font-size: 16px;
+        font-family: $jost-light;
+        line-height: 23px;
+        color: #5A5B5B;
+        margin: 10px 0 10px 0;
+        &-link {
+            color: #5A5B5B;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #5A5B5B;
+            }
+        }
+    }
+    &-price {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        color: #5A5B5B;
+        &-value {
+            font-family: $jost-semi;
+        }
+    }
+    &-btn {
+        display: inline-block;
+        border: 1px solid #677E61;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 23px;
+        color: #677E61;
+        padding: 8px 33px;
     }
 }

@@ -112,6 +112,7 @@ h2 {
 }
 .letter {
     font-family: $nostra;
+    text-transform: lowercase;
 }
 
 /* Header */
@@ -430,11 +431,16 @@ h2 {
         box-sizing: border-box;
         border-bottom: 1px solid #000000;
         border-right: 1px solid #000000;
+        transition: all 0.5s;
         &:nth-child(2n) {
             border-right: none;
         }
         &:last-child {
             border-bottom: none;
+        }
+        &:hover,
+        &:focus {
+            background-color: #E0ECFF;
         }
     }
     &-name {
@@ -594,7 +600,7 @@ h2 {
     display: none;
     position: fixed; /* Stay in place */
     z-index: 1000; /* Sit on top */
-    padding-top: 50px; /* Location of the box */
+    padding-top: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -613,6 +619,7 @@ h2 {
         box-sizing: border-box;
         position: relative;
         text-align: left;
+        font-size: 16px;
     }
     &-close {
         position: absolute;
@@ -705,36 +712,44 @@ h2 {
         border-bottom: 1px solid #000000;
         &:last-child {
             border-bottom: none;
-            margin-bottom: 40px;
         }
     }
     &-left {
         border-right: 1px solid #000000;
     }
     &-title {
-        margin: 20px 0 0 0;
-        padding: 0 20px 25px 20px;
+        margin: 10px 0 0 0;
+        padding: 0 20px 7px 20px;
         box-sizing: border-box;
         border-bottom: 1px solid #000000;
-        font-size: 81px;
-        line-height: 60px;
+        font-size: 60px;
+        line-height: 50px;
         font-weight: normal;
+        text-transform: uppercase;
+        
     }
     &-subitem {
-        margin: 25px 0;
+        margin: 10px 0;
+    }
+    &-images {
+        text-align: center;
     }
     &-picture {
         text-align: center;
-        margin: 35px 0;
+        margin: 15px 10px;
+        display: inline-block;
     }
     &-image {
-        width: 333px;
-        height: 333px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
+        &-big {
+            width: 100%;
+        }
     }
     &-end {
-        margin-top: 50px;
-        margin-bottom: 100px;
+        margin-top: 25px;
+        margin-bottom: 80px;
         &-btn {
             background: #FFFFFF;
             border: 1px solid #000000;
@@ -761,7 +776,7 @@ h2 {
 /* Pages */
 
 .single {
-    margin-top: 222px;
+    margin-top: 22px;
     margin-left: -15px;
     margin-right: -15px;
     overflow: visible;
@@ -983,8 +998,8 @@ h2 {
         text-transform: uppercase;
     }
     &-title {
-        font-size: 181px;
-        line-height: 178px;
+        font-size: 127px;
+        line-height: 140px;
         letter-spacing: 2.64232px;
         text-transform: uppercase;
         color: #FFFFFF;
@@ -1138,11 +1153,11 @@ h2 {
 }
 .mono {
     padding-left: 15px;
-    font-size: 29.83px;
-    line-height: 37px;
-    background-position: top;
+    font-size: 22px;
+    line-height: 30px;
+    background-position: center;
     background-size: cover;
-    min-height: 1080px;
+    min-height: 680px;
     overflow: hidden;
     background-color: #ffffff;
     &-one {
@@ -1179,14 +1194,14 @@ h2 {
         background-image: url(../img/mono-eleven.jpg);
     }
     &-top {
-        font-size: 73px;
-        line-height: 75px;
+        font-size: 40px;
+        line-height: 50px;
         letter-spacing: 1.7px;
         text-transform: uppercase;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 30px 0 0 0;
     }
     &-title {
         margin: 0;
