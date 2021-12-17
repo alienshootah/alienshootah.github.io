@@ -112,7 +112,6 @@ h2 {
 }
 .letter {
     font-family: $nostra;
-    text-transform: lowercase;
 }
 
 /* Header */
@@ -211,7 +210,7 @@ h2 {
         line-height: 132px;
         text-transform: uppercase;
         color: #000000;
-        margin-top: 148px;
+        margin-top: 25px; 
         margin-bottom: 100px;
     }
     &-top {
@@ -269,6 +268,11 @@ h2 {
         width: calc(50% - 1px);
         padding: 30px;
         box-sizing: border-box;
+        transition: background-color 0.5s;
+        &:hover,
+        &:focus {
+            background-color: #E0ECFF;
+        }
         &:first-child {
             border-right: 1px solid #000000;
             & .decision-picture {
@@ -283,6 +287,16 @@ h2 {
         color: #000000;
         margin-top: 30px;
         margin-bottom: 57px;
+        &-link {
+            color: #000000;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #000000;
+            }
+        }
     }
     &-descr {
         font-size: 38px;
@@ -290,6 +304,16 @@ h2 {
         margin-top: 48px;
         margin-bottom: 30px;
         letter-spacing: 0.7px;
+        &-link {
+            color: #000000;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #000000;
+            }
+        }
     }
 }
 .where {
