@@ -7,6 +7,15 @@ if(mobileBtn) {
   });
 }
 
+/* Catalog menu */
+
+const catalogBtn = document.querySelector(".sidebar-open");
+if(catalogBtn) {
+  catalogBtn.addEventListener("click", function() {
+    document.querySelector(".catalog-right").classList.toggle("show");
+  });
+}
+
 /* Accordion */
 
 if(document.querySelector(".sidebar-btn")) {
