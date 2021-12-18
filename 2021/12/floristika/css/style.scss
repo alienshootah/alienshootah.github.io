@@ -110,7 +110,9 @@ textarea {
 html {
     scroll-behavior: smooth;
 }
-section {
+section,
+header,
+footer {
     overflow: hidden;
 }
 .content {
@@ -171,7 +173,6 @@ h2 {
         }
     }
     &-bottom {
-        position: relative;
         &-body {
             padding: 28px 0 31px 0;
             border-bottom: 1px solid #677E61;
@@ -179,6 +180,9 @@ h2 {
         &-row {
             align-items: center;
         }
+    }
+    &-btn {
+        display: none;
     }
 }
 .logo {
@@ -580,8 +584,9 @@ h2 {
         margin-bottom: -6px;
     }
     &-right {
-        padding-left: 0;
-        padding-right: 100px;
+        padding-left: 30px;
+        padding-right: 15px;
+        box-sizing: border-box;
     }
     &-title {
         font-family: $jost-light;
