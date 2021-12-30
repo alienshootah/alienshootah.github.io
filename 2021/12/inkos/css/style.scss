@@ -22,6 +22,12 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
+.content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
 
 /* Section */
 
@@ -40,6 +46,7 @@ body {
     }
     &-row {
         display: flex;
+        align-items: center;
         margin: 0 -15px;
         box-sizing: border-box;
     }
@@ -70,5 +77,90 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-image: url(../img/logistic-decor.png);
+    }
+    &-round {
+        min-width: 794px;
+        width: 794px;
+        height: 669px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/logist-round.png);
+        position: relative;
+        &-body {
+            width: 340px;
+            font-size: 17px;
+            text-align: right;
+            letter-spacing: 0.3px;
+            position: absolute;
+            bottom: 147px;
+            right: 239px;
+        }
+    }
+    &-descr {
+        color: #72c9fd;
+        font-size: 25px;
+    }
+    &-end {
+        max-width: 1100px;
+        margin: 30px auto 0 auto;
+    }
+    &-subtitle {
+        color: #ffffff;
+        font-size: 38px;
+        font-family: $lato-black;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &-list {
+        margin: 0 -25px;
+        padding: 0;
+        list-style-type: none;
+        color: #555555;
+        font-size: 12px;
+        text-transform: uppercase;
+        display: flex;
+    }
+    &-item {
+        background-color: #ffffff;
+        margin: 25px;
+        width: calc(25% - 50px);
+        &:nth-child(2),
+        &:nth-child(4) {
+            background-color: #043e9e;
+            color: #ffffff;
+        }
+    }
+    &-wrapper {
+        padding: 30px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    &-picture {
+        width: 25%;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/logist-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/logist-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/logist-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/logist-icon-four.png);
+        }
+    }
+    &-words {
+        width: 75%;
     }
 }
