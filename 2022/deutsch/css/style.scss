@@ -8,7 +8,7 @@ Manrope
 
 $manrope-reg: 'Manrope-Regular', Arial, Helvetica, sans-serif;
 $neue-reg: 'NeueMachina-Regular', Arial, Helvetica, sans-serif;
-$neue-bold: 'NeueMachina-Bold', Arial, Helvetica, sans-serif;
+$neue-bold: 'NeueMachina-Ultrabold', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'Manrope-Regular';
@@ -23,8 +23,8 @@ $neue-bold: 'NeueMachina-Bold', Arial, Helvetica, sans-serif;
     font-style: normal;
 }
 @font-face {
-    font-family: 'NeueMachina-Bold';
-    src: url(../fonts/NeueMachina-Bold.ttf);
+    font-family: 'NeueMachina-Ultrabold';
+    src: url(../fonts/NeueMachina-Ultrabold.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -115,7 +115,7 @@ body {
     color: #494949;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: $neue-reg;
+    font-family: $neue-bold;
 }
 section {
     overflow: hidden;
@@ -216,6 +216,7 @@ h2 {
 /* Sections */
 
 .promo {
+    overflow: visible;
     &-row {
         align-items: center;
     }
@@ -291,6 +292,244 @@ h2 {
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/promo-decor-thue.png);
+        }
+        &-three {
+            top: 650px;
+            left: 130px;
+            z-index: 3;
+            display: inline-block;
+            min-width: 78px;
+            width: 78px;
+            height: 92px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-decor-three.png);
+        }
+    }
+    &-end {
+        position: relative;
+        top: -19px;
+    }
+    &-list {
+        text-align: center;
+        display: flex;
+        margin: 0 -15px;
+    }
+    &-item {
+        background-color: #ffffff;
+        width: calc(33.3333% - 30px);
+        margin: 15px;
+        border-radius: 20px;
+        padding: 40px 50px 20px 50px;
+        box-sizing: border-box;
+    }
+    &-num {
+        font-family: $neue-bold;
+        font-weight: 800;
+        font-size: 54px;
+        line-height: 52px;
+        color: #FED431;
+    }
+    &-text {
+        font-size: 18px;
+        line-height: 140%;
+        color: #515151;
+    }
+}
+.author {
+    margin-top: 50px;
+    &-row {
+        align-items: center;
+    }
+    &-picture {
+        position: relative;
+    }
+    &-decor {
+        position: absolute;
+        z-index: -1;
+        &-one {
+            top: 40px;
+            right: 60px;
+            display: inline-block;
+            min-width: 248px;
+            width: 248px;
+            height: 231px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/author-decor-one.png);
+        }
+        &-thue {
+            bottom: 100px;
+            right: 50px;
+            display: inline-block;
+            min-width: 150px;
+            width: 150px;
+            height: 150px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/author-decor-thue.png);
+        }
+    }
+}
+.whom {
+    overflow: visible;
+    & .content {
+        position: relative;
+    }
+    &-title {
+        text-align: center;
+        margin-top: 0;
+    }
+    &-body {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 70px;
+        box-sizing: border-box;
+    }
+    &-list {
+        display: flex;
+        margin: 50px -15px 0 -15px;
+    }
+    &-item {
+        width: calc(33.3333% - 30px);
+        margin: 15px;
+    }
+    &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 120px;
+        width: 120px;
+        height: 120px;
+        background-color: #F5F4F1;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 auto;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &-one {
+            &::after {
+                background-image: url(../img/whom-icon-one.png);
+                position: relative;
+                top: 5px;
+            }
+        }
+        &-thue {
+            &::after {
+                position: relative;
+                top: -10px;
+                background-image: url(../img/whom-icon-thue.png);
+            }
+        }
+        &-three {
+            &::after {
+                background-image: url(../img/whom-icon-three.png);
+            }
+        }
+    }
+    &-text {
+        font-size: 18px;
+        line-height: 140%;
+        color: #494949;
+    }
+    &-decor {
+        display: inline-block;
+        min-width: 186px;
+        width: 186px;
+        height: 187px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/whom-decor.png);
+        position: absolute;
+        z-index: -1;
+        right: -50px;
+        bottom: -150px;
+    }
+}
+.tall {
+    padding-top: 125px;
+    padding-bottom: 75px;
+    overflow: visible;
+    &-body {
+        position: relative;
+    }
+    &-title {
+        text-align: center;
+    }
+    &-decor {
+        position: absolute;
+        left: -300px;
+        top: -300px;
+        z-index: -1;
+        display: inline-block;
+        min-width: 720px;
+        width: 720px;
+        height: 720px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/tall-decor.png);
+    }
+    &-list {
+        font-size: 18px;
+        line-height: 140%;
+        color: #494949;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+    &-item {
+        width: calc(33.3333% - 30px);
+        margin: 30px 15px;
+    }
+    &-num {
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 58px;
+        color: #FED431;
+    }
+    &-subtitle {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #494949;
+    }
+}
+.convinced {
+    background: #404042;
+    color: #ffffff;
+    text-align: center;
+    padding: 90px 0;
+    box-sizing: border-box;
+    &-body {
+        position: relative;
+    }
+    &-title {
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 120%;
+        color: #ffffff;
+        margin: 0;
+    }
+    &-decor {
+        position: absolute;
+        &-one {
+            left: 0;
+            bottom: -40px;
+            display: inline-block;
+            min-width: 318px;
+            width: 318px;
+            height: 403px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/convinced-decor-one.png);
         }
     }
 }
