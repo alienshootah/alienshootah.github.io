@@ -1,0 +1,298 @@
+/* Fonts 
+
+
+PP Neue Machina
+Manrope
+
+*/
+
+$manrope-reg: 'Manrope-Regular', Arial, Helvetica, sans-serif;
+$neue-reg: 'NeueMachina-Regular', Arial, Helvetica, sans-serif;
+$neue-bold: 'NeueMachina-Bold', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'Manrope-Regular';
+    src: url(../fonts/Manrope-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NeueMachina-Regular';
+    src: url(../fonts/NeueMachina-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NeueMachina-Bold';
+    src: url(../fonts/NeueMachina-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Grid */
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+.row {
+    display: flex;
+    margin: 0 -15px;
+}
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+.col-12{width: 100%;}
+.col-11{width: 91.66666667%;}
+.col-10{width: 83.33333333%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66666667%;}
+.col-7 {width: 58.33333333%;}
+.col-6 {width: 50%;}
+.col-5 {width: 41.66666667%;}
+.col-4 {width: 33.33333333%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66666667%;}
+.col-1 {width: 8.33333333%;}
+.text-left {text-align: left;}
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.hidden {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    font-family: $manrope-reg;
+}
+input,
+textarea {
+    box-sizing: border-box;
+    font-family: $manrope-reg;
+}
+
+/* Main styles */
+
+html {
+    scroll-behavior: smooth;
+}
+.content {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1230px;
+}
+body {
+    background: #F5F4F1;
+    font-family: $manrope-reg;
+    font-size: 18px;
+    line-height: 140%;
+    color: #494949;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $neue-reg;
+}
+section {
+    overflow: hidden;
+}
+h2 {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 140%;
+    color: #404042;
+}
+
+/* Header */
+
+.header {
+    background: #FFFFFF;
+    padding: 30px 0;
+    box-sizing: border-box;
+    &-row {
+        align-items: center;
+    }
+    &-logo {
+        max-width: 150px;
+        &-link {
+            text-decoration: none;
+            font-size: 16px;
+            font-family: $neue-reg;
+            line-height: 120%;
+            color: #404042;
+        }
+    }
+    &-block {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+/* Menu */
+
+.nav {
+    &-list {
+        font-size: 14px;
+        font-family: $manrope-reg;
+        line-height: 19px;
+        color: #515151;
+        display: flex;
+        align-items: center;
+        margin: 0 -25px;
+    }
+    &-item {
+        margin: 0 25px;
+    }
+    &-link {
+        color: #515151;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #515151;
+        }
+    }
+}
+.social {
+    margin-left: 20px;
+    position: relative;
+    top: 3px;
+    &-list {
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+    }
+    &-item {
+        margin: 0 5px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #FED431;
+        border-radius: 50%;
+        transition: all 0.5s;
+        &-one {
+            background-image: url(../img/social-icon-one.svg);
+        }
+        &-thue {
+            background-image: url(../img/social-icon-thue.svg);
+        }
+        &:hover,
+        &:focus {
+            background-color: #ffe98f;
+        }
+    }
+}
+
+/* Sections */
+
+.promo {
+    &-row {
+        align-items: center;
+    }
+    &-title {
+        font-family: $neue-bold;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 140%;
+        color: #404042;
+    }
+    &-descr {
+        font-size: 18px;
+        line-height: 140%;
+    }
+    &-more {
+        margin-top: 50px;
+        &-btn {
+            padding: 20px 42px;
+            background: #E54646;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 140%;
+            color: #FFFFFF;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: #fc6a6a;
+            }
+        }
+    }
+    &-picture {
+        position: relative;
+        left: -250px;
+        &::before {
+            position: absolute;
+            top: 230px;
+            left: 100px;
+            z-index: -2;
+            content: '';
+            display: inline-block;
+            min-width: 626px;
+            width: 626px;
+            height: 720px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-grid.png);
+        }
+    }
+    &-decor {
+        position: absolute;
+        &-one {
+            z-index: -1;
+            display: inline-block;
+            min-width: 214px;
+            width: 214px;
+            height: 214px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-decor-one.png);
+            right: -350px;
+            top: 300px;
+        }
+        &-thue {
+            z-index: -1;
+            top: 400px;
+            left: 75px;
+            display: inline-block;
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/promo-decor-thue.png);
+        }
+    }
+}
+
+/* Footer */
