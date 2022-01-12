@@ -1,3 +1,21 @@
+/* Fonts */
+
+$roboto-reg: 'Roboto-Regular', Arial, Helvetica, sans-serif;
+$notosans-reg: 'NotoSans-Regular', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NotoSans-Regular';
+    src: url(../fonts/NotoSans-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Sections */
 
 .promise {
@@ -12,6 +30,7 @@
         max-width: 840px;
     }
     &-title {
+        font-family: $roboto-reg;
         font-style: normal;
         font-weight: 500;
         font-size: 48px;
@@ -23,6 +42,7 @@
         padding: 0;
         margin: 0;
         font-weight: 500;
+        font-family: $roboto-reg;
         font-size: 26px;
         line-height: 30px;
         color: #FFFFFF;
@@ -43,6 +63,7 @@
             text-decoration: none;
             font-weight: 500;
             font-size: 20px;
+            font-family: $roboto-reg;
             line-height: 23px;
             &:hover,
             &:focus {
@@ -70,6 +91,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 37px;
+        font-family: $roboto-reg;
         line-height: 42px;
         color: #434449;
         text-align: center;
@@ -125,6 +147,7 @@
     &-midtitle {
         font-weight: 900;
         font-size: 19px;
+        font-family: $roboto-reg;
         line-height: 26px;
         color: #29AAE3;
         margin-top: 0;
@@ -134,6 +157,7 @@
         font-style: normal;
         font-weight: 600;
         font-size: 19px;
+        font-family: $roboto-reg;
         line-height: 23px;
         color: #434449;
         margin-top: 20px;
@@ -141,7 +165,7 @@
     &-sublist {
         padding: 0 0 0 20px;
         margin: 20px 0 0 0;
-        font-family: 'Noto Sans';
+        font-family: $notosans-reg;
         font-style: normal;
         font-weight: normal;
         font-size: 17px;
@@ -160,6 +184,7 @@
         bottom: 31px;
         left: 26px;
         &-link {
+            font-family: $roboto-reg;
             font-style: normal;
             font-weight: 500;
             font-size: 20px;
@@ -191,6 +216,7 @@
     background-color: #F5F6F6;
     padding: 70px 0 95px 0;
     &-title {
+        font-family: $roboto-reg;
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
@@ -207,7 +233,7 @@
         max-width: 500px;
     }
     &-descr {
-        font-family: 'Noto Sans';
+        font-family: $notosans-reg;
         font-style: normal;
         font-weight: normal;
         font-size: 21px;
@@ -217,6 +243,7 @@
     &-more {
         margin-top: 52px;
         &-link {
+            font-family: $roboto-reg;
             font-style: normal;
             font-weight: 500;
             font-size: 20px;
@@ -249,6 +276,7 @@
     margin-bottom: 100px;
     &-title {
         text-align: center;
+        font-family: $roboto-reg;
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
@@ -261,7 +289,7 @@
         align-items: center;
     }
     &-descr {
-        font-family: 'Noto Sans';
+        font-family: $notosans-reg;
         font-style: normal;
         font-weight: normal;
         font-size: 21px;
@@ -271,6 +299,7 @@
     &-more {
         margin-top: 50px;
         &-link {
+            font-family: $roboto-reg;
             font-style: normal;
             font-weight: 500;
             font-size: 20px;
@@ -303,6 +332,7 @@
     padding-bottom: 70px;
     box-sizing: border-box;
     &-title {
+        font-family: $roboto-reg;
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
@@ -315,7 +345,7 @@
         align-items: center;
     }
     &-descr {
-        font-family: 'Noto Sans';
+        font-family: $notosans-reg;
         font-style: normal;
         font-weight: normal;
         font-size: 21px;
@@ -329,6 +359,7 @@
             text-decoration: none;
             color: #ffffff;
             font-style: normal;
+            font-family: $roboto-reg;
             font-weight: 500;
             font-size: 20px;
             line-height: 23px;
@@ -359,6 +390,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     &-title {
+        font-family: $roboto-reg;
         font-style: normal;
         font-weight: 500;
         font-size: 36px;
@@ -380,6 +412,7 @@
         width: 100%;
     }
     &-descr {
+        font-family: $roboto-reg;
         font-style: normal;
         font-weight: 500;
         font-size: 26px;
@@ -439,6 +472,70 @@
         &-four {
             background-image: url(../img/soci-icon-four.svg);
             background-color: #F52929;
+        }
+    }
+}
+.lang {
+    margin-left: 23px;
+    position: relative;
+    &-btn {
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        border: 0;
+        border-bottom: 1px solid transparent;
+        background-color: transparent;
+        padding: 0;
+        color: #ffffff;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.5s;
+        outline: none!important;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 8px;
+            width: 8px;
+            height: 9px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/lang-after.svg);
+            margin-left: 3px;
+        }
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+    &-drop {
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #000000;
+        color: #ffffff;
+        border: 1px solid #080702;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+    &-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    &-link {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        &:hover,
+        &:focus {
+            color: rgba(255,255,255,0.8);
+            border-bottom: 1px solid rgba(255,255,255,0.8);
         }
     }
 }

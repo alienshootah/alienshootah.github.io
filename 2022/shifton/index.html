@@ -19,6 +19,65 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="/en"><img style="width: 240px;" src="https://shifton.com/static/images/logo_full.svg" alt=""></a>
+            </div><!--//logo-->
+            <nav class="main-nav navbar navbar-right navbar-expand-md">
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span> </span>
+                    <span> </span>
+                    <span> </span>
+                </button>
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item"><a class="nav-link" href="/en">Home</a></li>
+
+                        <li class=" nav-item"><a class="nav-link" href="/en/pricing">Pricing</a></li>
+
+                        <li class=" nav-item"><a class="nav-link" href="/en/features">Features</a></li>
+
+                        <li class=" nav-item"><a class="nav-link" href="/en/blog">Blog</a></li>
+
+                        <li class=" nav-item"><a class="nav-link" href="/en/faqs">faq</a></li>
+
+                        <li class="nav-item"><a class="nav-link" href="https://app.shifton.com/login?lang=en" id="signin">Sign In</a></li>
+
+                    </ul>
+                    <a class="btn btn-secondary" href="https://app.shifton.com/registration?lang=en" id="signup">Sign Up</a><!--//nav-->
+                    <div class="lang">
+                        <button class="lang-btn">Eng</button>
+                        <div class="lang-drop">
+                            <ul class="lang-list">
+                                <li class="lang-item">
+                                    <a href="https://shifton.com/ru" class="lang-link">Русский</a>
+                                </li>
+                                <li class="lang-item">
+                                    <a href="https://shifton.com/he" class="lang-link">עִבְרִית</a>
+                                </li>
+                                <li class="lang-item">
+                                    <a href="https://shifton.com/uk" class="lang-link">Українська</a>
+                                </li>
+                                <li class="lang-item">
+                                    <a href="https://shifton.com/en" class="lang-link">English</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script>
+                        /* Lang menu */
+                        const langBtn = document.querySelector(".lang-btn");
+                        if(langBtn) {
+                            langBtn.addEventListener("click", function() {
+                            document.querySelector(".lang-drop").classList.toggle("show");
+                            });
+                        }
+                    </script>
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
+        </div><!--//container-->
+    </header>
     <section class="promise">
         <div class="container">
             <div class="promise-body">
@@ -247,6 +306,37 @@
         </div>
     </section>
     
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <a class="col-title mr-5 white" href="/en/features" style="text-decoration: none"><span class="white">Features</span></a>
+                <a class="col-title mr-5 white" href="/en/blog" style="text-decoration: none"><span class="white">Blog</span></a>
+                <a class="col-title white" href="/en/faqs" style="text-decoration: none"><span class="white">FAQ</span></a>
+            </div>
+            <div class="divider"></div>
+            <div class="footer-bottom text-center">
+            <div class="logo">
+                <a href="https://play.google.com/store/apps/details?id=com.shifton.work" target="_blank"><img style="width: 150px;" src="https://shifton.com/static/images/icons/google-play-badge.png" alt=""></a>
+                <a href="https://apps.apple.com/app/shifton/id1510772762" target="_blank"><img style="width: 120px;" src="https://shifton.com/static/images/icons/App_Store.svg" alt=""></a>
+            </div>
+                <small class="copyright">Copyright 2017-2021, Shifton. All rights reserved.</small><br>
+                <small class="copyright ml-2"><a href="/en/privacy">Privacy Policy</a></small>
+                &nbsp;|&nbsp;
+                <small class="copyright ml-2"><a href="/en/terms">Terms of Use</a></small>
+                &nbsp;|&nbsp;
+                <small class="copyright ml-2"><a href="/en/cookies">Сookies</a></small>
+                <br>
+                <small class="copyright">
+                     <select name="language" onchange="javascript:location.href = '/' + this.value + '/' + location.pathname.slice(4);">
+                        <option value="en" selected="">English (en)</option>
+                        <option value="ru">Русский (ru)</option>
+                        <option value="he">עִבְרִית (he)</option>
+                        <option value="uk">Українська (uk)</option>
+                    </select>
+                </small>
+            </div>
+        </div><!--//container-->
+    </footer>
     <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-2.0.0.min.js" integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://shifton.com/static/plugins/popper.min.js"></script>
