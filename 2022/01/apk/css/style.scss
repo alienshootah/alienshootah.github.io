@@ -124,6 +124,8 @@ html {
 }
 body {
     font-family: $opensans-reg;
+    font-size: 16px;
+    color: #333333;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: $opensans-bold;
@@ -386,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .steps {
+    margin: 100px 0;
     &-body {
         background-color: #117728;
         background-repeat: no-repeat;
@@ -453,5 +456,120 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
     }
-    
+}
+.better {
+    &-descr {
+        max-width: 880px;
+    }
+    &-list {
+        margin: 50px -25px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        width: calc(33.3333% - 50px);
+        margin: 25px 25px;
+        &-full {
+            width: calc(58% - 50px);
+        }
+    }
+    &-wrapper {
+        display: flex;
+    }
+    &-picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+        background-color: #d33232;
+        margin-top: 8px;
+        margin-right: 20px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/better-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/better-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/better-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/better-icon-four.png);
+        }
+    }
+    &-subtitle {
+        color: #117728;
+        font-size: 22px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}
+.propose {
+    margin: 50px 0;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-subtitle {
+        color: #117728;
+        font-size: 22px;
+    }
+    &-item {
+        width: calc(33.3333% - 8px);
+        margin: 4px;
+        background-color: #f6faf7;
+        padding: 30px 35px;
+        box-sizing: border-box;
+        transition: background-color 0.5s;
+        &-red {
+            background-color: #d33232!important;
+            color: #ffffff;
+            & .propose-subtitle {
+                color: #ffffff;
+            }
+        }
+        &:hover,
+        &:focus {
+            background-color: #e7f1e9;
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/propose-icon-one.png);
+        }
+        &-thue {
+            background-image: url(../img/propose-icon-thue.png);
+        }
+        &-three {
+            background-image: url(../img/propose-icon-three.png);
+        }
+        &-four {
+            background-image: url(../img/propose-icon-four.png);
+        }
+        &-five {
+            background-image: url(../img/propose-icon-five.png);
+        }
+        &-six {
+            background-image: url(../img/propose-icon-six.png);
+        }
+        &-seven {
+            background-image: url(../img/propose-icon-seven.png);
+        }
+    }
 }
