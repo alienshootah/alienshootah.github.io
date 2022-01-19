@@ -626,6 +626,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .calct {
+    margin-bottom: 125px;
     &-title {
         margin-top: 0;
     }
@@ -648,10 +649,13 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #187327;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-image: url(../img/calct-center.jpg);
         padding: 30px;
         box-sizing: border-box;
+    }
+    &-right {
+        padding-left: 30px;
     }
     &-subtitle {
         margin-top: 0;
@@ -725,6 +729,196 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-val {
             font-size: 24px;
+        }
+    }
+    &-more {
+        margin-top: 15px;
+        &-btn {
+            color: #ffffff;
+            background-color: #d33232;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 25px;
+            width: 25px;
+            height: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/calct-more-icon.png);
+            margin-left: 12px;
+        }
+    }
+}
+.callback {
+    &-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    &-list {
+        margin: 10px -12px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        margin: 12px;
+        width: calc(50% - 24px);
+        &-full {
+            width: calc(100% - 24px);
+        }
+    }
+    &-field {
+        width: 100%;
+        border-width: 1px;
+        border-color: rgb(215, 226, 233);
+        border-style: solid;
+        height: 57px;
+        font-size: 17px;
+        font-family: $opensans-reg;
+        box-sizing: border-box;
+        padding: 15px 12px;
+        &::placeholder {
+            color: #666666;
+        }
+    }
+}
+.padlock {
+    font-size: 12px;
+    color: #666666;
+    margin: 10px 0;
+    &-body {
+        display: flex;
+        align-items: center;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 12px;
+        width: 12px;
+        height: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/padlock-icon.png);
+        margin-right: 10px;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: #117728;
+    color: #ffffff;
+    &-left {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &-center {
+        background-color: #0e6722;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    &-right {
+        padding-top: 30px;
+        padding-bottom: 50px;
+        padding-left: 65px;
+    }
+    &-title {
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-size: 17px;
+        font-family: $opensans-semi;
+    }
+    &-copy {
+        font-size: 12px;
+        margin-left: 60px;
+        &-link {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid #4d995e;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-list {
+        font-size: 16px;
+    }
+    &-item {
+        margin: 3px 0;
+    }
+    &-link {
+        color: #ffffff;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid #ffffff;
+        }
+    }
+}
+.quiq {
+    &-field {
+        background-color: rgb(232, 232, 232);
+        width: 200px;
+        height: 34px;
+        border: 0;
+        font-size: 14px;
+        padding: 12px 10px;
+        box-sizing: border-box;
+        &::placeholder {
+            color: #666666;
+        }
+    }
+    &-btn {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        background-color: #2fa9ff;
+        font-size: 14px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        &-icon {
+            display: inline-block;
+            min-width: 19px;
+            width: 19px;
+            height: 19px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/quiq-btn-icon.png);
+            margin-right: 8px;
+        }
+    }
+    &-policy {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #d5d5d5;
+        max-width: 255px;
+        line-height: 1.2;
+        position: relative;
+        left: -22px;
+        &-body {
+            display: flex;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 12px;
+            width: 12px;
+            height: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/quiq-policy-icon.png);
+            margin-right: 10px;
+            position: relative;
+            top: 5px;
         }
     }
 }
