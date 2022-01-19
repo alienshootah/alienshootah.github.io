@@ -574,7 +574,157 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .faq {
-    &-image {
+    margin: 50px 0 100px 0;
+    &-picture {
+        position: relative;
+    }
+    &-title {
+        position: absolute;
+        top: 145px;
+        left: 178px;
+        max-width: 170px;
+        color: #ffffff;
+    }
+    &-item {
+        margin: 0 0 5px 0;
+    }
+    &-btn {
         width: 100%;
+        color: #333333;
+        font-size: 18px;
+        font-family: $opensans-semi;
+        padding: 10px 0;
+        border-bottom: 1px dashed #d33232;
+        box-sizing: border-box;
+        text-align: left;
+        position: relative;
+        &.active {
+            border-bottom: 1px dashed transparent;
+            &:after {
+                background-image: url(../img/faq-btn-after-active.png);
+            }
+        }
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 12px;
+            width: 12px;
+            height: 11px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/faq-btn-after.png);
+            position: absolute;
+            right: 10px;
+            top: 18px;
+        }
+    }
+    &-drop {
+        display: none;
+        &-body {
+            padding: 25px 20px;
+        }
+    }
+}
+.calct {
+    &-title {
+        margin-top: 0;
+    }
+    &-item {
+        margin: 10px 0;
+    }
+    &-text {
+        display: inline-block;
+        color: #ffffff;
+        background-color: #187327;
+        font-size: 16px;
+        font-family: $opensans-bold;
+        text-transform: uppercase;
+        padding: 9px 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+    &-center {
+        color: #ffffff;
+        background-color: #187327;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../img/calct-center.jpg);
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    &-subtitle {
+        margin-top: 0;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $opensans-reg;
+    }
+    &-sublist {
+        font-size: 14px;
+        padding-right: 20px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
+    }
+    &-subitem {
+        margin: 10px 0;
+    }
+    &-label {
+        position: relative;
+        display: flex;
+    }
+    &-radio {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        &:checked ~ .calct-radio-icon:after {
+            display: inline-block;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 15px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            top: 1px;
+            margin-right: 8px;
+            &:after {
+                content: '';
+                display: none;
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                background-color: rgb(211, 50, 50);
+                position: absolute;
+                top: 3px;
+                left: 3px;
+            }
+        }
+    }
+    &-result {
+        margin-bottom: 25px;
+        font-size: 18px;
+        font-family: $opensans-semi;
+        &-text {
+            display: block;
+          
+        }
+        &-value {
+            color: #ffffff;
+            font-size: 34px;
+            font-family: $opensans-bold;
+        }
+    }
+    &-month {
+        font-size: 18px;
+        font-family: $opensans-semi;
+        &-text {
+            display: block;
+            margin-bottom: 5px;
+        }
+        &-val {
+            font-size: 24px;
+        }
     }
 }
