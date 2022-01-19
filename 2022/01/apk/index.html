@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             <div class="header-block-item">
-                                <button class="header-btn">
+                                <button class="header-btn curr-modal" data-modal="modal-01">
                                     <span class="header-btn-icon"></span>
                                     <span class="header-btn-text">Рассчитать займ</span>
                                 </button>
@@ -144,7 +144,7 @@
                             </li>
                         </ul>
                         <div class="promo-more">
-                            <button class="promo-more-btn">
+                            <button class="promo-more-btn curr-modal" data-modal="modal-01">
                                 <span class="promo-more-text">Получить займ</span>
                                 <span class="promo-more-icon"></span>
                             </button>
@@ -177,7 +177,7 @@
                                 <div class="steps-descr">
                                     <p class="steps-text">
                                         Заполните 
-                                        <button class="steps-text-link">онлайн-заявку</button>
+                                        <button class="steps-text-link curr-modal" data-modal="modal-01">онлайн-заявку</button>
                                     </p>
                                 </div>
                             </div>
@@ -414,13 +414,13 @@
                                 </div>
                             </li>
                             <li class="faq-item">
-                                <button class="faq-btn active">
+                                <button class="faq-btn">
                                     <span class="faq-text">
                                         Насколько важна моя кредитная история?
                                     </span>
                                     <span class="faq-icon"></span>
                                 </button>
-                                <div class="faq-drop" style="display: block;">
+                                <div class="faq-drop">
                                     <div class="faq-drop-body">
                                         Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. 
                                         Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. Текст. 
@@ -558,7 +558,7 @@
             <div class="content">
                 <form class="calct-form">
                     <div class="row calct-row">
-                        <div class="col-3 calct-left">
+                        <div class="col-4 calct-left">
                             <h2 class="calct-title">
                                 Калькулятор процентов
                             </h2>
@@ -575,7 +575,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-4 calct-center">
+                        <div class="col-3 calct-center">
                             <div class="calct-block">
                                 <h3 class="calct-subtitle">Модель погашения:</h3>
                                 <ul class="calct-sublist">
@@ -613,19 +613,19 @@
                                 <h2 class="callback-title">Оставьте заявку!</h2>
                                 <ul class="callback-list">
                                     <li class="callback-item callback-item-full">
-                                        <input type="text" class="callback-field" placeholder="Фамилия Имя Отчество">
+                                        <input type="text" class="callback-field" placeholder="Фамилия Имя Отчество" required>
                                     </li>
                                     <li class="callback-item">
-                                        <input type="text" class="callback-field" placeholder="Мобильный телефон">
+                                        <input type="text" class="callback-field tel" placeholder="Мобильный телефон">
                                     </li>
                                     <li class="callback-item">
-                                        <input type="email" class="callback-field" placeholder="Email">
+                                        <input type="email" class="callback-field" placeholder="Email" required>
                                     </li>
                                     <li class="callback-item">
-                                        <input type="text" class="callback-field" placeholder="Марка и модель ТС">
+                                        <input type="text" class="callback-field" placeholder="Марка и модель ТС" required>
                                     </li>
                                     <li class="callback-item">
-                                        <input type="text" class="callback-field" placeholder="Город">
+                                        <input type="text" class="callback-field" placeholder="Город" required>
                                     </li>
                                 </ul>
                             </div>
@@ -702,6 +702,58 @@
             </div>
         </footer>
     </div>
+
+    <!-- Modals start -->
+    <div class="modal" id="modal-01">
+        <div class="modal-body">
+            <button class="modal-close close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <h3 class="modal-title">Онлайн-заявка</h3>
+            <form action="/" class="modal-form">
+                <ul class="modal-list">
+                    <li class="modal-item">
+                        <input type="text" class="modal-field" placeholder="Ваше имя" required>
+                    </li>
+                    <li class="modal-item">
+                        <input type="text" class="modal-field tel" placeholder="Ваш телефон">
+                    </li>
+                    <li class="modal-item">
+                        <input type="text" class="modal-field" placeholder="Ваш email" required>
+                    </li>
+                    <li class="modal-item">
+                        <div class="modal-more">
+                            <button class="modal-more-btn">Отправить</button>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+            <div class="policy">
+                <span class="policy-icon"></span>
+                <div class="policy-descr">
+                    <p class="policy-text">
+                        Оставляя заявку вы соглашаетесь с нашей 
+                        <a href="#" class="policy-link">политикой конфиденциальности</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-success" id="modal-02">
+        <div class="modal-body">
+            <button class="modal-close close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <h4 class="modal-subtitle">
+                Заявка принята!
+            </h4>
+            <p class="modal-subtext">
+                Мы свяжемся с Вами в самое ближайшее время
+            </p>
+        </div>
+    </div>
+    <!-- Modals end -->
+
     <script src="js/apps.js"></script>
 </body>
 </html>
