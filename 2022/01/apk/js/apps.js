@@ -202,8 +202,8 @@ function setBubble(range, bubble) {
   const max =  range.max || 100;
 
   const offset = Number(((val - min) * 100) / (max - min));
-
-  bubble.textContent = val + 'р.';
+  
+  bubble.textContent = val;
 
   // yes, 14px is a magic number
   bubble.style.left = `calc(${offset}% - 14px)`;
