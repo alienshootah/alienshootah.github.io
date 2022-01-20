@@ -1,21 +1,90 @@
 /* Dropdowns */
 
-if(document.querySelector(".faq-btn")) {
-    var acc = document.getElementsByClassName("faq-btn");
-    var i;
+// Get all the dropdown from document
+document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
 
-    for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-        panel.style.display = "none";
-        } else {
-        panel.style.display = "block";
-        }
-    });
+// Dropdown Open and Close function
+function dropDownFunc(dropDown) {
+    console.log(dropDown.classList.contains('click-dropdown'));
+
+    if(dropDown.classList.contains('click-dropdown') === true){
+        dropDown.addEventListener('click', function (e) {
+            e.preventDefault();        
+    
+            if (this.nextElementSibling.classList.contains('show') === true) {
+                // Close the clicked dropdown
+                this.parentElement.classList.remove('dropdown-open');
+                this.nextElementSibling.classList.remove('show');
+    
+            } else {
+                // Close the opend dropdown
+                closeDropdown();
+    
+                // add the open and active class(Opening the DropDown)
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('show');
+            }
+        });
     }
+
+    if(dropDown.classList.contains('hover-dropdown') === true){
+
+        dropDown.onmouseover  =  dropDown.onmouseout = dropdownHover;
+
+        function dropdownHover(e){
+            if(e.type == 'mouseover'){
+                // Close the opend dropdown
+                closeDropdown();
+
+                // add the open and active class(Opening the DropDown)
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('show');
+                
+            }
+
+            // if(e.type == 'mouseout'){
+            //     // close the dropdown after user leave the list
+            //     e.target.nextElementSibling.onmouseleave = closeDropdown;
+            // }
+        }
+    }
+
+};
+
+
+// Listen to the doc click
+window.addEventListener('click', function (e) {
+
+    // Close the menu if click happen outside menu
+    if (e.target.closest('.dropdown-container') === null) {
+        // Close the opend dropdown
+        closeDropdown();
+    }
+
+});
+
+
+// Close the openend Dropdowns
+function closeDropdown() { 
+    console.log('run');
+    
+    // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
+    document.querySelectorAll('.dropdown-container').forEach(function (container) { 
+        container.classList.remove('dropdown-open')
+    });
+
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) { 
+        menu.classList.remove('show');
+    });
 }
+
+// close the dropdown on mouse out from the dropdown list
+document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) { 
+    // close the dropdown after user leave the list
+    dropDownList.onmouseleave = closeDropdown;
+});
+
+
 
 /* Modals */
 
@@ -88,78 +157,54 @@ window.addEventListener("DOMContentLoaded", function() {
   
 });
 
-/* Dropdowns */
+/* Accordeon */
 
-// Transition
-function fadeIn(el) {
-    el.style.opacity = 0;
-    el.style.display = "block";
-  
-    (function fade() {
-      var val = parseFloat(el.style.opacity);
-      if (!((val += 0.1) >= 1.1)) {
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
-      }
-    }());
-  }
-    
-  function fadeOut(el) {
-    (function fade() {
-      var val = parseFloat(el.style.opacity);
-      if ((val -= 0.1) == 0) {
-        el.style.opacity = 0;
-        el.style.display = "none";
-      } else {
-        el.style.opacity = val;
-        requestAnimationFrame(fade);
-      }
-    }());
-  }
-  
-  // Initialise all the required variables
-  var btn = document.querySelectorAll(".nav-link-drop");
-  
-  /*
-    *	Button click event listeners
-    *	Keeps track of the button click.
-    */
-  btn.forEach(function(btn) {
-    btn.addEventListener("click", function(e) {
-      e.stopPropagation();
-      e.preventDefault();
-      var sibling = btn.nextElementSibling,
-        firstVisible = document.querySelector('.visible'),
-        dropDown;
-  
-      /*
-        * Remove the visible class if an element is already in the DOM
-        */
-      if (firstVisible) {
-        fadeOut(firstVisible);
-        firstVisible.classList.remove("visible");
-      }
-  
-      if (!sibling.classList.contains("visible")) {
-        fadeIn(sibling);
-        sibling.classList.add("visible");
-      } else {
-        fadeOut(sibling);
-        sibling.classList.remove("visible");
-      }
+if(document.querySelector(".faq-btn")) {
+    var acc = document.getElementsByClassName("faq-btn");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
     });
-  });
-    
-    
-  document.addEventListener("click", function() {
-    var visible = document.querySelector(".visible");
-  
-    if (visible) {
-        fadeOut(visible);
-        visible.classList.remove("visible");
     }
-});
+}
 
 /* Current year */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();
+
+/* Range slider */
+
+const allRanges = document.querySelectorAll(".range-wrap");
+allRanges.forEach((wrap) => {
+  const range = wrap.querySelector(".range");
+  const bubble = wrap.querySelector(".bubble");
+
+  range.addEventListener("input", () => {
+    setBubble(range, bubble);
+  });
+
+  // setting bubble on DOM load
+  setBubble(range, bubble);
+});
+
+function setBubble(range, bubble) {
+  const val = range.value;
+
+  const min = range.min || 0;
+  const max =  range.max || 100;
+
+  const offset = Number(((val - min) * 100) / (max - min));
+
+  bubble.textContent = val + 'р.';
+
+  // yes, 14px is a magic number
+  bubble.style.left = `calc(${offset}% - 14px)`;
+}

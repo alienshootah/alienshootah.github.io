@@ -213,7 +213,7 @@ document.addEventListener("click", function() {
   }
 });
 
-  /* Modals */
+/* Modals */
 
 let buttons = document.querySelectorAll('.open-modal');
 let modals = document.querySelectorAll('.modal');

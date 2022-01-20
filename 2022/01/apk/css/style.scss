@@ -253,6 +253,9 @@ h1, h2, h3, h4, h5, h6 {
         z-index: 10;
         background-color: #ffffff;
         display: none;
+        &.show {
+            display: block;
+        }
     }
     &-subitem {
         margin: 6px 0;
@@ -1057,3 +1060,90 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+
+/* Range slider */
+.range {
+    &-body {
+        max-width: 400px;
+        margin: 20px auto;
+    }
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: -15px;
+    }
+}
+.range-wrap {
+    position: relative;
+    width: 100%;
+    padding: 1.5em 0; /*  Giving more room for hover  */
+    max-width: 400px;
+    
+  }
+  
+  /* Custom Bar */
+  .range-wrap::before {
+    content: "";
+    background-color: rgb(215, 226, 233);
+    width: 100%;
+    height: 14px;
+    display: block;
+    position: absolute;
+    border-radius: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: height 100ms ease;
+  }
+  
+  .range-wrap::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/range-wrap-after.png);
+    position: absolute;
+    bottom: 31px;
+    left: 0;
+  }
+  
+  /*  Hide Original */
+.range {
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+}
+  
+.bubble {
+    position: absolute;
+    z-index: 2;
+    top: 115%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Remove pointer events on Bubble so user can click on the actual thumb beaneath it!  */
+    color: transparent;
+    display: grid;
+    place-items: center; /*  Place the number on the center  */
+    font-weight: bold;
+    font-size: 20px;
+    font-family: $opensans-bold;
+    transition: color 100ms ease, transform 100ms ease;
+    user-select: none; /*  Prevent Accidentally highlighting the number while sliding the cursor  */
+    color: black;
+    &:after {
+        content: '';
+        display: inline-block;
+        min-width: 58px;
+        width: 58px;
+        height: 58px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/bubble-after.png);
+        position: absolute;
+        top: -60px;
+    }
+}
+  
