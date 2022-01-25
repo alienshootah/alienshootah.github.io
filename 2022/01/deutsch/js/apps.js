@@ -21,4 +21,14 @@ const reviewSlider = new Swiper('.reviews-list', {
         el: ".reviews-pagination",
         clickable: true,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+    },
 });
