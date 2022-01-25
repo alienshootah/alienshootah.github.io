@@ -1147,7 +1147,7 @@ h2 {
     }
 }
 .contacts {
-    margin: 20px 0;
+    padding: 20px 0 120px 0;
     &-title {
         font-family: $neue-bold;
         font-style: normal;
@@ -1171,8 +1171,8 @@ h2 {
     &-decor {
         position: absolute;
         &-one {
-            right: 0;
-            top: 0;
+            right: 50px;
+            top: -20px;
             display: inline-block;
             min-width: 50px;
             width: 50px;
@@ -1180,6 +1180,150 @@ h2 {
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/contacts-decor-one.svg);
+        }
+    }
+    &-subtitle {
+        font-family: $manrope-reg;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #494949;
+        margin-bottom: 10px;
+    }
+    &-mail {
+        &-link {
+            color: #494949;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #494949;
+            }
+        }
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.soci {
+    &-list {
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+    }
+    &-item {
+        margin: 0 5px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 28px;
+        width: 28px;
+        height: 28px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #404042;
+        border-radius: 50%;
+        transition: all 0.5s;
+        &-one {
+            background-image: url(../img/soci-icon-one.svg);
+        }
+        &-thue {
+            background-image: url(../img/soci-icon-thue.svg);
+        }
+        &:hover,
+        &:focus {
+            background-color: #262627;
+        }
+    }
+}
+.feedback {
+    &-body {
+        background: #404042;
+        border-radius: 20px;
+        padding: 47px 73px;
+        box-sizing: border-box;
+        position: relative;
+        &:after {
+            top: -95px;
+            left: -35px;
+            z-index: -1;
+            content: '';
+            position: absolute;
+            min-width: 720px;
+            width: 720px;
+            height: 720px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/feedback-after.svg);
+        }
+    }
+    &-list {
+        position: relative;
+        z-index: 2;
+    }
+    &-item {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-field {
+        background: #FFFFFF;
+        border: 1px solid #C4C4C4;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 100%;
+        height: 65px;
+        font-family: $manrope-reg;
+        font-size: 18px;
+        line-height: 140%;
+        padding: 20px 40px;
+        &::placeholder {
+            color: #BEBEBE;
+        }
+    }
+    &-btn {
+        margin-bottom: 10px;
+        height: 65px;
+        background: #E54646;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+        padding: 20px 42px;
+        box-sizing: border-box;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background: #fc6a6a;
+        }
+    }
+    &-decor {
+        position: absolute;
+        &-one {
+            display: inline-block;
+            min-width: 94px;
+            width: 94px;
+            height: 94px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/feedback-btn-one.svg);
+            bottom: 20px;
+            right: 5px;
+        }
+        &-thue {
+            display: inline-block;
+            min-width: 155px;
+            width: 155px;
+            height: 155px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/feedback-btn-thue.svg);
+            bottom: -100px;
+            right: 135px;
         }
     }
 }
