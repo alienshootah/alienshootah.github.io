@@ -1112,3 +1112,74 @@ h2 {
         }
     }
 }
+.breadcrumbs {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    &-list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 -1px;
+    }
+    &-item {
+        margin: 10px 1px;
+        &:after {
+            content: '/';
+            margin: 0 3px 0 3px;
+            color: rgba(0, 0, 0, 1);
+        }
+        &:last-child {
+            &::after {
+                content: none;
+            }
+        }
+    }
+    &-link {
+        color: rgba(0, 0, 0, 1);
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid rgba(0, 0, 0, 1);
+        }
+    }
+}
+.contacts {
+    margin: 20px 0;
+    &-title {
+        font-family: $neue-bold;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 140%;
+        color: #404042;
+        margin-top: 0;
+    }
+    &-descr {
+        font-size: 18px;
+        line-height: 140%;
+        color: #494949;
+    }
+    &-row {
+        margin-top: 30px;
+    }
+    &-left {
+        position: relative;
+    }
+    &-decor {
+        position: absolute;
+        &-one {
+            right: 0;
+            top: 0;
+            display: inline-block;
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/contacts-decor-one.svg);
+        }
+    }
+}
