@@ -361,11 +361,11 @@ h2 {
   display: block;
 }
 
-.nav-drop li {
+.nav-subitem {
   margin: 6px 0;
 }
 
-.nav-drop a {
+.nav-sublink {
   text-decoration: none;
   color: #333333;
   border-bottom: 1px solid #117728;
@@ -373,7 +373,7 @@ h2 {
   transition: all 0.5s;
 }
 
-.nav-drop a:hover, .nav-drop a:focus {
+.nav-sublink:hover, .nav-sublink:focus {
   border-bottom: 1px solid transparent;
 }
 
@@ -764,7 +764,6 @@ h2 {
   height: 50px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .propose-icon-one {
@@ -901,7 +900,7 @@ h2 {
 }
 
 .calct-left {
-  padding-right: 40px;
+  padding-right: 30px;
 }
 
 .calct-center {
@@ -1171,11 +1170,11 @@ h2 {
   font-size: 16px;
 }
 
-.footer-list li {
+.footer-item {
   margin: 3px 0;
 }
 
-.footer-list li a {
+.footer-link {
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -1183,7 +1182,7 @@ h2 {
   transition: all 0.5s;
 }
 
-.footer-list li a:hover, .footer-list li a:focus {
+.footer-link:hover, .footer-link:focus {
   border-bottom: 1px solid #ffffff;
 }
 
@@ -1473,7 +1472,7 @@ h2 {
 
 .range-wrap {
   position: relative;
-  width: 91%;
+  width: 100%;
   padding: 1.5em 0;
   /*  Giving more room for hover  */
   max-width: 400px;
@@ -1483,7 +1482,7 @@ h2 {
 .range-wrap::before {
   content: "";
   background-color: #d7e2e9;
-  width: 110%;
+  width: 100%;
   height: 14px;
   display: block;
   position: absolute;
@@ -1496,31 +1495,30 @@ h2 {
 .range-wrap::after {
   content: "";
   display: inline-block;
-  width: 110%;
+  width: 100%;
   height: 8px;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/range-wrap-after.png);
   position: absolute;
   z-index: 0;
-  bottom: 53px;
+  bottom: 31px;
   left: 0;
 }
 
 /*  Hide Original */
 .range {
-  width: 107%;
+  width: 100%;
   cursor: pointer;
   opacity: 0;
   position: relative;
   z-index: 20;
-  height: 58px;
 }
 
 .bubble {
   position: absolute;
   z-index: 2222;
-  top: 89%;
+  top: 121%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   pointer-events: none;
@@ -1535,7 +1533,7 @@ h2 {
   place-items: center;
   /*  Place the number on the center  */
   font-weight: bold;
-  font-size: 14px;
+  font-size: 20px;
   font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
   -webkit-transition: color 100ms ease, -webkit-transform 100ms ease;
   transition: color 100ms ease, -webkit-transform 100ms ease;
@@ -1547,7 +1545,6 @@ h2 {
           user-select: none;
   /*  Prevent Accidentally highlighting the number while sliding the cursor  */
   color: black;
-  width: 1px;
 }
 
 .bubble:before {
@@ -1705,24 +1702,19 @@ h2 {
   margin-bottom: 110px;
 }
 
-.infos ul,
 .infos-list {
   font-size: 18px;
 }
 
-.infos ul,
 .infos-list b {
   font-family: "OpenSans-Bold", Arial, Helvetica, sans-serif;
 }
 
-.infos ul li,
 .infos-item {
   margin: 7px 0;
 }
 
-.infos ul li:before,
 .infos-icon {
-  content: '';
   display: inline-block;
   min-width: 25px;
   width: 25px;
@@ -2071,38 +2063,3 @@ h2 {
           align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
-
-form.wpcf7-form.sent .rows {
-  display: none;
-}
-form.wpcf7-form.sent .wpcf7-mail-sent-ok,
-form.wpcf7-form.sent .wpcf7-response-output {
-  border: none;
-  text-align: center;
-}
-footer form.wpcf7-form.sent .wpcf7-mail-sent-ok,
-footer form.wpcf7-form.sent .wpcf7-response-output {
-  color: #fff;
-}
-form.wpcf7-form.invalid .wpcf7-validation-errors,
-form.wpcf7-form.invalid .wpcf7-response-output {
-  font-size: 0;
-  height: 0;
-  opacity: transparent;
-  margin: 0;
-  padding:0;
-  border: none;
-  visibility: hidden;
-  display: none;
-}
-form.wpcf7-form input.wpcf7-not-valid,
-form.wpcf7-form textarea.wpcf7-not-valid {
-  border-bottom: 2px solid #f00;
-}
-form.wpcf7-form .wpcf7-not-valid-tip {
-  display: none;
-}
-
-.faq-picture img {
-    margin-left: 30px;
-}
