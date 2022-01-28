@@ -315,6 +315,8 @@ h2 {
         height: 32px;
         background-position: center;
         background-repeat: no-repeat;
+        opacity: 1;
+        transition: 0.5s;
         &-one {
             background-image: url(../img/social-icon-one.svg);
         }
@@ -323,6 +325,10 @@ h2 {
         }
         &-three {
             background-image: url(../img/social-icon-three.svg);
+        }
+        &:hover,
+        &:focus{
+            opacity: 0.75;
         }
     }
 }
@@ -471,6 +477,10 @@ h2 {
     padding-bottom: 130px;
     &-body {
         position: relative;
+        overflow: hidden;
+        padding-left: 40px;
+        margin-left: -40px;
+        width: 101.5%;
     }
     &-title {
         text-align: right;
@@ -488,12 +498,15 @@ h2 {
     }
     &-slider {
         position: relative;
+        
+        padding-bottom: 80px;
     }
     &-arrows {
         position: absolute;
+        z-index: 10;
         top: 400px;
         right: 30px;
-        width: 100%;
+        width: 50%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -672,7 +685,44 @@ h2 {
 }
 .clinik {
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+    &-body {
+        position: relative;
+        padding-left: 0;
+        &:after {
+            content: '';
+            display: inline-block;
+            background: #E8F3FE;
+            width: 63%;
+            height: 84%;
+            box-sizing: border-box;
+            position: absolute;
+            top: 35px;
+            right: -155px;
+            z-index: -1;
+        }
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 535px;
+            height: 565px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/clinik-right-before.svg);
+            position: absolute;
+            bottom: 20px;
+            right: -250px;
+            z-index: -2;
+        }
+    }
+    &-list {
+        position: relative;
+        overflow: hidden;
+
+    }
+    &-item {
+        padding: 100px 0;
+    }
     &-title {
         margin-top: -60px;
     }
@@ -704,43 +754,15 @@ h2 {
     }
     &-center {
         padding: 0;
+        width: 22%;
     }
     &-right {
-        position: relative;
-        padding-left: 0;
-        margin-left: -30px;
-        &:after {
-            content: '';
-            display: inline-block;
-            background: #E8F3FE;
-            width: 155%;
-            height: 110%;
-            box-sizing: border-box;
-            position: absolute;
-            top: -50px;
-            left: -155px;
-            z-index: -1;
-        }
-        &:before {
-            content: '';
-            display: inline-block;
-            width: 535px;
-            height: 565px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url(../img/clinik-right-before.svg);
-            position: absolute;
-            bottom: -85px;
-            right: -120px;
-            z-index: -2;
-        }
-    }
-    &-list {
-        position: relative;
+        width: 36.33333333%;
     }
     &-arrows {
         position: absolute;
-        top: 375px;
+        z-index: 10;
+        bottom: 150px;
         left: 0;
         width: 37%;
         display: flex;
@@ -769,6 +791,7 @@ h2 {
 .useful {
     padding-top: 150px;
     padding-bottom: 150px;
+    overflow: hidden;
     &-top {
         display: flex;
         justify-content: space-between;
@@ -784,7 +807,6 @@ h2 {
         position: relative;
         max-width: 730px;
         padding-top: 75px;
-        margin-left: auto;
         margin-right: auto;
         &:after {
             content: '';
@@ -793,10 +815,10 @@ h2 {
             height: 600px;
             background: #E8F3FE;
             position: absolute;
-            top: 0;
-            left: -340px;
+            top: 25px;
+            left: -200px;
             right: 0;
-            z-index: 1;
+            z-index: 0;
         }
         &::before {
             content: '';
@@ -807,10 +829,21 @@ h2 {
             background-repeat: no-repeat;
             background-image: url(../img/useful-list-before.svg);
             position: absolute;
-            right: -400px;
-            bottom: -250px;
+            right: -530px;
+            bottom: -200px;
             z-index: -2;
         }
+    }
+    & .swiper-slide {
+       background-color: #ffffff;
+        & .useful-item {
+            opacity: 0.5;
+        }
+        &-active {
+            & .useful-item {
+                opacity: 1;
+            }
+       }
     }
     &-item {
         display: flex;
@@ -818,13 +851,19 @@ h2 {
         position: relative;
         z-index: 2;
     }
+    &-picture {
+        min-width: 270px;
+    }
     &-image {
         margin-bottom: -8px;
+        width: 100%;
         height: 100%;
+        object-fit: cover;
     }
     &-text {
         padding: 35px 42px;
         box-sizing: border-box;
+        border: 2px solid #DDEEFE;
     }
     &-arrows {
         position: absolute;
@@ -846,11 +885,12 @@ h2 {
         background-position: center;
         background-repeat: no-repeat;
         cursor: pointer;
+        position: relative;
         &-left {
             background-image: url(../img/propose-arrow-left.svg);
         }
         &-right {
-            top: 20px;
+            top: 8px;
             background-image: url(../img/propose-arrow-right.svg);
         }
     }
@@ -865,14 +905,8 @@ h2 {
     }
     &-body {
         display: flex;
-    }
-    &-list {
-        max-width: 740px;
-        min-width: 740px;
-        font-size: 18px;
-        line-height: 150%;
-        padding-left: 200px;
         position: relative;
+        margin-top: 90px;
         &:after {
             content: '';
             display: inline-block;
@@ -886,6 +920,22 @@ h2 {
             left: 65px;
             top: 75px;
         }
+    }
+    &-list {
+        max-width: 740px;
+        min-width: 740px;
+        font-size: 18px;
+        line-height: 150%;
+        padding-left: 90px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        padding-right: 90px;
+        margin-left: -90px;
+        margin-bottom: -90px;
+        overflow: hidden;
+        position: relative;
+        left: 170px;
+        top: -90px;
     }
     &-item {
         background: #E8F3FE;
@@ -922,7 +972,7 @@ h2 {
     &-arrows {
         position: relative;
         z-index: 3;
-        left: 90px;
+        left: 193px;
         width: 100%;
         display: block;
         text-align: right;
@@ -970,6 +1020,66 @@ h2 {
                 display: block;
                 width: 1px;
                 height: 116px;
+                background-color: #333333;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    & .swiper-pagination-bullet {
+        display: block;
+        background: transparent;
+        opacity: 1;
+        font-size: 18px;
+        width: auto;
+        height: auto;
+        min-width: 80px;
+        margin: 10px 0;
+        &:before {
+            height: 0;
+            transition: all 1s;
+        }
+        &:after {
+            height: 0;
+            transition: all 1s;
+        }
+        &:first-child {
+            &::before {
+                height: 0;
+            }
+            &:after {
+                height: 96px;
+            }
+        }
+        &:last-child {
+            &:before {
+                height: 96px;
+            }
+            &:after {
+                height: 0;
+            }
+        }
+        &-active {
+            font-family: $monserrat-bold;
+            font-weight: 800;
+            font-size: 53px;
+            line-height: 150%;
+            text-transform: uppercase;
+            color: #244C77;
+            &:before {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 40px;
+                background-color: #333333;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            &:after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 76px;
                 background-color: #333333;
                 margin-left: auto;
                 margin-right: auto;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
     <title>Лечение заболеваний мочеполовой системы</title>
 </head>
@@ -68,7 +69,7 @@
                                 <br>врача Песегова Станислава Вадимовича
                             </p>
                             <div class="promo-more">
-                                <button class="promo-more-btn">Записаться на прием</button>
+                                <button class="promo-more-btn curr-modal" data-modal="modal-01">Записаться на прием</button>
                             </div>
                             <ul class="promo-list">
                                 <li class="promo-item">
@@ -151,7 +152,7 @@
                             научно-практических конференциях и экспертных школах.
                         </p>
                         <div class="why-more">
-                            <button class="why-more-btn">Записаться на прием</button>
+                            <button class="why-more-btn curr-modal" data-modal="modal-01">Записаться на прием</button>
                         </div>
                     </div>
                 </div>
@@ -177,7 +178,7 @@
                                 андрогенный дефицит, мужское бесплодие.
                             </p>
                             <div class="services-more">
-                                <button class="services-more-btn">
+                                <button class="services-more-btn curr-modal" data-modal="modal-03">
                                     Узнать подробнее
                                 </button>
                                 <div class="services-price">
@@ -194,7 +195,7 @@
                                 нейрогенных расстройств мочеиспускания.
                             </p>
                             <div class="services-more">
-                                <button class="services-more-btn">
+                                <button class="services-more-btn curr-modal" data-modal="modal-03">
                                     Узнать подробнее
                                 </button>
                                 <div class="services-price">
@@ -211,7 +212,7 @@
                                 мочи, заболеваний уретры, цистита у женщин.
                             </p>
                             <div class="services-more">
-                                <button class="services-more-btn">
+                                <button class="services-more-btn curr-modal" data-modal="modal-03">
                                     Узнать подробнее
                                 </button>
                                 <div class="services-price">
@@ -253,7 +254,7 @@
                                                     <div class="coupone-end">
                                                         <div class="coupone-end-item">
                                                             <div class="coupone-more">
-                                                                <button class="coupone-more-btn">
+                                                                <button class="coupone-more-btn curr-modal" data-modal="modal-02">
                                                                     Узнать
                                                                     подробнее
                                                                 </button>
@@ -280,14 +281,15 @@
                                                 акции. Следите за обновлениями – 
                                                 не упустите свою выгоду!
                                             </p>
-                                            <div class="propose-arrows">
-                                                <span class="propose-arrow propose-arrow-left"></span>
-                                                <span class="propose-arrow propose-arrow-right"></span>
-                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="propose-arrows">
+                            <span class="propose-arrow propose-arrow-left"></span>
+                            <span class="propose-arrow propose-arrow-right"></span>
                         </div>
                     </div>
                 </div>
@@ -372,78 +374,80 @@
                 </div>
                 <div class="about-end">
                     <div class="about-end-item">
-                        <button class="about-end-btn">Записаться на прием</button>
+                        <button class="about-end-btn curr-modal" data-modal="modal-01">Записаться на прием</button>
                     </div>
                     <div class="about-end-item">
-                        <button class="about-end-btn">Online консультация</button>
+                        <button class="about-end-btn curr-modal" data-modal="modal-03">Online консультация</button>
                     </div>
                 </div>
             </div>
         </section>
         <section class="clinik">
             <div class="content">
-                <div class="clinik-list">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="clinik-item">
-                                <div class="row clinik-row">
-                                    <div class="col-5 clinik-left">
-                                        <h2 class="clinik-title">
-                                            Клинические 
-                                            исследования
-                                            в нашей клинике
-                                        </h2>
-                                        <p class="clinik-descr">
-                                            На базе нашего клинического
-                                            центра мы проводим широкий
-                                            спектр клинических исследований,
-                                            генерических и оригинальных
-                                            лекарственных средств
-                                            в соответствии с действующими
-                                            регуляторными требованиями
-                                            Российской Федерации.
-                                        </p>
-
-                                    </div>
-                                    <div class="col-3 clinik-center">
-                                        <div class="clinik-picture">
-                                            <img src="img/clinik-image.jpg" alt="" class="clinik-image">
-                                        </div>
-                                        <div class="clinik-more">
-                                            <button class="clinik-more-btn">Узнать больше</button>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 clinik-right">
-                                        <div class="clinik-block">
-                                            <p>
-                                                Сейчас проводится контролируемое
-                                                многоцентровое клиническое
-                                                исследование эффективности 
-                                                и безопасности препарата Вобэнзим
-                                                в составе комплексной терапии 
-                                                у пациенток с обострением 
-                                                хронического рецидивирующего 
-                                                неосложненного цистита.
+                <div class="clinik-body">
+                    <div class="clinik-list">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="clinik-item">
+                                    <div class="row clinik-row">
+                                        <div class="col-5 clinik-left">
+                                            <h2 class="clinik-title">
+                                                Клинические 
+                                                исследования
+                                                в нашей клинике
+                                            </h2>
+                                            <p class="clinik-descr">
+                                                На базе нашего клинического
+                                                центра мы проводим широкий
+                                                спектр клинических исследований,
+                                                генерических и оригинальных
+                                                лекарственных средств
+                                                в соответствии с действующими
+                                                регуляторными требованиями
+                                                Российской Федерации.
                                             </p>
-                                            <p>
-                                                Неосложнённый (первичный) цистит
-                                                это самостоятельное заболевание, 
-                                                которое возникает на фоне 
-                                                условно-нормального пассажа мочи
-                                                без сопутствующих заболеваний, 
-                                                таких как туберкулёз, камни 
-                                                мочевыводящих путей, опухоль 
-                                                мочевого пузыря.
-                                            </p>
+    
+                                        </div>
+                                        <div class="col-3 clinik-center">
+                                            <div class="clinik-picture">
+                                                <img src="img/clinik-image.jpg" alt="" class="clinik-image">
+                                            </div>
+                                            <div class="clinik-more">
+                                                <button class="clinik-more-btn curr-modal" data-modal="modal-03">Узнать больше</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 clinik-right">
+                                            <div class="clinik-block">
+                                                <p>
+                                                    Сейчас проводится контролируемое
+                                                    многоцентровое клиническое
+                                                    исследование эффективности 
+                                                    и безопасности препарата Вобэнзим
+                                                    в составе комплексной терапии 
+                                                    у пациенток с обострением 
+                                                    хронического рецидивирующего 
+                                                    неосложненного цистита.
+                                                </p>
+                                                <p>
+                                                    Неосложнённый (первичный) цистит
+                                                    это самостоятельное заболевание, 
+                                                    которое возникает на фоне 
+                                                    условно-нормального пассажа мочи
+                                                    без сопутствующих заболеваний, 
+                                                    таких как туберкулёз, камни 
+                                                    мочевыводящих путей, опухоль 
+                                                    мочевого пузыря.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="clinik-arrows">
-                        <span class="clinik-arrow clinik-arrow-left"></span>
-                        <span class="clinik-arrow clinik-arrow-right"></span>
+                        <div class="clinik-arrows">
+                            <span class="clinik-arrow clinik-arrow-left"></span>
+                            <span class="clinik-arrow clinik-arrow-right"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -486,8 +490,31 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="swiper-slide">
+                                <div class="useful-item">
+                                    <div class="useful-picture">
+                                        <img src="img/useful-image.jpg" alt="" class="useful-image">
+                                    </div>
+                                    <div class="useful-text">
+                                        <h3 class="useful-subtitle">
+                                            Взаимосвязь онкологии
+                                            и вредных привычек
+                                        </h3>
+                                        <p>
+                                            Вредные привычки провоцируют рак. 
+                                            Особенно часто наблюдается появление 
+                                            и развитие онкологических патологий 
+                                            в почках у курящих людей. Эта вредная 
+                                            зависимость признана фактором риска 
+                                            ПКР (почечно-клеточного рака). Также 
+                                            было замечено, что у этой группы людей 
+                                            заболевание прогрессирует намного 
+                                            быстрее, чем у некурящих.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        
                     </div>
                     <div class="useful-arrows">
                         <span class="useful-arrow useful-arrow-left"></span>
@@ -530,7 +557,91 @@
                         </ul>
                     </div>
                     <div class="confidence-list">
-                        <div class="swipper-wrapper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="confidence-item">
+                                    <div class="confidence-picture">
+                                        <img src="img/confidence-image.jpg" alt="" class="confidence-image">
+                                    </div>
+                                    <div class="confidence-info">
+                                        <div class="confidence-subtop">
+                                            <h3 class="confidence-subtitle">Екатерина</h3>
+                                            <div class="confidence-stars">
+                                                <span class="confidence-stars-icon"></span>
+                                            </div>
+                                        </div>
+                                        <p class="confidence-text">
+                                            Лечилась у Станислава Вадимовича от мочекаменной
+                                            болезни. Врач очень чуткий, внимательный, большой
+                                            профессионал в своем деле. Спасибо большое
+                                            за мое лечение и такое хорошее отношение!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="confidence-item">
+                                    <div class="confidence-picture">
+                                        <img src="img/confidence-image.jpg" alt="" class="confidence-image">
+                                    </div>
+                                    <div class="confidence-info">
+                                        <div class="confidence-subtop">
+                                            <h3 class="confidence-subtitle">Екатерина</h3>
+                                            <div class="confidence-stars">
+                                                <span class="confidence-stars-icon"></span>
+                                            </div>
+                                        </div>
+                                        <p class="confidence-text">
+                                            Лечилась у Станислава Вадимовича от мочекаменной
+                                            болезни. Врач очень чуткий, внимательный, большой
+                                            профессионал в своем деле. Спасибо большое
+                                            за мое лечение и такое хорошее отношение!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="confidence-item">
+                                    <div class="confidence-picture">
+                                        <img src="img/confidence-image.jpg" alt="" class="confidence-image">
+                                    </div>
+                                    <div class="confidence-info">
+                                        <div class="confidence-subtop">
+                                            <h3 class="confidence-subtitle">Екатерина</h3>
+                                            <div class="confidence-stars">
+                                                <span class="confidence-stars-icon"></span>
+                                            </div>
+                                        </div>
+                                        <p class="confidence-text">
+                                            Лечилась у Станислава Вадимовича от мочекаменной
+                                            болезни. Врач очень чуткий, внимательный, большой
+                                            профессионал в своем деле. Спасибо большое
+                                            за мое лечение и такое хорошее отношение!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="confidence-item">
+                                    <div class="confidence-picture">
+                                        <img src="img/confidence-image.jpg" alt="" class="confidence-image">
+                                    </div>
+                                    <div class="confidence-info">
+                                        <div class="confidence-subtop">
+                                            <h3 class="confidence-subtitle">Екатерина</h3>
+                                            <div class="confidence-stars">
+                                                <span class="confidence-stars-icon"></span>
+                                            </div>
+                                        </div>
+                                        <p class="confidence-text">
+                                            Лечилась у Станислава Вадимовича от мочекаменной
+                                            болезни. Врач очень чуткий, внимательный, большой
+                                            профессионал в своем деле. Спасибо большое
+                                            за мое лечение и такое хорошее отношение!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="swiper-slide">
                                 <div class="confidence-item">
                                     <div class="confidence-picture">
@@ -706,5 +817,7 @@
             </div>
         </div>
     </div>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
