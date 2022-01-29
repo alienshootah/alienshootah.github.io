@@ -1,3 +1,12 @@
+/* Mobile menu */
+
+const mobileBtn = document.querySelector(".header-mobile-btn");
+if(mobileBtn) {
+  mobileBtn.addEventListener("click", function() {
+    document.querySelector(".header").classList.toggle("show");
+  });
+}
+
 /* Modals */
 
 let buttons = document.querySelectorAll('.curr-modal');
@@ -83,6 +92,7 @@ const proposeSlider = new Swiper('.propose-slider', {
 
 const clinikSlider = new Swiper('.clinik-list', {
     slidesPerView: 1,
+    spaceBetween: 30,
     loop: true,
     navigation: {
       nextEl: '.clinik-arrow-right',
@@ -108,10 +118,10 @@ const confidenceSlider = new Swiper('.confidence-list', {
       prevEl: '.confidence-arrow-left',
     },
     pagination: {
-        el: ".pagin",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
-        },
+      el: ".pagin",
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
       },
+    },
 });
