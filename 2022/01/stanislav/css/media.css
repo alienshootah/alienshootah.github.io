@@ -66,11 +66,29 @@
   .clinik {
     padding-top: 0;
   }
+  .clinik-body:after {
+    right: 5px;
+  }
   .clinik-arrows {
     bottom: 70px;
   }
   .clinik-more-btn {
-    padding: 22px 27px;
+    padding: 22px 22px;
+    width: 100%;
+  }
+  .clinik-image {
+    width: 100%;
+  }
+  .midd-center {
+    width: 40%;
+  }
+  .midd-right {
+    position: relative;
+    top: -41px;
+    left: 0;
+    padding-left: 25px;
+    padding-right: 0;
+    width: 60%;
   }
   .useful-top {
     font-size: 20px;
@@ -192,6 +210,12 @@
   .promo-list {
     font-size: 12px;
   }
+  .propose-right {
+    padding-right: 30px;
+  }
+  .propose-title {
+    padding-right: 30px;
+  }
   .coupone-more-btn {
     font-size: 16px;
   }
@@ -200,6 +224,31 @@
   }
   .about-top {
     font-size: 16px;
+  }
+  .about-title {
+    position: static;
+  }
+  .about-list {
+    width: auto;
+  }
+  .about-right {
+    padding-right: 0;
+  }
+  .about-end {
+    width: 100%;
+  }
+  .clinik-body:after {
+    right: 0;
+    width: 104%;
+    height: 94%;
+    right: -15px;
+    left: -15px;
+  }
+  .clinik-list {
+    padding-top: 20px;
+  }
+  .clinik-item {
+    padding: 100px 0 50px 0;
   }
   .clinik-row {
     -ms-flex-wrap: wrap;
@@ -210,6 +259,10 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 30px;
+  }
+  .clinik-midd {
+    width: 100%;
   }
   .clinik-center {
     width: 50%;
@@ -354,6 +407,9 @@
     right: 15px;
     padding-left: 0;
   }
+  .about {
+    padding-bottom: 20px;
+  }
   .about-top {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -385,18 +441,25 @@
   .about-end-item {
     margin-bottom: 30px;
   }
+  .clinik-body::before {
+    content: none;
+  }
+  .clinik-body:after {
+    content: none;
+  }
+  .clinik .content {
+    padding: 0;
+  }
   .clinik-title {
     margin-bottom: auto;
   }
   .clinik-left {
     margin-bottom: 20px;
-  }
-  .clinik-center {
-    width: 100%;
-  }
-  .clinik-right {
-    width: 100%;
+    padding-left: 15px;
     padding-right: 15px;
+  }
+  .clinik-midd {
+    padding-right: 0;
   }
   .clinik-descr {
     width: 100%;
@@ -405,6 +468,33 @@
     width: 108%;
     height: 100%;
     right: -15px;
+  }
+  .clinik-item {
+    padding: 40px 0 50px 0;
+  }
+  .clinik-arrows {
+    padding: 0 15px;
+  }
+  .midd-slider {
+    left: 0;
+    padding-bottom: 0px;
+  }
+  .midd-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .midd-center {
+    width: 100%;
+  }
+  .midd-right {
+    margin-top: 50px;
+    width: 100%;
+    padding-left: 0;
+  }
+  .midd-right p:last-child {
+    margin-bottom: 0;
   }
   .useful-top {
     -ms-flex-wrap: wrap;
@@ -423,6 +513,9 @@
   }
   .useful-item {
     display: block;
+  }
+  .useful-subtitle {
+    width: 100%;
   }
   .confidence-top {
     display: block;
@@ -821,12 +914,18 @@
   .clinik-title {
     margin-bottom: 20px;
   }
+  .clinik-item {
+    padding: 40px 0 0 0;
+  }
   .clinik-descr {
     width: 100%;
     font-size: 14px;
   }
   .clinik-more {
     margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 50px;
   }
   .clinik-more-btn {
     font-size: 14px;
@@ -840,10 +939,41 @@
     padding-right: 0;
   }
   .clinik-arrows {
-    bottom: 38px;
+    bottom: 170px;
+  }
+  .clinik-arrow {
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+  }
+  .clinik-arrow-left {
+    background-image: url(../img/clinik-white-left.svg);
+  }
+  .clinik-arrow-right {
+    background-image: url(../img/clinik-white-right.svg);
+  }
+  .clinik-image {
+    height: 450px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .midd-slider {
+    top: 0;
+  }
+  .midd-row {
+    padding: 0;
+    position: relative;
+    color: #ffffff;
+  }
+  .midd-right {
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0;
   }
   .useful {
-    padding-bottom: 80px;
+    padding-bottom: 70px;
   }
   .useful .content {
     padding: 0;
@@ -852,6 +982,10 @@
     font-size: 14px;
     padding-left: 15px;
     padding-right: 15px;
+    width: 70%;
+  }
+  .useful-top-uplink {
+    display: inline;
   }
   .useful-body {
     background: #E8F3FE;
@@ -890,6 +1024,19 @@
   .confidence-top {
     font-size: 14px;
     margin-bottom: 140px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .confidence-top-right {
+    padding-left: 19px;
+  }
+  .confidence-descr-uplink {
+    display: none;
   }
   .confidence-body:after {
     content: none;
@@ -899,6 +1046,18 @@
   }
   .confidence-item {
     padding: 30px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background: transparent;
+    position: relative;
+  }
+  .confidence-picture {
+    position: absolute;
+    left: 0;
   }
   .confidence-image {
     width: 70px;
@@ -912,6 +1071,12 @@
     width: 65px;
     height: 10px;
     background-size: contain;
+  }
+  .confidence-text {
+    text-align: left;
+  }
+  .pagin {
+    position: absolute;
   }
   .pagin .swiper-pagination-bullet {
     font-size: 14px;

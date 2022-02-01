@@ -70,13 +70,35 @@
     }
     .clinik {
         padding-top: 0;
+        &-body {
+            &:after {
+                right: 5px;
+            }
+        }
         &-arrows {
             bottom: 70px;
         }
         &-more {
             &-btn {
-                padding: 22px 27px;
+                padding: 22px 22px;
+                width: 100%;
             }
+        }
+        &-image {
+            width: 100%;
+        }
+    }
+    .midd {
+        &-center {
+            width: 40%;
+        }
+        &-right {
+            position: relative;
+            top: -41px;
+            left: 0;
+            padding-left: 25px;
+            padding-right: 0;
+            width: 60%;
         }
     }
     .useful {
@@ -207,6 +229,14 @@
             font-size: 12px;
         }
     }
+    .propose {
+        &-right {
+            padding-right: 30px;
+        }
+        &-title {
+            padding-right: 30px;
+        }
+    }
     .coupone {
         &-more-btn {
             font-size: 16px;
@@ -219,8 +249,35 @@
         &-top {
             font-size: 16px;
         }
+        &-title {
+            position: static;
+        }
+        &-list {
+            width: auto;
+        }
+        &-right {
+            padding-right: 0;
+        }
+        &-end {
+            width: 100%;
+        }
     }
     .clinik {
+        &-body {
+            &:after {
+                right: 0;
+                width: 104%;
+                height: 94%;
+                right: -15px;
+                left: -15px;
+            }
+        }
+        &-list {
+            padding-top: 20px;
+        }
+        &-item {
+            padding: 100px 0 50px 0;
+        }
         &-row {
             flex-wrap: wrap;
             margin: 0;
@@ -229,6 +286,10 @@
             width: 100%;
             padding-left: 0;
             padding-right: 0;
+            margin-bottom: 30px;
+        }
+        &-midd {
+            width: 100%;
         }
         &-center {
             width: 50%;
@@ -367,6 +428,7 @@
         }
     }
     .about {
+        padding-bottom: 20px;
         &-top {
             flex-wrap: wrap;
             &-right {
@@ -399,18 +461,27 @@
         }
     }
     .clinik {
+        &-body {
+            &::before {
+                content: none;
+            }
+            &:after {
+                content: none;
+            }
+        }
+        & .content {
+            padding: 0;
+        }
         &-title {
             margin-bottom: auto;
         }
         &-left {
             margin-bottom: 20px;
-        }
-        &-center {
-            width: 100%;
-        }
-        &-right {
-            width: 100%;
+            padding-left: 15px;
             padding-right: 15px;
+        }
+        &-midd {
+            padding-right: 0;
         }
         &-descr {
             width: 100%;
@@ -420,6 +491,36 @@
                 width: 108%;
                 height: 100%;
                 right: -15px;
+            }
+        }
+        &-item {
+            padding: 40px 0 50px 0;
+        }
+        &-arrows {
+            padding: 0 15px;
+        }
+    }
+    .midd {
+        &-slider {
+            left: 0;
+            padding-bottom: 0px;
+        }
+        &-row {
+            flex-wrap: wrap;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &-center {
+            width: 100%;
+        }
+        &-right {
+            margin-top: 50px;
+            width: 100%;
+            padding-left: 0;
+            & p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -438,6 +539,9 @@
         }
         &-item {
             display: block;
+        }
+        &-subtitle {
+            width: 100%;
         }
     }
     .confidence {
@@ -835,12 +939,18 @@
         &-title {
             margin-bottom: 20px;
         }
+        &-item {
+            padding: 40px 0 0 0;
+        }
         &-descr {
             width: 100%;
             font-size: 14px;
         }
         &-more {
             margin-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 50px;
             &-btn {
                 font-size: 14px;
                 padding: 17px;
@@ -853,11 +963,43 @@
             padding-right: 0;
         }
         &-arrows {
-            bottom: 38px;
+            bottom: 170px;
+        }
+        &-arrow {
+            min-width: 48px;
+            width: 48px;
+            height: 48px;
+            &-left {
+                background-image: url(../img/clinik-white-left.svg);
+            }
+            &-right {
+                background-image: url(../img/clinik-white-right.svg);
+            }
+        }
+        &-image {
+            height: 450px;
+            object-fit: cover;
+        }
+    }
+    .midd {
+        &-slider {
+            top: 0;
+        }
+        &-row {
+            padding: 0;
+            position: relative;
+            color: #ffffff;
+        }
+        &-right {
+            padding: 0 15px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 0;
         }
     }
     .useful {
-        padding-bottom: 80px;
+        padding-bottom: 70px;
         & .content {
             padding: 0;
         }
@@ -865,6 +1007,10 @@
             font-size: 14px;
             padding-left: 15px;
             padding-right: 15px;
+            width: 70%;
+            &-uplink {
+                display: inline;
+            }
         }
         &-body {
             background: #E8F3FE;
@@ -903,6 +1049,17 @@
         &-top {
             font-size: 14px;
             margin-bottom: 140px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            &-right {
+                padding-left: 19px;
+            }
+        }
+        &-descr {
+            &-uplink {
+                display: none;
+            }
         }
         &-body {
             &:after {
@@ -914,6 +1071,14 @@
         }
         &-item {
             padding: 30px 15px;
+            display: flex;
+            align-items: flex-start;
+            background: transparent;
+            position: relative;
+        }
+        &-picture {
+            position: absolute;
+            left: 0;
         }
         &-image {
             width: 70px;
@@ -930,8 +1095,12 @@
                 background-size: contain;
             }
         }
+        &-text {
+            text-align: left;
+        }
     }
     .pagin {
+        position: absolute;
         & .swiper-pagination-bullet {
             font-size: 14px;
             margin: 5px 0;

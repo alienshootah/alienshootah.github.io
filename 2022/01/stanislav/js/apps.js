@@ -90,7 +90,7 @@ const couponeSlider = new Swiper('.coupone-slider', {
     },
 });
 
-const clinikSlider = new Swiper('.clinik-list', {
+const middSlider = new Swiper('.midd-slider', {
     slidesPerView: 1,
     spaceBetween: 60,
     loop: true,
