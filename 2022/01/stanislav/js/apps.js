@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 /* === SLIDERS === */
 
-const proposeSlider = new Swiper('.propose-slider', {
+const couponeSlider = new Swiper('.coupone-slider', {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -92,7 +92,7 @@ const proposeSlider = new Swiper('.propose-slider', {
 
 const clinikSlider = new Swiper('.clinik-list', {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 60,
     loop: true,
     navigation: {
       nextEl: '.clinik-arrow-right',

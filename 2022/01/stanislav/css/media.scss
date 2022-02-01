@@ -27,8 +27,17 @@
     }
     .why {
         padding-bottom: 30px;
+        &-row {
+            position: static;
+        }
+        &-right {
+            position: static;
+        }
         &-image {
             width: 100%;
+        }
+        &-info {
+            left: 0px;
         }
     }
     .services {
@@ -43,6 +52,7 @@
         }
     }
     .about {
+        padding-bottom: 52px;
         &-top {
             font-size: 20px;
         }
@@ -56,6 +66,17 @@
             top: 43px;
             right: 5px;
             font-size: 120px;
+        }
+    }
+    .clinik {
+        padding-top: 0;
+        &-arrows {
+            bottom: 70px;
+        }
+        &-more {
+            &-btn {
+                padding: 22px 27px;
+            }
         }
     }
     .useful {
@@ -301,17 +322,28 @@
     }
     .propose {
         padding-top: 0;
+        & .content {
+            padding: 0;
+        }
+        &-body {
+            padding-left: 0;
+            margin-left: 0;
+            width: 100%;
+        }
         &-title {
             text-align: left;
             margin-top: 0;
             margin-bottom: 0;
             position: static;
+            padding-right: 25px;
         }
         &-row {
             flex-wrap: wrap;
+            margin: 0;
         }
         &-left {
             width: 100%;
+            margin-top: 25px;
         }
         &-right {
             order: -1;
@@ -319,12 +351,18 @@
             padding-top: 0px;
             padding-left: 15px;
         }
+        &-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: -8px;
+        }
         &-arrows {
             top: auto;
             bottom: 0;
-            width: 100%;
-            left: 0;
-            right: 0;
+            width: 93%;
+            left: 15px;
+            right: 15px;
             padding-left: 0;
         }
     }
@@ -333,6 +371,14 @@
             flex-wrap: wrap;
             &-right {
                 order: -1;
+            }
+        }
+        &-title {
+            position: static;
+        }
+        &-list {
+            &::after {
+                display: none;
             }
         }
         &-item {
@@ -353,11 +399,28 @@
         }
     }
     .clinik {
+        &-title {
+            margin-bottom: auto;
+        }
+        &-left {
+            margin-bottom: 20px;
+        }
         &-center {
             width: 100%;
         }
         &-right {
             width: 100%;
+            padding-right: 15px;
+        }
+        &-descr {
+            width: 100%;
+        }
+        &-body {
+            &:after {
+                width: 108%;
+                height: 100%;
+                right: -15px;
+            }
         }
     }
     .useful {
@@ -370,6 +433,9 @@
                 width: 100%;
             }
         }
+        &-title {
+            position: static;
+        }
         &-item {
             display: block;
         }
@@ -378,6 +444,9 @@
         &-top {
             display: block;
             margin-bottom: 110px;
+        }
+        &-descr {
+            position: static;
         }
         &-list {
             padding-left: 0;
@@ -529,9 +598,31 @@
         }
     }
     .why {
+        padding-top: 67px;
+        &-title {
+            display: none;
+        }
+        &-mobile {
+            display: block;
+            margin-left: 26px;
+            padding-right: 26px;
+            &-title {
+                display: block;
+            }
+        }
+        &-left {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
         &-picture {
+            min-width: 135px;
+            position: static;
             &:after {
-                height: 585px;
+                width: 125px;
+                height: 231px;
+                left: 0px;
+                top: -20px;
             }
         }
         &-info {
@@ -539,20 +630,42 @@
             font-size: 10px;
             line-height: 1.3;
             bottom: -11px;
-            left: 0;
+            left: 15px;
+            max-width: 250px;
+            box-shadow: 0px 36px 47px -18px #DDEEFE;
         }
         &-name {
-            font-size: 13px;
+            font-size: 10px;
             font-weight: bold;
+        }
+        &-text {
+            margin-top: 5px;
+        }
+        &-right {
+            margin-top: 50px;
+            padding: 0;
+            & p {
+                padding: 10px 15px;
+                margin: 0;
+                &:nth-child(2),
+                &:nth-child(4),
+                &:nth-child(6) {
+                    background: #E8F3FE;
+                }
+            }
         }
         &-more {
             margin-top: 38px;
             margin-bottom: 30px;
+            padding: 0 15px;
             &-btn {
                 width: 100%;
                 font-size: 14px;
                 padding: 17px;
             }
+        }
+        &-image {
+            max-width: 135px;
         }
     }
     .services {
@@ -600,9 +713,12 @@
         &-right {
             font-size: 14px;
         }
+        &-arrows {
+            width: 91%;
+        }
     }
     .coupone {
-        padding: 30px;
+        padding: 30px 20px 30px 30px;
         box-sizing: border-box;
         &-title {
             font-size: 16px;
@@ -617,6 +733,9 @@
         &-end {
             &-item {
                 margin: 10px 25px 0 25px;
+                &:last-child {
+                    left: -10px;
+                }
             }
         }
         &-more {
@@ -634,8 +753,14 @@
         &-top {
             font-size: 14px;
         }
+        &-uplink {
+            display: block;
+            margin-top: 20px;
+        }
         &-list {
             font-size: 12px;
+            width: auto;
+            margin-bottom: 30px;
             &::after {
                 content: none;
             }
@@ -686,6 +811,7 @@
             }
         }
         &-end {
+            margin-top: 40px;
             &-btn {
                 font-size: 14px;
                 padding: 17px;
