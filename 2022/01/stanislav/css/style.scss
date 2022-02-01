@@ -180,6 +180,7 @@ h2 {
         transition: all 0.5s;
         &:hover,
         &:focus {
+            font-weight: bold;
             border-bottom: 1px solid #FFFFFF;
         }
     }
@@ -469,11 +470,51 @@ h2 {
         box-sizing: border-box;
         margin: 15px 15px 30px 15px;
         width: calc(50% - 30px);
+        transition: all 0.5s;
+        position: relative;
+        overflow: hidden;
+        &:hover,
+        &:focus {
+            box-shadow: none;
+        }
+        &:hover::after,
+        &:focus::after {
+            opacity: 1;
+        }
         &:first-child {
             padding: 60px 0 0 0;
             background: transparent;
             box-shadow: none;
+            &::after {
+                content: none;
+            }
         }
+        &::after {
+            content: '01';
+            display: inline-block;
+            font-family: $monserrat-bold;
+            font-weight: bold;
+            font-size: 144px;
+            line-height: 150%;
+            color: #DDEEFE;
+            transform: rotate(-90deg);
+            position: absolute;
+            right: -70px;
+            top: 5px;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        &:nth-child(2):after {
+            content: '01';
+        }
+        &:nth-child(3):after {
+            content: '02';
+        }
+        &:nth-child(4):after {
+            content: '03';
+        }
+
     }
     &-subtitle {
         font-weight: bold;
@@ -482,9 +523,17 @@ h2 {
         color: #244C77;
         margin-top: 0;
         margin-bottom: 29px;
+        position: relative;
+        z-index: 5;
+    }
+    &-text {
+        position: relative;
+        z-index: 5;
     }
     &-more {
         margin-top: 35px;
+        position: relative;
+        z-index: 5;
         &-btn {
             padding: 0;
             font-size: 18px;
@@ -578,8 +627,38 @@ h2 {
     background: #DDEEFE;
     box-shadow: 0px 36px 47px -18px rgba(36, 76, 119, 0.65);
     box-sizing: border-box;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: 'Акция';
+        font-family: $monserrat-bold;
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 150%;
+        color: #FFFFFF;
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 110px;
+        right: -130px;
+        transition: all 0.5s;
+        opacity: 0;
+    }
+    &:hover,
+    &:focus {
+        box-shadow: none;
+    }
+    &:hover::after,
+    &:focus::after {
+        opacity: 1;
+    }
     &-slider {
         overflow: hidden;
+    }
+    &-block {
+        position: relative;
+        z-index: 3;
+        padding-right: 10px;
     }
     &-title {
         font-weight: bold;

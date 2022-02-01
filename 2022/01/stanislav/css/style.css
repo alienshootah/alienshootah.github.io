@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Fonts */
 @font-face {
   font-family: 'Montserrat-Regular';
@@ -248,6 +249,7 @@ h2 {
 }
 
 .nav-link:hover, .nav-link:focus {
+  font-weight: bold;
   border-bottom: 1px solid #FFFFFF;
 }
 
@@ -591,6 +593,19 @@ h2 {
           box-sizing: border-box;
   margin: 15px 15px 30px 15px;
   width: calc(50% - 30px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-item:hover, .services-item:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.services-item:hover::after, .services-item:focus::after {
+  opacity: 1;
 }
 
 .services-item:first-child {
@@ -600,6 +615,41 @@ h2 {
           box-shadow: none;
 }
 
+.services-item:first-child::after {
+  content: none;
+}
+
+.services-item::after {
+  content: '01';
+  display: inline-block;
+  font-family: "Montserrat-Bold", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 144px;
+  line-height: 150%;
+  color: #DDEEFE;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  right: -70px;
+  top: 5px;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.services-item:nth-child(2):after {
+  content: '01';
+}
+
+.services-item:nth-child(3):after {
+  content: '02';
+}
+
+.services-item:nth-child(4):after {
+  content: '03';
+}
+
 .services-subtitle {
   font-weight: bold;
   font-size: 24px;
@@ -607,10 +657,19 @@ h2 {
   color: #244C77;
   margin-top: 0;
   margin-bottom: 29px;
+  position: relative;
+  z-index: 5;
+}
+
+.services-text {
+  position: relative;
+  z-index: 5;
 }
 
 .services-more {
   margin-top: 35px;
+  position: relative;
+  z-index: 5;
 }
 
 .services-more-btn {
@@ -726,10 +785,46 @@ h2 {
           box-shadow: 0px 36px 47px -18px rgba(36, 76, 119, 0.65);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.coupone::after {
+  content: 'Акция';
+  font-family: "Montserrat-Bold", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 150%;
+  color: #FFFFFF;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: absolute;
+  top: 110px;
+  right: -130px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.coupone:hover, .coupone:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.coupone:hover::after, .coupone:focus::after {
+  opacity: 1;
 }
 
 .coupone-slider {
   overflow: hidden;
+}
+
+.coupone-block {
+  position: relative;
+  z-index: 3;
+  padding-right: 10px;
 }
 
 .coupone-title {
