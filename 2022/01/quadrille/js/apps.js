@@ -1,13 +1,13 @@
-/* Mobile menu 
+/* Mobile menu */
 
-const mobileBtn = document.querySelector(".header-mobile-btn");
+const mobileBtn = document.querySelector(".mobile-btn");
 if(mobileBtn) {
   mobileBtn.addEventListener("click", function() {
     document.querySelector(".header").classList.toggle("show");
   });
 }
 
-*/
+
 
 /* Modals */
 
