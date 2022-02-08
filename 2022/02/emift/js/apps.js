@@ -3,6 +3,7 @@
 const mobileBtn = document.querySelector(".header-mobile");
 mobileBtn.addEventListener("click", function() {
   document.querySelector(".header-nav").classList.toggle("show");
+  document.querySelector(".swop").classList.toggle("show");
 });
 
 /* Dropdowns */
