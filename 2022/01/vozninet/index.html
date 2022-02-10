@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Vozninet</title>
 </head>
 <body>
@@ -12,14 +14,14 @@
         <header class="header">
             <div class="content">
                 <div class="row header-row">
-                    <div class="col-4 header-left">
+                    <div class="col-3 header-left">
                         <div class="header-logo">
                             <a href="#" class="header-logo-link">
                                 VOZNINET
                             </a>
                         </div>
                     </div>
-                    <div class="col-4 header-center">
+                    <div class="col-6 header-center">
                         <nav class="nav">
                             <ul class="nav-list">
                                 <li class="nav-item">
@@ -37,7 +39,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-4 header-right">
+                    <div class="col-3 header-right">
                         <div class="social">
                             <ul class="social-list">
                                 <li class="social-item">
@@ -50,6 +52,11 @@
                                     <a href="#"><span class="social-icon social-icon-three"></span></a>
                                 </li>
                             </ul>
+                        </div>
+                        <div class="mobile">
+                            <button class="mobile-btn">
+                                <span class="mobile-icon"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -65,28 +72,34 @@
                         </h1>
                         <ul class="promo-list">
                             <li class="promo-item">
-                                <a href="#" class="promo-link">
-                                    <span class="promo-link-text">Заполнить бриф</span>
-                                    <span class="promo-link-icon"></span>
+                                <a href="#1" class="promo-link">
+                                    <span class="promo-wrapper">
+                                        <span class="promo-link-text">Заполнить бриф</span>
+                                        <span class="promo-link-icon"></span>
+                                    </span>
                                 </a>
                             </li>
                             <li class="promo-item">
-                                <a href="#" class="promo-link">
-                                    <span class="promo-link-text">Стоимость работ</span>
-                                    <span class="promo-link-icon"></span>
+                                <a href="#2" class="promo-link">
+                                    <span class="promo-wrapper">
+                                        <span class="promo-link-text">Стоимость работ</span>
+                                        <span class="promo-link-icon"></span>
+                                    </span>
                                 </a>
                             </li>
                             <li class="promo-item">
-                                <a href="#" class="promo-link">
-                                    <span class="promo-link-text">Частые вопросы</span>
-                                    <span class="promo-link-icon"></span>
+                                <a href="#3" class="promo-link">
+                                    <span class="promo-wrapper">
+                                        <span class="promo-link-text">Частые вопросы</span>
+                                        <span class="promo-link-icon"></span>
+                                    </span>
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-4 promo-right">
                         <div class="promo-picture">
-                            <img src="img/promo-image.png" alt="" class="promo-image">
+                            <img src="img/promo-image.svg" alt="" class="promo-image">
                         </div>
                         <div class="promo-more">
                             <a href="#" class="promo-feed">
@@ -179,7 +192,9 @@
                 <ul class="cases-list">
                     <li class="cases-item">
                         <div class="cases-picture">
-                            <img src="img/cases-image1.jpg" alt="" class="cases-image">
+                            <a href="#">
+                                <img src="img/cases-image1.jpg" alt="" class="cases-image">
+                            </a>
                         </div>
                         <h3 class="cases-subtitle">
                             <a href="#" class="cases-subtitle-link">
@@ -192,7 +207,9 @@
                     </li>
                     <li class="cases-item">
                         <div class="cases-picture">
-                            <img src="img/cases-image2.jpg" alt="" class="cases-image">
+                            <a href="#">
+                                <img src="img/cases-image2.jpg" alt="" class="cases-image">
+                            </a>
                         </div>
                         <h3 class="cases-subtitle">
                             <a href="#" class="cases-subtitle-link">
@@ -205,7 +222,9 @@
                     </li>
                     <li class="cases-item">
                         <div class="cases-picture">
-                            <img src="img/cases-image3.jpg" alt="" class="cases-image">
+                            <a href="#">
+                                <img src="img/cases-image3.jpg" alt="" class="cases-image">
+                            </a>
                         </div>
                         <h3 class="cases-subtitle">
                             <a href="#" class="cases-subtitle-link">
@@ -218,7 +237,9 @@
                     </li>
                     <li class="cases-item">
                         <div class="cases-picture">
-                            <img src="img/cases-image4.jpg" alt="" class="cases-image">
+                            <a href="#">
+                                <img src="img/cases-image4.jpg" alt="" class="cases-image">
+                            </a>
                         </div>
                         <h3 class="cases-subtitle">
                             <a href="#" class="cases-subtitle-link">
@@ -237,68 +258,82 @@
                 <h2 class="reviews-title">
                     Отзывы клиентов
                 </h2>
-                <div class="reviews-list">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="reviews-item">
-                                <p class="reviews-text">
-                                    Рекомендую эту команду как создателей прекрасных продающих писем. Вникли в суть вопроса, самостоятельно узнали нюансы бизнеса и показали отличный результат! Отмечу профессионализм в общении – грамотные диалоги, вопросы по существу. Спасибо вам!
-                                </p>
-                                <div class="reviews-end">
-                                    <div class="reviews-descr">
-                                        <h3 class="reviews-subtitle">Андреев Виктор</h3>
-                                        <p class="reviews-work">
-                                            Директор вебстудии "Продвигариум"
-                                        </p>
+                <div class="reviews-body">
+                    <div class="reviews-list">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <p class="reviews-text">
+                                        Рекомендую эту команду как создателей прекрасных продающих писем. Вникли в суть вопроса, самостоятельно узнали нюансы бизнеса и показали отличный результат! Отмечу профессионализм в общении – грамотные диалоги, вопросы по существу. Спасибо вам!
+                                    </p>
+                                    <div class="reviews-end">
+                                        <div class="reviews-descr">
+                                            <h3 class="reviews-subtitle">Андреев Виктор</h3>
+                                            <p class="reviews-work">
+                                                Директор вебстудии "Продвигариум"
+                                            </p>
+                                        </div>
+                                        <div class="reviews-picture">
+                                            <img src="img/reviews-image1.jpg" alt="" class="reviews-image">
+                                        </div>
                                     </div>
-                                    <div class="reviews-picture">
-                                        <img src="img/reviews-image1.jpg" alt="" class="reviews-image">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <p class="reviews-text">
+                                        Мне настроили рекламную кампанию, и целых два месяца я тестировал ее всего лишь с тысячей рублей. Видно, что обещания «VozniNet» не расходятся с действительностью. Всем рекомендую!
+                                    </p>
+                                    <div class="reviews-end">
+                                        <div class="reviews-descr">
+                                            <h3 class="reviews-subtitle">Семенов Анатолий</h3>
+                                            <p class="reviews-work">
+                                                Разработчик стартапа «StartUpStandUp»
+                                            </p>
+                                        </div>
+                                        <div class="reviews-picture">
+                                            <img src="img/reviews-image2.jpg" alt="" class="reviews-image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <p class="reviews-text">
+                                        Ожидание результата работы не заставило себя долго ждать, сайт стремительно стал набирать обороты в своей нише, с этого момента все работы по SEO продвижению я без сомнения передал компании «VozniNet», не опасаясь за результат.
+                                    </p>
+                                    <div class="reviews-end">
+                                        <div class="reviews-descr">
+                                            <h3 class="reviews-subtitle">Попрядухин Константин</h3>
+                                            <p class="reviews-work">
+                                                Генеральный директор компании «Big-shina.ru»
+                                            </p>
+                                        </div>
+                                        <div class="reviews-picture">
+                                            <img src="img/reviews-image3.jpg" alt="" class="reviews-image">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="reviews-item">
-                                <p class="reviews-text">
-                                    Мне настроили рекламную кампанию, и целых два месяца я тестировал ее всего лишь с тысячей рублей. Видно, что обещания «VozniNet» не расходятся с действительностью. Всем рекомендую!
-                                </p>
-                                <div class="reviews-end">
-                                    <div class="reviews-descr">
-                                        <h3 class="reviews-subtitle">Семенов Анатолий</h3>
-                                        <p class="reviews-work">
-                                            Разработчик стартапа «StartUpStandUp»
-                                        </p>
-                                    </div>
-                                    <div class="reviews-picture">
-                                        <img src="img/reviews-image2.jpg" alt="" class="reviews-image">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="reviews-arrows">
+                            <span class="reviews-arrow reviews-arrow-left">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.09651 6.48346L11.8906 2.68675L9.28355 0.0778998L0.698916 8.66843L9.23668 17.212L11.8581 14.5889L8.08467 10.8129L17.8384 10.7709L17.8501 6.47204L8.09651 6.48346Z" fill="white"/>
+                                </svg>
+                            </span>
+                            <span class="reviews-arrow reviews-arrow-right">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.09651 6.48346L11.8906 2.68675L9.28355 0.0778998L0.698916 8.66843L9.23668 17.212L11.8581 14.5889L8.08467 10.8129L17.8384 10.7709L17.8501 6.47204L8.09651 6.48346Z" fill="white"/>
+                                </svg>
+                            </span>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="reviews-item">
-                                <p class="reviews-text">
-                                    Ожидание результата работы не заставило себя долго ждать, сайт стремительно стал набирать обороты в своей нише, с этого момента все работы по SEO продвижению я без сомнения передал компании «VozniNet», не опасаясь за результат.
-                                </p>
-                                <div class="reviews-end">
-                                    <div class="reviews-descr">
-                                        <h3 class="reviews-subtitle">Попрядухин Константин</h3>
-                                        <p class="reviews-work">
-                                            Генеральный директор компании «Big-shina.ru»
-                                        </p>
-                                    </div>
-                                    <div class="reviews-picture">
-                                        <img src="img/reviews-image3.jpg" alt="" class="reviews-image">
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="reviews-pagination">
+                            <span class="reviews-pagination-bullet active"></span>
+                            <span class="reviews-pagination-bullet"></span>
+                            <span class="reviews-pagination-bullet"></span>
                         </div>
                     </div>
-                    <div class="reviews-arrows">
-                        <span class="reviews-arrow reviews-arrow-left"></span>
-                        <span class="reviews-arrow reviews-arrow-right"></span>
-                    </div>
-                    <div class="reviews-pagination"></div>
                 </div>
             </div>
         </section>
@@ -313,9 +348,11 @@
                 </div>
                 <ul class="news-list">
                     <li class="news-item">
-                        <div class="news-picture">
-                            <a href="#"><img src="img/news-image.jpg" alt="" class="news-image"></a>
-                        </div>
+                        <a href="#">
+                            <div class="news-picture">
+                                <img src="img/news-image.jpg" alt="" class="news-image">
+                            </div>
+                        </a>
                         <h3 class="news-subtitle">
                             <a href="#" class="news-subtitle-link">
                                 Пригодится ли email рассылка для SEO продвижения
@@ -326,9 +363,11 @@
                         </p>
                     </li>
                     <li class="news-item">
-                        <div class="news-picture">
-                            <a href="#"><img src="img/news-image.jpg" alt="" class="news-image"></a>
-                        </div>
+                        <a href="#">
+                            <div class="news-picture">
+                                <img src="img/news-image.jpg" alt="" class="news-image">
+                            </div>
+                        </a>
                         <h3 class="news-subtitle">
                             <a href="#" class="news-subtitle-link">
                                 Продающие видео отзывы как особый вид рекламы
@@ -339,9 +378,11 @@
                         </p>
                     </li>
                     <li class="news-item">
-                        <div class="news-picture">
-                            <a href="#"><img src="img/news-image.jpg" alt="" class="news-image"></a>
-                        </div>
+                        <a href="#">
+                            <div class="news-picture">
+                                <img src="img/news-image.jpg" alt="" class="news-image">
+                            </div>
+                        </a>
                         <h3 class="news-subtitle">
                             <a href="#" class="news-subtitle-link">
                                 Карточка товара — инструкция к заполнению
@@ -352,9 +393,11 @@
                         </p>
                     </li>
                     <li class="news-item">
-                        <div class="news-picture">
-                            <a href="#"><img src="img/news-image.jpg" alt="" class="news-image"></a>
-                        </div>
+                        <a href="#">
+                            <div class="news-picture">
+                                <img src="img/news-image.jpg" alt="" class="news-image">
+                            </div>
+                        </a>
                         <h3 class="news-subtitle">
                             <a href="#" class="news-subtitle-link">
                                 Удаленная работа и правила хорошего тона
@@ -370,13 +413,13 @@
         <section class="about">
             <div class="content">
                 <div class="row about-row">
-                    <div class="col-4 about-left">
+                    <div class="col-5 about-left">
                         <h2 class="about-title">О компании</h2>
                         <p class="about-descr">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ipsum, vel in tempor feugiat diam. Eu fusce pretium integer blandit id ut. In id id vulputate massa. Mattis fringilla felis facilisis purus sed. Odio risus dui pulvinar facilisis pellentesque viverra consequat lectus adipiscing. Eget ultrices varius a volutpat eu diam molestie. Egestas netus id sit phasellus felis et. Eu proin tellus lacinia eget dapibus semper nunc. 
                         </p>
                     </div>
-                    <div class="col-8 about-right">
+                    <div class="col-7 about-right">
                         <ul class="about-list">
                             <li class="about-item">
                                 <div class="about-wrapper">
@@ -406,15 +449,17 @@
                     <form class="feedback-form">
                         <ul class="feedback-list">
                             <li class="feedback-item">
-                                <input type="text" class="feedback-field" placeholder="Ваше имя">
+                                <input type="text" class="feedback-field" placeholder="Ваше имя" required>
                             </li>
                             <li class="feedback-item">
-                                <input type="text" class="feedback-field" placeholder="Номер телефона">
+                                <input type="text" class="feedback-field tel" placeholder="Номер телефона">
                             </li>
                             <li class="feedback-item">
-                                <buttton class="feedback-btn">
-                                    Отправить
-                                </buttton>
+                                <div class="feedback-push">
+                                    <button class="feedback-btn">
+                                        Отправить
+                                    </button>
+                                </div>
                             </li>
                         </ul>
                     </form>
@@ -431,9 +476,24 @@
                         <div class="footer-logo">
                             <span class="footer-logo-text">VOZNINET</span>
                         </div>
+                        <div class="soci">
+                            <ul class="soci-list">
+                                <li class="soci-item">
+                                    <a href="#"><span class="soci-icon soci-icon-one"></span></a>
+                                </li>
+                                <li class="soci-item">
+                                    <a href="#"><span class="soci-icon soci-icon-thue"></span></a>
+                                </li>
+                                <li class="soci-item">
+                                    <a href="#"><span class="soci-icon soci-icon-three"></span></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-2">
-                        <h3 class="footer-title">Сайты</h3>
+                        <h3 class="footer-title">
+                            <a href="#" class="footer-title-link">Сайты</a>
+                        </h3>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="#" class="footer-link">Прототип сайта</a>
@@ -459,7 +519,9 @@
                         </ul>
                     </div>
                     <div class="col-2">
-                        <h3 class="footer-title">Продвижение сайта</h3>
+                        <h3 class="footer-title">
+                            <a href="#" class="footer-title-link">Продвижение сайта</a>
+                        </h3>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="#" class="footer-link">Аудит</a>
@@ -485,7 +547,9 @@
                         </ul>
                     </div>
                     <div class="col-2">
-                        <h3 class="footer-title">Продающие тексты</h3>
+                        <h3 class="footer-title">
+                            <a href="#" class="footer-title-link">Продающие тексты</a>
+                        </h3>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="#" class="footer-link">Ком. предложение</a>
@@ -511,7 +575,9 @@
                         </ul>
                     </div>
                     <div class="col-2">
-                        <h3 class="footer-title">Дизайн</h3>
+                        <h3 class="footer-title">
+                            <a href="#" class="footer-title-link">Дизайн</a>
+                        </h3>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="#" class="footer-link">WEB дизайн</a>
@@ -537,7 +603,9 @@
                         </ul>
                     </div>
                     <div class="col-2">
-                        <h3 class="footer-title">HTML письма</h3>
+                        <h3 class="footer-title">
+                            <a href="#" class="footer-title-link">HTML письма</a>
+                        </h3>
                         <ul class="footer-list">
                             <li class="footer-item">
                                 <a href="#" class="footer-link">Шаблоны</a>
@@ -557,5 +625,7 @@
             </div>
         </footer>
     </div>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>

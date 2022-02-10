@@ -33,3 +33,91 @@ window.onclick = function(event) {
     }
   }
 }
+
+var singleSlider = new Swiper(".single-slider", {
+  slidesPerView: 1,
+  loop: true,
+});
+
+var singleNav = new Swiper(".single-nav", {
+  slideToClickedSlide: true,
+  spaceBetween: 0,
+  loop: true,
+  thumbs: {
+    swiper: singleSlider,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    375: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    460: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    600: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+  },
+  navigation: {
+    nextEl: '.single-arrow-right',
+    prevEl: '.single-arrow-left',
+  },
+});
+
+var resosSlider = new Swiper(".resors-slider", {
+  slideToClickedSlide: true,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    375: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    460: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    600: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    992: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    1280: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+  },
+  navigation: {
+    nextEl: '.resors-arrow-right',
+    prevEl: '.resors-arrow-left',
+  },
+});
