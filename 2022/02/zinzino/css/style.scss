@@ -394,6 +394,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .formula {
     background-color: #fbf8f5;
+    padding-bottom: 450px;
     &-picture {
         position: relative;
         top: -150px;
@@ -485,5 +486,85 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-text {
         margin: 0;
+    }
+}
+.analytics {
+    background-color: #fbf8f5;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-image: url(../img/analytics-bg.jpg);
+    background-size: 100%;
+    &-row {
+        position: relative;
+        top: -400px;
+        margin-bottom: -400px;
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 64px;
+        letter-spacing: -0.01em;
+        color: #152E34;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 492px;
+            width: 492px;
+            height: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/formula-title-after.svg);
+            margin-top: 60px;
+            margin-bottom: 0;
+        }
+    }
+    &-descr {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 40px;
+        color: #444444;
+    }
+    &-more {
+        text-align: right;
+        margin-top: 74px;
+    }
+    &-btn {
+        padding: 16px 50px;
+        height: 64px;
+        border: 1px solid #97B8B6;
+        box-sizing: border-box;
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 32px;
+        color: #22505D;
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        transition: all 0.5s;
+        &-icon {
+            display: inline-block;
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 8px;
+            position: relative;
+            top: -2px;
+        }
+        &:hover {
+            background: rgba(151, 184, 182, 0.4);
+        }
+        &:focus {
+            background: #97B8B6;
+            color: #ffffff;
+        }
+        & svg path {
+            transition: all 0.5s;
+        }
+        &:focus svg path {
+            fill: #ffffff;
+        }
     }
 }
