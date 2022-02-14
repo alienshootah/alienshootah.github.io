@@ -114,6 +114,8 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     width: 100%;
     box-sizing: border-box;
+    background-color: transparent;
+    transition: all 0.5s;
     &-row {
         align-items: center;
     }
@@ -129,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: auto;
         height: 48px;
         font-size: 16px;
+        font-weight: 600;
         box-shadow: 0 0 12px 1px transparent;
         transition: all 0.5s;
         &:hover,
@@ -143,6 +146,41 @@ h1, h2, h3, h4, h5, h6 {
         &-value {
             color: #D9B5A5;
             padding-left: 5px;
+        }
+    }
+    &.sticky {
+        background: #FFFFFF;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        & .nav {
+            &-icon svg path {
+                transition: all 0.5s;
+                fill: #22505D;
+            }
+            &-link {
+                color: #747474;
+                &:hover,
+                &:focus {
+                    border-bottom: 1px solid #747474;
+                }
+            }
+        }
+        & .header {
+            &-btn {
+                border: 1px solid #22505D;
+                color: #22505D;
+                &:hover,
+                &:focus {
+                    box-shadow: 0 0 12px 1px rgba(34, 80, 93, 0.5);
+                }
+                &-icon svg path {
+                    stroke: #22505D;
+                }
+                &-value {
+                    color: #22505D;
+                }
+            }
         }
     }
 }
@@ -224,8 +262,15 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 32px;
         color: #D9B5A5;
     }
+    &-right {
+        padding: 0;
+    }
     &-wrapper {
         position: relative;
+        right: -22px;
+        overflow: hidden;
+        padding-bottom: 30px;
+        padding-right: 10px;
     }
     &-slider {
         font-weight: 600;
@@ -239,24 +284,27 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     & .swiper-slide {
-        &.active {
+        &-active {
             padding-top: 80px;
             & .promo-item {
                 border-radius: 30px 0px 30px 30px;
+                box-shadow: 0px 0px 15px 14px rgba(11, 30, 60, 0.16);
             }
-            
+        }
+        &-next {
+            & .promo-item {
+                box-shadow: 0px 0px 15px 14px rgba(11, 30, 60, 0.16);
+            }
         }
     }
     &-item {
         background: #FFFFFF;
-        box-shadow: 0px 51px 64px rgba(11, 30, 60, 0.16);
         border-radius: 0px 30px 30px 30px;
         padding: 48px;
         box-sizing: border-box;
         text-align: center;
-        margin: 8px;
-        width: 277px;
         height: 560px;
+        margin: 8px 8px 8px 8px;
     }
     &-subtitle {
         font-weight: bold;
@@ -334,12 +382,12 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         justify-content: flex-end;
         position: absolute;
-        right: 0;
-        bottom: 5px;
+        right: 22px;
+        bottom: 40px;
     }
     &-pagination {
         margin-right: 30px;
-        &-bullet {
+        & .swiper-pagination-bullet {
             display: inline-block;
             min-width: 8px;
             width: 8px;
@@ -351,7 +399,9 @@ h1, h2, h3, h4, h5, h6 {
             margin: 8px;
             cursor: pointer;
             transition: all 0.5s;
-            &.active,
+            opacity: 1;
+            background-color: transparent;
+            &-active,
             &:hover,
             &:focus {
                 background-color: #22505D;
@@ -392,8 +442,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 450px;
     &-picture {
         position: relative;
-        top: -150px;
-        margin-bottom: -150px;
+        top: -250px;
+        margin-bottom: -250px;
     }
     &-title {
         font-weight: 600;
@@ -565,6 +615,7 @@ h1, h2, h3, h4, h5, h6 {
 .help {
     &-block {
         position: relative;
+        overflow: hidden;
     }
     &-list {
         display: flex;
@@ -698,12 +749,13 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         justify-content: flex-end;
         position: absolute;
+        z-index: 10;
         right: 45px;
         top: 365px;
     }
     &-pagination {
         margin-right: 30px;
-        &-bullet {
+        & .swiper-pagination-bullet {
             display: inline-block;
             min-width: 8px;
             width: 8px;
@@ -715,7 +767,9 @@ h1, h2, h3, h4, h5, h6 {
             margin: 8px;
             cursor: pointer;
             transition: all 0.5s;
-            &.active,
+            opacity: 1;
+            background-color: transparent;
+            &-active,
             &:hover,
             &:focus {
                 background-color: #22505D;
@@ -841,13 +895,18 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover;
     padding-top: 100px;
     padding-bottom: 140px;
+    &-propose {
+        overflow: hidden;
+        margin: 0 -16px;
+        position: relative;
+        left: 8px;
+    }
     &-item {
         background: #FFFFFF;
-        box-shadow: 0px 51px 64px rgba(11, 30, 60, 0.16);
+        box-shadow: 0px 12px 14px rgba(11, 30, 60, 0.16);
         padding: 48px;
         box-sizing: border-box;
-        width: calc(25% - 16px);
-        margin: 8px;
+        margin: 8px 16px;
         text-align: center;
     }
     &-image {
@@ -955,10 +1014,11 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         right: 0;
         top: -15px;
+        z-index: 10;
     }
     &-pagination {
         margin-right: 30px;
-        &-bullet {
+        & .swiper-pagination-bullet {
             display: inline-block;
             min-width: 8px;
             width: 8px;
@@ -970,7 +1030,9 @@ h1, h2, h3, h4, h5, h6 {
             margin: 8px;
             cursor: pointer;
             transition: all 0.5s;
-            &.active,
+            opacity: 1;
+            background-color: transparent;
+            &-active,
             &:hover,
             &:focus {
                 background-color: #22505D;
