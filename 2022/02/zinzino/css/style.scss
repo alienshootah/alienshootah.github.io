@@ -1699,13 +1699,14 @@ h1, h2, h3, h4, h5, h6 {
         color: #747474;
         margin: 0 -15px;
         display: flex;
+        justify-content: space-between;
     }
     &-item {
         margin: 15px;
-        width: calc(33.3333% - 30px);
+        width: calc(24.3333% - 30px);
         &:last-child {
             & .payment-text {
-                padding-right: 75px;
+                width: 70%;
             }
         }
     }
@@ -1716,7 +1717,6 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: -0.01em;
         color: #22505D;
         display: block;
-        padding-right: 40px;
         margin-bottom: 15px;
         box-sizing: border-box;
     }
@@ -1733,6 +1733,147 @@ h1, h2, h3, h4, h5, h6 {
             /* Strong_Black */
 
             color: #152E34;
+        }
+    }
+    &-down {
+        border-top: 1px solid #97B8B6;
+        padding-top: 25px;
+        margin-top: 5px;
+    }
+    &-row {
+        align-items: center;
+    }
+    &-descr {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: #747474;
+        margin: 0;
+    }
+    &-btn {
+        padding: 16px 24px;
+        width: 100%;
+        height: 64px;
+        background: #22505D;
+        border-radius: 15px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 32px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s;
+        &:hover {
+            background: #33606C;
+        }
+        &:focus {
+            background: #22505D;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/payment-btn-icon.svg);
+            margin-right: 8px;
+        }
+    }
+}
+.contacts {
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+        &:after {
+            content: '';
+            display: inline-block;
+            background: #97B8B6;
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            top: 18px;
+            z-index: 0;
+        }
+        &-title {
+            background-color: #ffffff;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: #152E34;
+            margin: 0;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            padding-right: 24px;
+        }
+    }
+    &-list {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #747474;
+        margin: 0 -15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        margin: 15px;
+        width: calc(27.3333% - 30px);
+        &:last-child {
+            & .payment-text {
+                padding-right: 75px;
+            }
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/contacts-icon-one.svg);
+            margin-top: -3px;
+        }
+        &-thue {
+            background-image: url(../img/contacts-icon-thue.svg);
+        }
+        &-three {
+            background-image: url(../img/contacts-icon-three.svg);
+        }
+    }  
+    &-text {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: $gilroy-bold;
+        line-height: 24px;
+        color: #747474;
+        margin: 16px 0 16px 0;
+    }
+    &-days {
+        font-family: $gilroy-bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.01em;
+        color: #22505D;
+        &-link {
+            color: #22505D;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #22505D;
+            }
         }
     }
 }

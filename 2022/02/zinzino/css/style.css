@@ -2204,15 +2204,18 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .payment-item {
   margin: 15px;
-  width: calc(33.3333% - 30px);
+  width: calc(24.3333% - 30px);
 }
 
 .payment-item:last-child .payment-text {
-  padding-right: 75px;
+  width: 70%;
 }
 
 .payment-text {
@@ -2222,7 +2225,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
   color: #22505D;
   display: block;
-  padding-right: 40px;
   margin-bottom: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2237,5 +2239,182 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.01em;
   /* Strong_Black */
   color: #152E34;
+}
+
+.payment-down {
+  border-top: 1px solid #97B8B6;
+  padding-top: 25px;
+  margin-top: 5px;
+}
+
+.payment-row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.payment-descr {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  color: #747474;
+  margin: 0;
+}
+
+.payment-btn {
+  padding: 16px 24px;
+  width: 100%;
+  height: 64px;
+  background: #22505D;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.payment-btn:hover {
+  background: #33606C;
+}
+
+.payment-btn:focus {
+  background: #22505D;
+}
+
+.payment-btn-icon {
+  display: inline-block;
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/payment-btn-icon.svg);
+  margin-right: 8px;
+}
+
+.contacts-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.contacts-top:after {
+  content: '';
+  display: inline-block;
+  background: #97B8B6;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 18px;
+  z-index: 0;
+}
+
+.contacts-top-title {
+  background-color: #ffffff;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #152E34;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding-right: 24px;
+}
+
+.contacts-list {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #747474;
+  margin: 0 -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-item {
+  margin: 15px;
+  width: calc(27.3333% - 30px);
+}
+
+.contacts-item:last-child .payment-text {
+  padding-right: 75px;
+}
+
+.contacts-icon {
+  display: inline-block;
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contacts-icon-one {
+  background-image: url(../img/contacts-icon-one.svg);
+  margin-top: -3px;
+}
+
+.contacts-icon-thue {
+  background-image: url(../img/contacts-icon-thue.svg);
+}
+
+.contacts-icon-three {
+  background-image: url(../img/contacts-icon-three.svg);
+}
+
+.contacts-text {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 16px;
+  font-family: "Gilroy-Bold", Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  color: #747474;
+  margin: 16px 0 16px 0;
+}
+
+.contacts-days {
+  font-family: "Gilroy-Bold", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #22505D;
+}
+
+.contacts-days-link {
+  color: #22505D;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contacts-days-link:hover, .contacts-days-link:focus {
+  border-bottom: 1px solid #22505D;
 }
 /*# sourceMappingURL=style.css.map */
