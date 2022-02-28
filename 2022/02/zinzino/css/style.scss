@@ -2,6 +2,7 @@
 
 $gilroy-reg: 'Gilroy-Regular', Arial, Helvetica, sans-serif;
 $gilroy-bold: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
+$gilroy-semi: 'Gilroy-Semibold', Arial, Helvetica, sans-serif;
 
 @font-face {
     font-family: 'Gilroy-Regular';
@@ -12,6 +13,12 @@ $gilroy-bold: 'Gilroy-Bold', Arial, Helvetica, sans-serif;
 @font-face {
     font-family: 'Gilroy-Bold';
     src: url(../fonts/Gilroy-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy-Semibold';
+    src: url(../fonts/Gilroy-Semibold.ttf);
     font-weight: normal;
     font-style: normal;
 }
@@ -100,7 +107,7 @@ body {
     color: #444444;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: $gilroy-bold;
+    font-family: $gilroy-semi;
 }
 .green {
     color: #22505D;
@@ -108,6 +115,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 
+.mobile {
+    display: none;
+}
+.logos {
+    display: none;
+    &-descr {
+        display: none;
+    }
+    &-more {
+        display: none;
+    }
+}
 .header {
     padding: 24px 0;
     position: absolute;
@@ -227,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../img/promo-bg.jpg);
-    min-height: 921px;
+    min-height: 803px;
     color: #FFFFFF;
     padding-top: 100px;
     &-prev {
@@ -235,13 +254,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
         line-height: 40px;
         color: #D9B5A5;
-        padding-top: 89px;
+        padding-top: 77px;
         display: inline-block;
         margin-top: 0;
         margin-bottom: 5px;
     }
     &-title {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 40px;
         line-height: 56px;
         letter-spacing: -0.01em;
@@ -285,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #747474;
         & .swiper-wrapper {
             display: flex;
-            margin: 0 -8px;
+            margin: 0 5px;
         }
     }
     & .swiper-slide {
@@ -293,12 +312,12 @@ h1, h2, h3, h4, h5, h6 {
             padding-top: 80px;
             & .promo-item {
                 border-radius: 30px 0px 30px 30px;
-                box-shadow: 0px 0px 15px 14px rgba(11, 30, 60, 0.16);
+                box-shadow: 0px 0px 15px 0px rgba(11, 30, 60, 0.16)
             }
         }
         &-next {
             & .promo-item {
-                box-shadow: 0px 0px 15px 14px rgba(11, 30, 60, 0.16);
+                box-shadow: 0px 0px 15px 0px rgba(11, 30, 60, 0.16)
             }
         }
     }
@@ -445,9 +464,10 @@ h1, h2, h3, h4, h5, h6 {
 .formula {
     background-color: #fbf8f5;
     padding-bottom: 450px;
+    padding-top: 118px;
     &-picture {
         position: relative;
-        top: -283px;
+        top: -284px;
         margin-bottom: -250px;
     }
     &-right {
@@ -457,7 +477,7 @@ h1, h2, h3, h4, h5, h6 {
         padding-right: 0;
     }
     &-title {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 40px;
         line-height: 64px;
         letter-spacing: -0.01em;
@@ -468,7 +488,7 @@ h1, h2, h3, h4, h5, h6 {
             display: inline-block;
             min-width: 492px;
             width: 492px;
-            height: 16px;
+            height: 17px;
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/formula-title-after.svg);
@@ -560,17 +580,31 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: -400px;
     }
     &-title {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 39px;
         line-height: 64px;
         letter-spacing: -0.01em;
         color: #152E34;
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 1px;
+            width: 1px;
+            height: 120px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/analytics-title-before.svg);
+            position: absolute;
+            top: -185px;
+            left: 279px;
+        }
         &::after {
             content: '';
             display: inline-block;
             min-width: 492px;
             width: 492px;
-            height: 16px;
+            height: 17px;
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/formula-title-after.svg);
@@ -591,6 +625,8 @@ h1, h2, h3, h4, h5, h6 {
     &-more {
         text-align: right;
         margin-top: 74px;
+        position: relative;
+        z-index: 5;
     }
     &-btn {
         padding: 16px 50px;
@@ -636,6 +672,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .help {
+    &-slid {
+        display: none;
+    }
     &-row {
         position: relative;
         top: -100px;
@@ -673,8 +712,13 @@ h1, h2, h3, h4, h5, h6 {
             position: relative;
             top: 90px;
         }
+        &:nth-child(3) {
+            position: relative;
+            z-index: -1;
+        }
         &:nth-child(4) {
             position: relative;
+            z-index: -1;
             top: 90px;
             margin-bottom: 50px;
         }
@@ -700,7 +744,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-subtitle {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 28px;
         line-height: 48px;
         letter-spacing: -0.01em;
@@ -840,6 +884,69 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+.slid {
+    &-navigation {
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        z-index: 10;
+        right: 64px;
+        top: 374px;
+    }
+    &-pagination {
+        margin-right: 15px;
+        & .swiper-pagination-bullet {
+            display: inline-block;
+            min-width: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 1px solid #22505D;
+            box-sizing: border-box;
+            border-radius: 30px;
+            margin: 8px;
+            cursor: pointer;
+            transition: all 0.5s;
+            opacity: 1;
+            background-color: transparent;
+            &-active,
+            &:hover,
+            &:focus {
+                background-color: #22505D;
+            }
+        }
+    }
+    &-arrow {
+        display: inline-block;
+        padding: 15px;
+        position: static;
+        min-width: 48px;
+        width: 48px;
+        height: 48px;
+        border: 1px solid #22505D;
+        box-sizing: border-box;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.5s;
+        margin: 0 7px;
+        & svg path {
+            transition: all 0.5s;
+        }
+        &:hover,
+        &:focus {
+            background: #22505D;
+        }
+        &:hover svg path,
+        &:focus svg path {
+            stroke: #ffffff;
+        }
+        &-right {
+            transform: rotate(180deg);
+        }
+    }
+}
 .balance {
     margin-top: 46px;
     &-decor {
@@ -847,7 +954,7 @@ h1, h2, h3, h4, h5, h6 {
         display: block;
         min-width: 925px;
         width: 925px;
-        height: 16px;
+        height: 17px;
         background-position: center;
         background-repeat: no-repeat;
         background-image: url(../img/balance-row-after.svg);
@@ -864,7 +971,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: 52px;
     }
     &-title {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 40px;
         line-height: 64px;
         letter-spacing: -0.01em;
@@ -879,6 +986,9 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 40px;
         text-align: center;
         color: #747474;
+        &-block {
+            display: block;
+        }
     }
     &-glad {
         text-align: center;
@@ -935,6 +1045,16 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 -16px;
         position: relative;
         left: 8px;
+    }
+    & .swiper-slide-active {
+        & .ask-item {
+            border-radius: 30px 0 0 30px;
+        }
+    }
+    & .swiper-slide-duplicate-prev {
+        & .ask-item {
+            border-radius: 0 30px 30px 0;
+        }
     }
     &-item {
         background: #FFFFFF;
@@ -1035,7 +1155,7 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         min-width: 694px;
         width: 694px;
-        height: 16px;
+        height: 17px;
         background-position: center;
         background-repeat: no-repeat;
         background-image: url(../img/ask-decor.svg);
@@ -1103,7 +1223,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-title {
-        font-weight: 600;
+        font-weight: 400;
         font-size: 40px;
         line-height: 64px;
         letter-spacing: -0.01em;
@@ -1127,6 +1247,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         height: 64px;
         border: 1px solid #97B8B6;
+        background-color: transparent;
         box-sizing: border-box;
         border-radius: 15px;
         font-weight: 600;
@@ -1209,7 +1330,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-list {
         font-weight: 600;
-        font-size: 18px;
         line-height: 40px;
         color: #FFFFFF;
         display: flex;
@@ -1221,7 +1341,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-link {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         display: inline;
         color: #FFFFFF;
         text-decoration: none;
@@ -1280,6 +1400,30 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Modal */
 
+/* Scrollbar */
+.modal {
+    & ::-webkit-scrollbar {
+        width: 4px;
+      }
+      
+      /* Track */
+    & ::-webkit-scrollbar-track {
+        background: rgba(210, 210, 210, 0.2);
+        border-radius: 30px;
+        margin-top: 60px;
+      }
+       
+      /* Handle */
+    & ::-webkit-scrollbar-thumb {
+        background: #22505D;
+        border-radius: 30px;
+      }
+      
+      /* Handle on hover */
+    & ::-webkit-scrollbar-thumb:hover {
+        background: #22505D;
+    }
+}
 .modal {
     display: none;
     position: fixed; /* Stay in place */
@@ -1292,19 +1436,32 @@ h1, h2, h3, h4, h5, h6 {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(21, 46, 52, 0.4); /* Black w/ opacity */
     text-align: center;
+    &-payment {
+        & .modal-body {
+            padding: 40px 61px 47px 61px;
+        }
+    }
+    &-contacts {
+        & .modal-body {
+            padding: 40px 61px 40px 61px;
+        }
+    }
     &-callback {
         & .modal-body {
             width: 514px;
+            padding: 37px 61px 48px 61px;
         }
     }
     &-success {
         & .modal-body {
             width: 514px;
+            padding: 36px 61px 27px 61px;
         }
     }
     &-getready {
         & .modal-body {
             width: 514px;
+            padding: 36px 61px 27px 61px;
         }
     }
     &.visible {
@@ -1314,25 +1471,29 @@ h1, h2, h3, h4, h5, h6 {
         display: inline-block;
         background-color: #ffffff;
         border-radius: 30px;
-        width: 766px;
+        width: 767px;
         box-shadow: 9px 14px 26px 7px rgba(21, 46, 52, 0.4);
         box-sizing: border-box;
         position: relative;
         text-align: left;
         margin-bottom: 50px;
-        padding: 40px 55px;
+        padding: 28px 61px 28px 61px;
     }
     &-close {
         display: inline-block;
         width: 40px;
         height: 40px;
-        background: #FFFFFF;
+        background-color: #FFFFFF;
         border-radius: 12px;
         position: absolute;
         right: -54px;
         top: 0;
+        box-sizing: border-box;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/modal-close-icon.svg);
         &-icon {
-            display: inline-block;
+            display: none;
             min-width: 24px;
             width: 24px;
             height: 24px;
@@ -1340,6 +1501,15 @@ h1, h2, h3, h4, h5, h6 {
             background-repeat: no-repeat;
             background-image: url(../img/modal-close-icon.svg);
         }
+    }
+    &-wrapa {
+        height: 40vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        padding-right: 24px;
+    }
+    &-products {
+        position: relative;
     }
     &-single {
         margin: 10px 0 20px 0;
@@ -1367,7 +1537,7 @@ h1, h2, h3, h4, h5, h6 {
             z-index: 0;
         }
         &-title {
-            font-weight: 600;
+            font-weight: 400;
             font-size: 24px;
             line-height: 32px;
             text-align: left;
@@ -1390,6 +1560,9 @@ h1, h2, h3, h4, h5, h6 {
             padding-left: 24px;
         }
     }
+    &-row {
+        align-items: center;
+    }
     &-image {
         width: 168px;
         height: 168px;
@@ -1403,10 +1576,9 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 40px;
     }
     &-block {
-        padding-right: 24px;
+        padding-left: 22px;
+        padding-right: 0;
         box-sizing: border-box;
-        height: 280px;
-        overflow-y: scroll;
     }
     &-name {
         display: flex;
@@ -1417,6 +1589,7 @@ h1, h2, h3, h4, h5, h6 {
             font-size: 24px;
             line-height: 32px;
             color: #152E34;
+            margin: 0;
         }
     }
     &-delete {
@@ -1431,7 +1604,7 @@ h1, h2, h3, h4, h5, h6 {
             display: inline-block;
             min-width: 16px;
             width: 16px;
-            height: 16px;
+            height: 17px;
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/modal-delete-icon.svg);
@@ -1460,13 +1633,19 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
         line-height: 24px;
         color: #747474;
+        &-sel {
+            appearance: none;
+            background: url(../img/arrow_custom.svg) no-repeat right;
+            background-position-x: calc(100% - 15px);
+            
+        }
     }
     &-add {
         margin: 40px 0 24px 0;
         &-body {
             position: relative;
             &:after {
-                content: 'BALANCE OIL +';
+                content: none;
                 display: inline-block;
                 position: absolute;
                 top: -15px;
@@ -1538,7 +1717,7 @@ h1, h2, h3, h4, h5, h6 {
         &-list {
             display: flex;
             align-items: center;
-            margin: 12px -12px 0 -12px;
+            margin: 3px -12px 0 -12px;
         }
         &-item {
             margin: 0 12px;
@@ -1687,6 +1866,7 @@ h1, h2, h3, h4, h5, h6 {
 .compound {
     &-picture {
         text-align: center;
+        margin-bottom: 37px;
     }
     &-title {
         text-align: center;
@@ -1697,14 +1877,15 @@ h1, h2, h3, h4, h5, h6 {
         margin: 10px 0 10px 0;
     }
     &-right {
-        padding-left: 45px;
+        padding-left: 60px;
     }
     &-descr {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 24px;
         color: #747474;
         text-align: center;
+        margin-bottom: 25px;
     }
     &-btn {
         padding: 16px;
@@ -1743,6 +1924,7 @@ h1, h2, h3, h4, h5, h6 {
         box-sizing: border-box;
         height: 440px;
         overflow-y: scroll;
+        margin-bottom: 23px;
     }
     &-subtitle {
         font-weight: bold;
@@ -1750,7 +1932,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 32px;
         color: #152E34;
         margin-top: 15px;
-        margin-bottom: 10px;
+        margin-bottom: 2px;
     }
     &-info {
         font-weight: 500;
@@ -1765,8 +1947,9 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 24px;
         color: #97B8B6;
         border-bottom: 1px solid #D2D2D2;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         padding-bottom: 17px;
+        margin-top: 0;
     }
     &-list {
         font-size: 16px;
@@ -1783,6 +1966,54 @@ h1, h2, h3, h4, h5, h6 {
         color: #97B8B6;
         font-weight: bold;
         display: block;
+    }
+    &-values {
+        border-top: 1px solid #D2D2D2;
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+    &-table {
+        width: 100%;
+        font-family: $gilroy-semi;
+        font-size: 14px;
+        line-height: 28px;
+        color: #97B8B6;
+        text-align: right;
+        & thead {
+            & th {
+                font-family: $gilroy-bold;
+                font-size: 16px;
+                line-height: 32px;
+                color: #152E34;
+            }
+        }
+        & tr td:first-child,
+        & tr th:first-child {
+            text-align: left;
+        }
+        & b {
+            font-family: $gilroy-bold;
+            font-size: 14px;
+            line-height: 28px;
+            color: #22505D;
+        }
+    }
+    &-icon {
+        margin-top: 10px;
+        display: block;
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/compound-icon.svg);
+    }
+    &-additives {
+        font-family: $gilroy-semi;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #152E34;
     }
 }
 .payment {
@@ -1805,7 +2036,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-title {
             background-color: #ffffff;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 24px;
             line-height: 32px;
             color: #152E34;
@@ -1862,7 +2093,7 @@ h1, h2, h3, h4, h5, h6 {
     &-down {
         border-top: 1px solid #97B8B6;
         padding-top: 25px;
-        margin-top: 5px;
+        margin-top: 11px;
     }
     &-row {
         align-items: center;
@@ -1914,7 +2145,7 @@ h1, h2, h3, h4, h5, h6 {
         justify-content: space-between;
         width: 100%;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         &:after {
             content: '';
             display: inline-block;
@@ -1927,7 +2158,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-title {
             background-color: #ffffff;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 24px;
             line-height: 32px;
             color: #152E34;
@@ -1943,13 +2174,13 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
         line-height: 24px;
         color: #747474;
-        margin: 0 -15px 15px -15px;
+        margin: 0 -15px 11px -15px;
         display: flex;
         justify-content: space-between;
     }
     &-item {
         margin: 15px;
-        width: calc(27.3333% - 30px);
+        width: calc(28.3333% - 30px);
         &:last-child {
             & .payment-text {
                 padding-right: 75px;
@@ -1981,7 +2212,7 @@ h1, h2, h3, h4, h5, h6 {
         font-family: $gilroy-bold;
         line-height: 24px;
         color: #747474;
-        margin: 16px 0 16px 0;
+        margin: 11px 0 16px 0;
     }
     &-days {
         font-family: $gilroy-bold;
@@ -2021,7 +2252,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-title {
             background-color: #ffffff;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 24px;
             line-height: 32px;
             color: #152E34;
@@ -2051,7 +2282,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-more {
-        margin-top: 40px;
+        margin-top: 50px;
     }
     &-btn {
         padding: 16px 24px;
@@ -2106,7 +2337,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-title {
             background-color: #ffffff;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 24px;
             line-height: 32px;
             color: #152E34;
@@ -2124,7 +2355,7 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid #84B5B2;
         box-sizing: border-box;
         border-radius: 15px;
-        margin: 34px 0px 14px 0px;
+        margin: 27px 0px 20px 0px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2164,7 +2395,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-title {
             background-color: #ffffff;
-            font-weight: 600;
+            font-weight: 400;
             font-size: 24px;
             line-height: 32px;
             color: #152E34;
@@ -2182,7 +2413,7 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid #84B5B2;
         box-sizing: border-box;
         border-radius: 15px;
-        margin: 34px 0px 14px 0px;
+        margin: 27px 0px 20px 0px;
         display: flex;
         align-items: center;
         justify-content: center;

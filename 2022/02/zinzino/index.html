@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Превосходное здоровье благодаря формуле масел</title>
 </head>
 <body>
@@ -14,6 +15,12 @@
             <div class="content">
                 <div class="row header-row">
                     <div class="col-11 header-left">
+                        <div class="logos">
+                            <img src="img/logos-image.svg" alt="" class="logos-image">
+                            <span class="logos-text">
+                                Официальный партнёр в России
+                            </span>
+                        </div>
                         <nav class="nav">
                             <ul class="nav-list">
                                 <li class="nav-item">
@@ -26,17 +33,17 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <button class="nav-link open-modal" data-modal="modal-02">
                                         Формула и состав
-                                    </a>
+                                    </button>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#brain" class="nav-link">
                                         Польза
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#ask" class="nav-link">
                                         Продукция
                                     </a>
                                 </li>
@@ -52,8 +59,19 @@
                                 </li>
                             </ul>
                         </nav>
+                        <div class="logos-more">
+                            <button class="logos-more-btn open-modal" data-modal="modal-05">
+                            <span class="logos-more-icon"></span>
+                            <span class="logos-more-text">Заказать обратный звонок</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="col-1 text-right header-right">
+                        <div class="mobile">
+                            <button class="mobile-btn">
+                                <span class="mobile-btn-icon"></span>
+                            </button>
+                        </div>
                         <button class="header-btn open-modal" data-modal="modal-01">
                             <span class="header-btn-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +103,7 @@
                             <span class="promo-zinzino-icon"></span>
                         </div>
                         <p class="promo-descr">
-                            Zinzino Balance Oil - это натуральная добавка для оптимального соотношения Омега-6:3, уровня холестерина сердца и мозга
+                            Zinzino Balance Oil - это натуральная добавка для регулирования уровня Омега-3 и холестерина. Способствует оптимальному соотношению Омега-6:Омега-3, поддерживает нормальную работу сердца, мозга, глаз и иммунной системы.
                         </p>
                     </div>
                     <div class="col-6 promo-right">
@@ -108,7 +126,7 @@
                                                 <span class="promo-price-value">4399₽</span>
                                             </p>
                                             <div class="promo-more">
-                                                <button class="promo-btn">
+                                                <button class="promo-btn open-modal" data-modal="modal-01">
                                                     <span class="promo-btn-icon"></span>
                                                     <span class="promo-btn-text">В корзину</span>
                                                 </button>
@@ -134,7 +152,7 @@
                                                 <span class="promo-price-value">1899₽</span>
                                             </p>
                                             <div class="promo-more">
-                                                <button class="promo-btn">
+                                                <button class="promo-btn open-modal" data-modal="modal-01">
                                                     <span class="promo-btn-icon"></span>
                                                     <span class="promo-btn-text">В корзину</span>
                                                 </button>
@@ -160,7 +178,7 @@
                                                 <span class="promo-price-value">4399₽</span>
                                             </p>
                                             <div class="promo-more">
-                                                <button class="promo-btn">
+                                                <button class="promo-btn open-modal" data-modal="modal-01">
                                                     <span class="promo-btn-icon"></span>
                                                     <span class="promo-btn-text">В корзину</span>
                                                 </button>
@@ -186,7 +204,7 @@
                                                 <span class="promo-price-value">1899₽</span>
                                             </p>
                                             <div class="promo-more">
-                                                <button class="promo-btn">
+                                                <button class="promo-btn open-modal" data-modal="modal-01">
                                                     <span class="promo-btn-icon"></span>
                                                     <span class="promo-btn-text">В корзину</span>
                                                 </button>
@@ -287,7 +305,7 @@
                         </h2>
                         <p class="analytics-descr">
                             Средний баланс Омега-6:3 для жителей России и Европы,
-                            не употребляющих Омега-3 <span class="green">более 15: 1 при норме 4:1</span>
+                            не употребляющих Омега-3 <span class="green">более 15:1 при норме 4:1</span>
                         </p>
                     </div>
                     <div class="col-6 analytics-right">
@@ -310,7 +328,7 @@
                 </div>
             </div>
         </section>
-        <section class="help">
+        <section class="help" id="brain">
             <div class="content">
                 <h2 class="hidden">Как помогает наш препарат?</h2>
                 <div class="row help-row">
@@ -369,6 +387,90 @@
                                 </p>
                             </li>
                         </ul>
+                        <div class="help-slid">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="help-item">
+                                        <div class="help-picture">
+                                            <span class="help-icon help-icon-one"></span>
+                                        </div>
+                                        <h3 class="help-subtitle">
+                                            Для мозга
+                                        </h3>
+                                        <p class="help-text">
+                                           <b>Кислоты DHA</b> помогают обеспечить нормальное функционирование мозга. Во время беременности и кормления грудью кислота DHA поддерживает нормальное развитие мозга ребенка. 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="help-item">
+                                        <div class="help-picture">
+                                            <span class="help-icon help-icon-thue"></span>
+                                        </div>
+                                        <h3 class="help-subtitle">
+                                            Для сердца
+                                        </h3>
+                                        <p class="help-text">
+                                        <b>Кислоты EPA</b> помогают обеспечить нормальную работу сердца, 
+                                        <b>а витамин D</b>, который очень важен для иммунной системы, 
+                                            помогает обеспечить ее нормальное функционирование и 
+                                            сопротивляемость.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="help-item">
+                                        <div class="help-picture">
+                                            <span class="help-icon help-icon-three"></span>
+                                        </div>
+                                        <h3 class="help-subtitle">
+                                            Для зрения
+                                        </h3>
+                                        <p class="help-text">
+                                            Помогает поддерживать здоровье глаз и хорошее зрение 
+                                            благодаря <b>нормализации уровня триглицеридов в крови</b>, 
+                                            нормальному кровяному давлению и нормальному уровню 
+                                            кальция в крови
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="help-item">
+                                        <div class="help-picture">
+                                            <span class="help-icon help-icon-four"></span>
+                                        </div>
+                                        <h3 class="help-subtitle">
+                                            Для мышц
+                                        </h3>
+                                        <p class="help-text">
+                                            Благодаря <b>нормализации уровня кальция в крови</b> 
+                                            обсепечивает укрепление структуры костей, волос,  
+                                            способствует нормализации функции мышц, зубов.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slid-navigation">
+                                <div class="slid-pagination">
+                                    <span class="slid-pagination-bullet"></span>
+                                    <span class="slid-pagination-bullet"></span>
+                                    <span class="slid-pagination-bullet"></span>
+                                    <span class="slid-pagination-bullet active"></span>
+                                </div>
+                                <div class="slid-arrows">
+                                    <span class="slid-arrow slid-arrow-left">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 12.04L6 8.04004L10 4.04004" stroke="#22505D" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                    <span class="slid-arrow slid-arrow-right">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 12.04L6 8.04004L10 4.04004" stroke="#22505D" stroke-width="2"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-4 help-right">
                         <div class="help-block">
@@ -389,7 +491,7 @@
                                                 <span class="help-price-value">4399₽</span>
                                             </div>
                                             <div class="help-more">
-                                                <button class="help-more-btn">
+                                                <button class="help-more-btn open-modal" data-modal="modal-01">
                                                     <span class="help-more-icon"></span>
                                                     <span class="help-more-text">В корзину</span>
                                                 </button>
@@ -411,7 +513,7 @@
                                                 <span class="help-price-value">4399₽</span>
                                             </div>
                                             <div class="help-more">
-                                                <button class="help-more-btn">
+                                                <button class="help-more-btn open-modal" data-modal="modal-01">
                                                     <span class="help-more-icon"></span>
                                                     <span class="help-more-text">В корзину</span>
                                                 </button>
@@ -433,7 +535,7 @@
                                                 <span class="help-price-value">4399₽</span>
                                             </div>
                                             <div class="help-more">
-                                                <button class="help-more-btn">
+                                                <button class="help-more-btn open-modal" data-modal="modal-01">
                                                     <span class="help-more-icon"></span>
                                                     <span class="help-more-text">В корзину</span>
                                                 </button>
@@ -455,7 +557,7 @@
                                                 <span class="help-price-value">4399₽</span>
                                             </div>
                                             <div class="help-more">
-                                                <button class="help-more-btn">
+                                                <button class="help-more-btn open-modal" data-modal="modal-01">
                                                     <span class="help-more-icon"></span>
                                                     <span class="help-more-text">В корзину</span>
                                                 </button>
@@ -471,7 +573,7 @@
                                         <span class="help-pagination-bullet active"></span>
                                     </div>
                                     <div class="help-arrows">
-                                        <span class="help-arrow help-arrow-left">
+                                        <span class="help-arrow  help-arrow-left">
                                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M10 12.04L6 8.04004L10 4.04004" stroke="#22505D" stroke-width="2"/>
                                             </svg>
@@ -499,16 +601,18 @@
                             </div>
                             <h2 class="balance-title">
                                 Баланс Здоровья
-                                за 120 дней!
+                                <br>за 120 дней!
                             </h2>
                         </div>
                     </div>
                     <div class="col-6 balance-right">
                         <p class="balance-acid">
                             После употребления BalanceOil в течение 120 дней, 
-                            среднее соотношение кислот<br>
+                            <span class="balance-acid-block">
+                                среднее соотношение кислот
+                            </span>
                             <b class="green balance-semi">
-                                меньше 5: 1, а во многих случаях даже меньше 3: 1.
+                                меньше 5:1, а во многих случаях даже меньше 3:1.
                             </b>
                         </p>
                      </div>
@@ -524,13 +628,13 @@
                     <button class="balance-more-btn">
                         <span class="balance-more-icon"></span>
                         <span class="balance-more-text">
-                            Узнать подробнее о ZINZINO у консультанта - диетолога
+                            Узнать подробнее о ZINZINO у консультанта - нутрициолога
                         </span>
                     </button>
                 </div>
             </div>
         </section>
-        <section class="ask">
+        <section class="ask" id="ask">
             <div class="content">
                 <div class="ask-propose">
                     <div class="ask-slider">
@@ -553,7 +657,7 @@
                                         </span>
                                     </div>
                                     <div class="ask-more">
-                                        <button class="ask-btn">
+                                        <button class="ask-btn open-modal" data-modal="modal-01">
                                             <span class="ask-btn-icon"></span>
                                             <span class="ask-btn-text">В корзину</span>
                                         </button>
@@ -581,7 +685,7 @@
                                         </span>
                                     </div>
                                     <div class="ask-more">
-                                        <button class="ask-btn">
+                                        <button class="ask-btn open-modal" data-modal="modal-01">
                                             <span class="ask-btn-icon"></span>
                                             <span class="ask-btn-text">В корзину</span>
                                         </button>
@@ -609,7 +713,7 @@
                                         </span>
                                     </div>
                                     <div class="ask-more">
-                                        <button class="ask-btn">
+                                        <button class="ask-btn open-modal" data-modal="modal-01">
                                             <span class="ask-btn-icon"></span>
                                             <span class="ask-btn-text">В корзину</span>
                                         </button>
@@ -637,7 +741,7 @@
                                         </span>
                                     </div>
                                     <div class="ask-more">
-                                        <button class="ask-btn">
+                                        <button class="ask-btn open-modal" data-modal="modal-01">
                                             <span class="ask-btn-icon"></span>
                                             <span class="ask-btn-text">В корзину</span>
                                         </button>
@@ -714,88 +818,90 @@
         </section>
         <footer class="footer">
             <div class="content">
-                <div class="row footer-top">
-                    <div class="col-3 footer-top-left">
-                        <span class="footer-logo"></span>
-                        <p class="footer-descr">
-                            Официальный партнёр в России
-                        </p>
+                <div class="footer-mobile">
+                    <div class="row footer-top">
+                        <div class="col-3 footer-top-left">
+                            <span class="footer-logo"></span>
+                            <p class="footer-descr">
+                                Официальный партнёр в России
+                            </p>
+                        </div>
+                        <div class="col-8 footer-top-center">
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Формула и состав</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Польза</a>
+                                </li>
+                                <li class="footer-item">
+                                    <a href="#" class="footer-link">Продукция</a>
+                                </li>
+                                <li class="footer-item">
+                                    <button class="footer-link open-modal" data-modal="modal-03">Оплата и доставка</button>
+                                </li>
+                                <li class="footer-item">
+                                    <button class="footer-link open-modal" data-modal="modal-04">Контакты</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-1 footer-top-right">
+                            <button class="footer-btn open-modal" data-modal="modal-01">
+                                <span class="footer-btn-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.25 19.25C8.66421 19.25 9 18.9142 9 18.5C9 18.0858 8.66421 17.75 8.25 17.75C7.83579 17.75 7.5 18.0858 7.5 18.5C7.5 18.9142 7.83579 19.25 8.25 19.25Z" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M18.75 19.25C19.1642 19.25 19.5 18.9142 19.5 18.5C19.5 18.0858 19.1642 17.75 18.75 17.75C18.3358 17.75 18 18.0858 18 18.5C18 18.9142 18.3358 19.25 18.75 19.25Z" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M2.25 2.75H5.25L7.5 15.5H19.5" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 12.5H19.1925C19.2792 12.5001 19.3633 12.4701 19.4304 12.4151C19.4975 12.3601 19.5434 12.2836 19.5605 12.1986L20.9105 5.44859C20.9214 5.39417 20.92 5.338 20.9066 5.28414C20.8931 5.23029 20.8679 5.18009 20.8327 5.13717C20.7975 5.09426 20.7532 5.05969 20.703 5.03597C20.6528 5.01225 20.598 4.99996 20.5425 5H6" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="footer-btn-text">0</span>
+                                <span class="footer-btn-value">₽</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="col-8 footer-top-center">
-                        <ul class="footer-list">
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Формула и состав</a>
-                            </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Польза</a>
-                            </li>
-                            <li class="footer-item">
-                                <a href="#" class="footer-link">Продукция</a>
-                            </li>
-                            <li class="footer-item">
-                                <button class="footer-link open-modal" data-modal="modal-03">Оплата и доставка</button>
-                            </li>
-                            <li class="footer-item">
-                                <button class="footer-link open-modal" data-modal="modal-04">Контакты</button>
-                            </li>
-                        </ul>
+                    <div class="row footer-down">
+                        <div class="col-6 footer-down-left">
+                            Пищевые добавки не заменяют разнообразное и сбалансированное питание. Если вы принимаете антикоагулянты, сначала проконсультируйтесь с вашим лечащим врачом.
+                        </div>
+                        <div class="col-6 footer-down-right">
+                            Рекомендуемая дозировка: 0,15 мл BalanceOil на кг веса тела. Взрослые при весе 50 кг: 7,5 мл в сутки. Взрослые с массой тела 80 кг: 12 мл в сутки. Не превышайте рекомендованную суточную дозу!
+                        </div>
                     </div>
-                    <div class="col-1 footer-top-right">
-                        <button class="footer-btn open-modal" data-modal="modal-01">
-                            <span class="footer-btn-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8.25 19.25C8.66421 19.25 9 18.9142 9 18.5C9 18.0858 8.66421 17.75 8.25 17.75C7.83579 17.75 7.5 18.0858 7.5 18.5C7.5 18.9142 7.83579 19.25 8.25 19.25Z" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18.75 19.25C19.1642 19.25 19.5 18.9142 19.5 18.5C19.5 18.0858 19.1642 17.75 18.75 17.75C18.3358 17.75 18 18.0858 18 18.5C18 18.9142 18.3358 19.25 18.75 19.25Z" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2.25 2.75H5.25L7.5 15.5H19.5" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M7.5 12.5H19.1925C19.2792 12.5001 19.3633 12.4701 19.4304 12.4151C19.4975 12.3601 19.5434 12.2836 19.5605 12.1986L20.9105 5.44859C20.9214 5.39417 20.92 5.338 20.9066 5.28414C20.8931 5.23029 20.8679 5.18009 20.8327 5.13717C20.7975 5.09426 20.7532 5.05969 20.703 5.03597C20.6528 5.01225 20.598 4.99996 20.5425 5H6" stroke="#D9B5A5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </span>
-                            <span class="footer-btn-text">0</span>
-                            <span class="footer-btn-value">₽</span>
-                        </button>
-                    </div>
+                    <ul class="footer-sublist">
+                        <li class="footer-subitem">
+                            <div class="footer-picture">
+                                <img src="img/footer-image1.svg" alt="" class="footer-image">
+                            </div>
+                        </li>
+                        <li class="footer-subitem">
+                            <div class="footer-picture">
+                                <img src="img/footer-image2.svg" alt="" class="footer-image">
+                            </div>
+                        </li>
+                        <li class="footer-subitem">
+                            <div class="footer-picture">
+                                <img src="img/footer-image3.svg" alt="" class="footer-image">
+                            </div>
+                        </li>
+                        <li class="footer-subitem">
+                            <div class="footer-picture">
+                                <img src="img/footer-image4.svg" alt="" class="footer-image">
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="row footer-down">
-                    <div class="col-6 footer-down-left">
-                        Пищевые добавки не заменяют разнообразное и сбалансированное питание. Если вы принимаете антикоагулянты, сначала проконсультируйтесь с вашим лечащим врачом.
-                    </div>
-                    <div class="col-6 footer-down-right">
-                        Рекомендуемая дозировка: 0,15 мл BalanceOil на кг веса тела. Взрослые при весе 50 кг: 7,5 мл в сутки. Взрослые с массой тела 80 кг: 12 мл в сутки. Не превышайте рекомендованную суточную дозу!
-                    </div>
-                </div>
-                <ul class="footer-sublist">
-                    <li class="footer-subitem">
-                        <div class="footer-picture">
-                            <img src="img/footer-image1.svg" alt="" class="footer-image">
-                        </div>
-                    </li>
-                    <li class="footer-subitem">
-                        <div class="footer-picture">
-                            <img src="img/footer-image2.svg" alt="" class="footer-image">
-                        </div>
-                    </li>
-                    <li class="footer-subitem">
-                        <div class="footer-picture">
-                            <img src="img/footer-image3.svg" alt="" class="footer-image">
-                        </div>
-                    </li>
-                    <li class="footer-subitem">
-                        <div class="footer-picture">
-                            <img src="img/footer-image4.svg" alt="" class="footer-image">
-                        </div>
-                    </li>
-                </ul>
             </div>
         </footer>
     </div>
 
     <!-- Modal windows -->
-    <div class="modal" id="modal-01">
+    <div class="modal modal-first" id="modal-01">
         <div class="modal-body">
             <button class="modal-close">
                 <span class="modal-close-icon"></span>
             </button>
-            <div class="modal-wrap">
+            <div class="modal-wrapa">
                 <div class="modal-products">
                     <div class="modal-single">
                         <div class="modal-top">
@@ -803,7 +909,7 @@
                             <span class="modal-top-amount">2 товара</span>
                         </div>
                         <div class="row modal-row">
-                            <div class="col-6 modal-left">
+                            <div class="col-5 modal-left">
                                 <div class="modal-picture">
                                     <img src="img/modal-image.jpg" alt="" class="modal-image">
                                 </div>
@@ -811,7 +917,7 @@
                                     Производство: Швеция
                                 </div>
                             </div>
-                            <div class="col-6 modal-right">
+                            <div class="col-7 modal-right">
                                 <div class="modal-block">
                                     <div class="modal-name">
                                         <h3 class="modal-name-title">BALANCE OIL +</h3>
@@ -850,22 +956,6 @@
                                                     </button>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li class="modal-item">
-                                            <label class="modal-lbl">Вкус и объем</label>
-                                            <select class="modal-field modal-field-sel">
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                            </select>
-                                        </li>
-                                        <li class="modal-item">
-                                            <label class="modal-lbl">Вкус и объем</label>
-                                            <select class="modal-field modal-field-sel">
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                            </select>
                                         </li>
                                     </ul>
                                 </div>
@@ -873,12 +963,8 @@
                         </div>
                     </div>
                     <div class="modal-single">
-                        <div class="modal-top">
-                            <h3 class="modal-top-title">Ваш заказ</h3>
-                            <span class="modal-top-amount">2 товара</span>
-                        </div>
                         <div class="row modal-row">
-                            <div class="col-6 modal-left">
+                            <div class="col-5 modal-left">
                                 <div class="modal-picture">
                                     <img src="img/modal-image.jpg" alt="" class="modal-image">
                                 </div>
@@ -886,7 +972,7 @@
                                     Производство: Швеция
                                 </div>
                             </div>
-                            <div class="col-6 modal-right">
+                            <div class="col-7 modal-right">
                                 <div class="modal-block">
                                     <div class="modal-name">
                                         <h3 class="modal-name-title">BALANCE OIL +</h3>
@@ -926,68 +1012,52 @@
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="modal-item">
-                                            <label class="modal-lbl">Вкус и объем</label>
-                                            <select class="modal-field modal-field-sel">
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                            </select>
-                                        </li>
-                                        <li class="modal-item">
-                                            <label class="modal-lbl">Вкус и объем</label>
-                                            <select class="modal-field modal-field-sel">
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                                <option>Апельсин + Лимон + Мята <b>(300 мл)</b></option>
-                                            </select>
-                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-add">
-                    <div class="modal-add-body">
-                        <button class="modal-add-btn">Добавить позицию</button>
+            </div>
+            <div class="modal-add">
+                <div class="modal-add-body">
+                    <button class="modal-add-btn">Добавить позицию</button>
+                </div>
+            </div>
+            <div class="modal-dop">
+                <div class="modal-dop-body">
+                    <div class="modal-dop-item">
+                        <input type="text" class="modal-dop-field" placeholder="Ваше имя*" required>
+                    </div>
+                    <div class="modal-dop-item">
+                        <input type="text" class="modal-dop-field" placeholder="Ваш телефон*">
                     </div>
                 </div>
-                <div class="modal-dop">
-                    <div class="modal-dop-body">
-                        <div class="modal-dop-item">
-                            <input type="text" class="modal-dop-field" placeholder="Ваше имя*" required>
+            </div>
+            <div class="modal-end">
+                <ul class="modal-end-list">
+                    <li class="modal-end-item">
+                        <button class="modal-end-btn open-modal" data-modal="modal-07">
+                            <span class="modal-end-icon"></span>
+                            <span class="modal-end-text">Оплатить</span>
+                        </button>
+                    </li>
+                    <li class="modal-end-item">
+                        <p class="modal-end-copy">
+                            Нажимая на кнопку “Оплатить”
+                            Вы соглашаетесь с 
+                            <a href="#" class="modal-end-link">
+                                политикой конфиденциальности
+                            </a>
+                        </p>
+                    </li>
+                    <li class="modal-end-item">
+                        <div class="modal-end-price">
+                            <span class="modal-end-name">Сумма заказа</span>
+                            <span class="modal-end-value">999,999₽</span>
                         </div>
-                        <div class="modal-dop-item">
-                            <input type="text" class="modal-dop-field" placeholder="Ваш телефон*">
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-end">
-                    <ul class="modal-end-list">
-                        <li class="modal-end-item">
-                            <button class="modal-end-btn">
-                                <span class="modal-end-icon"></span>
-                                <span class="modal-end-text">Оплатить</span>
-                            </button>
-                        </li>
-                        <li class="modal-end-item">
-                            <p class="modal-end-copy">
-                                Нажимая на кнопку “Оплатить”
-                                Вы соглашаетесь с 
-                                <a href="#" class="modal-end-link">
-                                    политикой конфиденциальности
-                                </a>
-                            </p>
-                        </li>
-                        <li class="modal-end-item">
-                            <div class="modal-end-price">
-                                <span class="modal-end-name">Сумма заказа</span>
-                                <span class="modal-end-value">999,999₽</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -1029,7 +1099,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <button class="compound-btn">
+                            <button class="compound-btn open-modal" data-modal="modal-01">
                                 <span class="compound-btn-icon"></span>
                                 <span class="compound-btn-text">В корзину</span>
                             </button>
@@ -1056,6 +1126,66 @@
                                         <span class="compound-day">12 мл в сутки.</span>
                                     </li>
                                 </ul>
+                                <div class="compound-values">
+                                    <table class="compound-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Ценность</th>
+                                                <th>7,5 мл</th>
+                                                <th>12 мл</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <b>Рыбий жир</b>
+                                                </td>
+                                                <td>4142 мг</td>
+                                                <td>6627 мг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b>Омега-3</b>
+                                                </td>
+                                                <td>1549 мг</td>
+                                                <td>2478 мг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b>C20: 5 (EPA)</b>
+                                                </td>
+                                                <td>802 мг</td>
+                                                <td>1283 мг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b>C22: 6 (DHA)</b>
+                                                </td>
+                                                <td>427 мг</td>
+                                                <td>683 мг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b>Омега-9</b>
+                                                </td>
+                                                <td>1918 мг</td>
+                                                <td>3069 мг</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <b>Вит. D3</b>
+                                                </td>
+                                                <td>12,6 мкг</td>
+                                                <td>20 мкг</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <span class="compound-icon"></span>
+                                <p class="compound-additives">
+                                    Пищевые добавки не заменяют разнообразное и сбалансированное питание. Если 
+                                    Вы принимаете антикоагулянты, сначала проконсультируйтесь с вашим лечащим врачом.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1226,7 +1356,7 @@
                         </li>
                     </ul>
                     <div class="callback-more">
-                        <button class="callback-btn">
+                        <button class="callback-btn open-modal" data-modal="modal-06">
                             <span class="callback-btn-icon"></span>
                             <span class="callback-btn-text">
                                 Заказать обратный звонок
