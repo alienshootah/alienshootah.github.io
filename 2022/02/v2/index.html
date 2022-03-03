@@ -4,25 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Главная | Таксекьюр</title>
 </head>
 <body>
     <div class="container-fluid">
         <header class="header">
             <div class="content">
-                <div class="header-row">
+                <div class="row header-row">
                     <div class="col-3 header-left">
                         <div class="header-logo">
                             <a href="#"><img src="img/header-image.png" alt="" class="header-image"></a>
+                            <a href="#"><img src="img/header-image-mobile.png" alt="" class="header-image-mobile"></a>
+                        </div>
+                        <div class="mobile">
+                            <button class="mobile-btn">
+                                <span class="mobile-icon"></span>
+                            </button>
                         </div>
                     </div>
-                    <div class="col-5 header-center">
+                    <div class="col-4 header-center">
                         <nav class="nav">
                             <ul class="nav-list">
                                 <li class="nav-item">
                                     <div class="nav-drop">
-                                        <button class="nav-link nav-link-drop">Разработка ПО</button>
-                                        <div class="drop">
+                                        <button class="nav-link nav-link-drop dropdown-toggle click-dropdown">Разработка ПО</button>
+                                        <div class="drop dropdown-menu">
                                             <div class="drop-body">
                                                 <ul class="drop-list">
                                                     <li class="drop-item">
@@ -44,10 +53,10 @@
                                 </li>
                                 <li class="nav-item">
                                     <div class="nav-drop">
-                                        <button class="nav-link nav-link-drop">
+                                        <button class="nav-link nav-link-drop dropdown-toggle click-dropdown">
                                             Системы безопасности
                                         </button>
-                                        <div class="drop">
+                                        <div class="drop dropdown-menu">
                                             <div class="drop-body">
                                                 <ul class="drop-list">
                                                     <li class="drop-item">
@@ -69,8 +78,8 @@
                                 </li>
                                 <li class="nav-item">
                                     <div class="nav-drop">
-                                        <button class="nav-link nav-link-drop">О компании</button>
-                                        <div class="drop">
+                                        <button class="nav-link nav-link-drop dropdown-toggle click-dropdown">О компании</button>
+                                        <div class="drop dropdown-menu">
                                             <div class="drop-body">
                                                 <ul class="drop-list">
                                                     <li class="drop-item">
@@ -93,7 +102,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-4 header-right">
+                    <div class="col-5 header-right">
                         <div class="adress">
                             <ul class="adress-list">
                                 <li class="adress-item">
@@ -113,7 +122,7 @@
                                             <span class="adress-icon adress-icon-thue"></span>
                                         </div>
                                         <div class="adress-descr">
-                                            <a href="tel:+(812) 425-62-76" class="adress-link">(812) 425-62-76</a>
+                                            <a href="tel:+(812) 425-62-76" class="adress-tel">(812) 425-62-76</a>
                                             <a href="mailto:mail@taksecure.ru" class="adress-link">mail@taksecure.ru</a>
                                         </div>
                                     </div>
@@ -128,17 +137,19 @@
             </div>
         </header>
         <section class="promo">
+            <video loop="" muted="" autoplay="" class="promo-video">
+                <source src="video/vid-promo.mov" type="video/mp4">
+            </video>
             <div class="content">
                 <h1 class="promo-title">
                     Видеонаблюдение с 
                     <span class="promo-under">
-                        пожизненной гарантией 
-                    </span>
+                        пожизненной гарантией</span> 
                     под ключ
                 </h1>
                 <div class="promo-wrap">
                     <div class="promo-picture">
-                        <span class="promo-icon"></span>
+                        <span class="promo-icon-wrap"></span>
                     </div>
                     <p class="promo-descr">
                         Мы на 100% уверены в качестве предоставляемых услуг, и готовы дать пожизненную гарантию на оборудование при подписании договора на обслуживание.
@@ -224,21 +235,21 @@
                     <ul class="services-list">
                         <li class="services-item">
                             <div class="services-picture">
-                                <div class="services-num">
-                                    <span class="services-num-value">1</span>
+                                <div class="services-beauty">
+                                    <div class="services-num">
+                                        <span class="services-num-value">1</span>
+                                    </div>
+                                    <a href="#">
+                                        <img src="img/services-image1.jpg" alt="" class="services-image">
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <img src="img/services-image1.jpg" alt="" class="services-image">
-                                </a>
                                 <div class="services-more">
                                     <button class="services-more-btn">Заказать</button>
                                 </div>
                             </div>
                             <div class="services-descr">
                                 <h3 class="services-subtitle">
-                                    <a href="#" class="services-subtitle-link">
-                                        Проф. установка видеонаблюдения и системы безопасности
-                                    </a>
+                                    Проф. установка видеонаблюдения и системы безопасности
                                 </h3>
                                 <ul class="services-sublist">
                                     <li class="services-subitem">
@@ -257,21 +268,21 @@
                         </li>
                         <li class="services-item">
                             <div class="services-picture">
-                                <div class="services-num">
-                                    <span class="services-num-value">2</span>
+                                <div class="services-beauty">
+                                    <div class="services-num">
+                                        <span class="services-num-value">2</span>
+                                    </div>
+                                    <a href="#">
+                                        <img src="img/services-image2.jpg" alt="" class="services-image">
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <img src="img/services-image2.jpg" alt="" class="services-image">
-                                </a>
                                 <div class="services-more">
                                     <button class="services-more-btn">Заказать</button>
                                 </div>
                             </div>
                             <div class="services-descr">
                                 <h3 class="services-subtitle">
-                                    <a href="#" class="services-subtitle-link">
-                                        Обслуживание видеонаблюдения под ключ
-                                    </a>
+                                    Обслуживание видеонаблюдения под ключ
                                 </h3>
                                 <ul class="services-sublist">
                                     <li class="services-subitem">
@@ -290,21 +301,21 @@
                         </li>
                         <li class="services-item">
                             <div class="services-picture">
-                                <div class="services-num">
-                                    <span class="services-num-value">3</span>
+                                <div class="services-beauty">
+                                    <div class="services-num">
+                                        <span class="services-num-value">3</span>
+                                    </div>
+                                    <a href="#">
+                                        <img src="img/services-image3.jpg" alt="" class="services-image">
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <img src="img/services-image3.jpg" alt="" class="services-image">
-                                </a>
                                 <div class="services-more">
                                     <button class="services-more-btn">Заказать</button>
                                 </div>
                             </div>
                             <div class="services-descr">
                                 <h3 class="services-subtitle">
-                                    <a href="#" class="services-subtitle-link">
-                                        c
-                                    </a>
+                                    Ремонт и диагностика видеонаблюдения
                                 </h3>
                                 <ul class="services-sublist">
                                     <li class="services-subitem">
@@ -323,21 +334,21 @@
                         </li>
                         <li class="services-item">
                             <div class="services-picture">
-                                <div class="services-num">
-                                    <span class="services-num-value">4</span>
+                                <div class="services-beauty">
+                                    <div class="services-num">
+                                        <span class="services-num-value">4</span>
+                                    </div>
+                                    <a href="#">
+                                        <img src="img/services-image4.jpg" alt="" class="services-image">
+                                    </a>
                                 </div>
-                                <a href="#">
-                                    <img src="img/services-image4.jpg" alt="" class="services-image">
-                                </a>
                                 <div class="services-more">
                                     <button class="services-more-btn">Заказать</button>
                                 </div>
                             </div>
                             <div class="services-descr">
                                 <h3 class="services-subtitle">
-                                    <a href="#" class="services-subtitle-link">
-                                        Разработка программного обеспечения
-                                    </a>
+                                    Разработка программного обеспечения
                                 </h3>
                                 <ul class="services-sublist">
                                     <li class="services-subitem">
@@ -390,11 +401,11 @@
         <section class="key">
             <div class="content">
                 <h2 class="key-title">Видеонаблюдение под ключ</h2>
+                <h3 class="key-subtitle">
+                    Оснащение наружным видеонаблюдением в Петербурге
+                </h3>
                 <div class="row key-row">
                     <div class="col-6 key-left">
-                        <h3 class="key-subtitle">
-                            Оснащение наружным видеонаблюдением в Петербурге
-                        </h3>
                         <p>Мы устанавливаем оборудование безопасности и видеонаблюдения:</p>
                         <ul class="key-list">
                             <li class="key-item">
@@ -429,23 +440,22 @@
                         </p>
                     </div>
                 </div>
-                <h3 class="key-subtitle">
-                    Оснащение наружным видеонаблюдением в Петербурге
-                </h3>
-                <p> Системы видеонаблюдений в помещениях проще. Монтажные сети легче проложить вдоль существующих. Сами камеры можно настроить так, чтобы просматривались важные зоны безопасности в частном доме или любом другом коммерческом объекте.</p>
-                <p>Автономная онлайн камера не занимает много места. Мы поможем подобрать место для ее максимально эффективной установки.</p>
-                <p>Мы предложим аналоговые и цифровые, автономные, удаленные, проводные и беспроводные устройства видеонаблюдения в СПб с установкой «под ключ».</p>
-            </div>
+                <div class="key-work">
+                    <h3 class="key-subtitle">
+                        Работа с видеонаблюдением в помещениях
+                    </h3>
+                    <p> Системы видеонаблюдений в помещениях проще. Монтажные сети легче проложить вдоль существующих. Сами камеры можно настроить так, чтобы просматривались важные зоны безопасности в частном доме или любом другом коммерческом объекте.</p>
+                    <p>Автономная онлайн камера не занимает много места. Мы поможем подобрать место для ее максимально эффективной установки.</p>
+                    <p>Мы предложим аналоговые и цифровые, автономные, удаленные, проводные и беспроводные устройства видеонаблюдения в СПб с установкой «под ключ».</p>    
+                </div>
+           </div>
         </section>
         <section class="diff">
             <div class="content">
                 <div class="row diff-row">
-                    <div class="col-6 diff-left">
-                        <div class="diff-picture">
-                            <img src="img/diff-image.jpg" alt="" class="diff-image">
-                        </div>
+                    <div class="col-5 diff-left">
                     </div>
-                    <div class="col-6 diff-right">
+                    <div class="col-7 diff-right">
                         <h2 class="diff-title">
                             Различие систем видеонаблюдений: аналоговое и IP
                         </h2>
@@ -470,36 +480,38 @@
         <section class="clients">
             <div class="content">
                 <h2 class="clients-title">Наши клиенты</h2>
-                <div class="clients-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slider">
-                            <div class="clients-item">
-                                <img src="img/clients-image1.png" alt="" class="clients-image">
+                <div class="clients-full">
+                    <div class="clients-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <img src="img/clients-image1.png" alt="" class="clients-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slider">
-                            <div class="clients-item">
-                                <img src="img/clients-image2.png" alt="" class="clients-image">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <img src="img/clients-image2.png" alt="" class="clients-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slider">
-                            <div class="clients-item">
-                                <img src="img/clients-image3.png" alt="" class="clients-image">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <img src="img/clients-image3.png" alt="" class="clients-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slider">
-                            <div class="clients-item">
-                                <img src="img/clients-image4.png" alt="" class="clients-image">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <img src="img/clients-image4.png" alt="" class="clients-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slider">
-                            <div class="clients-item">
-                                <img src="img/clients-image5.png" alt="" class="clients-image">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <img src="img/clients-image5.png" alt="" class="clients-image">
+                                </div>
                             </div>
-                        </div>
-                        <div class="swiper-slider">
-                            <div class="clients-item">
-                                <img src="img/clients-image6.png" alt="" class="clients-image">
+                            <div class="swiper-slide">
+                                <div class="clients-item">
+                                    <img src="img/clients-image6.png" alt="" class="clients-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -536,20 +548,20 @@
                         </p>
                     </div>
                     <div class="col-6 why-right">
-                        <h2 class="why-title">
-                            Стоимость видеонаблюдения в ЛО и СПб
-                        </h2>
-                        <p>Стоимость обеспечения безопасности на объекте зависит от количества камер, качества записи и срока ее хранения.</p>
-                        <p>У нас можно купить по оптимальной цене любое количество аналоговых и цифровых камер и периферийных устройств. Ваша система безопасности будет укомплектована достаточным количеством видеоустройств с автономной записью либо онлайн режимом воспроизведения данных. Установив систему с автономным видеонаблюдением можно уберечь себя от ущерба.</p>
+                        <div class="why-block">
+                            <h2 class="why-title why-title-white">
+                                Стоимость видеонаблюдения в ЛО и СПб
+                            </h2>
+                            <p>Стоимость обеспечения безопасности на объекте зависит от количества камер, качества записи и срока ее хранения.</p>
+                            <p>У нас можно купить по оптимальной цене любое количество аналоговых и цифровых камер и периферийных устройств. Ваша система безопасности будет укомплектована достаточным количеством видеоустройств с автономной записью либо онлайн режимом воспроизведения данных. Установив систему с автономным видеонаблюдением можно уберечь себя от ущерба.</p>    
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="ready">
             <div class="content">
-                <h2 class="ready-title">
-                    Выполненные проекты
-                </h2>
+                <h2 class="ready-title">Выполненные проекты</h2>
                 <div class="ready-all">
                     <a href="#" class="ready-all-link">
                         Все проекты
@@ -606,7 +618,7 @@
                             <li class="ready-item">
                                 <div class="ready-picture">
                                     <a href="#">
-                                        <img src="img/ready-image4.jpg" alt="" class="ready-image">
+                                        <img src="img/ready-image3.jpg" alt="" class="ready-image">
                                     </a>
                                 </div>
                                 <h3 class="ready-subtitle">
@@ -621,7 +633,7 @@
                             <li class="ready-item">
                                 <div class="ready-picture">
                                     <a href="#">
-                                        <img src="img/ready-image5.jpg" alt="" class="ready-image">
+                                        <img src="img/ready-image4.jpg" alt="" class="ready-image">
                                     </a>
                                 </div>
                                 <h3 class="ready-subtitle">
@@ -636,7 +648,7 @@
                             <li class="ready-item">
                                 <div class="ready-picture">
                                     <a href="#">
-                                        <img src="img/ready-image4.jpg" alt="" class="ready-image">
+                                        <img src="img/ready-image3.jpg" alt="" class="ready-image">
                                     </a>
                                 </div>
                                 <h3 class="ready-subtitle">
@@ -652,7 +664,7 @@
                     </div>
                     <div class="col-3 ready-right">
                         <div class="ready-block">
-                            <h3 class="ready-subtitle">
+                            <h3 class="ready-subwhite">
                                 Как заказать услугу установки видеонаблюдения?
                             </h3>
                             <p class="ready-block-text">
@@ -700,7 +712,7 @@
                                 </li>
                                 <li class="contacts-item">
                                     <div class="contacts-picture">
-                                        <span class="contacts-icon contacts-icon-one"></span>
+                                        <span class="contacts-icon contacts-icon-three"></span>
                                     </div>
                                     <div class="contacts-descr">
                                         <p class="contacts-text">
@@ -720,10 +732,10 @@
                                 </p>
                                 <ul class="contacts-sublist">
                                     <li class="contacts-subitem">
-                                        <input type="text" class="contacts-field" placeholder="Ваше имя">
+                                        <input type="text" class="contacts-field" placeholder="Ваше имя" required>
                                     </li>
                                     <li class="contacts-subitem">
-                                        <input type="text" class="contacts-field" placeholder="Ваш телефон">
+                                        <input type="text" class="contacts-field tel" placeholder="Ваш телефон">
                                     </li>
                                     <li class="contacts-subitem">
                                         <select class="contacts-field contacts-field-sel">
@@ -752,7 +764,9 @@
                     </div>
                     <div class="col-6 contacts-right">
                         <div class="contacts-map">
-                            карта
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.4885800240481!2d30.266186767932197!3d59.89083946229154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630814fcdc0ad%3A0xdd0fa29da9370082!2z0YPQuy4g0KLRgNC10YTQvtC70LXQstCwLCAxNSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjywgMTk4MDk1!5e0!3m2!1sru!2sua!4v1645657953820!5m2!1sru!2sua" 
+                             style="border:0;" 
+                            allowfullscreen="" class="contacts-map-val" loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -762,11 +776,11 @@
             <div class="footer-top">
                 <div class="content">
                     <div class="row footer-row">
-                        <div class="col-3">
+                        <div class="col-4">
                             <div class="footer-logo">
                                 <img src="img/footer-image.png" alt="" class="footer-image">
                             </div>
-                            <p>
+                            <p class="footer-info">
                                 Мы устанавливаем оборудование безопасности и видеонаблюдения:
                                 <br>- IP видеонаблюдение;
                                 <br>- аналоговое видеонаблюдение по низкой цене;
@@ -798,7 +812,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-3">
+                        <div class="col-2">
                             <h3 class="footer-title">
                                 Контакты
                             </h3>
@@ -842,7 +856,7 @@
                                             <input type="text" class="callback-field" placeholder="Имя" required>
                                         </li>
                                         <li class="callback-item">
-                                            <input type="text tel" class="callback-field" placeholder="Телефон">
+                                            <input type="text tel" class="callback-field tel" placeholder="Телефон">
                                         </li>
                                         <li class="callback-item">
                                             <button class="callback-btn">Отправить</button>
@@ -867,5 +881,7 @@
             </div>
         </footer>
     </div>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>

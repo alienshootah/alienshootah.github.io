@@ -1,0 +1,885 @@
+@media(max-width: 1640px) {
+    section,
+    footer {
+        overflow: hidden;
+    }
+    .header {
+        &-center {
+            width: 45%;
+        }
+        &-right {
+            width: 35%;
+        }
+    }
+    .nav {
+        &-list {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .adress {
+        &-item {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
+@media(max-width: 1500px) {
+    .header {
+        &-center {
+            width: 63%;
+        }
+        &-right {
+            width: 17%;
+        }
+    }
+    .adress {
+        &-list {
+            justify-content: flex-end;
+        }
+        &-item {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+    .diff {
+        background-size: 40%;
+    }
+}
+@media(max-width: 1280px) {
+    .header {
+        &-right {
+            display: none;
+        }
+        &-left {
+            width: 25%;
+        }
+        &-center {
+            width: 75%;
+        }
+    }
+    .nav {
+        &-list {
+            margin: 0;
+            justify-content: flex-end;
+        }
+    }
+    .services {
+        &-item {
+            width: calc(100% - 30px);
+        }
+    }
+    .consult {
+        &-left {
+            width: 70%;
+        }
+        &-right {
+            width: 30%;
+        }
+        &-list {
+            justify-content: flex-end;
+            position: static;
+        }
+    }
+    h2 {
+        font-size: 52px;
+    }
+    .ready {
+        margin-bottom: 0;
+        &-row {
+            flex-wrap: wrap;
+        }
+        & .col-9 {
+            width: 100%;
+        }
+        & .col-3 {
+            width: 100%;
+            margin-top: 40px;
+        }
+        &-image {
+            width: 100%;
+        }
+    }
+    .contacts {
+        margin-bottom: 0;
+        &-row {
+            flex-wrap: wrap;
+        }
+        & .col-6 {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            &:nth-child(1) {
+                order: 1;
+            }
+        }
+        &-map {
+            &-val {
+                width: 100%;
+                height: 550px;
+            }
+        }
+    }
+    .drop {
+        right: 0;
+    }
+    .giveit {
+        &-title {
+            font-size: 30px;
+        }
+        &-descr {
+            position: relative;
+            left: -15px;
+            top: 15px;
+        }
+    }
+}
+@media(max-width: 992px) {
+    .mobile{
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        &-icon {
+            display: inline-block;
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/mobile-icon.png);
+        }
+    }
+    .header {
+        background-color: #ffffff;
+        color: #333333;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        box-shadow: -18.126px -8.452px 24px 0px rgba(0, 0, 0, 0.64);
+        &.show {
+            & .header-center {
+                display: block;
+            }
+            & .header-right {
+                display: block;
+            }
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-center {
+            width: 100%;
+            display: none;
+        }
+        &-right {
+            width: 100%;
+            display: none;
+        }
+        &-image {
+            display: none;
+            &-mobile {
+                display: inline-block;
+            }
+        }
+    }
+    .nav {
+        &-list {
+            display: block;
+            text-align: center;
+        }
+        &-link {
+            color: #333333;
+            display: inline-block;
+            &-drop {
+                &:after {
+                    background-image: url(../img/nav-link-drop-mobile.png);
+                }
+            }
+            &:hover, 
+            &:focus {
+                border-bottom: 1px solid #99cbe7;
+            }
+        }
+    }
+    .drop {
+        position: static;
+    }
+    .adress {
+        &-list {
+            display: block;
+            text-align: center;
+        }
+        &-item {
+            margin: 15px 0;
+            &:first-child {
+                display: block;
+            }
+            &:last-child {
+                display: block;
+            }
+            &:nth-child(2) {
+                position: relative;
+                left: -18px;
+            }
+        }
+        &-wrapper {
+            justify-content: center;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        &-tel {
+            color: #333333;
+        }
+        &-link {
+            color: #333333;
+        }
+        &-icon {
+            &-one {
+                background-image: url(../img/adress-icon-one-mobile.png);
+                min-width: 28px;
+                width: 28px;
+                height: 28px;
+            }
+            &-thue {
+                background-image: url(../img/adress-icon-thue-mobile.png);
+                min-width: 26px;
+                width: 26px;
+                height: 26px;
+            }
+        }
+        &-descr {
+            text-align: left;
+        }
+        &-btn {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-text {
+            color: #333333;
+        }
+        &-tel {
+            color: #007ec3;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #007ec3;
+            }
+        }
+        &-link {
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #333333;
+            }
+        }
+    }
+    .about {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            order: 1;
+            margin-top: 50px;
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .why {
+        &-row {
+            flex-wrap: wrap;
+        }
+        & .col-6 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            padding: 0 15px;
+        }
+        &-title {
+            font-size: 24px;
+        }
+    }
+    .clients {
+        margin: 40px 0 90px 0;
+    }
+    .ready {
+        margin: 25px 0 0 0;
+    }
+    .footer {
+        &-row {
+            flex-wrap: wrap;
+        }
+        & .col-4 {
+            width: 50%;
+            margin: 20px 0;
+        }
+        & .col-3 {
+            width: 50%;
+            margin: 20px 0;
+        }
+        & .col-2 {
+            width: 50%;
+            margin: 20px 0;
+        }
+    }
+    .vacan {
+        &-item {
+            width: calc(100% - 40px);
+            margin: 10px 20px;
+        }
+    }
+    .projects {
+        &-item {
+            width: calc(50% - 30px);
+        }
+    }
+    .goris {
+        &-title {
+            font-size: 36px;
+        }
+        &-right {
+            padding: 20px 40px 60px 40px;
+        }
+        &-item {
+            margin: 4px 0 4px 0;
+        }
+    }
+    .giveit {
+        &-row {
+            flex-wrap: wrap;
+        }
+        & .col-9 {
+            width: 100%;
+        }
+        & .col-3 {
+            width: 100%;
+        }
+    }
+    .numba {
+        &-body {
+            justify-content: center;
+            margin-top: 25px;
+        }
+    }
+    .catalogs {
+        &-item {
+            width: calc(33.3333% - 30px);
+        }
+    }
+    .insta {
+        &-row {
+
+        }
+        &-left {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .proto {
+        margin: 30px 0;
+    }
+    .how {
+        padding: 30px 0;
+    }
+    .card {
+        &-title {
+            font-size: 34px;
+        }
+        &-row {
+            margin-top: 50px;
+        }
+    }
+    .complect {
+        &-title {
+            font-size: 18px;
+        }
+    }
+}
+@media(max-width: 750px) {
+    .nav {
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .promo {
+        height: 650px;
+        padding: 63px 0;
+        &-video {
+            height: 650px;
+        }
+        &-title {
+            font-size: 28px;
+        }
+        &-btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .about {
+        margin: 50px 0 70px 0;
+    }
+    .services {
+        &-item {
+            padding: 15px;
+        }
+        &-sublist {
+            display: block;
+        }
+        &-subitem {
+            margin-bottom: 10px;
+        }
+        &-subtitle {
+            font-size: 20px;
+        }
+    }
+    .consult {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 40px;
+        }
+        &-list {
+            justify-content: center;
+        }
+    }
+    .diff {
+        margin: 50px 0;
+        background-image: none;
+        &-row {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        & .col-5 {
+            width: 100%;
+            display: none;
+        } 
+        & .col-7 {
+            width: 100%;
+        } 
+        &-btn {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .clients {
+        text-align: center;
+    }
+    .why {
+        &-title {
+            text-align: center;
+        }
+    }
+    .ready {
+        &-all {
+            text-align: center;
+            margin-top: 20px;
+        }
+        &-list {
+            margin: 0 -15px;
+        }
+        &-item {
+            width: calc(50% - 30px);
+            margin: 15px;
+        }
+        &-right {
+            text-align: center;
+        }
+    }
+    .footer {
+        &-image {
+            width: 150px;
+        }
+        &-bottom {
+            text-align: center;
+        }
+    }
+    .projects {
+        margin-bottom: 60px;
+        &-item {
+            width: calc(100% - 30px);
+        }
+    }
+    .onse {
+        &-row {
+            flex-wrap: wrap;
+            &-reverse {
+                margin-top: 40px;
+                & .col-8 {
+                    order: 1;
+                }
+            }
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+    }
+    .goris {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .giveit {
+        &-block {
+            display: block;
+        }
+        &-picture {
+            text-align: center;
+            margin: 0 auto;
+        }
+        &-descr {
+            margin-top: 30px;
+            position: static;
+            text-align: center;
+        }
+    }
+    .catalogs {
+        &-item {
+            width: calc(50% - 30px);
+        }
+    }
+    .insta {
+        &-right {
+            display: none;
+        }
+    }
+    .card {
+        &-title {
+            font-size: 28px;
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 25px;
+        }
+        &-right {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+    .complect {
+        &-row {
+            flex-wrap: wrap;
+        }
+        & .col-4 {
+            width: 100%;
+        }
+    }
+    .azs-title {
+        font-size: 24px;
+    }
+    .reason {
+        margin-top: 50px;
+        &-title {
+            font-size: 25px;
+        }
+    }
+    .contest {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        &-title {
+            font-size: 25px;
+        }
+    }
+}
+@media(max-width: 520px) {
+    .services {
+        &-item {
+            display: block;
+        }
+        &-picture {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+        &-beauty {
+            width: 100%;
+        }
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .consult {
+        &-title {
+            font-size: 28px;
+        }
+        &-text {
+            font-size: 17px;
+        }
+    }
+    .key {
+        &-title {
+            text-align: center;
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-subtitle {
+            text-align: center;
+        }
+    }
+    .diff {
+        padding: 50px 0;
+    }
+    .clients {
+        margin: 40px 0 40px 0;
+        &-image {
+            width: 100%;
+            height: 125px;
+        }
+    }
+    .ready {
+        &-title {
+            text-align: center;
+        }
+    }
+    .contacts {
+        &-block {
+            padding: 35px 15px;
+        }
+        &-subtitle {
+            font-size: 28px;
+            text-align: center;
+        }
+        &-field {
+            max-width: 100%;
+        }
+        &-btn {
+            margin: 0 auto;
+        }
+    }
+    .story {
+        margin-bottom: 60px;
+        &-item {
+            display: block;
+        }
+    }
+    .projects {
+        margin-bottom: 20px;
+        &-body {
+            margin-top: 25px;
+        }
+    }
+    .card-title {
+        font-size: 24px;
+    }
+}
+@media(max-width: 410px) {
+    h2 {
+        font-size: 28px;
+    }
+    .services {
+        padding: 50px 0;
+        &-title {
+            text-align: center;
+        }
+    }
+    .promo {
+        background-image: url(../img/promo-bg-mobile.jpg);
+        background-position: center;
+        background-size: cover;
+        text-align: left;
+        height: auto;
+        padding: 40px 0;
+        &-btn {
+            padding: 20px 14px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        &-video {
+            display: none;
+        }
+        &-wrap {
+            display: block;
+        }
+        &-picture {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+    }
+    .about {
+        &-title {
+            text-align: center;
+        }
+        &-subtitle {
+            text-align: center;
+        }
+        &-item {
+            display: block;
+        }
+        &-picture {
+            margin-right: 0;
+            text-align: center;
+        }
+        &-wrapper {
+            padding: 20px;
+            text-align: center;
+        }
+    }
+    .consult {
+        padding-top: 40px;
+        &-block {
+            display: block;
+            text-align: center;
+        }
+        &-icon {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-descr {
+            position: static;
+        }
+        &-right {
+            margin-top: 0;
+        }
+    }
+    .key {
+        margin-top: 44px;
+    }
+    .diff {
+        &-title {
+            font-size: 24px;
+        }
+        &-btn {
+            padding: 23px 15px;
+            width: 100%;
+            font-size: 15px;
+        }
+    }
+    .clients {
+        &-image {
+            object-fit: contain;
+        }
+    }
+    .ready {
+        &-row {
+            margin-top: 30px;
+        }
+        &-item {
+            width: calc(100% - 30px);
+            margin: 15px;
+        }
+    }
+    .contacts {
+        &-subtitle {
+            font-size: 24px;
+        }
+        &-text {
+            font-size: 16px;
+        }
+        &-info {
+            text-align: center;
+        }
+    }
+    .footer {
+        &-top {
+            padding: 50px 0 40px 0;
+        }
+        & .col-4,
+        & .col-3,
+        & .col-2 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .social {
+        &-list {
+            justify-content: center;
+        }
+    }
+    .vacan {
+        &-item {
+            display: block;
+        }
+        &-picture {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+        &-subtitle {
+            text-align: center;
+            font-size: 22px;
+        }
+        &-cost {
+            text-align: center;
+        }
+    }
+    .story {
+        margin-top: 30px;
+        &-title {
+            font-size: 24px;
+        }
+    }
+    .goris {
+        &-title {
+            font-size: 26px;
+        }
+        &-subtitle {
+            font-size: 22px;
+        }
+    }
+    .giveit {
+        &-title {
+            font-size: 24px;
+        }
+    }
+    .catalogs-item {
+        width: calc(100% - 30px);
+    }
+    .insta {
+        &-title {
+            font-size: 26px;
+        }
+    }
+    .proto {
+        &-title {
+            font-size: 26px;
+        }
+    }
+    .how {
+        &-title {
+            font-size: 26px;
+        }
+    }
+}
