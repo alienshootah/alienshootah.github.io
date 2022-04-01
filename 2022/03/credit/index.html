@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Главная - Займи</title>
 </head>
 <body>
@@ -50,63 +52,64 @@
                                 <img src="img/promo-image.png" alt="" class="promo-image">
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="end">
-                    <div class="end-body">
-                        <form class="end-form">
-                            <div class="row end-row">
-                                <div class="col-4 end-left">
-                                    <div class="sum">
-                                        <label class="sum-lbl">
-                                            <span class="sum-name">Сума кредиту</span>
-                                            <span class="sum-value">4 000</span>
-                                            <input type="text" class="sum-field" required>
-                                        </label>
-                                        <div class="sum-end">
-                                            <span class="sum-end-left">500 ₴</span>
-                                            <span class="sum-end-right">15 000 ₴</span>
+                        <div class="end">
+                            <div class="end-body">
+                                <form class="end-form">
+                                    <div class="row end-row">
+                                        <div class="col-5 end-left">
+                                            <div class="sum">
+                                                <label class="slidecontainer sum-lbl">
+                                                    <span class="sum-name">Сума кредиту</span>
+                                                    <span class="sum-value" id="demo">4 000</span>
+                                                    <input type="range" min="500" max="15000" value="4000" class="slider sum-field" id="myRange">
+                                                </label>
+                                                <div class="sum-end">
+                                                    <span class="sum-end-left">500 ₴</span>
+                                                    <span class="sum-end-right">15 000 ₴</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 end-center">
+                                            <div class="meta">
+                                                <label class="meta-lbl">
+                                                    <span class="meta-lbl-name">Мета кредиту</span>
+                                                    <select class="meta-field">
+                                                        <option>На інші цілі</option>
+                                                        <option>На інші цілі</option>
+                                                        <option>На інші цілі</option>
+                                                    </select>
+                                                </label>
+                                                <p class="meta-policy">
+                                                    <span class="meta-policy-icon"></span>
+                                                    <span class="meta-policy-text">
+                                                        100% захист даних
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 end-right">
+                                            <button class="end-btn">
+                                                <span class="end-btn-text">
+                                                    ПОДАТИ ЗАЯВКУ
+                                                </span>
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-4 end-center">
-                                    <div class="meta">
-                                        <label class="meta-lbl">
-                                            <span class="meta-lbl-name">Мета кредиту</span>
-                                            <select class="meta-field">
-                                                <option>На інші цілі</option>
-                                                <option>На інші цілі</option>
-                                                <option>На інші цілі</option>
-                                            </select>
-                                        </label>
-                                        <p class="meta-policy">
-                                            <span class="meta-policy-icon"></span>
-                                            <span class="meta-policy-text">
-                                                100% захист даних
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-4 end-right">
-                                    <button class="end-btn">
-                                        <span class="end-btn-text">
-                                            ПОДАТИ ЗАЯВКУ
-                                        </span>
-                                    </button>
-                                </div>
+                                </form>
                             </div>
-                        </form>
+                            <div class="promo-more">
+                                <p class="promo-more-text">
+                                    * Високий відсоток схвалення. Безвідсотковий кредит 2000 грн., 
+                                    відсотки 0 грн., сума до оплати складе 2006 грн. APR 3.65%. 
+                                    Участь в програмі лояльності 3000 грн. на 3 місяців, комісія 
+                                    3396 грн., загальні витрати на позику становлять 6396 грн., 
+                                    APR 693%
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="promo-more">
-                    <p class="promo-more-text">
-                        * Високий відсоток схвалення. Безвідсотковий кредит 2000 грн., 
-                        відсотки 0 грн., сума до оплати складе 2006 грн. APR 3.65%. 
-                        Участь в програмі лояльності 3000 грн. на 3 місяців, комісія 
-                        3396 грн., загальні витрати на позику становлять 6396 грн., 
-                        APR 693%
-                    </p>
-                </div>
+                
             </div>
         </section>
         <section class="steps">
@@ -154,46 +157,50 @@
             <span class="reviews-decor"></span>
             <div class="content">
                 <h2 class="reviews-title">
-                    Відгуки
+                    <span class="reviews-title-text">
+                        Відгуки
+                    </span>
                 </h2>
-                <div class="reviews-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="reviews-item">
-                                <div class="reviews-wrapper">
-                                    <div class="reviews-picture">
-                                        <img src="img/reviews-image1.jpg" alt="" class="reviews-image">
-                                    </div>
-                                    <div class="reviews-descr">
-                                        <h3 class="reviews-subtitle">
-                                            Юлія Бровина
-                                        </h3>
-                                        <div class="reviews-start">
-                                            <span class="reviews-start-icon"></span>
+                <div class="reviews-body">
+                    <div class="reviews-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-wrapper">
+                                        <div class="reviews-picture">
+                                            <img src="img/reviews-image1.jpg" alt="" class="reviews-image">
                                         </div>
-                                        <p class="reviews-text">
-                                            In pellentesque dolor sit amet nisi lacinia euismod. Mauris elementum turpis sem, ut laoreet purus porta ut. Suspendisse posuere purus id nunc eleifend, id condimentum nulla tempus. Donec tortor sem, efficitur a 
-                                        </p>
+                                        <div class="reviews-descr">
+                                            <h3 class="reviews-subtitle">
+                                                Юлія Бровина
+                                            </h3>
+                                            <div class="reviews-stars">
+                                                <span class="reviews-stars-icon"></span>
+                                            </div>
+                                            <p class="reviews-text">
+                                                In pellentesque dolor sit amet nisi lacinia euismod. Mauris elementum turpis sem, ut laoreet purus porta ut. Suspendisse posuere purus id nunc eleifend, id condimentum nulla tempus. Donec tortor sem, efficitur a 
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="reviews-item">
-                                <div class="reviews-wrapper">
-                                    <div class="reviews-picture">
-                                        <img src="img/reviews-image2.jpg" alt="" class="reviews-image">
-                                    </div>
-                                    <div class="reviews-descr">
-                                        <h3 class="reviews-subtitle">
-                                            Антон Фроловs
-                                        </h3>
-                                        <div class="reviews-start">
-                                            <span class="reviews-start-icon"></span>
+                            <div class="swiper-slide">
+                                <div class="reviews-item">
+                                    <div class="reviews-wrapper">
+                                        <div class="reviews-picture">
+                                            <img src="img/reviews-image2.jpg" alt="" class="reviews-image">
                                         </div>
-                                        <p class="reviews-text">
-                                            In pellentesque dolor sit amet nisi lacinia euismod. Mauris elementum turpis sem, ut laoreet purus porta ut. Suspendisse posuere purus id nunc eleifend, id condimentum nulla tempus. Donec tortor sem, efficitur a 
-                                        </p>
+                                        <div class="reviews-descr">
+                                            <h3 class="reviews-subtitle">
+                                                Антон Фроловs
+                                            </h3>
+                                            <div class="reviews-stars">
+                                                <span class="reviews-stars-icon"></span>
+                                            </div>
+                                            <p class="reviews-text">
+                                                In pellentesque dolor sit amet nisi lacinia euismod. Mauris elementum turpis sem, ut laoreet purus porta ut. Suspendisse posuere purus id nunc eleifend, id condimentum nulla tempus. Donec tortor sem, efficitur a 
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -204,11 +211,11 @@
                         <span class="reviews-arrow reviews-arrow-right"></span>
                     </div>
                     <div class="reviews-pagination">
-                        <span class="reviews-pagination-bullet active"></span>
-                        <span class="reviews-pagination-bullet"></span>
-                        <span class="reviews-pagination-bullet"></span>
-                        <span class="reviews-pagination-bullet"></span>
-                        <span class="reviews-pagination-bullet"></span>
+                        <span class="reviews-bullet active"></span>
+                        <span class="reviews-bullet"></span>
+                        <span class="reviews-bullet"></span>
+                        <span class="reviews-bullet"></span>
+                        <span class="reviews-bullet"></span>
                     </div>
                 </div>
             </div>
@@ -216,7 +223,11 @@
         <section class="popular">
             <div class="content">
                 <div class="popular-body">
-                    <h2 class="popular-title">Найпопулярніші питання</h2>
+                    <h2 class="popular-title">
+                        <span class="popular-title-text">
+                            Найпопулярніші питання
+                        </span>
+                    </h2>
                     <ul class="popular-list">
                         <li class="popular-item">
                             <button class="popular-btn">
@@ -316,7 +327,8 @@
                 </div>
             </div>
         </section>
-        <secton class="android">
+        <section class="android">
+            <span class="android-decor"></span>
             <div class="content">
                 <h2 class="android-title">
                     Встановлення Android додадка
@@ -325,7 +337,7 @@
                     <div class="row android-row">
                         <div class="col-4 android-left">
                             <div class="android-picture">
-                                <img src="img/android-image.jpg" alt="" class="android-image">
+                                <img src="img/android-image.png" alt="" class="android-image">
                             </div>
                         </div>
                         <div class="col-8 android-right">
@@ -334,22 +346,22 @@
                             </p>
                             <div class="android-more">
                                 <a href="#" class="android-link">
-                                    <img src="img/android-icon1.png" alt="" class="android-icon">
+                                    <img src="img/android-icon1.svg" alt="" class="android-icon">
                                 </a>
                                 <a href="#" class="android-link">
-                                    <img src="img/android-icon2.png" alt="" class="android-icon">
+                                    <img src="img/android-icon2.svg" alt="" class="android-icon">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </secton>
+        </section>
         <footer class="footer">
             <div class="content">
                 <div class="footer-top">
                     <div class="row footer-top-row">
-                        <div class="col-8 footer-top-left">
+                        <div class="col-9 footer-top-left">
                             <ul class="footer-list">
                                 <li class="footer-item">
                                     <a href="#" class="footer-link">Захист даних</a>
@@ -377,7 +389,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-4 footer-top-right">
+                        <div class="col-3 footer-top-right">
                             <p class="footer-copy">
                                 <span class="footer-copy-text">
                                     Підвищена безпека даних
@@ -385,7 +397,7 @@
                                 <span class="footer-copy-icon"></span>
                             </p>
                             <p class="footer-rights">
-                                2020 - <span class="footer-date">2022</span> fonhub.com.ua
+                              &copy; 2020 - <span class="footer-date">2022</span> fonhub.com.ua
                             </p>
                         </div>
                     </div>
@@ -399,13 +411,13 @@
                             </a>
                         </li>
                         <li class="footer-subitem">
-                            <span class="footer-subicon footer-subicon-one"></span>
+                            <span class="footer-subicon footer-subicon-thue"></span>
                             <a href="mailto:email.example@example.com" class="footer-sublink">
                                 email.example@example.com
                             </a>
                         </li>
                         <li class="footer-subitem">
-                            <span class="footer-subicon footer-subicon-one"></span>
+                            <span class="footer-subicon footer-subicon-three"></span>
                             <span class="footer-subtext">
                                 м.Київ, вул.Хрещатик 24, Україна
                             </span>
@@ -419,10 +431,14 @@
                                     <div class="lang-drop">
                                         <ul class="lang-list">
                                             <li class="lang-item">
-                                                <span class="lang-icon lang-icon-one"></span>
+                                                <a href="#">
+                                                    <span class="lang-icon lang-icon-one"></span>
+                                                </a>
                                             </li>
                                             <li class="lang-item">
-                                                <span class="lang-icon lang-icon-one"></span>
+                                                <a href="#">
+                                                    <span class="lang-icon lang-icon-one"></span>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -433,12 +449,12 @@
                 </div>
                 <div class="footer-end">
                     <div class="row footer-end-row">
-                        <div class="col-3 footer-end-left">
+                        <div class="col-2 footer-end-left">
                             <div class="footer-logo">
                                 <img src="img/footer-logo-image.svg" alt="" class="footer-logo-image">
                             </div>
                         </div>
-                        <div class="col-9 footer-end-right">
+                        <div class="col-10 footer-end-right">
                             <p class="footer-end-text">
                                 finhub.com.ua. Україна. 
                                 Е-пошта: <a href="mailto:info@credify.com.ua" class="footer-end-link">info@credify.com.ua</a>. 
@@ -454,5 +470,7 @@
             </div>
         </footer>
     </div>
+    <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="js/apps.js"></script>
 </body>
 </html>
