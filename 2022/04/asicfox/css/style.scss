@@ -218,6 +218,7 @@
     &-post {
         margin: 10px 0;
     }
+    /* Оплата */
     &-deli {
         margin-top: 16px;
         font-size: 15px;
@@ -256,6 +257,9 @@
                     box-sizing: border-box;
                 }
             }
+            & input:checked ~ .checkme-show {
+                opacity: 1;
+            }
         }
         &-round {
             display: inline-block;
@@ -280,6 +284,14 @@
         &-image {
             margin: 0 5px;
         }
+    }
+    &-show {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s;
     }
     &-midtitle {
         font-weight: 500;
