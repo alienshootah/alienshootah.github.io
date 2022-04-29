@@ -230,6 +230,8 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .checkme-lbl input:checked ~ .checkme-radcustom {
@@ -251,6 +253,11 @@
           box-sizing: border-box;
 }
 
+.checkme-lbl input:checked ~ .checkme-look {
+  opacity: 1;
+  height: auto;
+}
+
 .checkme-lbl-text {
   display: inline-block;
   margin-right: 20px;
@@ -262,6 +269,12 @@
   margin-top: 15px;
   margin-left: -7px;
   margin-right: -7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .checkme-lbl-item {
@@ -281,6 +294,16 @@
 
 .checkme-lbl-item:nth-child(3) {
   width: 134px;
+}
+
+.checkme-lbl-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
 
 .checkme-radio {
@@ -321,8 +344,29 @@
   border-bottom: 1px solid transparent;
 }
 
+.checkme-look {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .checkme-post {
   margin: 10px 0;
+}
+
+.checkme-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .checkme-deli {
@@ -380,6 +424,7 @@
 
 .checkme-deli-lbl input:checked ~ .checkme-show {
   opacity: 1;
+  height: auto;
 }
 
 .checkme-deli-round {
@@ -420,6 +465,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   opacity: 0;
+  height: 0;
   overflow: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -466,6 +512,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
+  min-width: 105px;
   width: 105px;
   height: 100px;
 }
