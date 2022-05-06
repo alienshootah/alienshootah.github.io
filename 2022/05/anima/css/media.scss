@@ -1,0 +1,179 @@
+@media(max-width: 1920px) {
+    section {
+        overflow: hidden;
+    }
+}
+@media(max-width: 980px) {
+    .header {
+        padding: 13px 0 10px 0;
+        & .content {
+            position: relative;
+        }
+        &-logo {
+            display: block;
+            &-mobile {
+                display: inline-block;
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/nav-logo-icon.png);
+                background-size: contain;
+            }
+        }
+        &-btn {
+            padding: 0;
+        }
+        &-mobile {
+            display: block;
+            position: absolute;
+            top: 6px;
+            right: 13px;
+            &-icon {
+                display: inline-block;
+                min-width: 24px;
+                width: 24px;
+                height: 18px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/header-btn-icon.svg);
+            }
+        }
+        &.show {
+            background-color: #060804;
+            border-top: 1px solid #636553;
+            border-bottom: 1px solid #636553;
+            & .nav {
+                display: block;
+            }
+        }
+    }
+    .nav {
+        display: none;
+        box-sizing: border-box;
+        &-list {
+            display: block;
+            text-align: center;
+            &:after,
+            &:before {
+                content: none;
+            }
+        }
+        &-item {
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+        &-link {
+            padding: 10px 0;
+        }
+    }
+    .promo {
+        &-body {
+            top: 24%;
+        }
+    }
+}
+@media(max-width: 750px) {
+    .promo {
+        &-title {
+            min-width: 400px;
+            width: 400px;
+            height: 70px;
+            background-size: contain;
+        }
+        &-arrow {
+            &-icon {
+                min-width: 70px;
+                width: 70px;
+                height: 40px;
+                background-size: contain;
+            }
+        }
+    }
+    .survival {
+        padding: 0;
+        &:before {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+    }
+    .mystical,
+    .risk,
+    .craft {
+        padding: 40px 0 0 0;
+        &:after {
+            margin-top: 35px;
+        }
+    }
+    .person {
+        padding: 50px 0;
+    }
+    .part {
+        padding: 40px 0;
+    }
+    .footer {
+        &-arrow {
+            right: 10px;
+        }
+    }
+}
+@media(max-width: 510px) {
+    h2 {
+        text-align: center;
+    }
+    .survival {
+        & .content {
+            text-align: center;
+        }
+    }
+    .stat {
+        &-row {
+            flex-wrap: wrap;
+            & .col-8 {
+                width: 100%;
+            }
+            & .col-4 {
+                width: 100%;
+            }
+        }
+        
+    }
+    .part {
+        text-align: center;
+        &-row {
+            flex-wrap: wrap;
+            justify-content: center;
+            & .col-6 {
+                width: 100%;
+            }
+        }
+        &-right {
+            text-align: center;
+        }
+    }
+    .footer {
+        &-row {
+            flex-wrap: wrap;
+            & .col-6 {
+                width: 100%;
+            }
+        }
+    }
+    .social {
+        margin-top: 10px;
+        &-list {
+            justify-content: center;
+        }
+    }
+}
+@media(max-width: 410px) {
+    .promo {
+        &-title {
+            min-width: 275px;
+            width: 275px;
+            height: 70px;
+        }
+    }
+}
