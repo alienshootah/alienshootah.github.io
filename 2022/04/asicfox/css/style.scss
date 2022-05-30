@@ -1,9 +1,38 @@
+/* Fonts */
+
+$roboto-reg: 'Roboto-Regular', Arial, Helvetica, sans-serif;
+$roboto-bold: 'Roboto-Bold', Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $roboto-bold;
+}
+.checkme input, 
+.checkme button,
+.plusmin input, 
+.plusmin button,
+.recommend input, 
+.recommend button {
+    font-family: $roboto-reg;
+}
 
 /* Chekout page */
 
 .checkme {
     border-top: 1px solid #E2E2E2;
     padding-top: 40px;
+    font-family: $roboto-reg;
     &-title {
         font-weight: 700;
         font-size: 24px;
@@ -115,11 +144,22 @@
             padding-bottom: 10px;
         }
     }
+    &-adress {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        color: #676C84;
+        &-value {
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
     &-self {
         margin-top: 10px;
     }
     &-type {
         margin: 15px 0;
+        display: block;
     }
     &-select {
         width: 416px;
@@ -163,11 +203,18 @@
         & input:checked ~ .checkme-look {
             opacity: 1;
             height: auto;
+            overflow: visible;
         }
         &-text {
             display: inline-block;
             margin-right: 20px;
             box-sizing: border-box;
+            width: calc(100% - 100px);
+        }
+        &-hide {
+            opacity: 0;
+            overflow: hidden;
+            height: 0;
         }
         &-list {
             margin-top: 15px;
@@ -175,6 +222,15 @@
             margin-right: -7px;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+            & input:checked ~ .checkme-lbl-hide {
+                opacity: 1;
+                overflow: visible;
+                height: auto;
+            }
+            & .checkme-radcustom {
+                margin-left: 7px;
+            }
         }
         &-item {
             margin-left: 7px;
@@ -285,6 +341,7 @@
             & input:checked ~ .checkme-show {
                 opacity: 1;
                 height: auto;
+                overflow: visible;
             }
         }
         &-round {
@@ -449,7 +506,7 @@
     }
     &-more {
         margin-top: 27px;
-        padding-left: 20px;
+        padding-left: 20px; 
         padding-right: 20px;
         padding-bottom: 20px;
         box-sizing: border-box;
@@ -471,6 +528,10 @@
             &:focus {
                 background: #ff784e;
             }
+        }
+        &-coupone {
+            display: inline-block;
+            width: auto;
         }
     }
     &-agree {
@@ -507,7 +568,9 @@
             height: 0;
             width: 0;
         }
-        &-link {
+        &-link,
+        &-link p {
+            display: inline;
             font-weight: 400;
             font-size: 12.5px;
             line-height: 133.69%;
@@ -515,13 +578,19 @@
             color: #676C84;
             border-bottom: 1px solid #676C84;
             transition: all 0.5s;
-            &:hover,
-            &:focus {
-                border-bottom: 1px solid transparent;
-            }
-            &:hover .checkme-agree-text,
-            &:focus .checkme-agree-text {
-                border-bottom: 1px solid transparent;
+            & .woocommerce-privacy-policy-link {
+                color: #FF4E16;
+                text-decoration: none;
+                border-bottom: 1px solid #FF4E16;
+                transition: all 0.5s;
+                &:hover,
+                &:focus {
+                    border-bottom: 1px solid transparent;
+                }
+                &:hover .checkme-agree-text,
+                &:focus .checkme-agree-text {
+                    border-bottom: 1px solid transparent;
+                }
             }
         }
         &-text {
@@ -553,8 +622,27 @@
             border-radius: 5px;
         }
     }
+
+    /* Размеры элементов в таблице */
+    &-picture {
+        width: 14%;
+    }
+    &-name {
+        width: 36%;
+    }
+    &-plusmin {
+        width: 13%;
+    }
+    &-price {
+        width: 20%;
+        text-align: center;
+    }
+    &-delete {
+        width: 9%;
+    }
 }
 .plusmin {
+    font-family: $roboto-reg;
     &-body {
         background: #FFFFFF;
         border: 1px solid #E9E9E9;
@@ -576,6 +664,7 @@
         font-size: 16px;
         line-height: 19px;
         color: #2A3342;
+        background: transparent;
         border: 0;
         width: 25px;
         box-sizing: border-box;
@@ -588,6 +677,7 @@
 .recommend {
     margin: 30px 0 100px 0;
     width: 75%;
+    overflow: hidden;
     &-title {
         font-weight: 700;
         font-size: 24px;

@@ -1,10 +1,40 @@
 @charset "UTF-8";
+/* Fonts */
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
+}
+
+.checkme input,
+.checkme button,
+.plusmin input,
+.plusmin button,
+.recommend input,
+.recommend button {
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+}
+
 /* Chekout page */
 .checkme {
   border-top: 1px solid #E2E2E2;
   padding-top: 40px;
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   /* Оплата */
   /* Right column */
+  /* Размеры элементов в таблице */
 }
 
 .checkme-title {
@@ -192,12 +222,25 @@
   padding-bottom: 10px;
 }
 
+.checkme-adress {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  color: #676C84;
+}
+
+.checkme-adress-value {
+  display: inline-block;
+  margin-right: 8px;
+}
+
 .checkme-self {
   margin-top: 10px;
 }
 
 .checkme-type {
   margin: 15px 0;
+  display: block;
 }
 
 .checkme-select {
@@ -256,6 +299,7 @@
 .checkme-lbl input:checked ~ .checkme-look {
   opacity: 1;
   height: auto;
+  overflow: visible;
 }
 
 .checkme-lbl-text {
@@ -263,6 +307,13 @@
   margin-right: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: calc(100% - 100px);
+}
+
+.checkme-lbl-hide {
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
 }
 
 .checkme-lbl-list {
@@ -275,6 +326,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.checkme-lbl-list input:checked ~ .checkme-lbl-hide {
+  opacity: 1;
+  overflow: visible;
+  height: auto;
+}
+
+.checkme-lbl-list .checkme-radcustom {
+  margin-left: 7px;
 }
 
 .checkme-lbl-item {
@@ -425,6 +488,7 @@
 .checkme-deli-lbl input:checked ~ .checkme-show {
   opacity: 1;
   height: auto;
+  overflow: visible;
 }
 
 .checkme-deli-round {
@@ -672,6 +736,11 @@
   background: #ff784e;
 }
 
+.checkme-more-coupone {
+  display: inline-block;
+  width: auto;
+}
+
 .checkme-agree {
   padding-top: 10px;
   padding-left: 20px;
@@ -716,7 +785,9 @@
   width: 0;
 }
 
-.checkme-agree-link {
+.checkme-agree-link,
+.checkme-agree-link p {
+  display: inline;
   font-weight: 400;
   font-size: 12.5px;
   line-height: 133.69%;
@@ -727,12 +798,25 @@
   transition: all 0.5s;
 }
 
-.checkme-agree-link:hover, .checkme-agree-link:focus {
+.checkme-agree-link .woocommerce-privacy-policy-link,
+.checkme-agree-link p .woocommerce-privacy-policy-link {
+  color: #FF4E16;
+  text-decoration: none;
+  border-bottom: 1px solid #FF4E16;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.checkme-agree-link .woocommerce-privacy-policy-link:hover, .checkme-agree-link .woocommerce-privacy-policy-link:focus,
+.checkme-agree-link p .woocommerce-privacy-policy-link:hover,
+.checkme-agree-link p .woocommerce-privacy-policy-link:focus {
   border-bottom: 1px solid transparent;
 }
 
-.checkme-agree-link:hover .checkme-agree-text,
-.checkme-agree-link:focus .checkme-agree-text {
+.checkme-agree-link .woocommerce-privacy-policy-link:hover .checkme-agree-text,
+.checkme-agree-link .woocommerce-privacy-policy-link:focus .checkme-agree-text,
+.checkme-agree-link p .woocommerce-privacy-policy-link:hover .checkme-agree-text,
+.checkme-agree-link p .woocommerce-privacy-policy-link:focus .checkme-agree-text {
   border-bottom: 1px solid transparent;
 }
 
@@ -771,6 +855,31 @@
   border-radius: 5px;
 }
 
+.checkme-picture {
+  width: 14%;
+}
+
+.checkme-name {
+  width: 36%;
+}
+
+.checkme-plusmin {
+  width: 13%;
+}
+
+.checkme-price {
+  width: 20%;
+  text-align: center;
+}
+
+.checkme-delete {
+  width: 9%;
+}
+
+.plusmin {
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
+}
+
 .plusmin-body {
   background: #FFFFFF;
   border: 1px solid #E9E9E9;
@@ -802,6 +911,7 @@
   font-size: 16px;
   line-height: 19px;
   color: #2A3342;
+  background: transparent;
   border: 0;
   width: 25px;
   -webkit-box-sizing: border-box;
@@ -813,6 +923,7 @@
 .recommend {
   margin: 30px 0 100px 0;
   width: 75%;
+  overflow: hidden;
 }
 
 .recommend-title {

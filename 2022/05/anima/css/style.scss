@@ -109,7 +109,7 @@ h2 {
 /* Header */
 
 .header {
-    padding: 30px 0 20px 0;
+    padding: 20px 0 10px 0;
     box-sizing: border-box;
     position: fixed;
     z-index: 1000;
@@ -117,6 +117,7 @@ h2 {
     box-sizing: border-box;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
+    transition: all 0.25s;
     &-logo {
         display: none;
     }
@@ -127,10 +128,12 @@ h2 {
         background-color: #060804;
         border-top: 1px solid #636553;
         border-bottom: 1px solid #636553;
+        padding-top: 20px;
         & .nav-list {
             &:after,
             &:before {
-                content: none;
+                opacity: 0;
+                transition: ease-in-out 0.1s;
             }
         }
     }
@@ -139,11 +142,17 @@ h2 {
     font-family: $condensed-bold;
     font-size: 19px;
     text-transform: uppercase;
+    position: relative;
+    top: -5px;
     &-list {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         position: relative;
+        &:before,
+        &:after {
+            opacity: 1;
+        }
         &::before {
             content: '';
             display: inline-block;
@@ -155,7 +164,7 @@ h2 {
             background-image: url(../img/nav-list-before.png);
             position: absolute;
             left: 75px;
-            bottom: -5px;
+            bottom: -18px;
         }
         &::after {
             content: '';
@@ -168,14 +177,24 @@ h2 {
             background-image: url(../img/nav-list-before.png);
             position: absolute;
             right: 100px;
-            bottom: -5px;
+            bottom: -18px;
         }
     }
     &-item {
+        &:nth-child(1) {
+            & .nav-link {
+                padding-left: 0;
+            }
+        }
         &:nth-child(4) {
             margin-left: 20px;
             margin-right: 20px;
             box-sizing: border-box;
+        }
+        &:nth-child(7) {
+            & .nav-link {
+                padding-right: 0;
+            }
         }
     }
     &-link {
@@ -212,6 +231,20 @@ h2 {
     height: 1016px;
     height: 100vh;
     overflow: hidden;
+    &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 408px;
+        position: absolute;
+        z-index: 20;
+        bottom: -50px;
+        left: 0;
+        box-sizing: border-box;
+        background-image: url(../img/survival-bg7.png);
+        background-position: top;
+        background-repeat: no-repeat;
+    }
     &-list {
         position: relative;
         height: 1016px;
@@ -271,22 +304,8 @@ h2 {
 }
 .promo {
     position: relative;
-    overflow: hidden;
     text-align: center;
-    &:before {
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        z-index: 20;
-        bottom: 0;
-        left: 0;
-        box-sizing: border-box;
-        background: linear-gradient(
-            transparent, #000000
-        );
-    }
+    overflow: visible;
     &-body {
         position: absolute;
         top: 45%;
@@ -311,6 +330,7 @@ h2 {
         position: relative;
         z-index: 25;
         cursor: pointer;
+        animation: 5s slow infinite;
         &-icon {
             display: inline-block;
             min-width: 120px;
@@ -326,6 +346,7 @@ h2 {
     background-position: center;
     background-repeat: repeat;
     background-image: url(../img/survival-bg.png);
+    background-attachment: fixed;
     padding: 50px 0 0 0;
     box-sizing: border-box;
     position: relative;
@@ -385,6 +406,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     &:after {
         content: '';
         display: inline-block;
@@ -405,6 +427,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     &:after {
         content: '';
         display: inline-block;
@@ -425,6 +448,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     &:after {
         content: '';
         display: inline-block;
@@ -445,6 +469,7 @@ h2 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 .part {
     padding: 75px 0;
@@ -454,6 +479,7 @@ h2 {
     background-size: cover;
     border-top: 1px solid #636553;
     border-bottom: 1px solid #636553;
+    background-attachment: fixed;
     &-row {
         align-items: center;
         justify-content: space-between;
@@ -466,12 +492,24 @@ h2 {
     }
     &-text {
         display: block;
-        background-repeat: no-repeat;
-        background-position: left center;
-        background-image: url(../img/part-text-bg.png);
-        background-size: 100%;
+        position: relative;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 714px;
+            width: 714px;
+            height: 168px;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-image: url(../img/part-text-bg.png);
+            position: absolute;
+            left: -90px;
+            top: -44px;
+        }
     }
     &-more {
+        position: relative;
+        z-index: 2;
         &-link {
             display: inline-block;
             border-width: 1px;
@@ -503,6 +541,7 @@ h2 {
     padding: 35px 0 30px 0;
     box-sizing: border-box;
     position: relative;
+    background-attachment: fixed;
     &-row {
         align-items: center;
     }
@@ -518,6 +557,7 @@ h2 {
         right: 40px;
         bottom: 44px;
         z-index: 50;
+        animation: 4s slow2 infinite;
         &-icon {
             display: inline-block;
             min-width: 55px;
@@ -566,4 +606,17 @@ h2 {
             opacity: 0.7;
         }
     }
+}
+
+/* Верхнее меню и затемнение */
+
+@keyframes slow {
+    0% {top:0px;}
+    50% {top:30px;}
+    100% {top:0px;}
+}
+@keyframes slow2 {
+    0% {bottom:44px;}
+    50% {bottom:20px;}
+    100% {bottom:44px;}
 }

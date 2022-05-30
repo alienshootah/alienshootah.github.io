@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Fonts */
 @font-face {
   font-family: 'RobotoCondensed-Bold';
@@ -161,7 +162,7 @@ h2 {
 
 /* Header */
 .header {
-  padding: 30px 0 20px 0;
+  padding: 20px 0 10px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: fixed;
@@ -170,6 +171,8 @@ h2 {
   box-sizing: border-box;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .header-logo {
@@ -184,16 +187,21 @@ h2 {
   background-color: #060804;
   border-top: 1px solid #636553;
   border-bottom: 1px solid #636553;
+  padding-top: 20px;
 }
 
 .header.sticky .nav-list:after, .header.sticky .nav-list:before {
-  content: none;
+  opacity: 0;
+  -webkit-transition: ease-in-out 0.1s;
+  transition: ease-in-out 0.1s;
 }
 
 .nav {
   font-family: "RobotoCondensed-Bold", Arial, Helvetica, sans-serif;
   font-size: 19px;
   text-transform: uppercase;
+  position: relative;
+  top: -5px;
 }
 
 .nav-list {
@@ -203,10 +211,14 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
+}
+
+.nav-list:before, .nav-list:after {
+  opacity: 1;
 }
 
 .nav-list::before {
@@ -220,7 +232,7 @@ h2 {
   background-image: url(../img/nav-list-before.png);
   position: absolute;
   left: 75px;
-  bottom: -5px;
+  bottom: -18px;
 }
 
 .nav-list::after {
@@ -234,7 +246,11 @@ h2 {
   background-image: url(../img/nav-list-before.png);
   position: absolute;
   right: 100px;
-  bottom: -5px;
+  bottom: -18px;
+}
+
+.nav-item:nth-child(1) .nav-link {
+  padding-left: 0;
 }
 
 .nav-item:nth-child(4) {
@@ -242,6 +258,10 @@ h2 {
   margin-right: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.nav-item:nth-child(7) .nav-link {
+  padding-right: 0;
 }
 
 .nav-link {
@@ -276,6 +296,22 @@ h2 {
   height: 1016px;
   height: 100vh;
   overflow: hidden;
+}
+
+.layers::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 408px;
+  position: absolute;
+  z-index: 20;
+  bottom: -50px;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url(../img/survival-bg7.png);
+  background-position: top;
+  background-repeat: no-repeat;
 }
 
 .layers-list {
@@ -345,23 +381,8 @@ h2 {
 
 .promo {
   position: relative;
-  overflow: hidden;
   text-align: center;
-}
-
-.promo:before {
-  content: '';
-  display: inline-block;
-  width: 100%;
-  height: 400px;
-  position: absolute;
-  z-index: 20;
-  bottom: 0;
-  left: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000000));
-  background: linear-gradient(transparent, #000000);
+  overflow: visible;
 }
 
 .promo-body {
@@ -391,6 +412,8 @@ h2 {
   position: relative;
   z-index: 25;
   cursor: pointer;
+  -webkit-animation: 5s slow infinite;
+          animation: 5s slow infinite;
 }
 
 .promo-arrow-icon {
@@ -407,6 +430,7 @@ h2 {
   background-position: center;
   background-repeat: repeat;
   background-image: url(../img/survival-bg.png);
+  background-attachment: fixed;
   padding: 50px 0 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -476,6 +500,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .mystical:after {
@@ -498,6 +523,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .risk:after {
@@ -520,6 +546,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .craft:after {
@@ -542,6 +569,7 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .part {
@@ -552,6 +580,7 @@ h2 {
   background-size: cover;
   border-top: 1px solid #636553;
   border-bottom: 1px solid #636553;
+  background-attachment: fixed;
 }
 
 .part-row {
@@ -573,10 +602,26 @@ h2 {
 
 .part-text {
   display: block;
+  position: relative;
+}
+
+.part-text:before {
+  content: '';
+  display: inline-block;
+  min-width: 714px;
+  width: 714px;
+  height: 168px;
   background-repeat: no-repeat;
   background-position: left center;
   background-image: url(../img/part-text-bg.png);
-  background-size: 100%;
+  position: absolute;
+  left: -90px;
+  top: -44px;
+}
+
+.part-more {
+  position: relative;
+  z-index: 2;
 }
 
 .part-more-link {
@@ -610,6 +655,7 @@ h2 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
+  background-attachment: fixed;
 }
 
 .footer-row {
@@ -636,6 +682,8 @@ h2 {
   right: 40px;
   bottom: 44px;
   z-index: 50;
+  -webkit-animation: 4s slow2 infinite;
+          animation: 4s slow2 infinite;
 }
 
 .footer-arrow-icon {
@@ -696,5 +744,53 @@ h2 {
 
 .social-icon:hover, .social-icon:focus {
   opacity: 0.7;
+}
+
+/* Верхнее меню и затемнение */
+@-webkit-keyframes slow {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes slow {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 30px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@-webkit-keyframes slow2 {
+  0% {
+    bottom: 44px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 44px;
+  }
+}
+
+@keyframes slow2 {
+  0% {
+    bottom: 44px;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 44px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
