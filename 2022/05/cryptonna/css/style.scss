@@ -89,7 +89,7 @@ textarea {
 .content {
     margin: 0 auto;
     padding: 0 15px;
-    max-width: 1430px;
+    max-width: 1400px;
 }
 body {
     font-family: $manrope-reg;
@@ -194,18 +194,22 @@ h1, h2, h3, h4, h5, h6 {
         color: #FFFFFF;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         text-align: center;
+        margin: 0 -50px;
+        position: relative;
+        left: -20px;
     }
     &-item {
         position: relative;
+        margin: 0 50px;
     }
     &-link {
         color: #FFFFFF;
         text-decoration: none;
         display: inline-block;
         width: 100%;
-        padding: 22px 0;
+        padding: 21px 0;
         box-sizing: border-box;
         text-align: center;
         transition: all 0.5s;
@@ -217,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
             height: 8px;
             background: #36B7B3;
             position: absolute;
-            top: 0px;
+            top: -2px;
             left: 48%;
             opacity: 0;
             transition: all 0.5s;
@@ -242,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    margin-right: 59px;
+    margin-right: 58px;
     &-list {
         display: flex;
         align-items: center;
@@ -250,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-item {
         position: relative;
-        margin: 0 14px 0 14px;
+        margin: 0 8px;
         &:after {
             content: '';
             display: inline-block;
@@ -261,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
             box-sizing: border-box;
             position: absolute;
             top: 4px;
-            right: -16px;
+            right: -8px;
         }
         &:last-child {
             &:after {
@@ -350,7 +354,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Sections */
 
 .promo {
-    padding: 45px 0;
+    padding: 45px 0 30px 0;
     box-sizing: border-box;
     background-position: center;
     background-repeat: no-repeat;
@@ -362,6 +366,11 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 70px;
         text-transform: uppercase;
         color: #FFFFFF;
+        margin-top: 64px;
+        margin-bottom: 29px;
+        & .yellow {
+            display: inline-block;
+        }
     }
     &-list {
         background: #0B251F;
@@ -374,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: 50px;
     }
     &-item {
-        padding: 68px 30px 52px 30px;
+        padding: 68px 28px 49px 30px;
         box-sizing: border-box;
         width: 25%;
         border-right: 2px solid rgba(255, 255, 255, 0.1);
@@ -394,7 +403,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-text {
         display: inline-block;
-        margin-top: 25px;
+        margin-top: 11px;
+    }
+    &-picture {
+        position: relative;
+        right: -37px;
+        margin-bottom: -8px;
     }
 }
 .search {
@@ -404,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 3px;
         padding: 5px 6px;
         box-sizing: border-box;
-        max-width: 566px;
+        max-width: 570px;
         width: 100%;
         height: 60px;
         display: flex;
@@ -419,6 +433,8 @@ h1, h2, h3, h4, h5, h6 {
         border: 0;
         background: none;
         outline: none;
+        padding: 15px 18px;
+        box-sizing: border-box;
         &::placeholder {
             color: #929292;
         }
@@ -442,16 +458,20 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .trends {
-    padding-top: 60px;
+    padding-top: 50px;
     box-sizing: border-box;
     &-top {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+    &-title {
+        margin-bottom: 30px;
+    }
     &-all {
         display: inline-block;
-        margin-top: 20px;
+        position: relative;
+        top: -6px;
         &-link {
             display: flex;
             background: #11191F;
@@ -473,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-text {
             display: inline-block;
-            padding: 13px 6px 13px 17px;
+            padding: 13px 13px 13px 17px;
         }
         &-arrow {
             display: flex;
@@ -497,8 +517,10 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 22px;
         line-height: 25px;
         margin-top: 30px;
+        letter-spacing: .35px;
     }
     &-more {
+        margin-top: 23px;
         &-link {
             display: inline-block;
             background: #0AA880;
@@ -509,7 +531,7 @@ h1, h2, h3, h4, h5, h6 {
             text-align: center;
             color: #FFFFFF;
             text-decoration: none;
-            padding: 12px 30px;
+            padding: 12px 50px;
             box-sizing: border-box;
             transition: all 0.5s;
             &:hover,
@@ -527,7 +549,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-size: 18px;
     line-height: 12px;
-    margin-top: 10px;
+    margin-top: 0;
     &-header {
         font-weight: 600;
         font-size: 20px;
@@ -539,8 +561,20 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-cell {
             width: 25%;
-            padding: 20px 30px;
+            padding: 30px 30px 3px 30px;
             box-sizing: border-box;
+            &:nth-child(1) {
+                width: 26%;
+            }
+            &:nth-child(2) {
+                width: 31%;
+            }
+            &:nth-child(3) {
+                width: 27%;
+            }
+            &:nth-child(4) {
+                width: 16%;
+            }
         }
     }
     &-row {
@@ -552,8 +586,20 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-cell {
         width: 25%;
-        padding: 20px 30px;
+        padding: 21px 30px;
         box-sizing: border-box;
+        &:nth-child(1) {
+            width: 26%;
+        }
+        &:nth-child(2) {
+            width: 31%;
+        }
+        &:nth-child(3) {
+            width: 27%;
+        }
+        &:nth-child(4) {
+            width: 16%;
+        }
     }
     &-icon {
         margin-bottom: -3px;
@@ -570,7 +616,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .mybag {
-    margin-top: 100px;
+    margin-top: 86px;
+    margin-bottom: 50px;
     &-title {
         margin-bottom: 5px;
     }
@@ -579,14 +626,16 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 500;
         font-size: 22px;
         line-height: 25px;
+        letter-spacing: 0.33px;
     }
     &-list {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
+        margin-top: 20px;
     }
     &-item {
-        padding: 40px 19px;
+        padding: 37px 19px 40px 19px;
         box-sizing: border-box;
         &:nth-child(1) {
             background: linear-gradient(89.93deg, rgba(1, 46, 34, 0.3) -2.36%, rgba(7, 145, 110, 0) 105.89%);
@@ -605,7 +654,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
     &-picture {
-        margin-right: 20px;
+        margin-right: 16px;
     }
     &-icon {
         display: flex;
@@ -653,9 +702,10 @@ h1, h2, h3, h4, h5, h6 {
     &-text {
         margin: 8px 0 0 0;
         padding: 0;
+        max-width: 95%;
     }
     &-more {
-        margin-top: 30px;
+        margin-top: 27px;
         &-link {
             display: inline-block;
             background: #0AA880;
@@ -666,7 +716,7 @@ h1, h2, h3, h4, h5, h6 {
             text-align: center;
             color: #FFFFFF;
             text-decoration: none;
-            padding: 12px 30px;
+            padding: 12px 50px;
             box-sizing: border-box;
             transition: all 0.5s;
             &:hover,
@@ -682,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .infinity {
-    padding: 60px 0 120px 0;
+    padding: 50px 0 105px 0;
     box-sizing: border-box;
     background-position: center;
     background-repeat: no-repeat;
@@ -690,6 +740,7 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url(../img/infinity-bg.jpg);
     &-title {
         text-align: center;
+        margin-bottom: 37px;
     }
     &-list {
         background: #1C2224;
@@ -697,7 +748,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
     }
     &-item {
-        padding: 30px 22px 80px 22px;
+        padding: 24px 21px 80px 21px;
         box-sizing: border-box;
         border-right: 2px solid rgba(255, 255, 255, 0.1);
         width: 33.3333%;
@@ -714,6 +765,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 24px;
         line-height: 25px;
         width: 90%;
+        margin-top: 7px;
         margin-bottom: 0;
         &-link {
             color: #FFFFFF;
@@ -754,7 +806,7 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-text {
             display: inline-block;
-            padding: 12px 12px 14px 17px;
+            padding: 11px 17px 11px 18px;
         }
         &-arrow {
             display: flex;
@@ -775,7 +827,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .trading {
-    padding: 50px 0;
+    padding: 42px 0 30px 0;
     &-top {
         display: flex;
         justify-content: space-between;
@@ -788,6 +840,7 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 500;
         font-size: 22px;
         line-height: 25px;
+        letter-spacing: 0.33px;
     }
     &-all {
         display: inline-block;
@@ -813,7 +866,8 @@ h1, h2, h3, h4, h5, h6 {
         }
         &-text {
             display: inline-block;
-            padding: 13px 6px 13px 17px;
+            padding: 13px 15px 13px 19px;
+            letter-spacing: 0.13px;
         }
         &-arrow {
             display: flex;
@@ -833,18 +887,19 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-row {
-        margin-top: 30px;
+        margin-top: 13px;
     }
     &-picture {
         position: relative;
         left: -200px;
+        top: 6px;
     }
     &-scan {
         margin-bottom: 19px;
         display: flex;
         align-items: center;
         border-left: 3px solid #0AA880;
-        padding: 20px;
+        padding: 21px 20px;
         box-sizing: border-box;
         background: 
         linear-gradient(
@@ -857,6 +912,8 @@ h1, h2, h3, h4, h5, h6 {
             border-radius: 3px;
             display: inline-block;
             margin-right: 30px;
+            padding: 4px;
+            box-sizing: border-box;
         }
         &-image {
             margin-bottom: -7px;
@@ -870,7 +927,7 @@ h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             font-size: 40px;
             line-height: 25px;
-            margin: 18px 0 9px 0;
+            margin: 18px 0 20px 0;
         }
     } 
 }
@@ -878,7 +935,7 @@ h1, h2, h3, h4, h5, h6 {
     &-list {
         margin: 0 -11px;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 19px;
         line-height: 25px;
         display: flex;
         flex-wrap: wrap;
@@ -933,19 +990,22 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../img/reliable-bg.jpg);
-    padding: 60px 0 100px 0;
+    padding: 28px 0 100px 0;
     &-top {
         display: flex;
         justify-content: space-between;
     }
     &-title {
-        margin-bottom: 10px;
+        margin-bottom: 0px;
     }
     &-descr {
         margin-top: 0;
+        margin-bottom: 10px;
         font-weight: 500;
         font-size: 22px;
         line-height: 30px;
+        width: 80%;
+        letter-spacing: 0.33px;
     }
     &-all {
         display: inline-block;
@@ -997,6 +1057,7 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
+        margin-top: 25px;
     }
     &-item {
         width: 33.3333%;
@@ -1021,7 +1082,8 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 24px;
         line-height: 30px;
         margin-top: 14px;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
+        width: 82%;
     }
     &-text {
         margin-top: 0;
@@ -1045,9 +1107,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .help {
-    padding: 50px 0;
+    padding: 50px 0 100px 0;
     &-title {
         text-align: center;
+        margin-bottom: 29px;
     }
     &-list {
         display: flex;
@@ -1058,7 +1121,7 @@ h1, h2, h3, h4, h5, h6 {
     &-item {
         position: relative;
         width: 33.3333%;
-        padding: 18px 30px 70px 30px;
+        padding: 26px 30px 70px 30px;
         box-sizing: border-box;
         &:nth-child(1) {
             border-top: 3px solid #0AA880;
@@ -1071,20 +1134,6 @@ h1, h2, h3, h4, h5, h6 {
         &:nth-child(3) {
             border-top: 3px solid #004937;
             background: linear-gradient(180deg, rgba(1, 46, 34, 0.3) -2.36%, rgba(7, 145, 110, 0) 105.89%);
-        }
-    }
-    &-subtitle {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 30px;
-        &-link {
-            color: #FFFFFF;
-            text-decoration: none;
-            transition: all 0.5s;
-            &:hover,
-            &:focus {
-                color: #FDD54E;
-            }
         }
     }
     &-icon {
@@ -1104,6 +1153,25 @@ h1, h2, h3, h4, h5, h6 {
             background-image: url(../img/help-icon-three.svg);
         }
     }
+    &-subtitle {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 8px;
+        margin-bottom: 0;
+        &-link {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                color: #FDD54E;
+            }
+        }
+    }
+    &-descr {
+        margin-top: 3px;
+    }
     &-more {
         display: inline-block;
         position: absolute;
@@ -1118,7 +1186,7 @@ h1, h2, h3, h4, h5, h6 {
         text-decoration: none;
         border: 1px solid #0AA880;
         border-radius: 3px;
-        padding: 10px 24px 12px 24px;
+        padding: 9px 19px 9px 24px;
         box-sizing: border-box;
         transition: all 0.5s;
         &-text {
@@ -1168,12 +1236,16 @@ h1, h2, h3, h4, h5, h6 {
             background-image: url(../img/footer-decor-thue.png);
         }
     }
+    &-top {
+        margin-bottom: 20px;
+    }
     &-list {
         display: flex;
         justify-content: space-between;
     }
     &-title {
         margin-top: 7px;
+        margin-bottom: 10px;
         font-weight: 600;
         font-size: 18px;
         line-height: 14px;
@@ -1185,7 +1257,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 34px;
     }
     &-subitem {
-        margin: 2px 0;
+        margin: 0;
     }
     &-link {
         color: #FFFFFF;
@@ -1202,7 +1274,7 @@ h1, h2, h3, h4, h5, h6 {
     &-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.15);
         text-align: center;
-        padding: 14px 0;
+        padding: 15px 0;
         box-sizing: border-box;
         font-weight: 500;
         font-size: 15px;
@@ -1213,6 +1285,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .social {
+    top: -14px;
+    position: relative;
     &-list {
         display: flex;
         flex-wrap: wrap;
