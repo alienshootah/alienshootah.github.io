@@ -1199,6 +1199,18 @@ h1, h2, h3, h4, h5, h6 {
     & .hide {
         opacity: 0;
     }
+    &-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        text-align: center;
+        padding: 14px 0;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 16px;
+    }
+    &-copy {
+        margin: 0;
+    }
 }
 .social {
     &-list {
@@ -1223,22 +1235,51 @@ h1, h2, h3, h4, h5, h6 {
         backdrop-filter: blur(10px);
         border-radius: 50px;
         position: relative;
-        &::before {
-            content: none;
-            display: inline-block;
-            min-width: 23px;
-            width: 23px;
-            height: 23px;
-            background-color: #ffffff;
-            border-radius: 50%;
-            box-sizing: border-box;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background: #0AA880;
+            border: 1px solid #0AA880;
+            backdrop-filter: blur(10px);
         }
         &:after {
-            content: none;
+            content: '';
             display: inline-block;
             min-width: 21px;
             width: 21px;
             height: 21px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &-one {
+            &:after {
+                background-image: url(../img/social-icon-one.svg);
+            }
+        }
+        &-thue {
+            &:after {
+                background-image: url(../img/social-icon-thue.svg);
+            }
+        }
+        &-three {
+            &:after {
+                background-image: url(../img/social-icon-three.svg);
+            }
+        }
+        &-four {
+            &:after {
+                background-image: url(../img/social-icon-four.svg);
+            }
+        }
+        &-five {
+            &:after {
+                background-image: url(../img/social-icon-five.svg);
+            }
+        }
+        &-six {
+            &:after {
+                background-image: url(../img/social-icon-six.svg);
+            }
         }
     }
 }
