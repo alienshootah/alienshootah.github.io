@@ -117,11 +117,24 @@
 }
 @media(max-width: 750px) {
     .header {
+        &-logo {
+            position: relative;
+            top: 2px;
+        }
         &-image {
             width: 147px;
         }
         &-btn {
             padding: 12px 14px;
+        }
+        &-left {
+            width: 25%;
+        }
+        &-center {
+            width: 45%;
+        }
+        &-right {
+            width: 30%;
         }
     }
     .nav {
@@ -129,6 +142,7 @@
             font-weight: 500;
             font-size: 12px;
             line-height: 16px;
+            justify-content: flex-start;
         }
     }
     .lang {
@@ -138,11 +152,28 @@
         }
         &-item {
             margin: 0 5px;
+            &:after {
+                top: 3px;
+                right: -6px;
+                height: 12px;
+            }
         }
         &-link {
             font-weight: 400;
             font-size: 12px;
             line-height: 16px;
+        }
+    }
+    .promo {
+        &-title {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 43px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        &-image {
+            width: 100%;
         }
     }
 }
