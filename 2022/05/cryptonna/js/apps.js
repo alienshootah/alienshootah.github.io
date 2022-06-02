@@ -1,3 +1,9 @@
+/* Mobile btn */
+const mobileBtn = document.querySelector(".header-mobile-btn");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".header").classList.toggle("show");
+});
+
 /* Dropdowns */
 
 // Get all the dropdown from document
