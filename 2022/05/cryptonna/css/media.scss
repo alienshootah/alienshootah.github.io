@@ -81,41 +81,12 @@
     }
 }
 @media(max-width: 980px) {
-    .promo {
-        &-title {
-            font-size: 42px;
-        }
-        &-num {
-            font-size: 38px;
-        }
+    .title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+        text-transform: uppercase;
     }
-    .bits {
-        &-header {
-            &-cell {
-                &:nth-child(1),
-                &:nth-child(2),
-                &:nth-child(3),
-                &:nth-child(4) {
-                    width: 25%;
-                }
-            }
-        }
-        &-cell {
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
-                width: 25%;
-            }
-        }
-    }
-    .reliable {
-        &-subtitle {
-            width: 100%;
-        }
-    }
-}
-@media(max-width: 750px) {
     .header {
         &-logo {
             position: relative;
@@ -163,17 +134,407 @@
             font-size: 12px;
             line-height: 16px;
         }
+        &-sublist {
+            font-size: 12px;
+        }
     }
     .promo {
+        background-image: url(../img/promo-bg-768.jpg);
         &-title {
+            margin-top: 0;
             font-weight: 700;
-            font-size: 36px;
+            font-size: 35px;
             line-height: 43px;
             text-transform: uppercase;
             color: #FFFFFF;
         }
+        &-list {
+            margin-top: 70px;
+            margin-bottom: 50px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-item {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        &-num {
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 24px;
+        }
+        &-picture {
+            right: 20px;
+            top: 70px;
+        }
         &-image {
+            min-width: 400px;
             width: 100%;
         }
+    }
+    .search {
+        &-form {
+            display: block;
+            height: auto;
+            border: 0;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            max-width: auto;
+            text-align: right;
+        }
+        &-field {
+            background: #11191F;
+            border: 1px solid #929292;
+            border-radius: 3px;
+            height: 50px;
+            padding: 16px;
+            box-sizing: border-box;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            max-width: 353px;
+            &::placeholder {
+                color: #929292;
+            }
+        }
+        &-btn {
+            margin-top: 13px;
+        }
+    }
+    .trends {
+        padding-top: 40px;
+        &-all {
+            top: 0px;
+            &-link {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 12px;
+            }
+            &-text {
+                padding: 12px 15px 8px 15px;
+            }
+            &-arrow {
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &-descr {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+            margin-top: 14px;
+        }
+    }
+    .bits {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 12px;
+        &-header {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            &-row {
+                align-items: center;
+            }
+            &-cell {
+                padding: 11px 20px;
+            }
+        }
+        &-row {
+            align-items: center;
+        }
+        &-cell {
+            padding: 14px 19px;
+            box-sizing: border-box;
+        }
+    }
+    .mybag {
+        margin-top: 50px;
+        &-info {
+            font-size: 16px;
+            line-height: 25px;
+        }
+        &-right {
+            order: -1;
+        }
+        &-bigpicture {
+            margin-bottom: 0;
+            top: 50px;
+            left: -15px;
+        }
+        &-image {
+            width: 100%;
+            min-width: 255px;
+        }
+        &-list {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        &-item {
+            padding: 19px 23px;
+            box-sizing: border-box;
+        }
+        &-icon {
+            min-width: 62px;
+            width: 62px;
+            height: 62px;
+            &:after {
+                min-width: 40px;
+                width: 40px;
+                height: 40px;
+                background-size: contain;
+            }
+        }
+        &-subtitle {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+        }
+        &-text {
+            max-width: 100%;
+        }
+    }
+    .infinity {
+        background-image: url(../img/infinity-bg-768.jpg);
+        padding: 20px 0 60px 0;
+        &-title {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+        }
+        &-list {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-item {
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &-subtitle {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &-all {
+            bottom: 15px;
+            left: 15px;
+            &-link {
+                font-size: 14px;
+                line-height: 19px;
+            }
+            &-text {
+                padding: 15px 10px 11px 16px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    .trading {
+        padding: 42px 0 45px 0;
+        &-descr {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &-all {
+            &-link {
+                font-size: 12px;
+                line-height: 16px;
+                min-width: 289px;
+            }
+            &-arrow {
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+            }
+            &-text {
+                margin: 0 auto;
+                padding: 9px 11px 7px 11px;;
+                box-sizing: border-box;
+            }
+        }
+        &-picture {
+            text-align: left;
+            position: relative;
+            left: -43px;
+        }
+        &-image {
+            max-width: 620px;
+            width: 100%;
+        }
+        &-scan {
+            padding: 16px 20px;
+            box-sizing: border-box;
+            &-picture {
+                margin-right: 13px;
+            }
+            &-image {
+                width: 80px;
+            }
+            &-pre {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+            }
+            &-title {
+                font-size: 30px;
+                line-height: 25px;
+                margin: 10px 0;
+            }
+        }
+    }
+    .sup {
+        &-list {
+            margin: 0 -9px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        &-item {
+            width: calc(25% - 18px);
+            margin: 9px;
+            padding: 11px;
+            box-sizing: border-box;
+        }
+        &-picture {
+            margin-right: 9px;
+        }
+        &-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 3px;
+            background-size: 35px 35px;
+        }
+    }
+    .bits {
+        &-header {
+            &-cell {
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: 25%;
+                }
+            }
+        }
+        &-cell {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                width: 25%;
+            }
+        }
+    }
+    .reliable {
+        background-image: url(../img/reliable-bg-768.jpg);
+        &-descr {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &-title {
+            & .yellow {
+                display: block;
+            }
+        }
+        &-all {
+            margin-top: 30px;
+            &-link {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 12px;
+            }
+            &-text {
+                padding: 10px 15px;
+                box-sizing: border-box;
+            }
+            &-arrow {
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &-list {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-item {
+            padding: 16px;
+            box-sizing: border-box;
+        }
+        &-picture {
+            width: 55px;
+            height: 55px;
+        }
+        &-icon {
+            min-width: 33px;
+            width: 33px;
+            height: 33px;
+            background-size: contain;
+        }
+        &-subtitle {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 7px;
+            width: 100%;
+        }
+    }
+    .help {
+        padding: 30px 0 60px 0;
+        &-list {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-item {
+            padding-top: 14px;
+            padding-left: 14px;
+            padding-right: 14px;
+            padding-bottom: 65px;
+            box-sizing: border-box;
+        }
+        &-icon {
+            min-width: 40px;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+        }
+        &-subtitle {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 5px;
+        }
+        &-more {
+            bottom: 14px;
+            left: 14px;
+        }
+        &-link {
+            font-size: 18px;
+            line-height: 25px;
+            padding: 12px 15px 12px 18px;
+            box-sizing: border-box;
+        }
+    }
+    .footer {
+        background-position: top;
+        background-repeat: no-repeat;
+        background-image: url(../img/footer-bg-768.png);
+        background-size: cover;
+        &-decor {
+            display: none;
+        }
+        &-list {
+            margin-top: 10px;
+        }
+        &-sublist {
+            font-size: 13px;
+            line-height: 30px;
+        }
+    }
+    .social {
+        top: -10px;
     }
 }
