@@ -1804,6 +1804,15 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/social-icon-six.svg);
 }
 
+/* Tabs */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
 /* Pages */
 .prev {
   background-color: #101010;
@@ -2555,9 +2564,6 @@ h1, h2, h3, h4, h5, h6 {
   background: #2B2B2B;
   border-radius: 2px;
   margin-right: 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../img/listing-name-icon.svg);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
@@ -2841,7 +2847,12 @@ h1, h2, h3, h4, h5, h6 {
           box-sizing: border-box;
 }
 
+.how-nav-item.active .how-nav-btn {
+  background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
+}
+
 .how-nav-btn {
+  display: inline-block;
   background: #0F1514;
   color: #ffffff;
   border: 1px solid #303642;
@@ -2852,31 +2863,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-}
-
-.how-nav-btn:after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
-  border-radius: 1px;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.how-nav-btn.active:after, .how-nav-btn:hover:after, .how-nav-btn:focus:after {
-  opacity: 1;
-}
-
-.how-nav-text {
-  position: relative;
-  z-index: 2;
+  text-decoration: none;
 }
 
 .how-list {
@@ -3092,6 +3079,10 @@ h1, h2, h3, h4, h5, h6 {
           box-sizing: border-box;
 }
 
+.work-nav-item.active .work-nav-btn {
+  background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
+}
+
 .work-nav-btn {
   background: #0F1514;
   color: #ffffff;
@@ -3103,31 +3094,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
-}
-
-.work-nav-btn:after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
-  border-radius: 1px;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.work-nav-btn.active:after, .work-nav-btn:hover:after, .work-nav-btn:focus:after {
-  opacity: 1;
-}
-
-.work-nav-text {
-  position: relative;
-  z-index: 2;
+  text-decoration: none;
 }
 
 .work-list {

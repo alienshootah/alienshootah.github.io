@@ -1378,6 +1378,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Tabs */
+
+.tab {
+    &-content {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
 /* Pages */
 
 .prev {
@@ -1965,9 +1976,6 @@ h1, h2, h3, h4, h5, h6 {
             background: #2B2B2B;
             border-radius: 2px;
             margin-right: 10px;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url(../img/listing-name-icon.svg);
             box-sizing: border-box;
             text-align: center;
             &:before {
@@ -2199,8 +2207,12 @@ h1, h2, h3, h4, h5, h6 {
         &-item {
             margin: 7px;
             box-sizing: border-box;
+            &.active  .how-nav-btn {
+                background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%); 
+            }
         }
         &-btn {
+            display: inline-block;
             background: #0F1514;
             color: #ffffff;
             border: 1px solid #303642;
@@ -2210,29 +2222,7 @@ h1, h2, h3, h4, h5, h6 {
             padding: 14px 24px;
             box-sizing: border-box;
             position: relative;
-            &:after {
-                content: '';
-                display: inline-block;
-                position: absolute;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
-                border-radius: 1px;
-                opacity: 0;
-                transition: all 0.5s;
-            }
-            &.active:after,
-            &:hover:after,
-            &:focus:after {
-                opacity: 1;
-            }
-        }
-        &-text {
-            position: relative;
-            z-index: 2;
+            text-decoration: none;
         }
     }
     &-list {
@@ -2401,6 +2391,9 @@ h1, h2, h3, h4, h5, h6 {
         &-item {
             margin: 7px;
             box-sizing: border-box;
+            &.active .work-nav-btn {
+                background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
+            }
         }
         &-btn {
             background: #0F1514;
@@ -2412,29 +2405,7 @@ h1, h2, h3, h4, h5, h6 {
             padding: 14px 24px;
             box-sizing: border-box;
             position: relative;
-            &:after {
-                content: '';
-                display: inline-block;
-                position: absolute;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(43.32deg, #1EA74B 18.68%, #37B7B8 87.05%);
-                border-radius: 1px;
-                opacity: 0;
-                transition: all 0.5s;
-            }
-            &.active:after,
-            &:hover:after,
-            &:focus:after {
-                opacity: 1;
-            }
-        }
-        &-text {
-            position: relative;
-            z-index: 2;
+            text-decoration: none;
         }
     }
     &-list {
