@@ -87,3 +87,22 @@ document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
     // close the dropdown after user leave the list
     dropDownList.onmouseleave = closeDropdown;
 });
+
+/* Accordeon */
+
+if(document.querySelector(".glad-btn")) {
+    var acc = document.getElementsByClassName("glad-btn");
+    var i;
+  
+    for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+    });
+    }
+}
