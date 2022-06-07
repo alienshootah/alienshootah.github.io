@@ -1450,6 +1450,9 @@ h1, h2, h3, h4, h5, h6 {
         color: #FFFFFF;
         margin-top: 40px;
         margin-bottom: 15px;
+        &-enter {
+            margin-bottom: 25px;
+        }
     }
     &-list {
         font-weight: 400;
@@ -1491,6 +1494,17 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 400;
         font-size: 18px;
         line-height: 25px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background: #087c5f;
+        }
+        &-enter {
+            min-width: 162px;
+        }
+        &-confirm {
+            width: 100%;
+        }
     }
     &-link {
         padding: 0;
@@ -1506,6 +1520,26 @@ h1, h2, h3, h4, h5, h6 {
         &:hover,
         &:focus {
             border-bottom: 1px solid transparent;
+        }
+    }
+    &-forgot {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 16px;
+        &-ask {
+            display: inline-block;
+            padding-right: 5px;
+        }
+        &-link {
+            color: #FDD54E;
+            text-decoration: none;
+            border-bottom: 1px solid #FDD54E;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
         }
     }
 }
