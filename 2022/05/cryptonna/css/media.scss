@@ -107,7 +107,7 @@
     .listing {
         &-table {
             padding-top: 0;
-            padding-bottom: 0;
+            padding-bottom: 7px;
         }
         &-header {
             display: none;
@@ -120,7 +120,7 @@
         &-cell {
             padding-left: 0;
             padding-right: 0;
-            padding-top: 20px;
+            padding-top: 18px;
             padding-bottom: 0;
             &:before {
                 display: block;
@@ -137,37 +137,43 @@
                 }
             }
             &:nth-child(2) {
-                width: 25%;
+                width: 24%;
                 &:before {
                     content: 'Цена';
                 }
             }
             &:nth-child(3) {
-                width: 40%;
+                width: 41%;
                 &:before {
                     content: 'Ограничение/Доступно';
                 }
             }
             &:nth-child(4) {
                 width: 35%;
-                padding-top: 10px;
-                padding-bottom: 20px;
+                padding-top: 14px;
+                padding-bottom: 22px;
                 &:before {
                     content: 'Оплата';
                     margin-bottom: 15px;
                 }
             }
             &:nth-child(5) {
-                width: 25%;
+                width: 24%;
                 text-align: left;
                 position: relative;
-                padding-top: 10px;
+                padding-top: 14px;
                 padding-bottom: 20px;
                 &:before {
                     content: 'Торговля';
                     text-align: left;
                     margin-bottom: 20px;
                 }
+            }
+        }
+        &-isok {
+            line-height: 23px;
+            &-name {
+                min-width: auto;
             }
         }
         &-percent {
@@ -181,10 +187,13 @@
             padding: 6px 12px;
             box-sizing: border-box;
             position: absolute;
-            top: 4px;
-            left: 60px;
+            top: 6px;
+            left: 65px;
             min-width: 100px;
             text-align: center;
+        }
+        &-buy {
+            margin-top: -4px;
         }
     }
     .better {
@@ -750,11 +759,11 @@
     .breadcrumbs {
         background: #1C1C1C;
         margin: 0 -15px;
-        padding: 5px 15px;
+        padding: 2px 15px;
     }
     .prev {
         padding-top: 0;
-        padding-bottom: 48px;
+        padding-bottom: 33px;
         background-image: url(../img/prev-bg-768.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -776,33 +785,35 @@
         }
     }
     .listing {
-        padding: 20px 0 21px 0;
+        padding: 20px 0 9px 0;
         &-decor {
             display: none;
         }
         &-top {
+            padding: 15px 0 15px 0;
             border-top: 1.5px solid rgba(255, 255, 255, 0.1);
             border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
         }
         &-left {
-            min-width: 236px;
-            width: 30%;
+            min-width: 200px;
+            width: 28%;
         }
         &-right {
             width: 70%;
             padding-left: 22px;
         }
         &-btns {
-            width: 219px;
+            width: 198px;
         }
         &-btn {
-            padding: 6px 25px;
+            padding: 6px 19px;
         }
         &-link {
             font-size: 13px;
-            padding: 6px 10px;
+            padding: 6px 12px;
         }
         &-nav {
+            margin-bottom: 16px;
             &-list {
                 flex-wrap: wrap;
             }
@@ -815,6 +826,7 @@
         }
     }
     .how {
+        padding-bottom: 49px;
         &-decor {
             display: none;
         }
@@ -824,13 +836,21 @@
             line-height: 50px;
             margin-bottom: 0;
         }
+        &-nav {
+            &-item {
+                margin: 3px 7px;
+            }
+            &-btn {
+                padding: 11px 21px;
+            }
+        }
         &-list {
             font-weight: 400;
             font-size: 13px;
             line-height: 20px;
         }
         &-item {
-            padding: 20px;
+            padding: 14px 18px;
         }
         &-picture {
             min-width: 45px;
@@ -853,13 +873,13 @@
         }
         &-text {
             &-empty {
-                margin-top: 40px;
+                margin-top: 34px;
             }
         }
     }
     .better {
-        padding-top: 30px;
-        padding-bottom: 60px;
+        padding-top: 23px;
+        padding-bottom: 52px;
         &-decor {
             &-one {
                 background-image: url(../img/better-decor-one-768.svg);
@@ -886,6 +906,10 @@
             font-weight: 400;
             font-size: 13px;
             line-height: 20px;
+            margin-top: 9px;
+        }
+        &-image {
+            height: 175px;
         }
         &-subtitle {
             font-weight: 600;
@@ -898,10 +922,15 @@
         padding-bottom: 40px;
         &-title {
             margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             font-weight: 600;
             font-size: 25px;
             line-height: 50px;
+        }
+        &-nav {
+            &-btn {
+                padding: 11px 29px;
+            }
         }
         &-btn {
             padding-left: 13px;
@@ -1336,6 +1365,31 @@
     .social {
         &-list {
             justify-content: flex-start;
+        }
+    }
+    /* P2P */
+    .listing {
+        &-top {
+            &-row {
+                flex-wrap: wrap;
+            }
+        }
+        &-left {
+            width: 100%;
+            margin-bottom: 15px;
+            &::after {
+                content: none;
+            }
+        }
+        &-right {
+            width: 100%;
+            padding-left: 15px;
+        }
+        &-item {
+            margin-right: 5px;
+        }
+        &-link {
+            padding: 6px 13px;
         }
     }
 }
