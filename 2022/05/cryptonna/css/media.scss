@@ -105,12 +105,23 @@
     }
     /* P2P */
     .listing {
+        &-table {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        &-header {
+            display: none;
+        }
         &-main {
             &-item {
                 flex-wrap: wrap;
             }
         }
         &-cell {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 20px;
+            padding-bottom: 0;
             &:before {
                 display: block;
                 font-weight: 400;
@@ -120,34 +131,38 @@
                 margin-bottom: 10px;
             }
             &:nth-child(1) {
-                width: 30%;
+                width: 35%;
                 &:before {
                     content: 'Рекламодатели';
                 }
             }
             &:nth-child(2) {
-                width: 20%;
+                width: 25%;
                 &:before {
                     content: 'Цена';
                 }
             }
             &:nth-child(3) {
-                width: 50%;
+                width: 40%;
                 &:before {
                     content: 'Ограничение/Доступно';
                 }
             }
             &:nth-child(4) {
-                width: 30%;
+                width: 35%;
+                padding-top: 10px;
+                padding-bottom: 20px;
                 &:before {
                     content: 'Оплата';
                     margin-bottom: 15px;
                 }
             }
             &:nth-child(5) {
-                width: 20%;
+                width: 25%;
                 text-align: left;
                 position: relative;
+                padding-top: 10px;
+                padding-bottom: 20px;
                 &:before {
                     content: 'Торговля';
                     text-align: left;
@@ -166,8 +181,10 @@
             padding: 6px 12px;
             box-sizing: border-box;
             position: absolute;
-            top: 10px;
-            left: 80px;
+            top: 4px;
+            left: 60px;
+            min-width: 100px;
+            text-align: center;
         }
     }
     .better {
@@ -727,6 +744,186 @@
         }
         &-item {
             margin: 3px 2px;
+        }
+    }
+    /* P2P */
+    .breadcrumbs {
+        background: #1C1C1C;
+        margin: 0 -15px;
+        padding: 5px 15px;
+    }
+    .prev {
+        padding-top: 0;
+        padding-bottom: 48px;
+        background-image: url(../img/prev-bg-768.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        &-decor {
+            display: none;
+        }
+        &-title {
+            margin-top: 23px;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 30px;
+        }
+        &-descr {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 6px;
+        }
+    }
+    .listing {
+        padding: 20px 0 21px 0;
+        &-decor {
+            display: none;
+        }
+        &-top {
+            border-top: 1.5px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+        }
+        &-left {
+            min-width: 236px;
+            width: 30%;
+        }
+        &-right {
+            width: 70%;
+            padding-left: 22px;
+        }
+        &-btns {
+            width: 219px;
+        }
+        &-btn {
+            padding: 6px 25px;
+        }
+        &-link {
+            font-size: 13px;
+            padding: 6px 10px;
+        }
+        &-nav {
+            &-list {
+                flex-wrap: wrap;
+            }
+            &-item {
+                width: calc(50% - 24px);
+                &:last-child {
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .how {
+        &-decor {
+            display: none;
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 50px;
+            margin-bottom: 0;
+        }
+        &-list {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        &-item {
+            padding: 20px;
+        }
+        &-picture {
+            min-width: 45px;
+            width: 45px;
+            height: 45px;
+            &:before {
+                left: 22px;
+            }
+        }
+        &-icon {
+            min-width: 27px;
+            width: 27px;
+            height: 27px;
+            background-size: contain;
+        }
+        &-subtitle {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-text {
+            &-empty {
+                margin-top: 40px;
+            }
+        }
+    }
+    .better {
+        padding-top: 30px;
+        padding-bottom: 60px;
+        &-decor {
+            &-one {
+                background-image: url(../img/better-decor-one-768.svg);
+                min-width: 374px;
+                width: 374px;
+                height: 330px;
+                background-position: left;
+            }
+            &-thue {
+                background-image: url(../img/better-decor-thue-768.svg);
+                min-width: 374px;
+                width: 374px;
+                height: 330px;
+                background-position: right;
+            }
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 50px;
+            margin-bottom: 0;
+        }
+        &-list {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        &-subtitle {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    .work {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        &-title {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 50px;
+        }
+        &-btn {
+            padding-left: 13px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            &-icon {
+                margin-left: 5px;
+            }
+        }
+        &-link {
+            padding-left: 13px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            &-icon {
+                margin-left: 5px;
+            }
+        }
+        &-open {
+            padding: 0 13px 13px 13px;
+            font-size: 14px;
         }
     }
 }
