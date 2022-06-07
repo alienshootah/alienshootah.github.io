@@ -1389,6 +1389,184 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Modal */
+
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+    text-align: center;
+    &.visible {
+        display: block;
+    }
+    &-body {
+        display: inline-block;
+        width: 458px;
+        box-sizing: border-box;
+        position: relative;
+        background: #0F1514;
+        border: 1px solid #0AA880;
+        box-shadow: 0px 10px 25px #131B1E;
+        padding: 40px 57px;
+        text-align: left;
+        margin-bottom: 150px;
+    }
+    &-close {
+        position: absolute;
+        right: 24px;
+        top: 30px;
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-icon {
+            display: inline-block;
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/modal-close-icon.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+    &-title {
+        font-family: $manrope-reg;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin-top: 40px;
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &-item {
+        margin-bottom: 20px;
+    }
+    &-name {
+        display: block;
+        margin-bottom: 11px;
+    }
+    &-field {
+        width: 100%;
+        height: 44px;
+        background: #11191F;
+        border: 1px solid #929292;
+        border-radius: 3px;
+        box-sizing: border-box;
+        padding: 10px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        &::placeholder {
+            color: #5A5A5A;
+        }
+    }
+    &-more {
+        margin-top: 35px;
+    }
+    &-btn {
+        color: #ffffff;
+        background: #0AA880;
+        border-radius: 3px;
+        box-sizing: border-box;
+        padding: 10px 15px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    &-link {
+        padding: 0;
+        display: inline-block;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+        color: #FDD54E;
+        border-bottom: 1px solid #FDD54E;
+        transition: all 0.5s;
+        margin-left: 19px;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+.policy {
+    position: relative;
+    font-weight: 400;
+    font-size: 15px;
+    &-lbl {
+        display: flex;
+        align-items: center;
+    }
+    &-check {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        z-index: -1;
+        &:checked ~ .policy-icon {
+            border: 1px solid #FDD54E;
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        margin-right: 7px;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 18px;
+            width: 18px;
+            height: 18px;
+            background-color: #FDD54E;
+            border-radius: 5px;
+            position: relative;
+            top: 8px;
+            left: 8px;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    }
+    &-link {
+        color: #FDD54E;
+        text-decoration: none;
+        border-bottom: 1px solid #FDD54E;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
+
 /* P2P */
 
 .prev {

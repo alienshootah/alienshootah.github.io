@@ -129,16 +129,16 @@
                     </div>
                     <div class="col-2 header-right">
                         <div class="header-btns">
-                            <a href="#" class="header-btn">
+                            <button class="header-btn curr-modal" data-modal="modal-01">
                                 <span class="header-btn-text">
                                     Регистрация
                                 </span>
-                            </a>
-                            <a href="#" class="header-btn header-btn-green">
+                            </button>
+                            <button class="header-btn header-btn-green">
                                 <span class="header-btn-text">
                                     Войти
                                 </span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -937,6 +937,74 @@
             </div>
         </footer>
     </div>
+
+    <!-- Modals start -->
+    <div class="modal visible" id="modal-01">
+        <div class="modal-body">
+            <button class="modal-close close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <h3 class="modal-title">
+                Зарегистрируйтесь, чтобы получить Cryptonna
+            </h3>
+            <form class="modal-form">
+                <ul class="modal-list">
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-name">Введите Ваше имя*</span>
+                            <input type="text" class="modal-field" placeholder="Введите ваше имя" required>
+                        </label>
+                    </li>
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-name">Введите e-mail*</span>
+                            <input type="email" class="modal-field" placeholder="Введите e-mail" required>
+                        </label>
+                    </li>
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-name">Введите пароль*</span>
+                            <input type="password" class="modal-field" placeholder="Введите пароль" required>
+                        </label>
+                    </li>
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-name">Введите повторно пароль*</span>
+                            <input type="password" class="modal-field" placeholder="Введите повторно пароль" required>
+                        </label>
+                    </li>
+                    <li class="modal-item">
+                        <label class="modal-lbl">
+                            <span class="modal-name">Введите реферальный код (если есть)</span>
+                            <input type="text" class="modal-field" placeholder="Введите реферальный код">
+                        </label>
+                    </li>
+                    <li class="modal-item">
+                        <div class="policy">
+                            <label class="policy-lbl">
+                                <input type="checkbox" class="policy-check">
+                                <span class="policy-icon"></span>
+                                <span class="policy-text">
+                                    Я прочитал 
+                                    <a href="#" class="policy-link">
+                                        Условия использования
+                                    </a>
+                                </span>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+                <div class="modal-more">
+                    <button class="modal-btn">Зарегистрироваться</button>
+                    <button class="modal-link">
+                        Ввойдите
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modals end -->
+
     <script src="js/apps.js"></script>
 </body>
 </html>
