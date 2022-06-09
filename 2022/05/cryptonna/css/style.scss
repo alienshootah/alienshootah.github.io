@@ -2761,6 +2761,16 @@ h1, h2, h3, h4, h5, h6 {
         &.active {
             display: block;
         }
+        &-link {
+            color: #FDD54E;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #FDD54E;
+            }
+        }
     }
     &-link {
         background: #111819;
@@ -2801,6 +2811,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* FAQ */
+
 .main {
     background-image: url(../img/main-bg.jpg);
     background-position: bottom;
@@ -3059,6 +3070,11 @@ h1, h2, h3, h4, h5, h6 {
 .mypan {
     margin-top: 86px;
     margin-bottom: -118px;
+    &-image {
+        &-tablet {
+            display: none;
+        }
+    }
     &-title {
         font-weight: 600;
         font-size: 35px;
@@ -3154,7 +3170,7 @@ h1, h2, h3, h4, h5, h6 {
             &:after {
                 transform: rotate(90deg);
                 bottom: auto;
-                left: -11px;
+                left: -10px;
                 top: 0px;
             }
         }
