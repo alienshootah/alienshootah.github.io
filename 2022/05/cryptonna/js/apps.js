@@ -170,3 +170,25 @@ modals.forEach(m => {
     x.addEventListener('click', hideModals);
   }
 });
+
+const nwannonSlider = new Swiper('.nwannon-slider', {
+    slidesPerView: 4,
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: '.nwannon-arrow-right',
+      prevEl: '.nwannon-arrow-left',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      510: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 0,
+      },
+    },
+  });

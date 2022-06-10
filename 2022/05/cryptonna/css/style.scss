@@ -3257,11 +3257,13 @@ h1, h2, h3, h4, h5, h6 {
 /* News */
 
 .nwannon {
+    margin-bottom: 40px;
     &-block {
         position: relative;
     }
     &-slider {
         margin: 20px -10px 0 -10px;
+        overflow: hidden;
     }
     &-item {
         box-shadow: 0px 10px 35px #121212;
@@ -3274,6 +3276,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-bottom: -6px;
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
+        width: 100%;
     }
     &-descr {
         margin: 0;
@@ -3301,6 +3304,14 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid #0AA880;
         border-radius: 3px;
         position: absolute;
+        cursor: pointer;
+        &:hover,
+        &:focus {
+            background: linear-gradient(41.19deg, #1EA74B 14.56%, #37B7B8 85.42%);
+            & svg path {
+                fill: #ffffff;
+            }
+        }
         &-left {
             left: -55px;
             & svg {
@@ -3411,22 +3422,39 @@ h1, h2, h3, h4, h5, h6 {
         height: 23px;
         background-position: center;
         background-repeat: no-repeat;
-        &-one {
-            background-image: url(../img/switch-icon-one.svg);
+        & svg path {
+            transition: all 0.5s;
         }
         &-thue {
             min-width: 26px;
             width: 26px;
-            background-image: url(../img/switch-icon-thue.svg);
+            &:hover,
+            &:focus {
+                & svg path {
+                    fill: #0AA880;
+                }
+            }
+        }
+        &-one {
+            &:hover,
+            &:focus {
+                & svg path {
+                    fill: #ffffff;
+                }
+            }
         }
     }
 }
 .news {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
     &-top {
         width: 75%;
-        padding: 0;
+        position: relative;
+        top: 35px;
         margin-left: auto;
+        padding-left: 7px;
+        box-sizing: border-box;
     }
     &-block {
         display: flex;
@@ -3437,7 +3465,7 @@ h1, h2, h3, h4, h5, h6 {
         order: -1;
     }
     &-list {
-        margin: 20px -10px 0 -10px;
+        margin: 35px -10px 0 -10px;
         display: flex;
         flex-wrap: wrap;
         font-weight: 400;
@@ -3464,6 +3492,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 12px;
         line-height: 16px;
         background: #FFA011;
+        color: #FFFFFF;
         padding: 5px 9px 5px 9px;
         &-blue {
             background: #089AEC;
@@ -3557,6 +3586,33 @@ h1, h2, h3, h4, h5, h6 {
             &:hover,
             &:focus {
                 color: #FFBD12;
+            }
+        }
+    }
+    &-more {
+        text-align: right;
+        margin-top: 10px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 39px;
+            width: 39px;
+            height: 39px;
+            border: 1px solid #0AA880;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-left: auto;
+            &:hover,
+            &:focus {
+                background: linear-gradient(41.19deg, #1EA74B 14.56%, #37B7B8 85.42%);
+                & svg path {
+                    fill: #ffffff;
+                }
+            }
+            & svg {
+                position: relative;
+                left: 2px;
             }
         }
     }
