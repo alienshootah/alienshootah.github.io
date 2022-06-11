@@ -1668,6 +1668,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding: 10px 0 17px 0;
     &-news {
+        padding-bottom: 0;
         & .prev-title {
             font-weight: 600;
             font-size: 40px;
@@ -3262,7 +3263,7 @@ h1, h2, h3, h4, h5, h6 {
         position: relative;
     }
     &-slider {
-        margin: 20px -10px 0 -10px;
+        margin: 21px -10px 0 -10px;
         overflow: hidden;
     }
     &-item {
@@ -3270,7 +3271,7 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 3px;
         background: rgba(11, 24, 29, 0.9);
         backdrop-filter: blur(10px);
-        margin: 10px;
+        margin: 0 10px;
     }
     &-image {
         margin-bottom: -6px;
@@ -3290,7 +3291,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         position: absolute;
-        top: 48%;
+        top: 39%;
         width: 100%;
         box-sizing: border-box;
     }
@@ -3334,18 +3335,18 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 400;
         font-size: 12px;
         line-height: 12px;
-        margin: 0 -5px;
+        margin: 0 -3px;
         display: flex;
         align-items: center;
     }
     &-item {
-        margin: 5px;
+        margin: 5px 3px;
     }
     &-link {
         text-decoration: none;
         color: #C8C8C8;
         display: inline-block;
-        padding: 7px 7px;
+        padding: 9px 12px;
         box-sizing: border-box;
         background: #0F1514;
         border-radius: 3px;
@@ -3373,8 +3374,8 @@ h1, h2, h3, h4, h5, h6 {
         background: #0F1514;
         border-radius: 3px;
         box-sizing: border-box;
-        max-width: 285px;
-        padding-left: 8px;
+        width: 285px;
+        padding-left: 12px;
         padding-right: 4px;
     }
     &-field {
@@ -3446,8 +3447,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .news {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 16px;
+    margin-bottom: 86px;
     &-top {
         width: 75%;
         position: relative;
@@ -3455,17 +3456,22 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: auto;
         padding-left: 7px;
         box-sizing: border-box;
+        &-row {
+            align-items: center;
+        }
     }
     &-block {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        position: relative;
+        top: -4px;
     }
     &-left {
         order: -1;
     }
     &-list {
-        margin: 35px -10px 0 -10px;
+        margin: 41px -10px 0 -10px;
         display: flex;
         flex-wrap: wrap;
         font-weight: 400;
@@ -3474,7 +3480,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #8C8C8C;
     }
     &-item {
-        margin: 10px;
+        margin: 10px 10px 14px 10px;
         width: calc(33.3333% - 20px);
         background: #0F1514;
         box-shadow: 0px 10px 25px #131B1E;
@@ -3485,7 +3491,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-info {
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 0;
         z-index: 1;
         font-weight: 400;
@@ -3493,7 +3499,7 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 16px;
         background: #FFA011;
         color: #FFFFFF;
-        padding: 5px 9px 5px 9px;
+        padding: 5px 8px 5px 8px;
         &-blue {
             background: #089AEC;
         }
@@ -3507,7 +3513,7 @@ h1, h2, h3, h4, h5, h6 {
         border-top-right-radius: 3px;
     }
     &-descr {
-        padding: 13px;
+        padding: 10px 13px 13px 13px;
         box-sizing: border-box;
     }
     &-date {
@@ -3545,6 +3551,7 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
         font-size: 14px;
         line-height: 18px;
+        margin-top: 8px;
         margin-bottom: 0;
         &-link {
             color: #ffffff;
@@ -3556,6 +3563,9 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
     }
+    &-text {
+        margin-top: 4px;
+    }
     &-tags {
         font-weight: 400;
         font-size: 12px;
@@ -3563,9 +3573,11 @@ h1, h2, h3, h4, h5, h6 {
         color: #939393;
         display: flex;
         flex-wrap: wrap;
-        margin: 15px -4px 0 -4px;
+        margin: 15px -4px 0 0;
+        position: relative;
+        left: -5px;
         &-item {
-            margin: 0 4px;
+            margin: 0 2px 0 0;
         }
         &-icon {
             display: inline-block;
@@ -3575,7 +3587,7 @@ h1, h2, h3, h4, h5, h6 {
             background-position: center;
             background-repeat: no-repeat;
             background-image: url(../img/news-tags-icon.svg);
-            margin-right: 0;
+            margin-right: 2px;
             position: relative;
             top: -4px;
         }
@@ -3591,7 +3603,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-more {
         text-align: right;
-        margin-top: 10px;
         &-icon {
             display: flex;
             align-items: center;
@@ -3644,7 +3655,7 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid #757575;
         text-decoration: none;
         box-sizing: border-box;
-        padding: 6px 7px 6px 16px;
+        padding: 4px 7px 5px 16px;
         transition: all 0.5s;
         &:hover,
         &:focus,
