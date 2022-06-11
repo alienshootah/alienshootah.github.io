@@ -182,6 +182,9 @@ const nwannonSlider = new Swiper('.nwannon-slider', {
     breakpoints: {
       320: {
         slidesPerView: 1,
+        scrollbar: {
+          el: ".nwannon-scrollbar",
+        },
       },
       510: {
         slidesPerView: 2,
