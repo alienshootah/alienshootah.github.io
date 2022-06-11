@@ -198,4 +198,24 @@ const nwannonSlider = new Swiper('.nwannon-slider', {
         spaceBetween: 0,
       },
     },
+});
+
+/* Switches in news */
+
+/* Switch btn */
+if(document.querySelector(".switch-btn-one")) {
+  const switchBtn = document.querySelector(".switch-btn-one");
+  switchBtn.addEventListener("click", function() {
+    document.querySelector(".news-list").classList.remove("news-super");
+    document.querySelector(".switch-icon-one").classList.add("active");
+    document.querySelector(".switch-icon-thue").classList.remove("active");
   });
+}
+if(document.querySelector(".switch-btn-thue")) {
+  const switch2Btn = document.querySelector(".switch-btn-thue");
+  switch2Btn.addEventListener("click", function() {
+    document.querySelector(".news-list").classList.add("news-super");
+    document.querySelector(".switch-icon-thue").classList.add("active");
+    document.querySelector(".switch-icon-one").classList.remove("active");
+  });
+}
