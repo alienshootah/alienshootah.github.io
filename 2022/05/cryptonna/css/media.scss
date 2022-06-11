@@ -1324,8 +1324,83 @@
             width: 265px;
         }
     }
+    .nwannon {
+        margin-bottom: 5px;
+        &-block {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &-descr {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 9px 11px;
+        }
+        &-arrows {
+            position: static;
+            display: flex;
+            justify-content: center;
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-top: 14px;
+        }
+        &-arrow {
+            position: static;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+    .switch {
+        &-list {
+            margin: 0 -9px;
+        }
+        &-item {
+            margin: 0 9px;
+        }
+    }
+    .ada {
+        position: relative;
+        top: -3px;
+        &-item {
+            margin: 1px 4px;
+        }
+        &-link {
+            padding: 9px 11px;
+        }
+    }
     .news {
-        margin-bottom: 60px;
+        padding-top: 19px;
+        padding-bottom: 60px;
+        &-top {
+            margin-bottom: 14px;
+        }
+        &-prev {
+            background-image: none!important;
+            & .prev-decor {
+                display: block;
+                &-one {
+                    min-width: 235px;
+                    width: 235px;
+                    height: 297px;
+                    background-image: url(../img/news-prev-decor-one-768px.png);
+                }
+                &-thue {
+                    min-width: 239px;
+                    width: 239px;
+                    height: 297px;
+                    background-image: url(../img/news-prev-decor-thue-768px.png);
+                }
+            }
+            & .prev-title {
+                font-size: 35px;
+                margin-top: 26px;
+            }
+            & .prev-descr {
+                font-size: 13px;
+                margin-top: 9px
+            }
+        }
         &-row {
             flex-wrap: wrap;
         }
@@ -1342,6 +1417,19 @@
             font-weight: 600;
             font-size: 13px;
             line-height: 18px;
+            margin-top: 2px;
+        }
+        &-item {
+            margin: 15px 10px 10px 10px;
+        }
+        &-image {
+            height: 172px;
+            object-fit: cover;
+        }
+        &-info {
+            padding: 4px 9px 3px 9px;
+            top: 9px;
+            right: -5px;
         }
         & .categories {
             &-icon {
@@ -1354,7 +1442,8 @@
                 display: flex;
                 align-items: center;
                 overflow-x: scroll;
-                margin-left: -13px;
+                margin-left: -14px;
+                margin-right: -14px;
             }
             &-item {
                 border-right: 1px solid rgba(255, 255, 255, 0.1);
@@ -1363,12 +1452,14 @@
                 margin: 13px 0;
                 &:last-child {
                     margin-bottom: auto;
+                    border-right: 0;
+
                 }
             }
             &-link {
                 background: transparent;
                 border: 0;
-                padding: 0 13px;
+                padding: 0 14px;
                 display: block;
                 &.active,
                 &:hover,
@@ -1393,41 +1484,11 @@
                 }
             }
         }
-    }
-    .ada {
-        position: relative;
-        top: -3px;
-        &-item {
-            margin: 1px 3px;
-        }
-        &-link {
-            padding: 8px 7px;
-        }
-    }
-
-    .nwannon {
-        &-block {
-            position: relative;
-            width: 100%;
-            margin: 0 auto;
-        }
-        &-descr {
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 18px;
-        }
-        &-arrows {
-            position: static;
-            display: flex;
-            justify-content: center;
-            margin-left: -5px;
-            margin-right: -5px;
-            margin-top: 20px;
-        }
-        &-arrow {
-            position: static;
-            margin-left: 5px;
-            margin-right: 5px;
+        &-more {
+            &-icon {
+                position: relative;
+                right: -5px;
+            }
         }
     }
 }
