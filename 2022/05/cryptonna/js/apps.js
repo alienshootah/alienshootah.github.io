@@ -186,7 +186,7 @@ const nwannonSlider = new Swiper('.nwannon-slider', {
       510: {
         slidesPerView: 2,
       },
-      768: {
+      750: {
         slidesPerView: 3,
         spaceBetween: 0,
       },

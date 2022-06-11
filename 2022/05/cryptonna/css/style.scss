@@ -1667,14 +1667,6 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #101010;
     position: relative;
     padding: 10px 0 17px 0;
-    &-news {
-        padding-bottom: 0;
-        & .prev-title {
-            font-weight: 600;
-            font-size: 40px;
-            text-transform: uppercase;
-        }
-    }
     &-decor {
         display: inline-block;
         box-sizing: border-box;
@@ -3267,7 +3259,7 @@ h1, h2, h3, h4, h5, h6 {
         overflow: hidden;
     }
     &-item {
-        box-shadow: 0px 10px 35px #121212;
+        box-shadow: 0px 5px 15px #121212;
         border-radius: 3px;
         background: rgba(11, 24, 29, 0.9);
         backdrop-filter: blur(10px);
@@ -3449,6 +3441,53 @@ h1, h2, h3, h4, h5, h6 {
 .news {
     margin-top: 16px;
     margin-bottom: 86px;
+    position: relative;
+    &-decor {
+        display: inline-block;
+        border-radius: 50%;
+        position: absolute;
+        background: #00241B;
+        min-width: 586px;
+        width: 586px;
+        height: 586px;
+        filter: blur(250px);
+        &-one {
+            left: -200px;
+            top: 300px;
+        }
+        &-thue {
+            bottom: 200px;
+            right: -100px;
+        }
+    }
+    & .content {
+        position: relative;
+        z-index: 2;
+    }
+    &-prev {
+        background-image: url(../img/news-prev-bg.jpg);
+        & .prev-title {
+            font-weight: 600;
+            font-size: 40px;
+            text-transform: uppercase;
+        }
+        & .prev-decor {
+            &-one {
+                min-width: 431px;
+                width: 431px;
+                height: 365px;
+                background-image: url(../img/news-decor-one.png);
+                top: auto;
+                bottom: 0;
+            }
+            &-thue {
+                background-image: url(../img/news-decor-thue.png);
+                top: 0;
+                bottom: auto;
+                background-position: left;
+            }
+        }
+    }
     &-top {
         width: 75%;
         position: relative;
