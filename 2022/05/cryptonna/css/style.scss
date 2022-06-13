@@ -3759,6 +3759,68 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Single */
 
+.sign {
+    margin-top: 2px;
+    & .news-tags {
+        align-items: center;
+        margin: 3px -4px 0 0;
+        &-icon {
+            min-width: 24px;
+            width: 24px;
+            height: 24px;
+            top: 2px;
+            background-size: contain;
+        }
+    }
+    & .ada {
+        margin-right: 13px;
+    }
+    &-bottom {
+        margin-top: 14px;
+        display: flex;
+        align-items: center;
+    }
+    &-date {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 30px;
+            width: 30px;
+            height: 30px;
+            background: #1A2322;
+            border-radius: 3px;
+            margin-right: 6px;
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 16px;
+                width: 16px;
+                height: 16px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/sing-date-icon-after.svg);
+            }
+        }
+    }
+    &-category {
+        display: inline-block;
+        background: #FFA011;
+        border-radius: 3px;
+        padding: 7px 11px;
+        border-radius: 3px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 9px;
+    }
+}
 .single {
     position: relative;
     overflow: visible;
@@ -3772,6 +3834,12 @@ h1, h2, h3, h4, h5, h6 {
         background-image: url(../img/single-prev.jpg);
         background-position: center;
         background-size: cover;
+        padding-bottom: 50px;
+        & .prev-title {
+            font-weight: 600;
+            font-size: 40px;
+            line-height: 45px;
+        }
     }
     &-decor {
         display: inline-block;
@@ -3833,19 +3901,28 @@ h1, h2, h3, h4, h5, h6 {
             color: #FFFFFF;
         }
     }
+    &-image {
+        width: 100%;
+        border-radius: 3px;
+        margin-bottom: -6px;
+    }
     &-left {
         & h3 {
             font-weight: 600;
             font-size: 25px;
-            line-height: 16px;
+            line-height: 23px;
             color: #FFFFFF;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
         }
         h4 {
             font-weight: 500;
             font-size: 20px;
             line-height: 26px;
             color: #FFFFFF;
-            margin-top: 40px;
+            margin-top: 32px;
+            letter-spacing: -0.4px;
+            margin-bottom: 15px;
         }
         a {
             color: #0aa880;
@@ -3860,46 +3937,48 @@ h1, h2, h3, h4, h5, h6 {
         & blockquote {
             background: #FFFFFF;
             border-radius: 5px;
-            padding: 30px 35px;
+            padding: 26px 35px;
             box-sizing: border-box;
             font-weight: 600;
             font-size: 14px;
             line-height: 22px;
             color: #333333;
-            background-position: 12px 12px;
+            background-position: 16px 14px;
             background-repeat: no-repeat;
             background-image: url(../img/single-blockquote.svg);
             margin-left: 0;
-            margin-top: 30px;
+            margin-top: 27px;
             margin-bottom: 30px;
+            letter-spacing: 0.2px;
         }
         & ul {
-            padding-left: 43px;
+            padding-left: 35px;
             & li {
                 position: relative;
                 padding-left:13px;
                 box-sizing: border-box;
-                margin: 22px 0;
+                margin: 19px 0;
                 &:before {
                     content: '';
                     display: block;
-                    min-width: 35px;
-                    width: 35px;
-                    height: 35px;
+                    min-width: 31px;
+                    width: 31px;
+                    height: 31px;
                     border-radius: 50%;
                     background-position: center;
                     background-repeat: no-repeat;
                     background-image: url(../img/single-li-before.svg);
                     border: 2px solid #2DB18B;
                     position: absolute;
-                    left: -40px;
-                    top: -8px;
+                    left: -36px;
+                    top: -5px;
                 }
             }
         }
         & ol {
             list-style-type: none;
             padding-left: 57px;
+            margin-top: 20px;
             & li {
                 counter-increment: item;
                 position: relative;
@@ -3944,6 +4023,9 @@ h1, h2, h3, h4, h5, h6 {
                 padding: 16px 20px;
                 box-sizing: border-box;
             }
+            & th {
+                font-weight: 400;
+            }
         }
     }
 }
@@ -3953,4 +4035,53 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 3px;
     padding: 16px;
     box-sizing: border-box;
+    &-list {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    &-item {
+        margin-bottom: 8px;
+        &:nth-child(1) {
+            & .similar-descr {
+                background-image: url(../img/similar-descr-one.jpg);
+            }
+        }
+        &:nth-child(2) {
+            & .similar-descr {
+                background-image: url(../img/similar-descr-thue.jpg);
+            }
+        }
+        &:nth-child(3) {
+            & .similar-descr {
+                background-image: url(../img/similar-descr-three.jpg);
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-picture {
+        position: relative;
+    }
+    &-image {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-bottom: -6px;
+    }
+    &-descr {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        padding: 9px 14px;
+        box-sizing: border-box;
+        background-image: url(../img/similar-descr-one.jpg);
+    }
+    &-text {
+        margin: 0;
+        padding: 0;
+    }
 }
