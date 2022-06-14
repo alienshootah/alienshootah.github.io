@@ -1480,63 +1480,63 @@
             top: 9px;
             right: -5px;
         }
-        & .categories {
-            &-icon {
-                display: none;
-            }
-            &-list {
-                font-weight: 500;
-                font-size: 13px;
-                line-height: 16px;
-                display: flex;
-                align-items: center;
-                overflow-x: scroll;
-                margin-left: -14px;
-                margin-right: -14px;
-            }
-            &-item {
-                border-right: 1px solid rgba(255, 255, 255, 0.1);
-                box-sizing: border-box;
-                text-align: center;
-                margin: 13px 0;
-                &:last-child {
-                    margin-bottom: auto;
-                    border-right: 0;
-
-                }
-            }
-            &-link {
-                background: transparent;
-                border: 0;
-                padding: 0 14px;
-                display: block;
-                &.active,
-                &:hover,
-                &:focus {
-                    background: transparent;
-                    border: 0;
-                    color: #0aa880;
-                    & .categories-text-value {
-                        color: #0aa880;
-                    }
-                }
-            }
-            &-text {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                &-name {
-                    white-space: nowrap;
-                }
-                &-value {
-                    padding-left: 3px;
-                }
-            }
-        }
         &-more {
             &-icon {
                 position: relative;
                 right: -5px;
+            }
+        }
+    }
+    .categories {
+        &-icon {
+            display: none;
+        }
+        &-list {
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            margin-left: -14px;
+            margin-right: -14px;
+        }
+        &-item {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            box-sizing: border-box;
+            text-align: center;
+            margin: 13px 0;
+            &:last-child {
+                margin-bottom: auto;
+                border-right: 0;
+
+            }
+        }
+        &-link {
+            background: transparent;
+            border: 0;
+            padding: 0 14px;
+            display: block;
+            &.active,
+            &:hover,
+            &:focus {
+                background: transparent;
+                border: 0;
+                color: #0aa880;
+                & .categories-text-value {
+                    color: #0aa880;
+                }
+            }
+        }
+        &-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-name {
+                white-space: nowrap;
+            }
+            &-value {
+                padding-left: 3px;
             }
         }
     }
@@ -1550,6 +1550,7 @@
         }
     }
     .single {
+        padding-bottom: 30px;
         &-decor {
             display: none;
         }
@@ -1579,11 +1580,102 @@
                 }
             }
         }
+        &-row {
+            flex-wrap: wrap;
+            position: relative;
+            padding-top: 20px;
+        }
         &-left {
-            width: 63%;
+            width: 100%;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            padding-top: 10px;
+            & h3 {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            & h4 {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+            }
+            & blockquote {
+                font-weight: 600;
+                font-size: 13px;
+                line-height: 20px;
+            }
+            & ul {
+                & li {
+                    padding-left: 0px;
+                    &:before {
+                        min-width: 21px;
+                        width: 21px;
+                        height: 21px;
+                        background-size: 8px 8px;
+                        border: 1px solid #2DB18B;
+                        top: -2px;
+                    }
+                }
+            }
+            & ol {
+                padding-left: 35px;
+                & li {
+                    &:before {
+                        min-width: 23px;
+                        width: 23px;
+                        height: 23px;
+                        font-weight: 600;
+                        font-size: 13px;
+                        line-height: 14px;
+                        left: -37px;
+                        top: -5px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+            & table {
+                & th,
+                & td {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 24px;
+                    padding: 16px 21px;
+                }
+            }
         }
         &-right {
-            width: 37%;
+            width: 100%;
+        }
+        & .categories {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+            overflow: hidden;
+            border-top: 1.5px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    .similar {
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+        &-list {
+            display: flex;
+            margin-left: -10px;
+            margin-right: -10px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-item {
+            width: calc(33.3333% - 20px);
+            margin-left: 10px;
+            margin-right: 10px;
         }
     }
 }
@@ -2659,20 +2751,20 @@
             height: 44px;
         }
     }
+    .categories {
+        &-list {
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+        &-link {
+            padding: 0 12px;
+        }
+    }
     .news {
         padding-top: 25px;
         padding-bottom: 30px;
         &-decor {
             display: none;
-        }
-        & .categories {
-            &-list {
-                margin-left: -12px;
-                margin-right: -12px;
-            }
-            &-link {
-                padding: 0 12px;
-            }
         }
         &-left {
             margin-bottom: 12px;
