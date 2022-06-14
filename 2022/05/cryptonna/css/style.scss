@@ -4182,6 +4182,9 @@ h1, h2, h3, h4, h5, h6 {
 .board {
     position: relative;
     overflow: hidden;
+    &-nav {
+        display: none;
+    }
     & .content {
         position: relative;
         z-index: 2;
@@ -4279,6 +4282,92 @@ h1, h2, h3, h4, h5, h6 {
             padding: 6px 11px;
             color: #FFFFFF;
             box-sizing: border-box;
+        }
+    }
+    &-body {
+        color: #ffffff;
+    }
+    &-tabs {
+        display: flex;
+        justify-content: center;
+        margin: 0 -15px;
+        position: relative;
+        z-index: 2;
+    }
+    &-tab {
+        &-left,
+        &-center,
+        &-right {
+            padding-top: 25px;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+        &-left {
+            width: 25%;
+        }
+        &-center {
+            width: 50%;
+            border-left: 2px solid rgba(255, 255, 255, 0.1);
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        &-right {
+            width: 25%;
+        }
+    }
+}
+
+
+.gramma {
+    &-table {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        
+        & th {
+            font-weight: 400;
+        }
+        & tbody {
+            & tr {
+                display: block;
+                &:first-child {
+                    background: #0F1514;
+                    border: 1px solid #303642;
+                    border-radius: 50px;
+                    & td:first-child {
+                        border: 1px solid #303642;
+                        border-radius: 50px;
+                    }
+                }
+            }
+        }
+    }
+    &-like {
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 21px;
+            width: 21px;
+            height: 21px;
+            background: #2B2B2B;
+            border-radius: 2px;
+            &::after {
+                content: '';
+                display: inline-block;
+                min-width: 14px;
+                width: 14px;
+                height: 14px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/gramma-like-icon.svg);
+            }
+        }
+    }
+    &-name {
+        &.active {
+            color: #FDD54E;
         }
     }
 }
