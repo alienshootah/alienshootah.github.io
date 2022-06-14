@@ -2899,6 +2899,21 @@
     }
     /* Single */
     .single {
+        overflow: hidden;
+        padding-top: 70px;
+        padding-bottom: 0px;
+        &-decor {
+            display: inline-block;
+            width: 586px;
+            height: 586px;
+            background: #00241B;
+            filter: blur(250px);
+            border-radius: 50%;
+            left: -200px;
+            bottom: 300px;
+            top: auto;
+            right: auto;
+        }
         &-prev {
             &  .prev-title {
                 font-weight: 600;
@@ -2906,9 +2921,68 @@
                 line-height: 32px;
                 margin-top: 20px;
             }
+            & .prev {
+                &-decor {
+                    &-one {
+                        min-width: 218px;
+                        width: 218px;
+                        height: 185px;
+                        background-image: url(../img/single-prev-decor-one-375.png);
+                        background-position: top right;
+                        bottom: -81px;
+                    }
+                    &-thue {
+                        min-width: 133px;
+                        width: 133px;
+                        height: 297px;
+                        background-image: url(../img/single-prev-decor-thue-375.png);
+                        right: 0;
+                    }
+                }
+            }
+        }
+        &-image {
+            height: 193px;
+        }
+        &-row {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        &-left {
+            & h3 {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            & h4 {
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 22px;
+            }
+            & blockquote {
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 20px;
+            }
+            & table {
+                & th,
+                & td {
+                    font-weight: 500;
+                    font-size: 13px;
+                    line-height: 40px;
+                    padding: 0 16px;
+                }
+            }
+        }
+        &-like {
+            &-btn {
+                bottom: 25px;
+            }
         }
     }
 }
+
 @media(max-width: 410px) {
     .promo {
         background-image: url(../img/promo-bg-360.jpg);
