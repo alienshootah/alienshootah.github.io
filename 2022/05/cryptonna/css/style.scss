@@ -4366,10 +4366,21 @@ h1, h2, h3, h4, h5, h6 {
         }
         & th,
         & td {
-            padding: 8px;
+            padding: 6px 6px;
         }
     }
     &-like {
+        padding: 0;
+        &:hover {
+            & .gramma-like-icon:after {
+                background-image: url(../img/gramma-like-icon-halfred.svg);
+            }
+        }
+        &:focus {
+            & .gramma-like-icon:after {
+                background-image: url(../img/gramma-like-icon-orange.svg);
+            }
+        }
         &-icon {
             display: flex;
             align-items: center;
@@ -4388,19 +4399,30 @@ h1, h2, h3, h4, h5, h6 {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-image: url(../img/gramma-like-icon.svg);
+                transition: all 0.5s;
             }
         }
     }
     &-name {
-        &.active {
+        cursor: pointer;
+        transition: all 0.5s;
+        &.active,
+        &:hover,
+        &:focus {
             color: #FDD54E;
         }
     }
     &-token {
+        padding: 0;
         font-weight: 400;
         font-size: 10px;
         line-height: 14px;
         color: #5A5A5A;
+        opacity: 1;
+        transition: all 0.5s;
+        &:focus {
+            opacity: 0;
+        }
     }
     &-search {
         &-icon {
@@ -4424,16 +4446,25 @@ h1, h2, h3, h4, h5, h6 {
             }
         }
     }
-    &-volume {
-        background: linear-gradient(41.19deg, #1EA74B 14.56%, #37B7B8 85.42%);
-        border-radius: 3px;
+    &-simple {
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;
         text-align: center;
         color: #FFFFFF;
-        padding: 7px 12px;
+        padding: 7px 7px;
         box-sizing: border-box;
+        transition: color 0.5s;
+        &.active,
+        &:focus {
+            color: #ffffff;
+            background: linear-gradient(41.19deg, #1EA74B 14.56%, #37B7B8 85.42%);
+            border-radius: 3px;
+            padding: 7px 14px;
+        }
+        &:hover {
+            color: #FDD54E;
+        }
     }
     &-green {
         color: #01AA78;
@@ -4520,6 +4551,7 @@ h1, h2, h3, h4, h5, h6 {
     &-item {
         margin-left: 8px;
         margin-right: 8px;
+        position: relative;
     }
     &-btn {
         background: #0F1514;
@@ -4544,6 +4576,11 @@ h1, h2, h3, h4, h5, h6 {
             background-image: url(../img/orders-btn-after.svg);
             margin-left: 10px;
         }
+        &:focus {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
     }
     &-icon {
         display: inline-block;
@@ -4563,6 +4600,107 @@ h1, h2, h3, h4, h5, h6 {
             background-image: url(../img/orders-icon-three.svg);
         }
     }
+    &-hide {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        min-width: 75px;
+        position: absolute;
+        z-index: 2;
+        display: none;
+        &-thue {
+            min-width: 151px;
+            & .orders-subitem {
+                padding-left: 25px;
+            }
+        }
+        &-three {
+            min-width: 457px;
+            height: 244px;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 3px;
+            }
+    
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                margin-top: 0;
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #0AA880;
+                border-radius: 5px;
+            }
+            
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #0AA880;
+            }
+        }
+        &.show {
+            display: block;
+        }
+    }
+    &-sublist {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+    }
+    &-subitem {
+        border-bottom: 1px solid #626262;
+        padding: 7px 0;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    &-sublink {
+        text-decoration: none;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        &:hover {
+            color: #FDD54E;
+        }
+    }
+    &-subform {
+        display: flex;
+        align-items: center;
+    }
+    &-subicon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 22px;
+        width: 22px;
+        height: 22px;
+        background: #2B2B2B;
+        border-radius: 2px;
+        margin-right: 5px;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 12px;
+            width: 12px;
+            height: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/orders-subicon-after.svg);
+        }
+    }
+    &-subfield {
+        width: 100%;
+        background-color: transparent;
+        box-sizing: border-box;
+        padding: 2px 10px;
+        border: 0;
+        outline: none;
+        color: #ffffff;
+    }
     &-deep {
         background: #0F1514;
         border: 1px solid #303642;
@@ -4575,9 +4713,15 @@ h1, h2, h3, h4, h5, h6 {
             line-height: 19px;
             color: #FFFFFF;
             padding: 10px 16px;
-            &.active {
+            transition: color 0.5s;
+            &:hover {
+                color: #FDD54E;
+            }
+            &.active,
+            &:focus {
                 background: linear-gradient(43.98deg, #1EA74B 18.47%, #37B7B8 86.09%);
                 border-radius: 3px;
+                color: #ffffff;
             }
         }
     }
@@ -4608,7 +4752,7 @@ h1, h2, h3, h4, h5, h6 {
                 height: 15px;
                 background-position: center;
                 background-repeat: no-repeat;
-                background-image: url(../img/orders-info-icon-after.svg);
+                background-image: url(../img/orders-info-icon-after-minus.svg);
             }
         }
     }
@@ -5124,6 +5268,9 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 10px;
         line-height: 14px;
         color: #FFFFFF;
+        & option {
+            border-bottom: 1px solid #ffffff;
+        }
     }
     &-table {
         font-weight: 400;
