@@ -4325,6 +4325,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Board - Left colump */
 .gramma {
     &-table {
         color: #FFFFFF;
@@ -4438,6 +4439,8 @@ h1, h2, h3, h4, h5, h6 {
         color: #01AA78;
     }
 }
+
+/* Board - Center colump */
 .history {
     &-title {
         font-weight: 400;
@@ -4504,6 +4507,11 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .orders {
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     &-list {
         display: flex;
         align-items: center;
@@ -4555,5 +4563,498 @@ h1, h2, h3, h4, h5, h6 {
             background-image: url(../img/orders-icon-three.svg);
         }
     }
+    &-deep {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        &-btn {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #FFFFFF;
+            padding: 10px 16px;
+            &.active {
+                background: linear-gradient(43.98deg, #1EA74B 18.47%, #37B7B8 86.09%);
+                border-radius: 3px;
+            }
+        }
+    }
+    &-info {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-btn {
+            padding: 0;
+            margin-right: 9px;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px;
+            width: 36px;
+            height: 36px;
+            background: #0F1514;
+            border: 1px solid #303642;
+            border-radius: 5px;
+            &::after {
+                content: '';
+                display: inline-block;
+                min-width: 15px;
+                width: 15px;
+                height: 15px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/orders-info-icon-after.svg);
+            }
+        }
+    }
+    &-drop {
+        &-btn {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            padding: 0;
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 9px;
+                width: 9px;
+                height: 5px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/orders-drop-btn-after.svg);
+                margin-left: 8px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    &-symbols {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+    }
+    &-symbol {
+        margin: 0 5px;
+    }
+    &-full {
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: #0F1514;
+            border: 1px solid #303642;
+            border-radius: 5px;
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 19px;
+                width: 19px;
+                height: 19px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/orders-full-icon-after.svg);
+            }
+        }
+    }
+}
+.vision {
+    margin-top: 15px;
+    position: relative;
+    &-btn {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #5A5A5A;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 9px;
+            width: 9px;
+            height: 5px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/vision-btn-after.svg);
+            margin-left: 7px;
+            margin-right: 7px;
+        }
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 21px;
+            width: 21px;
+            height: 21px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &-one {
+            &:after {
+                background-image: url(../img/vision-icon-one.svg);
+            }
+        }
+        &-thue {
+            &:after {
+                background-image: url(../img/vision-icon-thue.svg);
+            }
+        }
+        &-three {
+            &:after {
+                background-image: url(../img/vision-icon-three.svg);
+            }
+        }
+    }
+    &-nav {
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        &-item {
+            margin: 0 5px;
+        }
+    }
+    &-body {
+        border-right: 1px solid rgba(86, 85, 85, 0.5);
+        border-bottom: 1px solid rgba(86, 85, 85, 0.5);
+        height: 203px;
+    }
+    &-bottom {
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-hours {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 20px;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 1px;
+            width: 1px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            right: -29px;
+        }
+        &-btn {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 7px 11px;
+            box-sizing: border-box;
+            &.active,
+            &:hover {
+                background: linear-gradient(55.66deg, #1EA74B 14.73%, #37B7B8 68.65%);
+                border-radius: 3px;
+            }
+        }
+    }
+    &-go {
+        margin: 0 13px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        min-width: 222px;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 1px;
+            width: 1px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            right: -22px;
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+            background: #0F1514;
+            border: 1px solid #303642;
+            border-radius: 5px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 7px 10px;
+            box-sizing: border-box;
+            margin: 0 7px;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 19px;
+            width: 19px;
+            height: 19px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/vision-go-icon.svg);
+            margin-right: 4px;
+        }
+    }
+    &-logauto {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        &-btn {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 7px 10px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &.active {
+                background: linear-gradient(55.66deg, #1EA74B 14.73%, #37B7B8 68.65%);
+                border-radius: 3px;
+            }
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 21px;
+            width: 21px;
+            height: 21px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/vision-logauto-icon.svg);
+        }
+    }
+}
+.limit {
+    &-title {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    &-pre {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 217px;
+        width: 100%;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+        box-sizing: border-box;
+        padding: 5px 15px;
+        margin-bottom: 10px;
+    }
+    &-value {
+        color: #5A5A5A;
+    }
+    &-item {
+        margin-bottom: 15px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-lbl {
+        position: relative;
+    }
+    &-text {
+        display: block;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &-field {
+        background: #11191F;
+        border: 1px solid #929292;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 42px 10px 12px;
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        height: 42px;
+        margin: 10px 0;
+        &::placeholder {
+            color: #5A5A5A;
+        }
+    }
+    &-type {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #5A5A5A;
+        position: absolute;
+        bottom: 1px;
+        right: 15px;
+    }
+    &-parts {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 15px;
+        position: absolute;
+        right: 0;
+        top: 2px;
+        &-item {
+            display: inline-block;
+            text-decoration: underline;
+            margin-left: 11px;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+    &-min {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        position: absolute;
+        top: 2px;
+        right: 0;
+    }
+    &-more {
+        margin-top: 20px;
+        &-btn {
+            background: #0AA880;
+            border-radius: 3px;
+            width: 100%;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: #067458;
+            }
+        }
+        &-red {
+            background: #AD2F3F;
+            &:hover,
+            &:focus {
+                background: #8b1323;
+            }
+        }
+    }
+}
+.opening {
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    margin: 33px -15px 0 -15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    &-nav {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        padding: 2px;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &-btn {
+        padding: 8px 12px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #FFFFFF;
+        &.active,
+        &:hover,
+        &:focus {
+            background: linear-gradient(46.03deg, #1EA74B 17.82%, #37B7B8 83.06%);
+            border-radius: 3px;
+        }
+    }
+    &-table {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+        border-collapse: separate;
+        width: 100%;
+        & thead {
+            & tr {
+                position: relative;
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    background: #0F1514;
+                    border: 1px solid #303642;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                }
+            }
+            & th {
+                font-weight: 400;
+            }
+            & th,
+            & td {
+                padding: 10px 15px;
+            }
+        }
+    }
+    &-carret {
+        &::after {
+            content: '';
+            min-width: 7px;
+        }
+    }
 }
 
+/* Board - Right colump */
