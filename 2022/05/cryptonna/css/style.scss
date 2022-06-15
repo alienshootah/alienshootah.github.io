@@ -5050,11 +5050,201 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
     &-carret {
+        position: relative;
         &::after {
             content: '';
+            display: inline-block;
             min-width: 7px;
+            width: 7px;
+            height: 4px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/opening-carret-after.svg);
+            position: absolute;
+            right: -17px;
+            top: 6px;
         }
     }
 }
 
 /* Board - Right colump */
+.clasifyer {
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+    &-btns {
+        display: flex;
+        align-items: center;
+        margin: 0 -11px;
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 32px;
+        width: 32px;
+        height: 30px;
+        background: #303642;
+        border-radius: 5px;
+        margin: 0 11px;
+        &-dark {
+            background: #101620;
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 17px;
+        width: 17px;
+        height: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/clasifyer-icon-one.svg);
+        }
+        &-thue {
+            background-image: url(../img/clasifyer-icon-thue.svg);
+        }
+        &-three {
+            background-image: url(../img/clasifyer-icon-three.svg);
+        }
+    }
+    &-select {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 9px 24px 9px 9px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+    &-table {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        width: 100%;
+        text-align: left;
+        & thead {
+            & tr {
+                position: relative;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    background: #0F1514;
+                    border: 1px solid #303642;
+                    border-radius: 5px;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+            & th {
+                font-weight: 400;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                padding-left: 15px;
+                padding-right: 15px;
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+        & td {
+            padding: 0px 15px;
+            &:first-child {
+                color: #FF5F73;
+            }
+            &:nth-child(2) {
+                color: #808080;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+    &-carret {
+        display: inline-block;
+        min-width: 8px;
+        width: 8px;
+        height: 5px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/clasifyer-carret.svg);
+        margin-left: 7px;
+        position: relative;
+        top: -2px;
+    }
+}
+.upper {
+    &-table {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 25px;
+        width: 100%;
+        & thead {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            color: #01AA78;
+            & tr {
+                position: relative;
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    z-index: -1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: #0F1514;
+                    border: 1px solid #303642;
+                    border-radius: 5px;
+                }
+            }
+            & th {
+                font-weight: 400;
+                padding: 10px 13px;
+                text-align: left;
+                &:last-child {
+                    text-align: right;
+                }
+            }
+        }
+        & td {
+            padding: 7px 13px;
+            &:first-child {
+                color: #01AA78;
+                font-size: 12px;
+            }
+            &:nth-child(2) {
+                font-size: 12px;
+                color: #808080;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 19px;
+        width: 19px;
+        height: 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(../img/upper-icon.svg);
+        position: relative;
+        top: 3px;
+    }
+}
