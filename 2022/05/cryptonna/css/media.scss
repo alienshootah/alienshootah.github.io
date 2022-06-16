@@ -184,6 +184,124 @@
             }
         }
     }
+    /* Board */
+    .info {
+        text-align: center;
+    }
+    .board {
+        &-body {
+            border-bottom: none;
+        }
+        &-decor {
+            display: none;
+        }
+        &-top {
+            padding: 10px 0 30px 0;
+            &-list {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            &-item {
+                width: 30%;
+                &:after {
+                    right: 40px;
+                    height: 62px;
+                }
+                &:nth-child(3) {
+                    &:after {
+                        content: none;
+                    }
+                }
+                &:nth-child(2),
+                &:nth-child(5) {
+                    &:after {
+                        right: 67px;
+                    }
+                }
+                &:nth-child(1),
+                &:nth-child(4) {
+                    width: 30%;
+                }
+                &:nth-child(2),
+                &:nth-child(5) {
+                    width: 29%;
+                }
+                &:nth-child(3),
+                &:nth-child(6) {
+                    width: 25%;
+                }
+            }
+        }
+        &-nav {
+            display: flex;
+            margin: 20px -8px 8px -8px;
+            &-item {
+                margin: 8px;
+                &.active {
+                    & .board-nav-link {
+                        background: linear-gradient(36.22deg, #1EA74B 20.95%, #37B7B8 97.65%);
+                        border: 1px solid #37B7B8;
+                    }
+                }
+            }
+            &-link {
+                display: block;
+                background: #1C1C1C;
+                border: 1px solid #FFFFFF;
+                border-radius: 3px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                color: #FFFFFF;
+                padding: 12px 25px;
+                box-sizing: border-box;
+                text-decoration: none;
+                transition: all 0.5s;
+                &:hover,
+                &:focus {
+                    background: linear-gradient(36.22deg, #1EA74B 20.95%, #37B7B8 97.65%);
+                    border: 1px solid #37B7B8;
+                }
+            }
+        }
+        &-tabs {
+            flex-wrap: wrap;
+        }
+        &-tab {
+            width: 100%;
+            &.active {
+                display: block;
+            }
+            &-top { 
+                height: auto;
+                border-bottom: none;
+                padding-bottom: 30px;
+            }
+            &-left {
+                display: block;
+            }
+            &-center {
+                border-left: none;
+                border-right: none;
+            }
+            &-right {
+                
+            }
+        }
+    }
+    .vision {
+        &-hours,
+        &-go {
+            &::after {
+                content: none;
+            }
+        }
+    }
+    .history {
+        &-title {
+            margin-top: 0;
+        }
+    }
 }
 @media(max-width: 1200px) {
     .nav {
@@ -2982,7 +3100,6 @@
         }
     }
 }
-
 @media(max-width: 410px) {
     .promo {
         background-image: url(../img/promo-bg-360.jpg);
