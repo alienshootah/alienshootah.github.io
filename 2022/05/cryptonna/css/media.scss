@@ -284,9 +284,6 @@
                 border-left: none;
                 border-right: none;
             }
-            &-right {
-                
-            }
         }
     }
     .vision {
@@ -520,6 +517,41 @@
             position: relative;
             width: 85%;
             margin: 0 auto;
+        }
+    }
+    /* Board */
+    .board {
+        &-top {
+            &-item {
+                width: 33.3333%;
+                &:after {
+                    right: 36px;
+                    height: 64px;
+                }
+                &:nth-child(3) {
+                    &:after {
+                        content: none;
+                    }
+                }
+                &:nth-child(2),
+                &:nth-child(5) {
+                    &:after {
+                        right: 37px;
+                    }
+                }
+                &:nth-child(1),
+                &:nth-child(4) {
+                    width: 37%;
+                }
+                &:nth-child(2),
+                &:nth-child(5) {
+                    width: 29%;
+                }
+                &:nth-child(3),
+                &:nth-child(6) {
+                    width: 33.3333%;
+                }
+            }
         }
     }
 }
@@ -1813,6 +1845,66 @@
         }
         &-date {
             margin: 0 0 4px 0;
+        }
+    }
+    /* Board */
+    .info {
+        &-row {
+            width: calc(100% - 30px);
+            margin: 0 -5px;
+            & .col-4 {
+                padding: 0 5px;
+            }
+        }
+        &-btn {
+            top: 0;
+        }
+    }
+    .board {
+        &-top {
+            &-item {
+                width: 33.3333%!important;
+                border-left: 1px solid rgba(255, 255, 255, 0.2);
+                &::after {
+                    content: none;
+                }
+                &:nth-child(1),
+                &:nth-child(4) {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+    .gramma {
+        &-table {
+            & th {
+                &:first-child,
+                &:last-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    padding-left: 13px;
+                }
+            }
+            & td {
+                &:first-child,
+                &:last-child {
+                    text-align: left;
+                }
+                &:last-child {
+                    padding-left: 13px;
+                }
+            }
+            & tr:first-child {
+                & td {
+                    &:last-child {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        &-simple {
+            padding: 7px 14px;
         }
     }
 }
