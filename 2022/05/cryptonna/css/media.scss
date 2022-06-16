@@ -288,7 +288,7 @@
     }
     .vision {
         &-hours,
-        &-go {
+        &-logauto {
             &::after {
                 content: none;
             }
@@ -2594,6 +2594,70 @@
             font-weight: 500;
             font-size: 12px;
             line-height: 18px;
+        }
+    }
+    /* Board */
+    .info {
+        padding: 5px 0;
+        &-close {
+            display: none;
+        }
+        &-row {
+            flex-wrap: wrap;
+            width: 100%;
+            & .col-4 {
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    .board {
+        &-top {
+            padding: 10px 0;
+            &-item {
+                width: 50%!important;
+                border-left: 0;
+                padding-top: 5px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                &:nth-child(5),
+                &:nth-child(6) {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+    .orders {
+        &-top {
+            display: block;
+            &-right {
+                margin-top: 20px;
+            }
+        }
+        &-deep {
+            display: inline-block;
+        }
+    }
+    .vision {
+        &-bottom {
+            flex-wrap: wrap;
+        }
+        &-hours,
+        &-go,
+        &-logauto {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        &-hours {
+            margin-right: 5px;
+        }
+        &-logauto {
+            margin-left: 5px;
         }
     }
 }
