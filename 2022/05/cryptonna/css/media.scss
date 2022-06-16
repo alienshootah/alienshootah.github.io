@@ -185,6 +185,11 @@
         }
     }
     /* Board */
+    .tab-content {
+        &.board-tab {
+            display: none;
+        }
+    }
     .info {
         text-align: center;
     }
@@ -269,6 +274,7 @@
         }
         &-tab {
             width: 100%;
+            display: none;
             &.active {
                 display: block;
             }
@@ -276,9 +282,6 @@
                 height: auto;
                 border-bottom: none;
                 padding-bottom: 30px;
-            }
-            &-left {
-                display: block;
             }
             &-center {
                 border-left: none;
@@ -297,6 +300,41 @@
     .history {
         &-title {
             margin-top: 0;
+        }
+    }
+    .steps {
+        &-modal {
+            left: auto;
+            right: 165px;
+        }
+        &-body {
+            &:before {
+                left: auto;
+                right: -12px;
+                transform: rotate(180deg);
+            }
+        }
+        &-price {
+            top: 30px;
+            left: 0;
+            right: auto;
+        }
+        &-set {
+            left: 0;
+            right: auto;
+        }
+    }
+    .orders {
+        &-full {
+            &-descr {
+                left: auto;
+                right: 7px;
+                &:before {
+                    top: -12px;
+                    left: auto;
+                    right: 3px;
+                }
+            }
         }
     }
 }
@@ -1878,7 +1916,6 @@
     .gramma {
         &-table {
             & th {
-                &:first-child,
                 &:last-child {
                     text-align: left;
                 }
@@ -1887,7 +1924,6 @@
                 }
             }
             & td {
-                &:first-child,
                 &:last-child {
                     text-align: left;
                 }
@@ -1905,6 +1941,56 @@
         }
         &-simple {
             padding: 7px 14px;
+        }
+    }
+    .steps {
+        &-modal {
+            position: fixed;
+            top: 64px;
+            left: auto;
+            right: 15px;
+        }
+        &-body {
+            &:before {
+                content: none;
+            }
+        }
+        &-title {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 20px;
+            margin-bottom: 5px;
+        }
+        &-descr {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 0;
+        }
+        &-middle {
+            margin-top: 15px;
+        }
+        &-num {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 20px;
+            &-small {
+                font-size: 15px;
+            }
+        }
+        &-btn {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &-more {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            padding-bottom: 20px;
+        }
+        &-text {
+            margin-top: 2px;
         }
     }
 }
@@ -2663,6 +2749,11 @@
         &-full {
             width: 10%;
         }
+        &-hide {
+            &-three {
+                min-width: 200px;
+            }
+        }
     }
     .vision {
         &-nav {
@@ -2738,6 +2829,57 @@
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
+        }
+    }
+    .steps {
+        &-modal {
+            top: 100px;
+            left: 0;
+            right: 0;
+            border: 0;
+            width: 100%;
+            text-align: center;
+            & .modal-close {
+                right: 15px;
+                top: 15px;
+            }
+        }
+        &-body {
+            display: inline-block;
+            width: 320px;
+            padding: 15px;
+        }
+        &-title {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-descr {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-num {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            &-value {
+                font-size: 12px;
+            }
+        }
+        &-btn {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 12px 30px;
+            min-width: auto;
+        }
+        &-more {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 10px 10px 15px 10px;
+            margin-top: 20px;
         }
     }
 }
@@ -3375,6 +3517,14 @@
     .vision {
         &-body {
             height: 100px;
+        }
+    }
+    .orders {
+        &-hide {
+            &-three {
+                left: auto;
+                right: 0;
+            }
         }
     }
 }
@@ -4189,6 +4339,33 @@
             & thead {
                 font-size: 11px;
             }
+        }
+    }
+    .steps {
+        &-body {
+            width: 290px;
+        }
+    }
+    .orders {
+        &-info {
+            &-btn {
+                width: 15%;
+            }
+        }
+        &-drop {
+            width: 80%;
+        }
+        &-symbols {
+            font-size: 12px;
+            width: 80%;
+        }
+        &-full {
+            width: 15%;
+        }
+    }
+    .clasifyer {
+        &-table {
+            font-size: 11px;
         }
     }
 }
