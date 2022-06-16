@@ -4834,6 +4834,7 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0 5px;
     }
     &-full {
+        position: relative;
         &-icon {
             display: flex;
             align-items: center;
@@ -4852,6 +4853,44 @@ h1, h2, h3, h4, h5, h6 {
                 background-position: center;
                 background-repeat: no-repeat;
                 background-image: url(../img/orders-full-icon-after.svg);
+            }
+        }
+        &-descr {
+            display: none;
+            min-width: 160px;
+            height: 52px;
+            background: #0F1514;
+            border: 1px solid #0AA880;
+            box-shadow: 0px 10px 20px #131B1E;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 16px 20px;
+            box-sizing: border-box;
+            color: #BDBDBD;
+            position: absolute;
+            z-index: 3;
+            left: 7px;
+            top: 57px;
+            &:before {
+                content: '';
+                display: inline-block;
+                min-width: 13px;
+                width: 13px;
+                height: 13px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/orders-full-descr-before.png);
+                position: absolute;
+                z-index: 3;
+                top: -11px;
+                left: 3px;
+            }
+        }
+        &:hover, 
+        &:focus {
+            & .orders-full-descr {
+                display: block;
             }
         }
     }
@@ -4911,6 +4950,7 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         margin: 0 -5px;
         position: absolute;
+        z-index: 3;
         left: 0;
         top: 0;
         font-weight: 400;
@@ -4927,6 +4967,13 @@ h1, h2, h3, h4, h5, h6 {
         border-right: 1px solid rgba(86, 85, 85, 0.5);
         border-bottom: 1px solid rgba(86, 85, 85, 0.5);
         height: 203px;
+        position: relative;
+        &:hover,
+        &:focus {
+            & .control {
+                display: block;
+            }
+        }
     }
     &-bottom {
         padding-top: 25px;
@@ -5028,9 +5075,19 @@ h1, h2, h3, h4, h5, h6 {
             display: flex;
             align-items: center;
             justify-content: center;
-            &.active {
+            height: 32px;
+            & .whell {
+                padding-top: 3px;
+                padding-bottom: 3px;
+            }
+            &.active,
+            &:focus {
                 background: linear-gradient(55.66deg, #1EA74B 14.73%, #37B7B8 68.65%);
                 border-radius: 3px;
+                color: #ffffff;
+            }
+            &:hover {
+                color: #FDD54E;
             }
         }
         &-icon {
@@ -5053,9 +5110,13 @@ h1, h2, h3, h4, h5, h6 {
         color: #FFFFFF;
         border-radius: 5px;
         width: 431px;
-        height: 258px;
         position: absolute;
         z-index: 2;
+        top: 60px;
+        display: none;
+        &.show {
+            display: block;
+        }
         &-body {
             padding: 20px;
             box-sizing: border-box;
@@ -5136,6 +5197,11 @@ h1, h2, h3, h4, h5, h6 {
             padding: 0;
             margin: 0;
             position: absolute;
+            &:checked ~ .vision-show-check {
+                &:after {
+                    opacity: 1;
+                }
+            }
         }
         &-lbl {
             display: flex;
@@ -5160,6 +5226,8 @@ h1, h2, h3, h4, h5, h6 {
                 height: 20px;
                 background: #FDD54E;
                 border-radius: 5px;
+                opacity: 0;
+                transition: all 0.5s;
             }
         }
         &-select {
@@ -5171,10 +5239,10 @@ h1, h2, h3, h4, h5, h6 {
             line-height: 19px;
             color: #FFFFFF;
             box-sizing: border-box;
-            padding: 10px 30px 10px 15px;
+            padding: 8px 30px 8px 15px;
             appearance: none;
             background: url(../img/arrow_custom2.svg) no-repeat right;
-            background-position-x: calc(100% - 15px);
+            background-position-x: calc(100% - 12px);
             & option {
                 color: #000000;
             }
@@ -5190,7 +5258,7 @@ h1, h2, h3, h4, h5, h6 {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin-top: 20px;
+        margin-top: 30px;
         margin-left: -7px;
         margin-right: -7px;
         &-btn {
@@ -5237,17 +5305,19 @@ h1, h2, h3, h4, h5, h6 {
         padding-right: 10px;
     }
     &-icon {
-        display: inline-block;
-        min-width: 15px;
-        width: 15px;
-        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 16px;
+        width: 16px;
+        height: 16px;
         background-position: center;
         background-repeat: no-repeat;
-        &-left {
-            background-image: url(../img/plusmin-icon-left.svg);
-        }
-        &-right {
-            background-image: url(../img/plusmin-icon-right.svg);
+        &:hover,
+        &:focus {
+            & svg path {
+                fill: #FDD54E;
+            }
         }
     }
     &-field {
@@ -5264,6 +5334,60 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 19px;
         text-align: center;
         color: #FFFFFF;
+    }
+}
+.control {
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 20px;
+    left: 0;
+    display: none;
+    &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 -7px;
+    }
+    &-item {
+        margin: 0 7px;
+        &:nth-child(2) {
+            margin-right: 12px;
+        }
+        &:nth-child(3) {
+            margin-left: 12px;
+        }
+    }
+    &-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 15px;
+        width: 15px;
+        height: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+        &-one {
+            background-image: url(../img/control-icon-one.svg);
+        }
+        &-thue {
+            background-image: url(../img/control-icon-thue.svg);
+        }
+        &-three {
+            background-image: url(../img/control-icon-three.svg);
+        }
+        &-four {
+            background-image: url(../img/control-icon-four.svg);
+        }
     }
 }
 .limit {
@@ -5341,15 +5465,19 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
         line-height: 15px;
         position: absolute;
+        z-index: 3;
         right: 0;
         top: 2px;
         &-item {
             display: inline-block;
             text-decoration: underline;
             margin-left: 11px;
+            color: #ffffff;
+            padding: 0;
+            transition: all 0.5s;
             &:hover,
             &:focus {
-                text-decoration: none;
+                color: #FDD54E;
             }
         }
     }
@@ -5375,16 +5503,14 @@ h1, h2, h3, h4, h5, h6 {
             padding: 10px 15px;
             box-sizing: border-box;
             transition: all 0.5s;
-            &:hover,
-            &:focus {
-                background: #067458;
+            &:hover {
+                box-shadow: 0px 4px 20px rgba(10, 168, 128, 0.2);
             }
         }
         &-red {
             background: #AD2F3F;
-            &:hover,
-            &:focus {
-                background: #8b1323;
+            &:hover {
+                box-shadow: 0px 4px 20px rgba(173, 47, 63, 0.2);
             }
         }
     }
