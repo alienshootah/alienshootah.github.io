@@ -2617,6 +2617,7 @@
         }
     }
     .board {
+        padding-bottom: 30px;
         &-top {
             padding: 10px 0;
             &-item {
@@ -2631,6 +2632,11 @@
                 }
             }
         }
+        &-tab {
+            &-top {
+                padding-bottom: 10px;
+            }
+        }
     }
     .orders {
         &-top {
@@ -2642,10 +2648,31 @@
         &-deep {
             display: inline-block;
         }
+        &-info {
+            flex-wrap: wrap;
+            &-btn {
+                width: 10%;
+            }
+        }
+        &-drop {
+            width: 87%;
+        }
+        &-symbols {
+            width: 90%;
+        }
+        &-full {
+            width: 10%;
+        }
     }
     .vision {
+        &-nav {
+            display: none;
+        }
         &-bottom {
             flex-wrap: wrap;
+            width: 100%;
+            margin: 0 -5px;
+            justify-content: center;
         }
         &-hours,
         &-go,
@@ -2654,10 +2681,63 @@
             margin-bottom: 5px;
         }
         &-hours {
+            margin-left: 5px;
             margin-right: 5px;
+        }
+        &-go {
+            &-btn {
+                margin: 0;
+            }
+            &-drop {
+                min-width: 121px;
+                &:after {
+                    top: 14px;
+                    right: 7px;
+                }
+            }
         }
         &-logauto {
             margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+    .limit {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            margin-top: 40px;
+            width: 100%;
+        }
+    }
+    .opening {
+        &-list {
+            flex-wrap: wrap;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+        }
+        &-item {
+            width: 25%;
+            margin:5px 0;
+            background: #0F1514;
+            border-top: 1px solid #303642;
+            border-bottom: 1px solid #303642;
+            &:nth-child(1),
+            &:nth-child(5) {
+                border-left: 1px solid #303642;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            &:nth-child(4),
+            &:nth-child(8) {
+                border-right: 1px solid #303642;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
         }
     }
 }

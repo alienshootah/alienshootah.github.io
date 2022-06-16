@@ -5174,6 +5174,19 @@ h1, h2, h3, h4, h5, h6 {
         &-drop {
             padding-right: 12px;
             min-width: 147px;
+            position: relative;
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 10px;
+                width: 10px;
+                height: 6px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/vision-go-drop.svg);
+                position: absolute;
+                right: 10px;
+            }
         }
     }
     &-logauto {
@@ -5684,32 +5697,19 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 15px;
         border-collapse: separate;
         width: 100%;
-        & thead {
-            & tr {
-                position: relative;
-                &:after {
-                    content: '';
-                    display: inline-block;
-                    background: #0F1514;
-                    border: 1px solid #303642;
-                    border-radius: 5px;
-                    box-sizing: border-box;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    z-index: -1;
-                }
-            }
-            & th {
-                font-weight: 400;
-            }
-            & th,
-            & td {
-                padding: 10px 15px;
-            }
-        }
+    }
+    &-list {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    &-item {
+        padding: 10px 15px;
+        width: 12.5%;
+        box-sizing: border-box;
     }
     &-carret {
         position: relative;
@@ -5935,5 +5935,19 @@ h1, h2, h3, h4, h5, h6 {
         background-image: url(../img/upper-icon.svg);
         position: relative;
         top: 3px;
+    }
+    &-arrow {
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 14px;
+            width: 14px;
+            height: 14px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/upper-arrow.svg);
+            position: relative;
+            top: 1px;
+        }
     }
 }
