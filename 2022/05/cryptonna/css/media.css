@@ -2014,6 +2014,57 @@
   .steps-text {
     margin-top: 2px;
   }
+  /* Account */
+  .balance {
+    display: none;
+  }
+  .private .header-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .private-body {
+    display: none;
+  }
+  .account-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .account-left {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .account-right {
+    width: 100%;
+  }
+  .account-profile {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .account-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+  }
+  .account-item {
+    width: 33.3333%;
+    border-bottom: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .account-item:last-child {
+    border-right: 0;
+  }
+  .review-btn {
+    font-size: 16px;
+  }
+  .review-item:nth-child(2) .review-btn {
+    min-width: 205px;
+  }
+  .review-item:nth-child(4) .review-btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 750px) {
@@ -2855,6 +2906,64 @@
     line-height: 18px;
     padding: 10px 10px 15px 10px;
     margin-top: 20px;
+  }
+  /* Account */
+  .account-nav {
+    display: block;
+    text-align: left;
+  }
+  .account-item {
+    width: 100%;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .review-header {
+    display: none;
+  }
+  .review-item {
+    width: calc(100% - 14px);
+  }
+  .review-subitem {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .review-cell:before {
+    content: '';
+    display: block;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 15px;
+    color: #A3A3A3;
+  }
+  .review-cell:nth-child(1) {
+    width: 30%;
+  }
+  .review-cell:nth-child(1):before {
+    content: 'Зона входа';
+  }
+  .review-cell:nth-child(2) {
+    width: 70%;
+  }
+  .review-cell:nth-child(2):before {
+    content: 'Пользовательский агент';
+  }
+  .review-cell:nth-child(3) {
+    width: 40%;
+  }
+  .review-cell:nth-child(3):before {
+    content: 'Время';
+  }
+  .review-cell:nth-child(4) {
+    width: 30%;
+  }
+  .review-cell:nth-child(4):before {
+    content: 'Статус';
+  }
+  .review-cell:nth-child(5) {
+    width: 30%;
+  }
+  .review-cell:nth-child(5):before {
+    content: 'Операция';
   }
 }
 
