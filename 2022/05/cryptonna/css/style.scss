@@ -4784,6 +4784,12 @@ h1, h2, h3, h4, h5, h6 {
                 position: relative;
             }
         }
+        &-vision {
+            left: 8px;
+            min-width: 151px;
+            height: 185px;
+            overflow-y: scroll;
+        }
         &.show {
             display: block;
         }
@@ -6055,6 +6061,15 @@ h1, h2, h3, h4, h5, h6 {
 .account {
     position: relative;
     padding: 60px 0 80px 0;
+    &-tab {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    & .content {
+        position: relative;
+    }
     &-decor {
         display: inline-block;
         width: 586px;
@@ -6087,10 +6102,304 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 22px;
         color: #FFFFFF;
     }
+    &-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        &:last-child {
+            border-bottom: 0;
+        }
+        &.active {
+            & .account-link {
+                background: linear-gradient(43.98deg, #1EA74B 18.47%, #37B7B8 86.09%);
+                border-radius: 3px;
+            }
+        }
+    }
     &-link {
         color: #FFFFFF;
         text-decoration: none;
         display: block;
         padding: 11px 20px;
+        &:hover,
+        &:focus {
+            background: linear-gradient(43.98deg, #1EA74B 18.47%, #37B7B8 86.09%);
+            border-radius: 3px;
+        }
+    }
+}
+.review {
+    &-list {
+        margin: 0 -7px;
+        display: flex;
+        flex-wrap: wrap;
+        color: #ffffff;
+    }
+    &-item {
+        background: #0F1514;
+        box-shadow: 0px 10px 25px #131B1E;
+        margin: 10px 7px;
+        padding: 20px;
+        box-sizing: border-box;
+        width: calc(50% - 14px);
+        position: relative;
+        &:nth-child(3),
+        &:nth-child(4) {
+            min-height: 173px;
+        }
+    }
+    &-wrapper {
+        display: flex;
+    }
+    &-right {
+        margin-left: 15px;
+    }
+    &-step {
+        display: flex;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 25px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-right: 9px;
+        border: 1px solid rgb(55, 183, 184);
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 11px;
+            width: 11px;
+            height: 11px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/review-icon-after.svg);
+            position: relative;
+            top: -1px;
+        }
+    }
+    &-title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &-info {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #8B8B8B;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &-btn {
+        background: #0AA880;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 10px 14px;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            background: rgb(7, 130, 99);
+        }
+    }
+    &-more {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        &-link {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FDD54E;
+            text-decoration: none;
+            border-bottom: 1px solid #FDD54E;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-lbl {
+        position: relative;
+        margin-top: 13px;
+        margin-bottom: 70px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        &-green {
+            color: #0AA880;
+        }
+    }
+    &-field {
+        position: absolute;
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+        width: 0;
+        height: 0;
+        &:checked ~ .review-check:after {
+            opacity: 1;
+        }
+    }
+    &-check {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 34px;
+        width: 34px;
+        height: 34px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        margin-right: 13px;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 13px;
+            width: 13px;
+            height: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/review-check-after.svg);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    }
+    &-responsive {
+        background: #0F1514;
+        box-shadow: 0px 10px 25px #131B1E;
+        margin: 10px 0 0 0;
+        padding: 14px 20px;
+        box-sizing: border-box;
+    }
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-close {
+        &-btn {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: right;
+            color: #FDD54E;
+            padding: 0;
+            border-bottom: 1px solid #FDD54E;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    /* Review table */
+    &-table {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+    }
+    &-header {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        &-cell {
+            padding: 10px 15px;
+            box-sizing: border-box;
+            &:nth-child(1) {
+                width: 11%;
+            }
+            &:nth-child(2) {
+                width: 58%;
+            }
+            &:nth-child(3) {
+                width: 15%;
+            }
+            &:nth-child(4) {
+                width: 8%;
+            }
+            &:nth-child(5) {
+                width: 8%;
+            }
+        }
+    }
+    &-sublist {
+        height: 180px;
+        overflow-y: scroll;
+        margin-top: 10px;
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
+    }
+    &-subitem {
+        display: flex;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &-cell {
+        padding: 10px 15px;
+        box-sizing: border-box;
+        
+        &:nth-child(1) {
+            width: 11%;
+        }
+        &:nth-child(2) {
+            width: 58%;
+        }
+        &:nth-child(3) {
+            width: 15%;
+        }
+        &:nth-child(4) {
+            width: 8%;
+        }
+        &:nth-child(5) {
+            width: 8%;
+        }
+    }
+    &-clear {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FDD54E;
+        padding: 0;
+        border-bottom: 1px solid #FDD54E;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid transparent;
+        }
     }
 }
