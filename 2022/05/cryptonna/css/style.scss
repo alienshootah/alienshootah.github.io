@@ -6411,3 +6411,90 @@ h1, h2, h3, h4, h5, h6 {
         }
     }
 }
+.safety {
+    &-list {
+        display: flex;
+        margin: 0 -15px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #EEEEEE;
+    }
+    &-item {
+        width: calc(50% - 30px);
+        margin: 0 15px;
+        padding: 20px 20px 75px 20px;
+        box-sizing: border-box;
+        background: #0F1514;
+        box-shadow: 0px 10px 25px #131B1E;
+        position: relative;
+    }
+    &-top {
+        display: flex;
+        align-items: center;
+    }
+    &-picture {
+        margin-right: 10px;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(55, 183, 184, 1);
+        border-radius: 50%;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 27px;
+            width: 27px;
+            height: 27px;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        &-one {
+            &:after {
+                background-image: url(../img/safety-icon-one.svg);
+                position: relative;
+                top: -1px;
+            }
+        }
+        &-thue {
+            &:after {
+                background-image: url(../img/safety-icon-thue.svg);
+            }
+        }
+    }
+    &-title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #ffffff;
+    }
+    &-descr {
+        margin-top: 10px;
+    }
+    &-more {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+    }
+    &-btn {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        background: #0AA880;
+        border-radius: 3px;
+        min-width: 217px;
+        transition: all 0.5s;
+        &:hover {
+            box-shadow: 0px 4px 20px rgba(10, 168, 128, 0.2);
+        }
+    }
+}
