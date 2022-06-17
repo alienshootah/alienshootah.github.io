@@ -6074,8 +6074,9 @@ h1, h2, h3, h4, h5, h6 {
             display: block;
         }
     }
-    & .content {
+    &-left {
         position: relative;
+        z-index: 2;
     }
     &-decor {
         display: inline-block;
@@ -6087,6 +6088,10 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         left: -100px;
         bottom: -150px;
+        &-top {
+            bottom: auto;
+            top: 300px;
+        }
     }
     &-profile {
         display: flex;
@@ -6134,6 +6139,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .review {
+    position: relative;
+    z-index: 2;
     &-list {
         margin: 0 -7px;
         display: flex;
@@ -6412,6 +6419,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .safety {
+    position: relative;
+    z-index: 2;
     &-list {
         display: flex;
         margin: 0 -15px;
