@@ -2265,6 +2265,32 @@
             padding: 20px;
         }
     }
+    /* Deposit */
+    .deposit {
+        &-account {
+            flex-wrap: wrap;
+            background: none;
+            box-shadow: none;
+            justify-content: flex-start;
+            & .account {
+                &-item {
+                    margin-bottom: 20px;
+                    width: calc(33.3333% - 2px);
+                    & .active {
+                        position: relative;
+                        z-index: 2;
+                    }
+                    &:nth-child(3) {
+                        border-right: 0;
+                    }
+                }
+                &-link {
+                    background: #0F1514;
+                    box-shadow: 0px 10px 15px #131b1e;
+                }
+            }
+        }
+    }
 }
 @media(max-width: 750px) {
     .header {
