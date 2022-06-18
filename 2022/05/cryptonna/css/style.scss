@@ -6824,6 +6824,36 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 25px;
         color: #FFFFFF;
         margin: 0;
+        &-icon {
+            display: inline-block;
+            min-width: 28px;
+            width: 28px;
+            height: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/withdrawal-title-icon.svg);
+            margin-right: 9px;
+            position: relative;
+            top: 5px;
+        }
+        &-text {
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 8px;
+                width: 8px;
+                height: 5px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/withdrawal-title-text.svg);
+                position: relative;
+                top: -3px;
+                margin-left: 5px;
+            }
+        }
+        &-value {
+            color: #8B8B8B;
+        }
     }
     &-list {
         font-weight: 400;
@@ -7059,4 +7089,8 @@ h1, h2, h3, h4, h5, h6 {
     &-value {
         color: #6C6C6C;
     }
+}
+.profit {
+    position: relative;
+    z-index: 2;
 }
