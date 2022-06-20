@@ -7355,6 +7355,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .opening-responsive {
   overflow-x: auto;
+  overflow-y: auto;
+  height: 250px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.opening-responsive::-webkit-scrollbar {
+  height: 3px;
+  width: 3px;
+}
+
+.opening-responsive::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.opening-responsive::-webkit-scrollbar-thumb {
+  background: #0AA880;
+  border-radius: 5px;
+}
+
+.opening-responsive::-webkit-scrollbar-thumb:hover {
+  background: #0AA880;
 }
 
 .opening-table {
@@ -7398,6 +7423,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .opening tr td {
   padding: 10px 15px;
+}
+
+.opening-close-btn {
+  border: 1px solid #0AA880;
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-size: 13px;
+  color: #0AA880;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.opening-close-btn:hover, .opening-close-btn:focus {
+  color: #FDD54E;
+  border: 1px solid #FDD54E;
 }
 
 /* Board - Right colump */
@@ -7815,9 +7855,63 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFFFFF;
 }
 
+.private-drop {
+  position: relative;
+}
+
+.private-show {
+  display: none;
+  width: 140px;
+  height: auto;
+  background: #121A1B;
+  border: 1px solid #303642;
+  border-radius: 3px;
+  padding: 2px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 53px;
+  right: 6px;
+  overflow-y: scroll;
+}
+
+.private-show.show {
+  display: block;
+}
+
+.private-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.private-item:last-child .private-link {
+  border-bottom: 1px solid transparent;
+}
+
+.private-link {
+  color: #FFFFFF;
+  display: inline-block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #626262;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.private-link:hover, .private-link:focus {
+  color: #FDD54E;
+}
+
 .account {
   position: relative;
   padding: 60px 0 80px 0;
+  min-height: 800px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .account-tab {

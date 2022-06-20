@@ -5736,6 +5736,27 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-responsive {
         overflow-x: auto;
+        overflow-y: auto;
+        height: 250px;
+        &::-webkit-scrollbar {
+            height: 3px;
+            width: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
     }
     &-table {
         font-weight: 400;
@@ -5772,6 +5793,21 @@ h1, h2, h3, h4, h5, h6 {
     }
     & tr td {
         padding: 10px 15px;
+    }
+    &-close {
+        &-btn {
+            border: 1px solid #0AA880;
+            border-radius: 3px;
+            padding: 2px 5px;
+            font-size: 13px;
+            color: #0AA880;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                color: #FDD54E;
+                border: 1px solid #FDD54E
+            }
+        }
     }
 }
 
@@ -6112,10 +6148,58 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 19px;
         color: #FFFFFF;
     }
+    &-drop {
+        position: relative;
+    }
+    &-show {
+        display: none;
+        width: 140px;
+        height: auto;
+        background: #121A1B;
+        border: 1px solid #303642;
+        border-radius: 3px;
+        padding: 2px 15px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 53px;
+        right: 6px;
+        overflow-y: scroll;
+        &.show {
+            display: block;
+        }
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &-item {
+        &:last-child {
+            & .private-link {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-link {
+        color: #FFFFFF;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 0;
+        text-decoration: none;
+        border-bottom: 1px solid #626262;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            color: #FDD54E;
+        }
+    }
 }
 .account {
     position: relative;
     padding: 60px 0 80px 0;
+    min-height: 800px;
+    box-sizing: border-box;
     &-tab {
         display: none;
         &.active {

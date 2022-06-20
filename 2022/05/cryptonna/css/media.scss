@@ -690,6 +690,9 @@
         }
     }
     /* Account */
+    .account {
+        min-height: auto;
+    }
     .balance {
         right: 0;
         &-btn {
@@ -2154,11 +2157,9 @@
     }
     .private {
         & .header-btns {
-            display: flex;
-        }
-        &-body {
             display: none;
         }
+        
     }
     .account {
         &-row {
@@ -3126,33 +3127,7 @@
             width: 100%;
         }
     }
-    .opening {
-        &-list {
-            flex-wrap: wrap;
-            background: transparent;
-            border: 0;
-            border-radius: 0;
-        }
-        &-item {
-            width: 25%;
-            margin:5px 0;
-            background: #0F1514;
-            border-top: 1px solid #303642;
-            border-bottom: 1px solid #303642;
-            &:nth-child(1),
-            &:nth-child(5) {
-                border-left: 1px solid #303642;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-            }
-            &:nth-child(4),
-            &:nth-child(8) {
-                border-right: 1px solid #303642;
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-            }
-        }
-    }
+    
     .steps {
         &-modal {
             top: 100px;
@@ -3205,6 +3180,16 @@
         }
     }
     /* Account */
+    .private {
+        position: static;
+        & .header-btns {
+            display: flex;
+        }
+        &-body {
+            display: none;
+        }
+        
+    }
     .account {
         &-decor {
             display: none;
