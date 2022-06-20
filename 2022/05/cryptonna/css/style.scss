@@ -5712,6 +5712,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
+    &-responsive {
+        overflow: scroll;
+        height: 250px;
+    }
     &-nav {
         background: #0F1514;
         border: 1px solid #303642;
@@ -5734,30 +5738,6 @@ h1, h2, h3, h4, h5, h6 {
             border-radius: 3px;
         }
     }
-    &-responsive {
-        overflow-x: auto;
-        overflow-y: auto;
-        height: 250px;
-        &::-webkit-scrollbar {
-            height: 3px;
-            width: 3px;
-        }
-        /* Track */
-        &::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 5px;
-            margin-top: 0;
-        }
-        /* Handle */
-        &::-webkit-scrollbar-thumb {
-            background: #0AA880;
-            border-radius: 5px;
-        }
-        /* Handle on hover */
-        &::-webkit-scrollbar-thumb:hover {
-            background: #0AA880;
-        }
-    }
     &-table {
         font-weight: 400;
         font-size: 11px;
@@ -5765,6 +5745,7 @@ h1, h2, h3, h4, h5, h6 {
         border-collapse: collapse;
         width: 100%;
         text-align: center;
+        
     }
     &-list {
         background: #0F1514;
