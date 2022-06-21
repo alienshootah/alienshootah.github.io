@@ -5745,7 +5745,6 @@ h1, h2, h3, h4, h5, h6 {
         border-collapse: collapse;
         width: 100%;
         text-align: center;
-        
     }
     &-list {
         background: #0F1514;
@@ -7220,9 +7219,13 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: 0px 15px 25px #000000;
         padding: 15px;
         box-sizing: border-box;
-        min-width: 443px;
+        width: 443px;
         position: absolute;
+        top: 70px;
         display: none;
+        &.show {
+            display: block;
+        }
     }
     &-title {
         font-weight: 400;
@@ -7258,14 +7261,17 @@ h1, h2, h3, h4, h5, h6 {
         flex-wrap: wrap;
     }
     &-item {
-        width: calc(50% - 30px);
-        margin: 0 15px;
+        width: calc(50% - 20px);
+        margin: 0 10px;
         &-full {
-            width: calc(100% - 30px);
+            width: calc(100% - 20px);
         }
     }
     &-drop {
         position: relative;
+        &:hover .profit-hide {
+            display: block;
+        }
     }
     &-btn {
         background: #0F1514;
@@ -7319,6 +7325,9 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         font-size: 13px;
         display: none;
+        &.show {
+            display: block;
+        }
     }
     &-nums {
         font-weight: 400;
@@ -7379,30 +7388,42 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 .takeof {
-    &-responsive {
-        margin-top: 20px;
-        background: #0F1514;
-        box-shadow: 0px 10px 25px #131B1E;
-        padding: 20px;
-        box-sizing: border-box;
-    }
+    margin-top: 20px;
+    background: #0F1514;
+    box-shadow: 0px 10px 25px #131B1E;
+    padding: 20px;
+    box-sizing: border-box;
     &-title {
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
         margin-top: 0;
     }
-    &-list {
+    &-responsive {
+        overflow: scroll;
+        height: 250px;
+    }
+    &-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 15px;
+    }
+    & thead {
         background: #0F1514;
         border: 1px solid #303642;
         border-radius: 5px;
     }
-    &-item {
-        display: flex;
-    }
-    &-cell {
+    & td,
+    & th {
         padding: 10px 15px;
-        width: 16.6666666667%;
         box-sizing: border-box;
+    }
+    &-result {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
     }
 }

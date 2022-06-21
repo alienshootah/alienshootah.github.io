@@ -9255,9 +9255,14 @@ h1, h2, h3, h4, h5, h6 {
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-width: 443px;
+  width: 443px;
   position: absolute;
+  top: 70px;
   display: none;
+}
+
+.profit-block.show {
+  display: block;
 }
 
 .profit-title {
@@ -9302,16 +9307,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .profit-item {
-  width: calc(50% - 30px);
-  margin: 0 15px;
+  width: calc(50% - 20px);
+  margin: 0 10px;
 }
 
 .profit-item-full {
-  width: calc(100% - 30px);
+  width: calc(100% - 20px);
 }
 
 .profit-drop {
   position: relative;
+}
+
+.profit-drop:hover .profit-hide {
+  display: block;
 }
 
 .profit-btn {
@@ -9375,6 +9384,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   font-size: 13px;
   display: none;
+}
+
+.profit-hide.show {
+  display: block;
 }
 
 .profit-nums {
@@ -9450,7 +9463,7 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0px 4px 20px rgba(10, 168, 128, 0.2);
 }
 
-.takeof-responsive {
+.takeof {
   margin-top: 20px;
   background: #0F1514;
   -webkit-box-shadow: 0px 10px 25px #131B1E;
@@ -9467,22 +9480,36 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
 
-.takeof-list {
+.takeof-responsive {
+  overflow: scroll;
+  height: 250px;
+}
+
+.takeof-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.takeof thead {
   background: #0F1514;
   border: 1px solid #303642;
   border-radius: 5px;
 }
 
-.takeof-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.takeof-cell {
+.takeof td,
+.takeof th {
   padding: 10px 15px;
-  width: 16.6666666667%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.takeof-result {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
