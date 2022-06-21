@@ -3737,18 +3737,15 @@ h1, h2, h3, h4, h5, h6 {
             border: 1px solid #0AA880;
         }
         &:hover .categories-text-value,
-        &:focus .categories-text-value,
         &.active .categories-text-value {
             color: #FFFFFF;
         }
         &:hover .categories-icon,
-        &:focus .categories-icon,
         &.active .categories-icon {
             background: #00956F;
             border: 1px solid #00956F;
         }
         &:hover .categories-icon:after,
-        &:focus .categories-icon:after,
         &.active .categories-icon:after {
             background-image: url(../img/categories-icon-after-white.svg);
         }
@@ -3926,7 +3923,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     &-image {
         width: 100%;
-        border-radius: 3px;
+        height: 415px;
+        object-fit: cover;
+        border-radius: 5px;
         margin-bottom: -6px;
     }
     &-left {
@@ -7603,8 +7602,6 @@ h1, h2, h3, h4, h5, h6 {
         box-shadow: 0px 10px 25px #131B1E;
         padding: 20px;
         box-sizing: border-box;
-        overflow: scroll;
-        height: 220px;
     }
     &-table {
         font-weight: 400;
@@ -7612,27 +7609,55 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 25px;
         color: #ffffff;
         width: 100%;
-        border-collapse: collapse;
-        & thead {
-            background: #0F1514;
-            border: 1px solid #303642;
-            border-radius: 5px;
-            text-align: left;
-        }
-        & th {
-            font-weight: 400;
-        }
-        & th,
-        & td {
+    }
+    &-header {
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        &-cell {
             padding: 7px 15px;
+            width: 14.2857%;
+            box-sizing: border-box;
         }
-        & tbody {
-            & tr {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                &:last-child {
-                    border-bottom: none;
-                }
-            }
+    }
+    &-list {
+        overflow-y: scroll;
+        height: 180px;
+        &::-webkit-scrollbar {
+            width: 3px;
         }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+          }
+           
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+          }
+          
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
+    }
+    &-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &-cell {
+        padding: 10px 15px;
+        width: 14.2857%;
+        box-sizing: border-box;
     }
 }

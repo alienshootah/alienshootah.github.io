@@ -40,26 +40,22 @@
 
 @media (min-width: 750px) {
   .opening-responsive,
-  .takeof-responsive,
-  .story-responsive {
+  .takeof-responsive {
     overflow-y: auto;
     height: 250px;
     /* Handle on hover */
   }
   .opening-responsive::-webkit-scrollbar,
-  .takeof-responsive::-webkit-scrollbar,
-  .story-responsive::-webkit-scrollbar {
+  .takeof-responsive::-webkit-scrollbar {
     height: 3px;
     width: 3px;
   }
   .opening-responsive::-webkit-scrollbar-thumb:hover,
-  .takeof-responsive::-webkit-scrollbar-thumb:hover,
-  .story-responsive::-webkit-scrollbar-thumb:hover {
+  .takeof-responsive::-webkit-scrollbar-thumb:hover {
     background: #0AA880;
   }
   .opening-responsive::-webkit-scrollbar-corner,
-  .takeof-responsive::-webkit-scrollbar-corner,
-  .story-responsive::-webkit-scrollbar-corner {
+  .takeof-responsive::-webkit-scrollbar-corner {
     background: rgba(255, 255, 255, 0.1);
   }
 }
@@ -2227,6 +2223,13 @@
   .steps-price .steps-body:before {
     content: '';
   }
+  .story-responsive {
+    padding: 10px 15px;
+  }
+  .story table th,
+  .story table td {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -3160,6 +3163,14 @@
     margin-top: 10px;
     margin-bottom: 10px;
   }
+  .withdrawal-sublist {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+  .withdrawal-subitem {
+    display: inline-block;
+  }
   .deposit-responsive {
     padding: 17px 12px 17px 17px;
   }
@@ -3259,6 +3270,35 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+  }
+  .story-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .story-left {
+    width: 51%;
+    margin-bottom: 20px;
+  }
+  .story-center {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .story-right {
+    width: 100%;
+  }
+  .story-last {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .story-last .story-title {
+    margin-bottom: 0;
+    margin-right: 21px;
+    position: relative;
+    top: 3px;
   }
 }
 

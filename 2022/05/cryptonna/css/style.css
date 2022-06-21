@@ -4795,20 +4795,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .categories-link:hover .categories-text-value,
-.categories-link:focus .categories-text-value,
 .categories-link.active .categories-text-value {
   color: #FFFFFF;
 }
 
 .categories-link:hover .categories-icon,
-.categories-link:focus .categories-icon,
 .categories-link.active .categories-icon {
   background: #00956F;
   border: 1px solid #00956F;
 }
 
 .categories-link:hover .categories-icon:after,
-.categories-link:focus .categories-icon:after,
 .categories-link.active .categories-icon:after {
   background-image: url(../img/categories-icon-after-white.svg);
 }
@@ -5036,7 +5033,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .single-image {
   width: 100%;
-  border-radius: 3px;
+  height: 415px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
   margin-bottom: -6px;
 }
 
@@ -9756,8 +9756,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow: scroll;
-  height: 220px;
 }
 
 .story-table {
@@ -9766,30 +9764,72 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 25px;
   color: #ffffff;
   width: 100%;
-  border-collapse: collapse;
 }
 
-.story-table thead {
+.story-header {
   background: #0F1514;
   border: 1px solid #303642;
   border-radius: 5px;
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.story-table th {
-  font-weight: 400;
-}
-
-.story-table th,
-.story-table td {
+.story-header-cell {
   padding: 7px 15px;
+  width: 14.2857%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.story-table tbody tr {
+.story-list {
+  overflow-y: scroll;
+  height: 180px;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.story-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.story-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.story-list::-webkit-scrollbar-thumb {
+  background: #0AA880;
+  border-radius: 5px;
+}
+
+.story-list::-webkit-scrollbar-thumb:hover {
+  background: #0AA880;
+}
+
+.story-item {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.story-table tbody tr:last-child {
+.story-item:last-child {
   border-bottom: none;
+}
+
+.story-cell {
+  padding: 10px 15px;
+  width: 14.2857%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 /*# sourceMappingURL=style.css.map */
