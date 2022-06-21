@@ -7758,6 +7758,79 @@ body {
   margin-left: 9px;
 }
 
+.balance-drop {
+  position: relative;
+}
+
+.balance-show {
+  display: none;
+  width: 140px;
+  height: auto;
+  background: #121A1B;
+  border: 1px solid #303642;
+  border-radius: 3px;
+  padding: 2px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 37px;
+  right: 0;
+  overflow-y: scroll;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.balance-show.show {
+  display: block;
+}
+
+.balance-show::-webkit-scrollbar {
+  width: 3px;
+}
+
+.balance-show::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.balance-show::-webkit-scrollbar-thumb {
+  background: #0AA880;
+  border-radius: 5px;
+}
+
+.balance-show::-webkit-scrollbar-thumb:hover {
+  background: #0AA880;
+}
+
+.balance-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.balance-item:last-child .balance-link {
+  border-bottom: 1px solid transparent;
+}
+
+.balance-link {
+  color: #FFFFFF;
+  display: inline-block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 12px 0;
+  text-decoration: none;
+  border-bottom: 1px solid #626262;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.balance-link:hover, .balance-link:focus {
+  color: #FDD54E;
+}
+
 .private {
   position: absolute;
   right: 8px;
@@ -7845,10 +7918,32 @@ body {
   top: 53px;
   right: 6px;
   overflow-y: scroll;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
 }
 
 .private-show.show {
   display: block;
+}
+
+.private-show::-webkit-scrollbar {
+  width: 3px;
+}
+
+.private-show::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-top: 0;
+}
+
+.private-show::-webkit-scrollbar-thumb {
+  background: #0AA880;
+  border-radius: 5px;
+}
+
+.private-show::-webkit-scrollbar-thumb:hover {
+  background: #0AA880;
 }
 
 .private-list {

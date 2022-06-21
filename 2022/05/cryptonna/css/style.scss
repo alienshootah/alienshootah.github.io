@@ -6071,6 +6071,70 @@ body {
         color: #FFFFFF;
         margin-left: 9px;
     }
+    &-drop {
+        position: relative;
+    }
+    &-show {
+        display: none;
+        width: 140px;
+        height: auto;
+        background: #121A1B;
+        border: 1px solid #303642;
+        border-radius: 3px;
+        padding: 2px 15px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 37px;
+        right: 0;
+        overflow-y: scroll;
+        &.show {
+            display: block;
+        }
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &-item {
+        &:last-child {
+            & .balance-link {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-link {
+        color: #FFFFFF;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px 0;
+        text-decoration: none;
+        border-bottom: 1px solid #626262;
+        transition: all 0.5s;
+        &:hover,
+        &:focus {
+            color: #FDD54E;
+        }
+    }
 }
 .private {
     & .header-btns {
@@ -6141,6 +6205,24 @@ body {
         overflow-y: scroll;
         &.show {
             display: block;
+        }
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
         }
     }
     &-list {
