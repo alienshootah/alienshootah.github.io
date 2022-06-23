@@ -8047,3 +8047,69 @@ body {
         }
     }
 }
+.cryptic {
+    color: #ffffff;
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &-responsive { 
+        height: 281px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &-item {
+        width: calc(25%);
+        border-bottom: 1px solid #303642;
+    }
+    &-btn {
+        width: 100%;
+        height: 100%;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        box-sizing: border-box;
+        padding: 12px 10px;
+        &:hover,
+        &:focus,
+        &.active {
+            background: linear-gradient(43.98deg, #1EA74B 18.47%, #37B7B8 86.09%);
+            border-radius: 3px;
+        }
+    }
+    &-icon {
+        min-width: 25px;
+        width: 25px;
+        height: 25px;
+        margin-right: 8px;
+        position: relative;
+        top: 0;
+    }
+}
