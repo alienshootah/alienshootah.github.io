@@ -10768,7 +10768,7 @@ body {
   position: relative;
 }
 
-.ways-nav-item:after {
+.ways-nav-item:before {
   content: '';
   display: block;
   width: 550px;
@@ -10777,24 +10777,32 @@ body {
   position: absolute;
   z-index: -1;
   bottom: 28px;
-  left: 100px;
+  right: 240px;
 }
 
 .ways-nav-item:nth-child(1) {
+  text-align: left;
   width: 23%;
+}
+
+.ways-nav-item:nth-child(1):before {
+  content: none;
+}
+
+.ways-nav-item:nth-child(2) {
   text-align: left;
 }
 
-.ways-nav-item:nth-child(2):after {
-  width: 620px;
+.ways-nav-item:nth-child(2):before {
+  width: 480px;
 }
 
 .ways-nav-item:nth-child(3) {
   text-align: right;
 }
 
-.ways-nav-item:nth-child(3):after {
-  content: none;
+.ways-nav-item:nth-child(3):before {
+  width: 620px;
 }
 
 .ways-nav-item.active .ways-nav-text {

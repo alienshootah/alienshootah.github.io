@@ -8417,7 +8417,7 @@ body {
             margin: 0 15px;
             box-sizing: border-box;
             position: relative;
-            &:after {
+            &:before {
                 content: '';
                 display: block;
                 width: 550px;
@@ -8426,21 +8426,25 @@ body {
                 position: absolute;
                 z-index: -1;
                 bottom: 28px;
-                left: 100px;
+                right: 240px;
             }
             &:nth-child(1) {
-                width: 23%;
                 text-align: left;
+                width: 23%;
+                &:before {
+                    content: none;
+                }
             }
             &:nth-child(2) {
-                &:after {
-                    width: 620px;
+                text-align: left;
+                &:before {
+                    width: 480px;
                 }
             }
             &:nth-child(3) {
                 text-align: right;
-                &:after {
-                    content: none;
+                &:before {
+                    width: 620px;
                 }
             }
             &.active {
