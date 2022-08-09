@@ -8271,6 +8271,7 @@ body {
 
 /* Steps */
 
+/* Step 1 */
 .guide {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -8309,7 +8310,6 @@ body {
         line-height: 16px;
         transition: all 0.5s;
         &:hover,
-        &:focus,
         &.active {
             border-bottom: 2px solid #29AE77;
         }
@@ -8388,8 +8388,7 @@ body {
         text-decoration: none;
         border-bottom: 1px solid #626262;
         transition: all 0.5s;
-        &:hover,
-        &:focus {
+        &:hover {
             color: #FDD54E;
         }
     }
@@ -8426,7 +8425,7 @@ body {
                 position: absolute;
                 z-index: -1;
                 bottom: 28px;
-                right: 240px;
+                right: 200px;
             }
             &:nth-child(1) {
                 text-align: left;
@@ -8444,7 +8443,8 @@ body {
             &:nth-child(3) {
                 text-align: right;
                 &:before {
-                    width: 620px;
+                    right: 220px;
+                    width: 520px;
                 }
             }
             &.active {
@@ -8454,6 +8454,9 @@ body {
                 & .ways-nav-decor {
                     color: #0AA880;
                     border: 1px solid #0AA880;
+                }
+                &:before {
+                    background-color: #0AA880;
                 }
             }
         }
@@ -8487,6 +8490,12 @@ body {
     &-tabs {
         margin-top: 28px;
     }
+    &-content {
+        background: #0F1514;
+        border-radius: 5px;
+        padding: 30px;
+        box-sizing: border-box;
+    }
     &-row {
         margin-top: 42px;
         align-items: center;
@@ -8502,8 +8511,7 @@ body {
             text-decoration: none;
             display: flex;
             align-items: center;
-            &:hover,
-            &:focus {
+            &:hover {
                 & .ways-help-text {
                     border-bottom: 1px solid transparent;
                 }
@@ -8540,18 +8548,22 @@ body {
         color: #FFFFFF;
         transition: all 0.5s;
         border: 1px solid #0AA880;
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid #ffffff;
             background-color: transparent;
+        }
+        &-gray {
+            border: 1px solid #ffffff;
+            background-color: transparent;
+            margin-right: 10px;
+            &:hover {
+                background: #0AA880;
+                border: 1px solid #0AA880;
+            }
         }
     }
 }
 .sellbuy {
-    background: #0F1514;
-    border-radius: 5px;
-    padding: 30px;
-    box-sizing: border-box;
     &-nav {
         display: flex;
         align-items: center;
@@ -8559,7 +8571,6 @@ body {
         &-item {
             margin: 0 9px;
             &:hover,
-            &:focus,
             &.active {
                 & .sellbuy-nav-btn {
                     background: #0AA880;
@@ -8726,8 +8737,7 @@ body {
         border: 1px solid #5A5A5A;
         border-radius: 5px;
         margin: 0 4px;
-        &:hover,
-        &:focus {
+        &:hover {
             border: 1px solid rgba(217, 12, 12, 0.2);
             & svg path {
                 fill: rgba(217, 12, 12, 0.2);
@@ -8749,5 +8759,144 @@ body {
         font-weight: 500;
         font-size: 16px;
         line-height: 22px;
+    }
+}
+
+/* Step 2 */
+.summary {
+    max-width: 580px;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px 20px -10px;
+    }
+    &-item {
+        margin: 0 10px 10px 10px;
+        width: calc(50% - 20px);
+        position: relative;
+        &-full {
+            width: calc(100% - 20px);
+        }
+        &:nth-child(2) {
+            &:after {
+                content: '~';
+                position: absolute;
+                right: -14px;
+                bottom: 12px;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 18px;
+                color: #5A5A5A;
+            }
+        }
+    }
+    &-subtitle {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        &.hide {
+            opacity: 0;
+        }
+    }
+    &-lbl {
+        position: relative;
+        display: block;
+    }
+    &-field {
+        background: #11191F;
+        border: 1px solid #929292;
+        border-radius: 3px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #5A5A5A;
+        width: 100%;
+        height: 42px;
+        padding: 5px 10px;
+    }
+    &-name {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: right;
+        color: #5A5A5A;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+    }
+    &-text {
+        display: block;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: right;
+        color: #5A5A5A;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+}
+.methods {
+    margin-top: 30px;
+    &-subtitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 19px;
+        color: #AFAFAF;
+        margin: 0;
+    }
+    &-name {
+        display: block;
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        margin: 10px 0 5px 0;
+    }
+    &-add {
+        margin: 10px 0 30px 0;
+        &-btn {
+            background: #0AA880;
+            border-radius: 3px;
+            border: 1px solid #0AA880;
+            padding: 8px 15px;
+            box-sizing: border-box;
+            min-width: 198px;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/methods-add-icon.svg);
+            margin-right: 25px;
+        }
+    }
+    &-field {
+        border: 1px solid #929292;
+        border-radius: 3px;
+        max-width: 210px;
+        width: 100%;
+        height: 42px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        padding: 5px 8px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        color: #5A5A5A;
+        appearance: none;
+        background: url(../img/methods-arrow.svg) no-repeat right;
+        background-position-x: calc(100% - 18px);
+        background-color: #11191F;
     }
 }
