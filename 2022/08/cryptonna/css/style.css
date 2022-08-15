@@ -13377,7 +13377,7 @@ body {
   background: #2D302F;
   border: 1px solid #FFFFFF;
   border-radius: 3px;
-  height: 43px;
+  height: 45px;
   padding: 5px 16px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13506,17 +13506,21 @@ body {
   margin-top: 20px;
 }
 
-.technique-table thead {
+.technique-table-top {
+  width: 100%;
   text-align: left;
-}
-
-.technique-table thead:after {
-  content: '';
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin-bottom: 20px;
 }
 
-.technique-table th {
+.technique-table-top span {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -13525,29 +13529,34 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-bottom: 1.5px solid rgba(255, 255, 255, 0.1);
+  width: 33.3333%;
 }
 
-.technique-table th:nth-child(1) {
-  width: 33%;
-}
-
-.technique-table td {
-  padding: 20px 0;
+.technique-table-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   background: #222625;
+}
+
+.technique-table-cell {
+  padding: 20px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.technique-table td:first-child {
+.technique-table-cell:first-child {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding-left: 20px;
 }
 
-.technique-table td:last-child {
+.technique-table-cell:last-child {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   padding-right: 20px;
+  padding-left: 20px;
 }
 
 .technique-user {
@@ -13604,7 +13613,7 @@ body {
 
 .technique-user-btn {
   padding: 0;
-  margin-top: 25px;
+  margin-top: 28px;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
