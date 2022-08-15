@@ -2857,6 +2857,34 @@
             line-height: 20px;
         }
     }
+    /* Step 2 */ 
+    .ways {
+        &-left {
+            width: 35%;
+        }
+        &-right {
+            width: 65%;
+        }
+    }
+    /* Step 3 */ 
+    .details {
+        &-body {
+            padding: 16px;
+        }
+        &-title {
+            margin: 0 0 12px 0;
+        }
+        &-field {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-num {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
 }
 @media (max-width: 980px) and (min-width: 750px) {
     /* Deposit */
@@ -4433,6 +4461,37 @@
             }
         }
     }
+    /* Step 2 */
+    .ways {
+        &-row {
+            flex-wrap: wrap;
+            text-align: left;
+            margin-top: 21px;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 10px;
+        }
+        &-more {
+            text-align: center;
+        }
+        &-help {
+            &-link {
+                justify-content: center;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+            }
+            &-single {
+                & .ways-help-link {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 750px) and (min-width: 320px) {
     .steps {
@@ -5626,29 +5685,6 @@
                 line-height: 16px;
             }
         }
-        &-row {
-            flex-wrap: wrap;
-            text-align: left;
-            margin-top: 21px;
-        }
-        &-left {
-            width: 100%;
-        }
-        &-right {
-            width: 100%;
-            margin-top: 20px;
-        }
-        &-more {
-            text-align: center;
-        }
-        &-help {
-            &-link {
-                justify-content: center;
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 19px;
-            }
-        }
     }
     .sellbuy {
         &-nav {
@@ -5708,6 +5744,45 @@
             &:last-child {
                 margin-top: 19px;
             }
+        }
+    }
+    /* Step 2 */
+    .ways {
+        &-more {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        &-btn {
+            margin: 10px;
+            width: 196px;
+            box-sizing: border-box;
+        }
+    }
+    /* Step 3 */
+    .details {
+        &-text {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+    .final {
+        margin-top: 25px;
+        &-more {
+            text-align: center;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        & .ways-btn {
+            width: auto;
+            padding: 9px 24px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0;
+            margin-top: 0;
         }
     }
 }
@@ -6905,5 +6980,17 @@
     }
     .sellbuy-nav-btn {
         padding: 10px 12px;
+    }
+    /* Step 3 */
+    .details {
+        &-title {
+            font-size: 13px;
+        }
+        &-wrapper {
+            display: block;
+        }
+        &-right {
+            margin-top: 10px;
+        }
     }
 }
