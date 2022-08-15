@@ -2561,6 +2561,9 @@
                 font-size: 16px;
                 line-height: 22px;
             }
+            &-icon {
+                top: -1px;
+            }
         }
         &-total {
             margin-top: 15px;
@@ -4162,10 +4165,15 @@
                 line-height: 19px;
             }
         }
-        &-table-top span {
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 16px;
+        &-table {
+            &-top span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            &-item {
+                flex-wrap: wrap;
+            }
         }
     }
     .cost {
@@ -4212,6 +4220,11 @@
         }
         &-right {
             width: 100%;
+        }
+        &-nav {
+            &-list {
+                flex-wrap: wrap;
+            }
         }
     }
 }
@@ -5105,6 +5118,271 @@
             font-size: 14px;
         }
     }
+
+    /* Technique */
+    .technique {
+        &-top {
+            padding-top: 20px;
+            &-row {
+                padding-bottom: 10px;
+            }
+        }
+        &-item {
+            width: calc(50% - 20px);
+            margin: 10px 10px 5px 10px;
+        }
+        &-prev {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 0;
+        }
+        &-value {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+        }
+        &-name {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+        }
+        &-body {
+            padding-bottom: 10px;
+        }
+        &-single {
+            padding: 15px;
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        &-add {
+            &-btn {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 19px;
+                & svg {
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+            &-icon {
+                top: 0;
+                margin-right: 10px;
+            }
+        }
+        &-total {
+            &-item {
+                justify-content: space-between;
+            }
+        }
+        &-num {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 24px;
+        }
+        &-table {
+            &-top {
+                justify-content: space-between;
+                margin-bottom: 15px;
+                & span {
+                    &:nth-child(2) {
+                        text-align: center;
+                    }
+                    &:nth-child(3) {
+                        text-align: right;
+                    }
+                }
+            }
+            &-item {
+                padding: 15px 20px;
+                box-sizing: border-box;
+            }
+            &-cell {
+                padding: 0!important;
+            }
+        }
+        &-user {
+            align-items: flex-start;
+            &-picture {
+                min-width: 37px;
+                width: 37px;
+                height: 37px;
+            }
+            &-icon {
+                min-width: 16px;
+                width: 16px;
+                height: 16px;
+                background-size: contain;
+            }
+            &-name {
+                margin-top: 5px;
+                margin-bottom: -4px;
+            }
+            &-btn {
+                margin-top: 0;
+                margin-bottom: -5px;
+                margin-left: 50px;
+                position: relative;
+                top: -5px;
+            }
+        }
+        &-arrows {
+            margin-right: -7px;
+        }
+    }
+    .user {
+        &-top {
+            flex-wrap: wrap;
+        }
+        &-picture {
+            margin-bottom: 15px;
+            &-icon {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+        &-edit {
+            &-btn {
+                min-width: 22px;
+                width: 22px;
+                height: 22px;
+                border-radius: 2px;
+            }
+            &-icon {
+                min-width: 13px;
+                width: 13px;
+                height: 13px;
+                background-size: contain;
+            }
+        }
+        &-status {
+            height: 39px;
+            padding: 10px 14px;
+        }
+        &-list {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &-icon {
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+            background-size: 45%;
+        }
+    }
+    .cost {
+        &-right {
+            display: none;
+        }
+    }
+    .modus {
+        padding: 5px;
+        &-top {
+            padding: 8px 25px 8px 15px;
+        }
+        &-name {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            &:before {
+                margin-right: 5px;
+            }
+        }
+        &-exam {
+            margin-top: 0;
+        }
+        &-edit,
+        &-delete {
+            &-link {
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        &-edit {
+            &:after {
+                margin-left: 5px;
+                margin-right: 7px;
+            }
+        }
+        &-value {
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+    .goobad {
+        &-number {
+            min-width: 20px;
+        }
+    }
+    .feedback {
+        &-nav {
+            justify-content: center;
+            &-list {
+                text-align: center;
+            }
+            &-item {
+                width: calc(100% - 16px);
+            }
+            &-btn {
+                min-width: 288px;
+            }
+        }
+        &-picture {
+            margin-right: 12px;
+        }
+        &-icon {
+            min-width: 25px;
+            width: 25px;
+            height: 25px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            padding-top: 1px;
+            box-sizing: border-box;
+        }
+        &-name {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: 5px;
+        }
+        &-date {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-bank {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-review {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+            margin-top: -5px;
+            &-picture {
+                margin-right: 10px;
+            }
+            &-icon {
+                min-width: 20px;
+                width: 20px;
+                height: 20px;
+                background-size: 40%;
+            }
+            &-text {
+                margin-top: 8px;
+            }
+        }
+    }
+
 }
 @media(max-width: 410px) {
     .promo {
@@ -6251,6 +6529,42 @@
     .easy {
         &-btn {
             min-width: auto;
+        }
+    }
+
+    /* Technique */
+    .technique {
+        &-user {
+            &-status,
+            &-btn {
+                font-size: 12px;
+            }
+        }
+    }
+    .cost {
+        &-text {
+            font-size: 12px;
+        }
+    }
+    .goobad {
+        &-line {
+            width: 105px;
+        }
+    }
+    .feedback {
+        &-item {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 10px;
+        }
+        &-nav-btn {
+            min-width: auto;
+            width: 100%;
         }
     }
 }
