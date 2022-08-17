@@ -277,108 +277,213 @@
                 </div>
             </div>
         </header>
-        <main class="ways">
-            <div class="ways-body">
-                <div class="content">
-                    <h1 class="ways-title">
-                        Опубликовать объявление
-                    </h1>
-                    <div class="ways-nav">
-                        <ul class="ways-nav-list">
-                            <li class="ways-nav-item active">
-                                <button class="ways-nav-btn">
-                                    <span class="ways-nav-text">Тип набора и цена</span>
-                                    <span class="ways-nav-decor">1</span>
-                                </button>
-                            </li>
-                            <li class="ways-nav-item active">
-                                <button class="ways-nav-btn">
-                                    <span class="ways-nav-text">Установить общую сумму и способ оплаты</span>
-                                    <span class="ways-nav-decor">2</span>
-                                </button>
-                            </li>
-                            <li class="ways-nav-item">
-                                <button class="ways-nav-btn">
-                                    <span class="ways-nav-text">Установить примечания и автоматический ответ</span>
-                                    <span class="ways-nav-decor">3</span>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="ways-tabs">
-                        <div class="ways-tab">
-                            <div class="ways-content">
-                                <div class="summary">
-                                    <ul class="summary-list">
-                                        <li class="summary-item summary-item-full">
-                                            <h3 class="summary-subtitle">Итого</h3>
-                                            <label class="summary-lbl">
-                                                <input type="text" class="summary-field" value="0">
-                                                <span class="summary-name">USDT</span>
-                                                <span class="summary-text">≈ 0 грн.</span>
-                                            </label>
-                                        </li>
-                                        <li class="summary-item">
-                                            <h3 class="summary-subtitle">Лимит заказа</h3>
-                                            <label class="summary-lbl">
-                                                <input type="text" class="summary-field" value="500">
-                                                <span class="summary-name">грн</span>
-                                            </label>
-                                        </li>
-                                        <li class="summary-item">
-                                            <h3 class="summary-subtitle hide">Лимит заказа</h3>
-                                            <label class="summary-lbl">
-                                                <input type="text" class="summary-field" value="50000">
-                                                <span class="summary-name">грн</span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <span class="sellbuy-line"></span>
-                                <div class="methods">
-                                    <ul class="methods-list">
-                                        <li class="methods-item">
-                                            <h4 class="methods-subtitle">Метод оплаты</h4>
-                                            <span class="methods-name">Выберите до 5 методов</span>
-                                            <div class="methods-add">
-                                                <button class="methods-add-btn curr-modal" data-modal="modal-04">
-                                                    <span class="methods-add-icon"></span>
-                                                    <span class="methods-add-text">Добавлять</span>
-                                                </button>
-                                            </div>
-                                        </li>
-                                        <li class="methods-item">
-                                            <h4 class="methods-subtitle">Срок оплаты</h4>
-                                            <select class="methods-field">
-                                                <option>15 мин</option>
-                                                <option>30 мин</option>
-                                                <option>45 мин</option>
-                                                <option>1 час</option>
-                                            </select>
-                                        </li>
-                                    </ul>
-                                </div>
+        <main class="kiba">
+            <div class="content">
+                <div class="kiba-nav">
+                    <ul class="kiba-nav-list">
+                        <li class="kiba-nav-item">
+                            <label class="kiba-lbl">
+                                <span class="kiba-lbl-text">Актив/тип</span>
+                                <select class="kiba-field">
+                                    <option>Все активы</option>
+                                    <option>Все активы</option>
+                                    <option>Все активы</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="kiba-nav-item">
+                            <label class="kiba-lbl">
+                                <span class="kiba-lbl-text">Тип</span>
+                                <select class="kiba-field">
+                                    <option>Все статусы</option>
+                                    <option>Все статусы</option>
+                                    <option>Все статусы</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="kiba-nav-item">
+                            <label class="kiba-lbl">
+                                <span class="kiba-lbl-text">Статус</span>
+                                <select class="kiba-field">
+                                    <option>Все статусы</option>
+                                    <option>Все статусы</option>
+                                    <option>Все статусы</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li class="kiba-nav-item">
+                            <label class="kiba-lbl">
+                                <span class="kiba-lbl-text">Время создания</span>
+                                <input type="date" class="kiba-date" placeholder="ГГГГ-ММ-ДД - ГГГГ-ММ-ДД">
+                                <span class="kiba-date-icon"></span>
+                            </label>
+                        </li>
+                        <li class="kiba-nav-item">
+                            <div class="kiba-more">
+                                <button class="kiba-btn">Фильтр</button>
+                                <button class="kiba-btn kiba-btn-gray">Перезагрузить</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row ways-row">
-                        <div class="col-6 ways-left">
-                            <div class="ways-help">
-                                <a href="#" class="ways-help-link">
-                                    <span class="ways-help-icon"></span>
-                                    <span class="ways-help-text">
-                                        Помощь и руководство
-                                    </span>
-                                </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="kiba-table">
+                    <ul class="kiba-top">
+                        <li class="kiba-top-item">Тип номера объявления</li>
+                        <li class="kiba-top-item">Актив/Квартира</li>
+                        <li class="kiba-top-item">Итого
+                            Количество завершенных сделок</li>
+                        <li class="kiba-top-item">Обменный курс</li>
+                        <li class="kiba-top-item">Последнее обновление
+                            Создать время</li>
+                        <li class="kiba-top-item">Статус</li>
+                        <li class="kiba-top-item">Действия</li>
+                    </ul>
+                    <ul class="kiba-list">
+                        <li class="kiba-item">
+                            <div class="kiba-cell">
+                                1137466834678234956
+                                <span class="kiba-buysell red">Продано</span>
                             </div>
-                        </div>
-                        <div class="col-6 text-right ways-right">
-                            <div class="ways-more">
-                                <button class="ways-btn ways-btn-gray">Предыдущий</button>
-                                <button class="ways-btn">Следующий</button>
+                            <div class="kiba-cell">USDT/UAH</div>
+                            <div class="kiba-cell">500.01</div>
+                            <div class="kiba-cell">----</div>
+                            <div class="kiba-cell">
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
                             </div>
-                        </div>
-                    </div>
+                            <div class="kiba-cell">
+                                <span class="kiba-status">
+                                    <span class="kiba-status-text">Закрыто</span>
+                                    <span class="kiba-status-icon"></span>
+                                </span>
+                            </div>
+                            <div class="kiba-cell">
+                                <button class="kiba-doit">
+                                    <span class="kiba-doit-icon"></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="kiba-item">
+                            <div class="kiba-cell">
+                                1137466834678234956
+                                <span class="kiba-buysell red">Продано</span>
+                            </div>
+                            <div class="kiba-cell">USDT/UAH</div>
+                            <div class="kiba-cell">500.01</div>
+                            <div class="kiba-cell">----</div>
+                            <div class="kiba-cell">
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                            </div>
+                            <div class="kiba-cell">
+                                <span class="kiba-status">
+                                    <span class="kiba-status-text">Закрыто</span>
+                                    <span class="kiba-status-icon"></span>
+                                </span>
+                            </div>
+                            <div class="kiba-cell">
+                                <button class="kiba-doit">
+                                    <span class="kiba-doit-icon"></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="kiba-item">
+                            <div class="kiba-cell">
+                                1137466834678234956
+                                <span class="kiba-buysell green">Куплено</span>
+                            </div>
+                            <div class="kiba-cell">USDT/UAH</div>
+                            <div class="kiba-cell">500.01</div>
+                            <div class="kiba-cell">----</div>
+                            <div class="kiba-cell">
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                            </div>
+                            <div class="kiba-cell">
+                                <span class="kiba-status">
+                                    <span class="kiba-status-text">Закрыто</span>
+                                    <span class="kiba-status-icon"></span>
+                                </span>
+                            </div>
+                            <div class="kiba-cell">
+                                <button class="kiba-doit">
+                                    <span class="kiba-doit-icon"></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="kiba-item">
+                            <div class="kiba-cell">
+                                1137466834678234956
+                                <span class="kiba-buysell red">Продано</span>
+                            </div>
+                            <div class="kiba-cell">USDT/UAH</div>
+                            <div class="kiba-cell">500.01</div>
+                            <div class="kiba-cell">----</div>
+                            <div class="kiba-cell">
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                            </div>
+                            <div class="kiba-cell">
+                                <span class="kiba-status">
+                                    <span class="kiba-status-text">Закрыто</span>
+                                    <span class="kiba-status-icon"></span>
+                                </span>
+                            </div>
+                            <div class="kiba-cell">
+                                <button class="kiba-doit">
+                                    <span class="kiba-doit-icon"></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="kiba-item">
+                            <div class="kiba-cell">
+                                1137466834678234956
+                                <span class="kiba-buysell red">Продано</span>
+                            </div>
+                            <div class="kiba-cell">USDT/UAH</div>
+                            <div class="kiba-cell">500.01</div>
+                            <div class="kiba-cell">----</div>
+                            <div class="kiba-cell">
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                            </div>
+                            <div class="kiba-cell">
+                                <span class="kiba-status">
+                                    <span class="kiba-status-text">Закрыто</span>
+                                    <span class="kiba-status-icon"></span>
+                                </span>
+                            </div>
+                            <div class="kiba-cell">
+                                <button class="kiba-doit">
+                                    <span class="kiba-doit-icon"></span>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="kiba-item active">
+                            <div class="kiba-cell">
+                                1137466834678234956
+                                <span class="kiba-buysell green">Куплено</span>
+                            </div>
+                            <div class="kiba-cell">USDT/UAH</div>
+                            <div class="kiba-cell">500.01</div>
+                            <div class="kiba-cell">----</div>
+                            <div class="kiba-cell">
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                                <span class="kiba-time">2022-07-25 04:30:27</span>
+                            </div>
+                            <div class="kiba-cell">
+                                <span class="kiba-status">
+                                    <span class="kiba-status-text">Закрыто</span>
+                                    <span class="kiba-status-icon"></span>
+                                </span>
+                            </div>
+                            <div class="kiba-cell">
+                                <button class="kiba-doit">
+                                    <span class="kiba-doit-icon"></span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </main>
@@ -666,120 +771,6 @@
                     modal-btn-confirm">Подтвердить</button>
                 </div>
             </form>
-        </div>
-    </div>
-    <div class="modal modal-payment" id="modal-04">
-        <div class="modal-body">
-            <div class="payment">
-                <div class="payment-top">
-                    <button class="modal-close close">
-                        <span class="modal-close-icon"></span>
-                    </button>
-                    <h3 class="text-center payment-title">
-                        Выберите метод оплаты
-                    </h3>
-                </div>
-                <div class="payment-body">
-                    <div class="payment-info">
-                        <ul class="payment-list">
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">Имя</div>
-                                    <div class="payment-right">Кондратенко Ярослав</div>
-                                </div>
-                            </li>
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">Номер банковского счета</div>
-                                    <div class="payment-right">4444184332734764</div>
-                                </div>
-                            </li>
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">Название банка</div>
-                                    <div class="payment-right">Mono USD</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="payment-info">
-                        <div class="payment-prev">
-                            <div class="payment-prev-left">
-                                <span class="payment-name">Wise</span>
-                            </div>
-                            <div class="payment-prev-right">
-                                <div class="payment-edit">
-                                    <button class="payment-edit-btn">
-                                        <span class="payment-delete-icon"></span>
-                                    </button>
-                                </div>
-                                <div class="payment-edit">
-                                    <button class="payment-edit-btn">
-                                        <span class="payment-edit-icon"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="payment-list">
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">Имя</div>
-                                    <div class="payment-right">Кондратенко Ярослав</div>
-                                </div>
-                            </li>
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">E-mail адрес</div>
-                                    <div class="payment-right">yaruhka@gmail.com</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="payment-info">
-                        <div class="payment-prev">
-                            <div class="payment-prev-left">
-                                <span class="payment-name payment-name-green">Privat Bank (Univers..</span>
-                            </div>
-                            <div class="payment-prev-right">
-                                <div class="payment-edit">
-                                    <button class="payment-edit-btn">
-                                        <span class="payment-delete-icon"></span>
-                                    </button>
-                                </div>
-                                <div class="payment-edit">
-                                    <button class="payment-edit-btn">
-                                        <span class="payment-edit-icon"></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="payment-list">
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">Имя</div>
-                                    <div class="payment-right">Кондратенко Ярослав</div>
-                                </div>
-                            </li>
-                            <li class="payment-item">
-                                <div class="payment-wrapper">
-                                    <div class="payment-left">Номер банковского счета</div>
-                                    <div class="payment-right">46837456394574а</div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="payment-more">
-                        <button class="payment-btn payment-btn-gray">
-                            <span class="payment-icon payment-icon-one"></span>
-                            <span class="payment-text">Добавить новый</span>
-                        </button>
-                        <button class="payment-btn">
-                            <span class="payment-icon payment-icon-thue"></span>
-                            <span class="payment-text">Обновить</span>
-                        </button>
-                    </div> 
-                </div>
-            </div>
         </div>
     </div>
 

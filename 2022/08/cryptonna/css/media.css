@@ -4293,10 +4293,11 @@
     width: calc(100% - 30px);
     margin-bottom: 20px;
   }
-  .ways-nav-item:before {
-    content: none;
+  .ways-nav-item:nth-child(2):before, .ways-nav-item:nth-child(3):before {
+    width: 1px;
+    right: auto;
   }
-  .ways-nav-item:after {
+  .ways-nav-item:before {
     content: '';
     display: inline-block;
     width: 1px;
@@ -4306,7 +4307,7 @@
             box-sizing: border-box;
     position: absolute;
     left: 33px;
-    bottom: -30px;
+    top: -30px;
   }
   .ways-nav-item:nth-child(1) {
     width: calc(100% - 30px);
@@ -5701,8 +5702,8 @@
     line-height: 50px;
     margin-bottom: 15px;
   }
-  .ways-nav-item:after {
-    left: 22px;
+  .ways-nav-item:before {
+    left: 21px;
     bottom: -30px;
     height: 40px;
   }

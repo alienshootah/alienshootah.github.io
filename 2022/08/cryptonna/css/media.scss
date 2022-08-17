@@ -4550,10 +4550,12 @@
             &-item {
                 width: calc(100% - 30px);
                 margin-bottom: 20px;
-                &:before {
-                    content: none;
+                &:nth-child(2):before ,
+                &:nth-child(3):before  {
+                    width: 1px;
+                    right: auto;
                 }
-                &:after {
+                &:before {
                     content: '';
                     display: inline-block;
                     width: 1px;
@@ -4562,7 +4564,7 @@
                     box-sizing: border-box;
                     position: absolute;
                     left: 33px;
-                    bottom: -30px;
+                    top: -30px;
                 }
                 &:nth-child(1) {
                     width: calc(100% - 30px);
@@ -4573,7 +4575,6 @@
                         content: none;
                     }
                 }
-                
             }
             &-btn {
                 display: flex;
@@ -6079,8 +6080,8 @@
         }
         &-nav {
             &-item {
-                &:after {
-                    left: 22px;
+                &:before {
+                    left: 21px;
                     bottom: -30px;
                     height: 40px;
                 }
