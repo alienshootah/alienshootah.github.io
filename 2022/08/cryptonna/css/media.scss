@@ -932,6 +932,102 @@
             width: calc(20% - 16px);
         }
     }
+
+    /* Kiba */
+    .kiba {
+        &-top {
+            display: none;
+        }
+        &-nav {
+            &-list {
+                flex-wrap: wrap;
+            }
+            &-item {
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: calc(22% - 20px);
+                }
+                &:nth-child(4) {
+                    width: calc(34% - 20px);
+                }
+                &:nth-child(5) {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+        &-field,
+        &-date {
+            width: 100%;
+        }
+        &-list {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-more {
+            margin: 0 -7px;
+        }
+        &-item {
+            flex-wrap: wrap;
+            border-bottom: 1px solid #5B5B5B;
+        }
+        &-cell {
+            width: 25%!important;
+            &:before {
+                content: '';
+                display: block;
+                margin-bottom: 3px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 16px;
+                color: #FFFFFF;
+                min-height: 40px;
+            }
+            &:nth-child(1) {
+                padding-left: 20px;
+                border-bottom: 1px dashed #373737;
+                &:before {
+                    content: 'Тип номера объявления';
+                }
+            }
+            &:nth-child(2) {
+                border-bottom: 1px dashed #373737;
+                &:before {
+                    content: 'Актив/Квартира';
+                }
+            }
+            &:nth-child(3) {
+                border-bottom: 1px dashed #373737;
+                &:before {
+                    content: 'Итого Количество завершенных сделок';
+                }
+            }
+            &:nth-child(4) {
+                border-bottom: 1px dashed #373737;
+                padding-right: 20px;
+                &:before {
+                    content: 'Обменный курс';
+                }
+            }
+            &:nth-child(5) {
+                padding-left: 20px;
+                &:before {
+                    content: 'Последнее обновление Создать время';
+                }
+            }
+            &:nth-child(6) {
+                &:before {
+                    content: 'Статус';
+                }
+            }
+            &:nth-child(7) {
+                &:before {
+                    content: 'Действия';
+                }
+            }
+        }
+    }
 }
 @media(max-width: 980px) {
     .title {
@@ -3030,6 +3126,52 @@
             font-size: 14px;
         }
     }
+
+    /* Kiba */
+    .kiba {
+        padding-bottom: 60px;
+        &-nav {
+            &-list {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+        &-btn {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+
+    /* Approve */
+    .approve {
+        &-decor {
+            min-width: 62px;
+            width: 62px;
+            height: 62px;
+            &-icon {
+                min-width: 46.5px;
+                width: 46.5px;
+                height: 46.5px;
+                background-size: 25px 25px;
+                background-position: 11px 10px;
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 48px;
+        }
+        &-descr {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &-btn {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
 }
 @media (max-width: 980px) and (min-width: 750px) {
     /* Deposit */
@@ -4905,6 +5047,82 @@
         }
         &-more {
             text-align: center;
+        }
+    }
+
+    /* Kiba */
+    .kiba {
+        &-nav {
+            &-item {
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    width: calc(50% - 20px);
+                }
+                &:nth-child(4) {
+                    width: calc(50% - 20px);
+                }
+            }
+        }
+        &-table {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        &-cell {
+            width: 50%!important;
+            padding-left: 15px!important;
+            padding-right: 15px!important;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            &:nth-child(1) {
+                border-bottom: 0;
+                &:before {
+                    min-height: auto;
+                }
+            }
+            &:nth-child(2) {
+                border-bottom: 0;
+                &:before {
+                    min-height: auto;
+                }
+            }
+            &:before {
+                min-height: 32px;
+            }
+        }
+    }
+
+    /* Approve */
+    .approve {
+        &-decor {
+            min-width: 53px;
+            width: 53px;
+            height: 53px;
+            &-icon {
+                min-width: 39.75px;
+                width: 39.75px;
+                height: 39.75px;
+                background-size: 20px 20px;
+                background-position: 10.5px 10px;
+            }
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+        }
+        &-descr {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &-btn {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            width: 166px;
+            margin-top: 7px;
+            margin-bottom: 7px;
         }
     }
 }
@@ -7127,6 +7345,33 @@
             line-height: 19px;            
         }
     }
+
+    /* Kiba */
+    .kiba {
+        &-nav {
+            &-item {
+                margin-top: 5px;
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+        &-more {
+            margin-top: 5px;
+        }
+        &-list {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+        }
+        &-cell {
+            color: #B1B1B1;
+        }
+        &-status {
+            color: #575757;
+        }
+    }
 }
 @media(max-width: 350px) {
     .bits {
@@ -7555,5 +7800,11 @@
         &-text {
             font-size: 10px;
         }
+    }
+
+    /* Kiba */
+    .kiba-btn {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
