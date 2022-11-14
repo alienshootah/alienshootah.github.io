@@ -8419,7 +8419,7 @@ body {
             margin: 0 15px;
             box-sizing: border-box;
             position: relative;
-            width: calc(33.3333% - 30px); 
+            width: calc(33.3333% - 30px);
             &:before {
                 content: '';
                 display: block;
@@ -8433,7 +8433,7 @@ body {
             }
             &:nth-child(1) {
                 text-align: left;
-                
+                width: calc(25.3333% - 30px);
                 &:before {
                     content: none;
                 }
@@ -8448,8 +8448,8 @@ body {
             &:nth-child(3) {
                 text-align: right;
                 &:before {
-                    right: 220px;
-                    width: 464px;
+                    right: 236px;
+                    width: 546px;
                 }
             }
             &.active {
@@ -11058,6 +11058,9 @@ body {
         display: flex;
         width: 23%;
     }
+    &-right {
+        width: 77%;
+    }
     &-picture {
         margin-right: 13px;
     }
@@ -11979,6 +11982,10 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 785px;
     &-top {
         background: #2D302F;
         padding: 20px 10px 20px 20px;
@@ -12074,20 +12081,12 @@ body {
         color: #FFFFFF;
     }
     &-wrap {
-        padding-right: 11px;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-right: 11px;
+        margin-top: 20px;
+        margin-bottom: 10px;
         box-sizing: border-box;
-    }
-    &-body {
-        padding: 0 20px 0 20px;
-        box-sizing: border-box;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        color: #D2D2D2;
-        max-height: 532px;
-        overflow-y: scroll;
+        overflow-y: auto;
+        height: 80%;
         &::-webkit-scrollbar {
             width: 5px;
         }
@@ -12106,6 +12105,14 @@ body {
         &::-webkit-scrollbar-thumb:hover {
             background: #0AA880;
         }
+    }
+    &-body {
+        padding: 0 20px 0 20px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #D2D2D2;
     }
     &-message {
         text-align: right;
@@ -12150,12 +12157,6 @@ body {
         margin-left: 10px;
         margin-bottom: -6px;
     }
-    &-end {
-        padding-left: 20px;
-        padding-bottom: 20px;
-        padding-right: 11px;
-        position: relative;
-    }
     &-field {
         width: 100%;
         height: 51px;
@@ -12176,7 +12177,7 @@ body {
     &-btns {
         position: absolute;
         right: 17px;
-        top: 13px;
+        top: 35px;
     }
     &-btn {
         margin-left: 1px;
@@ -12194,6 +12195,23 @@ body {
         &-thue {
             background-image: url(../img/chat-decor-thue.svg);
         }
+    }
+    &-end {
+        padding-left: 0;
+        position: relative;
+    }
+    &-form {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        bottom: 0;
+        bottom: 0;
+        left: 0;
+        background: #1B2124;
+        padding-left: 20px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        padding-right: 11px;
     }
 }
 .lyak {
@@ -12439,24 +12457,34 @@ body {
             background: #0AA880;
         }
     }
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #0AA880;
+    }
     &-item {
+        margin: 17px 0;
         &:last-child {
             margin-bottom: 0;
+        }
+        &:first-child {
+            margin-top: 10px;
         }
     }
     &-lbl {
         position: relative;
         display: flex;
         align-items: center;
+        cursor: pointer
     }
     &-check {
+        cursor: pointer;
         position: absolute;
         top: 0;
         left: 0;
         opacity: 0;
-        &:checked ~ .regions-custom:after {
-            opacity: 1;
-        }
+            &:checked ~ .regions-custom:after {
+                opacity: 1;
+            }
     }
     &-custom {
         display: flex;
@@ -12485,12 +12513,76 @@ body {
     &-text {
         font-weight: 400;
         font-size: 13px;
-        line-height: 40px;
+        line-height: 20px;
     }
     &-more {
         border-top: 1px solid #303642;
         margin-top: 13px;
         padding-top: 13px;
     }
+}
+
+/* Another styles */
+
+.sc-user-input--text {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    border-bottom-left-radius: 10px;
+    box-sizing: border-box;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 17px;
+    padding-right: 100px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.33;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    max-height: 200px;
+    overflow: scroll;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #0F1514;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        margin-top: 0;
+      }
+       
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #0AA880;
+        border-radius: 5px;
+      }
+      
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #0AA880;
+    }
+}
+.sc-user-input--text:empty:before {
+    content: attr(placeholder);
+    display: block;
+    -webkit-filter: contrast(15%);
+    filter: contrast(15%);
+    outline: none;
+    cursor: text;
+    color: #ffffff;
 }
 
