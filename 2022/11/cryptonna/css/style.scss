@@ -13179,4 +13179,243 @@ body {
     }
 }
 
-
+/* Holdings */
+.holdings-account-item {
+    position: relative;
+    & .account-link {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+}
+.holdings {
+    &-btn {
+        position: absolute;
+        right: -5px;
+        top: 4px;
+    }
+    &-icon {
+        display: inline-block;
+        min-width: 32px;
+        width: 32px;
+        height: 32px;
+        background-color: #00956F;
+        background-position: 12px 14px;
+        background-repeat: no-repeat;
+        background-image: url(../img/holdings-icon.svg);
+        border: 1px solid #00956F;
+        transition: all 0.5s;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+    &-sublist {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+    &-subitem {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-left: 38px;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    &-sublink {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-decoration: none;
+        color: #ffffff;
+        display: block;
+        padding: 11px 11px;
+        &:hover,
+        &.active {
+            background: linear-gradient(43.98deg, #1EA74B 18.47%, #37B7B8 86.09%);
+            border-radius: 3px;
+        }
+    }
+    &-top {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 15px;
+        &-row {
+            align-items: center;
+        }
+        &-list {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #8B8B8B;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        &-item {
+            margin-left: 40px;
+        }
+        &-value {
+            color: #FFFFFF;
+        }
+        &-green {
+            color: #00956F;
+        }
+    }
+    &-title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    &-nav {
+        display: inline-block;
+        margin-top: 25px;
+        margin-bottom: 17px;
+        &-list {
+            background: #0F1514;
+            border: 1px solid #303642;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            padding: 1px 0;
+            box-sizing: border-box;
+        }
+        &-btn {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+            text-align: center;
+            color: #FFFFFF;
+            padding: 8px 20px;
+            margin: 0 1px;
+            &:hover,
+            &.active {
+                background: linear-gradient(48.83deg, #1EA74B 16.93%, #37B7B8 78.92%);
+                border-radius: 3px;
+            }
+        }
+    }
+    &-body {
+        background: #0F1514;
+        box-shadow: 0px 10px 25px #131B1E;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 2;
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #8B8B8B;
+        display: flex;
+        margin-bottom: 40px;
+    }
+    &-item {
+        margin-left: 10px;
+        margin-right: 100px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-value {
+        color: #00956F;
+        display: block;
+        margin: 10px 0;
+        &.white {
+            color: #ffffff;
+        }
+    }
+    &-responsive {
+        height: 225px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
+    }
+    &-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        color: #FFFFFF;
+        text-align: left;
+        & thead {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            position: relative;
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                background: #0F1514;
+                border: 1px solid #303642;
+                border-radius: 5px;
+            }
+            & th {
+                position: relative;
+                z-index: 2;
+                padding: 10px 15px;
+                font-weight: 400;
+            }
+        }
+        & td {
+            padding: 10px 15px;
+        }
+    }
+    &-bit {
+        display: flex;
+        align-items: center;
+        &-picture {
+            width: 21px;
+            height: 21px;
+            background: #2B2B2B;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 9px;
+        }
+        &-img {
+            width: 13px;
+            height: 13px;
+        }
+        &-etc {
+            color: #6C6C6C;
+        }
+    }
+    &-green {
+        color: #00956F;
+    }
+    &-redem-link {
+        text-decoration: none;
+        color: #FDD54E;
+        border-bottom: 1px solid #FDD54E;
+        transition: all 0.5s;
+        &:hover {
+            border-bottom: 1px solid transparent;
+        }
+    }
+}
