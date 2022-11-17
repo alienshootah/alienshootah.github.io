@@ -13419,3 +13419,512 @@ body {
         }
     }
 }
+
+/* Modals */
+
+.modal {
+    &-scribe {
+        & .modal-body {
+            width: 1045px;
+            padding: 0;
+        }
+        & .modal-close {
+            right: 16px;
+            top: 14px;
+        }
+    }
+}
+.scribe {
+    &-left {
+        border-right: 1px solid rgba(86, 85, 85, 0.5);
+        padding-right: 0;
+    }
+    &-right {
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    &-title {
+        border-bottom: 1px solid rgba(86, 85, 85, 0.5);
+        margin-top: 12px;
+        padding-bottom: 15px;
+        padding-left: 40px;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 2px;
+            width: 2px;
+            height: 18px;
+            background-color: #0AA880;
+            margin-right: 10px;
+            position: relative;
+            top: 1px;
+        }
+    }
+    &-etc {
+        color: #6C6C6C;
+    }
+    &-icon {
+        position: relative;
+        top: 3px;
+    }
+    &-subtitle {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #FFFFFF;
+    }
+    &-responsive {
+        height: 340px;
+        overflow-y: auto;
+        padding-right: 27px;
+        box-sizing: border-box;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            margin-top: 0;
+        }
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #0AA880;
+            border-radius: 5px;
+        }
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #0AA880;
+        }
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+        border-bottom: 1px solid rgba(86, 85, 85, 0.5);
+        margin-bottom: 10px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 36px 0;
+        position: relative;
+        padding-left: 22px;
+        box-sizing: border-box;
+        &:last-child {
+            &:after {
+                content: none;
+            }
+        }
+        &:nth-child(1) {
+            margin-top: 0;
+        }
+        &:nth-child(2) {
+            &:after {
+                border-right: 1px solid #0AA880;
+            }
+        }
+        &:nth-child(3) {
+            &:after {
+                border-right: 1px dashed #0AA880;
+            }
+        }
+        &:nth-child(4) {
+            margin-bottom: 18px;
+            &:before {
+                background-image: url(../img/scribe-item-before2.svg);
+            }
+        }
+        &-name {
+            opacity: 0.7;
+        }
+        &-time {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 12px;
+            width: 12px;
+            height: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/scribe-item-before.svg);
+            position: absolute;
+            left: 0;
+            top: 1px;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 1px;
+            width: 1px;
+            height: 27px;
+            border-right: 1px solid rgba(86, 85, 85, 0.5);
+            position: absolute;
+            top: 21px;
+            left: 6px;
+            box-sizing: border-box;
+        }
+    }
+    &-result {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 16px;
+        &-value {
+            font-weight: 800;
+            font-size: 15px;
+            line-height: 20px;
+            color: #0B9F7A;
+        }
+    }
+    &-info {
+        background: #1C2322;
+        border-radius: 5px;
+        padding: 12px 7px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        &-icon {
+            display: inline-block;
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/scribe-info-icon.svg);
+            margin-right: 7px;
+        }
+    }
+    &-agree {
+        margin-top: 21px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+        position: relative;
+        &-link {
+            text-decoration: none;
+            color: #FDD54E;
+            border-bottom: 1px solid #FDD54E;
+            transition: all 0.5s;
+            &:hover {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-check {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        &:checked ~ {
+            & .scribe-custom:after {
+                opacity: 1;
+            }
+            & .scribe-custom {
+                border: 1px solid #FDD54E;
+            }
+            & .scribe-btn {
+                background: #0AA880;
+            }
+        }
+    }
+    &-custom {
+        display: inline-block;
+        min-width: 19px;
+        width: 19px;
+        height: 19px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        margin-right: 12px;
+        position: relative;
+        box-sizing: border-box;
+        top: 5px;
+        transition: all 0.5s;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 11px;
+            width: 11px;
+            height: 11px;
+            background-color: #FDD54E;
+            border-radius: 5px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            box-sizing: border-box;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+    }
+    &-btn {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        height: 35px;
+        background: #2E3534;
+        border-radius: 3px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        &:hover {
+            background: #0AA880;
+        }
+    }
+}
+.duration {
+    padding-left: 40px;
+    padding-right: 40px;
+    &-title {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        margin: 0 -10px;
+    }
+    &-item {
+        margin: 0 10px;
+    }
+    &-btn {
+        min-width: 80px;
+        height: 50px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        padding-left: 22px;
+        padding-right: 22px;
+        &:hover,
+        &.active {
+            background: linear-gradient(37.35deg, #1EA74B 20.59%, #37B7B8 95.94%);
+            border-radius: 3px;
+        }
+    }
+    &-field {
+        width: 100%;
+        height: 42px;
+        background: #11191F;
+        color: #ffffff;
+        border: 1px solid #929292;
+        border-radius: 3px;
+        box-sizing: border-box;
+        padding: 5px 10px;
+    }
+    &-amount {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 25px;
+        color: #0AA880;
+        position: relative;
+        &-descr {
+            position: absolute;
+            top: 5px;
+            right: 27px;
+            box-sizing: border-box;
+        }
+        &-max {
+            display: inline-block;
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 2px;
+                width: 2px;
+                height: 18px;
+                background-color: #0AA880;
+                margin-left: 10px;
+                position: relative;
+                top: 1px;
+            }
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 30px;
+            width: 30px;
+            height: 25px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url(../img/duration-amount-icon.svg);
+            position: relative;
+            top: 3px;
+        }
+        &-text {
+            color: #6C6C6C;
+        }
+    }
+    &-end {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px 0 10px 0;
+    }
+    &-avaliable {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+        &-status {
+            opacity: 0.7;
+        }
+    }
+    &-buy {
+        position: relative;
+        top: -2px;
+        &-link {
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: right;
+            color: #0AA880;
+            text-decoration: none;
+            box-sizing: border-box;
+            border-bottom: 1px solid #0AA880;
+            transition: all 0.5s;
+            &:hover {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-limits {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-num {
+            opacity: 0.7;
+            padding-right: 5px;
+        }
+    }
+    &-quota {
+        &-text {
+            opacity: 0.7;
+            padding-right: 5px;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 16px;
+            width: 16px;
+            height: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/duration-quota-icon.svg);
+            margin-left: 6px;
+            position: relative;
+            top: 3px;
+        }
+    }
+    &-auto {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        &-body {
+            background: #1C2322;
+            border-radius: 5px;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+        }
+        &-title {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: #FFFFFF;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        &-picture {
+            margin-left: 11px;
+            margin-right: 24px;
+        }
+        &-icon {
+            display: inline-block;
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/duration-auto-icon.svg);
+        }
+        &-descr {
+            padding-right: 40px;
+            box-sizing: border-box;
+        }
+        &-text {
+            margin-bottom: 0;
+        }
+        &-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+            background: rgba(10, 168, 128, 0.2);
+            border-radius: 50%;
+            box-sizing: border-box;
+            position: relative;
+            &:before {
+                content: '';
+                display: inline-block;
+                min-width: 60px;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                box-sizing: border-box;
+                background: #0AA880;
+            }
+            &:after {
+                content: '';
+                display: inline-block;
+                min-width: 30px;
+                width: 30px;
+                height: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url(../img/duration-auto-image.svg);
+                position: absolute;
+                top: 26px;
+                left: 25px;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
