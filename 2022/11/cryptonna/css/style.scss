@@ -13422,6 +13422,7 @@ body {
 
 /* Modals */
 
+/* Modal 1 */
 .modal {
     &-scribe {
         & .modal-body {
@@ -13925,6 +13926,367 @@ body {
                 left: 25px;
                 box-sizing: border-box;
             }
+        }
+    }
+}
+
+/* Modal 2 */
+.modal {
+    &-confirm {
+        & .modal-body {
+            width: 690px;
+            padding: 0;
+        }
+        & .modal-close {
+            right: 20px;
+            top: 13px;
+        }
+    }
+}
+.confirm {
+    &-top {
+        border-bottom: 1px solid rgba(86, 85, 85, 0.5);
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    &-title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #FFFFFF;
+        margin: 15px 0;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 2px;
+            width: 2px;
+            height: 18px;
+            margin-right: 6px;
+            background-color: #0AA880;
+            position: relative;
+            top: 1px;
+        }
+    }
+    &-body {
+        padding: 23px 28px;
+        box-sizing: border-box;
+    }
+    &-descr {
+        margin-top: 0;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 35px;
+    }
+    &-item {
+        margin-bottom: 35px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &-lbl {
+        display: flex;
+    }
+    &-check {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        &:checked ~ {
+            & .confirm-custom:after {
+                opacity: 1;
+            }
+            & .confirm-custom {
+                border: 1px solid #FDD54E;
+            }
+        }
+    }
+    &-custom {
+        display: inline-block;
+        min-width: 19px;
+        width: 19px;
+        height: 19px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 5px;
+        margin-right: 12px;
+        position: relative;
+        box-sizing: border-box;
+        top: 2px;
+        transition: all 0.5s;
+        margin-right: 15px;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 11px;
+            width: 11px;
+            height: 11px;
+            background-color: #FDD54E;
+            border-radius: 5px;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            box-sizing: border-box;
+            transition: all 0.5s;
+            opacity: 0;
+        }
+    }
+    &-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 100px -8px 10px -8px;
+    }
+    &-btn {
+        margin: 0 8px;
+        width: 130px;
+        height: 35px;
+        background: #2E3534;
+        border-radius: 3px;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        &:hover {
+            background: #0AA880;
+        }
+        &.green {
+            background: #0AA880;
+            &:hover {
+                background: #2E3534;
+            }
+        }
+    }
+}
+
+/* Modal 3 */
+.modal {
+    &-cessfull {
+        & .modal-body {
+            width: 690px;
+            padding: 0;
+        }
+        & .modal-close {
+            right: 20px;
+            top: 13px;
+        }
+    }
+}
+.cessfull {
+    padding: 20px 100px 40px 100px;
+    box-sizing: border-box;
+    &-title {
+        margin-top: 0;
+        margin-bottom: 18px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 30px;
+        color: #FFFFFF;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 2px;
+            width: 2px;
+            height: 18px;
+            background-color: #0AA880;
+            margin-right: 7px;
+            box-sizing: border-box;
+            position: relative;
+            top: 1px;
+        }
+    }
+    &-picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+        background: rgba(10, 168, 128, 0.2);
+        border-radius: 50%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+    &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        background: #0AA880;
+        border-radius: 50%;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 30px;
+            width: 30px;
+            height: 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/cessfull-icon-after.svg)
+        }
+    }
+    &-subtitle {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        color: #FFFFFF;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 60px;
+        &-value {
+            font-weight: 800;
+            font-size: 15px;
+            line-height: 20px;
+            color: #0B9F7A;
+        }
+    }
+    &-list {
+        background: #1C2322;
+        border-radius: 5px;
+        padding: 1px 60px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #FFFFFF;
+        position: relative;
+        margin: 33px 0;
+        padding-left: 27px;
+        box-sizing: border-box;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 13px;
+            width: 13px;
+            height: 13px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/cessfull-item-after.svg);
+            position: absolute;
+            top: 1px;
+            left: 0;
+        }
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 1px;
+            width: 1px;
+            height: 20px;
+            border-right: 1px solid #0AA880;
+            position: absolute;
+            bottom: -15px;
+            left: 5px;
+        }
+        &:nth-child(2) {
+            &:after {
+                border-right: 1px solid rgba(86, 85, 85, 0.5);
+                bottom: 16px;
+                left: 5px;
+            }
+        }
+    }
+    &-text {
+        opacity: 0.7;
+    }
+    &-date {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &-subscribe {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 20px;
+        padding: 0 62px;
+    }
+    &-auto {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    &-more {
+        margin-top: 40px;
+        margin: 40px -8px 0 -8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-btn {
+        width: 205px;
+        height: 35px;
+        background: #2E3534;
+        border-radius: 3px;
+        margin: 8px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        &:hover {
+            background: #0AA880;
+        }
+        &.green {
+            background: #0AA880;
+            &:hover {
+                background: #2E3534;
+            }
+        }
+    }
+    &-lbl {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &-check {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &:checked + .cessfull-custom::after {
+            transform: translateX(23px);
+            transition: all 0.5s;
+        }
+    }
+    &-custom {
+        display: inline-block;
+        width: 48px;
+        height: 26px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 120px;
+        position: relative;
+        transition: all 0.5s;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            background-position: relative;
+            background-repeat: no-repeat;
+            background-image: url(../img/cessfull-custom-after.svg);
+            transition: all 0.5s;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: auto;
         }
     }
 }
