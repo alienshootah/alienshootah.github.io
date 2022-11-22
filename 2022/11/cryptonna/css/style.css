@@ -16347,6 +16347,7 @@ body {
   max-width: 285px;
   height: 40px;
   border-radius: 3px;
+  border: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-weight: 400;
@@ -16541,7 +16542,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/crypto-bg.jpg);
-  background-image: cover;
+  background-size: cover;
   padding: 40px 0 100px 0;
 }
 
@@ -17103,6 +17104,58 @@ body {
 
 .holdings-redem-link:hover {
   border-bottom: 1px solid transparent;
+}
+
+.holdings-lbl {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.holdings-check {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.holdings-check:checked + .holdings-custom::after {
+  -webkit-transform: translateX(23px);
+          transform: translateX(23px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.holdings-custom {
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  background: #0F1514;
+  border: 1px solid #303642;
+  border-radius: 120px;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.holdings-custom:after {
+  content: '';
+  display: inline-block;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-image: url(../img/cessfull-custom-after.svg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  right: auto;
 }
 
 /* Modals */

@@ -12821,6 +12821,7 @@ body {
         max-width: 285px;
         height: 40px;
         border-radius: 3px;
+        border: 0;
         box-sizing: border-box;
         font-weight: 400;
         font-size: 12px;
@@ -12978,7 +12979,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(../img/crypto-bg.jpg);
-    background-image: cover;
+    background-size: cover;
     padding: 40px 0 100px 0;
     &-title {
         text-align: center;
@@ -13416,6 +13417,45 @@ body {
         transition: all 0.5s;
         &:hover {
             border-bottom: 1px solid transparent;
+        }
+    }
+    &-lbl {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &-check {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &:checked + .holdings-custom::after {
+            transform: translateX(23px);
+            transition: all 0.5s;
+        }
+    }
+    &-custom {
+        display: inline-block;
+        width: 48px;
+        height: 26px;
+        background: #0F1514;
+        border: 1px solid #303642;
+        border-radius: 120px;
+        position: relative;
+        transition: all 0.5s;
+        &:after {
+            content: '';
+            display: inline-block;
+            min-width: 20px;
+            width: 20px;
+            height: 20px;
+            background-position: relative;
+            background-repeat: no-repeat;
+            background-image: url(../img/cessfull-custom-after.svg);
+            transition: all 0.5s;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: auto;
         }
     }
 }
