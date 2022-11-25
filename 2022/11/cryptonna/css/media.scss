@@ -3852,6 +3852,20 @@
             margin: 0 5px;
         }
     }
+    /* Holdings */
+    .deposit-account .account-item {
+        border: 0;
+    }
+    .holdings-responsive {
+        overflow: auto;
+        white-space: nowrap;
+    }
+    .holdings-account-item .account-link {
+        border: 0;
+    }
+    .holdings-subitem {
+        border: 0;
+    }
 }
 @media(max-width: 750px) {
     .header {
@@ -5884,6 +5898,29 @@
             width: 100%;
         }
     }
+
+    /* Holdings */
+    .holdings {
+        &-responsive {
+            overflow: auto;
+            white-space: nowrap;
+        }
+        &-top {
+            margin-top: 20px;
+            &-item {
+                margin-left: 25px;
+            }
+            &-left {
+                width: 30%;
+            }
+            &-right {
+                width: 70%;
+            }
+        }
+        &-item {
+            margin-right: 20px;
+        }
+    }
 }
 @media (max-width: 750px) and (min-width: 320px) {
     .steps {
@@ -7494,6 +7531,55 @@
             text-align: center;
         }
     }
+
+    /* Holdings */
+    .holdings {
+        &-sublink {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        &-top {
+            &-left {
+                display: none;
+            }
+            &-right {
+                width: 100%;
+            }
+            &-list {
+                flex-wrap: wrap;
+                text-align: left;
+            }
+            &-item {
+                width: calc(50% - 25px);
+                margin-left: 0;
+                margin-right: 25px;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-body {
+            background: none;
+            box-shadow: none;
+            padding: 0;
+        }
+        &-list {
+            flex-wrap: wrap;
+            margin-left: -10px;
+            margin-right: -10px;
+            margin-bottom: 20px;
+        }
+        &-item {
+            width: calc(50% - 20px);
+            margin-right: 10px;
+            margin-bottom: 40px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 @media(max-width: 410px) {
     .promo {
@@ -8854,6 +8940,15 @@
             max-width: 100%;
             width: 100%;
             box-sizing: border-box;
+        }
+    }
+
+    /* Holdings */
+    .holdings {
+        &-nav {
+            &-btn {
+                padding: 8px 10px;
+            }
         }
     }
 }
