@@ -3817,6 +3817,7 @@
     .scribe {
         &-row {
             flex-wrap: wrap;
+            margin: 0 0 0 -15px;
         }
         &-left {
             width: 100%;
@@ -3827,6 +3828,9 @@
             padding-left: 60px;
             padding-right: 40px;
             padding-bottom: 40px;
+        }
+        &-title {
+            padding-right: 15px;
         }
     }
     .duration {
@@ -5960,6 +5964,14 @@
             margin-right: 20px;
         }
     }
+
+    /* Staking modals */
+    .modal-scribe .modal-body {
+        width: 470px;
+    }
+    .duration-item {
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 750px) and (min-width: 320px) {
     .steps {
@@ -7619,6 +7631,40 @@
             }
         }
     }
+
+    /* Staking modal 1 */
+    .modal-scribe .modal-body {
+        width: 375px;
+    }
+    .scribe {
+        &-title {
+            padding-top: 50px;
+            padding-left: 15px;
+        }
+        &-right {
+            padding-left: 30px;
+            padding-right: 15px;
+        }
+    }
+    .duration {
+        padding-left: 15px;
+        padding-right: 15px;
+        &-list {
+            justify-content: flex-end;
+        }
+        &-btn {
+            min-width: 75px;
+        }
+        &-auto {
+            &-alert {
+                display: none;
+            }
+            &-descr {
+                padding-right: 0;
+            }
+        }
+    }
+
 }
 @media(max-width: 410px) {
     .promo {
@@ -8494,6 +8540,66 @@
             margin-bottom: 0;
         }
     }
+
+    /* Staking modal 1 */
+    .modal-scribe .modal-body {
+        width: 333px;
+    }
+    .duration {
+        &-field {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 18px;
+        }
+        &-amount {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 25px;
+            &-descr {
+                top: 1px;
+                right: 10px;
+            }
+            &-icon {
+                min-width: 17px;
+                width: 17px;
+                height: 25px;
+                background-size: contain;
+                top: 8px;
+            }
+            &-max {
+                &:after {
+                    top: 4px;
+                }
+            }
+        }
+        &-auto {
+            &-body {
+                align-items: flex-start;
+                padding: 15px 10px;
+            }
+            &-picture {
+                margin-left: 5px;
+                margin-right: 15px;
+            }
+        }
+    }
+    .scribe {
+        &-responsive {
+            padding-right: 17px;
+        }
+        &-item {
+            align-items: flex-start;
+            &-name {
+                width: 50%;
+                padding-right: 10px;
+            }
+            &-time {
+                width: 50%;
+                text-align: right;
+                padding-left: 10px;
+            }
+        }
+    }
 }
 @media(max-width: 350px) {
     .bits {
@@ -8987,6 +9093,30 @@
         &-nav {
             &-btn {
                 padding: 8px 10px;
+            }
+        }
+    }
+    
+    /* Staking modal 1 */
+    .modal-scribe .modal-body {
+        width: 290px;
+    }
+    .duration {
+        &-btn {
+            min-width: 69px;
+            &.active {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        &-amount {
+            font-size: 12px;
+        }
+        &-limits {
+            font-size: 11px;
+            &-right {
+                position: relative;
+                top: -2px;
             }
         }
     }
