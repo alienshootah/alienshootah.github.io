@@ -2115,3 +2115,171 @@ body {
         }
     }
 }
+
+/* Modals */
+
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.85); /* Black w/ opacity */
+    text-align: center;
+    &.visible {
+        display: block;
+    }
+    &-body {
+        display: inline-block;
+        width: 744px;
+        box-sizing: border-box;
+        position: relative;
+        text-align: left;
+        background: #FFFFFF;
+        padding: 30px 30px 50px 30px;
+    }
+    &-close {
+        position: absolute;
+        right: 15px;
+        top: 18px;
+        min-width: 36px;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-icon {
+            display: inline-block;
+            min-width: 21px;
+            width: 21px;
+            height: 21px;
+            background-image: url(../img/modal-close-icon.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            transition: all 0.5s;
+        }
+        &:hover,
+        &:focus {
+            & .modal-close-icon {
+                opacity: 0.75;
+            }
+        }
+    }
+}
+.zakaz {
+    &-title {
+        display: block;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 30px;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 14px;
+            width: 14px;
+            height: 14px;
+            background: #34A473;
+            margin-right: 4px;
+            box-sizing: border-box;
+            position: relative;
+            top: -8px;
+        }
+    }
+    &-list {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        margin: 10px 15px;
+        width: calc(50% - 30px);
+        box-sizing: border-box;
+    }
+    &-field {
+        padding: 11px 20px;
+        width: 100%;
+        height: 47px;
+        border: 1px solid #E2E3E5;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        &::placeholder {
+            color: #464D5A;
+        }
+    }
+    &-lbl {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #464D5A;
+        &-link {
+            color: #464D5A;
+            text-decoration: none;
+            border-bottom: 1px solid #464D5A;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-check {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        &:checked ~ .zakaz-custom:after {
+            opacity: 1;
+        }
+    }
+    &-custom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 23px;
+        width: 23px;
+        height: 23px;
+        border: 1px solid #464D5A;
+        margin-right: 15px;
+        box-sizing: border-box;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 17px;
+            width: 17px;
+            height: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/zakaz-custom-after.svg);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    }
+    &-more {
+        &-btn {
+            padding: 11px 20px;
+            width: 100%;
+            height: 47px;
+            background: #0F7553;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 27px;
+            color: #FFFFFF;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: #1aa073;
+            }
+        }
+    }
+}
