@@ -113,6 +113,128 @@ modals.forEach(m => {
   }
 });
 
+/* Sliders */
+
+// Promo slider
+var totalSlide = $('.promo-slider .swiper-slide').length;
+const promoSlider = new Swiper('.promo-slider', {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    nextEl: '.promo-arrow-right',
+    prevEl: '.promo-arrow-left',
+  },
+  pagination: {
+    el: ".promo-scroll",
+    type: "progressbar",
+  },
+  on: {
+    init: function () {
+      var fragment = document.querySelector('.promo-frac');
+      fragment.innerHTML = ("<span class='promo-frac-start'>" + '0' + 1 +  "</span>" + 
+      "<span class='promo-frac-end'>" + '0' + totalSlide +  "</span>");
+    },
+  },
+});
+
+promoSlider.on('slideChange', function() {
+  var fragment = document.querySelector('.promo-frac');
+  var current = promoSlider.realIndex + 1;
+  if (current > totalSlide)
+    current = 1;
+  var idx = current < 10 ? ("0" + current) : current;
+  var tdx = totalSlide < 10 ? ("0" + totalSlide) : totalSlide;
+  fragment.innerHTML = ("<span class='promo-frac-start'>" + idx +  "</span>" + 
+  "<span class='promo-frac-end'>" + tdx +  "</span>"
+  );
+});
+
+// Products slider
+var totalSlide2 = $('.products-slider .swiper-slide').length;
+const productsSlider = new Swiper('.products-slider', {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  freeMode: true,
+  navigation: {
+    nextEl: '.products-arrow-right',
+    prevEl: '.products-arrow-left',
+  },
+  pagination: {
+    el: ".products-scroll",
+    type: "progressbar",
+  },
+  scrollbar: {
+    el: ".products-indicator",
+    clickable: true,
+  },
+  mousewheel: true,
+  on: {
+    init: function () {
+      var fragment2 = document.querySelector('.products-frac');
+      fragment2.innerHTML = ("<span class='products-frac-start'>" + '0' + 1 +  "</span>" + 
+      "<span class='products-frac-end'>" + '0' + totalSlide2 +  "</span>");
+    },
+  },
+});
+
+productsSlider.on('slideChange', function() {
+  var fragment2 = document.querySelector('.products-frac');
+  var current = productsSlider.realIndex + 1;
+  if (current > totalSlide2)
+    current = 1;
+  var idx = current < 10 ? ("0" + current) : current;
+  var tdx = totalSlide2 < 10 ? ("0" + totalSlide2) : totalSlide2;
+  fragment2.innerHTML = ("<span class='products-frac-start'>" + idx +  "</span>" + 
+  "<span class='products-frac-end'>" + tdx +  "</span>"
+  );
+});
+
+
+// Partners slider
+var totalSlide3 = $('.partners-slider .swiper-slide').length;
+const partnersSlider = new Swiper('.partners-slider', {
+  slidesPerView: 2,
+  grid: {
+    rows: 3,
+    fill: "row",
+  },
+  navigation: {
+    nextEl: '.partners-arrow-right',
+    prevEl: '.partners-arrow-left',
+  },
+  pagination: {
+    el: ".partners-scroll",
+    type: "progressbar",
+  },
+  scrollbar: {
+    el: ".partners-indicator",
+    clickable: true,
+  },
+  mousewheel: true,
+  on: {
+    init: function () {
+      var fragment3 = document.querySelector('.partners-frac');
+      fragment3.innerHTML = ("<span class='partners-frac-start'>" + '0' + 1 +  "</span>" + 
+      "<span class='partners-frac-end'>" + totalSlide3 +  "</span>");
+    },
+  },
+});
+
+partnersSlider.on('slideChange', function() {
+  var fragment3 = document.querySelector('.partners-frac');
+  var current = partnersSlider.realIndex + 1;
+  if (current > totalSlide3)
+    current = 1;
+  var idx = current < 10 ? ("0" + current) : current;
+  var tdx = totalSlide3 < 10 ? ("0" + totalSlide3) : totalSlide3;
+  fragment3.innerHTML = ("<span class='partners-frac-start'>" + idx +  "</span>" + 
+  "<span class='partners-frac-end'>" + tdx +  "</span>"
+  );
+});
+
+
 /* Current year */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();
