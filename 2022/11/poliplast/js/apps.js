@@ -176,6 +176,9 @@ const productsSlider = new Swiper('.products-slider', {
         el: ".nwannon-scrollbar",
       },
     },
+    750: {
+      slidesPerView: 2,
+    },
     980: {
       slidesPerView: 2,
     },
