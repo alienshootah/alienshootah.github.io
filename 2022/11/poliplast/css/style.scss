@@ -153,6 +153,7 @@ body {
         box-sizing: border-box;
         box-shadow: 1px 1px 12px 1px rgba(0,0,0, 0.1);
         position: absolute;
+        z-index: 20;
         top: 25px;
         background-color: #ffffff;
         &.show {
@@ -463,6 +464,16 @@ body {
         box-shadow: 1px 1px 12px 1px rgba(0,0,0, 0.1);
         &.show {
             display: block;
+        }
+    }
+    &.dropdown-open {
+        & .drop-icon {
+            background-image: url(../img/drop-icon-close.png);
+            min-width: 8px;
+            width: 8px;
+            height: 8px;
+            background-size: contain;
+            margin-right: 21px;
         }
     }
 }
