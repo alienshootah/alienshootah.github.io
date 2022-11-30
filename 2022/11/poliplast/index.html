@@ -28,14 +28,14 @@
                         </div>
                     </div>
                     <div class="col-4 header-middle">
-                        <div class="city">
-                            <button class="city-btn">
+                        <div class="city nav-drop">
+                            <button class="city-btn dropdown-toggle click-dropdown">
                                 <span class="city-icon"></span>
                                 <span class="city-text">
                                     Краснодар
                                 </span>
                             </button>
-                            <div class="city-drop">
+                            <div class="city-drop dropdown-menu">
                                 Ваш город 
                                 <b class="city-value">Краснодар</b>?
                                 <div class="city-more">
@@ -63,7 +63,7 @@
                                             info@domen.ru
                                         </a>
                                     </div>
-                                    <button class="info-btn">
+                                    <button class="info-btn curr-modal" data-modal="modal-02">
                                         Заказать расчет
                                     </button>
                                 </div>
@@ -74,7 +74,7 @@
                                             +7(861)777-77-77
                                         </a>
                                     </div>
-                                    <button class="info-btn simple">
+                                    <button class="info-btn simple curr-modal" data-modal="modal-01">
                                         Обратный звонок
                                     </button>
                                 </div>
@@ -85,14 +85,14 @@
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <div class="drop">
-                                <button class="nav-link drop-btn">
+                            <div class="drop nav-drop">
+                                <button class="nav-link drop-btn dropdown-toggle click-dropdown">
                                     <span class="drop-icon"></span>
                                     <span class="drop-text">
                                         Каталог
                                     </span>
                                 </button>
-                                <div class="drop-body">
+                                <div class="drop-body dropdown-menu">
                                     <ul class="nav-sublist">
                                         <li class="nav-subitem">
                                             <a href="#" class="nav-sublink">
@@ -961,7 +961,7 @@
     </div>
 
     <!-- Modals -->
-    <div class="modal visible modal-zakaz" id="modal-01">
+    <div class="modal modal-zakaz" id="modal-01">
         <div class="modal-body">
             <div class="zakaz">
                 <div class="zakaz-top">
@@ -1004,5 +1004,77 @@
             </div>
         </div>
     </div>
+    <div class="modal modal-zakaz" id="modal-02">
+        <div class="modal-body">
+            <div class="zakaz">
+                <div class="zakaz-top">
+                    <span class="zakaz-title">
+                        Заказать расчет
+                    </span>
+                    <button class="modal-close close">
+                        <span class="modal-close-icon"></span>
+                    </button>
+                </div>
+                <div class="zakaz-body">
+                    <ul class="zakaz-list">
+                        <li class="zakaz-item">
+                            <input type="text" class="zakaz-field" placeholder="Имя*">
+                        </li>
+                        <li class="zakaz-item">
+                            <input type="email" class="zakaz-field" placeholder="Email*">
+                        </li>
+                        <li class="zakaz-item">
+                            <input type="text" class="zakaz-field" placeholder="Телефон*">
+                        </li>
+                        <li class="zakaz-item">
+                            <label class="zakaz-add">
+                                <input type="file" class="zakaz-file">
+                                <span class="zakaz-add-custom">
+                                    Прикрепить документ
+                                </span>
+                            </label>
+                        </li>
+                        <li class="zakaz-item zakaz-item-full">
+                            <textarea class="zakaz-area" placeholder="Сообщение"></textarea>
+                        </li>
+                        <li class="zakaz-item">
+                            <label class="zakaz-lbl">
+                                <input type="checkbox" class="zakaz-check">
+                                <span class="zakaz-custom"></span>
+                                <span class="zakaz-lbl-text">
+                                    Я согласен с 
+                                    <a href="#" class="zakaz-lbl-link">
+                                        обработкой первональных данных
+                                    </a>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="zakaz-item">
+                            <div class="zakaz-more">
+                                <button class="zakaz-more-btn">
+                                    Отправить
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-watch" id="modal-01">
+        <div class="modal-body">
+            <button class="modal-close close">
+                <span class="modal-close-icon"></span>
+            </button>
+            <div class="watch">
+                <img src="img/watch-image.jpg" alt="" class="watch-image">
+                <button class="watch-btn">
+                    <span class="watch-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/apps.js"></script>
 </body>
 </html>
