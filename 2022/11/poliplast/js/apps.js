@@ -169,6 +169,23 @@ const productsSlider = new Swiper('.products-slider', {
     el: ".products-indicator",
     clickable: true,
   },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      scrollbar: {
+        el: ".nwannon-scrollbar",
+      },
+    },
+    980: {
+      slidesPerView: 2,
+    },
+    1180: {
+      slidesPerView: 3,
+    },
+    1360: {
+      slidesPerView: 4,
+    },
+  },
   mousewheel: true,
   on: {
     init: function () {
