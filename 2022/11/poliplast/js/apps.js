@@ -241,7 +241,14 @@ const partnersSlider = new Swiper('.partners-slider', {
   },
   mousewheel: true,
   breakpoints: {
-    320: {
+    318: {
+      slidesPerView: 1,
+      grid: {
+        rows: 2,
+        fill: "row",
+      },
+    },
+    420: {
       slidesPerView: 1,
       grid: {
         rows: 3,
