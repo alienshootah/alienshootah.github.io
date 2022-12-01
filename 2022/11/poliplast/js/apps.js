@@ -1,3 +1,13 @@
+/* Mobile btn */
+const mobileBtn = document.querySelector(".menu-btn");
+mobileBtn.addEventListener("click", function() {
+  document.querySelector(".nav").classList.toggle("show");
+});
+const mobileClose = document.querySelector(".nav-btn");
+mobileClose.addEventListener("click", function() {
+  document.querySelector(".nav").classList.remove("show");
+});
+
 /* Dropdowns */
 
 // Get all the dropdown from document
@@ -172,9 +182,6 @@ const productsSlider = new Swiper('.products-slider', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      scrollbar: {
-        el: ".nwannon-scrollbar",
-      },
     },
     750: {
       slidesPerView: 2,
@@ -233,6 +240,22 @@ const partnersSlider = new Swiper('.partners-slider', {
     clickable: true,
   },
   mousewheel: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      grid: {
+        rows: 3,
+        fill: "row",
+      },
+    },
+    750: {
+      slidesPerView: 2,
+      grid: {
+        rows: 3,
+        fill: "row",
+      },
+    },
+  },
   on: {
     init: function () {
       var fragment3 = document.querySelector('.partners-frac');
