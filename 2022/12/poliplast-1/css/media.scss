@@ -211,6 +211,20 @@
             word-break: break-all;
         }
     }
+    .ask {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+        }
+        &-sublist {
+            padding-top: 10px;
+        }
+    }
 }
 @media(max-width: 982px) {
     .header {
@@ -520,6 +534,18 @@
         margin-bottom: 60px;
         &-item {
             width: calc(50% - 20px);
+        }
+    }
+    .support {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 40px;
         }
     }
 }
@@ -852,6 +878,50 @@
             width: calc(50% - 30px);
         }
     }
+    .support {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        &-item {
+            display: block;
+        }
+        &-picture {
+            width: 100%;
+            min-width: auto;
+            margin-bottom: 20px;
+        }
+        &-image {
+            width: 100%;
+            min-width: auto;
+            height: auto;
+        }
+        &-title {
+            font-size: 30px;
+            &:before {
+                top: -3px;
+            }
+        }
+        &-lil {
+            &-title {
+                font-size: 30px;
+            }
+        }
+    }
+    .ask {
+        &-sublist {
+            display: block;
+        }
+        &-subitem {
+            width: calc(100% - 30px);
+            margin-bottom: 20px;
+            &:nth-child(odd),
+            &:nth-child(even) {
+                width: calc(100% - 30px);
+            }
+        }
+    }
+    .asking {
+        padding-bottom: 20px;
+    }
 }
 @media(max-width: 520px) {
     .header {
@@ -966,6 +1036,19 @@
         }
         &-more {
             left: 20px;
+        }
+    }
+    .ask {
+        &-title {
+            font-size: 20px;
+            &:before {
+                top: -1px;
+            }
+        }
+    }
+    .asking {
+        &-item {
+            width: calc(100% - 30px);
         }
     }
 }
@@ -1127,6 +1210,27 @@
     .categories {
         &-item {
             width: calc(100% - 20px);
+        }
+    }
+    .support {
+        &-title {
+            font-size: 26px;
+        }
+        &-lil {
+            &-title {
+                font-size: 26px;
+            }
+        }
+        &-sublist {
+            font-size: 16px;
+        }
+        &-subitem {
+            margin-bottom: 10px;
+        }
+    }
+    .ask {
+        &-contacts {
+            padding: 20px 75px;
         }
     }
 }
