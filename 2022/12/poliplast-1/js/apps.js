@@ -292,8 +292,11 @@ var singleNav = new Swiper(".single-nav", {
   freeMode: true,
   watchSlidesProgress: true,
   breakpoints: {
-    320: {
-      slidesPerView: 1,
+    310: {
+      slidesPerView: 2,
+    },
+    408: {
+      slidesPerView: 2,
     },
     750: {
       slidesPerView: 2,
