@@ -284,6 +284,82 @@ partnersSlider.on('slideChange', function() {
   );
 });
 
+// Single slider
+var singleNav = new Swiper(".single-nav", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var singleSlider = new Swiper(".single-slider", {
+  loop: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: singleNav,
+  },
+  scrollbar: {
+    el: ".single-indicator",
+    clickable: true,
+  },
+});
+
+// Similar slider
+var totalSlide4 = $('.similar-slider .swiper-slide').length;
+const similarSlider = new Swiper('.similar-slider', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: '.similar-arrow-right',
+    prevEl: '.similar-arrow-left',
+  },
+  pagination: {
+    el: ".similar-scroll",
+    type: "progressbar",
+  },
+  scrollbar: {
+    el: ".similar-indicator",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    750: {
+      slidesPerView: 2,
+    },
+    980: {
+      slidesPerView: 2,
+    },
+    1180: {
+      slidesPerView: 3,
+    },
+    1360: {
+      slidesPerView: 3,
+    },
+  },
+  mousewheel: true,
+  on: {
+    init: function () {
+      var fragment4 = document.querySelector('.similar-frac');
+      fragment4.innerHTML = ("<span class='similar-frac-start'>" + '0' + 1 +  "</span>" + 
+      "<span class='similar-frac-end'>" + '0' + totalSlide4 +  "</span>");
+    },
+  },
+});
+
+similarSlider.on('slideChange', function() {
+  var fragment4 = document.querySelector('.similar-frac');
+  var current = similarSlider.realIndex + 1;
+  if (current > totalSlide4)
+    current = 1;
+  var idx = current < 10 ? ("0" + current) : current;
+  var tdx = totalSlide4 < 10 ? ("0" + totalSlide4) : totalSlide4;
+  fragment4.innerHTML = ("<span class='similar-frac-start'>" + idx +  "</span>" + 
+  "<span class='similar-frac-end'>" + tdx +  "</span>"
+  );
+});
 
 /* Current year */
 year = document.querySelector('.footer-date');
