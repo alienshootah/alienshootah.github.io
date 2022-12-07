@@ -2790,6 +2790,18 @@ body {
   color: rgba(21, 23, 42, 0.5);
 }
 
+.asking-prev {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #464D5A;
+  margin-bottom: 15px;
+}
+
+.asking-prev-item {
+  margin: 5px 0;
+}
+
 /*== Pages ==*/
 /* Contacts */
 .contacts {
@@ -4559,6 +4571,10 @@ body {
   overflow: hidden;
 }
 
+.goods-btn {
+  padding: 0;
+}
+
 .goods-image {
   width: 100%;
 }
@@ -4573,10 +4589,11 @@ body {
 
 .goods-picture {
   position: relative;
+  cursor: pointer;
 }
 
 .goods-picture::after {
-  content: '';
+  content: none;
   display: inline-block;
   position: absolute;
   top: 0;
@@ -4587,6 +4604,13 @@ body {
   background-image: url(../img/goods-picture-after.svg);
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.goods-picture:hover::after, .goods-picture:focus::after {
+  opacity: 1;
 }
 
 .goods-indicator {
@@ -4598,6 +4622,8 @@ body {
           box-sizing: border-box;
   position: relative;
   top: 7px;
+  margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 .goods-indicator .swiper-scrollbar-drag {
@@ -5007,5 +5033,75 @@ body {
   padding: 16px 27px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+/*Image modal*/
+.modale {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.733);
+  margin-top: -1px;
+  -webkit-animation: zoom 0.3s ease-in-out;
+          animation: zoom 0.3s ease-in-out;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.modale img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  min-width: 21px;
+  width: 21px;
+  height: 21px;
+  background-image: url(../img/modal-close-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.closeBtn:hover {
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -381,6 +381,76 @@ similarSlider.on('slideChange', function() {
   );
 });
 
+// Goods slider
+var goodsNav = new Swiper(".goods-nav", {
+  loop: true,
+  spaceBetween: 10,
+  slidesPerView: 3,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    310: {
+      slidesPerView: 2,
+    },
+    408: {
+      slidesPerView: 2,
+    },
+    750: {
+      slidesPerView: 2,
+    },
+    980: {
+      slidesPerView: 2,
+    },
+    1180: {
+      slidesPerView: 3,
+    },
+    1360: {
+      slidesPerView: 3,
+    },
+  },
+});
+var goodsSlider = new Swiper(".goods-slider", {
+  loop: true,
+  spaceBetween: 10,
+  thumbs: {
+    swiper: goodsNav,
+  },
+  scrollbar: {
+    el: ".goods-indicator",
+    clickable: true,
+  },
+});
+
+// Images in modal
+const images = document.querySelectorAll(".goods-picture img");
+let imgSrc;
+// get images src onclick
+images.forEach((img) => {
+    img.addEventListener("click", (e) => {
+        imgSrc = e.target.src;
+        //run modal function
+        imgModal(imgSrc);
+    });
+});
+//creating the modal
+let imgModal = (src) => {
+    const modal = document.createElement("div");
+    modal.setAttribute("class", "modale");
+    //add the modal to the main section or the parent element
+    document.querySelector(".container-fluid").append(modal);
+    //adding image to modal
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", src);
+    //creating the close button
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "fas fa-times closeBtn");
+    //close function
+    closeBtn.onclick = () => {
+        modal.remove();
+    };
+    modal.append(newImage, closeBtn);
+};
+
 /* Current year */
 year = document.querySelector('.footer-date');
 year.innerHTML = new Date().getFullYear();
