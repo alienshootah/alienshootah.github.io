@@ -2027,6 +2027,158 @@ body {
         }
     }
 }
+.asking {
+    padding-bottom: 70px;
+    box-sizing: border-box;
+    &-title {
+        display: block;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 25px;
+        &:before {
+            content: '';
+            display: inline-block;
+            min-width: 14px;
+            width: 14px;
+            height: 14px;
+            background: #34A473;
+            margin-right: 4px;
+            box-sizing: border-box;
+            position: relative;
+            top: -8px;
+        }
+    }
+    &-list {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        margin: 10px 15px;
+        width: calc(50% - 30px);
+        box-sizing: border-box;
+        &-full {
+            width: calc(100% - 30px);
+        }
+    }
+    &-field {
+        padding: 11px 20px;
+        width: 100%;
+        height: 47px;
+        border: 1px solid #E2E3E5;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        &::placeholder {
+            color: rgba(21, 23, 42, 0.5);
+        }
+    }
+    &-lbl {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #464D5A;
+        &-link {
+            color: #464D5A;
+            text-decoration: none;
+            border-bottom: 1px solid #464D5A;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+    &-check {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        &:checked ~ .asking-custom:after {
+            opacity: 1;
+        }
+    }
+    &-custom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 23px;
+        width: 23px;
+        height: 23px;
+        border: 1px solid #464D5A;
+        margin-right: 15px;
+        box-sizing: border-box;
+        &::after {
+            content: '';
+            display: inline-block;
+            min-width: 17px;
+            width: 17px;
+            height: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/zakaz-custom-after.svg);
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    }
+    &-more {
+        &-btn {
+            padding: 11px 20px;
+            width: 100%;
+            height: 47px;
+            background: #0F7553;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 27px;
+            color: #FFFFFF;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: #1aa073;
+            }
+        }
+    }
+    &-add {
+        position: relative;
+        &-custom {
+            display: block;
+            padding: 10px 20px;
+            width: 100%;
+            height: 47px;
+            border: 1px dotted #E2E3E5;
+            box-sizing: border-box;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+    &-file {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    &-area {
+        padding: 11px 20px;
+        width: 100%;
+        height: 47px;
+        border: 1px solid #E2E3E5;
+        box-sizing: border-box;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        min-height: 117px;
+        &::placeholder {
+            color: rgba(21, 23, 42, 0.5);
+        }
+    }
+}
 
 /*== Pages ==*/
 
@@ -2693,7 +2845,7 @@ body {
         }
     }
 }
-.asking {
+.askme {
     padding-bottom: 70px;
     box-sizing: border-box;
     &-list {
@@ -2745,7 +2897,7 @@ body {
         position: absolute;
         opacity: 0;
         z-index: -1;
-        &:checked ~ .asking-custom:after {
+        &:checked ~ .askme-custom:after {
             opacity: 1;
         }
     }
