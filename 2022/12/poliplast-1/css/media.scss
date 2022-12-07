@@ -1125,6 +1125,47 @@
             margin-top: 50px;
         }
     }
+    .goods {
+        margin-top: 50px;
+        &-top {
+            margin-bottom: 30px;
+        }
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-left {
+            width: 100%;
+        }
+        &-right {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+    .params {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        &-nav {
+            flex-wrap: wrap;
+            &-item {
+                width: 50%;
+                &:nth-child(2) {
+                    &::after {
+                        content: none;
+                    }
+                }
+                &::after {
+                    height: 32px;
+                }
+            }
+            &-link {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+        &-tabs {
+            padding: 25px 20px;
+        }
+    }
 }
 @media(max-width: 520px) {
     .header {
@@ -1269,6 +1310,53 @@
         &-title {
             margin-bottom: 0px;
             font-size: 30px;
+        }
+    }
+    .goods {
+        &-title {
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 30px;
+            &:before {
+                min-width: 11px;
+                width: 11px;
+                height: 11px;
+                top: -5px;
+            }
+        }
+        &-category {
+            font-size: 16px;
+        }
+        &-buy {
+            &-btn {
+                width: 143px;
+                font-size: 18px;
+            }
+        }
+        &-more {
+            &-link {
+                font-size: 18px;
+                width: 190px;
+            }
+        }
+    }
+    .tech {
+        &-list {
+            font-size: 14px;
+        }
+    }
+    .params {
+        &-table {
+            font-size: 14px;
+            thead {
+                & th {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+            }
+            & td {
+                padding: 5px 10px;
+            }
         }
     }
 }
