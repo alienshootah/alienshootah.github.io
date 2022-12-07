@@ -422,7 +422,7 @@ var goodsSlider = new Swiper(".goods-slider", {
 });
 
 // Images in modal
-const images = document.querySelectorAll(".goods-nav img");
+const images = document.querySelectorAll(".arm-nav img");
 let imgSrc;
 // get images src onclick
 images.forEach((img) => {
