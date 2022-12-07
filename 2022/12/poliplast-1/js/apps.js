@@ -384,7 +384,7 @@ similarSlider.on('slideChange', function() {
 // Goods slider
 var goodsNav = new Swiper(".goods-nav", {
   loop: true,
-  spaceBetween: 10,
+  spaceBetween: 20,
   slidesPerView: 3,
   freeMode: true,
   watchSlidesProgress: true,
@@ -422,7 +422,7 @@ var goodsSlider = new Swiper(".goods-slider", {
 });
 
 // Images in modal
-const images = document.querySelectorAll(".goods-picture img");
+const images = document.querySelectorAll(".goods-nav img");
 let imgSrc;
 // get images src onclick
 images.forEach((img) => {
@@ -450,6 +450,35 @@ let imgModal = (src) => {
     };
     modal.append(newImage, closeBtn);
 };
+
+/* Tabs in group */
+window.addEventListener("load", function() {
+  // store tabs variable
+  var theTabs = document.querySelectorAll(".tab-item");
+
+  function theTabClicks(tabClickEvent) {
+      var clickedTab = tabClickEvent.currentTarget;
+      var tabParent = tabClickEvent.currentTarget.parentNode.parentNode.parentNode;
+      var theTabs = tabParent.querySelectorAll(".tab-item");
+      for (var i = 0; i < theTabs.length; i++) {
+          theTabs[i].classList.remove("active");
+      }
+      
+      clickedTab.classList.add("active");
+      tabClickEvent.preventDefault();
+      var contentPanes = tabParent.querySelectorAll(".tab-content");
+      for (i = 0; i < contentPanes.length; i++) {
+          contentPanes[i].classList.remove("active");
+      }
+      var anchorReference = tabClickEvent.target;
+      var activePaneId = anchorReference.getAttribute("href");
+      var activePane = tabParent.querySelector(activePaneId);
+      activePane.classList.add("active");
+  }
+  for (i = 0; i < theTabs.length; i++) {
+      theTabs[i].addEventListener("click", theTabClicks)
+  }
+});
 
 /* Current year */
 year = document.querySelector('.footer-date');

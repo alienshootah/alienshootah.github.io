@@ -4581,10 +4581,19 @@ body {
 
 .goods-nav {
   overflow: hidden;
+  margin-top: 15px;
 }
 
 .goods-nav-image {
   width: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  margin-bottom: -6px;
+}
+
+.goods-nav-image:hover {
+  opacity: 0.5;
 }
 
 .goods-picture {
@@ -4592,8 +4601,8 @@ body {
   cursor: pointer;
 }
 
-.goods-picture::after {
-  content: none;
+.goods-picture::before {
+  content: '';
   display: inline-block;
   position: absolute;
   top: 0;
@@ -4604,13 +4613,7 @@ body {
   background-image: url(../img/goods-picture-after.svg);
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.goods-picture:hover::after, .goods-picture:focus::after {
-  opacity: 1;
+  z-index: -1;
 }
 
 .goods-indicator {
@@ -4905,6 +4908,7 @@ body {
   border-bottom: 1px solid #5B5B5B;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  text-decoration: none;
 }
 
 .tech-more-btn:hover, .tech-more-btn:focus {

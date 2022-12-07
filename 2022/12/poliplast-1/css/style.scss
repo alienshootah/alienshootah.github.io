@@ -3640,15 +3640,22 @@ body {
     }
     &-nav {
         overflow: hidden;
+        margin-top: 15px;
         &-image {
             width: 100%;
+            transition: all 0.5s;
+            opacity: 1;
+            margin-bottom: -6px;
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
     &-picture {
         position: relative;
         cursor: pointer;
-        &::after {
-            content: none;
+        &::before {
+            content: '';
             display: inline-block;
             position: absolute;
             top: 0;
@@ -3659,16 +3666,8 @@ body {
             background-image: url(../img/goods-picture-after.svg);
             background-position: center;
             background-repeat: no-repeat;
-            opacity: 0;
-            transition: all 0.5s;
+            z-index: -1;
         }
-        &:hover,
-        &:focus {
-            &::after {
-                opacity: 1;
-            }
-        }
-        
     }
     &-indicator {
         display: block;
@@ -3897,6 +3896,7 @@ body {
             padding: 0;
             border-bottom: 1px solid #5B5B5B;
             transition: all 0.5s;
+            text-decoration: none;
             &:hover,
             &:focus {
                 border-bottom: 1px solid transparent;
