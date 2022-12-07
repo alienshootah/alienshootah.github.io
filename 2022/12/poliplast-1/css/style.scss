@@ -3546,11 +3546,15 @@ body {
         box-sizing: border-box;
     }
     &-price {
+        display: flex;
+        align-items: center;
         &-value {
             font-weight: 400;
             font-size: 32px;
             line-height: 38px;
             color: #212121;
+            display: inline-block;
+            margin-right: 15px;
         }
         &-old {
             font-weight: 400;
@@ -3561,4 +3565,166 @@ body {
             opacity: 0.5;
         }
     }
-} 
+    &-buy {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &-field {
+            width: 100px;
+            height: 49px;
+            background: #FFFFFF;
+            border: 1px solid #E1E2E5;
+            box-sizing: border-box;
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 35px;
+            color: #595959;
+            margin-right: 25px;
+            text-align: center;
+            padding-left: 10px;
+            border-radius: 2px;
+        }
+        &-btn {
+            width: 213px;
+            height: 49px;
+            background: #006543;
+            border: 1px solid #006543;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            color: #FFFDFD;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                background: transparent;
+                color: #006543;
+            }
+        }
+    }
+    &-contacts {
+        padding: 22px 0;
+        margin-bottom: 35px;
+        border-bottom: 3px solid #F1EDED;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+    }
+    &-phone {
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: 10px;
+        &-icon {
+            display: inline-block;
+            min-width: 33px;
+            width: 33px;
+            height: 33px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../img/goods-phone-icon.svg);
+            margin-right: 15px;
+        }
+        &-link {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+            border-bottom: 1px solid transparent;
+            transition: all 0.5s;
+            text-decoration: none;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #000000;
+            }
+        }
+    }
+    &-more {
+        &-link {
+            width: 212px;
+            height: 49px;
+            background: #FFFFFF;
+            border: 1px solid #006543;
+            transition: all 0.5s;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 23px;
+            color: #002E1E;
+            &:hover,
+            &:focus {
+                background: #006543;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+.tech {
+    &-title {
+        display: block;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        color: #033121;
+        margin-bottom: 15px;
+    }
+    &-list {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: justify;
+        color: #212121;
+        list-style-type: disc;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    &-item {
+        margin: 3px 0;
+        position: relative;
+        box-sizing: border-box;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed #D7D3D3;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            z-index: -1;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-name,
+    &-value {
+        display: inline-block;
+        background: #ffffff;
+        padding: 2px 0;
+        box-sizing: border-box;
+    }
+    &-name {
+        padding-right: 10px;
+    }
+    &-value {
+        padding-left: 10px;
+    }
+    &-more {
+        margin-top: 10px;
+        &-btn {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #5B5B5B;
+            padding: 0;
+            border-bottom: 1px solid #5B5B5B;
+            transition: all 0.5s;
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid transparent;
+            }
+        }
+    }
+}
